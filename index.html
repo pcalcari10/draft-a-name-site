@@ -7614,7 +7614,9 @@ async function wireLikeButtons(container){
     if(span) span.textContent = c > 0 ? c : (btn.classList.contains('liked') ? '' : '·');
   });
   buttons.forEach(btn => {
-    btn.addEventListener('click', () => handleLikeClick(btn));
+    // Assigning to .onclick (not addEventListener) guarantees exactly one handler
+    // even if this function ever runs more than once against the same node.
+    btn.onclick = () => handleLikeClick(btn);
   });
 }
 
