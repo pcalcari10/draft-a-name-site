@@ -7626,7 +7626,7 @@ async function handleLikeClick(btn){
   const ref = likesDb.collection(LIKES_COLLECTION).doc(likeId);
   try {
     if(isLiked){
-      // Unlike: decrement, never below zero
+      // Unlike: decrement, never below zero, then re-fetch to show the true server count
       const snap = await ref.get();
       const current = snap.exists ? (snap.data().count || 0) : 0;
       if(current > 0){
@@ -7634,7 +7634,8 @@ async function handleLikeClick(btn){
       }
       likedSet.delete(likeId);
       saveLikedSet(likedSet);
-      setLikedUI(btn, Math.max(current - 1, 0), false);
+      const fresh = await ref.get();
+      setLikedUI(btn, fresh.exists ? (fresh.data().count || 0) : 0, false);
     } else {
       const snap = await ref.get();
       if(snap.exists){
