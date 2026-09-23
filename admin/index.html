@@ -246,14 +246,24 @@ function render(){
     byTeam[team].push(p);
   });
 
-  let teams = Object.keys(byTeam);
+  // Decide, per team, what to actually show: a team-name match shows the whole
+  // roster; a player-name match shows only that player, not their teammates.
+  const displayData = {};
   if(query){
-    teams = teams.filter(t => {
+    Object.keys(byTeam).forEach(t => {
       const teamMatch = (TEAM_FULL[t] || t).toLowerCase().includes(query) || t.toLowerCase().includes(query);
-      const playerMatch = byTeam[t].some(p => (p.first + ' ' + p.last).toLowerCase().includes(query));
-      return teamMatch || playerMatch;
+      if(teamMatch){
+        displayData[t] = byTeam[t];
+      } else {
+        const matchingPlayers = byTeam[t].filter(p => (p.first + ' ' + p.last).toLowerCase().includes(query));
+        if(matchingPlayers.length > 0) displayData[t] = matchingPlayers;
+      }
     });
+  } else {
+    Object.keys(byTeam).forEach(t => { displayData[t] = byTeam[t]; });
   }
+
+  let teams = Object.keys(displayData);
 
   if(sortBy === 'most') teams.sort((a,b) => byTeam[b].length - byTeam[a].length);
   else if(sortBy === 'fewest') teams.sort((a,b) => byTeam[a].length - byTeam[b].length);
@@ -266,12 +276,13 @@ function render(){
   }
 
   container.innerHTML = teams.map(t => {
-    const players = byTeam[t].slice().sort((a,b) => (a.last||'').localeCompare(b.last||''));
+    const players = displayData[t].slice().sort((a,b) => (a.last||'').localeCompare(b.last||''));
+    const isPartial = players.length !== byTeam[t].length;
     return `
     <div class="team-block" data-team="${t}">
       <div class="team-header">
         <span class="team-name">${TEAM_FULL[t] || t}</span>
-        <span class="team-count">${players.length} left <span class="chevron">▸</span></span>
+        <span class="team-count">${players.length}${isPartial ? ` of ${byTeam[t].length}` : ''} left <span class="chevron">▸</span></span>
       </div>
       <div class="team-players">
         ${players.map(p => `<div class="player-row"><span>${p.first} ${p.last}</span><span class="player-pos">${p.pos}</span></div>`).join('')}
