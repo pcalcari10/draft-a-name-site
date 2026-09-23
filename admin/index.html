@@ -172,7 +172,7 @@ async function loadPerformanceData(){
     // Sleeper's stats endpoint is per-week and undocumented; missing/future weeks just come back empty, which is fine
     for(let week = 1; week <= 18; week++){
       try {
-        const res = await fetch(`https://api.sleeper.app/stats/nfl/regular/${season}/${week}`);
+        const res = await fetch(`https://api.sleeper.app/v1/stats/nfl/regular/${season}/${week}`);
         if(!res.ok) continue;
         const weekStats = await res.json();
         Object.keys(weekStats).forEach(sid => {
