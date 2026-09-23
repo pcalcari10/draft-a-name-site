@@ -25,6 +25,16 @@
   .progress-panel { background: var(--panel); border: 1px solid var(--line); border-radius: 10px; padding: 22px; margin-bottom: 24px; }
   .section-label { font-family: var(--mono); font-size: 12px; font-weight: 700; color: var(--amber); letter-spacing: 0.06em; margin: 32px 0 10px; text-transform: uppercase; }
   .section-label:first-of-type { margin-top: 0; }
+  .tabs { display: flex; gap: 6px; margin-bottom: 24px; flex-wrap: wrap; border-bottom: 1px solid var(--line); padding-bottom: 0; }
+  .tab-btn {
+    font-family: var(--mono); font-size: 13px; font-weight: 600; color: var(--dim);
+    background: none; border: none; border-bottom: 2px solid transparent;
+    padding: 10px 14px; cursor: pointer; margin-bottom: -1px;
+  }
+  .tab-btn:hover { color: var(--text); }
+  .tab-btn.active { color: var(--amber); border-bottom-color: var(--amber); }
+  .tab-panel { display: none; }
+  .tab-panel.active { display: block; }
   .progress-top { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 12px; flex-wrap: wrap; gap: 8px; }
   .progress-pct { font-family: var(--mono); font-size: 32px; font-weight: 700; color: var(--green); }
   .progress-label { color: var(--dim); font-size: 13px; }
@@ -75,7 +85,14 @@
   <h1>Curation Tracker</h1>
   <p class="sub">Every player still on auto-generated placeholder puns, grouped by team, so you know exactly what's left to write real jokes for.</p>
 
-  <div class="section-label">1. Sync rosters &amp; automation</div>
+  <div class="tabs">
+    <button class="tab-btn active" data-tab="sync">Sync &amp; Automation</button>
+    <button class="tab-btn" data-tab="placeholders">Placeholders</button>
+    <button class="tab-btn" data-tab="curated">Curated</button>
+    <button class="tab-btn" data-tab="performers">Best Performers</button>
+  </div>
+
+  <div class="tab-panel active" id="tab-sync">
   <div class="progress-panel" id="syncPanel">
     <div class="progress-top">
       <div>
@@ -116,24 +133,24 @@
       </div>
     </div>
   </div>
+  </div>
 
-  <div class="section-label">2. Curation progress</div>
+  <div class="tab-panel" id="tab-placeholders">
   <div class="progress-panel">
     <div class="progress-top">
       <div>
-        <div class="progress-pct" id="pct">—</div>
+        <div class="progress-pct js-pct">—</div>
         <div class="progress-label">of the database has real, curated puns</div>
       </div>
     </div>
-    <div class="bar-track"><div class="bar-fill" id="barFill" style="width:0%"></div></div>
+    <div class="bar-track"><div class="bar-fill js-barfill" style="width:0%"></div></div>
     <div class="stat-row">
-      <span><span class="dot curated"></span><span id="curatedCount">—</span> curated</span>
-      <span><span class="dot template"></span><span id="templateCount">—</span> still placeholder</span>
-      <span id="totalCount"></span>
+      <span><span class="dot curated"></span><span class="js-curated-count">—</span> curated</span>
+      <span><span class="dot template"></span><span class="js-template-count">—</span> still placeholder</span>
+      <span class="js-total-count"></span>
     </div>
   </div>
 
-  <div class="section-label">3. Search players still on placeholders</div>
   <div class="filter-row">
     <input id="search" type="text" placeholder="Filter by team or player name…">
     <select id="sortBy">
@@ -144,8 +161,24 @@
   </div>
 
   <div id="teamsContainer"></div>
+  </div>
 
-  <div class="section-label">4. Players with curated names</div>
+  <div class="tab-panel" id="tab-curated">
+  <div class="progress-panel">
+    <div class="progress-top">
+      <div>
+        <div class="progress-pct js-pct">—</div>
+        <div class="progress-label">of the database has real, curated puns</div>
+      </div>
+    </div>
+    <div class="bar-track"><div class="bar-fill js-barfill" style="width:0%"></div></div>
+    <div class="stat-row">
+      <span><span class="dot curated"></span><span class="js-curated-count">—</span> curated</span>
+      <span><span class="dot template"></span><span class="js-template-count">—</span> still placeholder</span>
+      <span class="js-total-count"></span>
+    </div>
+  </div>
+
   <div class="filter-row">
     <input id="searchCurated" type="text" placeholder="Filter by team or player name…">
     <select id="sortByCurated">
@@ -156,8 +189,9 @@
   </div>
 
   <div id="teamsContainerCurated"></div>
+  </div>
 
-  <div class="section-label">5. Best performers still on placeholders</div>
+  <div class="tab-panel" id="tab-performers">
   <div class="progress-panel" id="perfPanel" style="display:none;">
     <div class="progress-top">
       <div>
@@ -167,6 +201,7 @@
       <button class="ghost" id="loadPerfBtn" style="font-family:var(--mono);font-size:12.5px;background:none;border:1px solid var(--line);color:var(--text);border-radius:8px;padding:8px 14px;cursor:pointer;">Load performance data</button>
     </div>
     <div id="perfList" style="margin-top:14px;"></div>
+  </div>
   </div>
 
 </div>
@@ -498,11 +533,11 @@ function updateProgressStats(){
   const total = active.length;
   const pct = total > 0 ? Math.round((curated / total) * 100) : 0;
 
-  document.getElementById('pct').textContent = pct + '%';
-  document.getElementById('barFill').style.width = pct + '%';
-  document.getElementById('curatedCount').textContent = curated;
-  document.getElementById('templateCount').textContent = template;
-  document.getElementById('totalCount').textContent = total + ' total players';
+  document.querySelectorAll('.js-pct').forEach(el => el.textContent = pct + '%');
+  document.querySelectorAll('.js-barfill').forEach(el => el.style.width = pct + '%');
+  document.querySelectorAll('.js-curated-count').forEach(el => el.textContent = curated);
+  document.querySelectorAll('.js-template-count').forEach(el => el.textContent = template);
+  document.querySelectorAll('.js-total-count').forEach(el => el.textContent = total + ' total players');
 }
 
 function renderTierList(tier, searchElId, sortElId, containerElId){
@@ -625,6 +660,15 @@ async function boot(){
   renderCurated();
   loadExtraPlayers();
 }
+document.querySelectorAll('.tab-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+    document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+    btn.classList.add('active');
+    document.getElementById('tab-' + btn.dataset.tab).classList.add('active');
+  });
+});
+
 boot();
 </script>
 </body>
