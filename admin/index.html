@@ -246,17 +246,23 @@ function render(){
     byTeam[team].push(p);
   });
 
-  // Decide, per team, what to actually show: a team-name match shows the whole
-  // roster; a player-name match shows only that player, not their teammates.
+  // Decide, per team, what to show and why: a team-name match shows the whole
+  // roster (collapsed by default); a player-name match shows only that player,
+  // auto-expanded so you don't have to click to see them.
   const displayData = {};
+  const matchedByTeamName = {};
   if(query){
     Object.keys(byTeam).forEach(t => {
       const teamMatch = (TEAM_FULL[t] || t).toLowerCase().includes(query) || t.toLowerCase().includes(query);
       if(teamMatch){
         displayData[t] = byTeam[t];
+        matchedByTeamName[t] = true;
       } else {
         const matchingPlayers = byTeam[t].filter(p => (p.first + ' ' + p.last).toLowerCase().includes(query));
-        if(matchingPlayers.length > 0) displayData[t] = matchingPlayers;
+        if(matchingPlayers.length > 0){
+          displayData[t] = matchingPlayers;
+          matchedByTeamName[t] = false;
+        }
       }
     });
   } else {
@@ -278,8 +284,9 @@ function render(){
   container.innerHTML = teams.map(t => {
     const players = displayData[t].slice().sort((a,b) => (a.last||'').localeCompare(b.last||''));
     const isPartial = players.length !== byTeam[t].length;
+    const shouldExpand = query && !matchedByTeamName[t];
     return `
-    <div class="team-block${query ? ' open' : ''}" data-team="${t}">
+    <div class="team-block${shouldExpand ? ' open' : ''}" data-team="${t}">
       <div class="team-header">
         <span class="team-name">${TEAM_FULL[t] || t}</span>
         <span class="team-count">${players.length}${isPartial ? ` of ${byTeam[t].length}` : ''} left <span class="chevron">▸</span></span>
