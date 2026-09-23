@@ -306,7 +306,7 @@ function render(){
         <span class="team-count">${players.length}${isPartial ? ` of ${byTeam[t].length}` : ''} left <span class="chevron">▸</span></span>
       </div>
       <div class="team-players">
-        ${players.map((p, idx) => `<details class="player-row">
+        ${players.map((p, idx) => `<details class="player-row" open>
           <summary class="player-row-top"><span>${p.first} ${p.last}</span><span style="display:flex;align-items:center;"><span class="player-pos">${p.pos}</span><span class="chevron-small">▸</span></span></summary>
           <ul class="player-names-list">
             ${p.names.map((n, i) => `<li><span>${n}</span><button class="copy-pun" data-name="${escapeHtml(n)}" data-uid="${t}-${idx}-${i}">⧉ copy</button></li>`).join('')}
