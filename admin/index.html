@@ -88,7 +88,7 @@
     <div class="progress-top">
       <div>
         <div class="team-name" style="font-size:16px;">🏈 Sync full league roster</div>
-        <div class="progress-label">Pulls every truly active QB/RB/WR/TE from Sleeper's live database across all 32 teams, and auto-adds anyone we're missing with placeholder puns.</div>
+        <div class="progress-label">Pulls every truly active QB/RB/WR/TE/K from Sleeper's live database across all 32 teams, and auto-adds anyone we're missing with placeholder puns.</div>
       </div>
       <button class="ghost" id="syncBtn" style="font-family:var(--mono);font-size:12.5px;background:none;border:1px solid var(--line);color:var(--text);border-radius:8px;padding:8px 14px;cursor:pointer;">Run sync</button>
     </div>
@@ -211,7 +211,7 @@ async function runSync(){
 
     statusEl.textContent = 'Filtering to active QB/RB/WR/TE across all 32 teams\u2026';
     const relevant = Object.values(allSleeperPlayers).filter(p =>
-      p && p.team && ['QB','RB','WR','TE'].includes(p.position) &&
+      p && p.team && ['QB','RB','WR','TE','K'].includes(p.position) &&
       (p.status === 'Active' || p.active === true)
     );
 
