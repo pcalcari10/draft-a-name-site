@@ -569,7 +569,7 @@ function renderTierList(tier, searchElId, sortElId, containerElId){
       const posHeader = p.pos !== lastPos ? `<div class="pos-group-header">${p.pos}</div>` : '';
       lastPos = p.pos;
       return posHeader + `<details class="player-row"${shouldExpand ? ' open' : ''}>
-          <summary class="player-row-top"><span>${p.first} ${p.last}</span><span style="display:flex;align-items:center;"><span class="player-pos">${p.pos}</span><span class="chevron-small">▸</span></span></summary>
+          <summary class="player-row-top"><span>${p.first} ${p.last}</span><span style="display:flex;align-items:center;"><span class="player-pos">${p.names.length} name${p.names.length !== 1 ? 's' : ''} \u00b7 ${p.pos}</span><span class="chevron-small">▸</span></span></summary>
           <ul class="player-names-list">
             ${p.names.map((n, i) => `<li><span>${n}</span><button class="copy-pun" data-name="${escapeHtml(n)}" data-uid="${containerElId}-${t}-${idx}-${i}">⧉ copy</button></li>`).join('')}
           </ul>
