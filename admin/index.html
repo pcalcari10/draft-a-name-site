@@ -731,23 +731,32 @@ addNameSubmitBtn.addEventListener('click', async () => {
   addNameStatusEl.textContent = 'Saving\u2026';
 
   try {
-    await db.collection('pending_puns').add({
-      playerId: addNameSelectedPlayer.id,
-      playerName: `${addNameSelectedPlayer.first} ${addNameSelectedPlayer.last}`,
-      newName,
-      createdAt: Date.now()
-    });
+    // If the pun references the player's last name, apply it to everyone who
+    // shares that exact surname too (e.g. a "Brown" pun goes to every Brown).
+    const lastLower = (addNameSelectedPlayer.last || '').toLowerCase();
+    const referencesSurname = lastLower && newName.toLowerCase().includes(lastLower);
+    const targets = referencesSurname
+      ? allPlayers.filter(p => p.last && p.last.toLowerCase() === lastLower)
+      : [addNameSelectedPlayer];
 
-    // Reflect it immediately in this session's view of the tracker
-    if(!addNameSelectedPlayer.names.includes(newName)){
-      addNameSelectedPlayer.names.push(newName);
+    for(const player of targets){
+      await db.collection('pending_puns').add({
+        playerId: player.id,
+        playerName: `${player.first} ${player.last}`,
+        newName,
+        createdAt: Date.now()
+      });
+      if(!player.names.includes(newName)) player.names.push(newName);
+      player.tier = 'curated';
     }
-    addNameSelectedPlayer.tier = 'curated';
+
     updateProgressStats();
     renderPlaceholders();
     renderCurated();
 
-    addNameStatusEl.textContent = `\u2705 Added "${newName}" to ${addNameSelectedPlayer.first} ${addNameSelectedPlayer.last}. Visible here now \u2014 tell Claude to merge it into the live site whenever you're ready.`;
+    addNameStatusEl.textContent = targets.length > 1
+      ? `\u2705 "${newName}" references the surname "${addNameSelectedPlayer.last}" \u2014 applied to all ${targets.length} matching players: ${targets.map(p => `${p.first} ${p.last}`).join(', ')}. Visible here now \u2014 tell Claude to merge into the live site whenever you're ready.`
+      : `\u2705 Added "${newName}" to ${addNameSelectedPlayer.first} ${addNameSelectedPlayer.last}. Visible here now \u2014 tell Claude to merge it into the live site whenever you're ready.`;
     addNameTextEl.value = '';
     addNameSelectedEl.style.display = 'none';
     addNameSelectedPlayer = null;
