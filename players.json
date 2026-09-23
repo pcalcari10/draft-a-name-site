@@ -6666,5 +6666,29 @@
     ],
     "active": true,
     "tier": "template"
+  },
+  {
+    "id": "carloswashington_mia",
+    "first": "Carlos",
+    "last": "Washington",
+    "team": "MIA",
+    "pos": "RB",
+    "names": [
+      "Washington Wizards"
+    ],
+    "active": true,
+    "tier": "curated"
+  },
+  {
+    "id": "caseywashington_car",
+    "first": "Casey",
+    "last": "Washington",
+    "team": "CAR",
+    "pos": "WR",
+    "names": [
+      "Washington Wizards"
+    ],
+    "active": true,
+    "tier": "curated"
   }
 ]
