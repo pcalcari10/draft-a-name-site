@@ -1,0 +1,475 @@
+[
+  {
+    "abbr": "ARI",
+    "city": "Arizona",
+    "nickname": "Cardinals",
+    "names": [
+      "Bird Gang",
+      "Cardinal Sin",
+      "Cardinal Rules",
+      "Desert Storm",
+      "Desert Dynasty",
+      "Valley of the Sun Sons",
+      "Phoenix Rising",
+      "Cardiac Cardinals"
+    ]
+  },
+  {
+    "abbr": "ATL",
+    "city": "Atlanta",
+    "nickname": "Falcons",
+    "names": [
+      "ATLiens",
+      "ATL's Finest",
+      "Dirty Birds",
+      "Dirty Birds Dynasty",
+      "Falcon Fury",
+      "Birds of Prey",
+      "Fly High Falcons",
+      "Falcon PUNCH",
+      "Falcon Frenzy"
+    ]
+  },
+  {
+    "abbr": "BAL",
+    "city": "Baltimore",
+    "nickname": "Ravens",
+    "names": [
+      "Ravens Flock",
+      "Edgar Allan Poe-tential",
+      "Edgar Allen Pros",
+      "Purple Reign",
+      "Purple Pain",
+      "Ravens Wrath"
+    ]
+  },
+  {
+    "abbr": "BUF",
+    "city": "Buffalo",
+    "nickname": "Bills",
+    "names": [
+      "Bills Mafia",
+      "Buffalo Stampede",
+      "Buffalo Soldiers",
+      "The Billievers",
+      "Bills to Pay",
+      "Table Smashers",
+      "Buffa-Low Expectations",
+      "Orchard Park Originals",
+      "Bills Thrills",
+      "Buffalo Blitz",
+      "Bills Mafia's Hitmen",
+      "Bills Gone Wild"
+    ]
+  },
+  {
+    "abbr": "CAR",
+    "city": "Carolina",
+    "nickname": "Panthers",
+    "names": [
+      "Panthers' Prowlers",
+      "Black and Blue Brigade",
+      "Panther Pride",
+      "Prowlin' Panthers",
+      "Carolina Carnage",
+      "Panther Pack",
+      "Cardiac Cats"
+    ]
+  },
+  {
+    "abbr": "CHI",
+    "city": "Chicago",
+    "nickname": "Bears",
+    "names": [
+      "Bear Down and Win",
+      "Chi-Town's Finest",
+      "Monsters of the Midway",
+      "Soldier Field Soldiers",
+      "Bear Necessities",
+      "Ditka's Disciples",
+      "Da Bears Brigade",
+      "Bear with Me",
+      "The Payton Express",
+      "Windy City Winners",
+      "Halas's Heroes"
+    ]
+  },
+  {
+    "abbr": "CIN",
+    "city": "Cincinnati",
+    "nickname": "Bengals",
+    "names": [
+      "Who Dey Dynasty",
+      "Bengal Brawlers",
+      "Roaring To Victory",
+      "Tiger Kings",
+      "Jungle Boogie",
+      "Welcome to the Jungle",
+      "Who Dey Nation",
+      "Cardiac Cats",
+      "Tiger Terror",
+      "Striped Savages"
+    ]
+  },
+  {
+    "abbr": "CLE",
+    "city": "Cleveland",
+    "nickname": "Browns",
+    "names": [
+      "Dawg Pound Dynasty",
+      "Brown Out",
+      "Brownie Points",
+      "Cleveland Steamer",
+      "Dawg Days",
+      "Cleveland Rocks",
+      "Dawg Pound Disciples",
+      "Costco Hot Dawg"
+    ]
+  },
+  {
+    "abbr": "DAL",
+    "city": "Dallas",
+    "nickname": "Cowboys",
+    "names": [
+      "Lone Star Legends",
+      "How 'Bout Them Cowboys?",
+      "Jerry's World Champs",
+      "America's Team",
+      "No Romo",
+      "Dez Caught It",
+      "Dez Dispenser",
+      "Witten in the Stars",
+      "Aikman's Air Force",
+      "I'm Going To Jerry's World",
+      "Romo Sapiens",
+      "Dez-troyers",
+      "RomoCop",
+      "Dez Nuts",
+      "Reverse Cowboys"
+    ]
+  },
+  {
+    "abbr": "DEN",
+    "city": "Denver",
+    "nickname": "Broncos",
+    "names": [
+      "Mile High Magic",
+      "Broncos Stampede",
+      "Orange Crush",
+      "Broncos Country, Let's Ride",
+      "Broncos Nation",
+      "Mile High Club",
+      "High Altitude Heroes",
+      "Mile High Mob",
+      "Bronco Battalion"
+    ]
+  },
+  {
+    "abbr": "DET",
+    "city": "Detroit",
+    "nickname": "Lions",
+    "names": [
+      "Lions Pride",
+      "Motor City Maulers",
+      "Roaring Lions",
+      "Detroit Dominators",
+      "Kneecap Biters",
+      "Lionhearted Leaders",
+      "Motown Maulers",
+      "Lion Kings",
+      "Roaring To Victory",
+      "Inside the Lions' Den",
+      "Cardiac Cats"
+    ]
+  },
+  {
+    "abbr": "GB",
+    "city": "Green Bay",
+    "nickname": "Packers",
+    "names": [
+      "Go Pack Go",
+      "Lambeau Leapers",
+      "Cheesehead Champions",
+      "Pack Attack",
+      "TitleTown Titans",
+      "Packin' Heat",
+      "Lambeau Legends",
+      "The Pack Is Back",
+      "Green and Gold Gang"
+    ]
+  },
+  {
+    "abbr": "HOU",
+    "city": "Houston",
+    "nickname": "Texans",
+    "names": [
+      "Texan Terrors",
+      "Houston Havoc",
+      "Houston Heat",
+      "Lone Star Legends"
+    ]
+  },
+  {
+    "abbr": "IND",
+    "city": "Indianapolis",
+    "nickname": "Colts",
+    "names": [
+      "Colts Stampede",
+      "Horseshoe Heroes",
+      "For The Shoe",
+      "Hoosier Hustlers",
+      "Horseshoe Havoc",
+      "Indy Express"
+    ]
+  },
+  {
+    "abbr": "JAC",
+    "city": "Jacksonville",
+    "nickname": "Jaguars",
+    "names": [
+      "DUUVVALL DYNASTY",
+      "Big Cat Blitz",
+      "Jags Attack",
+      "Roaring To Victory",
+      "Teal Crush",
+      "Cat Scratch Fever",
+      "Cardiac Cats"
+    ]
+  },
+  {
+    "abbr": "KC",
+    "city": "Kansas City",
+    "nickname": "Chiefs",
+    "names": [
+      "Chiefs Kingdom",
+      "All Hail the Chiefs",
+      "Long Live the Chiefs",
+      "Arrowhead Avengers",
+      "Red and Gold Rush",
+      "Shake It Offense",
+      "Hi, I'm The Champion, It's Me",
+      "We Are Never Ever Trading Together",
+      "We Are Never Ever Losing",
+      "Trophy, You Belong With Me"
+    ]
+  },
+  {
+    "abbr": "LAC",
+    "city": "Los Angeles",
+    "nickname": "Chargers",
+    "names": [
+      "Lead The Charge",
+      "Bolts Boys",
+      "Bolt Brigade",
+      "Bolt Up",
+      "LA Power Surge",
+      "Bolt Battalion",
+      "West Coast Warriors"
+    ]
+  },
+  {
+    "abbr": "LAR",
+    "city": "Los Angeles",
+    "nickname": "Rams",
+    "names": [
+      "The Greatest Show on Turf",
+      "West Coast Warriors",
+      "Rams Rampage",
+      "LA Grit",
+      "Rams Nation"
+    ]
+  },
+  {
+    "abbr": "LV",
+    "city": "Las Vegas",
+    "nickname": "Raiders",
+    "names": [
+      "Raider Nation Rising",
+      "Sin City Squad",
+      "The House Always Wins",
+      "Silver and Black Attack",
+      "Raider Revolution"
+    ]
+  },
+  {
+    "abbr": "MIA",
+    "city": "Miami",
+    "nickname": "Dolphins",
+    "names": [
+      "Fins Up!",
+      "Dolphins Dynasty",
+      "Track Squad",
+      "Speed Kills",
+      "Miami Heatwave",
+      "Aqua Assassins",
+      "Taking My Talents to South Beach",
+      "Marino's Men",
+      "South Beach Storm",
+      "Phinsanity",
+      "Teal and Orange Crush",
+      "Aqua Force",
+      "Onlyfins.com"
+    ]
+  },
+  {
+    "abbr": "MIN",
+    "city": "Minnesota",
+    "nickname": "Vikings",
+    "names": [
+      "Skol Squad",
+      "Purple People Eaters",
+      "Purple Pride",
+      "Minnesota Maulers",
+      "Viking Voyage",
+      "Purple Reign",
+      "Purple Pain",
+      "Valhalla Warriors"
+    ]
+  },
+  {
+    "abbr": "NE",
+    "city": "New England",
+    "nickname": "Patriots",
+    "names": [
+      "Pats Dynasty",
+      "Patriot Pride",
+      "Boston Brawlers"
+    ]
+  },
+  {
+    "abbr": "NO",
+    "city": "New Orleans",
+    "nickname": "Saints",
+    "names": [
+      "Who Dat?",
+      "Who Dat Dynasty",
+      "Saints' Swagger",
+      "Crescent City Crusaders",
+      "NOLA Knockouts",
+      "Bayou Blitz",
+      "Crescent City Champs"
+    ]
+  },
+  {
+    "abbr": "NYG",
+    "city": "New York",
+    "nickname": "Giants",
+    "names": [
+      "Big Blue Brigade",
+      "Big Blue Wrecking Crew",
+      "G-Men Dynasty",
+      "Gotham Giants"
+    ]
+  },
+  {
+    "abbr": "NYJ",
+    "city": "New York",
+    "nickname": "Jets",
+    "names": [
+      "Jet Setters",
+      "Green Machine",
+      "Gang Green",
+      "Flight Club",
+      "Gotham Flyers"
+    ]
+  },
+  {
+    "abbr": "PHI",
+    "city": "Philadelphia",
+    "nickname": "Eagles",
+    "names": [
+      "The Birds",
+      "The Iggles",
+      "Fly Eagles Fly",
+      "Philly Phenoms",
+      "Philly Special",
+      "Philly Dynasty",
+      "Brotherly Love Ballers",
+      "Eagle Eye",
+      "Liberty Bells"
+    ]
+  },
+  {
+    "abbr": "PIT",
+    "city": "Pittsburgh",
+    "nickname": "Steelers",
+    "names": [
+      "Steel Curtain Call",
+      "Tomlin's Troops",
+      "Big Ben Theory",
+      "Blitzburgh Boys",
+      "Heinz Wardens",
+      "Franco's Final Drive",
+      "Terrible Towels",
+      "Black and Yellow Brigade",
+      "Steeler Nation Domination",
+      "Cowher Power"
+    ]
+  },
+  {
+    "abbr": "SEA",
+    "city": "Seattle",
+    "nickname": "Seahawks",
+    "names": [
+      "The Blue Wave",
+      "Legion of Boom",
+      "Seahawks Hacov",
+      "Seattle Surge",
+      "Seattle Storm",
+      "12th Man Warriors",
+      "Sea of Blue"
+    ]
+  },
+  {
+    "abbr": "SF",
+    "city": "San Francisco",
+    "nickname": "49ers",
+    "names": [
+      "YAC Bros",
+      "Niner Nation",
+      "Gold Rush Gang"
+    ]
+  },
+  {
+    "abbr": "TB",
+    "city": "Tampa Bay",
+    "nickname": "Buccaneers",
+    "names": [
+      "Bucco Bruce's Crew",
+      "The Gravediggers",
+      "Creamsicle Crew",
+      "Tampa's Finest",
+      "We Goin' to the (Pirate) Ship",
+      "Bucs To The Future",
+      "Pirate's Booty",
+      "Brady-less Brigade",
+      "Gronk Spike",
+      "Cannonball Run",
+      "Tampa Two-Step",
+      "Buc Wild",
+      "Pewter Power"
+    ]
+  },
+  {
+    "abbr": "TEN",
+    "city": "Tennessee",
+    "nickname": "Titans",
+    "names": [
+      "Music City Maulers",
+      "Nashville's Finest",
+      "Remember The Titans",
+      "Music City Monsters"
+    ]
+  },
+  {
+    "abbr": "WAS",
+    "city": "Washington",
+    "nickname": "Commanders",
+    "names": [
+      "The Hogs",
+      "D.C. Dominators",
+      "Capital Commanders",
+      "Washington's Finest"
+    ]
+  }
+]
