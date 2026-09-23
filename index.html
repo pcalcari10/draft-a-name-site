@@ -7416,7 +7416,7 @@ function getDefensivePlayersForTeam(abbr){
 
 const allNamesBox = document.getElementById('allNames');
 
-function renderAllNames(){
+async function renderAllNames(){
   if(selected.length === 0){ allNamesBox.innerHTML = ''; return; }
 
   // Selecting a team auto-pulls in that team's defensive players too, unless already picked directly
@@ -7431,8 +7431,22 @@ function renderAllNames(){
     }
   });
 
-  allNamesBox.innerHTML = toRender.map(e => {
-    const names = e.kind === 'team' ? getTeamNames(e) : e.names;
+  const entityNames = toRender.map(e => e.kind === 'team' ? getTeamNames(e) : e.names);
+
+  // Fetch every displayed pun's like count once, up front, so player lists can be sorted by popularity before rendering
+  const allLikeIds = [];
+  entityNames.forEach(list => list.forEach(n => allLikeIds.push(likeIdFor(n))));
+  const counts = await batchGetCounts(allLikeIds);
+
+  allNamesBox.innerHTML = toRender.map((e, idx) => {
+    let names = entityNames[idx];
+    if(e.kind === 'player'){
+      // Most-liked first; ties keep original order
+      names = names
+        .map((n, i) => ({ n, i, c: counts[likeIdFor(n)] || 0 }))
+        .sort((a, b) => b.c - a.c || a.i - b.i)
+        .map(x => x.n);
+    }
     const icon = e.kind === 'team' ? '🛡 ' : e.kind === 'genericAll' ? '🗂 ' : e.kind === 'wildcard' ? '✨ ' : (DEFENSIVE_POS.has(e.pos) ? '🛡️ ' : '');
     const label = fullName(e);
     return `
