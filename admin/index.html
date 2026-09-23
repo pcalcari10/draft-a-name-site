@@ -95,6 +95,35 @@
     <div id="syncStatus" style="margin-top:14px; font-family:var(--mono); font-size:13px; color:var(--dim);"></div>
     <div id="syncList" style="margin-top:10px;"></div>
 
+    <div style="margin-top:20px; padding-top:16px; border-top:1px solid var(--line);">
+      <div class="team-name" style="font-size:14px; margin-bottom:8px;">⏰ Automated schedule</div>
+      <div id="autoSyncStatus" style="font-family:var(--mono); font-size:12.5px; color:var(--dim); line-height:1.8;">Checking last run\u2026</div>
+
+      <div style="margin-top:14px;">
+        <div class="progress-label" style="margin-bottom:8px;">Want a different day or time? Pick one below \u2014 it won't change anything by itself, but gives you the exact line to use.</div>
+        <div style="display:flex; gap:8px; flex-wrap:wrap; align-items:center;">
+          <select id="cronDay" style="background:var(--panel-2); border:1px solid var(--line); color:var(--text); border-radius:8px; padding:8px 10px; font-family:var(--sans); font-size:13px;">
+            <option value="1">Monday</option>
+            <option value="2" selected>Tuesday</option>
+            <option value="3">Wednesday</option>
+            <option value="4">Thursday</option>
+            <option value="5">Friday</option>
+            <option value="6">Saturday</option>
+            <option value="0">Sunday</option>
+          </select>
+          <select id="cronHour" style="background:var(--panel-2); border:1px solid var(--line); color:var(--text); border-radius:8px; padding:8px 10px; font-family:var(--sans); font-size:13px;"></select>
+          <span style="color:var(--dim); font-size:12.5px;">UTC</span>
+          <button class="ghost" id="copyCronBtn" style="font-family:var(--mono);font-size:12.5px;background:none;border:1px solid var(--line);color:var(--text);border-radius:8px;padding:8px 14px;cursor:pointer;">Copy cron line</button>
+        </div>
+        <div id="cronPreview" style="margin-top:10px; font-family:var(--mono); font-size:12.5px; background:var(--panel-2); border-radius:6px; padding:8px 12px; color:var(--amber);"></div>
+        <div style="margin-top:8px; font-size:12px; color:var(--dim);">
+          Paste that line in place of the existing <code style="background:var(--panel-2); padding:1px 5px; border-radius:4px;">cron:</code> value in
+          <a href="https://github.com/pcalcari10/draft-a-name-site/edit/main/.github/workflows/weekly-roster-sync.yml" target="_blank" rel="noopener" style="color:var(--amber);">weekly-roster-sync.yml</a>
+          on GitHub, then commit \u2014 or just tell Claude the day/time you picked and it'll do that for you.
+        </div>
+      </div>
+    </div>
+
   <div class="progress-panel">
     <div class="progress-top">
       <div>
@@ -251,6 +280,80 @@ async function runSync(){
 }
 
 document.getElementById('syncBtn').addEventListener('click', runSync);
+
+// ---------- Schedule status + cron builder ----------
+const DAY_NAMES = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+
+const cronHourSelect = document.getElementById('cronHour');
+for(let h = 0; h < 24; h++){
+  const opt = document.createElement('option');
+  opt.value = h;
+  opt.textContent = String(h).padStart(2,'0') + ':00';
+  if(h === 10) opt.selected = true; // matches the current default schedule
+  cronHourSelect.appendChild(opt);
+}
+
+function updateCronPreview(){
+  const day = document.getElementById('cronDay').value;
+  const hour = document.getElementById('cronHour').value;
+  const cronLine = `    - cron: '0 ${hour} * * ${day}'`;
+  document.getElementById('cronPreview').textContent = cronLine;
+}
+document.getElementById('cronDay').addEventListener('change', updateCronPreview);
+document.getElementById('cronHour').addEventListener('change', updateCronPreview);
+updateCronPreview();
+
+document.getElementById('copyCronBtn').addEventListener('click', () => {
+  const text = document.getElementById('cronPreview').textContent;
+  navigator.clipboard?.writeText(text).catch(() => {});
+  const btn = document.getElementById('copyCronBtn');
+  const original = btn.textContent;
+  btn.textContent = 'Copied!';
+  setTimeout(() => { btn.textContent = original; }, 1200);
+});
+
+// Next run, computed from the schedule currently live in the workflow file (Tue 10:00 UTC)
+function nextScheduledRun(dayOfWeek, hourUtc){
+  const now = new Date();
+  const next = new Date(now);
+  next.setUTCHours(hourUtc, 0, 0, 0);
+  let daysAhead = (dayOfWeek - now.getUTCDay() + 7) % 7;
+  if(daysAhead === 0 && next <= now) daysAhead = 7;
+  next.setUTCDate(next.getUTCDate() + daysAhead);
+  return next;
+}
+
+async function loadAutoSyncStatus(){
+  const el = document.getElementById('autoSyncStatus');
+  const currentSchedule = `${DAY_NAMES[2]} at 10:00 UTC`; // matches the workflow file as currently written
+  const next = nextScheduledRun(2, 10);
+
+  let lastRunHtml = 'Couldn\u2019t reach GitHub to check \u2014 see the Actions tab directly.';
+  try {
+    const res = await fetch('https://api.github.com/repos/pcalcari10/draft-a-name-site/actions/workflows/weekly-roster-sync.yml/runs?per_page=1');
+    if(res.ok){
+      const data = await res.json();
+      const run = data.workflow_runs && data.workflow_runs[0];
+      if(run){
+        const when = new Date(run.run_started_at || run.created_at);
+        const status = run.status === 'completed'
+          ? (run.conclusion === 'success' ? '\u2705 succeeded' : `\u26a0\ufe0f ${run.conclusion}`)
+          : `\u23f3 ${run.status}`;
+        lastRunHtml = `${when.toLocaleString()} \u2014 ${status}`;
+      } else {
+        lastRunHtml = 'No runs yet \u2014 it hasn\u2019t fired for the first time.';
+      }
+    }
+  } catch(err){ console.error('loadAutoSyncStatus failed', err); }
+
+  el.innerHTML = `
+    Current schedule: <strong style="color:var(--text);">${currentSchedule}</strong><br>
+    Next run: ${next.toLocaleString()}<br>
+    Last run: ${lastRunHtml}
+  `;
+}
+loadAutoSyncStatus();
+
 
 const TEAM_FULL = {
   ARI:'Arizona Cardinals', ATL:'Atlanta Falcons', BAL:'Baltimore Ravens', BUF:'Buffalo Bills',
