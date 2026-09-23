@@ -7568,6 +7568,25 @@ firebase.initializeApp(firebaseConfig);
 const likesDb = firebase.firestore();
 const LIKES_COLLECTION = 'likes';
 
+// Pull in players the Sleeper Importer auto-added for rosters we didn't have yet,
+// so they become searchable here too. Runs after initial load; search catches up
+// within a second or so of the page opening.
+const EXTRA_PLAYERS_COLLECTION = 'extra_players';
+(async function mergeExtraPlayers(){
+  try {
+    const snap = await likesDb.collection(EXTRA_PLAYERS_COLLECTION).get();
+    snap.forEach(doc => {
+      const d = doc.data();
+      if(ENTITIES.find(e => e.id === doc.id)) return; // already have a curated/template record for this id
+      ENTITIES.push({
+        id: doc.id, kind: 'player',
+        first: d.first, last: d.last, team: d.team, pos: d.pos || '',
+        names: d.names || [], active: true
+      });
+    });
+  } catch(err){ console.error('mergeExtraPlayers failed', err); }
+})();
+
 function hashKey(str){
   let h = 5381;
   for(let i = 0; i < str.length; i++){

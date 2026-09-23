@@ -8,6 +8,8 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.13.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.13.0/firebase-firestore-compat.js"></script>
 <style>
   :root {
     --bg: #10151B;
@@ -223,6 +225,81 @@ async function loadPlayerIdMap(){
 }
 
 const TEAM_CODE_FIX = { LVR:'LV', SFO:'SF', GBP:'GB', KCC:'KC', NEP:'NE', TBB:'TB' };
+
+// ---------- Auto-add missing players (Firestore) ----------
+const firebaseConfig = {
+  apiKey: "AIzaSyBrKEhoELjV_LBNYpqJgy_prsS9OPNjp5E",
+  authDomain: "draft-a-name.firebaseapp.com",
+  projectId: "draft-a-name",
+  storageBucket: "draft-a-name.firebasestorage.app",
+  messagingSenderId: "32475030057",
+  appId: "1:32475030057:web:8a1d4ec6e4725ae08c3238"
+};
+firebase.initializeApp(firebaseConfig);
+const extraDb = firebase.firestore();
+const EXTRA_PLAYERS_COLLECTION = 'extra_players';
+
+const SOLO_TEMPLATES = [
+  (f,l) => `${l}'s Fantasy Fortress`,
+  (f,l) => `In ${l} We Trust`,
+  (f,l) => `${f} & Chill`,
+  (f,l) => `${l}-A-Palooza`,
+  (f,l) => `The ${l} Show`,
+  (f,l) => `${l} of Fame`,
+  (f,l) => `${f}'s Excellent Adventure`,
+  (f,l) => `Livin' on a ${l}`,
+  (f,l) => `${l} Happens`,
+  (f,l) => `${f} Vibes Only`,
+  (f,l) => `All ${l}, No Filler`,
+  (f,l) => `${l}-tastic Voyage`,
+  (f,l) => `${f} ${l} and the Fantasy Machine`,
+  (f,l) => `Straight Outta ${l}`,
+  (f,l) => `${l}'d Up and Ready`,
+];
+
+function seededRandom(seed){
+  let h = 0;
+  for(let i=0;i<seed.length;i++) h = (h * 31 + seed.charCodeAt(i)) >>> 0;
+  return function(){ h = (h * 1664525 + 1013904223) >>> 0; return h / 4294967296; };
+}
+function shuffleWith(rnd, arr){
+  const a = arr.slice();
+  for(let i=a.length-1;i>0;i--){ const j=Math.floor(rnd()*(i+1)); [a[i],a[j]]=[a[j],a[i]]; }
+  return a;
+}
+function genSoloNames(first, last, seedKey, n){
+  const rnd = seededRandom(seedKey);
+  return shuffleWith(rnd, SOLO_TEMPLATES).slice(0, n || 5).map(t => t(first, last));
+}
+
+function slugifyId(first, last, team){
+  const slug = (first + last).toLowerCase().replace(/[^a-z0-9]/g, '');
+  return slug + '_' + (team || 'fa').toLowerCase();
+}
+
+// Look up (or create) an auto-added player record so a Sleeper roster gap
+// only ever needs filling once, for every future visitor.
+async function getOrCreateExtraPlayer(first, last, team, pos){
+  const id = slugifyId(first, last, team);
+  const ref = extraDb.collection(EXTRA_PLAYERS_COLLECTION).doc(id);
+  try {
+    const snap = await ref.get();
+    if(snap.exists) return { id, ...snap.data() };
+  } catch(err){ console.error('extra_players read failed', err); }
+
+  const names = genSoloNames(first, last, id);
+  const record = { first, last, team: team || 'FA', pos: pos || '', names, tier: 'template', source: 'sleeper_auto_add' };
+  try {
+    await extraDb.collection(EXTRA_PLAYERS_COLLECTION).doc(id).set(record);
+  } catch(err){
+    // Another visitor may have created it a moment ago \u2014 harmless, just re-read
+    try {
+      const fresh = await ref.get();
+      if(fresh.exists) return { id, ...fresh.data() };
+    } catch(e2){ console.error('extra_players re-read failed', e2); }
+  }
+  return { id, ...record };
+}
 function fixTeam(code){ return TEAM_CODE_FIX[code] || code; }
 
 function copyText(btn, text){
@@ -298,28 +375,34 @@ async function loadRoster(leagueId, leagueName){
     const allIds = mine.players || [];
     const bench = allIds.filter(id => !starterSet.has(id));
 
-    function resolve(id){
+    async function resolve(id){
       const raw = idMap[id];
       if(!raw || !raw.name) return { name: 'Unknown player (id ' + id + ')', team: '', pos: '', status: 'missing', names: [] };
       const norm = normalize(raw.name);
       const dbHit = DB_BY_NAME[norm];
-      let status = 'missing';
-      if(dbHit) status = dbHit.tier === 'curated' ? 'curated' : 'template';
+      const team = fixTeam(raw.team || '');
+      if(dbHit){
+        return {
+          name: raw.name, team, pos: raw.position || '',
+          status: dbHit.tier === 'curated' ? 'curated' : 'template',
+          names: dbHit.names
+        };
+      }
+      // Not in the database yet \u2014 auto-add them from Sleeper's own data so this gap only needs filling once
+      const parts = raw.name.trim().split(' ');
+      const first = parts[0];
+      const last = parts.slice(1).join(' ') || parts[0];
+      const extra = await getOrCreateExtraPlayer(first, last, team, raw.position);
       return {
-        name: raw.name,
-        team: fixTeam(raw.team || ''),
-        pos: raw.position || '',
-        status,
-        names: dbHit ? dbHit.names : []
+        name: raw.name, team, pos: raw.position || '',
+        status: 'template',
+        names: extra.names || []
       };
     }
 
-    const starters = (mine.starters || []).filter(id => id !== '0').map(resolve);
-    const benchPlayers = bench.map(resolve);
+    const starters = await Promise.all((mine.starters || []).filter(id => id !== '0').map(resolve));
+    const benchPlayers = await Promise.all(bench.map(resolve));
     const all = starters.concat(benchPlayers);
-
-    const counts = { curated: 0, template: 0, missing: 0 };
-    all.forEach(p => counts[p.status]++);
 
     function cardHtml(p, idx, prefix){
       const metaBits = [p.pos, p.team].filter(Boolean).join(' · ');
@@ -328,7 +411,7 @@ async function loadRoster(leagueId, leagueName){
         return `
         <details class="pcard ${p.status}">
           <summary><div><div class="pname">${p.name}</div><div class="pmeta">${metaBits}</div></div></summary>
-          <div class="empty-note">No puns for this player yet — not in the Draft a Name database.</div>
+          <div class="empty-note">Couldn't identify this player from Sleeper's data.</div>
         </details>`;
       }
       return `
@@ -355,20 +438,10 @@ async function loadRoster(leagueId, leagueName){
           <a class="rename-link" href="https://sleeper.com/leagues/${leagueId}" target="_blank" rel="noopener">Open ${leagueName} on Sleeper ↗</a>
         </div>
 
-        <div class="summary">
-          <span class="summary-item"><span class="dot curated"></span>${counts.curated} curated</span>
-          <span class="summary-item"><span class="dot template"></span>${counts.template} placeholder</span>
-          <span class="summary-item"><span class="dot missing"></span>${counts.missing} not in database</span>
-        </div>
-
         <div class="section-title">STARTERS (${starters.length})</div>
         <div class="players">${starters.map((p,i) => cardHtml(p,i,'s')).join('')}</div>
         <div class="section-title">BENCH / TAXI (${benchPlayers.length})</div>
         <div class="players">${benchPlayers.map((p,i) => cardHtml(p,i,'b')).join('')}</div>
-
-        <div class="actions-bar">
-          <button class="ghost" id="copyMissingBtn">Copy names not in database</button>
-        </div>
 
         ${teamBlocks.length > 0 ? `
           <div class="section-title">TEAM PRIDE — FRANCHISES ON THIS ROSTER</div>
@@ -388,10 +461,6 @@ async function loadRoster(leagueId, leagueName){
 
     resultsPanel.querySelectorAll('.copy-name').forEach(btn => {
       btn.addEventListener('click', () => copyText(btn, btn.dataset.text));
-    });
-    document.getElementById('copyMissingBtn').addEventListener('click', () => {
-      const missing = all.filter(p => p.status === 'missing').map(p => p.name);
-      copyText(document.getElementById('copyMissingBtn'), missing.join('\n'));
     });
 
   } catch(err){
