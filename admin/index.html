@@ -48,8 +48,11 @@
   .team-block.open .team-players { display: block; }
   .team-block.open .chevron { transform: rotate(90deg); }
   .chevron { color: var(--dim); transition: transform .15s ease; font-size: 13px; }
-  .player-row { display: flex; justify-content: space-between; padding: 6px 0; font-size: 13.5px; border-top: 1px solid var(--line); }
+  .player-row { padding: 8px 0; font-size: 13.5px; border-top: 1px solid var(--line); }
   .player-row:first-child { border-top: none; }
+  .player-row-top { display: flex; justify-content: space-between; }
+  .player-names { margin-top: 4px; color: var(--dim); font-size: 12px; line-height: 1.5; }
+  .player-names .pun { display: inline-block; background: var(--panel-2); border-radius: 5px; padding: 2px 7px; margin: 2px 4px 0 0; }
   .player-pos { font-family: var(--mono); font-size: 11.5px; color: var(--dim); }
 
   .empty { text-align: center; color: var(--dim); padding: 40px; font-size: 14px; }
@@ -292,7 +295,10 @@ function render(){
         <span class="team-count">${players.length}${isPartial ? ` of ${byTeam[t].length}` : ''} left <span class="chevron">▸</span></span>
       </div>
       <div class="team-players">
-        ${players.map(p => `<div class="player-row"><span>${p.first} ${p.last}</span><span class="player-pos">${p.pos}</span></div>`).join('')}
+        ${players.map(p => `<div class="player-row">
+          <div class="player-row-top"><span>${p.first} ${p.last}</span><span class="player-pos">${p.pos}</span></div>
+          <div class="player-names">${p.names.map(n => `<span class="pun">${n}</span>`).join('')}</div>
+        </div>`).join('')}
       </div>
     </div>`;
   }).join('');
