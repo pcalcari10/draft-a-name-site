@@ -1,0 +1,38 @@
+name: Weekly Roster Sync
+
+on:
+  schedule:
+    # Every Tuesday at 10:00 UTC — after Monday's practice squad/roster moves
+    # and waiver processing have typically settled.
+    - cron: '0 10 * * 2'
+  workflow_dispatch: {} # lets you trigger it manually from the Actions tab too
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repo
+        uses: actions/checkout@v4
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Run roster sync
+        run: node scripts/sync-roster.js
+
+      - name: Commit and push if players.json changed
+        run: |
+          git config user.name "roster-sync-bot"
+          git config user.email "actions@github.com"
+          if ! git diff --quiet -- players.json; then
+            git add players.json
+            git commit -m "Weekly roster sync: add newly active players"
+            git push
+          else
+            echo "No changes to commit."
+          fi
