@@ -189,7 +189,7 @@ async function getOrCreateExtraPlayer(first, last, team, pos){
   return { id, ...record };
 }
 
-const SYNC_TEAM_FIX = { LVR:'LV', SFO:'SF', GBP:'GB', KCC:'KC', NEP:'NE', TBB:'TB' };
+const SYNC_TEAM_FIX = { LVR:'LV', SFO:'SF', GBP:'GB', KCC:'KC', NEP:'NE', TBB:'TB', JAX:'JAC' };
 function normalizeSyncName(name){
   return name.toLowerCase().replace(/-/g,' ').replace(/['']/g,'').replace(/\./g,'')
     .replace(/\s+(jr|sr|ii|iii|iv|v)$/i,'').replace(/\s+/g,' ').trim();
@@ -377,9 +377,13 @@ function render(){
   document.getElementById('templateCount').textContent = template;
   document.getElementById('totalCount').textContent = total + ' total players';
 
+  // Normalize a couple of team-code variants (Sleeper's live API uses "JAX", our
+  // database has always used "JAC") so they never split into separate groups.
+  const TEAM_ABBR_NORMALIZE = { JAX: 'JAC' };
   const byTeam = {};
   active.filter(p => p.tier !== 'curated').forEach(p => {
-    const team = p.team || 'FA';
+    const rawTeam = p.team || 'FA';
+    const team = TEAM_ABBR_NORMALIZE[rawTeam] || rawTeam;
     if(!byTeam[team]) byTeam[team] = [];
     byTeam[team].push(p);
   });
