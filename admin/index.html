@@ -90,6 +90,7 @@
     <button class="tab-btn" data-tab="placeholders">Placeholders</button>
     <button class="tab-btn" data-tab="curated">Curated</button>
     <button class="tab-btn" data-tab="performers">Best Performers (No Curated Name)</button>
+    <button class="tab-btn" data-tab="addname">Add a Name</button>
   </div>
 
   <div class="tab-panel active" id="tab-sync">
@@ -201,6 +202,30 @@
       <button class="ghost" id="loadPerfBtn" style="font-family:var(--mono);font-size:12.5px;background:none;border:1px solid var(--line);color:var(--text);border-radius:8px;padding:8px 14px;cursor:pointer;">Load performance data</button>
     </div>
     <div id="perfList" style="margin-top:14px;"></div>
+  </div>
+  </div>
+
+  <div class="tab-panel" id="tab-addname">
+  <div class="progress-panel">
+    <div class="team-name" style="font-size:16px;">✍️ Add a name to a player</div>
+    <div class="progress-label" style="margin-top:4px;">Search for any player \u2014 curated or placeholder \u2014 and submit a new pun. It shows up in this tracker right away; ask Claude to merge it into the live site whenever you're ready.</div>
+
+    <div style="margin-top:16px; position:relative;">
+      <input id="addNameSearch" type="text" placeholder="Search for a player…" autocomplete="off"
+        style="width:100%; background:var(--panel-2); border:1px solid var(--line); color:var(--text); border-radius:8px; padding:10px 12px; font-family:var(--sans); font-size:14px; outline:none;">
+      <div id="addNameSuggestions" style="display:none; position:absolute; left:0; right:0; top:calc(100% + 4px); background:var(--panel-2); border:1px solid var(--line); border-radius:8px; max-height:240px; overflow-y:auto; z-index:5;"></div>
+    </div>
+
+    <div id="addNameSelected" style="margin-top:12px; display:none; font-family:var(--mono); font-size:13px; color:var(--text); background:var(--panel-2); border-radius:8px; padding:10px 12px;"></div>
+
+    <div style="margin-top:12px; display:flex; gap:8px; flex-wrap:wrap;">
+      <input id="addNameText" type="text" placeholder="The new pun…" disabled
+        style="flex:1; min-width:200px; background:var(--panel-2); border:1px solid var(--line); color:var(--text); border-radius:8px; padding:10px 12px; font-family:var(--sans); font-size:14px; outline:none;">
+      <button id="addNameSubmit" disabled
+        style="font-family:var(--mono);font-size:13px;font-weight:600;background:var(--amber);color:#1A1000;border:none;border-radius:8px;padding:10px 18px;cursor:pointer;">Add</button>
+    </div>
+
+    <div id="addNameStatus" style="margin-top:12px; font-family:var(--mono); font-size:12.5px; color:var(--dim);"></div>
   </div>
   </div>
 
@@ -646,6 +671,93 @@ document.getElementById('search').addEventListener('input', renderPlaceholders);
 document.getElementById('sortBy').addEventListener('change', renderPlaceholders);
 document.getElementById('searchCurated').addEventListener('input', renderCurated);
 document.getElementById('sortByCurated').addEventListener('change', renderCurated);
+
+// ---------- Add a Name ----------
+let addNameSelectedPlayer = null;
+
+const addNameSearchEl = document.getElementById('addNameSearch');
+const addNameSuggestionsEl = document.getElementById('addNameSuggestions');
+const addNameSelectedEl = document.getElementById('addNameSelected');
+const addNameTextEl = document.getElementById('addNameText');
+const addNameSubmitBtn = document.getElementById('addNameSubmit');
+const addNameStatusEl = document.getElementById('addNameStatus');
+
+addNameSearchEl.addEventListener('input', () => {
+  const q = addNameSearchEl.value.trim().toLowerCase();
+  if(!q){ addNameSuggestionsEl.style.display = 'none'; return; }
+  const matches = allPlayers
+    .filter(p => p.first && p.last && p.active !== false)
+    .filter(p => `${p.first} ${p.last}`.toLowerCase().includes(q))
+    .slice(0, 8);
+  if(matches.length === 0){
+    addNameSuggestionsEl.innerHTML = `<div style="padding:10px 12px; color:var(--dim); font-size:13px;">No matches.</div>`;
+  } else {
+    addNameSuggestionsEl.innerHTML = matches.map(p => `
+      <div class="add-name-suggestion" data-id="${p.id}" style="padding:10px 12px; cursor:pointer; border-bottom:1px solid var(--line); display:flex; justify-content:space-between;">
+        <span>${p.first} ${p.last}</span>
+        <span style="font-family:var(--mono); font-size:11.5px; color:var(--dim);">${p.pos} \u00b7 ${p.team} \u00b7 ${p.tier === 'curated' ? 'curated' : 'placeholder'}</span>
+      </div>
+    `).join('');
+  }
+  addNameSuggestionsEl.style.display = 'block';
+});
+
+addNameSuggestionsEl.addEventListener('click', (e) => {
+  const row = e.target.closest('.add-name-suggestion');
+  if(!row) return;
+  const player = allPlayers.find(p => p.id === row.dataset.id);
+  if(!player) return;
+  addNameSelectedPlayer = player;
+  addNameSearchEl.value = '';
+  addNameSuggestionsEl.style.display = 'none';
+  addNameSelectedEl.style.display = 'block';
+  addNameSelectedEl.textContent = `Selected: ${player.first} ${player.last} (${player.pos} \u00b7 ${player.team}) \u2014 currently ${player.names.length} name${player.names.length !== 1 ? 's' : ''}, ${player.tier === 'curated' ? 'curated' : 'placeholder'}`;
+  addNameTextEl.disabled = false;
+  addNameSubmitBtn.disabled = false;
+  addNameTextEl.focus();
+});
+
+document.addEventListener('click', (e) => {
+  if(!e.target.closest('#addNameSearch') && !e.target.closest('#addNameSuggestions')){
+    addNameSuggestionsEl.style.display = 'none';
+  }
+});
+
+addNameSubmitBtn.addEventListener('click', async () => {
+  const newName = addNameTextEl.value.trim();
+  if(!addNameSelectedPlayer || !newName) return;
+
+  addNameSubmitBtn.disabled = true;
+  addNameStatusEl.textContent = 'Saving\u2026';
+
+  try {
+    await db.collection('pending_puns').add({
+      playerId: addNameSelectedPlayer.id,
+      playerName: `${addNameSelectedPlayer.first} ${addNameSelectedPlayer.last}`,
+      newName,
+      createdAt: Date.now()
+    });
+
+    // Reflect it immediately in this session's view of the tracker
+    if(!addNameSelectedPlayer.names.includes(newName)){
+      addNameSelectedPlayer.names.push(newName);
+    }
+    addNameSelectedPlayer.tier = 'curated';
+    updateProgressStats();
+    renderPlaceholders();
+    renderCurated();
+
+    addNameStatusEl.textContent = `\u2705 Added "${newName}" to ${addNameSelectedPlayer.first} ${addNameSelectedPlayer.last}. Visible here now \u2014 tell Claude to merge it into the live site whenever you're ready.`;
+    addNameTextEl.value = '';
+    addNameSelectedEl.style.display = 'none';
+    addNameSelectedPlayer = null;
+    addNameTextEl.disabled = true;
+  } catch(err){
+    console.error('Failed to save pending pun', err);
+    addNameStatusEl.textContent = 'Something went wrong \u2014 check the browser console.';
+  }
+  addNameSubmitBtn.disabled = false;
+});
 
 async function boot(){
   try {
