@@ -61,6 +61,17 @@
   <h1>Curation Tracker</h1>
   <p class="sub">Every player still on auto-generated placeholder puns, grouped by team, so you know exactly what's left to write real jokes for.</p>
 
+  <div class="progress-panel" id="perfPanel" style="display:none;">
+    <div class="progress-top">
+      <div>
+        <div class="team-name" style="font-size:16px;">🔥 Best performers still on placeholders</div>
+        <div class="progress-label">Ranked by total fantasy points this season (PPR) — these are the highest priority to write real puns for</div>
+      </div>
+      <button class="ghost" id="loadPerfBtn" style="font-family:var(--mono);font-size:12.5px;background:none;border:1px solid var(--line);color:var(--text);border-radius:8px;padding:8px 14px;cursor:pointer;">Load performance data</button>
+    </div>
+    <div id="perfList" style="margin-top:14px;"></div>
+  </div>
+
   <div class="progress-panel">
     <div class="progress-top">
       <div>
@@ -115,6 +126,91 @@ const TEAM_FULL = {
 };
 
 let allPlayers = [...PLAYERS];
+
+// ---------- Performance data (best placeholder players to prioritize) ----------
+let sleeperIdMap = null; // normalized "first last" -> sleeper_id
+
+function normalizeName(name){
+  return name.toLowerCase().replace(/-/g,' ').replace(/['']/g,'').replace(/\./g,'')
+    .replace(/\s+(jr|sr|ii|iii|iv|v)$/i,'').replace(/\s+/g,' ').trim();
+}
+
+async function loadSleeperIdMap(){
+  if(sleeperIdMap) return sleeperIdMap;
+  const res = await fetch('https://raw.githubusercontent.com/dynastyprocess/data/master/files/db_playerids.csv');
+  const text = await res.text();
+  const lines = text.split('\n');
+  const header = lines[0].split(',');
+  const nameIdx = header.indexOf('name');
+  const sleeperIdx = header.indexOf('sleeper_id');
+  const map = {};
+  for(let i = 1; i < lines.length; i++){
+    // Simple CSV split is good enough here since name/sleeper_id fields don't contain commas
+    const cols = lines[i].split(',');
+    const name = cols[nameIdx];
+    const sid = cols[sleeperIdx];
+    if(name && sid && sid !== 'NA'){
+      map[normalizeName(name)] = sid;
+    }
+  }
+  sleeperIdMap = map;
+  return map;
+}
+
+async function loadPerformanceData(){
+  const btn = document.getElementById('loadPerfBtn');
+  const listEl = document.getElementById('perfList');
+  btn.disabled = true;
+  btn.textContent = 'Loading…';
+  listEl.innerHTML = `<div class="empty" style="padding:16px;">Fetching Sleeper ID mapping and season stats — this pulls one request per week, give it a moment…</div>`;
+
+  try {
+    const idMap = await loadSleeperIdMap();
+    const season = 2026;
+    const pointsBySleeperId = {};
+
+    // Sleeper's stats endpoint is per-week and undocumented; missing/future weeks just come back empty, which is fine
+    for(let week = 1; week <= 18; week++){
+      try {
+        const res = await fetch(`https://api.sleeper.app/stats/nfl/regular/${season}/${week}`);
+        if(!res.ok) continue;
+        const weekStats = await res.json();
+        Object.keys(weekStats).forEach(sid => {
+          const pts = weekStats[sid] && (weekStats[sid].pts_ppr || 0);
+          if(pts) pointsBySleeperId[sid] = (pointsBySleeperId[sid] || 0) + pts;
+        });
+      } catch(e){ /* skip a bad week, keep going */ }
+    }
+
+    const placeholders = allPlayers.filter(p => p.active !== false && p.first && p.last && p.tier !== 'curated');
+    const ranked = placeholders.map(p => {
+      const sid = idMap[normalizeName(p.first + ' ' + p.last)];
+      const points = sid ? (pointsBySleeperId[sid] || 0) : 0;
+      return { ...p, points };
+    }).filter(p => p.points > 0)
+      .sort((a,b) => b.points - a.points)
+      .slice(0, 20);
+
+    if(ranked.length === 0){
+      listEl.innerHTML = `<div class="empty" style="padding:16px;">No scoring data found yet for this season \u2014 try again once games have been played, or double check the season year.</div>`;
+    } else {
+      listEl.innerHTML = ranked.map((p, i) => `
+        <div class="player-row" style="font-size:14px;">
+          <span><span style="color:var(--dim);font-family:var(--mono);margin-right:8px;">${i+1}.</span>${p.first} ${p.last} <span class="player-pos">${p.pos} · ${p.team}</span></span>
+          <span style="font-family:var(--mono);color:var(--amber);">${p.points.toFixed(1)} pts</span>
+        </div>
+      `).join('');
+    }
+  } catch(err){
+    console.error('loadPerformanceData failed', err);
+    listEl.innerHTML = `<div class="empty" style="padding:16px;">Something went wrong pulling performance data \u2014 check the browser console for details.</div>`;
+  }
+  btn.disabled = false;
+  btn.textContent = 'Reload';
+}
+
+document.getElementById('loadPerfBtn').addEventListener('click', loadPerformanceData);
+document.getElementById('perfPanel').style.display = 'block';
 
 async function loadExtraPlayers(){
   try {
