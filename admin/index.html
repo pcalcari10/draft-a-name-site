@@ -82,6 +82,17 @@
     <div id="perfList" style="margin-top:14px;"></div>
   </div>
 
+  <div class="progress-panel" id="syncPanel">
+    <div class="progress-top">
+      <div>
+        <div class="team-name" style="font-size:16px;">🏈 Sync full league roster</div>
+        <div class="progress-label">Pulls every truly active QB/RB/WR/TE from Sleeper's live database across all 32 teams, and auto-adds anyone we're missing with placeholder puns.</div>
+      </div>
+      <button class="ghost" id="syncBtn" style="font-family:var(--mono);font-size:12.5px;background:none;border:1px solid var(--line);color:var(--text);border-radius:8px;padding:8px 14px;cursor:pointer;">Run sync</button>
+    </div>
+    <div id="syncStatus" style="margin-top:14px; font-family:var(--mono); font-size:13px; color:var(--dim);"></div>
+    <div id="syncList" style="margin-top:10px;"></div>
+
   <div class="progress-panel">
     <div class="progress-top">
       <div>
@@ -121,10 +132,123 @@ const firebaseConfig = {
 };
 firebase.initializeApp(firebaseConfig);
 const db = firebase.firestore();
+const EXTRA_PLAYERS_COLLECTION = 'extra_players';
 
 function escapeHtml(s){
   return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
 }
+
+// ---------- Placeholder pun generation (same algorithm used everywhere else) ----------
+const SOLO_TEMPLATES = [
+  (f,l) => `${l}'s Fantasy Fortress`,
+  (f,l) => `In ${l} We Trust`,
+  (f,l) => `${f} & Chill`,
+  (f,l) => `${l}-A-Palooza`,
+  (f,l) => `The ${l} Show`,
+  (f,l) => `${l} of Fame`,
+  (f,l) => `${f}'s Excellent Adventure`,
+  (f,l) => `Livin' on a ${l}`,
+  (f,l) => `${l} Happens`,
+  (f,l) => `${f} Vibes Only`,
+  (f,l) => `All ${l}, No Filler`,
+  (f,l) => `${l}-tastic Voyage`,
+  (f,l) => `${f} ${l} and the Fantasy Machine`,
+  (f,l) => `Straight Outta ${l}`,
+  (f,l) => `${l}'d Up and Ready`,
+];
+function seededRandom(seed){
+  let h = 0;
+  for(let i=0;i<seed.length;i++) h = (h * 31 + seed.charCodeAt(i)) >>> 0;
+  return function(){ h = (h * 1664525 + 1013904223) >>> 0; return h / 4294967296; };
+}
+function shuffleWith(rnd, arr){
+  const a = arr.slice();
+  for(let i=a.length-1;i>0;i--){ const j=Math.floor(rnd()*(i+1)); [a[i],a[j]]=[a[j],a[i]]; }
+  return a;
+}
+function genSoloNames(first, last, seedKey, n){
+  const rnd = seededRandom(seedKey);
+  return shuffleWith(rnd, SOLO_TEMPLATES).slice(0, n || 5).map(t => t(first, last));
+}
+function slugifyId(first, last, team){
+  const slug = (first + last).toLowerCase().replace(/[^a-z0-9]/g, '');
+  return slug + '_' + (team || 'fa').toLowerCase();
+}
+async function getOrCreateExtraPlayer(first, last, team, pos){
+  const id = slugifyId(first, last, team);
+  const ref = db.collection(EXTRA_PLAYERS_COLLECTION).doc(id);
+  try {
+    const snap = await ref.get();
+    if(snap.exists) return { id, ...snap.data(), alreadyExisted: true };
+  } catch(err){ console.error('extra_players read failed', err); }
+  const names = genSoloNames(first, last, id);
+  const record = { first, last, team: team || 'FA', pos: pos || '', names, tier: 'template', source: 'league_sync' };
+  try {
+    await ref.set(record);
+  } catch(err){ console.error('extra_players write failed', err); }
+  return { id, ...record };
+}
+
+const SYNC_TEAM_FIX = { LVR:'LV', SFO:'SF', GBP:'GB', KCC:'KC', NEP:'NE', TBB:'TB' };
+function normalizeSyncName(name){
+  return name.toLowerCase().replace(/-/g,' ').replace(/['']/g,'').replace(/\./g,'')
+    .replace(/\s+(jr|sr|ii|iii|iv|v)$/i,'').replace(/\s+/g,' ').trim();
+}
+
+async function runSync(){
+  const btn = document.getElementById('syncBtn');
+  const statusEl = document.getElementById('syncStatus');
+  const listEl = document.getElementById('syncList');
+  btn.disabled = true;
+  listEl.innerHTML = '';
+  statusEl.textContent = 'Fetching Sleeper\u2019s full player database (this is a ~5MB file, give it a moment)\u2026';
+
+  try {
+    const res = await fetch('https://api.sleeper.app/v1/players/nfl');
+    const allSleeperPlayers = await res.json();
+
+    statusEl.textContent = 'Filtering to active QB/RB/WR/TE across all 32 teams\u2026';
+    const relevant = Object.values(allSleeperPlayers).filter(p =>
+      p && p.team && ['QB','RB','WR','TE'].includes(p.position) &&
+      (p.status === 'Active' || p.active === true)
+    );
+
+    const ourByName = {};
+    allPlayers.forEach(p => {
+      if(p.first && p.last) ourByName[normalizeSyncName(p.first + ' ' + p.last)] = true;
+    });
+
+    const missing = relevant.filter(p => {
+      const full = (p.first_name || '') + ' ' + (p.last_name || '');
+      return !ourByName[normalizeSyncName(full)];
+    });
+
+    statusEl.textContent = `Found ${relevant.length} active QB/RB/WR/TE league-wide. ${missing.length} aren't in our database yet. Adding them now\u2026`;
+
+    let added = 0;
+    for(const p of missing){
+      const team = SYNC_TEAM_FIX[p.team] || p.team;
+      await getOrCreateExtraPlayer(p.first_name, p.last_name, team, p.position);
+      added++;
+      if(added % 10 === 0 || added === missing.length){
+        statusEl.textContent = `Adding missing players\u2026 ${added} / ${missing.length}`;
+      }
+    }
+
+    statusEl.textContent = `Done. ${added} new player${added !== 1 ? 's' : ''} added out of ${relevant.length} total active QB/RB/WR/TE league-wide.`;
+    if(missing.length > 0){
+      listEl.innerHTML = `<div class="empty" style="text-align:left; padding:12px;">${missing.map(p => `${p.first_name} ${p.last_name} (${p.position} \u00b7 ${SYNC_TEAM_FIX[p.team] || p.team})`).join('<br>')}</div>`;
+    }
+
+    loadExtraPlayers(); // re-merge newly-synced players (already dedupes against allPlayers)
+  } catch(err){
+    console.error('runSync failed', err);
+    statusEl.textContent = 'Something went wrong \u2014 check the browser console for details.';
+  }
+  btn.disabled = false;
+}
+
+document.getElementById('syncBtn').addEventListener('click', runSync);
 
 const TEAM_FULL = {
   ARI:'Arizona Cardinals', ATL:'Atlanta Falcons', BAL:'Baltimore Ravens', BUF:'Buffalo Bills',
