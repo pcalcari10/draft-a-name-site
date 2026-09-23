@@ -145,7 +145,19 @@
 
   <div id="teamsContainer"></div>
 
-  <div class="section-label">4. Best performers still on placeholders</div>
+  <div class="section-label">4. Players with curated names</div>
+  <div class="filter-row">
+    <input id="searchCurated" type="text" placeholder="Filter by team or player name…">
+    <select id="sortByCurated">
+      <option value="most">Most curated first</option>
+      <option value="fewest">Fewest curated first</option>
+      <option value="az">Team A–Z</option>
+    </select>
+  </div>
+
+  <div id="teamsContainerCurated"></div>
+
+  <div class="section-label">5. Best performers still on placeholders</div>
   <div class="progress-panel" id="perfPanel" style="display:none;">
     <div class="progress-top">
       <div>
@@ -471,13 +483,15 @@ async function loadExtraPlayers(){
       allPlayers.push({ id: doc.id, first: d.first, last: d.last, team: d.team, pos: d.pos || '', names: d.names || [], tier: 'template', active: true });
     });
   } catch(err){ console.error('Failed to load extra_players', err); }
-  render();
+  updateProgressStats();
+  renderPlaceholders();
+  renderCurated();
 }
 
-function render(){
-  const query = document.getElementById('search').value.trim().toLowerCase();
-  const sortBy = document.getElementById('sortBy').value;
+const POSITION_ORDER = { QB: 0, RB: 1, WR: 2, TE: 3, K: 4 };
+const TEAM_ABBR_NORMALIZE = { JAX: 'JAC' };
 
+function updateProgressStats(){
   const active = allPlayers.filter(p => p.active !== false && p.first && p.last);
   const curated = active.filter(p => p.tier === 'curated').length;
   const template = active.filter(p => p.tier !== 'curated').length;
@@ -489,12 +503,16 @@ function render(){
   document.getElementById('curatedCount').textContent = curated;
   document.getElementById('templateCount').textContent = template;
   document.getElementById('totalCount').textContent = total + ' total players';
+}
 
-  // Normalize a couple of team-code variants (Sleeper's live API uses "JAX", our
-  // database has always used "JAC") so they never split into separate groups.
-  const TEAM_ABBR_NORMALIZE = { JAX: 'JAC' };
+function renderTierList(tier, searchElId, sortElId, containerElId){
+  const query = document.getElementById(searchElId).value.trim().toLowerCase();
+  const sortBy = document.getElementById(sortElId).value;
+
+  const active = allPlayers.filter(p => p.active !== false && p.first && p.last);
+
   const byTeam = {};
-  active.filter(p => p.tier !== 'curated').forEach(p => {
+  active.filter(p => tier === 'curated' ? p.tier === 'curated' : p.tier !== 'curated').forEach(p => {
     const rawTeam = p.team || 'FA';
     const team = TEAM_ABBR_NORMALIZE[rawTeam] || rawTeam;
     if(!byTeam[team]) byTeam[team] = [];
@@ -530,13 +548,14 @@ function render(){
   else if(sortBy === 'fewest') teams.sort((a,b) => byTeam[a].length - byTeam[b].length);
   else teams.sort((a,b) => (TEAM_FULL[a]||a).localeCompare(TEAM_FULL[b]||b));
 
-  const container = document.getElementById('teamsContainer');
+  const container = document.getElementById(containerElId);
   if(teams.length === 0){
-    container.innerHTML = `<div class="empty">${query ? 'No matches for that filter.' : 'Every player has curated puns. 🎉'}</div>`;
+    const emptyMsg = tier === 'curated'
+      ? (query ? 'No matches for that filter.' : 'No curated players yet.')
+      : (query ? 'No matches for that filter.' : 'Every player has curated puns. 🎉');
+    container.innerHTML = `<div class="empty">${emptyMsg}</div>`;
     return;
   }
-
-  const POSITION_ORDER = { QB: 0, RB: 1, WR: 2, TE: 3, K: 4 };
 
   container.innerHTML = teams.map(t => {
     const players = displayData[t].slice().sort((a,b) =>
@@ -552,7 +571,7 @@ function render(){
       return posHeader + `<details class="player-row"${shouldExpand ? ' open' : ''}>
           <summary class="player-row-top"><span>${p.first} ${p.last}</span><span style="display:flex;align-items:center;"><span class="player-pos">${p.pos}</span><span class="chevron-small">▸</span></span></summary>
           <ul class="player-names-list">
-            ${p.names.map((n, i) => `<li><span>${n}</span><button class="copy-pun" data-name="${escapeHtml(n)}" data-uid="${t}-${idx}-${i}">⧉ copy</button></li>`).join('')}
+            ${p.names.map((n, i) => `<li><span>${n}</span><button class="copy-pun" data-name="${escapeHtml(n)}" data-uid="${containerElId}-${t}-${idx}-${i}">⧉ copy</button></li>`).join('')}
           </ul>
         </details>`;
     }).join('');
@@ -561,7 +580,7 @@ function render(){
     <div class="team-block${shouldExpand ? ' open' : ''}" data-team="${t}">
       <div class="team-header">
         <span class="team-name">${TEAM_FULL[t] || t}</span>
-        <span class="team-count">${players.length}${isPartial ? ` of ${byTeam[t].length}` : ''} left <span class="chevron">▸</span></span>
+        <span class="team-count">${players.length}${isPartial ? ` of ${byTeam[t].length}` : ''} ${tier === 'curated' ? 'curated' : 'left'} <span class="chevron">▸</span></span>
       </div>
       <div class="team-players">
         ${playerRowsHtml}
@@ -585,8 +604,13 @@ function render(){
   });
 }
 
-document.getElementById('search').addEventListener('input', render);
-document.getElementById('sortBy').addEventListener('change', render);
+function renderPlaceholders(){ renderTierList('template', 'search', 'sortBy', 'teamsContainer'); }
+function renderCurated(){ renderTierList('curated', 'searchCurated', 'sortByCurated', 'teamsContainerCurated'); }
+
+document.getElementById('search').addEventListener('input', renderPlaceholders);
+document.getElementById('sortBy').addEventListener('change', renderPlaceholders);
+document.getElementById('searchCurated').addEventListener('input', renderCurated);
+document.getElementById('sortByCurated').addEventListener('change', renderCurated);
 
 async function boot(){
   try {
@@ -596,7 +620,9 @@ async function boot(){
   } catch(err){
     console.error('Failed to load players.json', err);
   }
-  render();
+  updateProgressStats();
+  renderPlaceholders();
+  renderCurated();
   loadExtraPlayers();
 }
 boot();
