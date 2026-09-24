@@ -850,7 +850,8 @@ async function loadBlocklistView(){
   try {
     const res = await fetch('../blocklist.json');
     const list = await res.json();
-    el.innerHTML = list.map(term => `<span style="background:var(--panel-2); border-radius:5px; padding:3px 8px;">${escapeHtml(term)}</span>`).join('');
+    const sorted = [...list].sort((a, b) => a.localeCompare(b));
+    el.innerHTML = sorted.map(term => `<span style="background:var(--panel-2); border-radius:5px; padding:3px 8px;">${escapeHtml(term)}</span>`).join('');
   } catch(err){
     console.error('loadBlocklistView failed', err);
     el.textContent = 'Couldn\u2019t load blocklist.json';
