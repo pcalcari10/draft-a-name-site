@@ -52,11 +52,19 @@ jobs:
         run: |
           git config user.name "stats-ticker-bot"
           git config user.email "actions@github.com"
-          if ! git diff --quiet -- stats_ticker.json; then
-            git add stats_ticker.json
-            git commit -m "Update stats ticker data"
-            git pull --rebase origin main
-            git push
-          else
+          if git diff --quiet -- stats_ticker.json; then
             echo "No changes to commit."
+            exit 0
           fi
+          git add stats_ticker.json
+          git commit -m "Update stats ticker data"
+          for i in 1 2 3 4 5; do
+            if git pull --rebase origin main && git push; then
+              echo "Pushed successfully."
+              exit 0
+            fi
+            echo "Push attempt $i failed, retrying after a short wait..."
+            sleep 5
+          done
+          echo "Failed to push after 5 attempts."
+          exit 1
