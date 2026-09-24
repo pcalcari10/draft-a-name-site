@@ -55,6 +55,7 @@ jobs:
           if ! git diff --quiet -- stats_ticker.json; then
             git add stats_ticker.json
             git commit -m "Update stats ticker data"
+            git pull --rebase origin main
             git push
           else
             echo "No changes to commit."
