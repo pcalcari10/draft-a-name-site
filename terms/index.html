@@ -69,37 +69,50 @@
   footer .importer-link:hover { color: var(--gold-300); text-decoration: underline; }
   footer .footer-links { display: flex; gap: 14px; flex-wrap: wrap; }
 
-  /* ---------- Stats ticker ---------- */
-  .ticker-wrap { background: var(--navy-900); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); overflow: hidden; position: relative; }
-  .ticker-head { max-width: 920px; margin: 0 auto; padding: 7px 24px 0; display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
-  .ticker-title { font-family: var(--font-display); font-weight: 700; font-size: 13px; letter-spacing: 0.01em; color: var(--gold-300); }
-  .ticker-toggle { display: flex; gap: 4px; background: var(--navy-800); border-radius: 8px; padding: 3px; }
-  .ticker-toggle button { font-family: var(--font-body); font-size: 12.5px; font-weight: 600; color: var(--chalk-500); background: none; border: none; border-radius: 6px; padding: 4px 10px; cursor: pointer; }
+  /* ---------- Stats ticker (thin strip) ---------- */
+  .ticker-wrap { background: var(--navy-900); border-bottom: 1px solid var(--line); overflow: hidden; position: relative; }
+  .ticker-head { max-width: 920px; margin: 0 auto; padding: 4px 24px 0; display: flex; align-items: center; justify-content: space-between; gap: 10px; flex-wrap: wrap; }
+  .ticker-title { font-family: var(--font-display); font-weight: 700; font-size: 10.5px; letter-spacing: 0.01em; color: var(--gold-300); }
+  .ticker-toggle { display: flex; gap: 3px; background: var(--navy-800); border-radius: 6px; padding: 2px; }
+  .ticker-toggle button { font-family: var(--font-body); font-size: 10px; font-weight: 600; color: var(--chalk-500); background: none; border: none; border-radius: 5px; padding: 2px 8px; cursor: pointer; }
   .ticker-toggle button.active { background: var(--navy-700); color: var(--chalk-100); }
-  .ticker-track-outer { overflow: hidden; padding: 8px 0 10px; -webkit-mask-image: linear-gradient(90deg, transparent, #000 40px, #000 calc(100% - 40px), transparent); mask-image: linear-gradient(90deg, transparent, #000 40px, #000 calc(100% - 40px), transparent); }
-  .ticker-track { display: flex; gap: 10px; width: max-content; animation: ticker-scroll 150s linear infinite; }
+  .ticker-track-outer { overflow: hidden; padding: 3px 0 4px; -webkit-mask-image: linear-gradient(90deg, transparent, #000 40px, #000 calc(100% - 40px), transparent); mask-image: linear-gradient(90deg, transparent, #000 40px, #000 calc(100% - 40px), transparent); }
+  .ticker-track { display: flex; gap: 6px; width: max-content; animation: ticker-scroll 150s linear infinite; }
   .ticker-track-outer:hover .ticker-track { animation-play-state: paused; }
   @keyframes ticker-scroll { from { transform: translateX(0); } to { transform: translateX(-50%); } }
-  .ticker-card { flex: 0 0 auto; display: flex; align-items: center; gap: 10px; background: var(--navy-800); border: 1px solid var(--line); border-left: 3px solid var(--card-accent, var(--gold-400)); border-radius: 8px; padding: 5px 10px 5px 8px; white-space: nowrap; }
-  .ticker-pos { font-family: var(--font-display); font-weight: 700; font-size: 10.5px; color: var(--navy-950); background: var(--card-accent, var(--gold-400)); border-radius: 4px; padding: 1px 5px; letter-spacing: 0.02em; }
+  .ticker-card { flex: 0 0 auto; display: flex; align-items: center; gap: 5px; background: var(--navy-800); border: 1px solid var(--line); border-left: 2px solid var(--card-accent, var(--gold-400)); border-radius: 5px; padding: 2px 8px 2px 6px; white-space: nowrap; }
+  .ticker-pos { font-family: var(--font-display); font-weight: 700; font-size: 8.5px; color: var(--navy-950); background: var(--card-accent, var(--gold-400)); border-radius: 3px; padding: 1px 4px; letter-spacing: 0.02em; }
   .ticker-card[data-pos="QB"] { --card-accent: var(--pos-qb); }
   .ticker-card[data-pos="RB"] { --card-accent: var(--pos-rb); }
   .ticker-card[data-pos="WR"] { --card-accent: var(--pos-wr); }
   .ticker-card[data-pos="TE"] { --card-accent: var(--pos-te); }
   .ticker-card[data-pos="K"]  { --card-accent: var(--pos-k); }
-  .ticker-divider { flex: 0 0 auto; display: flex; align-items: center; gap: 5px; color: var(--chalk-500); font-family: var(--font-body); font-size: 9.5px; font-weight: 700; letter-spacing: 0.08em; }
-  .ticker-divider::before { content: ''; width: 1px; height: 20px; background: var(--line); }
-  .ticker-name { font-family: var(--font-display); font-weight: 700; font-size: 13.5px; color: var(--chalk-100); }
-  .ticker-team { font-family: var(--font-body); font-size: 10px; color: var(--chalk-500); }
-  .ticker-pun { font-family: var(--font-body); font-style: italic; font-size: 11px; color: var(--turf-500); }
-  .ticker-pts { font-family: var(--font-display); font-weight: 700; font-size: 13.5px; color: var(--coral-500); white-space: nowrap; }
-  @media (max-width: 640px) { .ticker-name { font-size: 14px; } .ticker-pun { display: none; } }
+  .ticker-divider { flex: 0 0 auto; display: flex; align-items: center; gap: 4px; color: var(--chalk-500); font-family: var(--font-body); font-size: 8px; font-weight: 700; letter-spacing: 0.08em; }
+  .ticker-divider::before { content: ''; width: 1px; height: 13px; background: var(--line); }
+  .ticker-name { font-family: var(--font-display); font-weight: 700; font-size: 10.5px; color: var(--chalk-100); }
+  .ticker-team { font-family: var(--font-body); font-size: 8.5px; color: var(--chalk-500); }
+  .ticker-pun { font-family: var(--font-body); font-style: italic; font-size: 9px; color: var(--turf-500); }
+  .ticker-pun::before { content: '\2014 '; color: var(--line); font-style: normal; }
+  .ticker-pts { font-family: var(--font-display); font-weight: 700; font-size: 10.5px; color: var(--coral-500); white-space: nowrap; }
+  @media (max-width: 640px) { .ticker-pun { display: none; } }
 
   @media (max-width: 520px) { .wrap { padding: 0 16px; } }
   :focus-visible { outline: 2px solid var(--gold-400); outline-offset: 2px; }
 </style>
 </head>
 <body>
+<div class="ticker-wrap" id="tickerWrap" style="display:none;">
+  <div class="ticker-head">
+    <span class="ticker-title" id="tickerTitle">Top Scorers</span>
+    <div class="ticker-toggle">
+      <button id="tickerWeekBtn" class="active">This Week</button>
+      <button id="tickerSeasonBtn">Season</button>
+    </div>
+  </div>
+  <div class="ticker-track-outer">
+    <div class="ticker-track" id="tickerTrack"></div>
+  </div>
+</div>
 <div class="wrap">
 
   <header class="top">
@@ -144,19 +157,6 @@
 
 </div>
 
-<div class="ticker-wrap" id="tickerWrap" style="display:none;">
-  <div class="ticker-head">
-    <span class="ticker-title" id="tickerTitle">Top Scorers</span>
-    <div class="ticker-toggle">
-      <button id="tickerWeekBtn" class="active">This Week</button>
-      <button id="tickerSeasonBtn">Season</button>
-    </div>
-  </div>
-  <div class="ticker-track-outer">
-    <div class="ticker-track" id="tickerTrack"></div>
-  </div>
-</div>
-
 <script>
 async function loadJson(path){
   const res = await fetch(path);
@@ -177,12 +177,10 @@ async function loadJson(path){
     return `
       <div class="ticker-card" data-pos="${entry.pos}">
         <span class="ticker-pos">${entry.pos}${rank}</span>
-        <span>
-          <span class="ticker-name">${entry.first} ${entry.last}</span>
-          <span class="ticker-team">${entry.team}</span><br>
-          ${pun}
-        </span>
+        <span class="ticker-name">${entry.first} ${entry.last}</span>
+        <span class="ticker-team">${entry.team}</span>
         <span class="ticker-pts">${entry.pts}</span>
+        ${pun}
       </div>`;
   }
   function buildDivider(pos){ return `<div class="ticker-divider">${pos}</div>`; }
