@@ -1,0 +1,39 @@
+name: Daily Stats Ticker Update
+
+on:
+  schedule:
+    # Every day at 11:00 UTC — comfortably after Monday Night Football wraps,
+    # and harmless to re-run on days with no new data (it just writes the
+    # same result, and the commit step below no-ops when nothing changed).
+    - cron: '0 11 * * *'
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+jobs:
+  update-ticker:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repo
+        uses: actions/checkout@v4
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Build stats ticker
+        run: node scripts/build-stats-ticker.js
+
+      - name: Commit and push if stats_ticker.json changed
+        run: |
+          git config user.name "stats-ticker-bot"
+          git config user.email "actions@github.com"
+          if ! git diff --quiet -- stats_ticker.json; then
+            git add stats_ticker.json
+            git commit -m "Update stats ticker data"
+            git push
+          else
+            echo "No changes to commit."
+          fi
