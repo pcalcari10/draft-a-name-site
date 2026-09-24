@@ -1103,11 +1103,11 @@ Promise.all([
   const seasonBtn = document.getElementById('tickerSeasonBtn');
   const POS_ORDER = ['QB', 'RB', 'WR', 'TE', 'K'];
 
-  function buildCard(entry){
+  function buildCard(entry, rank){
     const pun = entry.pun ? `<span class="ticker-pun">"${entry.pun}"</span>` : '';
     return `
       <div class="ticker-card" data-pos="${entry.pos}">
-        <span class="ticker-pos">${entry.pos}</span>
+        <span class="ticker-pos">${entry.pos}${rank}</span>
         <span>
           <span class="ticker-name">${entry.first} ${entry.last}</span>
           <span class="ticker-team">${entry.team}</span><br>
@@ -1127,7 +1127,8 @@ Promise.all([
     POS_ORDER.forEach(pos => {
       const entries = byPos[pos] || [];
       if(entries.length === 0) return;
-      groupsHtml.push(buildDivider(pos) + entries.map(buildCard).join(''));
+      const cards = entries.map((e, i) => buildCard(e, i + 1)).join('');
+      groupsHtml.push(buildDivider(pos) + cards);
     });
     if(groupsHtml.length === 0){
       wrapEl.style.display = 'none';
