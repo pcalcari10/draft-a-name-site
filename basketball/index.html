@@ -65,8 +65,11 @@
 
   footer {
     border-top: 1px solid var(--line); padding: 22px 0 calc(30px + env(safe-area-inset-bottom, 0px));
-    color: var(--chalk-500); font-size: 13px; display: flex; justify-content: center; flex-wrap: wrap; gap: 8px;
+    color: var(--chalk-500); font-size: 13px; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px;
   }
+  footer .importer-link { color: var(--gold-400); text-decoration: none; font-weight: 600; }
+  footer .importer-link:hover { color: var(--gold-300); text-decoration: underline; }
+  footer .footer-links { display: flex; gap: 14px; flex-wrap: wrap; }
 
   @media (max-width: 520px) { .wrap { padding: 0 16px; } }
   :focus-visible { outline: 2px solid var(--gold-400); outline-offset: 2px; }
@@ -95,6 +98,12 @@
 
   <footer>
     <span>The Fantasy Name HQ — a prototype, not yet drafted into anyone's league</span>
+    <div class="footer-links">
+      <a href="/sleeper-importer/" class="importer-link">Import your Sleeper roster &rarr;</a>
+      <a href="/suggest/" class="importer-link">Suggest a name &rarr;</a>
+      <a href="/terms/" class="importer-link">Terms</a>
+      <a href="/privacy/" class="importer-link">Privacy</a>
+    </div>
   </footer>
 
 </div>
