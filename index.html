@@ -356,7 +356,7 @@
   <div class="ticker-head">
     <span class="ticker-title" id="tickerTitle">Top Scorers</span>
     <div class="ticker-toggle">
-      <button id="tickerWeekBtn" class="active">Last Week</button>
+      <button id="tickerWeekBtn" class="active">This Week</button>
       <button id="tickerSeasonBtn">Season</button>
     </div>
   </div>
@@ -1119,7 +1119,7 @@ Promise.all([
 
     titleEl.textContent = view === 'season'
       ? `Season Leaders \u2014 through Week ${data.week}`
-      : `Last Week (Week ${data.week}) Top Scorers`;
+      : `Week ${data.week} Top Scorers`;
   }
 
   loadJson('stats_ticker.json').then(data => {
