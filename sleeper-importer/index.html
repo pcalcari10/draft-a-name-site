@@ -167,18 +167,6 @@
 </style>
 </head>
 <body>
-<div class="ticker-wrap" id="tickerWrap" style="display:none;">
-  <div class="ticker-head">
-    <span class="ticker-title" id="tickerTitle">Top Scorers</span>
-    <div class="ticker-toggle">
-      <button id="tickerWeekBtn" class="active">This Week</button>
-      <button id="tickerSeasonBtn">Season</button>
-    </div>
-  </div>
-  <div class="ticker-track-outer">
-    <div class="ticker-track" id="tickerTrack"></div>
-  </div>
-</div>
 <div class="wrap">
 
   <header style="display:flex; align-items:center; justify-content:space-between; margin-bottom:8px;">
@@ -219,6 +207,19 @@
     <span>Data sources: <code>api.sleeper.app</code> (rosters, public, no login) and <code>dynastyprocess/data</code> on GitHub (Sleeper player-ID → name mapping, updated weekly). The pun database embedded in this file is a snapshot from when it was built — ask for a refreshed copy after a big batch of new puns.</span>
     <a href="../" style="color:var(--amber); text-decoration:none; font-weight:600; white-space:nowrap;">&larr; Back to search</a>
   </footer>
+</div>
+
+<div class="ticker-wrap" id="tickerWrap" style="display:none;">
+  <div class="ticker-head">
+    <span class="ticker-title" id="tickerTitle">Top Scorers</span>
+    <div class="ticker-toggle">
+      <button id="tickerWeekBtn" class="active">This Week</button>
+      <button id="tickerSeasonBtn">Season</button>
+    </div>
+  </div>
+  <div class="ticker-track-outer">
+    <div class="ticker-track" id="tickerTrack"></div>
+  </div>
 </div>
 
 <script>

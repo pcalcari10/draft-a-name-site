@@ -150,18 +150,6 @@
 <script src="https://www.gstatic.com/firebasejs/10.13.0/firebase-firestore-compat.js"></script>
 </head>
 <body>
-<div class="ticker-wrap" id="tickerWrap" style="display:none;">
-  <div class="ticker-head">
-    <span class="ticker-title" id="tickerTitle">Top Scorers</span>
-    <div class="ticker-toggle">
-      <button id="tickerWeekBtn" class="active">This Week</button>
-      <button id="tickerSeasonBtn">Season</button>
-    </div>
-  </div>
-  <div class="ticker-track-outer">
-    <div class="ticker-track" id="tickerTrack"></div>
-  </div>
-</div>
 <div class="wrap">
 
   <header class="top">
@@ -193,6 +181,19 @@
     <a href="../" class="importer-link">&larr; Back to search</a>
   </footer>
 
+</div>
+
+<div class="ticker-wrap" id="tickerWrap" style="display:none;">
+  <div class="ticker-head">
+    <span class="ticker-title" id="tickerTitle">Top Scorers</span>
+    <div class="ticker-toggle">
+      <button id="tickerWeekBtn" class="active">This Week</button>
+      <button id="tickerSeasonBtn">Season</button>
+    </div>
+  </div>
+  <div class="ticker-track-outer">
+    <div class="ticker-track" id="tickerTrack"></div>
+  </div>
 </div>
 
 <script>
