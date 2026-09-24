@@ -17,7 +17,7 @@ const PLAYERS_PATH = path.join(__dirname, '..', 'players.json');
 const OUT_PATH = path.join(__dirname, '..', 'stats_ticker.json');
 const SEASON = new Date().getUTCFullYear().toString();
 const POSITIONS = ['QB', 'RB', 'WR', 'TE', 'K'];
-const TOP_N = 5;
+const TOP_N_BY_POS = { QB: 12, RB: 24, WR: 24, TE: 12, K: 10 };
 
 function normalizeName(name) {
   return name
@@ -128,7 +128,7 @@ async function main() {
         .map(sid => ({ sid, pts: pointsMap[sid], player: bySleeperId[sid] }))
         .filter(x => x.player && x.player.pos === pos)
         .sort((a, b) => b.pts - a.pts)
-        .slice(0, TOP_N)
+        .slice(0, TOP_N_BY_POS[pos])
         .map(x => ({
           id: x.player.id,
           first: x.player.first,
