@@ -1,7 +1,429 @@
 {
-  "generatedAt": null,
-  "season": null,
-  "week": null,
-  "thisWeek": {},
-  "seasonTotals": {}
+  "generatedAt": "2026-09-24T11:05:48.124Z",
+  "season": "2026",
+  "week": 2,
+  "thisWeek": {
+    "QB": [
+      {
+        "first": "Josh",
+        "last": "Allen",
+        "team": "BUF",
+        "pos": "QB",
+        "pts": 40.8,
+        "pun": "Quit Joshin' Around"
+      },
+      {
+        "first": "Jared",
+        "last": "Goff",
+        "team": "DET",
+        "pos": "QB",
+        "pts": 29.8,
+        "pun": "I'm About To Go Goff"
+      },
+      {
+        "first": "Dak",
+        "last": "Prescott",
+        "team": "DAL",
+        "pos": "QB",
+        "pts": 29.8,
+        "pun": "The Boys Are Dak In Town"
+      },
+      {
+        "first": "Patrick",
+        "last": "Mahomes",
+        "team": "KC",
+        "pos": "QB",
+        "pts": 29,
+        "pun": "Sherlock Mahomes"
+      },
+      {
+        "first": "Brock",
+        "last": "Purdy",
+        "team": "SF",
+        "pos": "QB",
+        "pts": 28.5,
+        "pun": "Purdy Good Team"
+      }
+    ],
+    "RB": [
+      {
+        "first": "Jonathan",
+        "last": "Taylor",
+        "team": "IND",
+        "pos": "RB",
+        "pts": 29.2,
+        "pun": "Taylor-Made"
+      },
+      {
+        "first": "Kenneth",
+        "last": "Walker",
+        "team": "KC",
+        "pos": "RB",
+        "pts": 23.8,
+        "pun": "Kenneth Walker, Texas Ranger"
+      },
+      {
+        "first": "Jahmyr",
+        "last": "Gibbs",
+        "team": "DET",
+        "pos": "RB",
+        "pts": 23.3,
+        "pun": "Baby Back Gibbs"
+      },
+      {
+        "first": "Christian",
+        "last": "McCaffrey",
+        "team": "SF",
+        "pos": "RB",
+        "pts": 22.6,
+        "pun": "Run CMC"
+      },
+      {
+        "first": "James",
+        "last": "Cook",
+        "team": "BUF",
+        "pos": "RB",
+        "pts": 20.9,
+        "pun": "James Cooked"
+      }
+    ],
+    "WR": [
+      {
+        "first": "Jaxon",
+        "last": "Smith-Njigba",
+        "team": "SEA",
+        "pos": "WR",
+        "pts": 42.5,
+        "pun": "I'm Sorry Ms. Jaxon"
+      },
+      {
+        "first": "Davante",
+        "last": "Adams",
+        "team": "LAR",
+        "pos": "WR",
+        "pts": 39.5,
+        "pun": "Davante's Inferno"
+      },
+      {
+        "first": "CeeDee",
+        "last": "Lamb",
+        "team": "DAL",
+        "pos": "WR",
+        "pts": 35.3,
+        "pun": "Silence of the Lambs"
+      },
+      {
+        "first": "Amon-Ra",
+        "last": "St. Brown",
+        "team": "DET",
+        "pos": "WR",
+        "pts": 35.2,
+        "pun": "Amon Joy"
+      },
+      {
+        "first": "DeVonta",
+        "last": "Smith",
+        "team": "PHI",
+        "pos": "WR",
+        "pts": 27.7,
+        "pun": "DeVonta's Inferno"
+      }
+    ],
+    "TE": [
+      {
+        "first": "Dalton",
+        "last": "Schultz",
+        "team": "HOU",
+        "pos": "TE",
+        "pts": 26,
+        "pun": "Schultz-A-Palooza"
+      },
+      {
+        "first": "Travis",
+        "last": "Kelce",
+        "team": "KC",
+        "pos": "TE",
+        "pts": 25.1,
+        "pun": "Truth & Kelcequences"
+      },
+      {
+        "first": "Dalton",
+        "last": "Kincaid",
+        "team": "BUF",
+        "pos": "TE",
+        "pts": 22.5,
+        "pun": "Dalton Abbey"
+      },
+      {
+        "first": "Jake",
+        "last": "Ferguson",
+        "team": "DAL",
+        "pos": "TE",
+        "pts": 20.3,
+        "pun": "Turd Ferguson"
+      },
+      {
+        "first": "Darren",
+        "last": "Waller",
+        "team": "CAR",
+        "pos": "TE",
+        "pts": 18.3,
+        "pun": "Waller'd Up and Ready"
+      }
+    ],
+    "K": [
+      {
+        "first": "Harrison",
+        "last": "Butker",
+        "team": "KC",
+        "pos": "K",
+        "pts": 16,
+        "pun": "I Like Big Butker, And I Cannot Lie"
+      },
+      {
+        "first": "Chase",
+        "last": "McLaughlin",
+        "team": "TB",
+        "pos": "K",
+        "pts": 16,
+        "pun": "Livin' on a McLaughlin"
+      },
+      {
+        "first": "Brandon",
+        "last": "Aubrey",
+        "team": "DAL",
+        "pos": "K",
+        "pts": 16,
+        "pun": "Aubrey'd Up and Ready"
+      },
+      {
+        "first": "Daniel",
+        "last": "Carlson",
+        "team": "NO",
+        "pos": "K",
+        "pts": 13,
+        "pun": "Carlson-tastic Voyage"
+      },
+      {
+        "first": "Evan",
+        "last": "McPherson",
+        "team": "CIN",
+        "pos": "K",
+        "pts": 12,
+        "pun": "McPherson-tastic Voyage"
+      }
+    ]
+  },
+  "seasonTotals": {
+    "QB": [
+      {
+        "first": "Josh",
+        "last": "Allen",
+        "team": "BUF",
+        "pos": "QB",
+        "pts": 76.5,
+        "pun": "Quit Joshin' Around"
+      },
+      {
+        "first": "Bryce",
+        "last": "Young",
+        "team": "CAR",
+        "pos": "QB",
+        "pts": 56.5,
+        "pun": "The Bryce Is Right"
+      },
+      {
+        "first": "Patrick",
+        "last": "Mahomes",
+        "team": "KC",
+        "pos": "QB",
+        "pts": 51.6,
+        "pun": "Sherlock Mahomes"
+      },
+      {
+        "first": "Brock",
+        "last": "Purdy",
+        "team": "SF",
+        "pos": "QB",
+        "pts": 50.6,
+        "pun": "Purdy Good Team"
+      },
+      {
+        "first": "Tyler",
+        "last": "Shough",
+        "team": "NO",
+        "pos": "QB",
+        "pts": 47.6,
+        "pun": "Aww Shoughs"
+      }
+    ],
+    "RB": [
+      {
+        "first": "Kenneth",
+        "last": "Walker",
+        "team": "KC",
+        "pos": "RB",
+        "pts": 57.9,
+        "pun": "Kenneth Walker, Texas Ranger"
+      },
+      {
+        "first": "Jahmyr",
+        "last": "Gibbs",
+        "team": "DET",
+        "pos": "RB",
+        "pts": 56.9,
+        "pun": "Baby Back Gibbs"
+      },
+      {
+        "first": "Jonathan",
+        "last": "Taylor",
+        "team": "IND",
+        "pos": "RB",
+        "pts": 54.3,
+        "pun": "Taylor-Made"
+      },
+      {
+        "first": "Derrick",
+        "last": "Henry",
+        "team": "BAL",
+        "pos": "RB",
+        "pts": 53,
+        "pun": "King Henry's Court"
+      },
+      {
+        "first": "D'Andre",
+        "last": "Swift",
+        "team": "CHI",
+        "pos": "RB",
+        "pts": 45.3,
+        "pun": "50 Shades of D'Andre"
+      }
+    ],
+    "WR": [
+      {
+        "first": "Jaxon",
+        "last": "Smith-Njigba",
+        "team": "SEA",
+        "pos": "WR",
+        "pts": 68.7,
+        "pun": "I'm Sorry Ms. Jaxon"
+      },
+      {
+        "first": "Amon-Ra",
+        "last": "St. Brown",
+        "team": "DET",
+        "pos": "WR",
+        "pts": 63.9,
+        "pun": "Amon Joy"
+      },
+      {
+        "first": "Chris",
+        "last": "Olave",
+        "team": "NO",
+        "pos": "WR",
+        "pts": 50.8,
+        "pun": "Olave Oil"
+      },
+      {
+        "first": "CeeDee",
+        "last": "Lamb",
+        "team": "DAL",
+        "pos": "WR",
+        "pts": 50.7,
+        "pun": "Silence of the Lambs"
+      },
+      {
+        "first": "Jalen",
+        "last": "Coker",
+        "team": "CAR",
+        "pos": "WR",
+        "pts": 48.4,
+        "pun": "Coker Head"
+      }
+    ],
+    "TE": [
+      {
+        "first": "Trey",
+        "last": "McBride",
+        "team": "ARI",
+        "pos": "TE",
+        "pts": 42.6,
+        "pun": "50 Shades of Trey"
+      },
+      {
+        "first": "Dalton",
+        "last": "Kincaid",
+        "team": "BUF",
+        "pos": "TE",
+        "pts": 40.5,
+        "pun": "Dalton Abbey"
+      },
+      {
+        "first": "Isaiah",
+        "last": "Likely",
+        "team": "NYG",
+        "pos": "TE",
+        "pts": 36.1,
+        "pun": "Likely's Fantasy Fortress"
+      },
+      {
+        "first": "Travis",
+        "last": "Kelce",
+        "team": "KC",
+        "pos": "TE",
+        "pts": 35.2,
+        "pun": "Truth & Kelcequences"
+      },
+      {
+        "first": "Dalton",
+        "last": "Schultz",
+        "team": "HOU",
+        "pos": "TE",
+        "pts": 33.5,
+        "pun": "Schultz-A-Palooza"
+      }
+    ],
+    "K": [
+      {
+        "first": "Evan",
+        "last": "McPherson",
+        "team": "CIN",
+        "pos": "K",
+        "pts": 31,
+        "pun": "McPherson-tastic Voyage"
+      },
+      {
+        "first": "Chase",
+        "last": "McLaughlin",
+        "team": "TB",
+        "pos": "K",
+        "pts": 27,
+        "pun": "Livin' on a McLaughlin"
+      },
+      {
+        "first": "Harrison",
+        "last": "Butker",
+        "team": "KC",
+        "pos": "K",
+        "pts": 23,
+        "pun": "I Like Big Butker, And I Cannot Lie"
+      },
+      {
+        "first": "Cam",
+        "last": "Little",
+        "team": "JAC",
+        "pos": "K",
+        "pts": 19,
+        "pun": "Cam's Excellent Adventure"
+      },
+      {
+        "first": "Tyler",
+        "last": "Loop",
+        "team": "BAL",
+        "pos": "K",
+        "pts": 19,
+        "pun": "Jumping Through Loops"
+      }
+    ]
+  }
 }
