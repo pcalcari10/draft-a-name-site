@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Suggest a name — The Fantasy Name HQ</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    box-sizing: border-box;
+    padding-top: env(safe-area-inset-top, 0px);
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+
+    --navy-950: #0B1622;
+    --navy-900: #101E2E;
+    --navy-800: #16283C;
+    --navy-700: #1F3650;
+    --line: #2B4560;
+    --gold-400: #F2B705;
+    --gold-300: #F7CB3E;
+    --turf-500: #3E8F63;
+    --coral-500: #E85D4E;
+    --chalk-100: #F4F2EC;
+    --chalk-300: #C9D2DC;
+    --chalk-500: #8FA0B3;
+
+    --font-display: 'Big Shoulders', 'Arial Narrow', sans-serif;
+    --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  }
+  * { box-sizing: inherit; }
+  html, body { height: 100%; }
+  body {
+    margin: 0; background: var(--navy-950); color: var(--chalk-100);
+    font-family: var(--font-body); font-size: 15px; line-height: 1.5;
+  }
+  .wrap { max-width: 700px; margin: 0 auto; padding: 0 24px; }
+  header.top { padding: 22px 0 8px; display: flex; align-items: center; justify-content: space-between; }
+  .brand { display: flex; align-items: center; gap: 10px; font-family: var(--font-display); font-weight: 700; font-size: 22px; letter-spacing: 0.02em; }
+  .brand a { color: var(--chalk-100); text-decoration: none; }
+  .back-link { color: var(--chalk-500); text-decoration: none; font-size: 13.5px; }
+  .back-link:hover { color: var(--gold-300); }
+
+  h1 { font-family: var(--font-display); font-size: 30px; margin: 20px 0 6px; }
+  .sub { color: var(--chalk-500); font-size: 14.5px; max-width: 560px; margin: 0 0 28px; }
+
+  .suggest { padding: 24px; background: var(--navy-900); border: 1px solid var(--line); border-radius: 12px; margin-bottom: 40px; }
+  .suggest-row { position: relative; display: flex; gap: 8px; margin-bottom: 10px; }
+  .suggest-row input {
+    flex: 1; min-width: 160px; background: var(--navy-800); border: 1px solid var(--line); color: var(--chalk-100);
+    border-radius: 8px; padding: 11px 12px; font-size: 15px; font-family: var(--font-body); outline: none;
+  }
+  .suggest-row input:focus { border-color: var(--gold-400); }
+  .suggest-row input:disabled { opacity: 0.5; cursor: not-allowed; }
+  .suggest-row button.primary {
+    font-family: var(--font-display); font-weight: 700; font-size: 15px; letter-spacing: 0.01em;
+    background: var(--gold-400); color: var(--navy-950); border: none; border-radius: 8px; padding: 0 22px; cursor: pointer;
+  }
+  .suggest-row button.primary:disabled { opacity: 0.4; cursor: not-allowed; }
+  .suggest-selected {
+    display: flex; align-items: center; justify-content: space-between; gap: 10px;
+    background: var(--navy-800); border-radius: 8px; padding: 10px 12px; margin-bottom: 10px; font-size: 14px;
+  }
+  .suggest-selected button { background: none; border: none; color: var(--chalk-500); cursor: pointer; font-size: 13px; }
+  .suggest-selected button:hover { color: var(--coral-500); }
+  .suggest-status { font-size: 14px; margin-top: 6px; min-height: 20px; }
+  .suggest-status.ok { color: var(--turf-500); }
+  .suggest-status.err { color: var(--coral-500); }
+  .suggest-status.review { color: var(--gold-300); }
+
+  .suggestions {
+    position: absolute; left: 0; right: 0; top: calc(100% + 6px);
+    background: var(--navy-900); border: 1px solid var(--line); border-radius: 10px;
+    max-height: 280px; overflow-y: auto; z-index: 20; display: none;
+    box-shadow: 0 14px 30px rgba(0,0,0,0.35);
+  }
+  .suggestions.open { display: block; }
+  .suggestion { padding: 11px 14px; cursor: pointer; display: flex; justify-content: space-between; align-items: baseline; border-bottom: 1px solid var(--navy-800); }
+  .suggestion:last-child { border-bottom: none; }
+  .suggestion:hover { background: var(--navy-700); }
+  .suggestion .pname { font-weight: 600; }
+  .suggestion .pmeta { font-size: 12px; color: var(--chalk-500); }
+
+  footer { padding: 20px 0 40px; color: var(--chalk-500); font-size: 12.5px; display: flex; flex-wrap: wrap; gap: 6px 14px; align-items: center; }
+  footer a { color: var(--gold-400); text-decoration: none; }
+  footer a:hover { text-decoration: underline; }
+
+  :focus-visible { outline: 2px solid var(--gold-400); outline-offset: 2px; }
+</style>
+<script src="https://www.gstatic.com/firebasejs/10.13.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.13.0/firebase-firestore-compat.js"></script>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="top">
+    <div class="brand"><a href="../"><span>🏈</span> The Fantasy Name HQ</a></div>
+    <a class="back-link" href="../">&larr; Back to search</a>
+  </header>
+
+  <h1>Suggest a name</h1>
+  <p class="sub">Think of a pun we're missing for a player or team? Send it our way — it'll go through a quick review before it shows up for everyone.</p>
+
+  <section class="suggest">
+    <div class="suggest-row">
+      <input id="suggestSearch" type="text" placeholder="Search for a player or team…" autocomplete="off">
+      <div id="suggestSuggestions" class="suggestions"></div>
+    </div>
+    <div id="suggestSelected" class="suggest-selected" style="display:none;"></div>
+
+    <div class="suggest-row">
+      <input id="suggestNameInput" type="text" placeholder="Your suggested name…" disabled maxlength="150">
+      <button class="primary" id="suggestSubmitBtn" disabled>Submit</button>
+    </div>
+
+    <div id="suggestStatus" class="suggest-status"></div>
+  </section>
+
+  <footer>
+    <span>The Fantasy Name HQ — a prototype, not yet drafted into anyone's league</span>
+    <a href="../">&larr; Back to the name finder</a>
+  </footer>
+
+</div>
+
+<script>
+const ENTITIES = [];
+
+function fullName(e){
+  if(e.kind === 'team') return `${e.city} ${e.nickname}`;
+  return `${e.first} ${e.last}`;
+}
+
+async function loadJson(path){
+  const res = await fetch(path);
+  if(!res.ok) throw new Error('Failed to load ' + path + ' (HTTP ' + res.status + ')');
+  return res.json();
+}
+
+// ---------- Firebase ----------
+const firebaseConfig = {
+  apiKey: "AIzaSyBrKEhoELjV_LBNYpqJgy_prsS9OPNjp5E",
+  authDomain: "draft-a-name.firebaseapp.com",
+  projectId: "draft-a-name",
+  storageBucket: "draft-a-name.firebasestorage.app",
+  messagingSenderId: "32475030057",
+  appId: "1:32475030057:web:8a1d4ec6e4725ae08c3238"
+};
+firebase.initializeApp(firebaseConfig);
+const db = firebase.firestore();
+
+async function mergeExtraPlayers(){
+  try {
+    const snap = await db.collection('extra_players').get();
+    snap.forEach(doc => {
+      const d = doc.data();
+      if(ENTITIES.find(e => e.id === doc.id)) return;
+      ENTITIES.push({ id: doc.id, kind: 'player', first: d.first, last: d.last, team: d.team, pos: d.pos || '', names: d.names || [] });
+    });
+  } catch(err){ console.error('mergeExtraPlayers failed', err); }
+}
+
+async function mergeSubmittedNames(){
+  try {
+    const snap = await db.collection('submitted_names').where('status', '==', 'approved').get();
+    snap.forEach(doc => {
+      const d = doc.data();
+      const entity = ENTITIES.find(e => e.id === d.playerId);
+      if(!entity) return;
+      if(!entity.names) entity.names = [];
+      if(!entity.names.includes(d.name)) entity.names.push(d.name);
+    });
+  } catch(err){ console.error('mergeSubmittedNames failed', err); }
+}
+
+// ---------- Suggest a name ----------
+// Deliberately narrow: this blocks genuinely severe terms and common swears
+// while staying out of the way of the crude-but-fun humor already throughout
+// this database's curated content. It is not, and can't be, a substitute for
+// the manual review every submission still goes through before going live.
+// The actual list lives in ../blocklist.json (edited via git, not this file).
+let SUGGEST_HARD_BLOCK = [];
+loadJson('../blocklist.json').then(list => { SUGGEST_HARD_BLOCK = list; }).catch(err => {
+  console.error('Failed to load blocklist.json (suggestion form will skip this check)', err);
+});
+
+function suggestContainsHardBlock(text){
+  const lower = text.toLowerCase();
+  return SUGGEST_HARD_BLOCK.some(word => lower.includes(word));
+}
+
+function suggestNormalize(text){
+  return text.toLowerCase().trim().replace(/\s+/g, ' ');
+}
+
+function suggestReferencesEntity(entity, text){
+  const lower = text.toLowerCase();
+  if(entity.kind === 'team'){
+    return lower.includes(entity.city.toLowerCase()) || lower.includes(entity.nickname.toLowerCase()) || lower.includes(entity.abbr.toLowerCase());
+  }
+  if(entity.first && lower.includes(entity.first.toLowerCase())) return true;
+  if(entity.last && lower.includes(entity.last.toLowerCase())) return true;
+  return false;
+}
+
+let suggestSelected = null;
+const suggestSearchInput = document.getElementById('suggestSearch');
+const suggestSuggestionsBox = document.getElementById('suggestSuggestions');
+const suggestSelectedBox = document.getElementById('suggestSelected');
+const suggestNameInput = document.getElementById('suggestNameInput');
+const suggestSubmitBtn = document.getElementById('suggestSubmitBtn');
+const suggestStatusEl = document.getElementById('suggestStatus');
+
+function renderSuggestSuggestions(query){
+  const q = query.trim().toLowerCase();
+  if(!q){ suggestSuggestionsBox.classList.remove('open'); suggestSuggestionsBox.innerHTML = ''; return; }
+  const matches = ENTITIES.filter(e => fullName(e).toLowerCase().includes(q)).slice(0, 8);
+  if(matches.length === 0){
+    suggestSuggestionsBox.innerHTML = `<div class="suggestion"><span class="pmeta">Nothing matched — try a different spelling</span></div>`;
+    suggestSuggestionsBox.classList.add('open');
+    return;
+  }
+  suggestSuggestionsBox.innerHTML = matches.map(e => `
+    <div class="suggestion" data-id="${e.id}">
+      <span class="pname">${fullName(e)}</span>
+      <span class="pmeta">${e.kind === 'team' ? `DST · ${e.abbr}` : `${e.pos} · ${e.team}`}</span>
+    </div>`).join('');
+  suggestSuggestionsBox.classList.add('open');
+}
+
+suggestSuggestionsBox.addEventListener('click', (e) => {
+  const row = e.target.closest('.suggestion');
+  if(!row || !row.dataset.id) return;
+  suggestSelected = ENTITIES.find(en => en.id === row.dataset.id);
+  suggestSearchInput.value = '';
+  suggestSuggestionsBox.classList.remove('open');
+  suggestSelectedBox.style.display = 'flex';
+  suggestSelectedBox.innerHTML = `<span>Suggesting a name for <strong>${fullName(suggestSelected)}</strong></span><button id="suggestClearBtn">Change</button>`;
+  document.getElementById('suggestClearBtn').addEventListener('click', () => {
+    suggestSelected = null;
+    suggestSelectedBox.style.display = 'none';
+    suggestNameInput.disabled = true;
+    suggestSubmitBtn.disabled = true;
+    suggestNameInput.value = '';
+    suggestStatusEl.textContent = '';
+  });
+  suggestNameInput.disabled = false;
+  suggestSubmitBtn.disabled = false;
+  suggestNameInput.focus();
+});
+
+suggestSearchInput.addEventListener('input', () => renderSuggestSuggestions(suggestSearchInput.value));
+suggestSearchInput.addEventListener('focus', () => renderSuggestSuggestions(suggestSearchInput.value));
+document.addEventListener('click', (e) => {
+  if(!e.target.closest('#suggestSearch') && !e.target.closest('#suggestSuggestions')) suggestSuggestionsBox.classList.remove('open');
+});
+
+suggestSubmitBtn.addEventListener('click', async () => {
+  const name = suggestNameInput.value.trim();
+  if(!suggestSelected || !name) return;
+
+  const existingNames = (suggestSelected.names || []).map(suggestNormalize);
+  if(existingNames.includes(suggestNormalize(name))){
+    suggestStatusEl.className = 'suggest-status err';
+    suggestStatusEl.textContent = `"${name}" is already in there for ${fullName(suggestSelected)} — try something else!`;
+    return;
+  }
+  if(suggestContainsHardBlock(name)){
+    suggestStatusEl.className = 'suggest-status err';
+    suggestStatusEl.textContent = `That one's not going to work for us — try again with something else.`;
+    return;
+  }
+
+  const flaggedUnrelated = !suggestReferencesEntity(suggestSelected, name);
+
+  suggestSubmitBtn.disabled = true;
+  suggestStatusEl.className = 'suggest-status';
+  suggestStatusEl.textContent = 'Submitting…';
+
+  try {
+    await db.collection('submitted_names').add({
+      playerId: suggestSelected.id,
+      playerName: fullName(suggestSelected),
+      name,
+      status: 'pending',
+      flaggedUnrelated,
+      submittedAt: Date.now(),
+    });
+    suggestStatusEl.className = 'suggest-status review';
+    suggestStatusEl.textContent = `Thanks! "${name}" is in the queue for a quick review before it goes live.`;
+    suggestNameInput.value = '';
+  } catch(err){
+    console.error('Suggestion submit failed', err);
+    suggestStatusEl.className = 'suggest-status err';
+    suggestStatusEl.textContent = 'Something went wrong — mind trying again?';
+  }
+  suggestSubmitBtn.disabled = false;
+});
+
+// ---------- Boot ----------
+Promise.all([
+  loadJson('../players.json'),
+  loadJson('../teams.json')
+]).then(([playersData, teamsData]) => {
+  playersData.filter(p => p.active !== false).forEach(p => ENTITIES.push({ ...p, kind: 'player' }));
+  teamsData.forEach(t => ENTITIES.push({
+    id: t.abbr.toLowerCase() + '_team',
+    kind: 'team',
+    city: t.city,
+    nickname: t.nickname,
+    abbr: t.abbr,
+    team: t.abbr,
+    pos: 'DST',
+    names: t.names
+  }));
+
+  suggestSearchInput.disabled = false;
+  suggestSearchInput.placeholder = 'Search for a player or team…';
+
+  mergeExtraPlayers();
+  mergeSubmittedNames();
+}).catch(err => {
+  console.error('Failed to load player database', err);
+  suggestSearchInput.placeholder = 'Failed to load — try refreshing the page';
+});
+</script>
+</body>
+</html>

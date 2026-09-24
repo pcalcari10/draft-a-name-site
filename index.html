@@ -264,27 +264,6 @@
 
   /* Results */
   .results { margin: 40px 0 60px; }
-
-  .suggest { margin: 20px 0 50px; padding: 24px; background: var(--navy-900); border: 1px solid var(--line); border-radius: 12px; }
-  .suggest h2 { font-family: var(--font-display); font-size: 22px; margin: 0 0 6px; }
-  .suggest-sub { color: var(--chalk-500); font-size: 13.5px; margin: 0 0 16px; max-width: 560px; }
-  .suggest-row { position: relative; display: flex; gap: 8px; margin-bottom: 10px; }
-  .suggest-row input {
-    flex: 1; min-width: 160px; background: var(--navy-800); border: 1px solid var(--line); color: var(--chalk-100);
-    border-radius: 8px; padding: 10px 12px; font-size: 14px; font-family: var(--font-body); outline: none;
-  }
-  .suggest-row input:focus { border-color: var(--gold-400); }
-  .suggest-row input:disabled { opacity: 0.5; cursor: not-allowed; }
-  .suggest-selected {
-    display: flex; align-items: center; justify-content: space-between; gap: 10px;
-    background: var(--navy-800); border-radius: 8px; padding: 8px 12px; margin-bottom: 10px; font-size: 13.5px;
-  }
-  .suggest-selected button { background: none; border: none; color: var(--chalk-500); cursor: pointer; font-size: 13px; }
-  .suggest-selected button:hover { color: var(--coral-500); }
-  .suggest-status { font-size: 13.5px; margin-top: 4px; min-height: 18px; }
-  .suggest-status.ok { color: var(--turf-500); }
-  .suggest-status.err { color: var(--coral-500); }
-  .suggest-status.review { color: var(--gold-300); }
   .results-head { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 16px; flex-wrap: wrap; gap: 8px; }
   .results-head h2 { font-family: var(--font-display); font-size: 26px; margin: 0; font-weight: 700; }
   .results-head .count { color: var(--chalk-500); font-size: 14px; }
@@ -425,27 +404,10 @@
     <div class="grid" id="resultsGrid"></div>
   </section>
 
-  <section class="suggest">
-    <h2>Got a better one? Suggest a name</h2>
-    <p class="suggest-sub">Think of a pun we're missing for a player or team? Send it our way — it'll go through a quick review before it shows up for everyone.</p>
-
-    <div class="suggest-row">
-      <input id="suggestSearch" type="text" placeholder="Search for a player or team…" autocomplete="off">
-      <div id="suggestSuggestions" class="suggestions"></div>
-    </div>
-    <div id="suggestSelected" class="suggest-selected" style="display:none;"></div>
-
-    <div class="suggest-row">
-      <input id="suggestNameInput" type="text" placeholder="Your suggested name…" disabled maxlength="150">
-      <button class="primary" id="suggestSubmitBtn" disabled>Submit</button>
-    </div>
-
-    <div id="suggestStatus" class="suggest-status"></div>
-  </section>
-
   <footer>
     <span>The Fantasy Name HQ — a prototype, not yet drafted into anyone's league</span>
     <a href="/sleeper-importer/" target="_blank" rel="noopener" class="importer-link">Import your Sleeper roster ↗</a>
+    <a href="/suggest/" class="importer-link">Suggest a name ↗</a>
     <span id="dbCount"></span>
   </footer>
 
@@ -911,130 +873,9 @@ async function mergeExtraPlayers(){
   } catch(err){ console.error('mergeExtraPlayers failed', err); }
 }
 
-// ---------- Suggest a name ----------
-// Deliberately narrow: this blocks genuinely severe terms (slurs, extremely
-// explicit content) while staying out of the way of the crude-but-fun humor
-// already throughout this database. It is not, and can't be, a substitute
-// for the manual review every submission still goes through before going live.
-// The actual list lives in blocklist.json (edited via git, not this file).
-let SUGGEST_HARD_BLOCK = [];
-loadJson('blocklist.json').then(list => { SUGGEST_HARD_BLOCK = list; }).catch(err => {
-  console.error('Failed to load blocklist.json (suggestion form will skip this check)', err);
-});
-
-function suggestContainsHardBlock(text){
-  const lower = text.toLowerCase();
-  return SUGGEST_HARD_BLOCK.some(word => lower.includes(word));
-}
-
-function suggestNormalize(text){
-  return text.toLowerCase().trim().replace(/\s+/g, ' ');
-}
-
-function suggestReferencesEntity(entity, text){
-  const lower = text.toLowerCase();
-  if(entity.kind === 'team'){
-    return lower.includes(entity.city.toLowerCase()) || lower.includes(entity.nickname.toLowerCase()) || lower.includes(entity.abbr.toLowerCase());
-  }
-  if(entity.first && lower.includes(entity.first.toLowerCase())) return true;
-  if(entity.last && lower.includes(entity.last.toLowerCase())) return true;
-  return false;
-}
-
-let suggestSelected = null;
-const suggestSearchInput = document.getElementById('suggestSearch');
-const suggestSuggestionsBox = document.getElementById('suggestSuggestions');
-const suggestSelectedBox = document.getElementById('suggestSelected');
-const suggestNameInput = document.getElementById('suggestNameInput');
-const suggestSubmitBtn = document.getElementById('suggestSubmitBtn');
-const suggestStatusEl = document.getElementById('suggestStatus');
-
-function renderSuggestSuggestions(query){
-  const q = query.trim().toLowerCase();
-  if(!q){ suggestSuggestionsBox.classList.remove('open'); suggestSuggestionsBox.innerHTML = ''; return; }
-  const matches = ENTITIES.filter(e => (e.kind === 'player' || e.kind === 'team') && fullName(e).toLowerCase().includes(q)).slice(0, 8);
-  if(matches.length === 0){
-    suggestSuggestionsBox.innerHTML = `<div class="suggestion"><span class="pmeta">Nothing matched — try a different spelling</span></div>`;
-    suggestSuggestionsBox.classList.add('open');
-    return;
-  }
-  suggestSuggestionsBox.innerHTML = matches.map(e => `
-    <div class="suggestion" data-id="${e.id}">
-      <span class="pname">${fullName(e)}</span>
-      <span class="pmeta">${e.kind === 'team' ? `DST · ${e.abbr}` : `${e.pos} · ${e.team}`}</span>
-    </div>`).join('');
-  suggestSuggestionsBox.classList.add('open');
-}
-
-suggestSuggestionsBox.addEventListener('click', (e) => {
-  const row = e.target.closest('.suggestion');
-  if(!row || !row.dataset.id) return;
-  suggestSelected = ENTITIES.find(en => en.id === row.dataset.id);
-  suggestSearchInput.value = '';
-  suggestSuggestionsBox.classList.remove('open');
-  suggestSelectedBox.style.display = 'flex';
-  suggestSelectedBox.innerHTML = `<span>Suggesting a name for <strong>${fullName(suggestSelected)}</strong></span><button id="suggestClearBtn">Change</button>`;
-  document.getElementById('suggestClearBtn').addEventListener('click', () => {
-    suggestSelected = null;
-    suggestSelectedBox.style.display = 'none';
-    suggestNameInput.disabled = true;
-    suggestSubmitBtn.disabled = true;
-    suggestNameInput.value = '';
-    suggestStatusEl.textContent = '';
-  });
-  suggestNameInput.disabled = false;
-  suggestSubmitBtn.disabled = false;
-  suggestNameInput.focus();
-});
-
-suggestSearchInput.addEventListener('input', () => renderSuggestSuggestions(suggestSearchInput.value));
-suggestSearchInput.addEventListener('focus', () => renderSuggestSuggestions(suggestSearchInput.value));
-document.addEventListener('click', (e) => {
-  if(!e.target.closest('#suggestSearch') && !e.target.closest('#suggestSuggestions')) suggestSuggestionsBox.classList.remove('open');
-});
-
-suggestSubmitBtn.addEventListener('click', async () => {
-  const name = suggestNameInput.value.trim();
-  if(!suggestSelected || !name) return;
-
-  const existingNames = (suggestSelected.names || []).map(suggestNormalize);
-  if(existingNames.includes(suggestNormalize(name))){
-    suggestStatusEl.className = 'suggest-status err';
-    suggestStatusEl.textContent = `"${name}" is already in there for ${fullName(suggestSelected)} — try something else!`;
-    return;
-  }
-  if(suggestContainsHardBlock(name)){
-    suggestStatusEl.className = 'suggest-status err';
-    suggestStatusEl.textContent = `That one's not going to work for us — try again with something else.`;
-    return;
-  }
-
-  const flaggedUnrelated = !suggestReferencesEntity(suggestSelected, name);
-
-  suggestSubmitBtn.disabled = true;
-  suggestStatusEl.className = 'suggest-status';
-  suggestStatusEl.textContent = 'Submitting…';
-
-  try {
-    await likesDb.collection('submitted_names').add({
-      playerId: suggestSelected.id,
-      playerName: fullName(suggestSelected),
-      name,
-      status: 'pending',
-      flaggedUnrelated,
-      submittedAt: Date.now(),
-    });
-    suggestStatusEl.className = 'suggest-status review';
-    suggestStatusEl.textContent = `Thanks! "${name}" is in the queue for a quick review before it goes live.`;
-    suggestNameInput.value = '';
-  } catch(err){
-    console.error('Suggestion submit failed', err);
-    suggestStatusEl.className = 'suggest-status err';
-    suggestStatusEl.textContent = 'Something went wrong — mind trying again?';
-  }
-  suggestSubmitBtn.disabled = false;
-});
-
+// ---------- Suggest a name: displays already-approved crowdsourced names.
+// The actual submission form now lives on its own page (/suggest/), to keep
+// this homepage focused on search. ----------
 async function mergeSubmittedNames(){
   try {
     const snap = await likesDb.collection('submitted_names').where('status', '==', 'approved').get();
