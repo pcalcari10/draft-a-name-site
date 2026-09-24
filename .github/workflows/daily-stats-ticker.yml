@@ -1,11 +1,33 @@
-name: Daily Stats Ticker Update
+name: Stats Ticker Update
 
 on:
   schedule:
-    # Every day at 11:00 UTC — comfortably after Monday Night Football wraps,
-    # and harmless to re-run on days with no new data (it just writes the
-    # same result, and the commit step below no-ops when nothing changed).
+    # Baseline: once a day at 11:00 UTC, so the file always stays current even
+    # outside game windows.
     - cron: '0 11 * * *'
+
+    # Live-game windows, every 15 minutes. Cron is fixed UTC, but NFL kickoffs
+    # are in Eastern Time, which shifts between EDT (UTC-4) and EST (UTC-5)
+    # when clocks change in early November — these windows are padded wider
+    # than the exact kickoff times so they stay accurate across that shift
+    # without needing to be edited.
+
+    # Thursday Night Football: ~8:15pm ET kickoff, Thu evening US time lands
+    # as Friday 00:00-05:59 UTC.
+    - cron: '*/15 0-5 * * 5'
+
+    # Sunday day games: 1:00pm ET earliest kickoff through the late-afternoon
+    # window, all within Sunday UTC.
+    - cron: '*/15 16-23 * * 0'
+
+    # Sunday Night Football: kicks off Sunday evening US time, lands as
+    # Monday 00:00-06:59 UTC.
+    - cron: '*/15 0-6 * * 1'
+
+    # Monday Night Football: kicks off Monday evening US time, lands as
+    # Tuesday 00:00-06:59 UTC.
+    - cron: '*/15 0-6 * * 2'
+
   workflow_dispatch: {}
 
 permissions:
