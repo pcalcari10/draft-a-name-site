@@ -259,7 +259,10 @@ loadJson('../blocklist.json').then(list => { SUGGEST_HARD_BLOCK = list; }).catch
 
 function suggestContainsHardBlock(text){
   const lower = text.toLowerCase();
-  return SUGGEST_HARD_BLOCK.some(word => lower.includes(word));
+  return SUGGEST_HARD_BLOCK.some(word => {
+    const escaped = word.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+    return new RegExp(`\\b${escaped}\\b`, 'i').test(lower);
+  });
 }
 
 function suggestNormalize(text){
