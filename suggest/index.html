@@ -46,29 +46,29 @@
 
   /* ---------- Stats ticker ---------- */
   .ticker-wrap { background: var(--navy-900); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); overflow: hidden; position: relative; }
-  .ticker-head { max-width: 920px; margin: 0 auto; padding: 10px 24px 0; display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
-  .ticker-title { font-family: var(--font-display); font-weight: 700; font-size: 15px; letter-spacing: 0.01em; color: var(--gold-300); }
+  .ticker-head { max-width: 920px; margin: 0 auto; padding: 7px 24px 0; display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
+  .ticker-title { font-family: var(--font-display); font-weight: 700; font-size: 13px; letter-spacing: 0.01em; color: var(--gold-300); }
   .ticker-toggle { display: flex; gap: 4px; background: var(--navy-800); border-radius: 8px; padding: 3px; }
-  .ticker-toggle button { font-family: var(--font-body); font-size: 12.5px; font-weight: 600; color: var(--chalk-500); background: none; border: none; border-radius: 6px; padding: 5px 12px; cursor: pointer; }
+  .ticker-toggle button { font-family: var(--font-body); font-size: 12.5px; font-weight: 600; color: var(--chalk-500); background: none; border: none; border-radius: 6px; padding: 4px 10px; cursor: pointer; }
   .ticker-toggle button.active { background: var(--navy-700); color: var(--chalk-100); }
-  .ticker-track-outer { overflow: hidden; padding: 12px 0 14px; -webkit-mask-image: linear-gradient(90deg, transparent, #000 40px, #000 calc(100% - 40px), transparent); mask-image: linear-gradient(90deg, transparent, #000 40px, #000 calc(100% - 40px), transparent); }
-  .ticker-track { display: flex; gap: 14px; width: max-content; animation: ticker-scroll 150s linear infinite; }
+  .ticker-track-outer { overflow: hidden; padding: 8px 0 10px; -webkit-mask-image: linear-gradient(90deg, transparent, #000 40px, #000 calc(100% - 40px), transparent); mask-image: linear-gradient(90deg, transparent, #000 40px, #000 calc(100% - 40px), transparent); }
+  .ticker-track { display: flex; gap: 10px; width: max-content; animation: ticker-scroll 150s linear infinite; }
   .ticker-track-outer:hover .ticker-track { animation-play-state: paused; }
   @keyframes ticker-scroll { from { transform: translateX(0); } to { transform: translateX(-50%); } }
-  .ticker-card { flex: 0 0 auto; display: flex; align-items: center; gap: 10px; background: var(--navy-800); border: 1px solid var(--line); border-left: 4px solid var(--card-accent, var(--gold-400)); border-radius: 10px; padding: 8px 14px 8px 12px; white-space: nowrap; cursor: pointer; transition: background .15s ease, border-color .15s ease; }
+  .ticker-card { flex: 0 0 auto; display: flex; align-items: center; gap: 10px; background: var(--navy-800); border: 1px solid var(--line); border-left: 3px solid var(--card-accent, var(--gold-400)); border-radius: 8px; padding: 5px 10px 5px 8px; white-space: nowrap; cursor: pointer; transition: background .15s ease, border-color .15s ease; }
   .ticker-card:hover { background: var(--navy-700); border-color: var(--card-accent, var(--gold-400)); }
-  .ticker-pos { font-family: var(--font-display); font-weight: 700; font-size: 12px; color: var(--navy-950); background: var(--card-accent, var(--gold-400)); border-radius: 5px; padding: 2px 6px; letter-spacing: 0.02em; }
+  .ticker-pos { font-family: var(--font-display); font-weight: 700; font-size: 10.5px; color: var(--navy-950); background: var(--card-accent, var(--gold-400)); border-radius: 4px; padding: 1px 5px; letter-spacing: 0.02em; }
   .ticker-card[data-pos="QB"] { --card-accent: var(--pos-qb); }
   .ticker-card[data-pos="RB"] { --card-accent: var(--pos-rb); }
   .ticker-card[data-pos="WR"] { --card-accent: var(--pos-wr); }
   .ticker-card[data-pos="TE"] { --card-accent: var(--pos-te); }
   .ticker-card[data-pos="K"]  { --card-accent: var(--pos-k); }
-  .ticker-divider { flex: 0 0 auto; display: flex; align-items: center; gap: 6px; color: var(--chalk-500); font-family: var(--font-body); font-size: 11px; font-weight: 700; letter-spacing: 0.08em; }
-  .ticker-divider::before { content: ''; width: 1px; height: 28px; background: var(--line); }
-  .ticker-name { font-family: var(--font-display); font-weight: 700; font-size: 16px; color: var(--chalk-100); }
-  .ticker-team { font-family: var(--font-body); font-size: 11.5px; color: var(--chalk-500); }
-  .ticker-pun { font-family: var(--font-body); font-style: italic; font-size: 12.5px; color: var(--turf-500); }
-  .ticker-pts { font-family: var(--font-display); font-weight: 700; font-size: 16px; color: var(--coral-500); white-space: nowrap; }
+  .ticker-divider { flex: 0 0 auto; display: flex; align-items: center; gap: 5px; color: var(--chalk-500); font-family: var(--font-body); font-size: 9.5px; font-weight: 700; letter-spacing: 0.08em; }
+  .ticker-divider::before { content: ''; width: 1px; height: 20px; background: var(--line); }
+  .ticker-name { font-family: var(--font-display); font-weight: 700; font-size: 13.5px; color: var(--chalk-100); }
+  .ticker-team { font-family: var(--font-body); font-size: 10px; color: var(--chalk-500); }
+  .ticker-pun { font-family: var(--font-body); font-style: italic; font-size: 11px; color: var(--turf-500); }
+  .ticker-pts { font-family: var(--font-display); font-weight: 700; font-size: 13.5px; color: var(--coral-500); white-space: nowrap; }
   @media (max-width: 640px) { .ticker-name { font-size: 14px; } .ticker-pun { display: none; } }
 
   header.top {
