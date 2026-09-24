@@ -25,6 +25,11 @@
     --chalk-100: #F4F2EC;
     --chalk-300: #C9D2DC;
     --chalk-500: #8FA0B3;
+    --pos-qb: #F2B705;
+    --pos-rb: #3E8F63;
+    --pos-wr: #E85D4E;
+    --pos-te: #4F9FD9;
+    --pos-k: #B27FE0;
 
     --font-display: 'Big Shoulders', 'Arial Narrow', sans-serif;
     --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
@@ -89,11 +94,21 @@
   }
   .ticker-card {
     flex: 0 0 auto; display: flex; align-items: center; gap: 10px;
-    background: var(--navy-800); border: 1px solid var(--line); border-radius: 10px;
-    padding: 8px 14px; white-space: nowrap;
+    background: var(--navy-800); border: 1px solid var(--line); border-left: 4px solid var(--card-accent, var(--gold-400));
+    border-radius: 10px; padding: 8px 14px 8px 12px; white-space: nowrap;
   }
   .ticker-pos { font-family: var(--font-display); font-weight: 700; font-size: 12px; color: var(--navy-950);
-    background: var(--gold-400); border-radius: 5px; padding: 2px 6px; letter-spacing: 0.02em; }
+    background: var(--card-accent, var(--gold-400)); border-radius: 5px; padding: 2px 6px; letter-spacing: 0.02em; }
+  .ticker-card[data-pos="QB"] { --card-accent: var(--pos-qb); }
+  .ticker-card[data-pos="RB"] { --card-accent: var(--pos-rb); }
+  .ticker-card[data-pos="WR"] { --card-accent: var(--pos-wr); }
+  .ticker-card[data-pos="TE"] { --card-accent: var(--pos-te); }
+  .ticker-card[data-pos="K"]  { --card-accent: var(--pos-k); }
+  .ticker-divider {
+    flex: 0 0 auto; display: flex; align-items: center; gap: 6px;
+    color: var(--chalk-500); font-family: var(--font-body); font-size: 11px; font-weight: 700; letter-spacing: 0.08em;
+  }
+  .ticker-divider::before { content: ''; width: 1px; height: 28px; background: var(--line); }
   .ticker-name { font-family: var(--font-display); font-weight: 700; font-size: 16px; color: var(--chalk-100); }
   .ticker-team { font-family: var(--font-body); font-size: 11.5px; color: var(--chalk-500); }
   .ticker-pun { font-family: var(--font-body); font-style: italic; font-size: 12.5px; color: var(--turf-500); }
@@ -1091,7 +1106,7 @@ Promise.all([
   function buildCard(entry){
     const pun = entry.pun ? `<span class="ticker-pun">"${entry.pun}"</span>` : '';
     return `
-      <div class="ticker-card">
+      <div class="ticker-card" data-pos="${entry.pos}">
         <span class="ticker-pos">${entry.pos}</span>
         <span>
           <span class="ticker-name">${entry.first} ${entry.last}</span>
@@ -1102,19 +1117,25 @@ Promise.all([
       </div>`;
   }
 
+  function buildDivider(pos){
+    return `<div class="ticker-divider">${pos}</div>`;
+  }
+
   function render(data, view){
     const byPos = view === 'season' ? data.seasonTotals : data.thisWeek;
-    const entries = [];
+    const groupsHtml = [];
     POS_ORDER.forEach(pos => {
-      (byPos[pos] || []).forEach(e => entries.push(e));
+      const entries = byPos[pos] || [];
+      if(entries.length === 0) return;
+      groupsHtml.push(buildDivider(pos) + entries.map(buildCard).join(''));
     });
-    if(entries.length === 0){
+    if(groupsHtml.length === 0){
       wrapEl.style.display = 'none';
       return;
     }
     wrapEl.style.display = 'block';
     // Duplicate the entry set once so the scrolling loop (translateX -50%) is seamless
-    const cardsHtml = entries.map(buildCard).join('');
+    const cardsHtml = groupsHtml.join('');
     trackEl.innerHTML = cardsHtml + cardsHtml;
 
     titleEl.textContent = view === 'season'
