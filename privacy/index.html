@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Privacy — The Fantasy Name HQ</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    box-sizing: border-box;
+    padding-top: env(safe-area-inset-top, 0px);
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+
+    --navy-950: #0B1622;
+    --navy-900: #101E2E;
+    --navy-800: #16283C;
+    --navy-700: #1F3650;
+    --line: #2B4560;
+    --gold-400: #F2B705;
+    --gold-300: #F7CB3E;
+    --turf-500: #3E8F63;
+    --coral-500: #E85D4E;
+    --chalk-100: #F4F2EC;
+    --chalk-300: #C9D2DC;
+    --chalk-500: #8FA0B3;
+    --pos-qb: #F2B705;
+    --pos-rb: #3E8F63;
+    --pos-wr: #E85D4E;
+    --pos-te: #4F9FD9;
+    --pos-k: #B27FE0;
+
+    --font-display: 'Big Shoulders', 'Arial Narrow', sans-serif;
+    --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  }
+  * { box-sizing: inherit; }
+  html, body { height: 100%; }
+  body {
+    margin: 0; background: var(--navy-950); color: var(--chalk-100);
+    font-family: var(--font-body); font-size: 15px; line-height: 1.6;
+  }
+  .wrap { max-width: 720px; margin: 0 auto; padding: 0 24px; }
+
+  header.top { display: flex; align-items: center; justify-content: space-between; padding: 24px 0 8px; }
+  .brand { display: flex; align-items: center; gap: 10px; font-family: var(--font-display); font-weight: 700; font-size: 22px; letter-spacing: 0.02em; }
+  .brand .ball { font-size: 20px; transform: rotate(-15deg); display: inline-block; }
+  .brand a { color: var(--chalk-100); text-decoration: none; display: flex; align-items: center; gap: 10px; }
+
+  .hero { padding: 28px 0 8px; }
+  h1 { font-family: var(--font-display); font-weight: 800; font-size: clamp(30px, 6vw, 44px); line-height: 0.98; margin: 0 0 10px; }
+  .updated { color: var(--chalk-500); font-size: 13px; margin: 0 0 30px; }
+
+  .content { background: var(--navy-800); border: 1px solid var(--line); border-radius: 14px; padding: 28px; margin-bottom: 50px; }
+  .content h2 { font-family: var(--font-display); font-weight: 700; font-size: 19px; margin: 26px 0 8px; }
+  .content h2:first-child { margin-top: 0; }
+  .content p { color: var(--chalk-300); margin: 0 0 14px; }
+  .content ul { color: var(--chalk-300); margin: 0 0 14px; padding-left: 20px; }
+  .content li { margin-bottom: 6px; }
+  .content a { color: var(--gold-400); }
+
+  footer {
+    border-top: 1px solid var(--line); padding: 22px 0 calc(30px + env(safe-area-inset-bottom, 0px));
+    color: var(--chalk-500); font-size: 13px; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px;
+  }
+  footer .importer-link { color: var(--gold-400); text-decoration: none; font-weight: 600; }
+  footer .importer-link:hover { color: var(--gold-300); text-decoration: underline; }
+  footer .footer-links { display: flex; gap: 14px; flex-wrap: wrap; }
+
+  /* ---------- Stats ticker ---------- */
+  .ticker-wrap { background: var(--navy-900); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); overflow: hidden; position: relative; }
+  .ticker-head { max-width: 920px; margin: 0 auto; padding: 10px 24px 0; display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
+  .ticker-title { font-family: var(--font-display); font-weight: 700; font-size: 15px; letter-spacing: 0.01em; color: var(--gold-300); }
+  .ticker-toggle { display: flex; gap: 4px; background: var(--navy-800); border-radius: 8px; padding: 3px; }
+  .ticker-toggle button { font-family: var(--font-body); font-size: 12.5px; font-weight: 600; color: var(--chalk-500); background: none; border: none; border-radius: 6px; padding: 5px 12px; cursor: pointer; }
+  .ticker-toggle button.active { background: var(--navy-700); color: var(--chalk-100); }
+  .ticker-track-outer { overflow: hidden; padding: 12px 0 14px; -webkit-mask-image: linear-gradient(90deg, transparent, #000 40px, #000 calc(100% - 40px), transparent); mask-image: linear-gradient(90deg, transparent, #000 40px, #000 calc(100% - 40px), transparent); }
+  .ticker-track { display: flex; gap: 14px; width: max-content; animation: ticker-scroll 150s linear infinite; }
+  .ticker-track-outer:hover .ticker-track { animation-play-state: paused; }
+  @keyframes ticker-scroll { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+  .ticker-card { flex: 0 0 auto; display: flex; align-items: center; gap: 10px; background: var(--navy-800); border: 1px solid var(--line); border-left: 4px solid var(--card-accent, var(--gold-400)); border-radius: 10px; padding: 8px 14px 8px 12px; white-space: nowrap; }
+  .ticker-pos { font-family: var(--font-display); font-weight: 700; font-size: 12px; color: var(--navy-950); background: var(--card-accent, var(--gold-400)); border-radius: 5px; padding: 2px 6px; letter-spacing: 0.02em; }
+  .ticker-card[data-pos="QB"] { --card-accent: var(--pos-qb); }
+  .ticker-card[data-pos="RB"] { --card-accent: var(--pos-rb); }
+  .ticker-card[data-pos="WR"] { --card-accent: var(--pos-wr); }
+  .ticker-card[data-pos="TE"] { --card-accent: var(--pos-te); }
+  .ticker-card[data-pos="K"]  { --card-accent: var(--pos-k); }
+  .ticker-divider { flex: 0 0 auto; display: flex; align-items: center; gap: 6px; color: var(--chalk-500); font-family: var(--font-body); font-size: 11px; font-weight: 700; letter-spacing: 0.08em; }
+  .ticker-divider::before { content: ''; width: 1px; height: 28px; background: var(--line); }
+  .ticker-name { font-family: var(--font-display); font-weight: 700; font-size: 16px; color: var(--chalk-100); }
+  .ticker-team { font-family: var(--font-body); font-size: 11.5px; color: var(--chalk-500); }
+  .ticker-pun { font-family: var(--font-body); font-style: italic; font-size: 12.5px; color: var(--turf-500); }
+  .ticker-pts { font-family: var(--font-display); font-weight: 700; font-size: 16px; color: var(--coral-500); white-space: nowrap; }
+  @media (max-width: 640px) { .ticker-name { font-size: 14px; } .ticker-pun { display: none; } }
+
+  @media (max-width: 520px) { .wrap { padding: 0 16px; } }
+  :focus-visible { outline: 2px solid var(--gold-400); outline-offset: 2px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="top">
+    <div class="brand"><a href="../"><span class="ball">🏈</span>The Fantasy Name HQ</a></div>
+  </header>
+
+  <section class="hero">
+    <h1>Privacy</h1>
+    <p class="updated">Last updated September 2026</p>
+
+    <div class="content">
+      <h2>The short version</h2>
+      <p>This is a small hobby project. There's no login, no account, and no email collection anywhere on this site. We don't run ads, and we don't use analytics or tracking scripts.</p>
+
+      <h2>What we actually store</h2>
+      <p>When you vote on a name or submit a suggestion, that goes into our database (Firebase/Firestore). None of it is tied to your identity — there's no name, email, or account attached to a vote or a submission. A submission stores the player it's for, the suggested name, and the time it was submitted, nothing more.</p>
+
+      <h2>What our hosting providers see</h2>
+      <p>Like basically every website, the infrastructure this site runs on (GitHub Pages for hosting, Google/Firebase for the database, Google Fonts for typefaces) may log standard technical information as part of normal web traffic — things like IP address, browser type, and request timestamps. We don't have access to this data ourselves; it's just an artifact of how the underlying services work. We don't collect or use it for anything.</p>
+
+      <h2>Cookies</h2>
+      <p>This site doesn't set any cookies of its own. Any cookies present would come from the third-party services above operating normally, not from anything we've built.</p>
+
+      <h2>Changes</h2>
+      <p>If anything about how this site works changes in a way that affects this page, we'll update it here.</p>
+    </div>
+  </section>
+
+  <footer>
+    <span>The Fantasy Name HQ — a prototype, not yet drafted into anyone's league</span>
+    <div class="footer-links">
+      <a href="../terms/" class="importer-link">Terms</a>
+      <a href="../" class="importer-link">&larr; Back to search</a>
+    </div>
+  </footer>
+
+</div>
+
+<div class="ticker-wrap" id="tickerWrap" style="display:none;">
+  <div class="ticker-head">
+    <span class="ticker-title" id="tickerTitle">Top Scorers</span>
+    <div class="ticker-toggle">
+      <button id="tickerWeekBtn" class="active">This Week</button>
+      <button id="tickerSeasonBtn">Season</button>
+    </div>
+  </div>
+  <div class="ticker-track-outer">
+    <div class="ticker-track" id="tickerTrack"></div>
+  </div>
+</div>
+
+<script>
+async function loadJson(path){
+  const res = await fetch(path);
+  if(!res.ok) throw new Error('Failed to load ' + path);
+  return res.json();
+}
+
+(function initStatsTicker(){
+  const wrapEl = document.getElementById('tickerWrap');
+  const trackEl = document.getElementById('tickerTrack');
+  const titleEl = document.getElementById('tickerTitle');
+  const weekBtn = document.getElementById('tickerWeekBtn');
+  const seasonBtn = document.getElementById('tickerSeasonBtn');
+  const POS_ORDER = ['QB', 'RB', 'WR', 'TE', 'K'];
+
+  function buildCard(entry, rank){
+    const pun = entry.pun ? `<span class="ticker-pun">"${entry.pun}"</span>` : '';
+    return `
+      <div class="ticker-card" data-pos="${entry.pos}">
+        <span class="ticker-pos">${entry.pos}${rank}</span>
+        <span>
+          <span class="ticker-name">${entry.first} ${entry.last}</span>
+          <span class="ticker-team">${entry.team}</span><br>
+          ${pun}
+        </span>
+        <span class="ticker-pts">${entry.pts}</span>
+      </div>`;
+  }
+  function buildDivider(pos){ return `<div class="ticker-divider">${pos}</div>`; }
+
+  function render(data, view){
+    const byPos = view === 'season' ? data.seasonTotals : data.thisWeek;
+    const groupsHtml = [];
+    POS_ORDER.forEach(pos => {
+      const entries = byPos[pos] || [];
+      if(entries.length === 0) return;
+      groupsHtml.push(buildDivider(pos) + entries.map((e,i) => buildCard(e, i+1)).join(''));
+    });
+    if(groupsHtml.length === 0){ wrapEl.style.display = 'none'; return; }
+    wrapEl.style.display = 'block';
+    const cardsHtml = groupsHtml.join('');
+    trackEl.innerHTML = cardsHtml + cardsHtml;
+    titleEl.textContent = view === 'season' ? `Season Leaders \u2014 through Week ${data.week}` : `Week ${data.week} Top Scorers`;
+  }
+
+  loadJson('../stats_ticker.json').then(data => {
+    if(!data || data.week === null){ wrapEl.style.display = 'none'; return; }
+    render(data, 'week');
+    weekBtn.addEventListener('click', () => { weekBtn.classList.add('active'); seasonBtn.classList.remove('active'); render(data, 'week'); });
+    seasonBtn.addEventListener('click', () => { seasonBtn.classList.add('active'); weekBtn.classList.remove('active'); render(data, 'season'); });
+  }).catch(err => { console.error('Stats ticker failed to load (non-fatal)', err); wrapEl.style.display = 'none'; });
+})();
+</script>
+</body>
+</html>
