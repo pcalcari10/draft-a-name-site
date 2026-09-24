@@ -180,8 +180,21 @@
   }
   .rename-link:hover { filter: brightness(1.08); }
 
-  footer { margin-top: 40px; font-size: 12.5px; color: var(--dim); line-height: 1.6; }
+  footer { border-top: 1px solid var(--line); margin-top: 30px; padding-top: 40px; }
   footer code { font-family: var(--mono); background: var(--panel-2); padding: 1px 5px; border-radius: 4px; }
+  .footer-grid { display: grid; grid-template-columns: 1.4fr 1fr 1fr 1fr; gap: 24px; padding-bottom: 24px; }
+  .footer-brand { font-family: var(--display); font-weight: 700; font-size: 18px; color: var(--text); margin-bottom: 8px; display: flex; align-items: center; gap: 8px; }
+  .footer-tagline { color: var(--dim); font-size: 13px; max-width: 30ch; margin: 0; }
+  .footer-col h4 { font-family: var(--sans); font-size: 11.5px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; color: var(--dim); margin: 0 0 12px; }
+  .footer-col a { display: block; color: var(--text); text-decoration: none; font-size: 13.5px; margin-bottom: 9px; }
+  .footer-col a:hover { color: var(--amber); }
+  .footer-bottom {
+    border-top: 1px solid var(--line); padding: 16px 0 calc(24px + env(safe-area-inset-bottom, 0px));
+    color: var(--dim); font-size: 12px; line-height: 1.6;
+  }
+  @media (max-width: 640px) {
+    .footer-grid { grid-template-columns: 1fr 1fr; }
+  }
 </style>
 </head>
 <body>
@@ -240,12 +253,32 @@
 
   <div id="resultsPanel" style="display:none;"></div>
 
-  <footer style="display:flex; justify-content:space-between; align-items:flex-start; flex-wrap:wrap; gap:10px; border-top:1px solid var(--line); padding-top:16px;">
-    <span>Data sources: <code>api.sleeper.app</code> (rosters, public, no login) and <code>dynastyprocess/data</code> on GitHub (Sleeper player-ID → name mapping, updated weekly). The pun database embedded in this file is a snapshot from when it was built — ask for a refreshed copy after a big batch of new puns.</span>
-    <div style="display:flex; gap:14px; flex-wrap:wrap; flex-shrink:0;">
-      <a href="../terms/" style="color:var(--amber); text-decoration:none; font-weight:600; white-space:nowrap;">Terms</a>
-      <a href="../privacy/" style="color:var(--amber); text-decoration:none; font-weight:600; white-space:nowrap;">Privacy</a>
-      <a href="../" style="color:var(--amber); text-decoration:none; font-weight:600; white-space:nowrap;">&larr; Back to search</a>
+  <footer>
+    <div class="footer-grid">
+      <div class="footer-col">
+        <div class="footer-brand">🏈 The Fantasy Name HQ</div>
+        <p class="footer-tagline">A prototype, not yet drafted into anyone's league.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Tools</h4>
+        <a href="/suggest/">Suggest a name</a>
+        <a href="/sleeper-importer/">Import Sleeper roster</a>
+      </div>
+      <div class="footer-col">
+        <h4>Sports</h4>
+        <a href="/">Fantasy Football</a>
+        <a href="/baseball/">Fantasy Baseball</a>
+        <a href="/basketball/">Fantasy Basketball</a>
+      </div>
+      <div class="footer-col">
+        <h4>Legal</h4>
+        <a href="/terms/">Terms</a>
+        <a href="/privacy/">Privacy</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div>Data sources: <code>api.sleeper.app</code> (rosters, public, no login) and <code>dynastyprocess/data</code> on GitHub (Sleeper player-ID → name mapping, updated weekly). The pun database embedded in this file is a snapshot from when it was built — ask for a refreshed copy after a big batch of new puns.</div>
+      <div style="margin-top:8px;">&copy; 2026 The Fantasy Name HQ</div>
     </div>
   </footer>
 </div>

@@ -61,13 +61,20 @@
   .content li { margin-bottom: 6px; }
   .content a { color: var(--gold-400); }
 
-  footer {
-    border-top: 1px solid var(--line); padding: 22px 0 calc(30px + env(safe-area-inset-bottom, 0px));
-    color: var(--chalk-500); font-size: 13px; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px;
+  footer { border-top: 1px solid var(--line); margin-top: 30px; padding-top: 40px; }
+  .footer-grid { display: grid; grid-template-columns: 1.4fr 1fr 1fr 1fr; gap: 24px; padding-bottom: 30px; }
+  .footer-brand { font-family: var(--font-display); font-weight: 700; font-size: 18px; color: var(--chalk-100); margin-bottom: 8px; display: flex; align-items: center; gap: 8px; }
+  .footer-tagline { color: var(--chalk-500); font-size: 13px; max-width: 30ch; margin: 0; }
+  .footer-col h4 { font-family: var(--font-body); font-size: 11.5px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; color: var(--chalk-500); margin: 0 0 12px; }
+  .footer-col a { display: block; color: var(--chalk-300); text-decoration: none; font-size: 13.5px; margin-bottom: 9px; }
+  .footer-col a:hover { color: var(--gold-400); }
+  .footer-bottom {
+    border-top: 1px solid var(--line); padding: 16px 0 calc(24px + env(safe-area-inset-bottom, 0px));
+    color: var(--chalk-500); font-size: 12.5px; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px;
   }
-  footer .importer-link { color: var(--gold-400); text-decoration: none; font-weight: 600; }
-  footer .importer-link:hover { color: var(--gold-300); text-decoration: underline; }
-  footer .footer-links { display: flex; gap: 14px; flex-wrap: wrap; }
+  @media (max-width: 640px) {
+    .footer-grid { grid-template-columns: 1fr 1fr; }
+  }
 
   /* ---------- Stats ticker (thin strip) ---------- */
   .ticker-wrap { background: var(--navy-900); border-bottom: 1px solid var(--line); overflow: hidden; position: relative; }
@@ -164,10 +171,30 @@
   </section>
 
   <footer>
-    <span>The Fantasy Name HQ — a prototype, not yet drafted into anyone's league</span>
-    <div class="footer-links">
-      <a href="../terms/" class="importer-link">Terms</a>
-      <a href="../" class="importer-link">&larr; Back to search</a>
+    <div class="footer-grid">
+      <div class="footer-col">
+        <div class="footer-brand">🏈 The Fantasy Name HQ</div>
+        <p class="footer-tagline">A prototype, not yet drafted into anyone's league.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Tools</h4>
+        <a href="/suggest/">Suggest a name</a>
+        <a href="/sleeper-importer/">Import Sleeper roster</a>
+      </div>
+      <div class="footer-col">
+        <h4>Sports</h4>
+        <a href="/">Fantasy Football</a>
+        <a href="/baseball/">Fantasy Baseball</a>
+        <a href="/basketball/">Fantasy Basketball</a>
+      </div>
+      <div class="footer-col">
+        <h4>Legal</h4>
+        <a href="/terms/">Terms</a>
+        <a href="/privacy/">Privacy</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 The Fantasy Name HQ</span>
     </div>
   </footer>
 
