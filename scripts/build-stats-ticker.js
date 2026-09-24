@@ -130,6 +130,7 @@ async function main() {
         .sort((a, b) => b.pts - a.pts)
         .slice(0, TOP_N)
         .map(x => ({
+          id: x.player.id,
           first: x.player.first,
           last: x.player.last,
           team: x.player.team,

@@ -95,8 +95,10 @@
   .ticker-card {
     flex: 0 0 auto; display: flex; align-items: center; gap: 10px;
     background: var(--navy-800); border: 1px solid var(--line); border-left: 4px solid var(--card-accent, var(--gold-400));
-    border-radius: 10px; padding: 8px 14px 8px 12px; white-space: nowrap;
+    border-radius: 10px; padding: 8px 14px 8px 12px; white-space: nowrap; cursor: pointer;
+    transition: background .15s ease, border-color .15s ease;
   }
+  .ticker-card:hover { background: var(--navy-700); border-color: var(--card-accent, var(--gold-400)); }
   .ticker-pos { font-family: var(--font-display); font-weight: 700; font-size: 12px; color: var(--navy-950);
     background: var(--card-accent, var(--gold-400)); border-radius: 5px; padding: 2px 6px; letter-spacing: 0.02em; }
   .ticker-card[data-pos="QB"] { --card-accent: var(--pos-qb); }
@@ -1104,10 +1106,17 @@ Promise.all([
   const seasonBtn = document.getElementById('tickerSeasonBtn');
   const POS_ORDER = ['QB', 'RB', 'WR', 'TE', 'K'];
 
+  trackEl.addEventListener('click', (e) => {
+    const card = e.target.closest('.ticker-card');
+    if(!card || !card.dataset.id) return;
+    addPlayer(card.dataset.id);
+    searchInput.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  });
+
   function buildCard(entry, rank){
     const pun = entry.pun ? `<span class="ticker-pun">"${entry.pun}"</span>` : '';
     return `
-      <div class="ticker-card" data-pos="${entry.pos}">
+      <div class="ticker-card" data-pos="${entry.pos}" data-id="${entry.id || ''}" title="Add ${entry.first} ${entry.last} to your roster">
         <span class="ticker-pos">${entry.pos}${rank}</span>
         <span>
           <span class="ticker-name">${entry.first} ${entry.last}</span>
