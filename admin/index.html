@@ -92,6 +92,7 @@
     <button class="tab-btn" data-tab="performers">Best Performers (No Curated Name)</button>
     <button class="tab-btn" data-tab="addname">Add a Name</button>
     <button class="tab-btn" data-tab="review">Review Submissions <span id="reviewCountBadge" style="display:none;"></span></button>
+    <button class="tab-btn" data-tab="blocklist">Blocklist</button>
   </div>
 
   <div class="tab-panel active" id="tab-sync">
@@ -236,10 +237,12 @@
     <div class="progress-label" style="margin-top:4px;">Names visitors have suggested from the live site. Approving makes it show up immediately for everyone (via the same live merge the site already does); rejecting just discards it.</div>
     <div id="reviewList" style="margin-top:16px;"></div>
   </div>
+  </div>
 
+  <div class="tab-panel" id="tab-blocklist">
   <div class="progress-panel">
     <div class="team-name" style="font-size:16px;">\ud83d\udeab Suggestion form blocklist</div>
-    <div class="progress-label" style="margin-top:4px;">The hard-block list the public suggestion form checks against before anything reaches this queue. Read-only here \u2014 tell Claude to add or remove a term and it'll update <code style="background:var(--panel-2); padding:1px 5px; border-radius:4px;">blocklist.json</code> directly.</div>
+    <div class="progress-label" style="margin-top:4px;">The hard-block list the public suggestion form checks against before anything reaches the review queue. Read-only here \u2014 tell Claude to add or remove a term and it'll update <code style="background:var(--panel-2); padding:1px 5px; border-radius:4px;">blocklist.json</code> directly.</div>
     <div id="blocklistView" style="margin-top:12px; font-family:var(--mono); font-size:13px; color:var(--dim); display:flex; flex-wrap:wrap; gap:6px;"></div>
   </div>
   </div>
