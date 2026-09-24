@@ -6,24 +6,25 @@
 <title>Sleeper Roster Importer</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders:wght@600;700;800&family=IBM+Plex+Mono:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"></script>
 <script src="https://www.gstatic.com/firebasejs/10.13.0/firebase-app-compat.js"></script>
 <script src="https://www.gstatic.com/firebasejs/10.13.0/firebase-firestore-compat.js"></script>
 <style>
   :root {
-    --bg: #10151B;
-    --panel: #171E27;
-    --panel-2: #1D2530;
-    --panel-3: #232C38;
-    --line: #2A3542;
-    --text: #E7ECF1;
-    --dim: #8A97A5;
-    --amber: #F0A93E;
-    --green: #52B788;
-    --coral: #E4685A;
+    --bg: #0B1622;
+    --panel: #101E2E;
+    --panel-2: #16283C;
+    --panel-3: #1F3650;
+    --line: #2B4560;
+    --text: #F4F2EC;
+    --dim: #8FA0B3;
+    --amber: #F2B705;
+    --green: #3E8F63;
+    --coral: #E85D4E;
     --mono: 'IBM Plex Mono', monospace;
     --sans: 'Inter', -apple-system, sans-serif;
+    --display: 'Big Shoulders', 'Arial Narrow', sans-serif;
   }
   * { box-sizing: border-box; }
   body {
@@ -137,9 +138,17 @@
 <body>
 <div class="wrap">
 
+  <header style="display:flex; align-items:center; justify-content:space-between; margin-bottom:8px;">
+    <div style="font-family:var(--display); font-weight:700; font-size:22px; letter-spacing:0.02em;">
+      <a href="../" style="color:var(--text); text-decoration:none; display:flex; align-items:center; gap:10px;">
+        <span style="font-size:20px; transform:rotate(-15deg); display:inline-block;">🏈</span>The Fantasy Name HQ
+      </a>
+    </div>
+  </header>
+
   <header>
     <div class="tag">local tool — runs entirely in this browser tab</div>
-    <h1>Sleeper Roster Importer</h1>
+    <h1 style="font-family:var(--display); font-weight:800;">Sleeper Roster Importer</h1>
     <p class="sub">Enter a Sleeper username to find your leagues, pull a roster, and see every pun we have for each player — plus team-pride names for whichever franchises are on your roster. Nothing is uploaded anywhere.</p>
   </header>
 
@@ -163,8 +172,9 @@
 
   <div id="resultsPanel" style="display:none;"></div>
 
-  <footer>
-    Data sources: <code>api.sleeper.app</code> (rosters, public, no login) and <code>dynastyprocess/data</code> on GitHub (Sleeper player-ID → name mapping, updated weekly). The pun database embedded in this file is a snapshot from when it was built — ask for a refreshed copy after a big batch of new puns.
+  <footer style="display:flex; justify-content:space-between; align-items:flex-start; flex-wrap:wrap; gap:10px; border-top:1px solid var(--line); padding-top:16px;">
+    <span>Data sources: <code>api.sleeper.app</code> (rosters, public, no login) and <code>dynastyprocess/data</code> on GitHub (Sleeper player-ID → name mapping, updated weekly). The pun database embedded in this file is a snapshot from when it was built — ask for a refreshed copy after a big batch of new puns.</span>
+    <a href="../" style="color:var(--amber); text-decoration:none; font-weight:600; white-space:nowrap;">&larr; Back to search</a>
   </footer>
 </div>
 
