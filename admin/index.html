@@ -236,6 +236,12 @@
     <div class="progress-label" style="margin-top:4px;">Names visitors have suggested from the live site. Approving makes it show up immediately for everyone (via the same live merge the site already does); rejecting just discards it.</div>
     <div id="reviewList" style="margin-top:16px;"></div>
   </div>
+
+  <div class="progress-panel">
+    <div class="team-name" style="font-size:16px;">\ud83d\udeab Suggestion form blocklist</div>
+    <div class="progress-label" style="margin-top:4px;">The hard-block list the public suggestion form checks against before anything reaches this queue. Read-only here \u2014 tell Claude to add or remove a term and it'll update <code style="background:var(--panel-2); padding:1px 5px; border-radius:4px;">blocklist.json</code> directly.</div>
+    <div id="blocklistView" style="margin-top:12px; font-family:var(--mono); font-size:13px; color:var(--dim); display:flex; flex-wrap:wrap; gap:6px;"></div>
+  </div>
   </div>
 
 </div>
@@ -836,6 +842,18 @@ async function reviewDecision(id, status){
   }
 }
 
+async function loadBlocklistView(){
+  const el = document.getElementById('blocklistView');
+  try {
+    const res = await fetch('../blocklist.json');
+    const list = await res.json();
+    el.innerHTML = list.map(term => `<span style="background:var(--panel-2); border-radius:5px; padding:3px 8px;">${escapeHtml(term)}</span>`).join('');
+  } catch(err){
+    console.error('loadBlocklistView failed', err);
+    el.textContent = 'Couldn\u2019t load blocklist.json';
+  }
+}
+
 async function boot(){
   try {
     const res = await fetch('../players.json');
@@ -849,6 +867,7 @@ async function boot(){
   renderCurated();
   loadExtraPlayers();
   loadReviewQueue();
+  loadBlocklistView();
 }
 document.querySelectorAll('.tab-btn').forEach(btn => {
   btn.addEventListener('click', () => {

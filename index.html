@@ -916,10 +916,11 @@ async function mergeExtraPlayers(){
 // explicit content) while staying out of the way of the crude-but-fun humor
 // already throughout this database. It is not, and can't be, a substitute
 // for the manual review every submission still goes through before going live.
-const SUGGEST_HARD_BLOCK = [
-  'nigger','nigga','faggot','retard','chink','spic','kike','tranny',
-  'cunt','rape','molest','pedo','nazi','kkk',
-];
+// The actual list lives in blocklist.json (edited via git, not this file).
+let SUGGEST_HARD_BLOCK = [];
+loadJson('blocklist.json').then(list => { SUGGEST_HARD_BLOCK = list; }).catch(err => {
+  console.error('Failed to load blocklist.json (suggestion form will skip this check)', err);
+});
 
 function suggestContainsHardBlock(text){
   const lower = text.toLowerCase();
