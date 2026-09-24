@@ -25,6 +25,11 @@
     --mono: 'IBM Plex Mono', monospace;
     --sans: 'Inter', -apple-system, sans-serif;
     --display: 'Big Shoulders', 'Arial Narrow', sans-serif;
+    --pos-qb: #F2B705;
+    --pos-rb: #3E8F63;
+    --pos-wr: #E85D4E;
+    --pos-te: #4F9FD9;
+    --pos-k: #B27FE0;
   }
   * { box-sizing: border-box; }
   body {
@@ -35,6 +40,32 @@
     -webkit-font-smoothing: antialiased;
   }
   .wrap { max-width: 820px; margin: 0 auto; padding: 40px 24px 80px; }
+
+  /* ---------- Stats ticker (display only on this page) ---------- */
+  .ticker-wrap { background: var(--panel); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); overflow: hidden; position: relative; }
+  .ticker-head { max-width: 820px; margin: 0 auto; padding: 10px 24px 0; display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
+  .ticker-title { font-family: var(--display); font-weight: 700; font-size: 15px; letter-spacing: 0.01em; color: var(--amber); }
+  .ticker-toggle { display: flex; gap: 4px; background: var(--panel-2); border-radius: 8px; padding: 3px; }
+  .ticker-toggle button { font-family: var(--sans); font-size: 12.5px; font-weight: 600; color: var(--dim); background: none; border: none; border-radius: 6px; padding: 5px 12px; cursor: pointer; }
+  .ticker-toggle button.active { background: var(--panel-3); color: var(--text); }
+  .ticker-track-outer { overflow: hidden; padding: 12px 0 14px; -webkit-mask-image: linear-gradient(90deg, transparent, #000 40px, #000 calc(100% - 40px), transparent); mask-image: linear-gradient(90deg, transparent, #000 40px, #000 calc(100% - 40px), transparent); }
+  .ticker-track { display: flex; gap: 14px; width: max-content; animation: ticker-scroll 150s linear infinite; }
+  .ticker-track-outer:hover .ticker-track { animation-play-state: paused; }
+  @keyframes ticker-scroll { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+  .ticker-card { flex: 0 0 auto; display: flex; align-items: center; gap: 10px; background: var(--panel-2); border: 1px solid var(--line); border-left: 4px solid var(--card-accent, var(--amber)); border-radius: 10px; padding: 8px 14px 8px 12px; white-space: nowrap; }
+  .ticker-pos { font-family: var(--display); font-weight: 700; font-size: 12px; color: var(--bg); background: var(--card-accent, var(--amber)); border-radius: 5px; padding: 2px 6px; letter-spacing: 0.02em; }
+  .ticker-card[data-pos="QB"] { --card-accent: var(--pos-qb); }
+  .ticker-card[data-pos="RB"] { --card-accent: var(--pos-rb); }
+  .ticker-card[data-pos="WR"] { --card-accent: var(--pos-wr); }
+  .ticker-card[data-pos="TE"] { --card-accent: var(--pos-te); }
+  .ticker-card[data-pos="K"]  { --card-accent: var(--pos-k); }
+  .ticker-divider { flex: 0 0 auto; display: flex; align-items: center; gap: 6px; color: var(--dim); font-family: var(--sans); font-size: 11px; font-weight: 700; letter-spacing: 0.08em; }
+  .ticker-divider::before { content: ''; width: 1px; height: 28px; background: var(--line); }
+  .ticker-name { font-family: var(--display); font-weight: 700; font-size: 16px; color: var(--text); }
+  .ticker-team { font-family: var(--sans); font-size: 11.5px; color: var(--dim); }
+  .ticker-pun { font-family: var(--sans); font-style: italic; font-size: 12.5px; color: var(--green); }
+  .ticker-pts { font-family: var(--display); font-weight: 700; font-size: 16px; color: var(--coral); white-space: nowrap; }
+  @media (max-width: 640px) { .ticker-name { font-size: 14px; } .ticker-pun { display: none; } }
 
   header { margin-bottom: 28px; }
   .tag { font-family: var(--mono); font-size: 12.5px; color: var(--amber); letter-spacing: 0.02em; margin-bottom: 8px; }
@@ -136,6 +167,18 @@
 </style>
 </head>
 <body>
+<div class="ticker-wrap" id="tickerWrap" style="display:none;">
+  <div class="ticker-head">
+    <span class="ticker-title" id="tickerTitle">Top Scorers</span>
+    <div class="ticker-toggle">
+      <button id="tickerWeekBtn" class="active">This Week</button>
+      <button id="tickerSeasonBtn">Season</button>
+    </div>
+  </div>
+  <div class="ticker-track-outer">
+    <div class="ticker-track" id="tickerTrack"></div>
+  </div>
+</div>
 <div class="wrap">
 
   <header style="display:flex; align-items:center; justify-content:space-between; margin-bottom:8px;">
@@ -501,6 +544,78 @@ Promise.all([
   console.error('Failed to load player database', err);
   setStatus('Failed to load the player database \u2014 try refreshing the page.', true);
 });
+
+// ---------- Stats ticker (display only \u2014 no player-select action on this page) ----------
+(function initStatsTicker(){
+  const wrapEl = document.getElementById('tickerWrap');
+  const trackEl = document.getElementById('tickerTrack');
+  const titleEl = document.getElementById('tickerTitle');
+  const weekBtn = document.getElementById('tickerWeekBtn');
+  const seasonBtn = document.getElementById('tickerSeasonBtn');
+  const POS_ORDER = ['QB', 'RB', 'WR', 'TE', 'K'];
+
+  function buildCard(entry, rank){
+    const pun = entry.pun ? `<span class="ticker-pun">"${entry.pun}"</span>` : '';
+    return `
+      <div class="ticker-card" data-pos="${entry.pos}">
+        <span class="ticker-pos">${entry.pos}${rank}</span>
+        <span>
+          <span class="ticker-name">${entry.first} ${entry.last}</span>
+          <span class="ticker-team">${entry.team}</span><br>
+          ${pun}
+        </span>
+        <span class="ticker-pts">${entry.pts}</span>
+      </div>`;
+  }
+
+  function buildDivider(pos){
+    return `<div class="ticker-divider">${pos}</div>`;
+  }
+
+  function render(data, view){
+    const byPos = view === 'season' ? data.seasonTotals : data.thisWeek;
+    const groupsHtml = [];
+    POS_ORDER.forEach(pos => {
+      const entries = byPos[pos] || [];
+      if(entries.length === 0) return;
+      const cards = entries.map((e, i) => buildCard(e, i + 1)).join('');
+      groupsHtml.push(buildDivider(pos) + cards);
+    });
+    if(groupsHtml.length === 0){
+      wrapEl.style.display = 'none';
+      return;
+    }
+    wrapEl.style.display = 'block';
+    const cardsHtml = groupsHtml.join('');
+    trackEl.innerHTML = cardsHtml + cardsHtml;
+
+    titleEl.textContent = view === 'season'
+      ? `Season Leaders \u2014 through Week ${data.week}`
+      : `Week ${data.week} Top Scorers`;
+  }
+
+  fetch('../stats_ticker.json').then(res => res.json()).then(data => {
+    if(!data || data.week === null){
+      wrapEl.style.display = 'none';
+      return;
+    }
+    render(data, 'week');
+
+    weekBtn.addEventListener('click', () => {
+      weekBtn.classList.add('active');
+      seasonBtn.classList.remove('active');
+      render(data, 'week');
+    });
+    seasonBtn.addEventListener('click', () => {
+      seasonBtn.classList.add('active');
+      weekBtn.classList.remove('active');
+      render(data, 'season');
+    });
+  }).catch(err => {
+    console.error('Stats ticker failed to load (non-fatal)', err);
+    wrapEl.style.display = 'none';
+  });
+})();
 </script>
 </body>
 </html>
