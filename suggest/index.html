@@ -46,7 +46,7 @@
 
   /* ---------- Stats ticker (thin strip) ---------- */
   .ticker-wrap { background: var(--navy-900); border-bottom: 1px solid var(--line); overflow: hidden; position: relative; }
-  .ticker-bar { max-width: 920px; margin: 0 auto; display: flex; align-items: center; gap: 10px; }
+  .ticker-bar { width: 100%; display: flex; align-items: center; gap: 10px; }
   .ticker-title { flex: 0 0 auto; font-family: var(--font-display); font-weight: 700; font-size: 10.5px; letter-spacing: 0.01em; color: var(--gold-300); padding: 4px 0 4px 24px; white-space: nowrap; }
   .ticker-toggle { flex: 0 0 auto; display: flex; gap: 3px; background: var(--navy-800); border-radius: 6px; padding: 2px; margin-right: 24px; }
   .ticker-toggle button { font-family: var(--font-body); font-size: 10px; font-weight: 600; color: var(--chalk-500); background: none; border: none; border-radius: 5px; padding: 2px 8px; cursor: pointer; }
@@ -71,6 +71,21 @@
   .ticker-pun::before { content: '\2014 '; color: var(--line); font-style: normal; }
   .ticker-pts { font-family: var(--font-display); font-weight: 700; font-size: 10.5px; color: var(--coral-500); white-space: nowrap; }
   @media (max-width: 640px) { .ticker-pun { display: none; } }
+
+  /* ---------- Sport nav ---------- */
+  .sport-nav { background: var(--navy-800); border-bottom: 1px solid var(--line); }
+  .sport-nav-inner { max-width: 920px; margin: 0 auto; padding: 10px 24px; display: flex; gap: 8px; flex-wrap: wrap; }
+  .sport-tab {
+    font-family: var(--font-body); font-size: 13px; font-weight: 600; color: var(--chalk-500); text-decoration: none;
+    padding: 6px 14px; border-radius: 20px; display: flex; align-items: center; gap: 6px;
+    transition: background .15s ease, color .15s ease;
+  }
+  .sport-tab:hover { background: var(--navy-700); color: var(--chalk-100); }
+  .sport-tab.active { background: var(--gold-400); color: var(--navy-950); }
+  .sport-tab .soon-badge {
+    font-size: 9px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.03em;
+    background: var(--navy-700); color: var(--chalk-500); padding: 1px 5px; border-radius: 8px;
+  }
 
   header.top {
     display: flex; align-items: center; justify-content: space-between;
@@ -166,6 +181,13 @@
     </div>
   </div>
 </div>
+<nav class="sport-nav">
+  <div class="sport-nav-inner">
+    <a href="/" class="sport-tab active">🏈 Fantasy Football</a>
+    <a href="/baseball/" class="sport-tab">⚾ Fantasy Baseball <span class="soon-badge">Soon</span></a>
+    <a href="/basketball/" class="sport-tab">🏀 Fantasy Basketball <span class="soon-badge">Soon</span></a>
+  </div>
+</nav>
 <div class="wrap">
 
   <header class="top">

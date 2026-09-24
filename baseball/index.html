@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Fantasy Baseball Team Names — Coming Soon — The Fantasy Name HQ</title>
+<meta name="description" content="Fantasy baseball team names are coming soon to The Fantasy Name HQ.">
+<link rel="canonical" href="https://thefantasynamehq.com/baseball/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    box-sizing: border-box;
+    padding-top: env(safe-area-inset-top, 0px);
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+
+    --navy-950: #0B1622;
+    --navy-900: #101E2E;
+    --navy-800: #16283C;
+    --navy-700: #1F3650;
+    --line: #2B4560;
+    --gold-400: #F2B705;
+    --gold-300: #F7CB3E;
+    --turf-500: #3E8F63;
+    --coral-500: #E85D4E;
+    --chalk-100: #F4F2EC;
+    --chalk-300: #C9D2DC;
+    --chalk-500: #8FA0B3;
+
+    --font-display: 'Big Shoulders', 'Arial Narrow', sans-serif;
+    --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  }
+  * { box-sizing: inherit; }
+  html, body { height: 100%; }
+  body { margin: 0; background: var(--navy-950); color: var(--chalk-100); font-family: var(--font-body); font-size: 15px; line-height: 1.6; }
+  .wrap { max-width: 920px; margin: 0 auto; padding: 0 24px; }
+
+  .sport-nav { background: var(--navy-800); border-bottom: 1px solid var(--line); }
+  .sport-nav-inner { max-width: 920px; margin: 0 auto; padding: 10px 24px; display: flex; gap: 8px; flex-wrap: wrap; }
+  .sport-tab {
+    font-family: var(--font-body); font-size: 13px; font-weight: 600; color: var(--chalk-500); text-decoration: none;
+    padding: 6px 14px; border-radius: 20px; display: flex; align-items: center; gap: 6px;
+    transition: background .15s ease, color .15s ease;
+  }
+  .sport-tab:hover { background: var(--navy-700); color: var(--chalk-100); }
+  .sport-tab.active { background: var(--gold-400); color: var(--navy-950); }
+  .sport-tab .soon-badge {
+    font-size: 9px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.03em;
+    background: var(--navy-700); color: var(--chalk-500); padding: 1px 5px; border-radius: 8px;
+  }
+
+  header.top { display: flex; align-items: center; justify-content: space-between; padding: 24px 0 8px; }
+  .brand { display: flex; align-items: center; gap: 10px; font-family: var(--font-display); font-weight: 700; font-size: 22px; letter-spacing: 0.02em; }
+  .brand a { color: var(--chalk-100); text-decoration: none; display: flex; align-items: center; gap: 10px; }
+
+  .coming-soon { padding: 90px 0; text-align: center; }
+  .coming-soon .icon { font-size: 56px; margin-bottom: 10px; }
+  .coming-soon h1 { font-family: var(--font-display); font-weight: 800; font-size: clamp(32px, 6vw, 48px); margin: 0 0 12px; }
+  .coming-soon p { color: var(--chalk-300); font-size: 16px; max-width: 46ch; margin: 0 auto 24px; }
+  .coming-soon a.cta {
+    display: inline-block; font-family: var(--font-display); font-weight: 700; font-size: 15px;
+    background: var(--gold-400); color: var(--navy-950); text-decoration: none; padding: 12px 26px; border-radius: 10px;
+  }
+
+  footer {
+    border-top: 1px solid var(--line); padding: 22px 0 calc(30px + env(safe-area-inset-bottom, 0px));
+    color: var(--chalk-500); font-size: 13px; display: flex; justify-content: center; flex-wrap: wrap; gap: 8px;
+  }
+
+  @media (max-width: 520px) { .wrap { padding: 0 16px; } }
+  :focus-visible { outline: 2px solid var(--gold-400); outline-offset: 2px; }
+</style>
+</head>
+<body>
+<nav class="sport-nav">
+  <div class="sport-nav-inner">
+    <a href="/" class="sport-tab">🏈 Fantasy Football</a>
+    <a href="/baseball/" class="sport-tab active">⚾ Fantasy Baseball</a>
+    <a href="/basketball/" class="sport-tab">🏀 Fantasy Basketball <span class="soon-badge">Soon</span></a>
+  </div>
+</nav>
+<div class="wrap">
+
+  <header class="top">
+    <div class="brand"><a href="/"><span class="ball">🏈</span>The Fantasy Name HQ</a></div>
+  </header>
+
+  <section class="coming-soon">
+    <div class="icon">⚾</div>
+    <h1>Fantasy Baseball is coming soon</h1>
+    <p>We're just getting started with football, but fantasy baseball team names are on the roadmap. Check back later in the year.</p>
+    <a href="/" class="cta">&larr; Back to Fantasy Football</a>
+  </section>
+
+  <footer>
+    <span>The Fantasy Name HQ — a prototype, not yet drafted into anyone's league</span>
+  </footer>
+
+</div>
+</body>
+</html>
