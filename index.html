@@ -1053,9 +1053,10 @@ async function loadLikesMap(){
 // popular puns come up more often without making results fully predictable.
 // getText extracts the pun string from each item (identity function for a
 // plain array of strings, or a field accessor for an array of objects).
-function weightedPickBy(items, getText, n){
+function weightedPickBy(items, getText, n, weightFn){
   if(!items || items.length === 0) return [];
-  const pool = items.map(item => ({ item, weight: 1 + (LIKES_MAP[likeIdFor(getText(item))] || 0) }));
+  const weigh = weightFn || (count => 1 + count);
+  const pool = items.map(item => ({ item, weight: weigh(LIKES_MAP[likeIdFor(getText(item))] || 0) }));
   const picked = [];
   for(let i = 0; i < n && pool.length > 0; i++){
     const totalWeight = pool.reduce((sum, w) => sum + w.weight, 0);
@@ -1243,9 +1244,10 @@ function renderResults(){
 }
 
 // Used by the "Don't know what to pick?" button when the roster is empty:
-// pulls a random, popularity-weighted sample from every player with at least
-// one curated pun, without touching the search or adding anything to the
-// roster.
+// pulls a random sample from every player with at least one curated pun,
+// leaning heavily toward what's already popular, without touching the
+// search or adding anything to the roster.
+const SURPRISE_RESULTS_COUNT = 6;
 function surpriseResults(){
   const pool = [];
   ENTITIES.forEach(e => {
@@ -1253,7 +1255,10 @@ function surpriseResults(){
     e.names.forEach(n => pool.push({ name: n, type: 'solo', meta: `${fullName(e)} \u00b7 ${e.team}` }));
   });
   shuffleBtn.style.display = 'none';
-  renderResultsList(weightedPickBy(pool, r => r.name, TOTAL_RESULTS_CAP));
+  // Squares the like count instead of just adding it, so popularity is a
+  // much stronger pull here than in the regular roster-based results.
+  const popularityWeight = count => 1 + count * count;
+  renderResultsList(weightedPickBy(pool, r => r.name, SURPRISE_RESULTS_COUNT, popularityWeight));
 }
 
 generateBtn.addEventListener('click', () => {
