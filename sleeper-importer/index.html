@@ -84,6 +84,19 @@
     font-size: 9px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.03em;
     background: var(--panel-3); color: var(--dim); padding: 1px 5px; border-radius: 8px;
   }
+  .sport-tab-wrap { position: relative; }
+  .sport-dropdown {
+    display: none; position: absolute; top: 100%; left: 0; margin-top: 4px;
+    background: var(--panel); border: 1px solid var(--line); border-radius: 10px;
+    padding: 6px; min-width: 220px; z-index: 30;
+    box-shadow: 0 14px 30px rgba(0,0,0,0.35);
+  }
+  .sport-tab-wrap:hover .sport-dropdown, .sport-tab-wrap:focus-within .sport-dropdown { display: block; }
+  .sport-dropdown a {
+    display: block; padding: 9px 12px; border-radius: 6px;
+    color: var(--text); text-decoration: none; font-size: 13.5px; font-weight: 500;
+  }
+  .sport-dropdown a:hover { background: var(--panel-3); }
 
   header { margin-bottom: 28px; }
   .tag { font-family: var(--mono); font-size: 12.5px; color: var(--amber); letter-spacing: 0.02em; margin-bottom: 8px; }
@@ -212,7 +225,14 @@
 </div>
 <nav class="sport-nav">
   <div class="sport-nav-inner">
-    <a href="/" class="sport-tab active">🏈 Fantasy Football</a>
+    <div class="sport-tab-wrap">
+      <a href="/" class="sport-tab active">🏈 Fantasy Football</a>
+      <div class="sport-dropdown">
+        <a href="/">🔍 Search / Homepage</a>
+        <a href="/suggest/">💡 Suggest a Name</a>
+        <a href="/sleeper-importer/">📥 Sleeper Import Tool</a>
+      </div>
+    </div>
     <a href="/baseball/" class="sport-tab">⚾ Fantasy Baseball <span class="soon-badge">Soon</span></a>
     <a href="/basketball/" class="sport-tab">🏀 Fantasy Basketball <span class="soon-badge">Soon</span></a>
   </div>
