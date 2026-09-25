@@ -606,7 +606,10 @@ function updateProgressStats(){
 
   // Grand total: every curated name across players, teams, combos, and the
   // generic wildcard list — the overall count of real content in the system.
-  const playerNameCount = active.filter(p => p.tier === 'curated').reduce((sum, p) => sum + (p.names ? p.names.length : 0), 0);
+  // Grand total counts every curated pun ever written, regardless of whether
+  // that player is currently active — it's a content metric, not a "what's
+  // live right now" metric (which is what the progress bar above is for).
+  const playerNameCount = allPlayers.filter(p => p.tier === 'curated').reduce((sum, p) => sum + (p.names ? p.names.length : 0), 0);
   const comboNameCount = allCombos.reduce((sum, c) => sum + (c.names ? c.names.length : 0), 0);
   const grandTotal = playerNameCount + teamPunCount + comboNameCount + allGeneric.length;
   document.querySelectorAll('.js-grand-total').forEach(el => el.textContent = grandTotal.toLocaleString());
