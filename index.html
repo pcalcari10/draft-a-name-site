@@ -1254,7 +1254,7 @@ function surpriseResults(){
     if(e.kind !== 'player' || e.tier !== 'curated' || !e.names || e.names.length === 0) return;
     e.names.forEach(n => pool.push({ name: n, type: 'solo', meta: `${fullName(e)} \u00b7 ${e.team}` }));
   });
-  shuffleBtn.style.display = 'none';
+  shuffleBtn.style.display = 'inline-block';
   // Squares the like count instead of just adding it, so popularity is a
   // much stronger pull here than in the regular roster-based results.
   const popularityWeight = count => 1 + count * count;
@@ -1268,7 +1268,13 @@ generateBtn.addEventListener('click', () => {
     renderResults();
   }
 });
-shuffleBtn.addEventListener('click', renderResults);
+shuffleBtn.addEventListener('click', () => {
+  if(selected.length === 0){
+    surpriseResults();
+  } else {
+    renderResults();
+  }
+});
 
 // ---------- Load shared data files, then boot the app ----------
 searchInput.disabled = true;
