@@ -305,6 +305,18 @@
 
   /* Results */
   .results { margin: 40px 0 60px; }
+
+  .popular-section { margin: 10px 0 40px; }
+  .popular-head h2 { font-family: var(--font-display); font-size: 20px; font-weight: 700; margin: 0 0 14px; }
+  .popular-list { display: flex; flex-direction: column; gap: 8px; }
+  .popular-row {
+    display: flex; align-items: center; gap: 12px;
+    background: var(--navy-800); border: 1px solid var(--line); border-radius: 10px; padding: 10px 14px;
+  }
+  .popular-rank { font-family: var(--font-display); font-weight: 800; font-size: 17px; color: var(--gold-400); width: 22px; text-align: center; flex-shrink: 0; }
+  .popular-body { flex: 1; min-width: 0; }
+  .popular-name { font-weight: 600; font-size: 14.5px; }
+  .popular-meta { color: var(--chalk-500); font-size: 12px; margin-top: 1px; }
   .results-head { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 16px; flex-wrap: wrap; gap: 8px; }
   .results-head h2 { font-family: var(--font-display); font-size: 26px; margin: 0; font-weight: 700; }
   .results-head .count { color: var(--chalk-500); font-size: 14px; }
@@ -366,11 +378,6 @@
   }
   .like-inline:hover { color: var(--coral-500); }
   .like-inline.liked { color: var(--coral-500); }
-
-  .popular-toggle {
-    display: inline-flex; align-items: center; gap: 6px;
-  }
-  .popular-toggle.active { background: var(--gold-400) !important; color: #1A1300 !important; }
 
   .empty {
     border: 1px dashed var(--line);
@@ -451,10 +458,16 @@
       <div class="actions">
         <button class="primary" id="generateBtn" disabled>Generate team names</button>
         <button class="ghost" id="shuffleBtn" style="display:none;">Shuffle again</button>
-        <button class="ghost popular-toggle" id="popularBtn">🏆 Most popular</button>
         <span class="hint" id="hint">Add at least one player to get started</span>
       </div>
     </div>
+  </section>
+
+  <section class="popular-section" id="popularSection" style="display:none;">
+    <div class="popular-head">
+      <h2>🏆 Top 10 Most Popular</h2>
+    </div>
+    <div id="popularList" class="popular-list"></div>
   </section>
 
   <section class="results" id="resultsSection" style="display:none;">
@@ -673,7 +686,6 @@ const suggestionsBox = document.getElementById('suggestions');
 const chipsBox = document.getElementById('chips');
 const generateBtn = document.getElementById('generateBtn');
 const shuffleBtn = document.getElementById('shuffleBtn');
-const popularBtn = document.getElementById('popularBtn');
 const hint = document.getElementById('hint');
 const resultsSection = document.getElementById('resultsSection');
 const resultsGrid = document.getElementById('resultsGrid');
@@ -1073,50 +1085,39 @@ function setLikedUI(btn, count, liked){
   btn.querySelector('.like-count').textContent = count > 0 ? count : (liked ? '' : '·');
 }
 
-let showingPopular = false;
-
-async function renderPopular(){
-  showingPopular = true;
-  popularBtn.classList.add('active');
-  shuffleBtn.style.display = 'none';
-  resultsSection.style.display = 'block';
-  resultCount.textContent = 'Loading…';
-  resultsGrid.innerHTML = `<div class="empty">Loading the most-liked names across every visitor…</div>`;
-
+async function loadTopPopular(){
+  const sectionEl = document.getElementById('popularSection');
+  const listEl = document.getElementById('popularList');
   try {
-    const snap = await likesDb.collection(LIKES_COLLECTION).orderBy('count', 'desc').limit(20).get();
+    const snap = await likesDb.collection(LIKES_COLLECTION).orderBy('count', 'desc').limit(10).get();
     const docs = [];
     snap.forEach(d => docs.push({ id: d.id, ...d.data() }));
 
     if(docs.length === 0){
-      resultsGrid.innerHTML = `<div class="empty">No likes yet — be the first! Generate some names below and tap the heart on your favorites.</div>`;
-      resultCount.textContent = '0 names';
+      sectionEl.style.display = 'none';
       return;
     }
 
-    resultsGrid.innerHTML = docs.map(d => `
-      <div class="card wild">
-        <p class="name">${d.name}</p>
-        <div class="meta">
-          <span class="tag">${d.count} like${d.count !== 1 ? 's' : ''}</span>
-          <span>${d.entityLabel || ''}</span>
+    sectionEl.style.display = 'block';
+    listEl.innerHTML = docs.map((d, i) => `
+      <div class="popular-row">
+        <span class="popular-rank">${i + 1}</span>
+        <div class="popular-body">
+          <div class="popular-name">${d.name}</div>
+          <div class="popular-meta">${d.count} like${d.count !== 1 ? 's' : ''} \u00b7 ${d.entityLabel || ''}</div>
         </div>
-        <div class="like-row">${likeButtonHtml(d.entityId || 'unknown', d.name, d.entityLabel || '', false)}</div>
+        ${likeButtonHtml(d.entityId || 'unknown', d.name, d.entityLabel || '', true)}
       </div>
     `).join('');
-    resultCount.textContent = `Top ${docs.length}`;
-    wireLikeButtons(resultsGrid);
+    wireLikeButtons(listEl);
   } catch(err){
-    console.error('renderPopular failed', err);
-    resultsGrid.innerHTML = `<div class="empty">Couldn't load the leaderboard right now — try again in a moment.</div>`;
+    console.error('loadTopPopular failed', err);
+    sectionEl.style.display = 'none';
   }
 }
-
-popularBtn.addEventListener('click', renderPopular);
+loadTopPopular();
 
 function renderResults(){
-  showingPopular = false;
-  popularBtn.classList.remove('active');
   lastResults = buildResults();
   resultsGrid.innerHTML = lastResults.map((r, idx) => `
     <div class="card ${r.type}">
