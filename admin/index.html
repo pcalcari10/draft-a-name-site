@@ -85,6 +85,11 @@
   <h1>Curation Tracker</h1>
   <p class="sub">Every player still on auto-generated placeholder puns, grouped by team, so you know exactly what's left to write real jokes for.</p>
 
+  <div style="display:inline-flex; align-items:baseline; gap:8px; background:var(--panel); border:1px solid var(--line); border-radius:10px; padding:10px 16px; margin-bottom:20px;">
+    <span style="font-family:var(--mono); font-size:28px; font-weight:700; color:var(--green);" class="js-grand-total">—</span>
+    <span style="font-family:var(--mono); font-size:12.5px; color:var(--dim);">total curated names uploaded (players + teams + combos + generic)</span>
+  </div>
+
   <div class="tabs">
     <button class="tab-btn active" data-tab="sync">Sync &amp; Automation</button>
     <button class="tab-btn" data-tab="placeholders">Placeholders</button>
@@ -179,9 +184,6 @@
       <span><span class="dot curated"></span><span class="js-curated-count">—</span> curated</span>
       <span><span class="dot template"></span><span class="js-template-count">—</span> still placeholder</span>
       <span class="js-total-count"></span>
-    </div>
-    <div class="stat-row" style="margin-top:6px;">
-      <span>🛡 <span class="js-team-pun-count">—</span> curated team puns (<span class="js-team-coverage">—</span> have at least one)</span>
     </div>
   </div>
 
@@ -470,6 +472,8 @@ const TEAM_FULL = {
 
 let allPlayers = [];
 let allTeams = [];
+let allCombos = [];
+let allGeneric = [];
 
 // ---------- Performance data (best placeholder players to prioritize) ----------
 let sleeperIdMap = null; // normalized "first last" -> sleeper_id
@@ -590,6 +594,13 @@ function updateProgressStats(){
   const teamPunCount = allTeams.reduce((sum, t) => sum + (t.names ? t.names.length : 0), 0);
   document.querySelectorAll('.js-team-pun-count').forEach(el => el.textContent = teamPunCount);
   document.querySelectorAll('.js-team-coverage').forEach(el => el.textContent = `${teamsWithNames.length}/${allTeams.length} teams`);
+
+  // Grand total: every curated name across players, teams, combos, and the
+  // generic wildcard list — the overall count of real content in the system.
+  const playerNameCount = active.filter(p => p.tier === 'curated').reduce((sum, p) => sum + (p.names ? p.names.length : 0), 0);
+  const comboNameCount = allCombos.reduce((sum, c) => sum + (c.names ? c.names.length : 0), 0);
+  const grandTotal = playerNameCount + teamPunCount + comboNameCount + allGeneric.length;
+  document.querySelectorAll('.js-grand-total').forEach(el => el.textContent = grandTotal.toLocaleString());
 }
 
 function renderTierList(tier, searchElId, sortElId, containerElId){
@@ -881,6 +892,18 @@ async function boot(){
     data.forEach(t => allTeams.push(t));
   } catch(err){
     console.error('Failed to load teams.json', err);
+  }
+  try {
+    const res = await fetch('../combos.json');
+    allCombos = await res.json();
+  } catch(err){
+    console.error('Failed to load combos.json', err);
+  }
+  try {
+    const res = await fetch('../generic.json');
+    allGeneric = await res.json();
+  } catch(err){
+    console.error('Failed to load generic.json', err);
   }
   updateProgressStats();
   renderPlaceholders();
