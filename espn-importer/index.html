@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>ESPN League Importer — The Fantasy Name HQ</title>
-<meta name="description" content="Import your ESPN public fantasy football league and instantly see every team name pun we have for your players and franchises.">
+<meta name="description" content="Import your ESPN fantasy football league (public or private) and instantly see every team name pun we have for your players and franchises.">
 <link rel="canonical" href="https://thefantasynamehq.com/espn-importer/">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -239,7 +239,7 @@
   </header>
 
   <div class="notice">
-    <strong>Public leagues only.</strong> ESPN doesn't provide an official API, and private leagues require credentials this browser-based tool can't securely handle. If your league is set to private, this won't be able to reach it — try the <a href="/sleeper-importer/" style="color:var(--amber);">Sleeper importer</a> instead if you use that platform too. Since this relies on ESPN's undocumented API, it could occasionally break without warning.
+    <strong>Public leagues work directly.</strong> Private leagues need two values from your own ESPN session (<code>SWID</code> and <code>espn_s2</code>) — check "This is a private league" below for where to find them. Since this relies on ESPN's undocumented API, it could occasionally change or break without warning.
   </div>
 
   <div class="panel">
@@ -253,6 +253,25 @@
       <button id="lookupBtn">Find my league</button>
     </div>
     <div class="field-hint">Find this in your league's URL — it's the number after <code>leagueId=</code>, e.g. <code>fantasy.espn.com/football/team?leagueId=123456</code></div>
+
+    <div style="margin-top:14px;">
+      <label style="display:flex; align-items:center; gap:8px; cursor:pointer; font-family:var(--sans); color:var(--text); font-size:13.5px;">
+        <input type="checkbox" id="privateToggle" style="width:auto; padding:0;">
+        This is a private league
+      </label>
+    </div>
+
+    <div id="privateFields" style="display:none; margin-top:12px; padding-top:12px; border-top:1px solid var(--line);">
+      <div class="row">
+        <input id="swidInput" type="text" placeholder="SWID (e.g. {ABC123-...})" autocomplete="off" style="flex:1; min-width:200px;">
+        <input id="espnS2Input" type="text" placeholder="espn_s2" autocomplete="off" style="flex:2; min-width:240px;">
+      </div>
+      <div class="field-hint">
+        Found in your browser's cookies for espn.com — right-click the ESPN page &rarr; Inspect &rarr; Application (or Storage) tab &rarr; Cookies &rarr; espn.com &rarr; look for <code>SWID</code> and <code>espn_s2</code>.
+        These are sent to a small proxy we run (needed because browsers block sending cookies to ESPN directly) and are never stored anywhere.
+      </div>
+    </div>
+
     <div class="status-line" id="status"></div>
   </div>
 
@@ -288,7 +307,7 @@
       </div>
     </div>
     <div class="footer-bottom">
-      <div>Data source: ESPN's undocumented fantasy API (public leagues only, read-only, no login). This isn't an officially supported integration, so it could change or break without notice. The pun database embedded in this file is a snapshot from when it was built — ask for a refreshed copy after a big batch of new puns.</div>
+      <div>Data source: ESPN's undocumented fantasy API (read-only, no login). Private leagues are proxied through a small Cloudflare Worker to work around a browser cookie restriction \u2014 no credentials are ever stored. This isn't an officially supported integration, so it could change or break without notice. The pun database embedded in this file is a snapshot from when it was built \u2014 ask for a refreshed copy after a big batch of new puns.</div>
       <div style="margin-top:8px;">&copy; 2026 The Fantasy Name HQ</div>
     </div>
   </footer>
@@ -339,6 +358,19 @@ const statusEl = document.getElementById('status');
 const leaguesPanel = document.getElementById('leaguesPanel');
 const leaguesList = document.getElementById('leaguesList');
 const resultsPanel = document.getElementById('resultsPanel');
+const privateToggle = document.getElementById('privateToggle');
+const privateFields = document.getElementById('privateFields');
+const swidInput = document.getElementById('swidInput');
+const espnS2Input = document.getElementById('espnS2Input');
+
+privateToggle.addEventListener('change', () => {
+  privateFields.style.display = privateToggle.checked ? 'block' : 'none';
+});
+
+// Deployed via Cloudflare Workers — see espn-proxy-worker.js. Only needed
+// for private leagues, since browsers can't set a Cookie header on a
+// cross-origin request themselves.
+const ESPN_PROXY_URL = 'https://espn-importer.paulcalcariii.workers.dev/';
 
 let currentLeagueTeams = [];
 let currentLeagueId = null;
@@ -437,17 +469,38 @@ function espnTeamLabel(t){
 lookupBtn.addEventListener('click', async () => {
   const leagueId = leagueIdInput.value.trim();
   if(!leagueId){ setStatus('Enter a league ID first.', true); return; }
+
+  const isPrivate = privateToggle.checked;
+  const swid = swidInput.value.trim();
+  const espnS2 = espnS2Input.value.trim();
+  if(isPrivate && (!swid || !espnS2)){
+    setStatus('Enter both SWID and espn_s2 for a private league.', true);
+    return;
+  }
+
   leaguesPanel.style.display = 'none';
   resultsPanel.style.display = 'none';
   lookupBtn.disabled = true;
   try {
     const season = seasonSelect.value;
     setStatus('Fetching league ' + leagueId + ' for ' + season + '\u2026');
-    const url = `https://lm-api-reads.fantasy.espn.com/apis/v3/games/ffl/seasons/${season}/segments/0/leagues/${leagueId}?view=mRoster&view=mTeam`;
-    const res = await fetch(url);
+
+    let res;
+    if(isPrivate){
+      res = await fetch(ESPN_PROXY_URL, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ leagueId, season, swid, espnS2 }),
+      });
+    } else {
+      const url = `https://lm-api-reads.fantasy.espn.com/apis/v3/games/ffl/seasons/${season}/segments/0/leagues/${leagueId}?view=mRoster&view=mTeam`;
+      res = await fetch(url);
+    }
 
     if(res.status === 401 || res.status === 403){
-      throw new Error('This league appears to be private. This tool only works with public ESPN leagues.');
+      throw new Error(isPrivate
+        ? 'ESPN rejected those credentials — double check your SWID and espn_s2 values.'
+        : 'This league appears to be private — check "This is a private league" above and enter your SWID/espn_s2.');
     }
     if(res.status === 404){
       throw new Error('No league found with that ID for ' + season + ' \u2014 double check the ID and season.');
@@ -457,6 +510,9 @@ lookupBtn.addEventListener('click', async () => {
     }
 
     const data = await res.json();
+    if(data.error){
+      throw new Error(data.error);
+    }
     if(!data.teams || data.teams.length === 0){
       throw new Error('No teams found in that league.');
     }
@@ -479,7 +535,9 @@ lookupBtn.addEventListener('click', async () => {
 
   } catch(err){
     if(err instanceof TypeError){
-      setStatus('Could not reach ESPN \u2014 this may be blocked by the browser (CORS) rather than an issue with your league ID.', true);
+      setStatus(isPrivate
+        ? 'Could not reach the proxy server \u2014 double check it\u2019s deployed and the URL in this page is correct.'
+        : 'Could not reach ESPN \u2014 this may be blocked by the browser (CORS) rather than an issue with your league ID.', true);
     } else {
       setStatus(err.message || 'Something went wrong.', true);
     }
