@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-25T01:10:02.669Z",
+  "generatedAt": "2026-09-25T01:25:20.603Z",
   "season": "2026",
   "week": 3,
   "thisWeek": {
@@ -19,7 +19,7 @@
         "last": "Penix",
         "team": "ATL",
         "pos": "QB",
-        "pts": 0.8,
+        "pts": 1.7,
         "pun": "The Penix Mightier"
       }
     ],
@@ -30,7 +30,7 @@
         "last": "Robinson",
         "team": "ATL",
         "pos": "RB",
-        "pts": 16.4,
+        "pts": 18.2,
         "pun": "To Infinity and Bijan"
       },
       {
@@ -48,17 +48,8 @@
         "last": "Robinson",
         "team": "ATL",
         "pos": "RB",
-        "pts": 3.1,
+        "pts": 2.8,
         "pun": "Robinson's Revenge"
-      },
-      {
-        "id": "kalebjohnson_gb",
-        "first": "Kaleb",
-        "last": "Johnson",
-        "team": "GB",
-        "pos": "RB",
-        "pts": -0.1,
-        "pun": "Kaleb Johnson and the Fantasy Machine"
       }
     ],
     "WR": [
@@ -79,6 +70,24 @@
         "pos": "WR",
         "pts": 5.5,
         "pun": "Golden Goose"
+      },
+      {
+        "id": "drakelondon_atl",
+        "first": "Drake",
+        "last": "London",
+        "team": "ATL",
+        "pos": "WR",
+        "pts": 4.8,
+        "pun": "Drake London Calling"
+      },
+      {
+        "id": "olamidezaccheaus_atl",
+        "first": "Olamide",
+        "last": "Zaccheaus",
+        "team": "ATL",
+        "pos": "WR",
+        "pts": 2.9,
+        "pun": "Zaccheaus-A-Palooza"
       },
       {
         "id": "jahandotson_atl",
@@ -106,15 +115,6 @@
         "pos": "WR",
         "pts": 1.7,
         "pun": "Zachariah Vibes Only"
-      },
-      {
-        "id": "drakelondon_atl",
-        "first": "Drake",
-        "last": "London",
-        "team": "ATL",
-        "pos": "WR",
-        "pts": 1.4,
-        "pun": "Drake London Calling"
       }
     ],
     "TE": [
@@ -257,7 +257,7 @@
         "last": "Robinson",
         "team": "ATL",
         "pos": "RB",
-        "pts": 58.8,
+        "pts": 60.6,
         "pun": "To Infinity and Bijan"
       },
       {
