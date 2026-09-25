@@ -764,15 +764,26 @@ function renderChips(){
   chipsBox.querySelectorAll('button').forEach(btn => {
     btn.addEventListener('click', () => removePlayer(btn.dataset.id));
   });
-  generateBtn.disabled = selected.length === 0;
-  hint.textContent = selected.length === 0
-    ? 'Add at least one player or team to get started'
-    : `${selected.length} on the roster`;
+  if(selected.length === 0){
+    generateBtn.textContent = "🎲 Don't know what to pick? Let us help you!";
+    hint.textContent = 'Or search above to build your own roster';
+  } else {
+    generateBtn.textContent = 'Generate team names';
+    hint.textContent = `${selected.length} on the roster`;
+  }
   renderAllNames();
   if(selected.length === 0){
     resultsSection.style.display = 'none';
     shuffleBtn.style.display = 'none';
   }
+}
+
+function autoPickRandom(){
+  const pool = ENTITIES.filter(e => e.kind === 'player' && e.active !== false);
+  shuffle(pool).slice(0, 3).forEach(p => {
+    if(!selected.find(s => s.id === p.id)) selected.push(p);
+  });
+  renderChips();
 }
 
 function escapeHtml(s){
@@ -1155,7 +1166,10 @@ function renderResults(){
   resultsSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
 }
 
-generateBtn.addEventListener('click', renderResults);
+generateBtn.addEventListener('click', () => {
+  if(selected.length === 0) autoPickRandom();
+  renderResults();
+});
 shuffleBtn.addEventListener('click', renderResults);
 
 // ---------- Load shared data files, then boot the app ----------
@@ -1185,6 +1199,7 @@ Promise.all([
 
   searchInput.disabled = false;
   searchInput.placeholder = 'Try \u201cMahomes,\u201d \u201cJefferson,\u201d or \u201cCardinals\u201d\u2026';
+  generateBtn.disabled = false;
 
   mergeExtraPlayers();
   mergeSubmittedNames();
