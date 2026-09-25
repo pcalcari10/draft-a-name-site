@@ -1400,7 +1400,7 @@ Promise.all([
   playersData.forEach(p => PLAYERS.push(p));
   teamsData.forEach(t => TEAMS.push(t));
   GENERIC_BY_CATEGORY = genericData;
-  Object.values(genericData).flat().forEach(n => GENERIC_WILDCARDS.push(n));
+  (genericData.general || []).forEach(n => GENERIC_WILDCARDS.push(n));
   combosData.forEach(c => CURATED_COMBOS.push(c));
 
   buildEntities();
@@ -1410,7 +1410,7 @@ Promise.all([
   const totalNames = playersData.filter(p => p.tier === 'curated').reduce((sum, p) => sum + (p.names ? p.names.length : 0), 0)
     + teamsData.reduce((sum, t) => sum + (t.names ? t.names.length : 0), 0)
     + combosData.reduce((sum, c) => sum + (c.names ? c.names.length : 0), 0)
-    + Object.values(genericData).flat().length;
+    + (genericData.general || []).length;
   document.getElementById('totalNameCount').textContent = totalNames.toLocaleString();
 
   searchInput.disabled = false;
