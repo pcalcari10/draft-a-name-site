@@ -1,9 +1,18 @@
 {
-  "generatedAt": "2026-09-25T01:39:33.119Z",
+  "generatedAt": "2026-09-25T01:51:22.356Z",
   "season": "2026",
   "week": 3,
   "thisWeek": {
     "QB": [
+      {
+        "id": "jordanlove_gb",
+        "first": "Jordan",
+        "last": "Love",
+        "team": "GB",
+        "pos": "QB",
+        "pts": 7.8,
+        "pun": "Come and Get Your Love"
+      },
       {
         "id": "michaelpenixjr_atl",
         "first": "Michael",
@@ -12,15 +21,6 @@
         "pos": "QB",
         "pts": 7.6,
         "pun": "The Penix Mightier"
-      },
-      {
-        "id": "jordanlove_gb",
-        "first": "Jordan",
-        "last": "Love",
-        "team": "GB",
-        "pos": "QB",
-        "pts": 7.5,
-        "pun": "Come and Get Your Love"
       }
     ],
     "RB": [
@@ -86,7 +86,7 @@
         "last": "Golden",
         "team": "GB",
         "pos": "WR",
-        "pts": 5.5,
+        "pts": 7.3,
         "pun": "Golden Goose"
       },
       {
@@ -246,7 +246,7 @@
         "last": "Love",
         "team": "GB",
         "pos": "QB",
-        "pts": 41.8,
+        "pts": 42.1,
         "pun": "Come and Get Your Love"
       },
       {
@@ -596,6 +596,15 @@
         "pun": "Finding the Denzone"
       },
       {
+        "id": "matthewgolden_gb",
+        "first": "Matthew",
+        "last": "Golden",
+        "team": "GB",
+        "pos": "WR",
+        "pts": 32.6,
+        "pun": "Golden Goose"
+      },
+      {
         "id": "devaughnvele_no",
         "first": "Devaughn",
         "last": "Vele",
@@ -603,15 +612,6 @@
         "pos": "WR",
         "pts": 31.3,
         "pun": "Devaughn Vibes Only"
-      },
-      {
-        "id": "matthewgolden_gb",
-        "first": "Matthew",
-        "last": "Golden",
-        "team": "GB",
-        "pos": "WR",
-        "pts": 30.8,
-        "pun": "Golden Goose"
       },
       {
         "id": "garrettwilson_nyj",
