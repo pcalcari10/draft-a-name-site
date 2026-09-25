@@ -354,6 +354,12 @@
   .popular-body { flex: 1; min-width: 0; }
   .popular-name { font-weight: 600; font-size: 14.5px; }
   .popular-meta { color: var(--chalk-500); font-size: 12px; margin-top: 1px; }
+  .popular-copy {
+    flex-shrink: 0; background: none; border: none; cursor: pointer;
+    color: var(--chalk-500); font-size: 15px; padding: 4px; border-radius: 6px;
+  }
+  .popular-copy:hover { background: var(--navy-700); color: var(--chalk-100); }
+  .popular-copy.copied { color: var(--turf-500); }
   .results-head { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 16px; flex-wrap: wrap; gap: 8px; }
   .results-head-left { display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap; }
   .results-head h2 { font-family: var(--font-display); font-size: 26px; margin: 0; font-weight: 700; }
@@ -1212,10 +1218,19 @@ async function loadTopPopular(){
           <div class="popular-name">${d.name}</div>
           <div class="popular-meta">${d.count} like${d.count !== 1 ? 's' : ''} \u00b7 ${d.entityLabel || ''}</div>
         </div>
+        <button class="popular-copy" data-text="${escapeHtml(d.name)}" aria-label="Copy name">⧉</button>
         ${likeButtonHtml(d.entityId || 'unknown', d.name, d.entityLabel || '', true)}
       </div>
     `).join('');
     wireLikeButtons(listEl);
+    listEl.querySelectorAll('.popular-copy').forEach(btn => {
+      btn.addEventListener('click', () => {
+        navigator.clipboard?.writeText(btn.dataset.text).catch(() => {});
+        btn.classList.add('copied');
+        btn.textContent = '✓';
+        setTimeout(() => { btn.classList.remove('copied'); btn.textContent = '⧉'; }, 1200);
+      });
+    });
   } catch(err){
     console.error('loadTopPopular failed', err);
     sectionEl.style.display = 'none';
