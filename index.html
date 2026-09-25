@@ -817,17 +817,6 @@ function renderChips(){
   }
 }
 
-function autoPickRandom(){
-  const allPlayers = ENTITIES.filter(e => e.kind === 'player' && e.active !== false);
-  // Favor players with a deep bench of curated puns, so the "surprise me"
-  // pick tends to show off genuinely funny content rather than placeholders.
-  const wellCovered = allPlayers.filter(e => e.tier === 'curated' && e.names && e.names.length >= 6);
-  const pool = wellCovered.length >= 3 ? wellCovered : allPlayers;
-  shuffle(pool).slice(0, 3).forEach(p => {
-    if(!selected.find(s => s.id === p.id)) selected.push(p);
-  });
-  renderChips();
-}
 
 function escapeHtml(s){
   return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
@@ -1218,8 +1207,8 @@ async function loadTopPopular(){
 }
 loadTopPopular();
 
-function renderResults(){
-  lastResults = buildResults();
+function renderResultsList(results){
+  lastResults = results;
   resultsGrid.innerHTML = lastResults.map((r, idx) => `
     <div class="card ${r.type}">
       <button class="copy-btn" data-idx="${idx}" aria-label="Copy name">⧉</button>
@@ -1233,7 +1222,6 @@ function renderResults(){
   `).join('');
   resultCount.textContent = `${lastResults.length} names`;
   resultsSection.style.display = 'block';
-  shuffleBtn.style.display = 'inline-block';
 
   resultsGrid.querySelectorAll('.copy-btn').forEach(btn => {
     btn.addEventListener('click', () => {
@@ -1249,9 +1237,31 @@ function renderResults(){
   resultsSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
 }
 
+function renderResults(){
+  shuffleBtn.style.display = 'inline-block';
+  renderResultsList(buildResults());
+}
+
+// Used by the "Don't know what to pick?" button when the roster is empty:
+// pulls a random, popularity-weighted sample from every player with at least
+// one curated pun, without touching the search or adding anything to the
+// roster.
+function surpriseResults(){
+  const pool = [];
+  ENTITIES.forEach(e => {
+    if(e.kind !== 'player' || e.tier !== 'curated' || !e.names || e.names.length === 0) return;
+    e.names.forEach(n => pool.push({ name: n, type: 'solo', meta: `${fullName(e)} \u00b7 ${e.team}` }));
+  });
+  shuffleBtn.style.display = 'none';
+  renderResultsList(weightedPickBy(pool, r => r.name, TOTAL_RESULTS_CAP));
+}
+
 generateBtn.addEventListener('click', () => {
-  if(selected.length === 0) autoPickRandom();
-  renderResults();
+  if(selected.length === 0){
+    surpriseResults();
+  } else {
+    renderResults();
+  }
 });
 shuffleBtn.addEventListener('click', renderResults);
 
