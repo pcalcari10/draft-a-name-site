@@ -94,6 +94,11 @@
   /* ---------- Sport nav ---------- */
   .sport-nav { background: var(--navy-800); border-bottom: 1px solid var(--line); }
   .sport-nav-inner { max-width: 920px; margin: 0 auto; padding: 10px 24px; display: flex; gap: 8px; flex-wrap: wrap; }
+  @media (max-width: 640px) {
+    .sport-nav-inner { flex-wrap: nowrap; overflow-x: auto; -webkit-overflow-scrolling: touch; scrollbar-width: none; }
+    .sport-nav-inner::-webkit-scrollbar { display: none; }
+    .sport-tab, .sport-tab-wrap { flex-shrink: 0; }
+  }
   .sport-tab {
     font-family: var(--font-body); font-size: 13px; font-weight: 600; color: var(--chalk-500); text-decoration: none;
     padding: 6px 14px; border-radius: 20px; display: flex; align-items: center; gap: 6px;
