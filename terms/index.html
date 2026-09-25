@@ -246,6 +246,12 @@ async function loadJson(path){
     wrapEl.style.display = 'block';
     const cardsHtml = groupsHtml.join('');
     trackEl.innerHTML = cardsHtml + cardsHtml;
+    const PIXELS_PER_SECOND = 47;
+    requestAnimationFrame(() => {
+      const halfWidth = trackEl.scrollWidth / 2;
+      const duration = Math.max(halfWidth / PIXELS_PER_SECOND, 20);
+      trackEl.style.animationDuration = duration + 's';
+    });
     titleEl.textContent = view === 'season' ? `Season Leaders \u2014 through Week ${data.week}` : `Week ${data.week} Top Scorers`;
   }
 

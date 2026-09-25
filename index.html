@@ -1235,6 +1235,18 @@ Promise.all([
     const cardsHtml = groupsHtml.join('');
     trackEl.innerHTML = cardsHtml + cardsHtml;
 
+    // translateX(-50%) is a percentage of the track's own width, so a wider
+    // track (e.g. Season totals with bigger point numbers) would otherwise
+    // cover more pixels in the same fixed duration and look faster. Measure
+    // the actual content width and set the duration so visual speed stays
+    // constant across views.
+    const PIXELS_PER_SECOND = 47;
+    requestAnimationFrame(() => {
+      const halfWidth = trackEl.scrollWidth / 2;
+      const duration = Math.max(halfWidth / PIXELS_PER_SECOND, 20);
+      trackEl.style.animationDuration = duration + 's';
+    });
+
     titleEl.textContent = view === 'season'
       ? `Season Leaders \u2014 through Week ${data.week}`
       : `Week ${data.week} Top Scorers`;
