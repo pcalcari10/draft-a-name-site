@@ -243,16 +243,16 @@
   </div>
 
   <div class="panel">
-    <label for="leagueId">ESPN League ID</label>
+    <label for="leagueId">ESPN League ID or league URL</label>
     <div class="row">
-      <input id="leagueId" type="text" inputmode="numeric" placeholder="e.g. 123456" autocomplete="off">
+      <input id="leagueId" type="text" placeholder="e.g. 123456, or paste your league URL" autocomplete="off">
       <select id="season">
         <option value="2026" selected>2026 season</option>
         <option value="2025">2025 season</option>
       </select>
       <button id="lookupBtn">Find my league</button>
     </div>
-    <div class="field-hint">Find this in your league's URL — it's the number after <code>leagueId=</code>, e.g. <code>fantasy.espn.com/football/team?leagueId=123456</code></div>
+    <div class="field-hint">Paste your league's URL directly (we'll pull the ID out of it), or just the number after <code>leagueId=</code>, e.g. <code>fantasy.espn.com/football/team?leagueId=123456</code></div>
 
     <div style="margin-top:14px;">
       <label style="display:flex; align-items:center; gap:8px; cursor:pointer; font-family:var(--sans); color:var(--text); font-size:13.5px;">
@@ -462,13 +462,24 @@ function copyText(btn, text){
   setTimeout(() => btn.textContent = orig, 1100);
 }
 
+// Accepts either a bare numeric league ID or a full ESPN URL containing
+// leagueId=..., so people can just paste whatever's in their address bar.
+function extractLeagueId(input){
+  const trimmed = input.trim();
+  if(/^\d+$/.test(trimmed)) return trimmed;
+  const match = trimmed.match(/leagueId=(\d+)/i);
+  return match ? match[1] : null;
+}
+
 function espnTeamLabel(t){
   return t.name || `${t.location || ''} ${t.nickname || ''}`.trim() || `Team ${t.id}`;
 }
 
 lookupBtn.addEventListener('click', async () => {
-  const leagueId = leagueIdInput.value.trim();
-  if(!leagueId){ setStatus('Enter a league ID first.', true); return; }
+  const rawInput = leagueIdInput.value.trim();
+  if(!rawInput){ setStatus('Enter a league ID or paste your league URL first.', true); return; }
+  const leagueId = extractLeagueId(rawInput);
+  if(!leagueId){ setStatus('Could not find a league ID in that \u2014 check the ID or URL and try again.', true); return; }
 
   const isPrivate = privateToggle.checked;
   const swid = swidInput.value.trim();
