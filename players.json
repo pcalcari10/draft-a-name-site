@@ -6242,7 +6242,8 @@
     "team": "DEN",
     "pos": "CB",
     "names": [
-      "Victory Is Surtain"
+      "Victory Is Surtain",
+      "Surtain Bet"
     ],
     "active": true,
     "tier": "curated"
@@ -14066,5 +14067,77 @@
     ],
     "active": true,
     "tier": "template"
+  },
+  {
+    "id": "aarondonald_lar",
+    "first": "Aaron",
+    "last": "Donald",
+    "team": "LAR",
+    "pos": "DL",
+    "names": [
+      "Donald, Where's Your Trousers"
+    ],
+    "active": true,
+    "tier": "curated"
+  },
+  {
+    "id": "minkahfitzpatrick_nyj",
+    "first": "Minkah",
+    "last": "Fitzpatrick",
+    "team": "NYJ",
+    "pos": "S",
+    "names": [
+      "Fitzpatrick Family Feud"
+    ],
+    "active": true,
+    "tier": "curated"
+  },
+  {
+    "id": "trevondiggs_dal",
+    "first": "Trevon",
+    "last": "Diggs",
+    "team": "DAL",
+    "pos": "CB",
+    "names": [
+      "Diggs In The Dirt"
+    ],
+    "active": true,
+    "tier": "curated"
+  },
+  {
+    "id": "jalenramsey_pit",
+    "first": "Jalen",
+    "last": "Ramsey",
+    "team": "PIT",
+    "pos": "CB",
+    "names": [
+      "Ramsey Bolt Getaway"
+    ],
+    "active": true,
+    "tier": "curated"
+  },
+  {
+    "id": "antoinewinfieldjr_tb",
+    "first": "Antoine",
+    "last": "Winfield Jr.",
+    "team": "TB",
+    "pos": "S",
+    "names": [
+      "Winfield Trip"
+    ],
+    "active": true,
+    "tier": "curated"
+  },
+  {
+    "id": "rashawnslater_lac",
+    "first": "Rashawn",
+    "last": "Slater",
+    "team": "LAC",
+    "pos": "OT",
+    "names": [
+      "Slater Home Alone"
+    ],
+    "active": true,
+    "tier": "curated"
   }
 ]
