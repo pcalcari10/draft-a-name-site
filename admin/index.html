@@ -616,8 +616,12 @@ function updateProgressStats(){
   document.querySelectorAll('.js-breakdown-generic').forEach(el => el.textContent = allGeneric.length.toLocaleString());
 
   const genericWrap = document.getElementById('genericBreakdownWrap');
-  if(genericWrap && genericByCategory.movie){
-    genericWrap.innerHTML = `🃏 <span class="js-breakdown-generic">${allGeneric.length}</span> generic names <span style="color:var(--dim); font-size:11.5px;">(${genericByCategory.movie.length} tagged movie)</span>`;
+  if(genericWrap){
+    const tags = [];
+    if(genericByCategory.movie) tags.push(`${genericByCategory.movie.length} tagged movie`);
+    if(genericByCategory.music) tags.push(`${genericByCategory.music.length} tagged music`);
+    const tagText = tags.length > 0 ? ` <span style="color:var(--dim); font-size:11.5px;">(${tags.join(', ')})</span>` : '';
+    genericWrap.innerHTML = `🃏 <span class="js-breakdown-generic">${allGeneric.length}</span> generic names${tagText}`;
   }
 }
 
