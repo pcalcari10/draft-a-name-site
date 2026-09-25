@@ -1,26 +1,26 @@
 {
-  "generatedAt": "2026-09-25T02:26:22.672Z",
+  "generatedAt": "2026-09-25T02:40:44.461Z",
   "season": "2026",
   "week": 3,
   "thisWeek": {
     "QB": [
-      {
-        "id": "jordanlove_gb",
-        "first": "Jordan",
-        "last": "Love",
-        "team": "GB",
-        "pos": "QB",
-        "pts": 10.2,
-        "pun": "Come and Get Your Love"
-      },
       {
         "id": "michaelpenixjr_atl",
         "first": "Michael",
         "last": "Penix",
         "team": "ATL",
         "pos": "QB",
-        "pts": 8.3,
+        "pts": 11,
         "pun": "The Penix Mightier"
+      },
+      {
+        "id": "jordanlove_gb",
+        "first": "Jordan",
+        "last": "Love",
+        "team": "GB",
+        "pos": "QB",
+        "pts": 10.9,
+        "pun": "Come and Get Your Love"
       }
     ],
     "RB": [
@@ -30,7 +30,7 @@
         "last": "Robinson",
         "team": "ATL",
         "pos": "RB",
-        "pts": 25.7,
+        "pts": 26.8,
         "pun": "To Infinity and Bijan"
       },
       {
@@ -57,7 +57,7 @@
         "last": "Johnson",
         "team": "GB",
         "pos": "RB",
-        "pts": 0.6,
+        "pts": 2.6,
         "pun": "Kaleb Johnson and the Fantasy Machine"
       }
     ],
@@ -68,7 +68,7 @@
         "last": "London",
         "team": "ATL",
         "pos": "WR",
-        "pts": 13,
+        "pts": 20.8,
         "pun": "Drake London Calling"
       },
       {
@@ -117,6 +117,15 @@
         "pun": "Dotson of Fame"
       },
       {
+        "id": "jmichaelsturdivant_gb",
+        "first": "J. Michael",
+        "last": "Sturdivant",
+        "team": "GB",
+        "pos": "WR",
+        "pts": 1.9,
+        "pun": "Straight Outta Sturdivant"
+      },
+      {
         "id": "zachariahbranch_atl",
         "first": "Zachariah",
         "last": "Branch",
@@ -142,7 +151,7 @@
         "last": "Kraft",
         "team": "GB",
         "pos": "TE",
-        "pts": 5.3,
+        "pts": 5.8,
         "pun": "Kraft Beers"
       },
       {
@@ -232,6 +241,15 @@
         "pun": "Lisan Al-Caleb"
       },
       {
+        "id": "jordanlove_gb",
+        "first": "Jordan",
+        "last": "Love",
+        "team": "GB",
+        "pos": "QB",
+        "pts": 45.2,
+        "pun": "Come and Get Your Love"
+      },
+      {
         "id": "dakprescott_dal",
         "first": "Dak",
         "last": "Prescott",
@@ -239,15 +257,6 @@
         "pos": "QB",
         "pts": 45.2,
         "pun": "The Boys Are Dak In Town"
-      },
-      {
-        "id": "jordanlove_gb",
-        "first": "Jordan",
-        "last": "Love",
-        "team": "GB",
-        "pos": "QB",
-        "pts": 44.4,
-        "pun": "Come and Get Your Love"
       },
       {
         "id": "jalenhurts_phi",
@@ -284,7 +293,7 @@
         "last": "Robinson",
         "team": "ATL",
         "pos": "RB",
-        "pts": 68.1,
+        "pts": 69.2,
         "pun": "To Infinity and Bijan"
       },
       {
@@ -596,6 +605,15 @@
         "pun": "DeVonta's Inferno"
       },
       {
+        "id": "drakelondon_atl",
+        "first": "Drake",
+        "last": "London",
+        "team": "ATL",
+        "pos": "WR",
+        "pts": 35.2,
+        "pun": "Drake London Calling"
+      },
+      {
         "id": "matthewgolden_gb",
         "first": "Matthew",
         "last": "Golden",
@@ -657,15 +675,6 @@
         "pos": "WR",
         "pts": 27.6,
         "pun": "Tucker'd Up and Ready"
-      },
-      {
-        "id": "drakelondon_atl",
-        "first": "Drake",
-        "last": "London",
-        "team": "ATL",
-        "pos": "WR",
-        "pts": 27.4,
-        "pun": "Drake London Calling"
       },
       {
         "id": "zayflowers_bal",
