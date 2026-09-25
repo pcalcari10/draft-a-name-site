@@ -848,44 +848,45 @@ function shuffle(arr){
   return a;
 }
 
+const TOTAL_RESULTS_CAP = 12;
+
 function buildResults(){
-  const results = [];
+  const guaranteed = [];
+  const bonusPool = [];
   const selectedPlayers = selected.filter(e => e.kind === 'player');
   const selectedTeams = selected.filter(e => e.kind === 'team');
   const selectedWildcards = selected.filter(e => e.kind === 'wildcard');
+  const selectedGenericAll = selected.filter(e => e.kind === 'genericAll');
 
-  // Solo puns: players use their own names; directly-selected teams use theirs (curated or template)
+  // Guarantee exactly one result for every entity the user actually searched
+  // for and added — so nothing they picked gets crowded out of the results.
   selectedPlayers.forEach(p => {
-    shuffle(p.names).slice(0, 2).forEach(n => {
-      results.push({ name: n, type: 'solo', meta: `${fullName(p)} · ${p.team}` });
-    });
+    const picks = shuffle(p.names);
+    if(picks[0]) guaranteed.push({ name: picks[0], type: 'solo', meta: `${fullName(p)} · ${p.team}` });
+    picks.slice(1, 3).forEach(n => bonusPool.push({ name: n, type: 'solo', meta: `${fullName(p)} · ${p.team}` }));
   });
   selectedTeams.forEach(t => {
-    shuffle(getTeamNames(t)).slice(0, 3).forEach(n => {
-      results.push({ name: n, type: 'team', meta: `${fullName(t)} defense` });
-    });
-    // Pull in that team's defensive players too, unless they're already picked directly
+    const picks = shuffle(getTeamNames(t));
+    if(picks[0]) guaranteed.push({ name: picks[0], type: 'team', meta: `${fullName(t)} defense` });
+    picks.slice(1, 3).forEach(n => bonusPool.push({ name: n, type: 'team', meta: `${fullName(t)} defense` }));
+    // Defensive players on that team are bonus content only, not guaranteed —
+    // this used to multiply fast when a team had a lot of defenders.
     getDefensivePlayersForTeam(t.abbr)
       .filter(dp => !selectedPlayers.find(p => p.id === dp.id))
       .forEach(dp => {
-        shuffle(dp.names).slice(0, 2).forEach(n => {
-          results.push({ name: n, type: 'solo', meta: `${fullName(dp)} · ${dp.team} defense` });
+        shuffle(dp.names).slice(0, 1).forEach(n => {
+          bonusPool.push({ name: n, type: 'solo', meta: `${fullName(dp)} · ${dp.team} defense` });
         });
       });
   });
-  // A directly-picked generic name is guaranteed to show up
   selectedWildcards.forEach(w => {
-    results.push({ name: w.names[0], type: 'wild', meta: 'Handpicked' });
+    guaranteed.push({ name: w.names[0], type: 'wild', meta: 'Handpicked' });
   });
-  // The "Generic Names" browse-all entity contributes a small random sample, not all of them
-  const selectedGenericAll = selected.filter(e => e.kind === 'genericAll');
   selectedGenericAll.forEach(g => {
-    shuffle(g.names).slice(0, 3).forEach(n => {
-      results.push({ name: n, type: 'wild', meta: 'From the generic list' });
-    });
+    shuffle(g.names).slice(0, 3).forEach(n => bonusPool.push({ name: n, type: 'wild', meta: 'From the generic list' }));
   });
 
-  // Combos only make sense between two players (need first/last name parts)
+  // Combos only make sense between two players — bonus content, not guaranteed
   if(selectedPlayers.length >= 2){
     const pairs = [];
     for(let i = 0; i < selectedPlayers.length; i++){
@@ -893,14 +894,14 @@ function buildResults(){
         pairs.push([selectedPlayers[i], selectedPlayers[j]]);
       }
     }
-    shuffle(pairs).slice(0, 4).forEach(([a, b]) => {
+    shuffle(pairs).forEach(([a, b]) => {
       const curated = findCuratedCombo(a, b);
       if(curated){
         const n = shuffle(curated.names)[0];
-        results.push({ name: n, type: 'combo', meta: `${fullName(a)} + ${fullName(b)}` });
+        bonusPool.push({ name: n, type: 'combo', meta: `${fullName(a)} + ${fullName(b)}` });
       } else {
         const template = COMBO_TEMPLATES[Math.floor(Math.random() * COMBO_TEMPLATES.length)];
-        results.push({ name: template(a, b), type: 'combo', meta: `${fullName(a)} + ${fullName(b)}` });
+        bonusPool.push({ name: template(a, b), type: 'combo', meta: `${fullName(a)} + ${fullName(b)}` });
       }
     });
   }
@@ -910,18 +911,24 @@ function buildResults(){
   const bonusTeamAbbrs = [...new Set(selectedPlayers.map(p => p.team))].filter(a => !directTeamAbbrs.has(a));
   const bonusTeams = bonusTeamAbbrs.map(abbr => TEAMS.find(t => t.abbr === abbr)).filter(Boolean);
   bonusTeams.forEach(team => {
-    shuffle(getTeamNames(team)).slice(0, 2).forEach(n => {
-      results.push({ name: n, type: 'wild', meta: `${team.city} ${team.nickname} pride` });
+    shuffle(getTeamNames(team)).slice(0, 1).forEach(n => {
+      bonusPool.push({ name: n, type: 'wild', meta: `${team.city} ${team.nickname} pride` });
     });
   });
 
-  const wildcardSlots = (bonusTeams.length > 0 || selectedTeams.length > 0) ? 1 : 3;
+  // A couple of generic crowd-favorites, always as bonus content
   const pickedWildcardNames = new Set(selectedWildcards.map(w => w.names[0]));
-  shuffle(GENERIC_WILDCARDS.filter(n => !pickedWildcardNames.has(n))).slice(0, wildcardSlots).forEach(n => {
-    results.push({ name: n, type: 'wild', meta: 'Crowd favorite' });
+  shuffle(GENERIC_WILDCARDS.filter(n => !pickedWildcardNames.has(n))).slice(0, 2).forEach(n => {
+    bonusPool.push({ name: n, type: 'wild', meta: 'Crowd favorite' });
   });
 
-  return shuffle(results);
+  // Fill any remaining room (up to the cap) with a random sample of bonus
+  // content, so results stay varied without growing unbounded as more
+  // players get added to the roster.
+  const remainingSlots = Math.max(TOTAL_RESULTS_CAP - guaranteed.length, 0);
+  const finalResults = guaranteed.concat(shuffle(bonusPool).slice(0, remainingSlots));
+
+  return shuffle(finalResults);
 }
 
 // ---------- Likes / popularity (Firebase Firestore) ----------
