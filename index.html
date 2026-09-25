@@ -154,11 +154,12 @@
   .ticker-empty { max-width: 920px; margin: 0 auto; padding: 14px 24px; color: var(--chalk-500); font-size: 13.5px; }
   @media (max-width: 640px) {
     .ticker-pun { display: none; }
-    .ticker-title { display: none; }
-    .ticker-bar { flex-direction: column; align-items: stretch; gap: 4px; }
-    .ticker-toggle { align-self: flex-end; margin: 0 10px 4px 0; }
+    .ticker-bar { flex-wrap: wrap; gap: 4px 0; }
+    .ticker-title { order: 1; padding: 0 0 4px 10px; }
+    .ticker-toggle { order: 1; margin: 0 10px 4px auto; }
     .ticker-toggle button { padding: 3px 10px; font-size: 10px; }
     .ticker-track-outer {
+      order: -1; flex-basis: 100%;
       padding-left: 10px;
       -webkit-mask-image: linear-gradient(90deg, transparent, #000 10px, #000 calc(100% - 10px), transparent);
       mask-image: linear-gradient(90deg, transparent, #000 10px, #000 calc(100% - 10px), transparent);
