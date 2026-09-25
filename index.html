@@ -378,7 +378,7 @@
   }
   .like-btn:hover { background: rgba(11,22,34,0.12); }
   .like-btn.liked { background: rgba(232,93,74,0.14); color: var(--coral-500); cursor: pointer; }
-  .like-btn .heart { font-size: 13px; }
+  .like-btn .heart { font-size: 15px; font-weight: 700; }
   .like-btn.loading { opacity: 0.5; pointer-events: none; }
 
   .like-inline {
@@ -1072,7 +1072,7 @@ function likeButtonHtml(entityId, punText, entityLabel, inline){
   return `<button class="${cls}${liked ? ' liked' : ''}" data-like-id="${likeId}"
       data-pun="${escapeHtml(punText)}" data-entity-id="${escapeHtml(entityId)}" data-entity-label="${escapeHtml(entityLabel)}"
       ${liked ? 'aria-pressed="true"' : ''}>
-      <span class="heart">${liked ? '❤️' : '🤍'}</span><span class="like-count">${liked ? '' : '·'}</span>
+      <span class="heart">${liked ? '❤️' : '♡'}</span><span class="like-count">${liked ? '' : '·'}</span>
     </button>`;
 }
 
@@ -1153,7 +1153,7 @@ async function handleLikeClick(btn){
 
 function setLikedUI(btn, count, liked){
   btn.classList.toggle('liked', liked);
-  btn.querySelector('.heart').textContent = liked ? '❤️' : '🤍';
+  btn.querySelector('.heart').textContent = liked ? '❤️' : '♡';
   btn.querySelector('.like-count').textContent = count > 0 ? count : (liked ? '' : '·');
 }
 
