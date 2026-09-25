@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-25T00:55:09.824Z",
+  "generatedAt": "2026-09-25T01:10:02.669Z",
   "season": "2026",
   "week": 3,
   "thisWeek": {
@@ -10,7 +10,7 @@
         "last": "Love",
         "team": "GB",
         "pos": "QB",
-        "pts": 7.3,
+        "pts": 7.5,
         "pun": "Come and Get Your Love"
       },
       {
@@ -19,7 +19,7 @@
         "last": "Penix",
         "team": "ATL",
         "pos": "QB",
-        "pts": -0.1,
+        "pts": 0.8,
         "pun": "The Penix Mightier"
       }
     ],
@@ -30,7 +30,7 @@
         "last": "Robinson",
         "team": "ATL",
         "pos": "RB",
-        "pts": 16,
+        "pts": 16.4,
         "pun": "To Infinity and Bijan"
       },
       {
@@ -39,7 +39,7 @@
         "last": "Lloyd",
         "team": "GB",
         "pos": "RB",
-        "pts": 2.7,
+        "pts": 3.4,
         "pun": "Beast Mode 2.0"
       },
       {
@@ -48,7 +48,7 @@
         "last": "Robinson",
         "team": "ATL",
         "pos": "RB",
-        "pts": 1.5,
+        "pts": 3.1,
         "pun": "Robinson's Revenge"
       },
       {
@@ -81,6 +81,15 @@
         "pun": "Golden Goose"
       },
       {
+        "id": "jahandotson_atl",
+        "first": "Jahan",
+        "last": "Dotson",
+        "team": "ATL",
+        "pos": "WR",
+        "pts": 2.1,
+        "pun": "Dotson of Fame"
+      },
+      {
         "id": "skyymoore_gb",
         "first": "Skyy",
         "last": "Moore",
@@ -88,6 +97,24 @@
         "pos": "WR",
         "pts": 1.9,
         "pun": "Skyy's the Limit"
+      },
+      {
+        "id": "zachariahbranch_atl",
+        "first": "Zachariah",
+        "last": "Branch",
+        "team": "ATL",
+        "pos": "WR",
+        "pts": 1.7,
+        "pun": "Zachariah Vibes Only"
+      },
+      {
+        "id": "drakelondon_atl",
+        "first": "Drake",
+        "last": "London",
+        "team": "ATL",
+        "pos": "WR",
+        "pts": 1.4,
+        "pun": "Drake London Calling"
       }
     ],
     "TE": [
@@ -97,7 +124,7 @@
         "last": "Kraft",
         "team": "GB",
         "pos": "TE",
-        "pts": 3.4,
+        "pts": 5.3,
         "pun": "Kraft Beers"
       },
       {
@@ -201,7 +228,7 @@
         "last": "Love",
         "team": "GB",
         "pos": "QB",
-        "pts": 41.6,
+        "pts": 41.8,
         "pun": "Come and Get Your Love"
       },
       {
@@ -230,7 +257,7 @@
         "last": "Robinson",
         "team": "ATL",
         "pos": "RB",
-        "pts": 58.4,
+        "pts": 58.8,
         "pun": "To Infinity and Bijan"
       },
       {
