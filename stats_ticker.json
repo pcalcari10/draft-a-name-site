@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-25T01:51:22.356Z",
+  "generatedAt": "2026-09-25T02:09:43.378Z",
   "season": "2026",
   "week": 3,
   "thisWeek": {
@@ -10,7 +10,7 @@
         "last": "Love",
         "team": "GB",
         "pos": "QB",
-        "pts": 7.8,
+        "pts": 10,
         "pun": "Come and Get Your Love"
       },
       {
@@ -39,7 +39,7 @@
         "last": "Lloyd",
         "team": "GB",
         "pos": "RB",
-        "pts": 3.4,
+        "pts": 3.8,
         "pun": "Beast Mode 2.0"
       },
       {
@@ -57,11 +57,20 @@
         "last": "Johnson",
         "team": "GB",
         "pos": "RB",
-        "pts": 0.5,
+        "pts": 0.6,
         "pun": "Kaleb Johnson and the Fantasy Machine"
       }
     ],
     "WR": [
+      {
+        "id": "christianwatson_gb",
+        "first": "Christian",
+        "last": "Watson",
+        "team": "GB",
+        "pos": "WR",
+        "pts": 10.6,
+        "pun": "Elementary, My Dear Watson"
+      },
       {
         "id": "drakelondon_atl",
         "first": "Drake",
@@ -72,22 +81,22 @@
         "pun": "Drake London Calling"
       },
       {
-        "id": "christianwatson_gb",
-        "first": "Christian",
-        "last": "Watson",
-        "team": "GB",
-        "pos": "WR",
-        "pts": 7.4,
-        "pun": "Elementary, My Dear Watson"
-      },
-      {
         "id": "matthewgolden_gb",
         "first": "Matthew",
         "last": "Golden",
         "team": "GB",
         "pos": "WR",
-        "pts": 7.3,
+        "pts": 9.5,
         "pun": "Golden Goose"
+      },
+      {
+        "id": "skyymoore_gb",
+        "first": "Skyy",
+        "last": "Moore",
+        "team": "GB",
+        "pos": "WR",
+        "pts": 4.1,
+        "pun": "Skyy's the Limit"
       },
       {
         "id": "olamidezaccheaus_atl",
@@ -106,15 +115,6 @@
         "pos": "WR",
         "pts": 2.1,
         "pun": "Dotson of Fame"
-      },
-      {
-        "id": "skyymoore_gb",
-        "first": "Skyy",
-        "last": "Moore",
-        "team": "GB",
-        "pos": "WR",
-        "pts": 1.9,
-        "pun": "Skyy's the Limit"
       },
       {
         "id": "zachariahbranch_atl",
@@ -144,6 +144,15 @@
         "pos": "TE",
         "pts": 5.3,
         "pun": "Kraft Beers"
+      },
+      {
+        "id": "jonnusmith_gb",
+        "first": "Jonnu",
+        "last": "Smith",
+        "team": "GB",
+        "pos": "TE",
+        "pts": 1.7,
+        "pun": "Jonnu Phone, Who Dis"
       },
       {
         "id": "kylepittssr_atl",
@@ -232,6 +241,15 @@
         "pun": "The Boys Are Dak In Town"
       },
       {
+        "id": "jordanlove_gb",
+        "first": "Jordan",
+        "last": "Love",
+        "team": "GB",
+        "pos": "QB",
+        "pts": 44.2,
+        "pun": "Come and Get Your Love"
+      },
+      {
         "id": "jalenhurts_phi",
         "first": "Jalen",
         "last": "Hurts",
@@ -239,15 +257,6 @@
         "pos": "QB",
         "pts": 42.9,
         "pun": "Hurts So Good"
-      },
-      {
-        "id": "jordanlove_gb",
-        "first": "Jordan",
-        "last": "Love",
-        "team": "GB",
-        "pos": "QB",
-        "pts": 42.1,
-        "pun": "Come and Get Your Love"
       },
       {
         "id": "lamarjackson_bal",
@@ -511,7 +520,7 @@
         "last": "Watson",
         "team": "GB",
         "pos": "WR",
-        "pts": 54.2,
+        "pts": 57.4,
         "pun": "Elementary, My Dear Watson"
       },
       {
@@ -587,6 +596,15 @@
         "pun": "DeVonta's Inferno"
       },
       {
+        "id": "matthewgolden_gb",
+        "first": "Matthew",
+        "last": "Golden",
+        "team": "GB",
+        "pos": "WR",
+        "pts": 34.8,
+        "pun": "Golden Goose"
+      },
+      {
         "id": "denzelboston_cle",
         "first": "Denzel",
         "last": "Boston",
@@ -594,15 +612,6 @@
         "pos": "WR",
         "pts": 34.4,
         "pun": "Finding the Denzone"
-      },
-      {
-        "id": "matthewgolden_gb",
-        "first": "Matthew",
-        "last": "Golden",
-        "team": "GB",
-        "pos": "WR",
-        "pts": 32.6,
-        "pun": "Golden Goose"
       },
       {
         "id": "devaughnvele_no",
