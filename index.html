@@ -456,7 +456,7 @@
       <div id="chips" class="chips"></div>
       <div id="allNames" class="all-names"></div>
       <div class="actions">
-        <button class="primary" id="generateBtn" disabled>Generate team names</button>
+        <button class="primary" id="generateBtn" disabled>🎲 Don't know what to pick? Let us help you!</button>
         <button class="ghost" id="shuffleBtn" style="display:none;">Shuffle again</button>
         <span class="hint" id="hint">Add at least one player to get started</span>
       </div>
@@ -765,10 +765,8 @@ function renderChips(){
     btn.addEventListener('click', () => removePlayer(btn.dataset.id));
   });
   if(selected.length === 0){
-    generateBtn.textContent = "🎲 Don't know what to pick? Let us help you!";
     hint.textContent = 'Or search above to build your own roster';
   } else {
-    generateBtn.textContent = 'Generate team names';
     hint.textContent = `${selected.length} on the roster`;
   }
   renderAllNames();
