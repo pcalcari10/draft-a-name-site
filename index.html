@@ -780,7 +780,11 @@ function renderChips(){
 }
 
 function autoPickRandom(){
-  const pool = ENTITIES.filter(e => e.kind === 'player' && e.active !== false);
+  const allPlayers = ENTITIES.filter(e => e.kind === 'player' && e.active !== false);
+  // Favor players with a deep bench of curated puns, so the "surprise me"
+  // pick tends to show off genuinely funny content rather than placeholders.
+  const wellCovered = allPlayers.filter(e => e.tier === 'curated' && e.names && e.names.length >= 6);
+  const pool = wellCovered.length >= 3 ? wellCovered : allPlayers;
   shuffle(pool).slice(0, 3).forEach(p => {
     if(!selected.find(s => s.id === p.id)) selected.push(p);
   });
