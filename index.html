@@ -212,8 +212,16 @@
     line-height: 1.5;
     color: var(--chalk-300);
     max-width: 52ch;
-    margin: 0 0 30px;
+    margin: 0 0 16px;
   }
+
+  .name-count-badge {
+    display: inline-flex; align-items: center; gap: 6px;
+    background: var(--navy-800); border: 1px solid var(--line); border-radius: 20px;
+    padding: 7px 16px; margin-bottom: 24px;
+    font-family: var(--font-display); font-weight: 700; font-size: 14px; color: var(--gold-300);
+  }
+  .name-count-badge span { color: var(--chalk-100); }
 
   /* Picker */
   .picker {
@@ -549,6 +557,8 @@
   <section class="hero">
     <h1>Find your team a<br>name that actually <span class="hl">slaps.</span></h1>
     <p class="sub">Pick the players on your roster. We'll match their names against a growing pile of puns, flexes, and one-liners so you're not stuck as "Team Steve" again this year.</p>
+
+    <div class="name-count-badge">🔥 <span id="totalNameCount">—</span> team names and counting</div>
 
     <div class="picker">
       <p class="picker-label">Search for a player or team and add them to your roster</p>
@@ -1388,6 +1398,12 @@ Promise.all([
   buildEntities();
 
   document.getElementById('dbCount').textContent = `${ENTITIES.filter(e => e.kind === 'player').length} players + ${TEAMS.length} teams in this demo roster`;
+
+  const totalNames = playersData.filter(p => p.tier === 'curated').reduce((sum, p) => sum + (p.names ? p.names.length : 0), 0)
+    + teamsData.reduce((sum, t) => sum + (t.names ? t.names.length : 0), 0)
+    + combosData.reduce((sum, c) => sum + (c.names ? c.names.length : 0), 0)
+    + genericData.length;
+  document.getElementById('totalNameCount').textContent = totalNames.toLocaleString();
 
   searchInput.disabled = false;
   searchInput.placeholder = 'Try \u201cMahomes,\u201d \u201cJefferson,\u201d or \u201cCardinals\u201d\u2026';
