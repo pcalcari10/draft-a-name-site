@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-25T02:53:13.101Z",
+  "generatedAt": "2026-09-25T03:10:08.753Z",
   "season": "2026",
   "week": 3,
   "thisWeek": {
@@ -10,7 +10,7 @@
         "last": "Love",
         "team": "GB",
         "pos": "QB",
-        "pts": 18,
+        "pts": 19.1,
         "pun": "Come and Get Your Love"
       },
       {
@@ -19,7 +19,7 @@
         "last": "Penix",
         "team": "ATL",
         "pos": "QB",
-        "pts": 11.6,
+        "pts": 15.2,
         "pun": "The Penix Mightier"
       }
     ],
@@ -30,7 +30,7 @@
         "last": "Robinson",
         "team": "ATL",
         "pos": "RB",
-        "pts": 26.8,
+        "pts": 35.3,
         "pun": "To Infinity and Bijan"
       },
       {
@@ -39,7 +39,7 @@
         "last": "Robinson",
         "team": "ATL",
         "pos": "RB",
-        "pts": 10.8,
+        "pts": 11,
         "pun": "Robinson's Revenge"
       },
       {
@@ -68,7 +68,7 @@
         "last": "London",
         "team": "ATL",
         "pos": "WR",
-        "pts": 23.4,
+        "pts": 28.4,
         "pun": "Drake London Calling"
       },
       {
@@ -77,7 +77,7 @@
         "last": "Watson",
         "team": "GB",
         "pos": "WR",
-        "pts": 18.7,
+        "pts": 22.6,
         "pun": "Elementary, My Dear Watson"
       },
       {
@@ -126,6 +126,15 @@
         "pun": "Dotson of Fame"
       },
       {
+        "id": "chrisblair_atl",
+        "first": "Chris",
+        "last": "Blair",
+        "team": "ATL",
+        "pos": "WR",
+        "pts": 2,
+        "pun": "Straight Outta Blair"
+      },
+      {
         "id": "zachariahbranch_atl",
         "first": "Zachariah",
         "last": "Branch",
@@ -151,7 +160,7 @@
         "last": "Kraft",
         "team": "GB",
         "pos": "TE",
-        "pts": 7.1,
+        "pts": 6.6,
         "pun": "Kraft Beers"
       },
       {
@@ -160,7 +169,7 @@
         "last": "Smith",
         "team": "GB",
         "pos": "TE",
-        "pts": 1.7,
+        "pts": 3.6,
         "pun": "Jonnu Phone, Who Dis"
       },
       {
@@ -201,7 +210,7 @@
         "last": "Love",
         "team": "GB",
         "pos": "QB",
-        "pts": 52.3,
+        "pts": 53.4,
         "pun": "Come and Get Your Love"
       },
       {
@@ -293,7 +302,7 @@
         "last": "Robinson",
         "team": "ATL",
         "pos": "RB",
-        "pts": 69.2,
+        "pts": 77.7,
         "pun": "To Infinity and Bijan"
       },
       {
@@ -482,7 +491,7 @@
         "last": "Robinson",
         "team": "ATL",
         "pos": "RB",
-        "pts": 22.6,
+        "pts": 22.8,
         "pun": "Robinson's Revenge"
       },
       {
@@ -506,6 +515,15 @@
     ],
     "WR": [
       {
+        "id": "christianwatson_gb",
+        "first": "Christian",
+        "last": "Watson",
+        "team": "GB",
+        "pos": "WR",
+        "pts": 69.4,
+        "pun": "Elementary, My Dear Watson"
+      },
+      {
         "id": "jaxonsmithnjigba_sea",
         "first": "Jaxon",
         "last": "Smith-Njigba",
@@ -513,15 +531,6 @@
         "pos": "WR",
         "pts": 68.7,
         "pun": "I'm Sorry Ms. Jaxon"
-      },
-      {
-        "id": "christianwatson_gb",
-        "first": "Christian",
-        "last": "Watson",
-        "team": "GB",
-        "pos": "WR",
-        "pts": 65.5,
-        "pun": "Elementary, My Dear Watson"
       },
       {
         "id": "amonrastbrown_det",
@@ -578,6 +587,15 @@
         "pun": "Golden Goose"
       },
       {
+        "id": "drakelondon_atl",
+        "first": "Drake",
+        "last": "London",
+        "team": "ATL",
+        "pos": "WR",
+        "pts": 42.8,
+        "pun": "Drake London Calling"
+      },
+      {
         "id": "justinjefferson_min",
         "first": "Justin",
         "last": "Jefferson",
@@ -585,15 +603,6 @@
         "pos": "WR",
         "pts": 39.7,
         "pun": "Carry On, My Wayward Jefferson"
-      },
-      {
-        "id": "drakelondon_atl",
-        "first": "Drake",
-        "last": "London",
-        "team": "ATL",
-        "pos": "WR",
-        "pts": 37.8,
-        "pun": "Drake London Calling"
       },
       {
         "id": "stefondiggs_was",
