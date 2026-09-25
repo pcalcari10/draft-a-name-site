@@ -3,13 +3,12 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Sleeper Roster Importer — The Fantasy Name HQ</title>
-<meta name="description" content="Import your Sleeper fantasy football roster and instantly see every team name pun we have for your players and franchises.">
-<link rel="canonical" href="https://thefantasynamehq.com/sleeper-importer/">
+<title>ESPN League Importer — The Fantasy Name HQ</title>
+<meta name="description" content="Import your ESPN public fantasy football league and instantly see every team name pun we have for your players and franchises.">
+<link rel="canonical" href="https://thefantasynamehq.com/espn-importer/">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders:wght@600;700;800&family=IBM+Plex+Mono:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"></script>
 <script src="https://www.gstatic.com/firebasejs/10.13.0/firebase-app-compat.js"></script>
 <script src="https://www.gstatic.com/firebasejs/10.13.0/firebase-firestore-compat.js"></script>
 <style>
@@ -104,16 +103,24 @@
   .sub { color: var(--dim); font-size: 14.5px; line-height: 1.5; max-width: 58ch; }
   .sub code { font-family: var(--mono); background: var(--panel-2); padding: 1px 5px; border-radius: 4px; font-size: 13px; }
 
+  .notice {
+    background: rgba(242,183,5,0.08); border: 1px solid rgba(242,183,5,0.3); border-radius: 8px;
+    padding: 12px 14px; font-size: 13px; color: var(--text); margin-bottom: 16px; line-height: 1.5;
+  }
+  .notice strong { color: var(--amber); }
+
   .panel { background: var(--panel); border: 1px solid var(--line); border-radius: 10px; padding: 20px; margin-bottom: 16px; }
   .row { display: flex; gap: 10px; flex-wrap: wrap; }
   label { display: block; font-size: 12.5px; color: var(--dim); margin-bottom: 6px; font-family: var(--mono); }
+  .field-hint { font-size: 12px; color: var(--dim); margin-top: 8px; line-height: 1.5; }
+  .field-hint code { font-family: var(--mono); background: var(--panel-2); padding: 1px 5px; border-radius: 4px; }
   input, select {
     background: var(--panel-2); border: 1px solid var(--line); color: var(--text);
     border-radius: 8px; padding: 10px 12px; font-size: 14.5px; font-family: var(--sans);
     outline: none;
   }
   input:focus, select:focus { border-color: var(--amber); }
-  input#username { flex: 1; min-width: 180px; }
+  input#leagueId { flex: 1; min-width: 180px; }
   button {
     font-family: var(--mono); font-weight: 600; font-size: 13.5px;
     background: var(--amber); color: #1A1000; border: none; border-radius: 8px;
@@ -124,7 +131,7 @@
   button.ghost { background: none; border: 1px solid var(--line); color: var(--text); }
   button.small { padding: 5px 10px; font-size: 12px; }
 
-  .status-line { font-family: var(--mono); font-size: 13px; color: var(--dim); margin-top: 12px; min-height: 18px; }
+  .status-line { font-family: var(--mono); font-size: 13px; color: var(--dim); margin-top: 12px; min-height: 18px; line-height: 1.5; }
   .status-line.error { color: var(--coral); }
 
   .leagues { display: flex; flex-direction: column; gap: 8px; margin-top: 12px; }
@@ -136,13 +143,6 @@
   .league-card:hover { border-color: var(--amber); }
   .league-card .name { font-weight: 600; font-size: 14.5px; }
   .league-card .meta { font-family: var(--mono); font-size: 12px; color: var(--dim); }
-
-  .summary { display: flex; gap: 18px; flex-wrap: wrap; margin: 4px 0 18px; }
-  .summary-item { font-family: var(--mono); font-size: 13px; }
-  .dot { display: inline-block; width: 8px; height: 8px; border-radius: 50%; margin-right: 6px; }
-  .dot.curated { background: var(--green); }
-  .dot.template { background: var(--amber); }
-  .dot.missing { background: var(--coral); }
 
   .section-title { font-family: var(--mono); font-size: 12.5px; color: var(--dim); margin: 22px 0 10px; letter-spacing: 0.02em; }
 
@@ -176,22 +176,6 @@
   .team-block { background: var(--panel-2); border: 1px solid var(--line); border-radius: 8px; padding: 12px 14px; }
   .team-block .tname { font-weight: 700; font-size: 14px; margin-bottom: 6px; }
   .team-block ul { margin: 0; padding-left: 16px; font-size: 13px; color: var(--text); line-height: 1.6; }
-
-  .actions-bar { display: flex; gap: 10px; margin-top: 18px; flex-wrap: wrap; }
-
-  .rename-banner {
-    display: flex; justify-content: space-between; align-items: center; gap: 16px; flex-wrap: wrap;
-    background: var(--panel-3); border: 1px solid var(--line); border-radius: 8px;
-    padding: 14px 16px; margin-bottom: 18px;
-  }
-  .rename-title { font-weight: 600; font-size: 14px; }
-  .rename-sub { color: var(--dim); font-size: 12.5px; margin-top: 2px; max-width: 44ch; line-height: 1.4; }
-  .rename-link {
-    font-family: var(--mono); font-weight: 600; font-size: 13px; color: #1A1000;
-    background: var(--amber); padding: 9px 14px; border-radius: 8px; text-decoration: none;
-    white-space: nowrap; flex-shrink: 0;
-  }
-  .rename-link:hover { filter: brightness(1.08); }
 
   footer { border-top: 1px solid var(--line); margin-top: 30px; padding-top: 40px; }
   footer code { font-family: var(--mono); background: var(--panel-2); padding: 1px 5px; border-radius: 4px; }
@@ -250,25 +234,30 @@
 
   <header>
     <div class="tag">local tool — runs entirely in this browser tab</div>
-    <h1 style="font-family:var(--display); font-weight:800;">Sleeper Roster Importer</h1>
-    <p class="sub">Enter a Sleeper username to find your leagues, pull a roster, and see every pun we have for each player — plus team-pride names for whichever franchises are on your roster. Nothing is uploaded anywhere.</p>
+    <h1 style="font-family:var(--display); font-weight:800;">ESPN League Importer</h1>
+    <p class="sub">Enter your ESPN league ID to pull a roster and see every pun we have for each player — plus team-pride names for whichever franchises are on your roster. Nothing is uploaded anywhere.</p>
   </header>
 
+  <div class="notice">
+    <strong>Public leagues only.</strong> ESPN doesn't provide an official API, and private leagues require credentials this browser-based tool can't securely handle. If your league is set to private, this won't be able to reach it — try the <a href="/sleeper-importer/" style="color:var(--amber);">Sleeper importer</a> instead if you use that platform too. Since this relies on ESPN's undocumented API, it could occasionally break without warning.
+  </div>
+
   <div class="panel">
-    <label for="username">Sleeper username</label>
+    <label for="leagueId">ESPN League ID</label>
     <div class="row">
-      <input id="username" type="text" placeholder="e.g. pcalcari" autocomplete="off">
+      <input id="leagueId" type="text" inputmode="numeric" placeholder="e.g. 123456" autocomplete="off">
       <select id="season">
         <option value="2026" selected>2026 season</option>
         <option value="2025">2025 season</option>
       </select>
-      <button id="lookupBtn">Find my teams</button>
+      <button id="lookupBtn">Find my league</button>
     </div>
+    <div class="field-hint">Find this in your league's URL — it's the number after <code>leagueId=</code>, e.g. <code>fantasy.espn.com/football/team?leagueId=123456</code></div>
     <div class="status-line" id="status"></div>
   </div>
 
   <div id="leaguesPanel" class="panel" style="display:none;">
-    <label>Leagues found — pick one</label>
+    <label>Teams in this league — pick yours</label>
     <div class="leagues" id="leaguesList"></div>
   </div>
 
@@ -299,7 +288,7 @@
       </div>
     </div>
     <div class="footer-bottom">
-      <div>Data sources: <code>api.sleeper.app</code> (rosters, public, no login) and <code>dynastyprocess/data</code> on GitHub (Sleeper player-ID → name mapping, updated weekly). The pun database embedded in this file is a snapshot from when it was built — ask for a refreshed copy after a big batch of new puns.</div>
+      <div>Data source: ESPN's undocumented fantasy API (public leagues only, read-only, no login). This isn't an officially supported integration, so it could change or break without notice. The pun database embedded in this file is a snapshot from when it was built — ask for a refreshed copy after a big batch of new puns.</div>
       <div style="margin-top:8px;">&copy; 2026 The Fantasy Name HQ</div>
     </div>
   </footer>
@@ -325,12 +314,25 @@ function escapeHtml(s){
 
 const DB_BY_NAME = {};
 const TEAMS_BY_ABBR = {};
+let TEAMS_LIST = [];
 function indexData(){
   OUR_DB.forEach(p => { DB_BY_NAME[normalize(p.first + ' ' + p.last)] = p; });
   OUR_TEAMS.forEach(t => { TEAMS_BY_ABBR[t.abbr] = t; });
+  TEAMS_LIST = OUR_TEAMS;
 }
 
-const usernameInput = document.getElementById('username');
+// A team defense shows up in ESPN's roster as a "player" whose full name is
+// the team itself (e.g. "Buffalo Bills"), not a person. Since we don't have
+// confirmed mappings for ESPN's own team/position ID codes, we match by name
+// against our own teams list instead of trusting any ESPN-side ID.
+function matchOurTeam(fullName){
+  const norm = fullName.toLowerCase();
+  return TEAMS_LIST.find(t =>
+    norm.includes(t.city.toLowerCase()) || norm.includes(t.nickname.toLowerCase())
+  );
+}
+
+const leagueIdInput = document.getElementById('leagueId');
 const seasonSelect = document.getElementById('season');
 const lookupBtn = document.getElementById('lookupBtn');
 const statusEl = document.getElementById('status');
@@ -338,32 +340,16 @@ const leaguesPanel = document.getElementById('leaguesPanel');
 const leaguesList = document.getElementById('leaguesList');
 const resultsPanel = document.getElementById('resultsPanel');
 
-let currentUserId = null;
-let playerIdMap = null;
+let currentLeagueTeams = [];
+let currentLeagueId = null;
 
 function setStatus(msg, isError){
   statusEl.textContent = msg || '';
   statusEl.className = 'status-line' + (isError ? ' error' : '');
 }
 
-async function loadPlayerIdMap(){
-  if(playerIdMap) return playerIdMap;
-  setStatus('Downloading player ID mapping (dynastyprocess/data)…');
-  const res = await fetch('https://raw.githubusercontent.com/dynastyprocess/data/master/files/db_playerids.csv');
-  if(!res.ok) throw new Error('Could not download player ID mapping (HTTP ' + res.status + ')');
-  const text = await res.text();
-  const parsed = Papa.parse(text, { header: true });
-  const map = {};
-  parsed.data.forEach(row => {
-    if(row.sleeper_id && row.sleeper_id !== 'NA'){
-      map[row.sleeper_id] = { name: row.name, position: row.position, team: row.team };
-    }
-  });
-  playerIdMap = map;
-  return map;
-}
-
 const TEAM_CODE_FIX = { LVR:'LV', SFO:'SF', GBP:'GB', KCC:'KC', NEP:'NE', TBB:'TB', JAX:'JAC' };
+function fixTeam(code){ return TEAM_CODE_FIX[code] || code; }
 
 // ---------- Auto-add missing players (Firestore) ----------
 const firebaseConfig = {
@@ -416,8 +402,6 @@ function slugifyId(first, last, team){
   return slug + '_' + (team || 'fa').toLowerCase();
 }
 
-// Look up (or create) an auto-added player record so a Sleeper roster gap
-// only ever needs filling once, for every future visitor.
 async function getOrCreateExtraPlayer(first, last, team, pos){
   const id = slugifyId(first, last, team);
   const ref = extraDb.collection(EXTRA_PLAYERS_COLLECTION).doc(id);
@@ -427,11 +411,10 @@ async function getOrCreateExtraPlayer(first, last, team, pos){
   } catch(err){ console.error('extra_players read failed', err); }
 
   const names = genSoloNames(first, last, id);
-  const record = { first, last, team: team || 'FA', pos: pos || '', names, tier: 'template', source: 'sleeper_auto_add' };
+  const record = { first, last, team: team || 'FA', pos: pos || '', names, tier: 'template', source: 'espn_auto_add' };
   try {
     await extraDb.collection(EXTRA_PLAYERS_COLLECTION).doc(id).set(record);
   } catch(err){
-    // Another visitor may have created it a moment ago \u2014 harmless, just re-read
     try {
       const fresh = await ref.get();
       if(fresh.exists) return { id, ...fresh.data() };
@@ -439,7 +422,6 @@ async function getOrCreateExtraPlayer(first, last, team, pos){
   }
   return { id, ...record };
 }
-function fixTeam(code){ return TEAM_CODE_FIX[code] || code; }
 
 function copyText(btn, text){
   navigator.clipboard.writeText(text).catch(()=>{});
@@ -448,142 +430,142 @@ function copyText(btn, text){
   setTimeout(() => btn.textContent = orig, 1100);
 }
 
+function espnTeamLabel(t){
+  return t.name || `${t.location || ''} ${t.nickname || ''}`.trim() || `Team ${t.id}`;
+}
+
 lookupBtn.addEventListener('click', async () => {
-  const username = usernameInput.value.trim();
-  if(!username){ setStatus('Enter a username first.', true); return; }
+  const leagueId = leagueIdInput.value.trim();
+  if(!leagueId){ setStatus('Enter a league ID first.', true); return; }
   leaguesPanel.style.display = 'none';
   resultsPanel.style.display = 'none';
   lookupBtn.disabled = true;
   try {
-    setStatus('Looking up ' + username + '…');
-    const userRes = await fetch('https://api.sleeper.app/v1/user/' + encodeURIComponent(username));
-    if(!userRes.ok) throw new Error('User not found (HTTP ' + userRes.status + ')');
-    const user = await userRes.json();
-    if(!user || !user.user_id) throw new Error('No such Sleeper user.');
-    currentUserId = user.user_id;
-
     const season = seasonSelect.value;
-    setStatus('Fetching leagues for ' + season + '…');
-    const leaguesRes = await fetch(`https://api.sleeper.app/v1/user/${user.user_id}/leagues/nfl/${season}`);
-    if(!leaguesRes.ok) throw new Error('Could not fetch leagues (HTTP ' + leaguesRes.status + ')');
-    const leagues = await leaguesRes.json();
+    setStatus('Fetching league ' + leagueId + ' for ' + season + '\u2026');
+    const url = `https://lm-api-reads.fantasy.espn.com/apis/v3/games/ffl/seasons/${season}/segments/0/leagues/${leagueId}?view=mRoster&view=mTeam`;
+    const res = await fetch(url);
 
-    if(!leagues || leagues.length === 0){
-      setStatus('No ' + season + ' leagues found for that username.', true);
-      lookupBtn.disabled = false;
-      return;
+    if(res.status === 401 || res.status === 403){
+      throw new Error('This league appears to be private. This tool only works with public ESPN leagues.');
+    }
+    if(res.status === 404){
+      throw new Error('No league found with that ID for ' + season + ' \u2014 double check the ID and season.');
+    }
+    if(!res.ok){
+      throw new Error('ESPN returned an error (HTTP ' + res.status + ').');
     }
 
-    setStatus(`Found ${leagues.length} league${leagues.length !== 1 ? 's' : ''}. Pick one below.`);
-    leaguesList.innerHTML = leagues.map(l => `
-      <div class="league-card" data-league-id="${l.league_id}">
-        <span class="name">${l.name}</span>
-        <span class="meta">${l.total_rosters} teams · ${l.status}</span>
+    const data = await res.json();
+    if(!data.teams || data.teams.length === 0){
+      throw new Error('No teams found in that league.');
+    }
+
+    currentLeagueTeams = data.teams;
+    currentLeagueId = leagueId;
+
+    setStatus(`Found ${data.teams.length} teams. Pick yours below.`);
+    leaguesList.innerHTML = data.teams.map(t => `
+      <div class="league-card" data-team-id="${t.id}">
+        <span class="name">${escapeHtml(espnTeamLabel(t))}</span>
+        <span class="meta">${(t.record && t.record.overall) ? `${t.record.overall.wins}-${t.record.overall.losses}` : ''}</span>
       </div>
     `).join('');
     leaguesPanel.style.display = 'block';
 
     leaguesList.querySelectorAll('.league-card').forEach(card => {
-      card.addEventListener('click', () => loadRoster(card.dataset.leagueId, card.querySelector('.name').textContent));
+      card.addEventListener('click', () => loadRoster(parseInt(card.dataset.teamId, 10), card.querySelector('.name').textContent));
     });
 
   } catch(err){
-    setStatus(err.message || 'Something went wrong.', true);
+    if(err instanceof TypeError){
+      setStatus('Could not reach ESPN \u2014 this may be blocked by the browser (CORS) rather than an issue with your league ID.', true);
+    } else {
+      setStatus(err.message || 'Something went wrong.', true);
+    }
   } finally {
     lookupBtn.disabled = false;
   }
 });
 
-async function loadRoster(leagueId, leagueName){
-  setStatus('Loading roster for ' + leagueName + '…');
+async function loadRoster(teamId, teamName){
+  setStatus('Loading roster for ' + teamName + '\u2026');
   resultsPanel.style.display = 'none';
   try {
-    const [rostersRes, idMap] = await Promise.all([
-      fetch(`https://api.sleeper.app/v1/league/${leagueId}/rosters`),
-      loadPlayerIdMap()
-    ]);
-    if(!rostersRes.ok) throw new Error('Could not fetch rosters (HTTP ' + rostersRes.status + ')');
-    const rosters = await rostersRes.json();
-    const mine = rosters.find(r => r.owner_id === currentUserId);
-    if(!mine){
-      setStatus('Could not find your roster in this league (maybe a co-owned team?).', true);
+    const team = currentLeagueTeams.find(t => t.id === teamId);
+    if(!team || !team.roster || !team.roster.entries){
+      setStatus('Could not find a roster for that team.', true);
       return;
     }
 
-    const starterSet = new Set(mine.starters || []);
-    const allIds = mine.players || [];
-    const bench = allIds.filter(id => !starterSet.has(id));
+    async function resolve(entry){
+      const player = entry.playerPoolEntry && entry.playerPoolEntry.player;
+      if(!player || !player.fullName){
+        return { name: 'Unknown player', team: '', pos: '', status: 'missing', names: [], isTeam: false };
+      }
+      const fullName = player.fullName;
 
-    async function resolve(id){
-      const raw = idMap[id];
-      if(!raw || !raw.name) return { name: 'Unknown player (id ' + id + ')', team: '', pos: '', status: 'missing', names: [] };
-      const norm = normalize(raw.name);
+      const teamMatch = matchOurTeam(fullName);
+      if(teamMatch){
+        return { name: fullName, isTeam: true, teamRecord: teamMatch };
+      }
+
+      const norm = normalize(fullName);
       const dbHit = DB_BY_NAME[norm];
-      const team = fixTeam(raw.team || '');
       if(dbHit){
         return {
-          name: raw.name, team, pos: raw.position || '',
+          name: fullName, team: dbHit.team || '', pos: dbHit.pos || '',
           status: dbHit.tier === 'curated' ? 'curated' : 'template',
-          names: dbHit.names
+          names: dbHit.names, isTeam: false
         };
       }
-      // Not in the database yet \u2014 auto-add them from Sleeper's own data so this gap only needs filling once
-      const parts = raw.name.trim().split(' ');
+      const parts = fullName.trim().split(' ');
       const first = parts[0];
       const last = parts.slice(1).join(' ') || parts[0];
-      const extra = await getOrCreateExtraPlayer(first, last, team, raw.position);
+      const extra = await getOrCreateExtraPlayer(first, last, '', '');
       return {
-        name: raw.name, team, pos: raw.position || '',
-        status: 'template',
-        names: extra.names || []
+        name: fullName, team: '', pos: '',
+        status: 'template', names: extra.names || [], isTeam: false
       };
     }
 
-    const starters = await Promise.all((mine.starters || []).filter(id => id !== '0').map(resolve));
-    const benchPlayers = await Promise.all(bench.map(resolve));
-    const all = starters.concat(benchPlayers);
+    const resolved = await Promise.all(team.roster.entries.map(resolve));
+    const players = resolved.filter(p => !p.isTeam);
+    const teamPrideMatches = resolved.filter(p => p.isTeam).map(p => p.teamRecord);
 
-    function cardHtml(p, idx, prefix){
-      const metaBits = [p.pos, p.team].filter(Boolean).join(' · ');
-      const uid = prefix + '-' + idx;
+    function cardHtml(p, idx){
+      const metaBits = [p.pos, p.team].filter(Boolean).join(' \u00b7 ');
+      const uid = 'p-' + idx;
       if(p.names.length === 0){
         return `
         <details class="pcard ${p.status}">
-          <summary><div><div class="pname">${p.name}</div><div class="pmeta">${metaBits}</div></div></summary>
-          <div class="empty-note">Couldn't identify this player from Sleeper's data.</div>
+          <summary><div><div class="pname">${escapeHtml(p.name)}</div><div class="pmeta">${metaBits}</div></div></summary>
+          <div class="empty-note">Couldn't identify this player from ESPN's data.</div>
         </details>`;
       }
       return `
         <details class="pcard ${p.status}">
-          <summary><div><div class="pname">${p.name}</div><div class="pmeta">${metaBits} — ${p.names.length} name${p.names.length !== 1 ? 's' : ''}</div></div></summary>
+          <summary><div><div class="pname">${escapeHtml(p.name)}</div><div class="pmeta">${metaBits} \u2014 ${p.names.length} name${p.names.length !== 1 ? 's' : ''}</div></div></summary>
           <ul class="pun-list">
             ${p.names.map((n,i) => `<li><span>${n}</span><button class="copy-name" data-uid="${uid}-${i}" data-text="${escapeHtml(n)}">copy</button></li>`).join('')}
           </ul>
         </details>`;
     }
 
-    const teamAbbrs = [...new Set(all.map(p => p.team).filter(Boolean))];
-    const teamBlocks = teamAbbrs
-      .map(abbr => TEAMS_BY_ABBR[abbr])
-      .filter(t => t && t.names.length > 0);
+    const seenAbbrs = new Set();
+    const teamBlocks = teamPrideMatches.filter(t => {
+      if(seenAbbrs.has(t.abbr)) return false;
+      seenAbbrs.add(t.abbr);
+      return t.names && t.names.length > 0;
+    });
 
     resultsPanel.innerHTML = `
       <div class="panel">
-        <div class="rename-banner">
-          <div>
-            <div class="rename-title">Found a name you like?</div>
-            <div class="rename-sub">Copy it below, then head to Sleeper to set it — Sleeper's API is read-only, so there's no way to push it in for you.</div>
-          </div>
-          <a class="rename-link" href="https://sleeper.com/leagues/${leagueId}" target="_blank" rel="noopener">Open ${leagueName} on Sleeper ↗</a>
-        </div>
-
-        <div class="section-title">STARTERS (${starters.length})</div>
-        <div class="players">${starters.map((p,i) => cardHtml(p,i,'s')).join('')}</div>
-        <div class="section-title">BENCH / TAXI (${benchPlayers.length})</div>
-        <div class="players">${benchPlayers.map((p,i) => cardHtml(p,i,'b')).join('')}</div>
+        <div class="section-title">ROSTER (${players.length})</div>
+        <div class="players">${players.map((p,i) => cardHtml(p,i)).join('')}</div>
 
         ${teamBlocks.length > 0 ? `
-          <div class="section-title">TEAM PRIDE — FRANCHISES ON THIS ROSTER</div>
+          <div class="section-title">TEAM PRIDE \u2014 FRANCHISES ON THIS ROSTER</div>
           <div class="team-pride">
             ${teamBlocks.map(t => `
               <div class="team-block">
@@ -596,7 +578,7 @@ async function loadRoster(leagueId, leagueName){
       </div>
     `;
     resultsPanel.style.display = 'block';
-    setStatus(`Loaded ${leagueName} — ${all.length} players.`);
+    setStatus(`Loaded ${teamName} \u2014 ${players.length} players.`);
 
     resultsPanel.querySelectorAll('.copy-name').forEach(btn => {
       btn.addEventListener('click', () => copyText(btn, btn.dataset.text));
@@ -607,7 +589,7 @@ async function loadRoster(leagueId, leagueName){
   }
 }
 
-usernameInput.addEventListener('keydown', (e) => {
+leagueIdInput.addEventListener('keydown', (e) => {
   if(e.key === 'Enter') lookupBtn.click();
 });
 
@@ -629,7 +611,7 @@ Promise.all([
   setStatus('Failed to load the player database \u2014 try refreshing the page.', true);
 });
 
-// ---------- Stats ticker (display only \u2014 no player-select action on this page) ----------
+// ---------- Stats ticker (display only, no player-select action on this page) ----------
 (function initStatsTicker(){
   const wrapEl = document.getElementById('tickerWrap');
   const trackEl = document.getElementById('tickerTrack');
@@ -671,11 +653,6 @@ Promise.all([
     const cardsHtml = groupsHtml.join('');
     trackEl.innerHTML = cardsHtml + cardsHtml;
 
-    // translateX(-50%) is a percentage of the track's own width, so a wider
-    // track (e.g. Season totals with bigger point numbers) would otherwise
-    // cover more pixels in the same fixed duration and look faster. Measure
-    // the actual content width and set the duration so visual speed stays
-    // constant across views.
     const PIXELS_PER_SECOND = 47;
     requestAnimationFrame(() => {
       const halfWidth = trackEl.scrollWidth / 2;
