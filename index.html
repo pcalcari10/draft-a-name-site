@@ -192,7 +192,7 @@
     padding: 10px 6px 6px; min-width: 220px; z-index: 30;
     box-shadow: 0 14px 30px rgba(0,0,0,0.35);
   }
-  .sport-tab-wrap:hover .sport-dropdown, .sport-tab-wrap:focus-within .sport-dropdown { display: block; }
+  .sport-tab-wrap:hover .sport-dropdown, .sport-tab-wrap:focus-within .sport-dropdown, .sport-tab-wrap.open .sport-dropdown { display: block; }
   .sport-dropdown a {
     display: block; padding: 9px 12px; border-radius: 6px;
     color: var(--chalk-300); text-decoration: none; font-size: 13.5px; font-weight: 500;
@@ -497,6 +497,28 @@
     <a href="/basketball/" class="sport-tab">🏀 Fantasy Basketball <span class="soon-badge">Soon</span></a>
   </div>
 </nav>
+<script>
+// Tap-to-toggle for the sport nav dropdown, since touch devices have no
+// hover state at all \u2014 without this, tapping the trigger just navigates
+// away before the dropdown ever has a chance to show. Desktop keeps the
+// instant hover behavior from CSS; this is an additional path, not a
+// replacement.
+document.querySelectorAll('.sport-tab-wrap').forEach(wrap => {
+  const trigger = wrap.querySelector(':scope > .sport-tab');
+  trigger.addEventListener('click', (e) => {
+    if(!wrap.classList.contains('open')){
+      e.preventDefault();
+      document.querySelectorAll('.sport-tab-wrap.open').forEach(w => w.classList.remove('open'));
+      wrap.classList.add('open');
+    }
+  });
+});
+document.addEventListener('click', (e) => {
+  if(!e.target.closest('.sport-tab-wrap')){
+    document.querySelectorAll('.sport-tab-wrap.open').forEach(w => w.classList.remove('open'));
+  }
+});
+</script>
 <div class="wrap">
 
   <header class="top">
