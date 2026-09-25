@@ -1,9 +1,18 @@
 {
-  "generatedAt": "2026-09-25T01:25:20.603Z",
+  "generatedAt": "2026-09-25T01:39:33.119Z",
   "season": "2026",
   "week": 3,
   "thisWeek": {
     "QB": [
+      {
+        "id": "michaelpenixjr_atl",
+        "first": "Michael",
+        "last": "Penix",
+        "team": "ATL",
+        "pos": "QB",
+        "pts": 7.6,
+        "pun": "The Penix Mightier"
+      },
       {
         "id": "jordanlove_gb",
         "first": "Jordan",
@@ -12,15 +21,6 @@
         "pos": "QB",
         "pts": 7.5,
         "pun": "Come and Get Your Love"
-      },
-      {
-        "id": "michaelpenixjr_atl",
-        "first": "Michael",
-        "last": "Penix",
-        "team": "ATL",
-        "pos": "QB",
-        "pts": 1.7,
-        "pun": "The Penix Mightier"
       }
     ],
     "RB": [
@@ -30,7 +30,7 @@
         "last": "Robinson",
         "team": "ATL",
         "pos": "RB",
-        "pts": 18.2,
+        "pts": 19.8,
         "pun": "To Infinity and Bijan"
       },
       {
@@ -50,9 +50,27 @@
         "pos": "RB",
         "pts": 2.8,
         "pun": "Robinson's Revenge"
+      },
+      {
+        "id": "kalebjohnson_gb",
+        "first": "Kaleb",
+        "last": "Johnson",
+        "team": "GB",
+        "pos": "RB",
+        "pts": 0.5,
+        "pun": "Kaleb Johnson and the Fantasy Machine"
       }
     ],
     "WR": [
+      {
+        "id": "drakelondon_atl",
+        "first": "Drake",
+        "last": "London",
+        "team": "ATL",
+        "pos": "WR",
+        "pts": 10.4,
+        "pun": "Drake London Calling"
+      },
       {
         "id": "christianwatson_gb",
         "first": "Christian",
@@ -70,15 +88,6 @@
         "pos": "WR",
         "pts": 5.5,
         "pun": "Golden Goose"
-      },
-      {
-        "id": "drakelondon_atl",
-        "first": "Drake",
-        "last": "London",
-        "team": "ATL",
-        "pos": "WR",
-        "pts": 4.8,
-        "pun": "Drake London Calling"
       },
       {
         "id": "olamidezaccheaus_atl",
@@ -118,6 +127,15 @@
       }
     ],
     "TE": [
+      {
+        "id": "austinhooper_atl",
+        "first": "Austin",
+        "last": "Hooper",
+        "team": "ATL",
+        "pos": "TE",
+        "pts": 9.1,
+        "pun": "Hooper's Fantasy Fortress"
+      },
       {
         "id": "tuckerkraft_gb",
         "first": "Tucker",
@@ -257,7 +275,7 @@
         "last": "Robinson",
         "team": "ATL",
         "pos": "RB",
-        "pts": 60.6,
+        "pts": 62.2,
         "pun": "To Infinity and Bijan"
       },
       {
@@ -677,13 +695,13 @@
         "pun": "7th Evans"
       },
       {
-        "id": "deebosamuelsr_sf",
-        "first": "Deebo",
-        "last": "Samuel",
-        "team": "SF",
+        "id": "drakelondon_atl",
+        "first": "Drake",
+        "last": "London",
+        "team": "ATL",
         "pos": "WR",
-        "pts": 24.5,
-        "pun": "Finding Deebo"
+        "pts": 24.8,
+        "pun": "Drake London Calling"
       }
     ],
     "TE": [
