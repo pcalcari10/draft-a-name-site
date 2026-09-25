@@ -1250,10 +1250,25 @@ function renderResults(){
 const SURPRISE_RESULTS_COUNT = 6;
 function surpriseResults(){
   const pool = [];
+
   ENTITIES.forEach(e => {
-    if(e.kind !== 'player' || e.tier !== 'curated' || !e.names || e.names.length === 0) return;
-    e.names.forEach(n => pool.push({ name: n, type: 'solo', meta: `${fullName(e)} \u00b7 ${e.team}` }));
+    if(e.kind === 'player' && e.tier === 'curated' && e.names && e.names.length > 0){
+      e.names.forEach(n => pool.push({ name: n, type: 'solo', meta: `${fullName(e)} \u00b7 ${e.team}` }));
+    }
+    if(e.kind === 'team' && e.names && e.names.length > 0){
+      e.names.forEach(n => pool.push({ name: n, type: 'team', meta: `${e.city} ${e.nickname} defense` }));
+    }
   });
+
+  GENERIC_WILDCARDS.forEach(n => pool.push({ name: n, type: 'wild', meta: 'Crowd favorite' }));
+
+  CURATED_COMBOS.forEach(c => {
+    const a = ENTITIES.find(e => e.id === c.ids[0]);
+    const b = ENTITIES.find(e => e.id === c.ids[1]);
+    if(!a || !b || !c.names) return;
+    c.names.forEach(n => pool.push({ name: n, type: 'combo', meta: `${fullName(a)} + ${fullName(b)}` }));
+  });
+
   shuffleBtn.style.display = 'inline-block';
   // Squares the like count instead of just adding it, so popularity is a
   // much stronger pull here than in the regular roster-based results.
