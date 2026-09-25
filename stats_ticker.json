@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-25T02:09:43.378Z",
+  "generatedAt": "2026-09-25T02:26:22.672Z",
   "season": "2026",
   "week": 3,
   "thisWeek": {
@@ -10,7 +10,7 @@
         "last": "Love",
         "team": "GB",
         "pos": "QB",
-        "pts": 10,
+        "pts": 10.2,
         "pun": "Come and Get Your Love"
       },
       {
@@ -19,7 +19,7 @@
         "last": "Penix",
         "team": "ATL",
         "pos": "QB",
-        "pts": 7.6,
+        "pts": 8.3,
         "pun": "The Penix Mightier"
       }
     ],
@@ -30,8 +30,17 @@
         "last": "Robinson",
         "team": "ATL",
         "pos": "RB",
-        "pts": 19.8,
+        "pts": 25.7,
         "pun": "To Infinity and Bijan"
+      },
+      {
+        "id": "brianrobinsonjr_atl",
+        "first": "Brian",
+        "last": "Robinson",
+        "team": "ATL",
+        "pos": "RB",
+        "pts": 11,
+        "pun": "Robinson's Revenge"
       },
       {
         "id": "marshawnlloyd_gb",
@@ -41,15 +50,6 @@
         "pos": "RB",
         "pts": 3.8,
         "pun": "Beast Mode 2.0"
-      },
-      {
-        "id": "brianrobinsonjr_atl",
-        "first": "Brian",
-        "last": "Robinson",
-        "team": "ATL",
-        "pos": "RB",
-        "pts": 2.8,
-        "pun": "Robinson's Revenge"
       },
       {
         "id": "kalebjohnson_gb",
@@ -63,22 +63,22 @@
     ],
     "WR": [
       {
-        "id": "christianwatson_gb",
-        "first": "Christian",
-        "last": "Watson",
-        "team": "GB",
-        "pos": "WR",
-        "pts": 10.6,
-        "pun": "Elementary, My Dear Watson"
-      },
-      {
         "id": "drakelondon_atl",
         "first": "Drake",
         "last": "London",
         "team": "ATL",
         "pos": "WR",
-        "pts": 10.4,
+        "pts": 13,
         "pun": "Drake London Calling"
+      },
+      {
+        "id": "christianwatson_gb",
+        "first": "Christian",
+        "last": "Watson",
+        "team": "GB",
+        "pos": "WR",
+        "pts": 12.1,
+        "pun": "Elementary, My Dear Watson"
       },
       {
         "id": "matthewgolden_gb",
@@ -246,7 +246,7 @@
         "last": "Love",
         "team": "GB",
         "pos": "QB",
-        "pts": 44.2,
+        "pts": 44.4,
         "pun": "Come and Get Your Love"
       },
       {
@@ -284,7 +284,7 @@
         "last": "Robinson",
         "team": "ATL",
         "pos": "RB",
-        "pts": 62.2,
+        "pts": 68.1,
         "pun": "To Infinity and Bijan"
       },
       {
@@ -468,6 +468,15 @@
         "pun": "De'Von A-Train"
       },
       {
+        "id": "brianrobinsonjr_atl",
+        "first": "Brian",
+        "last": "Robinson",
+        "team": "ATL",
+        "pos": "RB",
+        "pts": 22.8,
+        "pun": "Robinson's Revenge"
+      },
+      {
         "id": "travisetiennejr_no",
         "first": "Travis",
         "last": "Etienne",
@@ -484,15 +493,6 @@
         "pos": "RB",
         "pts": 20.5,
         "pun": "Keeping Up With the Jones"
-      },
-      {
-        "id": "jeremiyahlove_ari",
-        "first": "Jeremiyah",
-        "last": "Love",
-        "team": "ARI",
-        "pos": "RB",
-        "pts": 20.5,
-        "pun": "Come and Get Your Love"
       }
     ],
     "WR": [
@@ -520,7 +520,7 @@
         "last": "Watson",
         "team": "GB",
         "pos": "WR",
-        "pts": 57.4,
+        "pts": 58.9,
         "pun": "Elementary, My Dear Watson"
       },
       {
@@ -659,6 +659,15 @@
         "pun": "Tucker'd Up and Ready"
       },
       {
+        "id": "drakelondon_atl",
+        "first": "Drake",
+        "last": "London",
+        "team": "ATL",
+        "pos": "WR",
+        "pts": 27.4,
+        "pun": "Drake London Calling"
+      },
+      {
         "id": "zayflowers_bal",
         "first": "Zay",
         "last": "Flowers",
@@ -702,15 +711,6 @@
         "pos": "WR",
         "pts": 25.3,
         "pun": "7th Evans"
-      },
-      {
-        "id": "drakelondon_atl",
-        "first": "Drake",
-        "last": "London",
-        "team": "ATL",
-        "pos": "WR",
-        "pts": 24.8,
-        "pun": "Drake London Calling"
       }
     ],
     "TE": [
