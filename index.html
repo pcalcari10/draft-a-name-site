@@ -770,10 +770,10 @@ function buildEntities(){
     names: t.names
   }));
 
-  GENERIC_WILDCARDS.forEach((n, i) => {
-    ENTITIES.push({ id: 'wild_' + i, kind: 'wildcard', names: [n] });
-  });
-
+  // Individual generic names are intentionally not made searchable one by
+  // one here (for now) — only the bulk browse-all-of-this-category options
+  // below are, so search results stay to players, teams, and named
+  // categories rather than surfacing every single wildcard phrase directly.
   ENTITIES.push({ id: 'generic_all', kind: 'genericAll', names: GENERIC_WILDCARDS });
   ENTITIES.push({ id: 'generic_movie', kind: 'genericMovie', names: GENERIC_BY_CATEGORY.movie || [] });
   ENTITIES.push({ id: 'generic_music', kind: 'genericMusic', names: GENERIC_BY_CATEGORY.music || [] });
