@@ -318,6 +318,7 @@
   .popular-name { font-weight: 600; font-size: 14.5px; }
   .popular-meta { color: var(--chalk-500); font-size: 12px; margin-top: 1px; }
   .results-head { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 16px; flex-wrap: wrap; gap: 8px; }
+  .results-head-left { display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap; }
   .results-head h2 { font-family: var(--font-display); font-size: 26px; margin: 0; font-weight: 700; }
   .results-head .count { color: var(--chalk-500); font-size: 14px; }
 
@@ -457,7 +458,6 @@
       <div id="allNames" class="all-names"></div>
       <div class="actions">
         <button class="primary" id="generateBtn" disabled>🎲 Don't know what to pick? Let us help you!</button>
-        <button class="ghost" id="shuffleBtn" style="display:none;">Shuffle again</button>
         <span class="hint" id="hint">Add at least one player to get started</span>
       </div>
     </div>
@@ -472,8 +472,11 @@
 
   <section class="results" id="resultsSection" style="display:none;">
     <div class="results-head">
-      <h2>Your options</h2>
-      <span class="count" id="resultCount"></span>
+      <div class="results-head-left">
+        <h2>Your options</h2>
+        <span class="count" id="resultCount"></span>
+      </div>
+      <button class="ghost" id="shuffleBtn" style="display:none;">Shuffle again</button>
     </div>
     <div class="grid" id="resultsGrid"></div>
   </section>
