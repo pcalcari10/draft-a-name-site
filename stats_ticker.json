@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-25T00:38:32.970Z",
+  "generatedAt": "2026-09-25T00:55:09.824Z",
   "season": "2026",
   "week": 3,
   "thisWeek": {
@@ -10,7 +10,7 @@
         "last": "Love",
         "team": "GB",
         "pos": "QB",
-        "pts": 2.8,
+        "pts": 7.3,
         "pun": "Come and Get Your Love"
       },
       {
@@ -19,7 +19,7 @@
         "last": "Penix",
         "team": "ATL",
         "pos": "QB",
-        "pts": -0.3,
+        "pts": -0.1,
         "pun": "The Penix Mightier"
       }
     ],
@@ -30,7 +30,7 @@
         "last": "Robinson",
         "team": "ATL",
         "pos": "RB",
-        "pts": 4,
+        "pts": 16,
         "pun": "To Infinity and Bijan"
       },
       {
@@ -39,8 +39,17 @@
         "last": "Lloyd",
         "team": "GB",
         "pos": "RB",
-        "pts": 2.6,
+        "pts": 2.7,
         "pun": "Beast Mode 2.0"
+      },
+      {
+        "id": "brianrobinsonjr_atl",
+        "first": "Brian",
+        "last": "Robinson",
+        "team": "ATL",
+        "pos": "RB",
+        "pts": 1.5,
+        "pun": "Robinson's Revenge"
       },
       {
         "id": "kalebjohnson_gb",
@@ -54,6 +63,15 @@
     ],
     "WR": [
       {
+        "id": "christianwatson_gb",
+        "first": "Christian",
+        "last": "Watson",
+        "team": "GB",
+        "pos": "WR",
+        "pts": 7.4,
+        "pun": "Elementary, My Dear Watson"
+      },
+      {
         "id": "matthewgolden_gb",
         "first": "Matthew",
         "last": "Golden",
@@ -61,6 +79,15 @@
         "pos": "WR",
         "pts": 5.5,
         "pun": "Golden Goose"
+      },
+      {
+        "id": "skyymoore_gb",
+        "first": "Skyy",
+        "last": "Moore",
+        "team": "GB",
+        "pos": "WR",
+        "pts": 1.9,
+        "pun": "Skyy's the Limit"
       }
     ],
     "TE": [
@@ -72,6 +99,15 @@
         "pos": "TE",
         "pts": 3.4,
         "pun": "Kraft Beers"
+      },
+      {
+        "id": "kylepittssr_atl",
+        "first": "Kyle",
+        "last": "Pitts",
+        "team": "ATL",
+        "pos": "TE",
+        "pts": 1.5,
+        "pun": "Pitts & Giggles"
       }
     ],
     "K": []
@@ -160,6 +196,15 @@
         "pun": "Hurts So Good"
       },
       {
+        "id": "jordanlove_gb",
+        "first": "Jordan",
+        "last": "Love",
+        "team": "GB",
+        "pos": "QB",
+        "pts": 41.6,
+        "pun": "Come and Get Your Love"
+      },
+      {
         "id": "lamarjackson_bal",
         "first": "Lamar",
         "last": "Jackson",
@@ -167,15 +212,6 @@
         "pos": "QB",
         "pts": 40.8,
         "pun": "Lights, Camera, Jackson"
-      },
-      {
-        "id": "jordanlove_gb",
-        "first": "Jordan",
-        "last": "Love",
-        "team": "GB",
-        "pos": "QB",
-        "pts": 37,
-        "pun": "Come and Get Your Love"
       },
       {
         "id": "kirkcousins_lv",
@@ -188,6 +224,15 @@
       }
     ],
     "RB": [
+      {
+        "id": "bijanrobinson_atl",
+        "first": "Bijan",
+        "last": "Robinson",
+        "team": "ATL",
+        "pos": "RB",
+        "pts": 58.4,
+        "pun": "To Infinity and Bijan"
+      },
       {
         "id": "kennethwalkeriii_kc",
         "first": "Kenneth",
@@ -223,15 +268,6 @@
         "pos": "RB",
         "pts": 53,
         "pun": "King Henry's Court"
-      },
-      {
-        "id": "bijanrobinson_atl",
-        "first": "Bijan",
-        "last": "Robinson",
-        "team": "ATL",
-        "pos": "RB",
-        "pts": 46.4,
-        "pun": "To Infinity and Bijan"
       },
       {
         "id": "dandreswift_chi",
@@ -425,6 +461,15 @@
         "pun": "Amon Joy"
       },
       {
+        "id": "christianwatson_gb",
+        "first": "Christian",
+        "last": "Watson",
+        "team": "GB",
+        "pos": "WR",
+        "pts": 54.2,
+        "pun": "Elementary, My Dear Watson"
+      },
+      {
         "id": "chrisolave_no",
         "first": "Chris",
         "last": "Olave",
@@ -450,15 +495,6 @@
         "pos": "WR",
         "pts": 48.4,
         "pun": "Coker Head"
-      },
-      {
-        "id": "christianwatson_gb",
-        "first": "Christian",
-        "last": "Watson",
-        "team": "GB",
-        "pos": "WR",
-        "pts": 46.8,
-        "pun": "Elementary, My Dear Watson"
       },
       {
         "id": "davanteadams_lar",
