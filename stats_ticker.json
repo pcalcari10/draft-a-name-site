@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-25T03:10:08.753Z",
+  "generatedAt": "2026-09-25T03:25:56.564Z",
   "season": "2026",
   "week": 3,
   "thisWeek": {
@@ -10,7 +10,7 @@
         "last": "Love",
         "team": "GB",
         "pos": "QB",
-        "pts": 19.1,
+        "pts": 19.5,
         "pun": "Come and Get Your Love"
       },
       {
@@ -19,7 +19,7 @@
         "last": "Penix",
         "team": "ATL",
         "pos": "QB",
-        "pts": 15.2,
+        "pts": 15,
         "pun": "The Penix Mightier"
       }
     ],
@@ -59,6 +59,15 @@
         "pos": "RB",
         "pts": 2.6,
         "pun": "Kaleb Johnson and the Fantasy Machine"
+      },
+      {
+        "id": "chrisbrooks_gb",
+        "first": "Chris",
+        "last": "Brooks",
+        "team": "GB",
+        "pos": "RB",
+        "pts": 1.4,
+        "pun": "Livin' on a Brooks"
       }
     ],
     "WR": [
@@ -86,7 +95,7 @@
         "last": "Golden",
         "team": "GB",
         "pos": "WR",
-        "pts": 18,
+        "pts": 21,
         "pun": "Golden Goose"
       },
       {
@@ -104,7 +113,7 @@
         "last": "Sturdivant",
         "team": "GB",
         "pos": "WR",
-        "pts": 3.2,
+        "pts": 5.2,
         "pun": "Straight Outta Sturdivant"
       },
       {
@@ -210,7 +219,7 @@
         "last": "Love",
         "team": "GB",
         "pos": "QB",
-        "pts": 53.4,
+        "pts": 53.8,
         "pun": "Come and Get Your Love"
       },
       {
@@ -569,6 +578,15 @@
         "pun": "Coker Head"
       },
       {
+        "id": "matthewgolden_gb",
+        "first": "Matthew",
+        "last": "Golden",
+        "team": "GB",
+        "pos": "WR",
+        "pts": 46.3,
+        "pun": "Golden Goose"
+      },
+      {
         "id": "davanteadams_lar",
         "first": "Davante",
         "last": "Adams",
@@ -576,15 +594,6 @@
         "pos": "WR",
         "pts": 45.1,
         "pun": "Davante's Inferno"
-      },
-      {
-        "id": "matthewgolden_gb",
-        "first": "Matthew",
-        "last": "Golden",
-        "team": "GB",
-        "pos": "WR",
-        "pts": 43.3,
-        "pun": "Golden Goose"
       },
       {
         "id": "drakelondon_atl",
