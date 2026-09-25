@@ -876,21 +876,24 @@ function buildResults(){
 
   // Guarantee exactly one result for every entity the user actually searched
   // for and added — so nothing they picked gets crowded out of the results.
+  // Picks favor more-liked puns via weightedPick, but still land on
+  // everything eventually since every name keeps a baseline chance.
   selectedPlayers.forEach(p => {
-    const picks = shuffle(p.names);
+    const picks = weightedPick(p.names, Math.min(p.names.length, 3));
     if(picks[0]) guaranteed.push({ name: picks[0], type: 'solo', meta: `${fullName(p)} · ${p.team}` });
-    picks.slice(1, 3).forEach(n => bonusPool.push({ name: n, type: 'solo', meta: `${fullName(p)} · ${p.team}` }));
+    picks.slice(1).forEach(n => bonusPool.push({ name: n, type: 'solo', meta: `${fullName(p)} · ${p.team}` }));
   });
   selectedTeams.forEach(t => {
-    const picks = shuffle(getTeamNames(t));
+    const teamNames = getTeamNames(t);
+    const picks = weightedPick(teamNames, Math.min(teamNames.length, 3));
     if(picks[0]) guaranteed.push({ name: picks[0], type: 'team', meta: `${fullName(t)} defense` });
-    picks.slice(1, 3).forEach(n => bonusPool.push({ name: n, type: 'team', meta: `${fullName(t)} defense` }));
+    picks.slice(1).forEach(n => bonusPool.push({ name: n, type: 'team', meta: `${fullName(t)} defense` }));
     // Defensive players on that team are bonus content only, not guaranteed —
     // this used to multiply fast when a team had a lot of defenders.
     getDefensivePlayersForTeam(t.abbr)
       .filter(dp => !selectedPlayers.find(p => p.id === dp.id))
       .forEach(dp => {
-        shuffle(dp.names).slice(0, 1).forEach(n => {
+        weightedPick(dp.names, 1).forEach(n => {
           bonusPool.push({ name: n, type: 'solo', meta: `${fullName(dp)} · ${dp.team} defense` });
         });
       });
@@ -899,7 +902,7 @@ function buildResults(){
     guaranteed.push({ name: w.names[0], type: 'wild', meta: 'Handpicked' });
   });
   selectedGenericAll.forEach(g => {
-    shuffle(g.names).slice(0, 3).forEach(n => bonusPool.push({ name: n, type: 'wild', meta: 'From the generic list' }));
+    weightedPick(g.names, Math.min(g.names.length, 3)).forEach(n => bonusPool.push({ name: n, type: 'wild', meta: 'From the generic list' }));
   });
 
   // Combos only make sense between two players — bonus content, not guaranteed
@@ -913,7 +916,7 @@ function buildResults(){
     shuffle(pairs).forEach(([a, b]) => {
       const curated = findCuratedCombo(a, b);
       if(curated){
-        const n = shuffle(curated.names)[0];
+        const n = weightedPick(curated.names, 1)[0];
         bonusPool.push({ name: n, type: 'combo', meta: `${fullName(a)} + ${fullName(b)}` });
       } else {
         const template = COMBO_TEMPLATES[Math.floor(Math.random() * COMBO_TEMPLATES.length)];
@@ -927,22 +930,23 @@ function buildResults(){
   const bonusTeamAbbrs = [...new Set(selectedPlayers.map(p => p.team))].filter(a => !directTeamAbbrs.has(a));
   const bonusTeams = bonusTeamAbbrs.map(abbr => TEAMS.find(t => t.abbr === abbr)).filter(Boolean);
   bonusTeams.forEach(team => {
-    shuffle(getTeamNames(team)).slice(0, 1).forEach(n => {
+    weightedPick(getTeamNames(team), 1).forEach(n => {
       bonusPool.push({ name: n, type: 'wild', meta: `${team.city} ${team.nickname} pride` });
     });
   });
 
   // A couple of generic crowd-favorites, always as bonus content
   const pickedWildcardNames = new Set(selectedWildcards.map(w => w.names[0]));
-  shuffle(GENERIC_WILDCARDS.filter(n => !pickedWildcardNames.has(n))).slice(0, 2).forEach(n => {
+  weightedPick(GENERIC_WILDCARDS.filter(n => !pickedWildcardNames.has(n)), 2).forEach(n => {
     bonusPool.push({ name: n, type: 'wild', meta: 'Crowd favorite' });
   });
 
-  // Fill any remaining room (up to the cap) with a random sample of bonus
-  // content, so results stay varied without growing unbounded as more
-  // players get added to the roster.
+  // Fill any remaining room (up to the cap) with a weighted sample of bonus
+  // content, so results stay varied (and lean toward what's popular) without
+  // growing unbounded as more players get added to the roster.
   const remainingSlots = Math.max(TOTAL_RESULTS_CAP - guaranteed.length, 0);
-  const finalResults = guaranteed.concat(shuffle(bonusPool).slice(0, remainingSlots));
+  const bonusPicked = weightedPickBy(bonusPool, r => r.name, remainingSlots);
+  const finalResults = guaranteed.concat(bonusPicked);
 
   return shuffle(finalResults);
 }
@@ -1005,6 +1009,42 @@ function hashKey(str){
 // count no matter which player/team surface it's liked from.
 function likeIdFor(punText){
   return hashKey(punText);
+}
+
+// A local cache of like counts, used to bias which puns get picked when
+// generating results — not just to display counts.
+let LIKES_MAP = {};
+async function loadLikesMap(){
+  try {
+    const snap = await likesDb.collection(LIKES_COLLECTION).orderBy('count', 'desc').limit(500).get();
+    snap.forEach(doc => { LIKES_MAP[doc.id] = doc.data().count || 0; });
+  } catch(err){ console.error('loadLikesMap failed', err); }
+}
+
+// Weighted random pick without replacement: every name has a baseline weight
+// of 1 (so everything still has a chance), plus its like count, so more
+// popular puns come up more often without making results fully predictable.
+// getText extracts the pun string from each item (identity function for a
+// plain array of strings, or a field accessor for an array of objects).
+function weightedPickBy(items, getText, n){
+  if(!items || items.length === 0) return [];
+  const pool = items.map(item => ({ item, weight: 1 + (LIKES_MAP[likeIdFor(getText(item))] || 0) }));
+  const picked = [];
+  for(let i = 0; i < n && pool.length > 0; i++){
+    const totalWeight = pool.reduce((sum, w) => sum + w.weight, 0);
+    let r = Math.random() * totalWeight;
+    let idx = 0;
+    for(; idx < pool.length - 1; idx++){
+      r -= pool[idx].weight;
+      if(r <= 0) break;
+    }
+    picked.push(pool[idx].item);
+    pool.splice(idx, 1);
+  }
+  return picked;
+}
+function weightedPick(names, n){
+  return weightedPickBy(names, n => n, n);
 }
 
 function getLikedSet(){
@@ -1209,6 +1249,7 @@ Promise.all([
 
   mergeExtraPlayers();
   mergeSubmittedNames();
+  loadLikesMap();
 }).catch(err => {
   console.error('Failed to load player database', err);
   searchInput.placeholder = 'Failed to load \u2014 try refreshing the page';
