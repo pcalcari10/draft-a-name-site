@@ -50,7 +50,7 @@
   @media (max-width: 640px) {
     .sport-nav-inner { flex-wrap: nowrap; overflow-x: auto; -webkit-overflow-scrolling: touch; scrollbar-width: none; }
     .sport-nav-inner::-webkit-scrollbar { display: none; }
-    .sport-tab, .sport-tab-wrap { flex-shrink: 0; }
+    .sport-tab { flex-shrink: 0; }
   }
   .sport-tab {
     font-family: var(--font-body); font-size: 13px; font-weight: 600; color: var(--chalk-500); text-decoration: none;
@@ -63,14 +63,13 @@
     font-size: 9px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.03em;
     background: var(--navy-700); color: var(--chalk-500); padding: 1px 5px; border-radius: 8px;
   }
-  .sport-tab-wrap { position: relative; }
   .sport-dropdown {
-    display: none; position: absolute; top: 100%; left: 0;
+    display: none; position: fixed; top: 0; left: 0;
     background: var(--navy-900); border: 1px solid var(--line); border-radius: 10px;
-    padding: 10px 6px 6px; min-width: 220px; z-index: 30;
+    padding: 10px 6px 6px; min-width: 220px; z-index: 100;
     box-shadow: 0 14px 30px rgba(0,0,0,0.35);
   }
-  .sport-tab-wrap:hover .sport-dropdown, .sport-tab-wrap:focus-within .sport-dropdown, .sport-tab-wrap.open .sport-dropdown { display: block; }
+  .sport-dropdown.open { display: block; }
   .sport-dropdown a {
     display: block; padding: 9px 12px; border-radius: 6px;
     color: var(--chalk-300); text-decoration: none; font-size: 13.5px; font-weight: 500;
@@ -112,39 +111,59 @@
 <body>
 <nav class="sport-nav">
   <div class="sport-nav-inner">
-    <div class="sport-tab-wrap">
-      <a href="/" class="sport-tab">🏈 Fantasy Football</a>
-      <div class="sport-dropdown">
-        <a href="/">🔍 Search</a>
-        <a href="/suggest/">💡 Suggest a Name</a>
-        <a href="/league-importer/">📥 Team Importer</a>
-      </div>
-    </div>
+    <a href="/" class="sport-tab" id="footballTab">🏈 Fantasy Football</a>
     <a href="/baseball/" class="sport-tab active">⚾ Fantasy Baseball</a>
     <a href="/basketball/" class="sport-tab">🏀 Fantasy Basketball <span class="soon-badge">Soon</span></a>
   </div>
 </nav>
+<div class="sport-dropdown" id="sportDropdown">
+  <a href="/">🔍 Search</a>
+  <a href="/suggest/">💡 Suggest a Name</a>
+  <a href="/league-importer/">📥 Team Importer</a>
+</div>
 <script>
-// Tap-to-toggle for the sport nav dropdown, since touch devices have no
-// hover state at all — without this, tapping the trigger just navigates
-// away before the dropdown ever has a chance to show. Desktop keeps the
-// instant hover behavior from CSS; this is an additional path, not a
-// replacement.
-document.querySelectorAll('.sport-tab-wrap').forEach(wrap => {
-  const trigger = wrap.querySelector(':scope > .sport-tab');
+// The dropdown lives outside the (horizontally scrollable, on mobile) nav
+// bar entirely and is positioned with JS against the trigger's own
+// coordinates, so it can never get clipped by a scrolling/overflow ancestor
+// the way a nested absolutely-positioned child would be.
+(function(){
+  const trigger = document.getElementById('footballTab');
+  const dropdown = document.getElementById('sportDropdown');
+  if(!trigger || !dropdown) return;
+
+  function positionDropdown(){
+    const rect = trigger.getBoundingClientRect();
+    dropdown.style.top = (rect.bottom + 4) + 'px';
+    dropdown.style.left = rect.left + 'px';
+  }
+  function openDropdown(){
+    positionDropdown();
+    dropdown.classList.add('open');
+  }
+  function closeDropdown(){
+    dropdown.classList.remove('open');
+  }
+
+  trigger.addEventListener('mouseenter', openDropdown);
+  trigger.addEventListener('mouseleave', () => {
+    setTimeout(() => { if(!dropdown.matches(':hover')) closeDropdown(); }, 100);
+  });
+  dropdown.addEventListener('mouseleave', closeDropdown);
+
   trigger.addEventListener('click', (e) => {
-    if(!wrap.classList.contains('open')){
+    if(!dropdown.classList.contains('open')){
       e.preventDefault();
-      document.querySelectorAll('.sport-tab-wrap.open').forEach(w => w.classList.remove('open'));
-      wrap.classList.add('open');
+      openDropdown();
     }
   });
-});
-document.addEventListener('click', (e) => {
-  if(!e.target.closest('.sport-tab-wrap')){
-    document.querySelectorAll('.sport-tab-wrap.open').forEach(w => w.classList.remove('open'));
-  }
-});
+  document.addEventListener('click', (e) => {
+    if(e.target !== trigger && !trigger.contains(e.target) && !e.target.closest('.sport-dropdown')){
+      closeDropdown();
+    }
+  });
+  window.addEventListener('scroll', () => { if(dropdown.classList.contains('open')) positionDropdown(); }, { passive: true });
+  window.addEventListener('resize', () => { if(dropdown.classList.contains('open')) positionDropdown(); });
+})();
 </script>
 <div class="wrap">
 
