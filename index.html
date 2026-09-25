@@ -330,6 +330,11 @@
     padding: 16px 16px 14px;
     position: relative;
     border-left: 5px solid var(--turf-500);
+    height: 175px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
   }
   .card.combo { border-left-color: var(--coral-500); }
   .card.wild { border-left-color: var(--gold-400); }
@@ -341,6 +346,10 @@
     line-height: 1.12;
     margin: 0 0 10px;
     padding-right: 34px;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
   }
   .card .meta { font-size: 12.5px; color: #4A5A6B; display: flex; gap: 8px; align-items: center; flex-wrap: wrap; }
   .tag {
@@ -864,7 +873,7 @@ function shuffle(arr){
   return a;
 }
 
-const TOTAL_RESULTS_CAP = 12;
+const TOTAL_RESULTS_CAP = 9;
 
 function buildResults(){
   const guaranteed = [];
