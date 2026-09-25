@@ -180,6 +180,9 @@
       <span><span class="dot template"></span><span class="js-template-count">—</span> still placeholder</span>
       <span class="js-total-count"></span>
     </div>
+    <div class="stat-row" style="margin-top:6px;">
+      <span>🛡 <span class="js-team-pun-count">—</span> curated team puns (<span class="js-team-coverage">—</span> have at least one)</span>
+    </div>
   </div>
 
   <div class="filter-row">
@@ -466,6 +469,7 @@ const TEAM_FULL = {
 };
 
 let allPlayers = [];
+let allTeams = [];
 
 // ---------- Performance data (best placeholder players to prioritize) ----------
 let sleeperIdMap = null; // normalized "first last" -> sleeper_id
@@ -581,6 +585,11 @@ function updateProgressStats(){
   document.querySelectorAll('.js-curated-count').forEach(el => el.textContent = curated);
   document.querySelectorAll('.js-template-count').forEach(el => el.textContent = template);
   document.querySelectorAll('.js-total-count').forEach(el => el.textContent = total + ' total players');
+
+  const teamsWithNames = allTeams.filter(t => t.names && t.names.length > 0);
+  const teamPunCount = allTeams.reduce((sum, t) => sum + (t.names ? t.names.length : 0), 0);
+  document.querySelectorAll('.js-team-pun-count').forEach(el => el.textContent = teamPunCount);
+  document.querySelectorAll('.js-team-coverage').forEach(el => el.textContent = `${teamsWithNames.length}/${allTeams.length} teams`);
 }
 
 function renderTierList(tier, searchElId, sortElId, containerElId){
@@ -865,6 +874,13 @@ async function boot(){
     data.forEach(p => allPlayers.push(p));
   } catch(err){
     console.error('Failed to load players.json', err);
+  }
+  try {
+    const res = await fetch('../teams.json');
+    const data = await res.json();
+    data.forEach(t => allTeams.push(t));
+  } catch(err){
+    console.error('Failed to load teams.json', err);
   }
   updateProgressStats();
   renderPlaceholders();
