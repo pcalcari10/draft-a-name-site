@@ -191,7 +191,7 @@
       <span>🏈 <span class="js-breakdown-players">—</span> player puns</span>
       <span>🛡 <span class="js-breakdown-teams">—</span> team puns</span>
       <span>🤝 <span class="js-breakdown-combos">—</span> combo puns</span>
-      <span>🃏 <span class="js-breakdown-generic">—</span> generic names</span>
+      <span id="genericBreakdownWrap">🃏 <span class="js-breakdown-generic">—</span> generic names</span>
     </div>
   </div>
 
@@ -482,6 +482,7 @@ let allPlayers = [];
 let allTeams = [];
 let allCombos = [];
 let allGeneric = [];
+let genericByCategory = {};
 
 // ---------- Performance data (best placeholder players to prioritize) ----------
 let sleeperIdMap = null; // normalized "first last" -> sleeper_id
@@ -613,6 +614,14 @@ function updateProgressStats(){
   document.querySelectorAll('.js-breakdown-teams').forEach(el => el.textContent = teamPunCount.toLocaleString());
   document.querySelectorAll('.js-breakdown-combos').forEach(el => el.textContent = comboNameCount.toLocaleString());
   document.querySelectorAll('.js-breakdown-generic').forEach(el => el.textContent = allGeneric.length.toLocaleString());
+
+  const genericWrap = document.getElementById('genericBreakdownWrap');
+  if(genericWrap && Object.keys(genericByCategory).length > 0){
+    const byCategoryText = Object.entries(genericByCategory)
+      .map(([cat, names]) => `${names.length} ${cat}`)
+      .join(', ');
+    genericWrap.innerHTML = `🃏 <span class="js-breakdown-generic">${allGeneric.length}</span> generic names <span style="color:var(--dim); font-size:11.5px;">(${byCategoryText})</span>`;
+  }
 }
 
 function renderTierList(tier, searchElId, sortElId, containerElId){
@@ -913,7 +922,9 @@ async function boot(){
   }
   try {
     const res = await fetch('../generic.json');
-    allGeneric = await res.json();
+    const data = await res.json();
+    genericByCategory = data;
+    allGeneric = Object.values(data).flat();
   } catch(err){
     console.error('Failed to load generic.json', err);
   }
