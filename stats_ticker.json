@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-27T22:26:40.041Z",
+  "generatedAt": "2026-09-27T22:42:07.652Z",
   "season": "2026",
   "week": 3,
   "thisWeek": {
@@ -12,6 +12,15 @@
         "pos": "QB",
         "pts": 29.7,
         "pun": "Hey Darnold"
+      },
+      {
+        "id": "tylershough_no",
+        "first": "Tyler",
+        "last": "Shough",
+        "team": "NO",
+        "pos": "QB",
+        "pts": 26.4,
+        "pun": "Aww Shoughs"
       },
       {
         "id": "genosmith_nyj",
@@ -39,15 +48,6 @@
         "pos": "QB",
         "pts": 22.6,
         "pun": "Beg, Burrow, and Steal"
-      },
-      {
-        "id": "tylershough_no",
-        "first": "Tyler",
-        "last": "Shough",
-        "team": "NO",
-        "pos": "QB",
-        "pts": 21.8,
-        "pun": "Aww Shoughs"
       },
       {
         "id": "trevorlawrence_jac",
@@ -109,7 +109,7 @@
         "last": "Purdy",
         "team": "SF",
         "pos": "QB",
-        "pts": 17.8,
+        "pts": 18.2,
         "pun": "Purdy Good Team"
       }
     ],
@@ -151,6 +151,15 @@
         "pun": "This is Your Final Warren"
       },
       {
+        "id": "derrickhenry_bal",
+        "first": "Derrick",
+        "last": "Henry",
+        "team": "BAL",
+        "pos": "RB",
+        "pts": 20.2,
+        "pun": "King Henry's Court"
+      },
+      {
         "id": "jamescookiii_buf",
         "first": "James",
         "last": "Cook",
@@ -160,13 +169,31 @@
         "pun": "James Cooked"
       },
       {
-        "id": "derrickhenry_bal",
-        "first": "Derrick",
-        "last": "Henry",
-        "team": "BAL",
+        "id": "jeremiyahlove_ari",
+        "first": "Jeremiyah",
+        "last": "Love",
+        "team": "ARI",
         "pos": "RB",
-        "pts": 17.3,
-        "pun": "King Henry's Court"
+        "pts": 19.3,
+        "pun": "Come and Get Your Love"
+      },
+      {
+        "id": "christianmccaffrey_sf",
+        "first": "Christian",
+        "last": "McCaffrey",
+        "team": "SF",
+        "pos": "RB",
+        "pts": 18.6,
+        "pun": "Run CMC"
+      },
+      {
+        "id": "javontewilliams_dal",
+        "first": "Javonte",
+        "last": "Williams",
+        "team": "DAL",
+        "pos": "RB",
+        "pts": 18.1,
+        "pun": "One In a Williams"
       },
       {
         "id": "bhayshultuten_jac",
@@ -176,24 +203,6 @@
         "pos": "RB",
         "pts": 17,
         "pun": "King Tuten-khamun"
-      },
-      {
-        "id": "christianmccaffrey_sf",
-        "first": "Christian",
-        "last": "McCaffrey",
-        "team": "SF",
-        "pos": "RB",
-        "pts": 16.7,
-        "pun": "Run CMC"
-      },
-      {
-        "id": "javontewilliams_dal",
-        "first": "Javonte",
-        "last": "Williams",
-        "team": "DAL",
-        "pos": "RB",
-        "pts": 16.6,
-        "pun": "One In a Williams"
       },
       {
         "id": "chubahubbard_car",
@@ -241,15 +250,6 @@
         "pun": "The Skattebo Express"
       },
       {
-        "id": "jeremiyahlove_ari",
-        "first": "Jeremiyah",
-        "last": "Love",
-        "team": "ARI",
-        "pos": "RB",
-        "pts": 12,
-        "pun": "Come and Get Your Love"
-      },
-      {
         "id": "rachaadwhite_was",
         "first": "Rachaad",
         "last": "White",
@@ -266,6 +266,15 @@
         "pos": "RB",
         "pts": 11,
         "pun": "Robinson's Revenge"
+      },
+      {
+        "id": "mikewashingtonjr_lv",
+        "first": "Mike",
+        "last": "Washington",
+        "team": "LV",
+        "pos": "RB",
+        "pts": 10.9,
+        "pun": "Washington Wizards"
       },
       {
         "id": "georgeholani_sea",
@@ -320,15 +329,6 @@
         "pos": "RB",
         "pts": 9.1,
         "pun": "Marks-tastic Voyage"
-      },
-      {
-        "id": "tyjohnson_buf",
-        "first": "Ty",
-        "last": "Johnson",
-        "team": "BUF",
-        "pos": "RB",
-        "pts": 9,
-        "pun": "Johnson Happens"
       }
     ],
     "WR": [
@@ -378,6 +378,15 @@
         "pun": "Elementary, My Dear Watson"
       },
       {
+        "id": "michaelwilson_ari",
+        "first": "Michael",
+        "last": "Wilson",
+        "team": "ARI",
+        "pos": "WR",
+        "pts": 21.7,
+        "pun": "WILSON!🏐"
+      },
+      {
         "id": "teehiggins_cin",
         "first": "Tee",
         "last": "Higgins",
@@ -394,15 +403,6 @@
         "pos": "WR",
         "pts": 21,
         "pun": "Golden Goose"
-      },
-      {
-        "id": "michaelwilson_ari",
-        "first": "Michael",
-        "last": "Wilson",
-        "team": "ARI",
-        "pos": "WR",
-        "pts": 20.1,
-        "pun": "WILSON!🏐"
       },
       {
         "id": "terrymclaurin_was",
@@ -522,6 +522,15 @@
         "pun": "Double Downs"
       },
       {
+        "id": "georgepickens_dal",
+        "first": "George",
+        "last": "Pickens",
+        "team": "DAL",
+        "pos": "WR",
+        "pts": 12.6,
+        "pun": "Slim Pickens"
+      },
+      {
         "id": "mikeevans_sf",
         "first": "Mike",
         "last": "Evans",
@@ -538,15 +547,6 @@
         "pos": "WR",
         "pts": 12.3,
         "pun": "Tremayne of Fame"
-      },
-      {
-        "id": "dkmetcalf_pit",
-        "first": "DK",
-        "last": "Metcalf",
-        "team": "PIT",
-        "pos": "WR",
-        "pts": 12.1,
-        "pun": "How I Metcalf Your Mother"
       }
     ],
     "TE": [
@@ -583,8 +583,17 @@
         "last": "Bowers",
         "team": "LV",
         "pos": "TE",
-        "pts": 17.2,
+        "pts": 20.2,
         "pun": "Mighty Morphin Bower Rangers"
+      },
+      {
+        "id": "noahfant_no",
+        "first": "Noah",
+        "last": "Fant",
+        "team": "NO",
+        "pos": "TE",
+        "pts": 17.8,
+        "pun": "Fant-A-Palooza"
       },
       {
         "id": "jeremyruckert_nyj",
@@ -648,15 +657,6 @@
         "pos": "TE",
         "pts": 10.5,
         "pun": "Dulcich-A-Palooza"
-      },
-      {
-        "id": "darrenwaller_car",
-        "first": "Darren",
-        "last": "Waller",
-        "team": "CAR",
-        "pos": "TE",
-        "pts": 10.1,
-        "pun": "Waller'd Up and Ready"
       }
     ],
     "K": [
@@ -764,6 +764,15 @@
         "pun": "Quit Joshin' Around"
       },
       {
+        "id": "tylershough_no",
+        "first": "Tyler",
+        "last": "Shough",
+        "team": "NO",
+        "pos": "QB",
+        "pts": 74,
+        "pun": "Aww Shoughs"
+      },
+      {
         "id": "bryceyoung_car",
         "first": "Bryce",
         "last": "Young",
@@ -773,13 +782,13 @@
         "pun": "The Bryce Is Right"
       },
       {
-        "id": "tylershough_no",
-        "first": "Tyler",
-        "last": "Shough",
-        "team": "NO",
+        "id": "brockpurdy_sf",
+        "first": "Brock",
+        "last": "Purdy",
+        "team": "SF",
         "pos": "QB",
-        "pts": 69.4,
-        "pun": "Aww Shoughs"
+        "pts": 68.8,
+        "pun": "Purdy Good Team"
       },
       {
         "id": "patrickmahomesii_kc",
@@ -791,15 +800,6 @@
         "pun": "Sherlock Mahomes"
       },
       {
-        "id": "brockpurdy_sf",
-        "first": "Brock",
-        "last": "Purdy",
-        "team": "SF",
-        "pos": "QB",
-        "pts": 68.4,
-        "pun": "Purdy Good Team"
-      },
-      {
         "id": "jaredgoff_det",
         "first": "Jared",
         "last": "Goff",
@@ -807,6 +807,15 @@
         "pos": "QB",
         "pts": 65.6,
         "pun": "I'm About To Go Goff"
+      },
+      {
+        "id": "dakprescott_dal",
+        "first": "Dak",
+        "last": "Prescott",
+        "team": "DAL",
+        "pos": "QB",
+        "pts": 58.1,
+        "pun": "The Boys Are Dak In Town"
       },
       {
         "id": "deshaunwatson_cle",
@@ -852,15 +861,6 @@
         "pos": "QB",
         "pts": 50.9,
         "pun": "Geno Grigio"
-      },
-      {
-        "id": "dakprescott_dal",
-        "first": "Dak",
-        "last": "Prescott",
-        "team": "DAL",
-        "pos": "QB",
-        "pts": 50.6,
-        "pun": "The Boys Are Dak In Town"
       }
     ],
     "RB": [
@@ -897,7 +897,7 @@
         "last": "Henry",
         "team": "BAL",
         "pos": "RB",
-        "pts": 70.3,
+        "pts": 73.2,
         "pun": "King Henry's Court"
       },
       {
@@ -915,7 +915,7 @@
         "last": "McCaffrey",
         "team": "SF",
         "pos": "RB",
-        "pts": 53.1,
+        "pts": 55,
         "pun": "Run CMC"
       },
       {
@@ -926,6 +926,15 @@
         "pos": "RB",
         "pts": 53.1,
         "pun": "Chubawamba"
+      },
+      {
+        "id": "javontewilliams_dal",
+        "first": "Javonte",
+        "last": "Williams",
+        "team": "DAL",
+        "pos": "RB",
+        "pts": 50.3,
+        "pun": "One In a Williams"
       },
       {
         "id": "jamescookiii_buf",
@@ -942,17 +951,8 @@
         "last": "Jeanty",
         "team": "LV",
         "pos": "RB",
-        "pts": 48.9,
+        "pts": 49.5,
         "pun": "Fire and Ashton"
-      },
-      {
-        "id": "javontewilliams_dal",
-        "first": "Javonte",
-        "last": "Williams",
-        "team": "DAL",
-        "pos": "RB",
-        "pts": 48.8,
-        "pun": "One In a Williams"
       },
       {
         "id": "dandreswift_chi",
@@ -973,6 +973,15 @@
         "pun": "Breece Lightning"
       },
       {
+        "id": "buckyirving_tb",
+        "first": "Bucky",
+        "last": "Irving",
+        "team": "TB",
+        "pos": "RB",
+        "pts": 41,
+        "pun": "Bucky Beaver Dam"
+      },
+      {
         "id": "bhayshultuten_jac",
         "first": "Bhayshul",
         "last": "Tuten",
@@ -991,15 +1000,6 @@
         "pun": "This is Your Final Warren"
       },
       {
-        "id": "buckyirving_tb",
-        "first": "Bucky",
-        "last": "Irving",
-        "team": "TB",
-        "pos": "RB",
-        "pts": 40.4,
-        "pun": "Bucky Beaver Dam"
-      },
-      {
         "id": "davidmontgomery_hou",
         "first": "David",
         "last": "Montgomery",
@@ -1007,6 +1007,15 @@
         "pos": "RB",
         "pts": 40.1,
         "pun": "Full Monty"
+      },
+      {
+        "id": "jeremiyahlove_ari",
+        "first": "Jeremiyah",
+        "last": "Love",
+        "team": "ARI",
+        "pos": "RB",
+        "pts": 39.8,
+        "pun": "Come and Get Your Love"
       },
       {
         "id": "chasebrown_cin",
@@ -1027,15 +1036,6 @@
         "pun": "The Skattebo Express"
       },
       {
-        "id": "jeremiyahlove_ari",
-        "first": "Jeremiyah",
-        "last": "Love",
-        "team": "ARI",
-        "pos": "RB",
-        "pts": 32.5,
-        "pun": "Come and Get Your Love"
-      },
-      {
         "id": "omarionhampton_lac",
         "first": "Omarion",
         "last": "Hampton",
@@ -1054,6 +1054,15 @@
         "pun": "Williams-Sonoma Touchdowns"
       },
       {
+        "id": "travisetiennejr_no",
+        "first": "Travis",
+        "last": "Etienne",
+        "team": "NO",
+        "pos": "RB",
+        "pts": 30.9,
+        "pun": "The Etienne Express"
+      },
+      {
         "id": "rachaadwhite_was",
         "first": "Rachaad",
         "last": "White",
@@ -1061,15 +1070,6 @@
         "pos": "RB",
         "pts": 30.1,
         "pun": "Rachaad White and the 7 Dwarfs"
-      },
-      {
-        "id": "travisetiennejr_no",
-        "first": "Travis",
-        "last": "Etienne",
-        "team": "NO",
-        "pos": "RB",
-        "pts": 29.3,
-        "pun": "The Etienne Express"
       },
       {
         "id": "kylemonangai_chi",
@@ -1115,7 +1115,7 @@
         "last": "Lamb",
         "team": "DAL",
         "pos": "WR",
-        "pts": 60.6,
+        "pts": 62.6,
         "pun": "Silence of the Lambs"
       },
       {
@@ -1272,6 +1272,15 @@
         "pun": "Ladd-y and the Tramp"
       },
       {
+        "id": "michaelwilson_ari",
+        "first": "Michael",
+        "last": "Wilson",
+        "team": "ARI",
+        "pos": "WR",
+        "pts": 36.1,
+        "pun": "WILSON!🏐"
+      },
+      {
         "id": "devontasmith_phi",
         "first": "DeVonta",
         "last": "Smith",
@@ -1288,15 +1297,6 @@
         "pos": "WR",
         "pts": 35.4,
         "pun": "Jakobi-Wan Kenobi"
-      },
-      {
-        "id": "michaelwilson_ari",
-        "first": "Michael",
-        "last": "Wilson",
-        "team": "ARI",
-        "pos": "WR",
-        "pts": 34.5,
-        "pun": "WILSON!🏐"
       }
     ],
     "TE": [
@@ -1400,13 +1400,13 @@
         "pun": "Waller'd Up and Ready"
       },
       {
-        "id": "mikegesicki_cin",
-        "first": "Mike",
-        "last": "Gesicki",
-        "team": "CIN",
+        "id": "jakeferguson_dal",
+        "first": "Jake",
+        "last": "Ferguson",
+        "team": "DAL",
         "pos": "TE",
-        "pts": 31.5,
-        "pun": "Gesicki-tastic Voyage"
+        "pts": 32.2,
+        "pun": "Turd Ferguson"
       }
     ],
     "K": [
@@ -1447,6 +1447,15 @@
         "pun": "Chris & Chill"
       },
       {
+        "id": "tylerloop_bal",
+        "first": "Tyler",
+        "last": "Loop",
+        "team": "BAL",
+        "pos": "K",
+        "pts": 25,
+        "pun": "Jumping Through Loops"
+      },
+      {
         "id": "willreichard_min",
         "first": "Will",
         "last": "Reichard",
@@ -1454,15 +1463,6 @@
         "pos": "K",
         "pts": 24,
         "pun": "Reichard Happens"
-      },
-      {
-        "id": "tylerloop_bal",
-        "first": "Tyler",
-        "last": "Loop",
-        "team": "BAL",
-        "pos": "K",
-        "pts": 24,
-        "pun": "Jumping Through Loops"
       },
       {
         "id": "jasonmyers_sea",
