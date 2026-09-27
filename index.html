@@ -423,13 +423,13 @@
     pointer-events: none; animation: football-fly-across 1.3s cubic-bezier(0.25, 0.1, 0.4, 1) forwards;
   }
   @keyframes football-fly-across {
-    0%   { left: -5%;  top: 8%;  transform: rotate(0deg) scale(0.3); opacity: 0.9; }
-    15%  { left: 12%;  top: 16%; transform: rotate(280deg) scale(0.5); }
-    35%  { left: 28%;  top: 26%; transform: rotate(640deg) scale(0.85); }
-    55%  { left: 42%;  top: 38%; transform: rotate(1000deg) scale(1.4); }
-    72%  { left: 50%;  top: 48%; transform: rotate(1300deg) scale(2.1); }
-    86%  { left: 55%;  top: 55%; transform: rotate(1540deg) scale(3); opacity: 1; }
-    100% { left: 58%;  top: 60%; transform: rotate(1660deg) scale(4.2); opacity: 0; }
+    0%   { left: -5%;  top: 8%;  transform: perspective(500px) rotateY(0deg)    rotate(-8deg) scale(0.3); opacity: 0.9; }
+    15%  { left: 12%;  top: 16%; transform: perspective(500px) rotateY(720deg)  rotate(-6deg) scale(0.5); }
+    35%  { left: 28%;  top: 26%; transform: perspective(500px) rotateY(1440deg) rotate(-4deg) scale(0.85); }
+    55%  { left: 42%;  top: 38%; transform: perspective(500px) rotateY(2160deg) rotate(-2deg) scale(1.4); }
+    72%  { left: 50%;  top: 48%; transform: perspective(500px) rotateY(2880deg) rotate(0deg)  scale(2.1); }
+    86%  { left: 55%;  top: 55%; transform: perspective(500px) rotateY(3400deg) rotate(2deg)  scale(3); opacity: 1; }
+    100% { left: 58%;  top: 60%; transform: perspective(500px) rotateY(3700deg) rotate(4deg)  scale(4.2); opacity: 0; }
   }
   .landing-burst {
     position: fixed; z-index: 300; pointer-events: none; font-size: 22px;
