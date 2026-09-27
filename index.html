@@ -823,9 +823,23 @@ function buildEntities(){
   // below are, so search results stay to players, teams, and named
   // categories rather than surfacing every single wildcard phrase directly.
   ENTITIES.push({ id: 'generic_all', kind: 'genericAll', names: GENERIC_WILDCARDS });
-  ENTITIES.push({ id: 'generic_movie', kind: 'genericMovie', names: GENERIC_BY_CATEGORY.movie || [] });
-  ENTITIES.push({ id: 'generic_music', kind: 'genericMusic', names: GENERIC_BY_CATEGORY.music || [] });
-  ENTITIES.push({ id: 'generic_tv', kind: 'genericTv', names: GENERIC_BY_CATEGORY.tv || [] });
+  function categoryPool(category){
+    const fromGeneric = GENERIC_BY_CATEGORY[category] || [];
+    // Player-specific puns can also carry a category tag (e.g. a pun that's
+    // both about a specific player AND a TV-show reference), so those get
+    // folded into the same searchable pool.
+    const fromPlayers = [];
+    PLAYERS.forEach(p => {
+      if(p.taggedNames && p.taggedNames[category]){
+        p.taggedNames[category].forEach(n => fromPlayers.push(n));
+      }
+    });
+    return fromGeneric.concat(fromPlayers);
+  }
+
+  ENTITIES.push({ id: 'generic_movie', kind: 'genericMovie', names: categoryPool('movie') });
+  ENTITIES.push({ id: 'generic_music', kind: 'genericMusic', names: categoryPool('music') });
+  ENTITIES.push({ id: 'generic_tv', kind: 'genericTv', names: categoryPool('tv') });
 }
 
 function findCuratedCombo(a, b){
