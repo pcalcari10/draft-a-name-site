@@ -202,6 +202,13 @@
   .result-card .delta.down { color: var(--coral); }
   .result-card .delta.flat { color: var(--dim); }
   .result-card .breakdown { font-family: var(--mono); font-size: 12px; color: var(--dim); margin-top: 8px; }
+  .verdict-badge {
+    display: inline-block; margin-top: 12px; font-family: var(--mono); font-weight: 600; font-size: 12.5px;
+    padding: 6px 12px; border-radius: 20px;
+  }
+  .verdict-badge.up { background: rgba(62,143,99,0.15); color: var(--green); }
+  .verdict-badge.down { background: rgba(232,93,78,0.15); color: var(--coral); }
+  .verdict-badge.flat { background: var(--panel-3); color: var(--dim); }
   .results-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
   @media (max-width: 700px) { .results-grid { grid-template-columns: 1fr; } }
 
@@ -699,6 +706,15 @@ function optimizeLineup(rosterPositions, playerIds, weekData){
 }
 
 // ---------- Step 4: calculate ----------
+// ---------- Shared verdict badge (used by both weekly and season-impact cards) ----------
+function verdictBadge(delta, positiveThreshold, negativeThreshold, unit){
+  let text, cls;
+  if(delta > positiveThreshold){ text = `\u{1F44D} Worth it \u2014 gains ${unit}`; cls = 'up'; }
+  else if(delta < negativeThreshold){ text = `\u{1F44E} Think twice \u2014 loses ${unit}`; cls = 'down'; }
+  else { text = `\u{1F937} Roughly a wash`; cls = 'flat'; }
+  return `<div class="verdict-badge ${cls}">${text}</div>`;
+}
+
 function calculateTrade(){
   const rosterPositions = currentLeague.roster_positions || [];
 
@@ -735,6 +751,7 @@ function calculateTrade(){
         <div class="label">${escapeHtml(label)}</div>
         <div class="delta ${cls}">${sign}${delta.toFixed(1)}</div>
         <div class="breakdown">${before.total.toFixed(1)} \u2192 ${after.total.toFixed(1)} proj. pts this week</div>
+        ${verdictBadge(delta, 1, -1, 'value')}
         <details class="lineup-details">
           <summary>Show optimal lineup</summary>
           <div class="lineup-compare">
@@ -848,6 +865,7 @@ async function calculateSeasonImpact(){
           <div class="label">${escapeHtml(label)}</div>
           <div class="delta ${cls}">${sign}${delta.toFixed(1)} wins</div>
           <div class="breakdown">${before.toFixed(1)} \u2192 ${after.toFixed(1)} expected wins, weeks ${weeks[0]}\u2013${weeks[weeks.length - 1]}</div>
+          ${verdictBadge(delta, 0.5, -0.5, 'wins')}
         </div>`;
     }
 
