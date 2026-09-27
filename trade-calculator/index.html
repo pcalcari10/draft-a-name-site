@@ -209,6 +209,20 @@
   .verdict-badge.up { background: rgba(62,143,99,0.15); color: var(--green); }
   .verdict-badge.down { background: rgba(232,93,78,0.15); color: var(--coral); }
   .verdict-badge.flat { background: var(--panel-3); color: var(--dim); }
+
+  .info-tooltip {
+    position: relative; display: inline-flex; align-items: center;
+    font-family: var(--mono); font-size: 11px; font-weight: 400; color: var(--dim);
+    text-transform: none; letter-spacing: normal; cursor: help;
+    border-bottom: 1px dashed var(--dim);
+  }
+  .tooltip-content {
+    display: none; position: absolute; top: 100%; left: 0; margin-top: 8px;
+    width: 320px; max-width: 80vw; background: var(--panel-3); border: 1px solid var(--line);
+    border-radius: 8px; padding: 12px 14px; font-size: 12.5px; color: var(--text); line-height: 1.5;
+    z-index: 50; box-shadow: 0 10px 24px rgba(0,0,0,0.4); font-family: var(--sans); font-weight: 400;
+  }
+  .info-tooltip:hover .tooltip-content, .info-tooltip:focus .tooltip-content { display: block; }
   .results-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
   @media (max-width: 700px) { .results-grid { grid-template-columns: 1fr; } }
 
@@ -870,10 +884,13 @@ async function calculateSeasonImpact(){
     }
 
     panel.innerHTML = `
-      <div class="notice" style="margin-top:16px;">
-        <strong>How to read this:</strong> each week's win chance is estimated by comparing a team's optimized projected score against the <em>league average</em> team that week (since your actual future schedule isn't reliably available from Sleeper) \u2014 not your real upcoming opponents. Treat this as a directional estimate of value, not a guaranteed win count.
+      <div class="section-title" style="display:flex; align-items:center; gap:8px;">
+        EXPECTED WINS \u2014 WEEKS ${weeks[0]}\u2013${weeks[weeks.length - 1]}
+        <span class="info-tooltip" tabindex="0">
+          \u2139\ufe0f How to read this
+          <span class="tooltip-content">Each week's win chance is estimated by comparing a team's optimized projected score against the <strong>league average</strong> team that week (since your actual future schedule isn't reliably available from Sleeper) \u2014 not your real upcoming opponents. Treat this as a directional estimate of value, not a guaranteed win count.</span>
+        </span>
       </div>
-      <div class="section-title">EXPECTED WINS \u2014 WEEKS ${weeks[0]}\u2013${weeks[weeks.length - 1]}</div>
       <div class="results-grid">
         ${winCard(teamLabel(teamA), expWinsABefore, expWinsAAfter)}
         ${winCard(teamLabel(teamB), expWinsBBefore, expWinsBAfter)}
