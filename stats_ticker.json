@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-27T21:51:24.316Z",
+  "generatedAt": "2026-09-27T22:09:56.004Z",
   "season": "2026",
   "week": 3,
   "thisWeek": {
@@ -95,6 +95,15 @@
         "pun": "I'm About To Go Goff"
       },
       {
+        "id": "brockpurdy_sf",
+        "first": "Brock",
+        "last": "Purdy",
+        "team": "SF",
+        "pos": "QB",
+        "pts": 17.8,
+        "pun": "Purdy Good Team"
+      },
+      {
         "id": "patrickmahomesii_kc",
         "first": "Patrick",
         "last": "Mahomes",
@@ -102,15 +111,6 @@
         "pos": "QB",
         "pts": 16.9,
         "pun": "Sherlock Mahomes"
-      },
-      {
-        "id": "brockpurdy_sf",
-        "first": "Brock",
-        "last": "Purdy",
-        "team": "SF",
-        "pos": "QB",
-        "pts": 16.2,
-        "pun": "Purdy Good Team"
       }
     ],
     "RB": [
@@ -176,6 +176,15 @@
         "pos": "RB",
         "pts": 17,
         "pun": "King Tuten-khamun"
+      },
+      {
+        "id": "christianmccaffrey_sf",
+        "first": "Christian",
+        "last": "McCaffrey",
+        "team": "SF",
+        "pos": "RB",
+        "pts": 15.1,
+        "pun": "Run CMC"
       },
       {
         "id": "chubahubbard_car",
@@ -259,6 +268,15 @@
         "pun": "Holani-tastic Voyage"
       },
       {
+        "id": "jeremiyahlove_ari",
+        "first": "Jeremiyah",
+        "last": "Love",
+        "team": "ARI",
+        "pos": "RB",
+        "pts": 10.4,
+        "pun": "Come and Get Your Love"
+      },
+      {
         "id": "quinshonjudkins_cle",
         "first": "Quinshon",
         "last": "Judkins",
@@ -311,24 +329,6 @@
         "pos": "RB",
         "pts": 9,
         "pun": "Johnson Happens"
-      },
-      {
-        "id": "chasebrown_cin",
-        "first": "Chase",
-        "last": "Brown",
-        "team": "CIN",
-        "pos": "RB",
-        "pts": 8.9,
-        "pun": "High-Speed Chase"
-      },
-      {
-        "id": "jeremiyahlove_ari",
-        "first": "Jeremiyah",
-        "last": "Love",
-        "team": "ARI",
-        "pos": "RB",
-        "pts": 8.9,
-        "pun": "Come and Get Your Love"
       }
     ],
     "WR": [
@@ -697,15 +697,6 @@
         "pun": "Do you like my Cameron Dicker"
       },
       {
-        "id": "eddypineiro_sf",
-        "first": "Eddy",
-        "last": "Pineiro",
-        "team": "SF",
-        "pos": "K",
-        "pts": 7,
-        "pun": "Pineiro of Fame"
-      },
-      {
         "id": "brandonaubrey_dal",
         "first": "Brandon",
         "last": "Aubrey",
@@ -731,6 +722,15 @@
         "pos": "K",
         "pts": 7,
         "pun": "Reichard Happens"
+      },
+      {
+        "id": "eddypineiro_sf",
+        "first": "Eddy",
+        "last": "Pineiro",
+        "team": "SF",
+        "pos": "K",
+        "pts": 6,
+        "pun": "Pineiro of Fame"
       },
       {
         "id": "tylerbass_buf",
@@ -787,7 +787,7 @@
         "last": "Purdy",
         "team": "SF",
         "pos": "QB",
-        "pts": 66.7,
+        "pts": 68.4,
         "pun": "Purdy Good Team"
       },
       {
@@ -854,13 +854,13 @@
         "pun": "Geno Grigio"
       },
       {
-        "id": "kirkcousins_lv",
-        "first": "Kirk",
-        "last": "Cousins",
-        "team": "LV",
+        "id": "dakprescott_dal",
+        "first": "Dak",
+        "last": "Prescott",
+        "team": "DAL",
         "pos": "QB",
-        "pts": 48.3,
-        "pun": "I Married my Cousins"
+        "pts": 48.5,
+        "pun": "The Boys Are Dak In Town"
       }
     ],
     "RB": [
@@ -919,6 +919,15 @@
         "pun": "Chubawamba"
       },
       {
+        "id": "christianmccaffrey_sf",
+        "first": "Christian",
+        "last": "McCaffrey",
+        "team": "SF",
+        "pos": "RB",
+        "pts": 51.5,
+        "pun": "Run CMC"
+      },
+      {
         "id": "jamescookiii_buf",
         "first": "James",
         "last": "Cook",
@@ -964,15 +973,6 @@
         "pun": "Breece Lightning"
       },
       {
-        "id": "christianmccaffrey_sf",
-        "first": "Christian",
-        "last": "McCaffrey",
-        "team": "SF",
-        "pos": "RB",
-        "pts": 42.4,
-        "pun": "Run CMC"
-      },
-      {
         "id": "bhayshultuten_jac",
         "first": "Bhayshul",
         "last": "Tuten",
@@ -1000,6 +1000,15 @@
         "pun": "Full Monty"
       },
       {
+        "id": "buckyirving_tb",
+        "first": "Bucky",
+        "last": "Irving",
+        "team": "TB",
+        "pos": "RB",
+        "pts": 40.1,
+        "pun": "Bucky Beaver Dam"
+      },
+      {
         "id": "chasebrown_cin",
         "first": "Chase",
         "last": "Brown",
@@ -1007,15 +1016,6 @@
         "pos": "RB",
         "pts": 38.9,
         "pun": "High-Speed Chase"
-      },
-      {
-        "id": "buckyirving_tb",
-        "first": "Bucky",
-        "last": "Irving",
-        "team": "TB",
-        "pos": "RB",
-        "pts": 37.9,
-        "pun": "Bucky Beaver Dam"
       },
       {
         "id": "camskattebo_nyg",
@@ -1045,6 +1045,15 @@
         "pun": "Williams-Sonoma Touchdowns"
       },
       {
+        "id": "jeremiyahlove_ari",
+        "first": "Jeremiyah",
+        "last": "Love",
+        "team": "ARI",
+        "pos": "RB",
+        "pts": 30.9,
+        "pun": "Come and Get Your Love"
+      },
+      {
         "id": "rachaadwhite_was",
         "first": "Rachaad",
         "last": "White",
@@ -1052,15 +1061,6 @@
         "pos": "RB",
         "pts": 30.1,
         "pun": "Rachaad White and the 7 Dwarfs"
-      },
-      {
-        "id": "jeremiyahlove_ari",
-        "first": "Jeremiyah",
-        "last": "Love",
-        "team": "ARI",
-        "pos": "RB",
-        "pts": 29.4,
-        "pun": "Come and Get Your Love"
       },
       {
         "id": "kylemonangai_chi",
@@ -1301,6 +1301,15 @@
     ],
     "TE": [
       {
+        "id": "treymcbride_ari",
+        "first": "Trey",
+        "last": "McBride",
+        "team": "ARI",
+        "pos": "TE",
+        "pts": 51.2,
+        "pun": "50 Shades of Trey"
+      },
+      {
         "id": "traviskelce_kc",
         "first": "Travis",
         "last": "Kelce",
@@ -1308,15 +1317,6 @@
         "pos": "TE",
         "pts": 49.1,
         "pun": "Truth & Kelcequences"
-      },
-      {
-        "id": "treymcbride_ari",
-        "first": "Trey",
-        "last": "McBride",
-        "team": "ARI",
-        "pos": "TE",
-        "pts": 48.9,
-        "pun": "50 Shades of Trey"
       },
       {
         "id": "daltonkincaid_buf",
