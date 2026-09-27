@@ -419,20 +419,17 @@
 
   /* ---------- Copy celebration ---------- */
   .football-fly {
-    position: fixed; left: -60px; font-size: 42px; z-index: 300;
-    pointer-events: none; animation: football-fly-across 1.6s cubic-bezier(0.4, 0, 0.6, 1) forwards;
+    position: fixed; font-size: 42px; z-index: 300;
+    pointer-events: none; animation: football-fly-across 1.3s cubic-bezier(0.25, 0.1, 0.4, 1) forwards;
   }
   @keyframes football-fly-across {
-    0%   { left: -60px; top: 42%; transform: rotate(0deg) scale(1, 1); }
-    8%   { transform: rotate(140deg) scale(0.8, 1.2); }
-    22%  { left: 25%; top: 12%; transform: rotate(340deg) scale(1, 1); }
-    36%  { left: 45%; top: 58%; transform: rotate(560deg) scale(1.25, 0.75); }
-    42%  { transform: rotate(600deg) scale(0.95, 1.05); }
-    58%  { left: 65%; top: 18%; transform: rotate(800deg) scale(1, 1); }
-    72%  { left: 82%; top: 50%; transform: rotate(980deg) scale(1.15, 0.85); }
-    78%  { transform: rotate(1010deg) scale(0.97, 1.03); }
-    90%  { left: 98%; top: 30%; transform: rotate(1120deg) scale(1, 1); }
-    100% { left: 112%; top: 40%; transform: rotate(1180deg) scale(1, 1); }
+    0%   { left: -5%;  top: 8%;  transform: rotate(0deg) scale(0.3); opacity: 0.9; }
+    15%  { left: 12%;  top: 16%; transform: rotate(280deg) scale(0.5); }
+    35%  { left: 28%;  top: 26%; transform: rotate(640deg) scale(0.85); }
+    55%  { left: 42%;  top: 38%; transform: rotate(1000deg) scale(1.4); }
+    72%  { left: 50%;  top: 48%; transform: rotate(1300deg) scale(2.1); }
+    86%  { left: 55%;  top: 55%; transform: rotate(1540deg) scale(3); opacity: 1; }
+    100% { left: 58%;  top: 60%; transform: rotate(1660deg) scale(4.2); opacity: 0; }
   }
   .landing-burst {
     position: fixed; z-index: 300; pointer-events: none; font-size: 22px;
@@ -941,11 +938,11 @@ function celebrateCopy(teamName){
   football.className = 'football-fly';
   football.textContent = '🏈';
   document.body.appendChild(football);
-  setTimeout(() => football.remove(), 1700);
+  setTimeout(() => football.remove(), 1400);
 
-  // A little burst of confetti right as the football exits, near where the
-  // final bounce lands.
-  setTimeout(() => spawnLandingBurst(window.innerWidth * 0.95, window.innerHeight * 0.4), 1450);
+  // A little burst of confetti right as the football "arrives," near where
+  // it grows largest before fading out.
+  setTimeout(() => spawnLandingBurst(window.innerWidth * 0.57, window.innerHeight * 0.58), 1150);
 
   const toast = document.createElement('div');
   toast.className = 'celebration-toast';
