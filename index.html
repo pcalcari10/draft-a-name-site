@@ -419,9 +419,11 @@
 
   /* ---------- Copy celebration ---------- */
   .football-fly {
-    position: fixed; font-size: 42px; z-index: 300;
+    position: fixed; z-index: 300;
     pointer-events: none; animation: football-fly-across 1.3s cubic-bezier(0.25, 0.1, 0.4, 1) forwards;
+    filter: drop-shadow(0 3px 6px rgba(0,0,0,0.35));
   }
+  .football-fly svg { display: block; }
   @keyframes football-fly-across {
     0%   { left: -5%;  top: 8%;  transform: perspective(500px) rotateY(0deg)    rotate(-8deg) scale(0.3); opacity: 0.9; }
     15%  { left: 12%;  top: 16%; transform: perspective(500px) rotateY(720deg)  rotate(-6deg) scale(0.5); }
@@ -936,7 +938,14 @@ function renderChips(){
 function celebrateCopy(teamName){
   const football = document.createElement('div');
   football.className = 'football-fly';
-  football.textContent = '🏈';
+  football.innerHTML = `<svg viewBox="0 0 100 56" width="60" height="34">
+    <ellipse cx="50" cy="28" rx="48" ry="24" fill="#8B4A2B" stroke="#4A2410" stroke-width="2.5"/>
+    <line x1="28" y1="28" x2="72" y2="28" stroke="#F4F2EC" stroke-width="2.5" stroke-linecap="round"/>
+    <line x1="39" y1="21" x2="39" y2="35" stroke="#F4F2EC" stroke-width="2" stroke-linecap="round"/>
+    <line x1="47" y1="21" x2="47" y2="35" stroke="#F4F2EC" stroke-width="2" stroke-linecap="round"/>
+    <line x1="55" y1="21" x2="55" y2="35" stroke="#F4F2EC" stroke-width="2" stroke-linecap="round"/>
+    <line x1="63" y1="21" x2="63" y2="35" stroke="#F4F2EC" stroke-width="2" stroke-linecap="round"/>
+  </svg>`;
   document.body.appendChild(football);
   setTimeout(() => football.remove(), 1400);
 
