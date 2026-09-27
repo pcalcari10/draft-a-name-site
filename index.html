@@ -1120,6 +1120,7 @@ async function renderAllNames(){
       btn.classList.add('copied');
       btn.textContent = '✓';
       setTimeout(() => { btn.classList.remove('copied'); btn.textContent = original; }, 1200);
+      celebrateCopy(btn.dataset.name);
     });
   });
   wireLikeButtons(allNamesBox);
