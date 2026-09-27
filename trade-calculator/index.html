@@ -171,6 +171,11 @@
   @media (max-width: 700px) { .trade-columns { grid-template-columns: 1fr; } }
   .trade-col-head { font-family: var(--display); font-weight: 700; font-size: 18px; margin-bottom: 4px; }
   .trade-col-sub { font-family: var(--mono); font-size: 11.5px; color: var(--dim); margin-bottom: 10px; }
+  .roster-group-label {
+    font-family: var(--mono); font-size: 11px; font-weight: 700; color: var(--dim);
+    text-transform: uppercase; letter-spacing: 0.05em; margin: 14px 0 6px;
+  }
+  .roster-group-label:first-of-type { margin-top: 0; }
   .trade-col.side-a .trade-col-head { color: var(--amber); }
   .trade-col.side-b .trade-col-head { color: var(--coral); }
 
@@ -564,24 +569,45 @@ function playerInfo(playerId){
 
 // ---------- Step 3: trade builder ----------
 function renderTradeBuilder(){
+  const BENCH_POS_ORDER = ['QB', 'RB', 'WR', 'TE', 'K', 'DEF'];
+
+  function rowHtml(pid, otherTeamLetter, tradeSet){
+    const info = playerInfo(pid);
+    const pts = projectedPoints(pid);
+    const name = info.first ? `${info.first} ${info.last}` : info.last;
+    const picked = tradeSet.has(pid);
+    return `
+      <div class="player-row ${picked ? 'picked' : ''}" data-pid="${pid}" data-side="${otherTeamLetter}">
+        <input type="checkbox" ${picked ? 'checked' : ''} tabindex="-1">
+        <div class="pinfo">
+          <div class="pname">${escapeHtml(name)}</div>
+          <div class="pmeta">${info.pos}${info.team ? ' \u00b7 ' + info.team : ''}</div>
+        </div>
+        <div class="pproj">${pts.toFixed(1)}</div>
+      </div>`;
+  }
+
   function colHtml(team, otherTeamLetter, tradeSet){
-    const players = team.players || [];
-    const rows = players.map(pid => {
-      const info = playerInfo(pid);
-      const pts = projectedPoints(pid);
-      const name = info.first ? `${info.first} ${info.last}` : info.last;
-      const picked = tradeSet.has(pid);
-      return `
-        <div class="player-row ${picked ? 'picked' : ''}" data-pid="${pid}" data-side="${otherTeamLetter}">
-          <input type="checkbox" ${picked ? 'checked' : ''} tabindex="-1">
-          <div class="pinfo">
-            <div class="pname">${escapeHtml(name)}</div>
-            <div class="pmeta">${info.pos}${info.team ? ' \u00b7 ' + info.team : ''}</div>
-          </div>
-          <div class="pproj">${pts.toFixed(1)}</div>
-        </div>`;
-    }).join('');
-    return rows || '<div class="status-line">No players on this roster.</div>';
+    const allPlayers = team.players || [];
+    const starterIds = (team.starters || []).filter(id => id && id !== '0');
+    const starterSet = new Set(starterIds);
+    const benchIds = allPlayers.filter(pid => !starterSet.has(pid));
+
+    const benchSorted = benchIds.slice().sort((a, b) => {
+      const idxA = BENCH_POS_ORDER.indexOf(playerInfo(a).pos);
+      const idxB = BENCH_POS_ORDER.indexOf(playerInfo(b).pos);
+      return (idxA === -1 ? 99 : idxA) - (idxB === -1 ? 99 : idxB);
+    });
+
+    const starterRows = starterIds.map(pid => rowHtml(pid, otherTeamLetter, tradeSet)).join('');
+    const benchRows = benchSorted.map(pid => rowHtml(pid, otherTeamLetter, tradeSet)).join('');
+
+    return `
+      <div class="roster-group-label">Starters</div>
+      ${starterRows || '<div class="status-line">No starters set.</div>'}
+      <div class="roster-group-label">Bench</div>
+      ${benchRows || '<div class="status-line">No bench players.</div>'}
+    `;
   }
 
   tradePanel.innerHTML = `
