@@ -205,6 +205,25 @@
   .results-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
   @media (max-width: 700px) { .results-grid { grid-template-columns: 1fr; } }
 
+  .lineup-details { margin-top: 14px; text-align: left; }
+  .lineup-details summary {
+    cursor: pointer; font-family: var(--mono); font-size: 12px; color: var(--amber);
+    text-align: center; list-style: none;
+  }
+  .lineup-details summary::-webkit-details-marker { display: none; }
+  .lineup-details summary::before { content: '\25b8 '; }
+  .lineup-details[open] summary::before { content: '\25be '; }
+  .lineup-compare { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 10px; }
+  .lineup-col-label { font-family: var(--mono); font-size: 10.5px; color: var(--dim); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 6px; }
+  .lineup-row {
+    display: flex; align-items: center; gap: 6px;
+    background: var(--panel); border: 1px solid var(--line); border-radius: 6px;
+    padding: 5px 8px; margin-bottom: 4px; font-size: 12px;
+  }
+  .lineup-slot { font-family: var(--mono); font-size: 9.5px; color: var(--dim); background: var(--panel-3); border-radius: 4px; padding: 1px 5px; flex-shrink: 0; }
+  .lineup-name { flex: 1; min-width: 0; text-align: left; font-weight: 600; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .lineup-pts { font-family: var(--mono); color: var(--green); flex-shrink: 0; }
+
   footer { border-top: 1px solid var(--line); margin-top: 30px; padding-top: 40px; }
   .footer-grid { display: grid; grid-template-columns: 1.4fr 1fr 1fr 1fr; gap: 24px; padding-bottom: 24px; }
   .footer-brand { font-family: var(--display); font-weight: 700; font-size: 18px; color: var(--text); margin-bottom: 8px; display: flex; align-items: center; gap: 8px; }
@@ -691,6 +710,21 @@ function calculateTrade(){
   const afterA = optimizeLineup(rosterPositions, afterAPlayers);
   const afterB = optimizeLineup(rosterPositions, afterBPlayers);
 
+  function playerName(pid){
+    const info = playerInfo(pid);
+    return info.first ? `${info.first} ${info.last}` : info.last;
+  }
+
+  function lineupRows(filled){
+    if(filled.length === 0) return '<div class="status-line">Nothing to show.</div>';
+    return filled.map(f => `
+      <div class="lineup-row">
+        <span class="lineup-slot">${escapeHtml(f.slot)}</span>
+        <span class="lineup-name">${escapeHtml(playerName(f.pid))}</span>
+        <span class="lineup-pts">${f.pts.toFixed(1)}</span>
+      </div>`).join('');
+  }
+
   function resultCard(label, before, after){
     const delta = after.total - before.total;
     const cls = delta > 0.05 ? 'up' : delta < -0.05 ? 'down' : 'flat';
@@ -700,6 +734,19 @@ function calculateTrade(){
         <div class="label">${escapeHtml(label)}</div>
         <div class="delta ${cls}">${sign}${delta.toFixed(1)}</div>
         <div class="breakdown">${before.total.toFixed(1)} \u2192 ${after.total.toFixed(1)} proj. pts this week</div>
+        <details class="lineup-details">
+          <summary>Show optimal lineup</summary>
+          <div class="lineup-compare">
+            <div class="lineup-col">
+              <div class="lineup-col-label">Before</div>
+              ${lineupRows(before.filled)}
+            </div>
+            <div class="lineup-col">
+              <div class="lineup-col-label">After</div>
+              ${lineupRows(after.filled)}
+            </div>
+          </div>
+        </details>
       </div>`;
   }
 
