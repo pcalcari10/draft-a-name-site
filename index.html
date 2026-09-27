@@ -419,13 +419,28 @@
 
   /* ---------- Copy celebration ---------- */
   .football-fly {
-    position: fixed; top: 38%; left: -60px; font-size: 42px; z-index: 300;
-    pointer-events: none; animation: football-fly-across 1.3s cubic-bezier(0.3, 0, 0.7, 1) forwards;
+    position: fixed; left: -60px; font-size: 42px; z-index: 300;
+    pointer-events: none; animation: football-fly-across 1.6s cubic-bezier(0.4, 0, 0.6, 1) forwards;
   }
   @keyframes football-fly-across {
-    0% { left: -60px; transform: rotate(0deg) translateY(0); }
-    50% { transform: rotate(360deg) translateY(-40px); }
-    100% { left: 110%; transform: rotate(720deg) translateY(0); }
+    0%   { left: -60px; top: 42%; transform: rotate(0deg) scale(1, 1); }
+    8%   { transform: rotate(140deg) scale(0.8, 1.2); }
+    22%  { left: 25%; top: 12%; transform: rotate(340deg) scale(1, 1); }
+    36%  { left: 45%; top: 58%; transform: rotate(560deg) scale(1.25, 0.75); }
+    42%  { transform: rotate(600deg) scale(0.95, 1.05); }
+    58%  { left: 65%; top: 18%; transform: rotate(800deg) scale(1, 1); }
+    72%  { left: 82%; top: 50%; transform: rotate(980deg) scale(1.15, 0.85); }
+    78%  { transform: rotate(1010deg) scale(0.97, 1.03); }
+    90%  { left: 98%; top: 30%; transform: rotate(1120deg) scale(1, 1); }
+    100% { left: 112%; top: 40%; transform: rotate(1180deg) scale(1, 1); }
+  }
+  .landing-burst {
+    position: fixed; z-index: 300; pointer-events: none; font-size: 22px;
+    animation: landing-burst-anim 0.7s ease-out forwards;
+  }
+  @keyframes landing-burst-anim {
+    0% { transform: translate(0, 0) scale(0.4); opacity: 1; }
+    100% { transform: translate(var(--dx), var(--dy)) scale(1.1); opacity: 0; }
   }
   .celebration-toast {
     position: fixed; top: max(20px, env(safe-area-inset-top, 0px)); left: 50%;
@@ -926,7 +941,11 @@ function celebrateCopy(teamName){
   football.className = 'football-fly';
   football.textContent = '🏈';
   document.body.appendChild(football);
-  setTimeout(() => football.remove(), 1400);
+  setTimeout(() => football.remove(), 1700);
+
+  // A little burst of confetti right as the football exits, near where the
+  // final bounce lands.
+  setTimeout(() => spawnLandingBurst(window.innerWidth * 0.95, window.innerHeight * 0.4), 1450);
 
   const toast = document.createElement('div');
   toast.className = 'celebration-toast';
@@ -937,6 +956,23 @@ function celebrateCopy(teamName){
     toast.classList.remove('show');
     setTimeout(() => toast.remove(), 350);
   }, 2200);
+}
+
+function spawnLandingBurst(x, y){
+  const pieces = ['🎉', '✨', '🏈', '⭐'];
+  for(let i = 0; i < 6; i++){
+    const piece = document.createElement('div');
+    piece.className = 'landing-burst';
+    piece.textContent = pieces[Math.floor(Math.random() * pieces.length)];
+    const angle = (Math.PI * 2 * i) / 6 + (Math.random() * 0.5);
+    const distance = 40 + Math.random() * 30;
+    piece.style.left = x + 'px';
+    piece.style.top = y + 'px';
+    piece.style.setProperty('--dx', Math.cos(angle) * distance + 'px');
+    piece.style.setProperty('--dy', Math.sin(angle) * distance + 'px');
+    document.body.appendChild(piece);
+    setTimeout(() => piece.remove(), 750);
+  }
 }
 
 function escapeHtml(s){
