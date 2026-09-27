@@ -1,0 +1,733 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-4LH65WP5G7"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag("js", new Date());
+  gtag("config", "G-4LH65WP5G7");
+</script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Trade Calculator — The Fantasy Name HQ</title>
+<meta name="description" content="See exactly how a fantasy football trade changes your team's projected weekly points, before you pull the trigger. Import your Sleeper league and compare two rosters.">
+<link rel="canonical" href="https://thefantasynamehq.com/trade-calculator/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders:wght@600;700;800&family=IBM+Plex+Mono:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #0B1622;
+    --panel: #101E2E;
+    --panel-2: #16283C;
+    --panel-3: #1F3650;
+    --line: #2B4560;
+    --text: #F4F2EC;
+    --dim: #8FA0B3;
+    --amber: #F2B705;
+    --green: #3E8F63;
+    --coral: #E85D4E;
+    --mono: 'IBM Plex Mono', monospace;
+    --sans: 'Inter', -apple-system, sans-serif;
+    --display: 'Big Shoulders', 'Arial Narrow', sans-serif;
+    --pos-qb: #F2B705;
+    --pos-rb: #3E8F63;
+    --pos-wr: #E85D4E;
+    --pos-te: #4F9FD9;
+    --pos-k: #B27FE0;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: var(--sans);
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: 900px; margin: 0 auto; padding: 40px 24px 80px; }
+
+  /* ---------- Stats ticker (display only) ---------- */
+  .ticker-wrap { background: var(--panel); border-bottom: 1px solid var(--line); overflow: hidden; position: relative; }
+  .ticker-bar { width: 100%; display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+  .ticker-title { flex: 0 0 auto; font-family: var(--display); font-weight: 700; font-size: 10.5px; letter-spacing: 0.01em; color: var(--amber); padding: 4px 0 4px 24px; white-space: nowrap; }
+  .ticker-toggle { flex: 0 0 auto; display: flex; gap: 3px; background: var(--panel-2); border-radius: 6px; padding: 2px; margin-right: 24px; }
+  .ticker-toggle button { font-family: var(--sans); font-size: 10px; font-weight: 600; color: var(--dim); background: none; border: none; border-radius: 5px; padding: 2px 8px; cursor: pointer; }
+  .ticker-toggle button.active { background: var(--panel-3); color: var(--text); }
+  .ticker-track-outer { flex: 1 1 auto; min-width: 0; overflow: hidden; -webkit-mask-image: linear-gradient(90deg, transparent, #000 24px, #000 calc(100% - 24px), transparent); mask-image: linear-gradient(90deg, transparent, #000 24px, #000 calc(100% - 24px), transparent); }
+  .ticker-track { display: flex; gap: 6px; width: max-content; animation: ticker-scroll 190s linear infinite; }
+  .ticker-track-outer:hover .ticker-track { animation-play-state: paused; }
+  @keyframes ticker-scroll { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+  .ticker-card { flex: 0 0 auto; display: flex; align-items: center; gap: 5px; background: var(--panel-2); border: 1px solid var(--line); border-left: 2px solid var(--card-accent, var(--amber)); border-radius: 5px; padding: 2px 8px 2px 6px; white-space: nowrap; }
+  .ticker-pos { font-family: var(--display); font-weight: 700; font-size: 8.5px; color: var(--bg); background: var(--card-accent, var(--amber)); border-radius: 3px; padding: 1px 4px; letter-spacing: 0.02em; }
+  .ticker-card[data-pos="QB"] { --card-accent: var(--pos-qb); }
+  .ticker-card[data-pos="RB"] { --card-accent: var(--pos-rb); }
+  .ticker-card[data-pos="WR"] { --card-accent: var(--pos-wr); }
+  .ticker-card[data-pos="TE"] { --card-accent: var(--pos-te); }
+  .ticker-card[data-pos="K"]  { --card-accent: var(--pos-k); }
+  .ticker-divider { flex: 0 0 auto; display: flex; align-items: center; gap: 4px; color: var(--dim); font-family: var(--sans); font-size: 8px; font-weight: 700; letter-spacing: 0.08em; }
+  .ticker-divider::before { content: ''; width: 1px; height: 13px; background: var(--line); }
+  .ticker-name { font-family: var(--display); font-weight: 700; font-size: 10.5px; color: var(--text); }
+  .ticker-team { font-family: var(--sans); font-size: 8.5px; color: var(--dim); }
+  .ticker-pun { font-family: var(--sans); font-style: italic; font-size: 9px; color: var(--green); }
+  .ticker-pun::before { content: '\2014 '; color: var(--line); font-style: normal; }
+  .ticker-pts { font-family: var(--display); font-weight: 700; font-size: 10.5px; color: var(--coral); white-space: nowrap; }
+  @media (max-width: 640px) {
+    .ticker-pun { display: none; }
+    .ticker-title { order: -1; padding: 4px 0 0 10px; }
+    .ticker-toggle { order: -1; margin: 4px 10px 0 auto; }
+    .ticker-toggle button { padding: 3px 10px; font-size: 10px; }
+    .ticker-track-outer {
+      order: 1; flex-basis: 100%;
+      padding-left: 10px;
+      -webkit-mask-image: linear-gradient(90deg, transparent, #000 10px, #000 calc(100% - 10px), transparent);
+      mask-image: linear-gradient(90deg, transparent, #000 10px, #000 calc(100% - 10px), transparent);
+    }
+  }
+
+  /* ---------- Sport nav ---------- */
+  .sport-nav { background: var(--panel-2); border-bottom: 1px solid var(--line); }
+  .sport-nav-inner { max-width: 900px; margin: 0 auto; padding: 10px 24px; display: flex; gap: 8px; flex-wrap: wrap; }
+  .sport-tab {
+    font-family: var(--sans); font-size: 13px; font-weight: 600; color: var(--dim); text-decoration: none;
+    padding: 6px 14px; border-radius: 20px; display: flex; align-items: center; gap: 6px;
+    transition: background .15s ease, color .15s ease;
+  }
+  .sport-tab:hover { background: var(--panel-3); color: var(--text); }
+  .sport-tab.active { background: var(--amber); color: var(--bg); }
+  .sport-tab .soon-badge {
+    font-size: 9px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.03em;
+    background: var(--panel-3); color: var(--dim); padding: 1px 5px; border-radius: 8px;
+  }
+  .sport-dropdown {
+    display: none; position: fixed; top: 0; left: 0;
+    background: var(--panel); border: 1px solid var(--line); border-radius: 10px;
+    padding: 10px 6px 6px; min-width: 220px; z-index: 100;
+    box-shadow: 0 14px 30px rgba(0,0,0,0.35);
+  }
+  .sport-dropdown.open { display: block; }
+  .sport-dropdown a {
+    display: block; padding: 9px 12px; border-radius: 6px;
+    color: var(--text); text-decoration: none; font-size: 13.5px; font-weight: 500;
+  }
+  .sport-dropdown a:hover { background: var(--panel-3); }
+  @media (max-width: 640px) {
+    .sport-nav-inner { flex-wrap: nowrap; overflow-x: auto; -webkit-overflow-scrolling: touch; scrollbar-width: none; }
+    .sport-nav-inner::-webkit-scrollbar { display: none; }
+    .sport-tab { flex-shrink: 0; }
+  }
+
+  header { margin-bottom: 28px; }
+  .tag { font-family: var(--mono); font-size: 12.5px; color: var(--amber); letter-spacing: 0.02em; margin-bottom: 8px; }
+  h1 { font-size: 28px; font-weight: 700; margin: 0 0 8px; letter-spacing: -0.01em; }
+  .sub { color: var(--dim); font-size: 14.5px; line-height: 1.5; max-width: 62ch; }
+
+  .notice {
+    background: rgba(242,183,5,0.08); border: 1px solid rgba(242,183,5,0.3); border-radius: 8px;
+    padding: 12px 14px; font-size: 13px; color: var(--text); margin-bottom: 16px; line-height: 1.5;
+  }
+  .notice strong { color: var(--amber); }
+
+  .panel { background: var(--panel); border: 1px solid var(--line); border-radius: 10px; padding: 20px; margin-bottom: 16px; }
+  .row { display: flex; gap: 10px; flex-wrap: wrap; }
+  label { display: block; font-size: 12.5px; color: var(--dim); margin-bottom: 6px; font-family: var(--mono); }
+  input, select {
+    background: var(--panel-2); border: 1px solid var(--line); color: var(--text);
+    border-radius: 8px; padding: 10px 12px; font-size: 14.5px; font-family: var(--sans);
+    outline: none;
+  }
+  input:focus, select:focus { border-color: var(--amber); }
+  input#username { flex: 1; min-width: 180px; }
+  button {
+    font-family: var(--mono); font-weight: 600; font-size: 13.5px;
+    background: var(--amber); color: #1A1000; border: none; border-radius: 8px;
+    padding: 10px 18px; cursor: pointer;
+  }
+  button:hover { filter: brightness(1.08); }
+  button:disabled { background: var(--line); color: var(--dim); cursor: not-allowed; }
+  button.ghost { background: none; border: 1px solid var(--line); color: var(--text); }
+
+  .status-line { font-family: var(--mono); font-size: 13px; color: var(--dim); margin-top: 12px; min-height: 18px; line-height: 1.5; }
+  .status-line.error { color: var(--coral); }
+
+  .leagues { display: flex; flex-direction: column; gap: 8px; margin-top: 12px; }
+  .league-card, .team-card {
+    display: flex; justify-content: space-between; align-items: center;
+    background: var(--panel-2); border: 1px solid var(--line); border-radius: 8px;
+    padding: 12px 14px; cursor: pointer;
+  }
+  .league-card:hover, .team-card:hover { border-color: var(--amber); }
+  .team-card.selected-a { border-color: var(--amber); background: rgba(242,183,5,0.08); }
+  .team-card.selected-b { border-color: var(--coral); background: rgba(232,93,78,0.08); }
+  .league-card .name, .team-card .name { font-weight: 600; font-size: 14.5px; }
+  .league-card .meta, .team-card .meta { font-family: var(--mono); font-size: 12px; color: var(--dim); }
+
+  .teams-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 10px; margin-top: 12px; }
+
+  .section-title { font-family: var(--mono); font-size: 12.5px; color: var(--dim); margin: 22px 0 10px; letter-spacing: 0.02em; }
+
+  .trade-columns { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  @media (max-width: 700px) { .trade-columns { grid-template-columns: 1fr; } }
+  .trade-col-head { font-family: var(--display); font-weight: 700; font-size: 18px; margin-bottom: 4px; }
+  .trade-col-sub { font-family: var(--mono); font-size: 11.5px; color: var(--dim); margin-bottom: 10px; }
+  .trade-col.side-a .trade-col-head { color: var(--amber); }
+  .trade-col.side-b .trade-col-head { color: var(--coral); }
+
+  .player-row {
+    display: flex; align-items: center; gap: 10px;
+    background: var(--panel-2); border: 1px solid var(--line); border-radius: 8px;
+    padding: 9px 12px; margin-bottom: 6px; cursor: pointer;
+  }
+  .player-row:hover { border-color: var(--dim); }
+  .player-row.picked { border-color: var(--green); background: rgba(62,143,99,0.1); }
+  .player-row input[type="checkbox"] { width: auto; flex-shrink: 0; }
+  .player-row .pinfo { flex: 1; min-width: 0; }
+  .player-row .pname { font-weight: 600; font-size: 13.5px; }
+  .player-row .pmeta { font-family: var(--mono); font-size: 11px; color: var(--dim); }
+  .player-row .pproj { font-family: var(--display); font-weight: 700; font-size: 15px; color: var(--green); flex-shrink: 0; white-space: nowrap; }
+
+  .result-card {
+    background: var(--panel-2); border: 1px solid var(--line); border-radius: 10px;
+    padding: 16px 18px; text-align: center;
+  }
+  .result-card .label { font-family: var(--mono); font-size: 12px; color: var(--dim); margin-bottom: 8px; }
+  .result-card .delta { font-family: var(--display); font-weight: 800; font-size: 32px; }
+  .result-card .delta.up { color: var(--green); }
+  .result-card .delta.down { color: var(--coral); }
+  .result-card .delta.flat { color: var(--dim); }
+  .result-card .breakdown { font-family: var(--mono); font-size: 12px; color: var(--dim); margin-top: 8px; }
+  .results-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+  @media (max-width: 700px) { .results-grid { grid-template-columns: 1fr; } }
+
+  footer { border-top: 1px solid var(--line); margin-top: 30px; padding-top: 40px; }
+  .footer-grid { display: grid; grid-template-columns: 1.4fr 1fr 1fr 1fr; gap: 24px; padding-bottom: 24px; }
+  .footer-brand { font-family: var(--display); font-weight: 700; font-size: 18px; color: var(--text); margin-bottom: 8px; display: flex; align-items: center; gap: 8px; }
+  .footer-tagline { color: var(--dim); font-size: 13px; max-width: 30ch; margin: 0; }
+  .footer-col h4 { font-family: var(--sans); font-size: 11.5px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; color: var(--dim); margin: 0 0 12px; }
+  .footer-col a { display: block; color: var(--text); text-decoration: none; font-size: 13.5px; margin-bottom: 9px; }
+  .footer-col a:hover { color: var(--amber); }
+  .footer-bottom {
+    border-top: 1px solid var(--line); padding: 16px 0 calc(24px + env(safe-area-inset-bottom, 0px));
+    color: var(--dim); font-size: 12px; line-height: 1.6;
+  }
+  @media (max-width: 640px) { .footer-grid { grid-template-columns: 1fr 1fr; } }
+</style>
+</head>
+<body>
+<div class="ticker-wrap" id="tickerWrap" style="display:none;">
+  <div class="ticker-bar">
+    <span class="ticker-title" id="tickerTitle">Top Scorers</span>
+    <div class="ticker-track-outer">
+      <div class="ticker-track" id="tickerTrack"></div>
+    </div>
+    <div class="ticker-toggle">
+      <button id="tickerWeekBtn" class="active">This Week</button>
+      <button id="tickerSeasonBtn">Season</button>
+    </div>
+  </div>
+</div>
+<nav class="sport-nav">
+  <div class="sport-nav-inner">
+    <a href="/" class="sport-tab active" id="footballTab">🏈 Fantasy Football</a>
+    <a href="/baseball/" class="sport-tab">⚾ Fantasy Baseball <span class="soon-badge">Soon</span></a>
+    <a href="/basketball/" class="sport-tab">🏀 Fantasy Basketball <span class="soon-badge">Soon</span></a>
+  </div>
+</nav>
+<div class="sport-dropdown" id="sportDropdown">
+  <a href="/">🔍 Search</a>
+  <a href="/suggest/">💡 Suggest a Name</a>
+  <a href="/league-importer/">📥 Team Importer</a>
+  <a href="/trade-calculator/">⚖️ Trade Calculator</a>
+</div>
+
+<div class="wrap">
+
+  <header style="display:flex; align-items:center; justify-content:space-between; margin-bottom:8px;">
+    <div style="font-family:var(--display); font-weight:700; font-size:22px; letter-spacing:0.02em;">
+      <a href="../" style="color:var(--text); text-decoration:none; display:flex; align-items:center; gap:10px;">
+        <span style="font-size:20px; transform:rotate(-15deg); display:inline-block;">🏈</span>The Fantasy Name HQ
+      </a>
+    </div>
+  </header>
+
+  <header>
+    <div class="tag">local tool — runs entirely in this browser tab</div>
+    <h1 style="font-family:var(--display); font-weight:800;">Trade Calculator</h1>
+    <p class="sub">Import your Sleeper league, pick two teams, and build out a hypothetical trade. We'll auto-optimize each side's starting lineup before and after, and show you the actual projected point swing.</p>
+  </header>
+
+  <div class="notice">
+    <strong>Scope of this tool:</strong> this compares <strong>this week's</strong> projected points only, using Sleeper's own player projections — it's not a rest-of-season value calculator. Projections are matched to the closest of Sleeper's three scoring presets (PPR / Half-PPR / Standard) based on your league's settings, so leagues with more unusual custom scoring will get a close approximation rather than an exact match. Sleeper only publishes projections for kickers and team defenses alongside the standard offensive positions, so IDP leagues aren't supported yet.
+  </div>
+
+  <div class="panel">
+    <label for="username">Sleeper username</label>
+    <div class="row">
+      <input id="username" type="text" placeholder="e.g. pcalcari" autocomplete="off">
+      <select id="season">
+        <option value="2026" selected>2026 season</option>
+        <option value="2025">2025 season</option>
+      </select>
+      <button id="lookupBtn">Find my leagues</button>
+    </div>
+    <div class="status-line" id="status"></div>
+  </div>
+
+  <div id="leaguesPanel" class="panel" style="display:none;">
+    <label>Leagues found — pick one</label>
+    <div class="leagues" id="leaguesList"></div>
+  </div>
+
+  <div id="teamsPanel" class="panel" style="display:none;">
+    <label>Pick two teams to compare a trade between</label>
+    <div class="teams-grid" id="teamsList"></div>
+    <div class="status-line" id="teamPickStatus"></div>
+  </div>
+
+  <div id="tradePanel" style="display:none;"></div>
+
+  <div id="resultsPanel" style="display:none;"></div>
+
+  <footer>
+    <div class="footer-grid">
+      <div class="footer-col">
+        <div class="footer-brand">🏈 The Fantasy Name HQ</div>
+        <p class="footer-tagline">A prototype, not yet drafted into anyone's league.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Tools</h4>
+        <a href="/suggest/">Suggest a name</a>
+        <a href="/league-importer/">Import your team</a>
+        <a href="/trade-calculator/">Trade calculator</a>
+      </div>
+      <div class="footer-col">
+        <h4>Sports</h4>
+        <a href="/">Fantasy Football</a>
+        <a href="/baseball/">Fantasy Baseball</a>
+        <a href="/basketball/">Fantasy Basketball</a>
+      </div>
+      <div class="footer-col">
+        <h4>Legal</h4>
+        <a href="/terms/">Terms</a>
+        <a href="/privacy/">Privacy</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div>Data source: Sleeper's public API (rosters, no login) plus Sleeper's own (undocumented) player projections endpoint, so this could change or break without notice if Sleeper alters it.</div>
+      <div style="margin-top:8px;">&copy; 2026 The Fantasy Name HQ</div>
+    </div>
+  </footer>
+</div>
+
+<script>
+// ---------- Sport nav dropdown (tap-to-toggle + hover) ----------
+(function(){
+  const trigger = document.getElementById('footballTab');
+  const dropdown = document.getElementById('sportDropdown');
+  if(!trigger || !dropdown) return;
+  function positionDropdown(){
+    const rect = trigger.getBoundingClientRect();
+    dropdown.style.top = (rect.bottom + 4) + 'px';
+    dropdown.style.left = rect.left + 'px';
+  }
+  function openDropdown(){ positionDropdown(); dropdown.classList.add('open'); }
+  function closeDropdown(){ dropdown.classList.remove('open'); }
+  trigger.addEventListener('mouseenter', openDropdown);
+  trigger.addEventListener('mouseleave', () => { setTimeout(() => { if(!dropdown.matches(':hover')) closeDropdown(); }, 100); });
+  dropdown.addEventListener('mouseleave', closeDropdown);
+  trigger.addEventListener('click', (e) => {
+    if(!dropdown.classList.contains('open')){ e.preventDefault(); openDropdown(); }
+  });
+  document.addEventListener('click', (e) => {
+    if(e.target !== trigger && !trigger.contains(e.target) && !e.target.closest('.sport-dropdown')) closeDropdown();
+  });
+  window.addEventListener('scroll', () => { if(dropdown.classList.contains('open')) positionDropdown(); }, { passive: true });
+  window.addEventListener('resize', () => { if(dropdown.classList.contains('open')) positionDropdown(); });
+})();
+
+// ---------- State ----------
+const usernameInput = document.getElementById('username');
+const seasonSelect = document.getElementById('season');
+const lookupBtn = document.getElementById('lookupBtn');
+const statusEl = document.getElementById('status');
+const leaguesPanel = document.getElementById('leaguesPanel');
+const leaguesList = document.getElementById('leaguesList');
+const teamsPanel = document.getElementById('teamsPanel');
+const teamsList = document.getElementById('teamsList');
+const teamPickStatus = document.getElementById('teamPickStatus');
+const tradePanel = document.getElementById('tradePanel');
+const resultsPanel = document.getElementById('resultsPanel');
+
+let currentLeague = null;
+let currentRosters = [];
+let currentUsers = [];
+let playerIdMap = null; // sleeper player_id -> { first, last, pos, team }
+let projectionsMap = null; // sleeper player_id -> points (scoring-format-adjusted)
+let scoringField = 'pts_half_ppr';
+
+let teamA = null; // roster object
+let teamB = null;
+let tradeAway = new Set(); // player_ids leaving team A (going to B)
+let tradeAwayB = new Set(); // player_ids leaving team B (going to A)
+
+function setStatus(msg, isError){
+  statusEl.textContent = msg || '';
+  statusEl.className = 'status-line' + (isError ? ' error' : '');
+}
+
+function teamLabel(roster){
+  const user = currentUsers.find(u => u.user_id === roster.owner_id);
+  const teamName = user && user.metadata && user.metadata.team_name;
+  const displayName = user ? user.display_name : ('Roster ' + roster.roster_id);
+  return teamName || displayName;
+}
+
+// ---------- Step 1: find leagues ----------
+lookupBtn.addEventListener('click', async () => {
+  const username = usernameInput.value.trim();
+  if(!username){ setStatus('Enter a username first.', true); return; }
+  leaguesPanel.style.display = 'none';
+  teamsPanel.style.display = 'none';
+  tradePanel.style.display = 'none';
+  resultsPanel.style.display = 'none';
+  lookupBtn.disabled = true;
+  try {
+    setStatus('Looking up ' + username + '\u2026');
+    const userRes = await fetch('https://api.sleeper.app/v1/user/' + encodeURIComponent(username));
+    if(!userRes.ok) throw new Error('User not found (HTTP ' + userRes.status + ')');
+    const user = await userRes.json();
+    if(!user || !user.user_id) throw new Error('No such Sleeper user.');
+
+    const season = seasonSelect.value;
+    setStatus('Fetching leagues for ' + season + '\u2026');
+    const leaguesRes = await fetch(`https://api.sleeper.app/v1/user/${user.user_id}/leagues/nfl/${season}`);
+    if(!leaguesRes.ok) throw new Error('Could not fetch leagues (HTTP ' + leaguesRes.status + ')');
+    const leagues = await leaguesRes.json();
+
+    if(!leagues || leagues.length === 0){
+      setStatus('No ' + season + ' leagues found for that username.', true);
+      lookupBtn.disabled = false;
+      return;
+    }
+
+    setStatus(`Found ${leagues.length} league${leagues.length !== 1 ? 's' : ''}. Pick one below.`);
+    leaguesList.innerHTML = leagues.map(l => `
+      <div class="league-card" data-league-id="${l.league_id}">
+        <span class="name">${escapeHtml(l.name)}</span>
+        <span class="meta">${l.total_rosters} teams</span>
+      </div>
+    `).join('');
+    leaguesPanel.style.display = 'block';
+    leaguesList.querySelectorAll('.league-card').forEach(card => {
+      card.addEventListener('click', () => loadLeague(card.dataset.leagueId));
+    });
+  } catch(err){
+    setStatus(err.message || 'Something went wrong.', true);
+  } finally {
+    lookupBtn.disabled = false;
+  }
+});
+
+function escapeHtml(s){
+  return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+}
+
+// ---------- Step 2: load a league's rosters + users ----------
+async function loadLeague(leagueId){
+  setStatus('Loading league details\u2026');
+  teamsPanel.style.display = 'none';
+  tradePanel.style.display = 'none';
+  resultsPanel.style.display = 'none';
+  try {
+    const [leagueRes, rostersRes, usersRes] = await Promise.all([
+      fetch(`https://api.sleeper.app/v1/league/${leagueId}`),
+      fetch(`https://api.sleeper.app/v1/league/${leagueId}/rosters`),
+      fetch(`https://api.sleeper.app/v1/league/${leagueId}/users`),
+    ]);
+    if(!leagueRes.ok || !rostersRes.ok || !usersRes.ok) throw new Error('Could not load full league details.');
+
+    currentLeague = await leagueRes.json();
+    currentRosters = await rostersRes.json();
+    currentUsers = await usersRes.json();
+
+    // Figure out the closest scoring preset from this league's own settings.
+    const recPts = (currentLeague.scoring_settings && currentLeague.scoring_settings.rec) || 0;
+    if(recPts >= 0.9) scoringField = 'pts_ppr';
+    else if(recPts >= 0.4) scoringField = 'pts_half_ppr';
+    else scoringField = 'pts_std';
+
+    await Promise.all([loadPlayerIdMap(), loadProjections()]);
+
+    teamA = null; teamB = null;
+    tradeAway = new Set(); tradeAwayB = new Set();
+
+    setStatus(`Loaded ${currentLeague.name}. Pick two teams below.`);
+    teamsList.innerHTML = currentRosters.map(r => `
+      <div class="team-card" data-roster-id="${r.roster_id}">
+        <span class="name">${escapeHtml(teamLabel(r))}</span>
+      </div>
+    `).join('');
+    teamsPanel.style.display = 'block';
+    teamsList.querySelectorAll('.team-card').forEach(card => {
+      card.addEventListener('click', () => pickTeam(parseInt(card.dataset.rosterId, 10)));
+    });
+  } catch(err){
+    setStatus(err.message || 'Something went wrong.', true);
+  }
+}
+
+function pickTeam(rosterId){
+  const roster = currentRosters.find(r => r.roster_id === rosterId);
+  if(!roster) return;
+
+  if(teamA && teamA.roster_id === rosterId){ teamA = null; }
+  else if(teamB && teamB.roster_id === rosterId){ teamB = null; }
+  else if(!teamA){ teamA = roster; }
+  else if(!teamB){ teamB = roster; }
+  else {
+    teamPickStatus.textContent = 'Two teams already picked \u2014 tap one to deselect it first.';
+    return;
+  }
+
+  teamPickStatus.textContent = '';
+  teamsList.querySelectorAll('.team-card').forEach(card => {
+    const id = parseInt(card.dataset.rosterId, 10);
+    card.classList.toggle('selected-a', teamA && teamA.roster_id === id);
+    card.classList.toggle('selected-b', teamB && teamB.roster_id === id);
+  });
+
+  tradeAway = new Set();
+  tradeAwayB = new Set();
+  if(teamA && teamB){
+    renderTradeBuilder();
+  } else {
+    tradePanel.style.display = 'none';
+    resultsPanel.style.display = 'none';
+  }
+}
+
+// ---------- Player ID + projections data ----------
+async function loadPlayerIdMap(){
+  if(playerIdMap) return;
+  setStatus('Loading player database\u2026');
+  const res = await fetch('https://api.sleeper.app/v1/players/nfl');
+  if(!res.ok) throw new Error('Could not load Sleeper player database (HTTP ' + res.status + ')');
+  const data = await res.json();
+  playerIdMap = data;
+}
+
+async function loadProjections(){
+  setStatus('Loading this week\u2019s projections\u2026');
+  const stateRes = await fetch('https://api.sleeper.app/v1/state/nfl');
+  if(!stateRes.ok) throw new Error('Could not load current NFL week (HTTP ' + stateRes.status + ')');
+  const state = await stateRes.json();
+  const season = state.league_season || state.season;
+  const week = state.display_week || state.week || 1;
+
+  const url = `https://api.sleeper.com/projections/nfl/${season}/${week}?season_type=regular&position[]=QB&position[]=RB&position[]=WR&position[]=TE&position[]=K&position[]=DEF`;
+  const res = await fetch(url);
+  if(!res.ok) throw new Error('Could not load projections (HTTP ' + res.status + ')');
+  const data = await res.json();
+  projectionsMap = { data, week, season };
+}
+
+function projectedPoints(playerId){
+  if(!projectionsMap || !projectionsMap.data) return 0;
+  const entry = projectionsMap.data[playerId];
+  if(!entry || !entry.stats) return 0;
+  const stats = entry.stats;
+  return stats[scoringField] || stats.pts_ppr || stats.pts_half_ppr || stats.pts_std || 0;
+}
+
+function playerInfo(playerId){
+  if(playerId === 'DEF' || (playerIdMap && !playerIdMap[playerId])){
+    // Team defenses are keyed by team abbreviation in Sleeper, not a numeric id
+    return { first: '', last: playerId, pos: 'DEF', team: playerId };
+  }
+  const p = playerIdMap[playerId];
+  if(!p) return { first: '', last: 'Unknown (' + playerId + ')', pos: '', team: '' };
+  return { first: p.first_name || '', last: p.last_name || '', pos: p.position || '', team: p.team || '' };
+}
+
+// ---------- Step 3: trade builder ----------
+function renderTradeBuilder(){
+  function colHtml(team, otherTeamLetter, tradeSet){
+    const players = team.players || [];
+    const rows = players.map(pid => {
+      const info = playerInfo(pid);
+      const pts = projectedPoints(pid);
+      const name = info.first ? `${info.first} ${info.last}` : info.last;
+      const picked = tradeSet.has(pid);
+      return `
+        <div class="player-row ${picked ? 'picked' : ''}" data-pid="${pid}" data-side="${otherTeamLetter}">
+          <input type="checkbox" ${picked ? 'checked' : ''} tabindex="-1">
+          <div class="pinfo">
+            <div class="pname">${escapeHtml(name)}</div>
+            <div class="pmeta">${info.pos}${info.team ? ' \u00b7 ' + info.team : ''}</div>
+          </div>
+          <div class="pproj">${pts.toFixed(1)}</div>
+        </div>`;
+    }).join('');
+    return rows || '<div class="status-line">No players on this roster.</div>';
+  }
+
+  tradePanel.innerHTML = `
+    <div class="section-title">BUILD THE TRADE \u2014 check who's moving from each side</div>
+    <div class="trade-columns">
+      <div class="trade-col side-a">
+        <div class="trade-col-head">${escapeHtml(teamLabel(teamA))}</div>
+        <div class="trade-col-sub">Sends these players away:</div>
+        ${colHtml(teamA, 'a', tradeAway)}
+      </div>
+      <div class="trade-col side-b">
+        <div class="trade-col-head">${escapeHtml(teamLabel(teamB))}</div>
+        <div class="trade-col-sub">Sends these players away:</div>
+        ${colHtml(teamB, 'b', tradeAwayB)}
+      </div>
+    </div>
+    <div style="margin-top:16px; text-align:center;">
+      <button id="calcTradeBtn">Calculate trade impact</button>
+    </div>
+  `;
+  tradePanel.style.display = 'block';
+  resultsPanel.style.display = 'none';
+
+  tradePanel.querySelectorAll('.player-row').forEach(row => {
+    row.addEventListener('click', () => {
+      const pid = row.dataset.pid;
+      const side = row.dataset.side;
+      const set = side === 'a' ? tradeAway : tradeAwayB;
+      if(set.has(pid)) set.delete(pid); else set.add(pid);
+      renderTradeBuilder();
+    });
+  });
+  document.getElementById('calcTradeBtn').addEventListener('click', calculateTrade);
+}
+
+// ---------- Lineup optimizer ----------
+// Greedy slot-filling: process single-position slots first (most
+// constrained), then FLEX, then SUPER_FLEX last (least constrained), always
+// assigning the highest-projected eligible player still available. This is
+// a heuristic, not a certified-optimal solver, but it matches how virtually
+// every realistic fantasy roster/slot configuration should be filled.
+const FLEX_ELIGIBLE = { FLEX: ['RB','WR','TE'], SUPER_FLEX: ['QB','RB','WR','TE'], WRRB_FLEX: ['RB','WR'], REC_FLEX: ['WR','TE'] };
+
+function optimizeLineup(rosterPositions, playerIds){
+  const pool = playerIds
+    .map(pid => ({ pid, pos: playerInfo(pid).pos, pts: projectedPoints(pid) }))
+    .filter(p => p.pos && p.pos !== 'BN');
+
+  const slots = rosterPositions.filter(s => s !== 'BN' && s !== 'TAXI' && s !== 'IR');
+  const constraintOrder = (slot) => FLEX_ELIGIBLE[slot] ? FLEX_ELIGIBLE[slot].length : 1;
+  const orderedSlots = slots.slice().sort((a, b) => constraintOrder(a) - constraintOrder(b));
+
+  const used = new Set();
+  let total = 0;
+  const filled = [];
+  orderedSlots.forEach(slot => {
+    const eligible = FLEX_ELIGIBLE[slot] || [slot];
+    const candidates = pool
+      .filter(p => !used.has(p.pid) && eligible.includes(p.pos))
+      .sort((a, b) => b.pts - a.pts);
+    if(candidates.length > 0){
+      const best = candidates[0];
+      used.add(best.pid);
+      total += best.pts;
+      filled.push({ slot, ...best });
+    }
+  });
+  return { total, filled };
+}
+
+// ---------- Step 4: calculate ----------
+function calculateTrade(){
+  const rosterPositions = currentLeague.roster_positions || [];
+
+  const beforeA = optimizeLineup(rosterPositions, teamA.players || []);
+  const beforeB = optimizeLineup(rosterPositions, teamB.players || []);
+
+  const afterAPlayers = (teamA.players || []).filter(pid => !tradeAway.has(pid)).concat([...tradeAwayB]);
+  const afterBPlayers = (teamB.players || []).filter(pid => !tradeAwayB.has(pid)).concat([...tradeAway]);
+
+  const afterA = optimizeLineup(rosterPositions, afterAPlayers);
+  const afterB = optimizeLineup(rosterPositions, afterBPlayers);
+
+  function resultCard(label, before, after){
+    const delta = after.total - before.total;
+    const cls = delta > 0.05 ? 'up' : delta < -0.05 ? 'down' : 'flat';
+    const sign = delta > 0 ? '+' : '';
+    return `
+      <div class="result-card">
+        <div class="label">${escapeHtml(label)}</div>
+        <div class="delta ${cls}">${sign}${delta.toFixed(1)}</div>
+        <div class="breakdown">${before.total.toFixed(1)} \u2192 ${after.total.toFixed(1)} proj. pts this week</div>
+      </div>`;
+  }
+
+  resultsPanel.innerHTML = `
+    <div class="section-title">PROJECTED IMPACT \u2014 WEEK ${projectionsMap.week}</div>
+    <div class="results-grid">
+      ${resultCard(teamLabel(teamA), beforeA, afterA)}
+      ${resultCard(teamLabel(teamB), beforeB, afterB)}
+    </div>
+  `;
+  resultsPanel.style.display = 'block';
+  resultsPanel.scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+
+usernameInput.addEventListener('keydown', (e) => { if(e.key === 'Enter') lookupBtn.click(); });
+
+// ---------- Stats ticker (display only) ----------
+(function initStatsTicker(){
+  const wrapEl = document.getElementById('tickerWrap');
+  const trackEl = document.getElementById('tickerTrack');
+  const titleEl = document.getElementById('tickerTitle');
+  const weekBtn = document.getElementById('tickerWeekBtn');
+  const seasonBtn = document.getElementById('tickerSeasonBtn');
+  const POS_ORDER = ['QB', 'RB', 'WR', 'TE', 'K'];
+
+  function buildCard(entry, rank){
+    const pun = entry.pun ? `<span class="ticker-pun">"${entry.pun}"</span>` : '';
+    return `
+      <div class="ticker-card" data-pos="${entry.pos}">
+        <span class="ticker-pos">${entry.pos}${rank}</span>
+        <span class="ticker-name">${entry.first} ${entry.last}</span>
+        <span class="ticker-team">${entry.team}</span>
+        <span class="ticker-pts">${entry.pts}</span>
+        ${pun}
+      </div>`;
+  }
+  function buildDivider(pos){ return `<div class="ticker-divider">${pos}</div>`; }
+
+  function render(data, view){
+    const byPos = view === 'season' ? data.seasonTotals : data.thisWeek;
+    const groupsHtml = [];
+    POS_ORDER.forEach(pos => {
+      const entries = byPos[pos] || [];
+      if(entries.length === 0) return;
+      groupsHtml.push(buildDivider(pos) + entries.map((e,i) => buildCard(e, i+1)).join(''));
+    });
+    if(groupsHtml.length === 0){ wrapEl.style.display = 'none'; return; }
+    wrapEl.style.display = 'block';
+    const cardsHtml = groupsHtml.join('');
+    trackEl.innerHTML = cardsHtml + cardsHtml;
+    const PIXELS_PER_SECOND = 47;
+    requestAnimationFrame(() => {
+      const halfWidth = trackEl.scrollWidth / 2;
+      const duration = Math.max(halfWidth / PIXELS_PER_SECOND, 20);
+      trackEl.style.animationDuration = duration + 's';
+    });
+    titleEl.textContent = view === 'season' ? `Season Leaders \u2014 through Week ${data.week}` : `Week ${data.week} Top Scorers`;
+  }
+
+  fetch('../stats_ticker.json').then(res => res.json()).then(data => {
+    if(!data || data.week === null){ wrapEl.style.display = 'none'; return; }
+    render(data, 'week');
+    weekBtn.addEventListener('click', () => { weekBtn.classList.add('active'); seasonBtn.classList.remove('active'); render(data, 'week'); });
+    seasonBtn.addEventListener('click', () => { seasonBtn.classList.add('active'); weekBtn.classList.remove('active'); render(data, 'season'); });
+  }).catch(err => { console.error('Stats ticker failed to load (non-fatal)', err); wrapEl.style.display = 'none'; });
+})();
+</script>
+</body>
+</html>
