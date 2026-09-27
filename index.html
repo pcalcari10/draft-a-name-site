@@ -434,8 +434,8 @@
     100% { left: 58%;  top: 60%; transform: rotate(18deg) scale(4.2); opacity: 0; }
   }
   .landing-burst {
-    position: fixed; z-index: 300; pointer-events: none; font-size: 22px;
-    animation: landing-burst-anim 0.7s ease-out forwards;
+    position: fixed; z-index: 300; pointer-events: none; font-size: 26px;
+    animation: landing-burst-anim 0.8s ease-out forwards;
   }
   @keyframes landing-burst-anim {
     0% { transform: translate(0, 0) scale(0.4); opacity: 1; }
@@ -976,7 +976,7 @@ function footballFrame(lacePos){
   }
   // 'hidden' (rotated to the far side): no laces drawn at all.
 
-  return `<svg viewBox="0 0 100 60" width="82" height="49">${ballBody}${laces}</svg>`;
+  return `<svg viewBox="0 0 100 60" width="118" height="70">${ballBody}${laces}</svg>`;
 }
 
 const FOOTBALL_SPIN_FRAMES = ['middle', 'top', 'hidden', 'bottom'];
@@ -1017,19 +1017,20 @@ function celebrateCopy(teamName){
 }
 
 function spawnLandingBurst(x, y){
-  const pieces = ['🎉', '✨', '🏈', '⭐'];
-  for(let i = 0; i < 6; i++){
+  const pieces = ['🎉', '✨', '🏈', '⭐', '🎊', '🏆'];
+  const count = 14;
+  for(let i = 0; i < count; i++){
     const piece = document.createElement('div');
     piece.className = 'landing-burst';
     piece.textContent = pieces[Math.floor(Math.random() * pieces.length)];
-    const angle = (Math.PI * 2 * i) / 6 + (Math.random() * 0.5);
-    const distance = 40 + Math.random() * 30;
+    const angle = (Math.PI * 2 * i) / count + (Math.random() * 0.4);
+    const distance = 50 + Math.random() * 60;
     piece.style.left = x + 'px';
     piece.style.top = y + 'px';
     piece.style.setProperty('--dx', Math.cos(angle) * distance + 'px');
     piece.style.setProperty('--dy', Math.sin(angle) * distance + 'px');
     document.body.appendChild(piece);
-    setTimeout(() => piece.remove(), 750);
+    setTimeout(() => piece.remove(), 800);
   }
 }
 
