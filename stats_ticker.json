@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-27T21:26:00.302Z",
+  "generatedAt": "2026-09-27T21:40:52.956Z",
   "season": "2026",
   "week": 3,
   "thisWeek": {
@@ -104,13 +104,13 @@
         "pun": "Sherlock Mahomes"
       },
       {
-        "id": "michaelpenixjr_atl",
-        "first": "Michael",
-        "last": "Penix",
-        "team": "ATL",
+        "id": "brockpurdy_sf",
+        "first": "Brock",
+        "last": "Purdy",
+        "team": "SF",
         "pos": "QB",
-        "pts": 15,
-        "pun": "The Penix Mightier"
+        "pts": 16.2,
+        "pun": "Purdy Good Team"
       }
     ],
     "RB": [
@@ -165,7 +165,7 @@
         "last": "Henry",
         "team": "BAL",
         "pos": "RB",
-        "pts": 17.3,
+        "pts": 17.7,
         "pun": "King Henry's Court"
       },
       {
@@ -623,6 +623,15 @@
         "pun": "Barner'd Up and Ready"
       },
       {
+        "id": "juwanjohnson_no",
+        "first": "Juwan",
+        "last": "Johnson",
+        "team": "NO",
+        "pos": "TE",
+        "pts": 11.2,
+        "pun": "Juwan's Johnson"
+      },
+      {
         "id": "brockbowers_lv",
         "first": "Brock",
         "last": "Bowers",
@@ -648,15 +657,6 @@
         "pos": "TE",
         "pts": 10.1,
         "pun": "Waller'd Up and Ready"
-      },
-      {
-        "id": "darnellwashington_pit",
-        "first": "Darnell",
-        "last": "Washington",
-        "team": "PIT",
-        "pos": "TE",
-        "pts": 9.7,
-        "pun": "Washington The Pain Down"
       }
     ],
     "K": [
@@ -695,6 +695,15 @@
         "pos": "K",
         "pts": 9,
         "pun": "Do you like my Cameron Dicker"
+      },
+      {
+        "id": "eddypineiro_sf",
+        "first": "Eddy",
+        "last": "Pineiro",
+        "team": "SF",
+        "pos": "K",
+        "pts": 7,
+        "pun": "Pineiro of Fame"
       },
       {
         "id": "jakebates_det",
@@ -740,15 +749,6 @@
         "pos": "K",
         "pts": 5,
         "pun": "I Like Big Butker, And I Cannot Lie"
-      },
-      {
-        "id": "chasemclaughlin_tb",
-        "first": "Chase",
-        "last": "McLaughlin",
-        "team": "TB",
-        "pos": "K",
-        "pts": 4,
-        "pun": "Livin' on a McLaughlin"
       }
     ]
   },
@@ -782,6 +782,15 @@
         "pun": "Sherlock Mahomes"
       },
       {
+        "id": "brockpurdy_sf",
+        "first": "Brock",
+        "last": "Purdy",
+        "team": "SF",
+        "pos": "QB",
+        "pts": 66.7,
+        "pun": "Purdy Good Team"
+      },
+      {
         "id": "jaredgoff_det",
         "first": "Jared",
         "last": "Goff",
@@ -791,21 +800,12 @@
         "pun": "I'm About To Go Goff"
       },
       {
-        "id": "brockpurdy_sf",
-        "first": "Brock",
-        "last": "Purdy",
-        "team": "SF",
-        "pos": "QB",
-        "pts": 65.4,
-        "pun": "Purdy Good Team"
-      },
-      {
         "id": "tylershough_no",
         "first": "Tyler",
         "last": "Shough",
         "team": "NO",
         "pos": "QB",
-        "pts": 56.6,
+        "pts": 62.8,
         "pun": "Aww Shoughs"
       },
       {
@@ -859,7 +859,7 @@
         "last": "Prescott",
         "team": "DAL",
         "pos": "QB",
-        "pts": 47.3,
+        "pts": 48.1,
         "pun": "The Boys Are Dak In Town"
       }
     ],
@@ -897,7 +897,7 @@
         "last": "Henry",
         "team": "BAL",
         "pos": "RB",
-        "pts": 70.3,
+        "pts": 70.7,
         "pun": "King Henry's Court"
       },
       {
@@ -933,7 +933,7 @@
         "last": "Jeanty",
         "team": "LV",
         "pos": "RB",
-        "pts": 46.6,
+        "pts": 46.8,
         "pun": "Fire and Ashton"
       },
       {
@@ -1110,6 +1110,15 @@
         "pun": "Elementary, My Dear Watson"
       },
       {
+        "id": "chrisolave_no",
+        "first": "Chris",
+        "last": "Olave",
+        "team": "NO",
+        "pos": "WR",
+        "pts": 57.9,
+        "pun": "Olave Oil"
+      },
+      {
         "id": "garrettwilson_nyj",
         "first": "Garrett",
         "last": "Wilson",
@@ -1119,6 +1128,15 @@
         "pun": "WILSON!🏐"
       },
       {
+        "id": "ceedeelamb_dal",
+        "first": "CeeDee",
+        "last": "Lamb",
+        "team": "DAL",
+        "pos": "WR",
+        "pts": 56.6,
+        "pun": "Silence of the Lambs"
+      },
+      {
         "id": "jamarrchase_cin",
         "first": "Ja'Marr",
         "last": "Chase",
@@ -1126,24 +1144,6 @@
         "pos": "WR",
         "pts": 54.5,
         "pun": "Ja'Marrvelous"
-      },
-      {
-        "id": "chrisolave_no",
-        "first": "Chris",
-        "last": "Olave",
-        "team": "NO",
-        "pos": "WR",
-        "pts": 53,
-        "pun": "Olave Oil"
-      },
-      {
-        "id": "ceedeelamb_dal",
-        "first": "CeeDee",
-        "last": "Lamb",
-        "team": "DAL",
-        "pos": "WR",
-        "pts": 52.8,
-        "pun": "Silence of the Lambs"
       },
       {
         "id": "jalencoker_car",
@@ -1315,7 +1315,7 @@
         "last": "McBride",
         "team": "ARI",
         "pos": "TE",
-        "pts": 47.2,
+        "pts": 48.9,
         "pun": "50 Shades of Trey"
       },
       {
@@ -1373,6 +1373,15 @@
         "pun": "Sadiq Happens"
       },
       {
+        "id": "juwanjohnson_no",
+        "first": "Juwan",
+        "last": "Johnson",
+        "team": "NO",
+        "pos": "TE",
+        "pts": 36.2,
+        "pun": "Juwan's Johnson"
+      },
+      {
         "id": "samlaporta_det",
         "first": "Sam",
         "last": "LaPorta",
@@ -1380,15 +1389,6 @@
         "pos": "TE",
         "pts": 34.4,
         "pun": "Sam LaPorta Potty"
-      },
-      {
-        "id": "juwanjohnson_no",
-        "first": "Juwan",
-        "last": "Johnson",
-        "team": "NO",
-        "pos": "TE",
-        "pts": 33.8,
-        "pun": "Juwan's Johnson"
       },
       {
         "id": "darrenwaller_car",
@@ -1456,6 +1456,15 @@
         "pun": "Reichard Happens"
       },
       {
+        "id": "tylerloop_bal",
+        "first": "Tyler",
+        "last": "Loop",
+        "team": "BAL",
+        "pos": "K",
+        "pts": 24,
+        "pun": "Jumping Through Loops"
+      },
+      {
         "id": "jasonmyers_sea",
         "first": "Jason",
         "last": "Myers",
@@ -1483,22 +1492,13 @@
         "pun": "Cam's Excellent Adventure"
       },
       {
-        "id": "brandonaubrey_dal",
-        "first": "Brandon",
-        "last": "Aubrey",
-        "team": "DAL",
+        "id": "eddypineiro_sf",
+        "first": "Eddy",
+        "last": "Pineiro",
+        "team": "SF",
         "pos": "K",
-        "pts": 21,
-        "pun": "Aubrey'd Up and Ready"
-      },
-      {
-        "id": "jakebates_det",
-        "first": "Jake",
-        "last": "Bates",
-        "team": "DET",
-        "pos": "K",
-        "pts": 21,
-        "pun": "All Bates, No Filler"
+        "pts": 22,
+        "pun": "Pineiro of Fame"
       }
     ]
   }
