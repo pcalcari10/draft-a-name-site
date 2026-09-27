@@ -637,7 +637,9 @@ function renderTradeBuilder(){
     const benchSorted = benchIds.slice().sort((a, b) => {
       const idxA = BENCH_POS_ORDER.indexOf(playerInfo(a).pos);
       const idxB = BENCH_POS_ORDER.indexOf(playerInfo(b).pos);
-      return (idxA === -1 ? 99 : idxA) - (idxB === -1 ? 99 : idxB);
+      const posDiff = (idxA === -1 ? 99 : idxA) - (idxB === -1 ? 99 : idxB);
+      if(posDiff !== 0) return posDiff;
+      return projectedPoints(b) - projectedPoints(a);
     });
 
     const starterRows = starterIds.map(pid => rowHtml(pid, otherTeamLetter, tradeSet)).join('');
