@@ -935,10 +935,8 @@ function renderChips(){
 }
 
 
-function celebrateCopy(teamName){
-  const football = document.createElement('div');
-  football.className = 'football-fly';
-  football.innerHTML = `<svg viewBox="0 0 100 60" width="64" height="38">
+function footballFrame(lacePos){
+  const ballBody = `
     <defs>
       <radialGradient id="ballGrad" cx="35%" cy="28%" r="75%">
         <stop offset="0%" stop-color="#BE7A47"/>
@@ -949,15 +947,59 @@ function celebrateCopy(teamName){
     <path d="M2,30 Q2,4 50,4 Q98,4 98,30 Q98,56 50,56 Q2,56 2,30 Z" fill="url(#ballGrad)" stroke="#2E1608" stroke-width="2"/>
     <path d="M13,13 Q50,21 87,13" fill="none" stroke="#2E1608" stroke-width="1.3" opacity="0.55"/>
     <path d="M13,47 Q50,39 87,47" fill="none" stroke="#2E1608" stroke-width="1.3" opacity="0.55"/>
-    <line x1="28" y1="30" x2="72" y2="30" stroke="#F4F2EC" stroke-width="2.5" stroke-linecap="round"/>
-    <line x1="38" y1="24" x2="41" y2="36" stroke="#F4F2EC" stroke-width="2" stroke-linecap="round"/>
-    <line x1="45" y1="22" x2="48" y2="38" stroke="#F4F2EC" stroke-width="2" stroke-linecap="round"/>
-    <line x1="52" y1="22" x2="55" y2="38" stroke="#F4F2EC" stroke-width="2" stroke-linecap="round"/>
-    <line x1="59" y1="24" x2="62" y2="36" stroke="#F4F2EC" stroke-width="2" stroke-linecap="round"/>
-    <ellipse cx="34" cy="16" rx="14" ry="6" fill="#FFFFFF" opacity="0.2" transform="rotate(-18 34 16)"/>
-  </svg>`;
+    <ellipse cx="34" cy="16" rx="14" ry="6" fill="#FFFFFF" opacity="0.2" transform="rotate(-18 34 16)"/>`;
+
+  // Laces drawn at different heights/widths to simulate the ball spinning
+  // around its long axis: full-width and centered when facing the viewer,
+  // foreshortened near the top/bottom edges as they rotate around, and
+  // absent entirely when they've rotated to the far side.
+  let laces = '';
+  if(lacePos === 'middle'){
+    laces = `
+      <line x1="28" y1="30" x2="72" y2="30" stroke="#F4F2EC" stroke-width="2.5" stroke-linecap="round"/>
+      <line x1="38" y1="24" x2="41" y2="36" stroke="#F4F2EC" stroke-width="2" stroke-linecap="round"/>
+      <line x1="45" y1="22" x2="48" y2="38" stroke="#F4F2EC" stroke-width="2" stroke-linecap="round"/>
+      <line x1="52" y1="22" x2="55" y2="38" stroke="#F4F2EC" stroke-width="2" stroke-linecap="round"/>
+      <line x1="59" y1="24" x2="62" y2="36" stroke="#F4F2EC" stroke-width="2" stroke-linecap="round"/>`;
+  } else if(lacePos === 'top'){
+    laces = `
+      <line x1="33" y1="15" x2="67" y2="15" stroke="#F4F2EC" stroke-width="2" stroke-linecap="round"/>
+      <line x1="41" y1="12" x2="43" y2="18" stroke="#F4F2EC" stroke-width="1.5" stroke-linecap="round"/>
+      <line x1="49" y1="11" x2="51" y2="19" stroke="#F4F2EC" stroke-width="1.5" stroke-linecap="round"/>
+      <line x1="57" y1="12" x2="59" y2="18" stroke="#F4F2EC" stroke-width="1.5" stroke-linecap="round"/>`;
+  } else if(lacePos === 'bottom'){
+    laces = `
+      <line x1="33" y1="45" x2="67" y2="45" stroke="#F4F2EC" stroke-width="2" stroke-linecap="round"/>
+      <line x1="41" y1="42" x2="43" y2="48" stroke="#F4F2EC" stroke-width="1.5" stroke-linecap="round"/>
+      <line x1="49" y1="41" x2="51" y2="49" stroke="#F4F2EC" stroke-width="1.5" stroke-linecap="round"/>
+      <line x1="57" y1="42" x2="59" y2="48" stroke="#F4F2EC" stroke-width="1.5" stroke-linecap="round"/>`;
+  }
+  // 'hidden' (rotated to the far side): no laces drawn at all.
+
+  return `<svg viewBox="0 0 100 60" width="64" height="38">${ballBody}${laces}</svg>`;
+}
+
+const FOOTBALL_SPIN_FRAMES = ['middle', 'top', 'hidden', 'bottom'];
+
+function celebrateCopy(teamName){
+  const football = document.createElement('div');
+  football.className = 'football-fly';
+  football.innerHTML = footballFrame('middle');
   document.body.appendChild(football);
-  setTimeout(() => football.remove(), 1400);
+
+  // Cycle through the pre-drawn lace positions rapidly to simulate the
+  // ball spinning around its long axis, since a single flat shape can't be
+  // rotated convincingly with CSS transforms alone.
+  let frameIndex = 0;
+  const spinInterval = setInterval(() => {
+    frameIndex = (frameIndex + 1) % FOOTBALL_SPIN_FRAMES.length;
+    football.innerHTML = footballFrame(FOOTBALL_SPIN_FRAMES[frameIndex]);
+  }, 70);
+
+  setTimeout(() => {
+    clearInterval(spinInterval);
+    football.remove();
+  }, 1400);
 
   // A little burst of confetti right as the football "arrives," near where
   // it grows largest before fading out.
