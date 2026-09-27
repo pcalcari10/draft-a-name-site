@@ -289,8 +289,6 @@
 
   <div id="resultsPanel" style="display:none;"></div>
 
-  <div id="debugPanel" class="panel" style="display:none; font-family:var(--mono); font-size:12px; white-space:pre-wrap; word-break:break-all; max-height:400px; overflow-y:auto;"></div>
-
   <footer>
     <div class="footer-grid">
       <div class="footer-col">
@@ -530,20 +528,17 @@ async function loadProjections(){
   const url = `https://api.sleeper.com/projections/nfl/${season}/${week}?season_type=regular&position[]=QB&position[]=RB&position[]=WR&position[]=TE&position[]=K&position[]=DEF`;
   const res = await fetch(url);
   if(!res.ok) throw new Error('Could not load projections (HTTP ' + res.status + ')');
-  const data = await res.json();
-  projectionsMap = { data, week, season };
+  const rawData = await res.json();
 
-  const debugEl = document.getElementById('debugPanel');
-  const sampleKeys = Object.keys(data).slice(0, 5);
-  const nonEmptyKeys = Object.keys(data).filter(k => data[k] && Object.keys(data[k]).length > 0);
-  debugEl.style.display = 'block';
-  debugEl.textContent =
-    'DEBUG (temporary) \u2014 NFL state: ' + JSON.stringify(state) + '\n\n' +
-    'Request URL: ' + url + '\n\n' +
-    'Total entries in response: ' + Object.keys(data).length + '\n' +
-    'Entries with any data at all: ' + nonEmptyKeys.length + '\n\n' +
-    'First 5 raw entries:\n' + sampleKeys.map(k => k + ': ' + JSON.stringify(data[k])).join('\n') + '\n\n' +
-    (nonEmptyKeys.length > 0 ? 'First non-empty entry:\n' + nonEmptyKeys[0] + ': ' + JSON.stringify(data[nonEmptyKeys[0]]) : 'No non-empty entries found at all.');
+  // The response is an array of per-player entries (not an object keyed by
+  // player_id) — each entry carries its own player_id field, so build a
+  // lookup map from it for fast access elsewhere.
+  const byId = {};
+  rawData.forEach(entry => {
+    if(entry && entry.player_id) byId[entry.player_id] = entry;
+  });
+
+  projectionsMap = { data: byId, week, season };
 }
 
 function projectedPoints(playerId){
