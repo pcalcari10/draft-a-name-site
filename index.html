@@ -417,6 +417,28 @@
   .copy-btn:hover { background: rgba(11,22,34,0.08); }
   .copy-btn.copied { color: var(--turf-500); }
 
+  /* ---------- Copy celebration ---------- */
+  .football-fly {
+    position: fixed; top: 38%; left: -60px; font-size: 42px; z-index: 300;
+    pointer-events: none; animation: football-fly-across 1.3s cubic-bezier(0.3, 0, 0.7, 1) forwards;
+  }
+  @keyframes football-fly-across {
+    0% { left: -60px; transform: rotate(0deg) translateY(0); }
+    50% { transform: rotate(360deg) translateY(-40px); }
+    100% { left: 110%; transform: rotate(720deg) translateY(0); }
+  }
+  .celebration-toast {
+    position: fixed; top: max(20px, env(safe-area-inset-top, 0px)); left: 50%;
+    transform: translateX(-50%) translateY(-16px);
+    background: var(--navy-800); border: 1px solid var(--gold-400); border-radius: 12px;
+    padding: 14px 24px; font-family: var(--font-display); font-weight: 700; font-size: 16px;
+    line-height: 1.3; color: var(--chalk-100); z-index: 301; opacity: 0;
+    transition: opacity .3s ease, transform .3s ease;
+    box-shadow: 0 14px 30px rgba(0,0,0,0.4); pointer-events: none; text-align: center; max-width: 88vw;
+  }
+  .celebration-toast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
+  .celebration-toast .team-quote { color: var(--gold-300); }
+
   .like-row {
     display: flex; align-items: center; gap: 6px; margin-top: 10px;
   }
@@ -899,6 +921,24 @@ function renderChips(){
 }
 
 
+function celebrateCopy(teamName){
+  const football = document.createElement('div');
+  football.className = 'football-fly';
+  football.textContent = '🏈';
+  document.body.appendChild(football);
+  setTimeout(() => football.remove(), 1400);
+
+  const toast = document.createElement('div');
+  toast.className = 'celebration-toast';
+  toast.innerHTML = `🏆 Good luck this season,<br><span class="team-quote">"${escapeHtml(teamName)}"</span>`;
+  document.body.appendChild(toast);
+  requestAnimationFrame(() => toast.classList.add('show'));
+  setTimeout(() => {
+    toast.classList.remove('show');
+    setTimeout(() => toast.remove(), 350);
+  }, 2200);
+}
+
 function escapeHtml(s){
   return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
 }
@@ -1297,6 +1337,7 @@ async function loadTopPopular(){
         btn.classList.add('copied');
         btn.textContent = '✓';
         setTimeout(() => { btn.classList.remove('copied'); btn.textContent = '⧉'; }, 1200);
+        celebrateCopy(btn.dataset.text);
       });
     });
   } catch(err){
@@ -1329,6 +1370,7 @@ function renderResultsList(results){
       btn.classList.add('copied');
       btn.textContent = '✓';
       setTimeout(() => { btn.classList.remove('copied'); btn.textContent = '⧉'; }, 1200);
+      celebrateCopy(text);
     });
   });
   wireLikeButtons(resultsGrid);
