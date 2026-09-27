@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-27T20:25:58.942Z",
+  "generatedAt": "2026-09-27T20:40:38.857Z",
   "season": "2026",
   "week": 3,
   "thisWeek": {
@@ -55,7 +55,7 @@
         "last": "Mariota",
         "team": "WAS",
         "pos": "QB",
-        "pts": 20.6,
+        "pts": 20.4,
         "pun": "Mariota-A-Palooza"
       },
       {
@@ -64,7 +64,7 @@
         "last": "Watson",
         "team": "CLE",
         "pos": "QB",
-        "pts": 20.3,
+        "pts": 20.2,
         "pun": "Watson Clinic"
       },
       {
@@ -104,13 +104,13 @@
         "pun": "Sherlock Mahomes"
       },
       {
-        "id": "bryceyoung_car",
-        "first": "Bryce",
-        "last": "Young",
-        "team": "CAR",
+        "id": "michaelpenixjr_atl",
+        "first": "Michael",
+        "last": "Penix",
+        "team": "ATL",
         "pos": "QB",
-        "pts": 15.7,
-        "pun": "The Bryce Is Right"
+        "pts": 15,
+        "pun": "The Penix Mightier"
       }
     ],
     "RB": [
@@ -219,7 +219,7 @@
         "last": "White",
         "team": "WAS",
         "pos": "RB",
-        "pts": 11,
+        "pts": 11.1,
         "pun": "Rachaad White and the 7 Dwarfs"
       },
       {
@@ -468,6 +468,15 @@
         "pun": "Cooper Troopers"
       },
       {
+        "id": "deebosamuelsr_sf",
+        "first": "Deebo",
+        "last": "Samuel",
+        "team": "SF",
+        "pos": "WR",
+        "pts": 14.3,
+        "pun": "Finding Deebo"
+      },
+      {
         "id": "treharris_lac",
         "first": "Tre'",
         "last": "Harris",
@@ -538,15 +547,6 @@
         "pos": "WR",
         "pts": 11.1,
         "pun": "Washington Wizards"
-      },
-      {
-        "id": "chrisbell_mia",
-        "first": "Chris",
-        "last": "Bell",
-        "team": "MIA",
-        "pos": "WR",
-        "pts": 10.7,
-        "pun": "All Bell, No Filler"
       }
     ],
     "TE": [
@@ -769,7 +769,7 @@
         "last": "Young",
         "team": "CAR",
         "pos": "QB",
-        "pts": 72.2,
+        "pts": 71.2,
         "pun": "The Bryce Is Right"
       },
       {
@@ -796,8 +796,17 @@
         "last": "Watson",
         "team": "CLE",
         "pos": "QB",
-        "pts": 55,
+        "pts": 54.9,
         "pun": "Watson Clinic"
+      },
+      {
+        "id": "brockpurdy_sf",
+        "first": "Brock",
+        "last": "Purdy",
+        "team": "SF",
+        "pos": "QB",
+        "pts": 54.5,
+        "pun": "Purdy Good Team"
       },
       {
         "id": "trevorlawrence_jac",
@@ -836,15 +845,6 @@
         "pun": "Geno Grigio"
       },
       {
-        "id": "brockpurdy_sf",
-        "first": "Brock",
-        "last": "Purdy",
-        "team": "SF",
-        "pos": "QB",
-        "pts": 50.7,
-        "pun": "Purdy Good Team"
-      },
-      {
         "id": "tylershough_no",
         "first": "Tyler",
         "last": "Shough",
@@ -854,13 +854,13 @@
         "pun": "Aww Shoughs"
       },
       {
-        "id": "calebwilliams_chi",
-        "first": "Caleb",
-        "last": "Williams",
-        "team": "CHI",
+        "id": "dakprescott_dal",
+        "first": "Dak",
+        "last": "Prescott",
+        "team": "DAL",
         "pos": "QB",
         "pts": 46,
-        "pun": "Lisan Al-Caleb"
+        "pun": "The Boys Are Dak In Town"
       }
     ],
     "RB": [
@@ -901,6 +901,15 @@
         "pun": "Taylor-Made"
       },
       {
+        "id": "derrickhenry_bal",
+        "first": "Derrick",
+        "last": "Henry",
+        "team": "BAL",
+        "pos": "RB",
+        "pts": 54.6,
+        "pun": "King Henry's Court"
+      },
+      {
         "id": "chubahubbard_car",
         "first": "Chuba",
         "last": "Hubbard",
@@ -908,15 +917,6 @@
         "pos": "RB",
         "pts": 53.1,
         "pun": "Chubawamba"
-      },
-      {
-        "id": "derrickhenry_bal",
-        "first": "Derrick",
-        "last": "Henry",
-        "team": "BAL",
-        "pos": "RB",
-        "pts": 53,
-        "pun": "King Henry's Court"
       },
       {
         "id": "jamescookiii_buf",
@@ -942,7 +942,7 @@
         "last": "Jeanty",
         "team": "LV",
         "pos": "RB",
-        "pts": 43,
+        "pts": 45,
         "pun": "Fire and Ashton"
       },
       {
@@ -973,6 +973,15 @@
         "pun": "This is Your Final Warren"
       },
       {
+        "id": "christianmccaffrey_sf",
+        "first": "Christian",
+        "last": "McCaffrey",
+        "team": "SF",
+        "pos": "RB",
+        "pts": 40.3,
+        "pun": "Run CMC"
+      },
+      {
         "id": "davidmontgomery_hou",
         "first": "David",
         "last": "Montgomery",
@@ -991,13 +1000,13 @@
         "pun": "High-Speed Chase"
       },
       {
-        "id": "christianmccaffrey_sf",
-        "first": "Christian",
-        "last": "McCaffrey",
-        "team": "SF",
+        "id": "javontewilliams_dal",
+        "first": "Javonte",
+        "last": "Williams",
+        "team": "DAL",
         "pos": "RB",
-        "pts": 36.7,
-        "pun": "Run CMC"
+        "pts": 36.6,
+        "pun": "One In a Williams"
       },
       {
         "id": "camskattebo_nyg",
@@ -1014,17 +1023,8 @@
         "last": "Irving",
         "team": "TB",
         "pos": "RB",
-        "pts": 34.7,
+        "pts": 35,
         "pun": "Bucky Beaver Dam"
-      },
-      {
-        "id": "javontewilliams_dal",
-        "first": "Javonte",
-        "last": "Williams",
-        "team": "DAL",
-        "pos": "RB",
-        "pts": 32.2,
-        "pun": "One In a Williams"
       },
       {
         "id": "omarionhampton_lac",
@@ -1050,7 +1050,7 @@
         "last": "White",
         "team": "WAS",
         "pos": "RB",
-        "pts": 30,
+        "pts": 30.1,
         "pun": "Rachaad White and the 7 Dwarfs"
       },
       {
@@ -1227,6 +1227,15 @@
         "pun": "Finding the Denzone"
       },
       {
+        "id": "deebosamuelsr_sf",
+        "first": "Deebo",
+        "last": "Samuel",
+        "team": "SF",
+        "pos": "WR",
+        "pts": 38.8,
+        "pun": "Finding Deebo"
+      },
+      {
         "id": "rasheerice_kc",
         "first": "Rashee",
         "last": "Rice",
@@ -1270,15 +1279,6 @@
         "pos": "WR",
         "pts": 32.6,
         "pun": "Double Downs"
-      },
-      {
-        "id": "mikeevans_sf",
-        "first": "Mike",
-        "last": "Evans",
-        "team": "SF",
-        "pos": "WR",
-        "pts": 32.5,
-        "pun": "7th Evans"
       },
       {
         "id": "devaughnvele_no",
@@ -1434,7 +1434,7 @@
         "last": "McLaughlin",
         "team": "TB",
         "pos": "K",
-        "pts": 27,
+        "pts": 28,
         "pun": "Livin' on a McLaughlin"
       },
       {
