@@ -623,6 +623,7 @@ function updateProgressStats(){
     const tags = [];
     if(genericByCategory.movie) tags.push(`${genericByCategory.movie.length} tagged movie`);
     if(genericByCategory.music) tags.push(`${genericByCategory.music.length} tagged music`);
+    if(genericByCategory.tv) tags.push(`${genericByCategory.tv.length} tagged tv`);
     const tagText = tags.length > 0 ? ` <span style="color:var(--dim); font-size:11.5px;">(${tags.join(', ')})</span>` : '';
     genericWrap.innerHTML = `🃏 <span class="js-breakdown-generic">${allGeneric.length}</span> generic names${tagText}`;
   }

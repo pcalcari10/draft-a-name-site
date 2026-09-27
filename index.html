@@ -825,6 +825,7 @@ function buildEntities(){
   ENTITIES.push({ id: 'generic_all', kind: 'genericAll', names: GENERIC_WILDCARDS });
   ENTITIES.push({ id: 'generic_movie', kind: 'genericMovie', names: GENERIC_BY_CATEGORY.movie || [] });
   ENTITIES.push({ id: 'generic_music', kind: 'genericMusic', names: GENERIC_BY_CATEGORY.music || [] });
+  ENTITIES.push({ id: 'generic_tv', kind: 'genericTv', names: GENERIC_BY_CATEGORY.tv || [] });
 }
 
 function findCuratedCombo(a, b){
@@ -863,6 +864,7 @@ function fullName(e){
   if(e.kind === 'genericAll') return 'Generic Names';
   if(e.kind === 'genericMovie') return 'Movie Names';
   if(e.kind === 'genericMusic') return 'Music Names';
+  if(e.kind === 'genericTv') return 'TV Show Names';
   return `${e.first} ${e.last}`;
 }
 
@@ -894,7 +896,7 @@ function renderSuggestions(query){
   suggestionsBox.innerHTML = matches.map(e => `
     <div class="suggestion" data-id="${e.id}">
       <span class="pname">${fullName(e)}</span>
-      <span class="pmeta">${e.kind === 'team' ? `DST · ${e.abbr}` : e.kind === 'wildcard' ? 'Generic name' : e.kind === 'genericAll' ? `Browse all ${e.names.length}` : e.kind === 'genericMovie' ? `Browse all ${e.names.length}` : e.kind === 'genericMusic' ? `Browse all ${e.names.length}` : `${e.pos} · ${e.team}`}</span>
+      <span class="pmeta">${e.kind === 'team' ? `DST · ${e.abbr}` : e.kind === 'wildcard' ? 'Generic name' : e.kind === 'genericAll' ? `Browse all ${e.names.length}` : e.kind === 'genericMovie' ? `Browse all ${e.names.length}` : e.kind === 'genericMusic' ? `Browse all ${e.names.length}` : e.kind === 'genericTv' ? `Browse all ${e.names.length}` : `${e.pos} · ${e.team}`}</span>
     </div>`).join('');
   suggestionsBox.classList.add('open');
 }
@@ -927,7 +929,7 @@ function removePlayer(id){
 
 function renderChips(){
   chipsBox.innerHTML = selected.map(e => `
-    <span class="chip">${e.kind === 'team' ? '🛡 ' : e.kind === 'wildcard' ? '✨ ' : e.kind === 'genericAll' ? '🗂 ' : e.kind === 'genericMovie' ? '🎬 ' : e.kind === 'genericMusic' ? '🎵 ' : ''}${fullName(e)}<button aria-label="Remove ${fullName(e)}" data-id="${e.id}">✕</button></span>
+    <span class="chip">${e.kind === 'team' ? '🛡 ' : e.kind === 'wildcard' ? '✨ ' : e.kind === 'genericAll' ? '🗂 ' : e.kind === 'genericMovie' ? '🎬 ' : e.kind === 'genericMusic' ? '🎵 ' : e.kind === 'genericTv' ? '📺 ' : ''}${fullName(e)}<button aria-label="Remove ${fullName(e)}" data-id="${e.id}">✕</button></span>
   `).join('');
   chipsBox.querySelectorAll('button').forEach(btn => {
     btn.addEventListener('click', () => removePlayer(btn.dataset.id));
@@ -1102,7 +1104,7 @@ async function renderAllNames(){
         .sort((a, b) => b.c - a.c || a.i - b.i)
         .map(x => x.n);
     }
-    const icon = e.kind === 'team' ? '🛡 ' : e.kind === 'genericAll' ? '🗂 ' : e.kind === 'genericMovie' ? '🎬 ' : e.kind === 'genericMusic' ? '🎵 ' : e.kind === 'wildcard' ? '✨ ' : (DEFENSIVE_POS.has(e.pos) ? '🛡️ ' : '');
+    const icon = e.kind === 'team' ? '🛡 ' : e.kind === 'genericAll' ? '🗂 ' : e.kind === 'genericMovie' ? '🎬 ' : e.kind === 'genericMusic' ? '🎵 ' : e.kind === 'genericTv' ? '📺 ' : e.kind === 'wildcard' ? '✨ ' : (DEFENSIVE_POS.has(e.pos) ? '🛡️ ' : '');
     const label = fullName(e);
     return `
     <details class="entity-names">
@@ -1146,6 +1148,7 @@ function buildResults(){
   const selectedGenericAll = selected.filter(e => e.kind === 'genericAll');
   const selectedGenericMovie = selected.filter(e => e.kind === 'genericMovie');
   const selectedGenericMusic = selected.filter(e => e.kind === 'genericMusic');
+  const selectedGenericTv = selected.filter(e => e.kind === 'genericTv');
 
   // Guarantee exactly one result for every entity the user actually searched
   // for and added — so nothing they picked gets crowded out of the results.
@@ -1182,6 +1185,9 @@ function buildResults(){
   });
   selectedGenericMusic.forEach(g => {
     weightedPick(g.names, Math.min(g.names.length, 3)).forEach(n => bonusPool.push({ name: n, type: 'wild', meta: 'Music-themed pick' }));
+  });
+  selectedGenericTv.forEach(g => {
+    weightedPick(g.names, Math.min(g.names.length, 3)).forEach(n => bonusPool.push({ name: n, type: 'wild', meta: 'TV-themed pick' }));
   });
 
   // Combos only make sense between two players — bonus content, not guaranteed
