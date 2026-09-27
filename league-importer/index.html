@@ -242,6 +242,53 @@
   @media (max-width: 640px) {
     .footer-grid { grid-template-columns: 1fr 1fr; }
   }
+
+  /* ---------- Copy celebration ---------- */
+  .football-fly {
+    position: fixed; z-index: 300;
+    pointer-events: none; animation: football-fly-across 1.3s cubic-bezier(0.25, 0.1, 0.4, 1) forwards;
+    filter: drop-shadow(0 3px 6px rgba(0,0,0,0.35));
+  }
+  .football-fly svg { display: block; }
+  @keyframes football-fly-across {
+    0%   { left: -5%;  top: 8%;  transform: rotate(18deg) scale(0.3); opacity: 0.9; }
+    15%  { left: 12%;  top: 16%; transform: rotate(18deg) scale(0.5); }
+    35%  { left: 28%;  top: 26%; transform: rotate(18deg) scale(0.85); }
+    55%  { left: 42%;  top: 38%; transform: rotate(18deg) scale(1.4); }
+    72%  { left: 50%;  top: 48%; transform: rotate(18deg) scale(2.1); }
+    86%  { left: 55%;  top: 55%; transform: rotate(18deg) scale(3); opacity: 1; }
+    100% { left: 58%;  top: 60%; transform: rotate(18deg) scale(4.2); opacity: 0; }
+  }
+  .landing-burst {
+    position: fixed; z-index: 300; pointer-events: none; font-size: 24px;
+    animation: landing-burst-anim 1.1s cubic-bezier(0.15, 0.6, 0.4, 1) forwards;
+  }
+  @keyframes landing-burst-anim {
+    0%   { transform: translate(0, 0) scale(0.3) rotate(0deg); opacity: 1; }
+    55%  { transform: translate(var(--dx), var(--dy)) scale(1.15) rotate(var(--spin)); opacity: 1; }
+    100% { transform: translate(var(--dx-fall), var(--dy-fall)) scale(0.9) rotate(var(--spin)); opacity: 0; }
+  }
+  .firework-flash {
+    position: fixed; z-index: 299; pointer-events: none; border-radius: 50%;
+    background: radial-gradient(circle, rgba(255,240,200,0.95) 0%, rgba(255,200,80,0.5) 40%, transparent 75%);
+    animation: firework-flash-anim 0.5s ease-out forwards;
+  }
+  @keyframes firework-flash-anim {
+    0% { transform: scale(0); opacity: 1; }
+    100% { transform: scale(1); opacity: 0; }
+  }
+  .celebration-toast {
+    position: fixed; top: max(20px, env(safe-area-inset-top, 0px)); left: 50%;
+    transform: translateX(-50%) translateY(-16px);
+    background: var(--panel-2); border: 1px solid var(--amber); border-radius: 12px;
+    padding: 14px 24px; font-family: var(--display); font-weight: 700; font-size: 16px;
+    line-height: 1.3; color: var(--text); z-index: 301; opacity: 0;
+    transition: opacity .3s ease, transform .3s ease;
+    box-shadow: 0 14px 30px rgba(0,0,0,0.4); pointer-events: none; text-align: center; max-width: 88vw;
+  }
+  .celebration-toast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
+  .celebration-toast .team-quote { color: var(--amber); }
+
 </style>
 </head>
 <body>
@@ -550,7 +597,126 @@ function copyText(btn, text){
   const orig = btn.textContent;
   btn.textContent = 'Copied!';
   setTimeout(() => btn.textContent = orig, 1100);
+  celebrateCopy(text);
 }
+
+function footballFrame(lacePos){
+  const ballBody = `
+    <defs>
+      <radialGradient id="ballGrad" cx="35%" cy="28%" r="75%">
+        <stop offset="0%" stop-color="#BE7A47"/>
+        <stop offset="55%" stop-color="#8B4A2B"/>
+        <stop offset="100%" stop-color="#42200E"/>
+      </radialGradient>
+    </defs>
+    <path d="M2,30 Q22,4 50,4 Q78,4 98,30 Q78,56 50,56 Q22,56 2,30 Z" fill="url(#ballGrad)" stroke="#2E1608" stroke-width="2"/>
+    <path d="M13,13 Q50,21 87,13" fill="none" stroke="#2E1608" stroke-width="1.3" opacity="0.55"/>
+    <path d="M13,47 Q50,39 87,47" fill="none" stroke="#2E1608" stroke-width="1.3" opacity="0.55"/>
+    <ellipse cx="34" cy="16" rx="14" ry="6" fill="#FFFFFF" opacity="0.2" transform="rotate(-18 34 16)"/>`;
+
+  // Laces drawn at different heights/widths to simulate the ball spinning
+  // around its long axis: full-width and centered when facing the viewer,
+  // foreshortened near the top/bottom edges as they rotate around, and
+  // absent entirely when they've rotated to the far side.
+  let laces = '';
+  if(lacePos === 'middle'){
+    laces = `
+      <line x1="28" y1="30" x2="72" y2="30" stroke="#F4F2EC" stroke-width="2.5" stroke-linecap="round"/>
+      <line x1="38" y1="24" x2="41" y2="36" stroke="#F4F2EC" stroke-width="2" stroke-linecap="round"/>
+      <line x1="45" y1="22" x2="48" y2="38" stroke="#F4F2EC" stroke-width="2" stroke-linecap="round"/>
+      <line x1="52" y1="22" x2="55" y2="38" stroke="#F4F2EC" stroke-width="2" stroke-linecap="round"/>
+      <line x1="59" y1="24" x2="62" y2="36" stroke="#F4F2EC" stroke-width="2" stroke-linecap="round"/>`;
+  } else if(lacePos === 'top'){
+    laces = `
+      <line x1="33" y1="15" x2="67" y2="15" stroke="#F4F2EC" stroke-width="2" stroke-linecap="round"/>
+      <line x1="41" y1="12" x2="43" y2="18" stroke="#F4F2EC" stroke-width="1.5" stroke-linecap="round"/>
+      <line x1="49" y1="11" x2="51" y2="19" stroke="#F4F2EC" stroke-width="1.5" stroke-linecap="round"/>
+      <line x1="57" y1="12" x2="59" y2="18" stroke="#F4F2EC" stroke-width="1.5" stroke-linecap="round"/>`;
+  } else if(lacePos === 'bottom'){
+    laces = `
+      <line x1="33" y1="45" x2="67" y2="45" stroke="#F4F2EC" stroke-width="2" stroke-linecap="round"/>
+      <line x1="41" y1="42" x2="43" y2="48" stroke="#F4F2EC" stroke-width="1.5" stroke-linecap="round"/>
+      <line x1="49" y1="41" x2="51" y2="49" stroke="#F4F2EC" stroke-width="1.5" stroke-linecap="round"/>
+      <line x1="57" y1="42" x2="59" y2="48" stroke="#F4F2EC" stroke-width="1.5" stroke-linecap="round"/>`;
+  }
+  // 'hidden' (rotated to the far side): no laces drawn at all.
+
+  return `<svg viewBox="0 0 100 60" width="118" height="70">${ballBody}${laces}</svg>`;
+}
+
+const FOOTBALL_SPIN_FRAMES = ['middle', 'top', 'hidden', 'bottom'];
+
+function celebrateCopy(teamName){
+  const football = document.createElement('div');
+  football.className = 'football-fly';
+  football.innerHTML = footballFrame('middle');
+  document.body.appendChild(football);
+
+  // Cycle through the pre-drawn lace positions rapidly to simulate the
+  // ball spinning around its long axis, since a single flat shape can't be
+  // rotated convincingly with CSS transforms alone.
+  let frameIndex = 0;
+  const spinInterval = setInterval(() => {
+    frameIndex = (frameIndex + 1) % FOOTBALL_SPIN_FRAMES.length;
+    football.innerHTML = footballFrame(FOOTBALL_SPIN_FRAMES[frameIndex]);
+  }, 70);
+
+  setTimeout(() => {
+    clearInterval(spinInterval);
+    football.remove();
+  }, 1400);
+
+  // A little burst of confetti right as the football "arrives," near where
+  // it grows largest before fading out.
+  setTimeout(() => spawnLandingBurst(window.innerWidth * 0.57, window.innerHeight * 0.58), 1150);
+
+  const toast = document.createElement('div');
+  toast.className = 'celebration-toast';
+  toast.innerHTML = `🏆 Good luck this season,<br><span class="team-quote">"${escapeHtml(teamName)}"</span>`;
+  document.body.appendChild(toast);
+  requestAnimationFrame(() => toast.classList.add('show'));
+  setTimeout(() => {
+    toast.classList.remove('show');
+    setTimeout(() => toast.remove(), 350);
+  }, 2200);
+}
+
+function spawnLandingBurst(x, y){
+  // A bright flash at the center, like the pop of a real firework.
+  const flash = document.createElement('div');
+  flash.className = 'firework-flash';
+  flash.style.left = (x - 60) + 'px';
+  flash.style.top = (y - 60) + 'px';
+  flash.style.width = '120px';
+  flash.style.height = '120px';
+  document.body.appendChild(flash);
+  setTimeout(() => flash.remove(), 550);
+
+  const pieces = ['🎉', '✨', '🏈', '⭐', '🎊', '🏆'];
+  const count = 32;
+  for(let i = 0; i < count; i++){
+    const piece = document.createElement('div');
+    piece.className = 'landing-burst';
+    piece.textContent = pieces[Math.floor(Math.random() * pieces.length)];
+    const angle = (Math.PI * 2 * i) / count + (Math.random() * 0.3);
+    const distance = 60 + Math.random() * 90;
+    const dx = Math.cos(angle) * distance;
+    const dy = Math.sin(angle) * distance;
+    piece.style.left = x + 'px';
+    piece.style.top = y + 'px';
+    piece.style.setProperty('--dx', dx + 'px');
+    piece.style.setProperty('--dy', dy + 'px');
+    // After the initial burst, let gravity pull each piece down and a
+    // little further outward, like real firework sparks falling.
+    piece.style.setProperty('--dx-fall', (dx * 1.15) + 'px');
+    piece.style.setProperty('--dy-fall', (dy + 40 + Math.random() * 30) + 'px');
+    piece.style.setProperty('--spin', (Math.random() > 0.5 ? 1 : -1) * (180 + Math.random() * 360) + 'deg');
+    document.body.appendChild(piece);
+    setTimeout(() => piece.remove(), 1150);
+  }
+}
+
+
 
 const leaguesPanel = document.getElementById('leaguesPanel');
 const leaguesList = document.getElementById('leaguesList');
