@@ -565,9 +565,10 @@ async function loadProjections(){
   projectionsMap = { data: byId, week, season };
 }
 
-function projectedPoints(playerId){
-  if(!projectionsMap || !projectionsMap.data) return 0;
-  const entry = projectionsMap.data[playerId];
+function projectedPoints(playerId, weekData){
+  const dataSource = weekData || (projectionsMap && projectionsMap.data);
+  if(!dataSource) return 0;
+  const entry = dataSource[playerId];
   if(!entry) return 0;
   // The exact response shape for this undocumented endpoint isn't fully
   // confirmed, so check both a nested "stats" object and fields sitting
@@ -670,9 +671,9 @@ function renderTradeBuilder(){
 // every realistic fantasy roster/slot configuration should be filled.
 const FLEX_ELIGIBLE = { FLEX: ['RB','WR','TE'], SUPER_FLEX: ['QB','RB','WR','TE'], WRRB_FLEX: ['RB','WR'], REC_FLEX: ['WR','TE'] };
 
-function optimizeLineup(rosterPositions, playerIds){
+function optimizeLineup(rosterPositions, playerIds, weekData){
   const pool = playerIds
-    .map(pid => ({ pid, pos: playerInfo(pid).pos, pts: projectedPoints(pid) }))
+    .map(pid => ({ pid, pos: playerInfo(pid).pos, pts: projectedPoints(pid, weekData) }))
     .filter(p => p.pos && p.pos !== 'BN');
 
   const slots = rosterPositions.filter(s => s !== 'BN' && s !== 'TAXI' && s !== 'IR');
@@ -756,9 +757,115 @@ function calculateTrade(){
       ${resultCard(teamLabel(teamA), beforeA, afterA)}
       ${resultCard(teamLabel(teamB), beforeB, afterB)}
     </div>
+    <div style="margin-top:20px; text-align:center;">
+      <button id="seasonImpactBtn" class="ghost">Calculate rest-of-season win impact</button>
+    </div>
+    <div id="seasonImpactPanel"></div>
   `;
   resultsPanel.style.display = 'block';
   resultsPanel.scrollIntoView({ behavior: 'smooth', block: 'start' });
+
+  document.getElementById('seasonImpactBtn').addEventListener('click', calculateSeasonImpact);
+}
+
+// ---------- Rest-of-season win impact ----------
+// Standard normal CDF via the Abramowitz & Stegun approximation, used to
+// turn a projected point margin into a win probability for a given week.
+function normalCDF(z){
+  const t = 1 / (1 + 0.2316419 * Math.abs(z));
+  const d = 0.3989423 * Math.exp(-z * z / 2);
+  let prob = d * t * (0.3193815 + t * (-0.3565638 + t * (1.781478 + t * (-1.821256 + t * 1.330274))));
+  if(z > 0) prob = 1 - prob;
+  return prob;
+}
+
+// Assumed spread of weekly fantasy scores for a typical starting lineup.
+// Not tuned to this specific league's actual scoring history \u2014 a
+// reasonable, commonly-cited approximation, not a certified figure.
+const ASSUMED_WEEKLY_STD_DEV = 20;
+
+function getRemainingWeeks(){
+  const currentWeek = projectionsMap.week;
+  const regularSeasonEnd = (currentLeague.settings && currentLeague.settings.playoff_week_start)
+    ? currentLeague.settings.playoff_week_start - 1
+    : 14;
+  const weeks = [];
+  for(let w = currentWeek; w <= regularSeasonEnd; w++) weeks.push(w);
+  return weeks;
+}
+
+async function fetchWeekProjections(week){
+  const season = projectionsMap.season;
+  const url = `https://api.sleeper.com/projections/nfl/${season}/${week}?season_type=regular&position[]=QB&position[]=RB&position[]=WR&position[]=TE&position[]=K&position[]=DEF`;
+  const res = await fetch(url);
+  if(!res.ok) return {};
+  const rawData = await res.json();
+  const byId = {};
+  rawData.forEach(entry => { if(entry && entry.player_id) byId[entry.player_id] = entry; });
+  return byId;
+}
+
+async function calculateSeasonImpact(){
+  const panel = document.getElementById('seasonImpactPanel');
+  const btn = document.getElementById('seasonImpactBtn');
+  btn.disabled = true;
+  panel.innerHTML = '<div class="status-line">Loading projections for the rest of the season\u2026 this involves more requests than the weekly calculation, so it may take a few seconds.</div>';
+
+  try {
+    const weeks = getRemainingWeeks();
+    const rosterPositions = currentLeague.roster_positions || [];
+    const weekDataList = await Promise.all(weeks.map(fetchWeekProjections));
+
+    const afterAPlayers = (teamA.players || []).filter(pid => !tradeAway.has(pid)).concat([...tradeAwayB]);
+    const afterBPlayers = (teamB.players || []).filter(pid => !tradeAwayB.has(pid)).concat([...tradeAway]);
+    const otherRosters = currentRosters.filter(r => r.roster_id !== teamA.roster_id && r.roster_id !== teamB.roster_id);
+
+    let expWinsABefore = 0, expWinsAAfter = 0, expWinsBBefore = 0, expWinsBAfter = 0;
+
+    weeks.forEach((week, i) => {
+      const weekData = weekDataList[i];
+
+      const leagueScores = otherRosters.map(r => optimizeLineup(rosterPositions, r.players || [], weekData).total);
+      const leagueAvg = leagueScores.length > 0 ? leagueScores.reduce((a, b) => a + b, 0) / leagueScores.length : 0;
+
+      const beforeAScore = optimizeLineup(rosterPositions, teamA.players || [], weekData).total;
+      const afterAScore = optimizeLineup(rosterPositions, afterAPlayers, weekData).total;
+      const beforeBScore = optimizeLineup(rosterPositions, teamB.players || [], weekData).total;
+      const afterBScore = optimizeLineup(rosterPositions, afterBPlayers, weekData).total;
+
+      expWinsABefore += normalCDF((beforeAScore - leagueAvg) / ASSUMED_WEEKLY_STD_DEV);
+      expWinsAAfter += normalCDF((afterAScore - leagueAvg) / ASSUMED_WEEKLY_STD_DEV);
+      expWinsBBefore += normalCDF((beforeBScore - leagueAvg) / ASSUMED_WEEKLY_STD_DEV);
+      expWinsBAfter += normalCDF((afterBScore - leagueAvg) / ASSUMED_WEEKLY_STD_DEV);
+    });
+
+    function winCard(label, before, after){
+      const delta = after - before;
+      const cls = delta > 0.05 ? 'up' : delta < -0.05 ? 'down' : 'flat';
+      const sign = delta > 0 ? '+' : '';
+      return `
+        <div class="result-card">
+          <div class="label">${escapeHtml(label)}</div>
+          <div class="delta ${cls}">${sign}${delta.toFixed(1)} wins</div>
+          <div class="breakdown">${before.toFixed(1)} \u2192 ${after.toFixed(1)} expected wins, weeks ${weeks[0]}\u2013${weeks[weeks.length - 1]}</div>
+        </div>`;
+    }
+
+    panel.innerHTML = `
+      <div class="notice" style="margin-top:16px;">
+        <strong>How to read this:</strong> each week's win chance is estimated by comparing a team's optimized projected score against the <em>league average</em> team that week (since your actual future schedule isn't reliably available from Sleeper) \u2014 not your real upcoming opponents. Treat this as a directional estimate of value, not a guaranteed win count.
+      </div>
+      <div class="section-title">EXPECTED WINS \u2014 WEEKS ${weeks[0]}\u2013${weeks[weeks.length - 1]}</div>
+      <div class="results-grid">
+        ${winCard(teamLabel(teamA), expWinsABefore, expWinsAAfter)}
+        ${winCard(teamLabel(teamB), expWinsBBefore, expWinsBAfter)}
+      </div>
+    `;
+  } catch(err){
+    panel.innerHTML = `<div class="status-line error">${escapeHtml(err.message || 'Something went wrong calculating the season impact.')}</div>`;
+  } finally {
+    btn.disabled = false;
+  }
 }
 
 usernameInput.addEventListener('keydown', (e) => { if(e.key === 'Enter') lookupBtn.click(); });
