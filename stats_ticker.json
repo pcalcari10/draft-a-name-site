@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-27T23:25:47.047Z",
+  "generatedAt": "2026-09-27T23:38:41.303Z",
   "season": "2026",
   "week": 3,
   "thisWeek": {
@@ -32,15 +32,6 @@
         "pun": "Geno Grigio"
       },
       {
-        "id": "tylershough_no",
-        "first": "Tyler",
-        "last": "Shough",
-        "team": "NO",
-        "pos": "QB",
-        "pts": 25.8,
-        "pun": "Aww Shoughs"
-      },
-      {
         "id": "jacobybrissett_ari",
         "first": "Jacoby",
         "last": "Brissett",
@@ -48,6 +39,15 @@
         "pos": "QB",
         "pts": 25.6,
         "pun": "Livin' on a Brissett"
+      },
+      {
+        "id": "tylershough_no",
+        "first": "Tyler",
+        "last": "Shough",
+        "team": "NO",
+        "pos": "QB",
+        "pts": 24.2,
+        "pun": "Aww Shoughs"
       },
       {
         "id": "aaronrodgers_pit",
@@ -259,6 +259,15 @@
         "pun": "The Skattebo Express"
       },
       {
+        "id": "ashtonjeanty_lv",
+        "first": "Ashton",
+        "last": "Jeanty",
+        "team": "LV",
+        "pos": "RB",
+        "pts": 12.3,
+        "pun": "Fire and Ashton"
+      },
+      {
         "id": "mikewashingtonjr_lv",
         "first": "Mike",
         "last": "Washington",
@@ -293,15 +302,6 @@
         "pos": "RB",
         "pts": 10.8,
         "pun": "Holani-tastic Voyage"
-      },
-      {
-        "id": "ashtonjeanty_lv",
-        "first": "Ashton",
-        "last": "Jeanty",
-        "team": "LV",
-        "pos": "RB",
-        "pts": 10.6,
-        "pun": "Fire and Ashton"
       },
       {
         "id": "quinshonjudkins_cle",
@@ -405,6 +405,15 @@
         "pun": "Golden Goose"
       },
       {
+        "id": "ceedeelamb_dal",
+        "first": "CeeDee",
+        "last": "Lamb",
+        "team": "DAL",
+        "pos": "WR",
+        "pts": 20.2,
+        "pun": "Silence of the Lambs"
+      },
+      {
         "id": "jordanaddison_min",
         "first": "Jordan",
         "last": "Addison",
@@ -450,13 +459,13 @@
         "pun": "I'm Allen Ears"
       },
       {
-        "id": "ceedeelamb_dal",
-        "first": "CeeDee",
-        "last": "Lamb",
-        "team": "DAL",
+        "id": "chrisolave_no",
+        "first": "Chris",
+        "last": "Olave",
+        "team": "NO",
         "pos": "WR",
-        "pts": 17.8,
-        "pun": "Silence of the Lambs"
+        "pts": 16.8,
+        "pun": "Olave Oil"
       },
       {
         "id": "rasheerice_kc",
@@ -493,15 +502,6 @@
         "pos": "WR",
         "pts": 15,
         "pun": "The Roman Empire"
-      },
-      {
-        "id": "chrisolave_no",
-        "first": "Chris",
-        "last": "Olave",
-        "team": "NO",
-        "pos": "WR",
-        "pts": 14.9,
-        "pun": "Olave Oil"
       },
       {
         "id": "mackhollins_ne",
@@ -583,7 +583,7 @@
         "last": "Johnson",
         "team": "NO",
         "pos": "TE",
-        "pts": 23.5,
+        "pts": 23.7,
         "pun": "Juwan's Johnson"
       },
       {
@@ -733,6 +733,15 @@
         "pun": "All Bates, No Filler"
       },
       {
+        "id": "tylerloop_bal",
+        "first": "Tyler",
+        "last": "Loop",
+        "team": "BAL",
+        "pos": "K",
+        "pts": 7,
+        "pun": "Jumping Through Loops"
+      },
+      {
         "id": "eddypineiro_sf",
         "first": "Eddy",
         "last": "Pineiro",
@@ -740,15 +749,6 @@
         "pos": "K",
         "pts": 6,
         "pun": "Pineiro of Fame"
-      },
-      {
-        "id": "tylerbass_buf",
-        "first": "Tyler",
-        "last": "Bass",
-        "team": "BUF",
-        "pos": "K",
-        "pts": 6,
-        "pun": "Bass-A-Palooza"
       }
     ]
   },
@@ -778,7 +778,7 @@
         "last": "Shough",
         "team": "NO",
         "pos": "QB",
-        "pts": 73.3,
+        "pts": 71.8,
         "pun": "Aww Shoughs"
       },
       {
@@ -814,8 +814,17 @@
         "last": "Prescott",
         "team": "DAL",
         "pos": "QB",
-        "pts": 61.8,
+        "pts": 63.9,
         "pun": "The Boys Are Dak In Town"
+      },
+      {
+        "id": "lamarjackson_bal",
+        "first": "Lamar",
+        "last": "Jackson",
+        "team": "BAL",
+        "pos": "QB",
+        "pts": 60.1,
+        "pun": "Lights, Camera, Jackson"
       },
       {
         "id": "kirkcousins_lv",
@@ -825,15 +834,6 @@
         "pos": "QB",
         "pts": 59.4,
         "pun": "I Married my Cousins"
-      },
-      {
-        "id": "lamarjackson_bal",
-        "first": "Lamar",
-        "last": "Jackson",
-        "team": "BAL",
-        "pos": "QB",
-        "pts": 56,
-        "pun": "Lights, Camera, Jackson"
       },
       {
         "id": "deshaunwatson_cle",
@@ -924,7 +924,7 @@
         "last": "Jeanty",
         "team": "LV",
         "pos": "RB",
-        "pts": 53.6,
+        "pts": 55.3,
         "pun": "Fire and Ashton"
       },
       {
@@ -1101,6 +1101,15 @@
         "pun": "Amon Joy"
       },
       {
+        "id": "ceedeelamb_dal",
+        "first": "CeeDee",
+        "last": "Lamb",
+        "team": "DAL",
+        "pos": "WR",
+        "pts": 70.9,
+        "pun": "Silence of the Lambs"
+      },
+      {
         "id": "christianwatson_gb",
         "first": "Christian",
         "last": "Watson",
@@ -1110,21 +1119,12 @@
         "pun": "Elementary, My Dear Watson"
       },
       {
-        "id": "ceedeelamb_dal",
-        "first": "CeeDee",
-        "last": "Lamb",
-        "team": "DAL",
-        "pos": "WR",
-        "pts": 68.5,
-        "pun": "Silence of the Lambs"
-      },
-      {
         "id": "chrisolave_no",
         "first": "Chris",
         "last": "Olave",
         "team": "NO",
         "pos": "WR",
-        "pts": 65.7,
+        "pts": 67.6,
         "pun": "Olave Oil"
       },
       {
@@ -1324,7 +1324,7 @@
         "last": "Johnson",
         "team": "NO",
         "pos": "TE",
-        "pts": 48.5,
+        "pts": 48.7,
         "pun": "Juwan's Johnson"
       },
       {
@@ -1447,6 +1447,15 @@
         "pun": "I Like Big Butker, And I Cannot Lie"
       },
       {
+        "id": "tylerloop_bal",
+        "first": "Tyler",
+        "last": "Loop",
+        "team": "BAL",
+        "pos": "K",
+        "pts": 26,
+        "pun": "Jumping Through Loops"
+      },
+      {
         "id": "chrisboswell_pit",
         "first": "Chris",
         "last": "Boswell",
@@ -1454,15 +1463,6 @@
         "pos": "K",
         "pts": 25,
         "pun": "Chris & Chill"
-      },
-      {
-        "id": "tylerloop_bal",
-        "first": "Tyler",
-        "last": "Loop",
-        "team": "BAL",
-        "pos": "K",
-        "pts": 25,
-        "pun": "Jumping Through Loops"
       },
       {
         "id": "brandonaubrey_dal",
