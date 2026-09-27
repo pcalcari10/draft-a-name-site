@@ -524,19 +524,27 @@ async function loadProjections(){
   const state = await stateRes.json();
   const season = state.league_season || state.season;
   const week = state.display_week || state.week || 1;
+  console.log('[trade-calc] NFL state:', state);
 
   const url = `https://api.sleeper.com/projections/nfl/${season}/${week}?season_type=regular&position[]=QB&position[]=RB&position[]=WR&position[]=TE&position[]=K&position[]=DEF`;
+  console.log('[trade-calc] Fetching projections from:', url);
   const res = await fetch(url);
   if(!res.ok) throw new Error('Could not load projections (HTTP ' + res.status + ')');
   const data = await res.json();
+  const sampleKeys = Object.keys(data).slice(0, 3);
+  console.log('[trade-calc] Projections response \u2014 total entries:', Object.keys(data).length);
+  console.log('[trade-calc] Sample entries:', sampleKeys.map(k => ({ id: k, value: data[k] })));
   projectionsMap = { data, week, season };
 }
 
 function projectedPoints(playerId){
   if(!projectionsMap || !projectionsMap.data) return 0;
   const entry = projectionsMap.data[playerId];
-  if(!entry || !entry.stats) return 0;
-  const stats = entry.stats;
+  if(!entry) return 0;
+  // The exact response shape for this undocumented endpoint isn't fully
+  // confirmed, so check both a nested "stats" object and fields sitting
+  // directly on the entry itself.
+  const stats = entry.stats || entry;
   return stats[scoringField] || stats.pts_ppr || stats.pts_half_ppr || stats.pts_std || 0;
 }
 
