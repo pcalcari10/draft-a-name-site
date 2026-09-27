@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-27T21:40:52.956Z",
+  "generatedAt": "2026-09-27T21:51:24.316Z",
   "season": "2026",
   "week": 3,
   "thisWeek": {
@@ -228,7 +228,7 @@
         "last": "Williams",
         "team": "DAL",
         "pos": "RB",
-        "pts": 12.5,
+        "pts": 12.8,
         "pun": "One In a Williams"
       },
       {
@@ -569,6 +569,15 @@
         "pun": "Sadiq Happens"
       },
       {
+        "id": "brockbowers_lv",
+        "first": "Brock",
+        "last": "Bowers",
+        "team": "LV",
+        "pos": "TE",
+        "pts": 15.7,
+        "pun": "Mighty Morphin Bower Rangers"
+      },
+      {
         "id": "jeremyruckert_nyj",
         "first": "Jeremy",
         "last": "Ruckert",
@@ -630,15 +639,6 @@
         "pos": "TE",
         "pts": 11.2,
         "pun": "Juwan's Johnson"
-      },
-      {
-        "id": "brockbowers_lv",
-        "first": "Brock",
-        "last": "Bowers",
-        "team": "LV",
-        "pos": "TE",
-        "pts": 11.1,
-        "pun": "Mighty Morphin Bower Rangers"
       },
       {
         "id": "gregdulcich_mia",
@@ -706,6 +706,15 @@
         "pun": "Pineiro of Fame"
       },
       {
+        "id": "brandonaubrey_dal",
+        "first": "Brandon",
+        "last": "Aubrey",
+        "team": "DAL",
+        "pos": "K",
+        "pts": 7,
+        "pun": "Aubrey'd Up and Ready"
+      },
+      {
         "id": "jakebates_det",
         "first": "Jake",
         "last": "Bates",
@@ -740,15 +749,6 @@
         "pos": "K",
         "pts": 5,
         "pun": "Fairbairn-A-Palooza"
-      },
-      {
-        "id": "harrisonbutker_kc",
-        "first": "Harrison",
-        "last": "Butker",
-        "team": "KC",
-        "pos": "K",
-        "pts": 5,
-        "pun": "I Like Big Butker, And I Cannot Lie"
       }
     ]
   },
@@ -854,13 +854,13 @@
         "pun": "Geno Grigio"
       },
       {
-        "id": "dakprescott_dal",
-        "first": "Dak",
-        "last": "Prescott",
-        "team": "DAL",
+        "id": "kirkcousins_lv",
+        "first": "Kirk",
+        "last": "Cousins",
+        "team": "LV",
         "pos": "QB",
-        "pts": 48.1,
-        "pun": "The Boys Are Dak In Town"
+        "pts": 48.3,
+        "pun": "I Married my Cousins"
       }
     ],
     "RB": [
@@ -933,7 +933,7 @@
         "last": "Jeanty",
         "team": "LV",
         "pos": "RB",
-        "pts": 46.8,
+        "pts": 48.9,
         "pun": "Fire and Ashton"
       },
       {
@@ -951,7 +951,7 @@
         "last": "Williams",
         "team": "DAL",
         "pos": "RB",
-        "pts": 44.7,
+        "pts": 45,
         "pun": "One In a Williams"
       },
       {
@@ -1447,6 +1447,15 @@
         "pun": "Chris & Chill"
       },
       {
+        "id": "brandonaubrey_dal",
+        "first": "Brandon",
+        "last": "Aubrey",
+        "team": "DAL",
+        "pos": "K",
+        "pts": 24,
+        "pun": "Aubrey'd Up and Ready"
+      },
+      {
         "id": "willreichard_min",
         "first": "Will",
         "last": "Reichard",
@@ -1490,15 +1499,6 @@
         "pos": "K",
         "pts": 23,
         "pun": "Cam's Excellent Adventure"
-      },
-      {
-        "id": "eddypineiro_sf",
-        "first": "Eddy",
-        "last": "Pineiro",
-        "team": "SF",
-        "pos": "K",
-        "pts": 22,
-        "pun": "Pineiro of Fame"
       }
     ]
   }
