@@ -834,7 +834,10 @@ function buildEntities(){
         p.taggedNames[category].forEach(n => fromPlayers.push(n));
       }
     });
-    return fromGeneric.concat(fromPlayers);
+    // The same pun text can be tagged on multiple players (e.g. "Wilsons of
+    // Anarchy" appears on 8 different Wilsons), so dedupe before returning
+    // — otherwise it shows up repeatedly in this category's search pool.
+    return [...new Set(fromGeneric.concat(fromPlayers))];
   }
 
   ENTITIES.push({ id: 'generic_movie', kind: 'genericMovie', names: categoryPool('movie') });
