@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-28T03:39:44.527Z",
+  "generatedAt": "2026-09-28T03:52:48.818Z",
   "season": "2026",
   "week": 3,
   "thisWeek": {
@@ -41,6 +41,15 @@
         "pun": "Livin' on a Brissett"
       },
       {
+        "id": "bonix_den",
+        "first": "Bo",
+        "last": "Nix",
+        "team": "DEN",
+        "pos": "QB",
+        "pts": 25.1,
+        "pun": "Big Nix Energy"
+      },
+      {
         "id": "tylershough_no",
         "first": "Tyler",
         "last": "Shough",
@@ -48,6 +57,15 @@
         "pos": "QB",
         "pts": 24.8,
         "pun": "Aww Shoughs"
+      },
+      {
+        "id": "matthewstafford_lar",
+        "first": "Matthew",
+        "last": "Stafford",
+        "team": "LAR",
+        "pos": "QB",
+        "pts": 23.9,
+        "pun": "Stafford Infection"
       },
       {
         "id": "aaronrodgers_pit",
@@ -77,15 +95,6 @@
         "pun": "I Married my Cousins"
       },
       {
-        "id": "matthewstafford_lar",
-        "first": "Matthew",
-        "last": "Stafford",
-        "team": "LAR",
-        "pos": "QB",
-        "pts": 21.8,
-        "pun": "Stafford Infection"
-      },
-      {
         "id": "trevorlawrence_jac",
         "first": "Trevor",
         "last": "Lawrence",
@@ -102,15 +111,6 @@
         "pos": "QB",
         "pts": 20.4,
         "pun": "Lights, Camera, Jackson"
-      },
-      {
-        "id": "marcusmariota_was",
-        "first": "Marcus",
-        "last": "Mariota",
-        "team": "WAS",
-        "pos": "QB",
-        "pts": 20.4,
-        "pun": "Mariota-A-Palooza"
       }
     ],
     "RB": [
@@ -149,6 +149,15 @@
         "pos": "RB",
         "pts": 21.9,
         "pun": "Come and Get Your Love"
+      },
+      {
+        "id": "kyrenwilliams_lar",
+        "first": "Kyren",
+        "last": "Williams",
+        "team": "LAR",
+        "pos": "RB",
+        "pts": 21.8,
+        "pun": "Williams-Sonoma Touchdowns"
       },
       {
         "id": "christianmccaffrey_sf",
@@ -203,15 +212,6 @@
         "pos": "RB",
         "pts": 17,
         "pun": "King Tuten-khamun"
-      },
-      {
-        "id": "kyrenwilliams_lar",
-        "first": "Kyren",
-        "last": "Williams",
-        "team": "LAR",
-        "pos": "RB",
-        "pts": 15.9,
-        "pun": "Williams-Sonoma Touchdowns"
       },
       {
         "id": "chubahubbard_car",
@@ -596,6 +596,15 @@
         "pun": "Juwan's Johnson"
       },
       {
+        "id": "tylerhigbee_lar",
+        "first": "Tyler",
+        "last": "Higbee",
+        "team": "LAR",
+        "pos": "TE",
+        "pts": 20.2,
+        "pun": "Livin' on a Higbee"
+      },
+      {
         "id": "noahfant_no",
         "first": "Noah",
         "last": "Fant",
@@ -603,15 +612,6 @@
         "pos": "TE",
         "pts": 19.3,
         "pun": "Fant-A-Palooza"
-      },
-      {
-        "id": "tylerhigbee_lar",
-        "first": "Tyler",
-        "last": "Higbee",
-        "team": "LAR",
-        "pos": "TE",
-        "pts": 17.8,
-        "pun": "Livin' on a Higbee"
       },
       {
         "id": "treymcbride_ari",
@@ -836,6 +836,15 @@
         "pun": "I Married my Cousins"
       },
       {
+        "id": "matthewstafford_lar",
+        "first": "Matthew",
+        "last": "Stafford",
+        "team": "LAR",
+        "pos": "QB",
+        "pts": 57,
+        "pun": "Stafford Infection"
+      },
+      {
         "id": "deshaunwatson_cle",
         "first": "Deshaun",
         "last": "Watson",
@@ -843,15 +852,6 @@
         "pos": "QB",
         "pts": 55,
         "pun": "Watson Clinic"
-      },
-      {
-        "id": "matthewstafford_lar",
-        "first": "Matthew",
-        "last": "Stafford",
-        "team": "LAR",
-        "pos": "QB",
-        "pts": 54.9,
-        "pun": "Stafford Infection"
       },
       {
         "id": "trevorlawrence_jac",
@@ -937,6 +937,15 @@
         "pun": "Chubawamba"
       },
       {
+        "id": "kyrenwilliams_lar",
+        "first": "Kyren",
+        "last": "Williams",
+        "team": "LAR",
+        "pos": "RB",
+        "pts": 53,
+        "pun": "Williams-Sonoma Touchdowns"
+      },
+      {
         "id": "javontewilliams_dal",
         "first": "Javonte",
         "last": "Williams",
@@ -953,15 +962,6 @@
         "pos": "RB",
         "pts": 50.2,
         "pun": "James Cooked"
-      },
-      {
-        "id": "kyrenwilliams_lar",
-        "first": "Kyren",
-        "last": "Williams",
-        "team": "LAR",
-        "pos": "RB",
-        "pts": 47.1,
-        "pun": "Williams-Sonoma Touchdowns"
       },
       {
         "id": "dandreswift_chi",
