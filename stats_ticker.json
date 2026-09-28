@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-28T01:36:23.817Z",
+  "generatedAt": "2026-09-28T01:49:47.676Z",
   "season": "2026",
   "week": 3,
   "thisWeek": {
@@ -259,6 +259,15 @@
         "pun": "The Skattebo Express"
       },
       {
+        "id": "kyrenwilliams_lar",
+        "first": "Kyren",
+        "last": "Williams",
+        "team": "LAR",
+        "pos": "RB",
+        "pts": 12.7,
+        "pun": "Williams-Sonoma Touchdowns"
+      },
+      {
         "id": "ashtonjeanty_lv",
         "first": "Ashton",
         "last": "Jeanty",
@@ -266,15 +275,6 @@
         "pos": "RB",
         "pts": 12.3,
         "pun": "Fire and Ashton"
-      },
-      {
-        "id": "kyrenwilliams_lar",
-        "first": "Kyren",
-        "last": "Williams",
-        "team": "LAR",
-        "pos": "RB",
-        "pts": 12,
-        "pun": "Williams-Sonoma Touchdowns"
       },
       {
         "id": "mikewashingtonjr_lv",
@@ -632,6 +632,15 @@
         "pun": "This is Your Final Warren"
       },
       {
+        "id": "tylerhigbee_lar",
+        "first": "Tyler",
+        "last": "Higbee",
+        "team": "LAR",
+        "pos": "TE",
+        "pts": 14.4,
+        "pun": "Livin' on a Higbee"
+      },
+      {
         "id": "traviskelce_kc",
         "first": "Travis",
         "last": "Kelce",
@@ -648,15 +657,6 @@
         "pos": "TE",
         "pts": 12.7,
         "pun": "Gesicki-tastic Voyage"
-      },
-      {
-        "id": "tylerhigbee_lar",
-        "first": "Tyler",
-        "last": "Higbee",
-        "team": "LAR",
-        "pos": "TE",
-        "pts": 12.3,
-        "pun": "Livin' on a Higbee"
       }
     ],
     "K": [
@@ -969,7 +969,7 @@
         "last": "Williams",
         "team": "LAR",
         "pos": "RB",
-        "pts": 43.2,
+        "pts": 43.9,
         "pun": "Williams-Sonoma Touchdowns"
       },
       {
@@ -1146,6 +1146,15 @@
         "pun": "Ja'Marrvelous"
       },
       {
+        "id": "davanteadams_lar",
+        "first": "Davante",
+        "last": "Adams",
+        "team": "LAR",
+        "pos": "WR",
+        "pts": 53.7,
+        "pun": "Davante's Inferno"
+      },
+      {
         "id": "jalencoker_car",
         "first": "Jalen",
         "last": "Coker",
@@ -1153,15 +1162,6 @@
         "pos": "WR",
         "pts": 52.2,
         "pun": "Coker Head"
-      },
-      {
-        "id": "davanteadams_lar",
-        "first": "Davante",
-        "last": "Adams",
-        "team": "LAR",
-        "pos": "WR",
-        "pts": 51.5,
-        "pun": "Davante's Inferno"
       },
       {
         "id": "parkerwashington_jac",
