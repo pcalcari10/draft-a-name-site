@@ -803,6 +803,7 @@ function shuffleWith(rnd, arr){
 const ENTITIES = [];
 let GENERIC_WILDCARDS = [];
 let GENERIC_BY_CATEGORY = {};
+let TAGGED_NAME_SOURCE = {};
 let CURATED_COMBOS = [];
 
 function buildEntities(){
@@ -831,7 +832,11 @@ function buildEntities(){
     const fromPlayers = [];
     PLAYERS.forEach(p => {
       if(p.taggedNames && p.taggedNames[category]){
-        p.taggedNames[category].forEach(n => fromPlayers.push(n));
+        p.taggedNames[category].forEach(n => {
+          fromPlayers.push(n);
+          if(!TAGGED_NAME_SOURCE[n]) TAGGED_NAME_SOURCE[n] = [];
+          TAGGED_NAME_SOURCE[n].push(`${p.first} ${p.last}`);
+        });
       }
     });
     // The same pun text can be tagged on multiple players (e.g. "Wilsons of
@@ -1194,17 +1199,25 @@ function buildResults(){
   selectedWildcards.forEach(w => {
     guaranteed.push({ name: w.names[0], type: 'wild', meta: 'Handpicked' });
   });
+  function categoryMeta(baseLabel, name){
+    const sources = TAGGED_NAME_SOURCE[name];
+    // Only credit a specific player when the pun maps to exactly one —
+    // some (like "Wilsons of Anarchy") are shared across several players
+    // by surname, and naming all of them would be more clutter than help.
+    if(sources && sources.length === 1) return `${baseLabel} \u2014 ${sources[0]}`;
+    return baseLabel;
+  }
   selectedGenericAll.forEach(g => {
     weightedPick(g.names, Math.min(g.names.length, 3)).forEach(n => bonusPool.push({ name: n, type: 'wild', meta: 'From the generic list' }));
   });
   selectedGenericMovie.forEach(g => {
-    weightedPick(g.names, Math.min(g.names.length, 3)).forEach(n => bonusPool.push({ name: n, type: 'wild', meta: 'Movie-themed pick' }));
+    weightedPick(g.names, Math.min(g.names.length, 3)).forEach(n => bonusPool.push({ name: n, type: 'wild', meta: categoryMeta('Movie-themed pick', n) }));
   });
   selectedGenericMusic.forEach(g => {
-    weightedPick(g.names, Math.min(g.names.length, 3)).forEach(n => bonusPool.push({ name: n, type: 'wild', meta: 'Music-themed pick' }));
+    weightedPick(g.names, Math.min(g.names.length, 3)).forEach(n => bonusPool.push({ name: n, type: 'wild', meta: categoryMeta('Music-themed pick', n) }));
   });
   selectedGenericTv.forEach(g => {
-    weightedPick(g.names, Math.min(g.names.length, 3)).forEach(n => bonusPool.push({ name: n, type: 'wild', meta: 'TV-themed pick' }));
+    weightedPick(g.names, Math.min(g.names.length, 3)).forEach(n => bonusPool.push({ name: n, type: 'wild', meta: categoryMeta('TV-themed pick', n) }));
   });
 
   // Combos only make sense between two players — bonus content, not guaranteed
