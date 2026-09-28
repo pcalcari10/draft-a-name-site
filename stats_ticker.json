@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-28T03:03:42.314Z",
+  "generatedAt": "2026-09-28T03:25:37.409Z",
   "season": "2026",
   "week": 3,
   "thisWeek": {
@@ -77,6 +77,15 @@
         "pun": "I Married my Cousins"
       },
       {
+        "id": "matthewstafford_lar",
+        "first": "Matthew",
+        "last": "Stafford",
+        "team": "LAR",
+        "pos": "QB",
+        "pts": 21.8,
+        "pun": "Stafford Infection"
+      },
+      {
         "id": "trevorlawrence_jac",
         "first": "Trevor",
         "last": "Lawrence",
@@ -102,15 +111,6 @@
         "pos": "QB",
         "pts": 20.4,
         "pun": "Mariota-A-Palooza"
-      },
-      {
-        "id": "deshaunwatson_cle",
-        "first": "Deshaun",
-        "last": "Watson",
-        "team": "CLE",
-        "pos": "QB",
-        "pts": 20.3,
-        "pun": "Watson Clinic"
       }
     ],
     "RB": [
@@ -210,7 +210,7 @@
         "last": "Williams",
         "team": "LAR",
         "pos": "RB",
-        "pts": 15.4,
+        "pts": 15.9,
         "pun": "Williams-Sonoma Touchdowns"
       },
       {
@@ -405,6 +405,15 @@
         "pun": "Golden Goose"
       },
       {
+        "id": "davanteadams_lar",
+        "first": "Davante",
+        "last": "Adams",
+        "team": "LAR",
+        "pos": "WR",
+        "pts": 20.7,
+        "pun": "Davante's Inferno"
+      },
+      {
         "id": "ceedeelamb_dal",
         "first": "CeeDee",
         "last": "Lamb",
@@ -448,6 +457,15 @@
         "pos": "WR",
         "pts": 19.4,
         "pun": "Jakobi-Wan Kenobi"
+      },
+      {
+        "id": "konatamumpfield_lar",
+        "first": "Konata",
+        "last": "Mumpfield",
+        "team": "LAR",
+        "pos": "WR",
+        "pts": 19.3,
+        "pun": "Mumpfield-tastic Voyage"
       },
       {
         "id": "wandalerobinson_ten",
@@ -513,15 +531,6 @@
         "pun": "The Roman Empire"
       },
       {
-        "id": "davanteadams_lar",
-        "first": "Davante",
-        "last": "Adams",
-        "team": "LAR",
-        "pos": "WR",
-        "pts": 14.9,
-        "pun": "Davante's Inferno"
-      },
-      {
         "id": "mackhollins_ne",
         "first": "Mack",
         "last": "Hollins",
@@ -538,15 +547,6 @@
         "pos": "WR",
         "pts": 14.6,
         "pun": "Cooper Troopers"
-      },
-      {
-        "id": "treharris_lac",
-        "first": "Tre'",
-        "last": "Harris",
-        "team": "LAC",
-        "pos": "WR",
-        "pts": 13.6,
-        "pun": "Hit 'Em With the Tre"
       }
     ],
     "TE": [
@@ -610,7 +610,7 @@
         "last": "Higbee",
         "team": "LAR",
         "pos": "TE",
-        "pts": 17.7,
+        "pts": 17.8,
         "pun": "Livin' on a Higbee"
       },
       {
@@ -670,6 +670,15 @@
         "pun": "Reichard Happens"
       },
       {
+        "id": "harrisonmevis_lar",
+        "first": "Harrison",
+        "last": "Mevis",
+        "team": "LAR",
+        "pos": "K",
+        "pts": 16,
+        "pun": "Mevis's Fantasy Fortress"
+      },
+      {
         "id": "chrisboswell_pit",
         "first": "Chris",
         "last": "Boswell",
@@ -704,15 +713,6 @@
         "pos": "K",
         "pts": 11,
         "pun": "McPherson-tastic Voyage"
-      },
-      {
-        "id": "harrisonmevis_lar",
-        "first": "Harrison",
-        "last": "Mevis",
-        "team": "LAR",
-        "pos": "K",
-        "pts": 11,
-        "pun": "Mevis's Fantasy Fortress"
       },
       {
         "id": "brandonaubrey_dal",
@@ -845,6 +845,15 @@
         "pun": "Watson Clinic"
       },
       {
+        "id": "matthewstafford_lar",
+        "first": "Matthew",
+        "last": "Stafford",
+        "team": "LAR",
+        "pos": "QB",
+        "pts": 54.9,
+        "pun": "Stafford Infection"
+      },
+      {
         "id": "trevorlawrence_jac",
         "first": "Trevor",
         "last": "Lawrence",
@@ -852,15 +861,6 @@
         "pos": "QB",
         "pts": 54,
         "pun": "Long Arm of the Lawrence"
-      },
-      {
-        "id": "joeburrow_cin",
-        "first": "Joe",
-        "last": "Burrow",
-        "team": "CIN",
-        "pos": "QB",
-        "pts": 53.9,
-        "pun": "Beg, Burrow, and Steal"
       }
     ],
     "RB": [
@@ -960,7 +960,7 @@
         "last": "Williams",
         "team": "LAR",
         "pos": "RB",
-        "pts": 46.6,
+        "pts": 47.1,
         "pun": "Williams-Sonoma Touchdowns"
       },
       {
@@ -1133,7 +1133,7 @@
         "last": "Adams",
         "team": "LAR",
         "pos": "WR",
-        "pts": 60,
+        "pts": 65.8,
         "pun": "Davante's Inferno"
       },
       {
