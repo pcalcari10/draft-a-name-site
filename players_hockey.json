@@ -405,10 +405,11 @@
       "In Zadorov We Trust",
       "Nikita Zadorov and the Fantasy Machine",
       "Straight Outta Zadorov",
-      "Nikita Vibes Only"
+      "Nikita Vibes Only",
+      "Nikita Knock at Za-Door-ov"
     ],
     "active": true,
-    "tier": "template"
+    "tier": "curated"
   },
   {
     "id": "zachbenson_buf",
@@ -421,10 +422,16 @@
       "In Benson We Trust",
       "Zach Benson and the Fantasy Machine",
       "Straight Outta Benson",
-      "Zach Vibes Only"
+      "Zach Vibes Only",
+      "Zach Benson and Beaker"
     ],
     "active": true,
-    "tier": "template"
+    "tier": "curated",
+    "taggedNames": {
+      "tv": [
+        "Zach Benson and Beaker"
+      ]
+    }
   },
   {
     "id": "jacobbryson_buf",
@@ -845,10 +852,11 @@
       "In Appleton We Trust",
       "Mason Appleton and the Fantasy Machine",
       "Straight Outta Appleton",
-      "Mason Vibes Only"
+      "Mason Vibes Only",
+      "Mason Applebees"
     ],
     "active": true,
-    "tier": "template"
+    "tier": "curated"
   },
   {
     "id": "jacobbernarddocker_det",
@@ -1457,10 +1465,11 @@
       "In Luostarinen We Trust",
       "Eetu Luostarinen and the Fantasy Machine",
       "Straight Outta Luostarinen",
-      "Eetu Vibes Only"
+      "Eetu Vibes Only",
+      "Eetu Luosta Rhymes"
     ],
     "active": true,
-    "tier": "template"
+    "tier": "curated"
   },
   {
     "id": "bradmarchand_fla",
@@ -1784,10 +1793,11 @@
       "In Dach We Trust",
       "Kirby Dach and the Fantasy Machine",
       "Straight Outta Dach",
-      "Kirby Vibes Only"
+      "Kirby Vibes Only",
+      "Kirby Dach-ed and Loaded"
     ],
     "active": true,
-    "tier": "template"
+    "tier": "curated"
   },
   {
     "id": "phillipdanault_mtl",
@@ -3841,10 +3851,16 @@
       "In Walker We Trust",
       "Sean Walker and the Fantasy Machine",
       "Straight Outta Walker",
-      "Sean Vibes Only"
+      "Sean Vibes Only",
+      "Sean Walker, Texas Ranger"
     ],
     "active": true,
-    "tier": "template"
+    "tier": "curated",
+    "taggedNames": {
+      "tv": [
+        "Sean Walker, Texas Ranger"
+      ]
+    }
   },
   {
     "id": "zachastonreese_cbj",
@@ -4660,10 +4676,11 @@
       "In Palat We Trust",
       "Ondrej Palat and the Fantasy Machine",
       "Straight Outta Palat",
-      "Ondrej Vibes Only"
+      "Ondrej Vibes Only",
+      "Ondrej Palat-es"
     ],
     "active": true,
-    "tier": "template"
+    "tier": "curated"
   },
   {
     "id": "brettpesce_njd",
@@ -4996,10 +5013,16 @@
       "In Pelech We Trust",
       "Adam Pelech and the Fantasy Machine",
       "Straight Outta Pelech",
-      "Adam Vibes Only"
+      "Adam Vibes Only",
+      "Adam Pelech-an Brief"
     ],
     "active": true,
-    "tier": "template"
+    "tier": "curated",
+    "taggedNames": {
+      "movie": [
+        "Adam Pelech-an Brief"
+      ]
+    }
   },
   {
     "id": "ryanpulock_nyi",
@@ -5705,7 +5728,8 @@
       "Jamie Drysdale and the Fantasy Machine",
       "Straight Outta Drysdale",
       "Jamie Vibes Only",
-      "The Drysdale's Dragoons"
+      "The Drysdale's Dragoons",
+      "Jamie Canada Drysdale"
     ],
     "active": true,
     "tier": "curated"
@@ -8096,10 +8120,11 @@
       "In Ceci We Trust",
       "Cody Ceci and the Fantasy Machine",
       "Straight Outta Ceci",
-      "Cody Vibes Only"
+      "Cody Vibes Only",
+      "Cody Ceci'd on that email"
     ],
     "active": true,
-    "tier": "template"
+    "tier": "curated"
   },
   {
     "id": "brandtclarke_lak",
@@ -8145,7 +8170,8 @@
       "Drew Doughty and the Fantasy Machine",
       "Straight Outta Doughty",
       "Drew Vibes Only",
-      "Doughty's Dynasty"
+      "Doughty's Dynasty",
+      "Drew Never In Doughty"
     ],
     "active": true,
     "tier": "curated"
@@ -10444,10 +10470,11 @@
       "In Nazar We Trust",
       "Frank Nazar and the Fantasy Machine",
       "Straight Outta Nazar",
-      "Frank Vibes Only"
+      "Frank Vibes Only",
+      "Frank Nazar Deymesin (for my fellow Turks out there)"
     ],
     "active": true,
-    "tier": "template"
+    "tier": "curated"
   },
   {
     "id": "samrinzel_chi",
@@ -11220,10 +11247,11 @@
       "In Lindell We Trust",
       "Esa Lindell and the Fantasy Machine",
       "Straight Outta Lindell",
-      "Esa Vibes Only"
+      "Esa Vibes Only",
+      "Esa Lindell computers"
     ],
     "active": true,
-    "tier": "template"
+    "tier": "curated"
   },
   {
     "id": "nilslundkvist_dal",
@@ -11252,10 +11280,11 @@
       "In Lyubushkin We Trust",
       "Ilya Lyubushkin and the Fantasy Machine",
       "Straight Outta Lyubushkin",
-      "Ilya Vibes Only"
+      "Ilya Vibes Only",
+      "Ilya La Bouche-kin"
     ],
     "active": true,
-    "tier": "template"
+    "tier": "curated"
   },
   {
     "id": "jakeoettinger_dal",
@@ -11909,10 +11938,16 @@
       "In Haula We Trust",
       "Erik Haula and the Fantasy Machine",
       "Straight Outta Haula",
-      "Erik Vibes Only"
+      "Erik Vibes Only",
+      "Erik Haula If You Hear Me"
     ],
     "active": true,
-    "tier": "template"
+    "tier": "curated",
+    "taggedNames": {
+      "music": [
+        "Erik Haula If You Hear Me"
+      ]
+    }
   },
   {
     "id": "romanjosi_nsh",
@@ -12426,10 +12461,11 @@
       "In Sundqvist We Trust",
       "Oskar Sundqvist and the Fantasy Machine",
       "Straight Outta Sundqvist",
-      "Oskar Vibes Only"
+      "Oskar Vibes Only",
+      "Oskar We Are So Back"
     ],
     "active": false,
-    "tier": "template"
+    "tier": "curated"
   },
   {
     "id": "piussuter_stl",
@@ -12683,10 +12719,11 @@
       "In Maatta We Trust",
       "Olli Maatta and the Fantasy Machine",
       "Straight Outta Maatta",
-      "Olli Vibes Only"
+      "Olli Vibes Only",
+      "Olli Maata and Faata"
     ],
     "active": true,
-    "tier": "template"
+    "tier": "curated"
   },
   {
     "id": "johnmarino_uta",
@@ -13600,10 +13637,11 @@
       "Straight Outta Eyssimont",
       "Michael Vibes Only",
       "Michael Eyssimont and the Fantasy Machine",
-      "Eyssimont's Fantasy Fortress"
+      "Eyssimont's Fantasy Fortress",
+      "Michael Pocket Eyssimont"
     ],
     "active": true,
-    "tier": "template"
+    "tier": "curated"
   },
   {
     "id": "jameshagens_bos",
@@ -15072,10 +15110,11 @@
       "Conor Geekie and the Fantasy Machine",
       "Geekie's Fantasy Fortress",
       "Conor Vibes Only",
-      "In Geekie We Trust"
+      "In Geekie We Trust",
+      "Connor Geekie Squad"
     ],
     "active": true,
-    "tier": "template"
+    "tier": "curated"
   },
   {
     "id": "bogroulx_tor",
