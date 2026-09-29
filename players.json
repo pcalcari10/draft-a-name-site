@@ -1211,7 +1211,8 @@
       "Forgot About Joe",
       "Burrow My Sorrows",
       "Beg, Burrow, Steal",
-      "Super Smash Burrows"
+      "Super Smash Burrows",
+      "G.I. Joe"
     ],
     "active": true,
     "tier": "curated"
@@ -1309,10 +1310,18 @@
       "The BowerPuff Girls",
       "Bowers Power Hour",
       "You Underestimate My Bowers",
-      "Bower Rangers"
+      "Bower Rangers",
+      "All the Small Bowers",
+      "All About That Bowers"
     ],
     "active": true,
-    "tier": "curated"
+    "tier": "curated",
+    "taggedNames": {
+      "music": [
+        "All the Small Bowers",
+        "All About That Bowers"
+      ]
+    }
   },
   {
     "id": "treveyonhenderson_ne",
@@ -1540,7 +1549,8 @@
       "Down And Dirty Purdy",
       "Purdy Rock Anthem",
       "The Next Big Thing Brock Purdy",
-      "Purdy Fly For A White Guy"
+      "Purdy Fly For A White Guy",
+      "Purdy Like a Brockstar"
     ],
     "active": true,
     "tier": "curated"
@@ -1715,10 +1725,17 @@
       "Loveland Island",
       "Loveland, Sweet Loveland",
       "Greetings From Loveland",
-      "No Man's Loveland"
+      "No Man's Loveland",
+      "Loveland Frog",
+      "Loveland Is a Battlefield"
     ],
     "active": true,
-    "tier": "curated"
+    "tier": "curated",
+    "taggedNames": {
+      "music": [
+        "Loveland Is a Battlefield"
+      ]
+    }
   },
   {
     "id": "stefondiggs_was",
@@ -1921,10 +1938,16 @@
     "team": "CAR",
     "pos": "RB",
     "names": [
-      "Chubawamba"
+      "Chubawamba",
+      "Chuba Gooding Jr."
     ],
     "active": true,
-    "tier": "curated"
+    "tier": "curated",
+    "taggedNames": {
+      "movie": [
+        "Chuba Gooding Jr."
+      ]
+    }
   },
   {
     "id": "joshdowns_ind",
@@ -1973,7 +1996,9 @@
     "names": [
       "Kraft Beers",
       "Ice Road Tuckers!",
-      "The Kraft Mac & Cheese Heads"
+      "The Kraft Mac & Cheese Heads",
+      "Kraft Beer",
+      "Kraft Services"
     ],
     "active": true,
     "tier": "curated"
@@ -2101,7 +2126,8 @@
     "names": [
       "Sam LaPorta Potty",
       "LaPorta Potty",
-      "LaPorta Potties"
+      "LaPorta Potties",
+      "LaPorta Authority"
     ],
     "active": true,
     "tier": "curated"
@@ -2563,7 +2589,8 @@
       "Points As Far As the Eyes Kelce",
       "Kelce Handler",
       "You Belong With Kelce",
-      "Kelce Please"
+      "Kelce Please",
+      "Kelce Grammer"
     ],
     "active": true,
     "tier": "curated"
@@ -2725,10 +2752,17 @@
       "Pitts Fits",
       "Kittles & Pitts",
       "Pitt on that thang!",
-      "Pitts Of Despair"
+      "Pitts Of Despair",
+      "Pitts and Giggles",
+      "The Tortured Pitts Department"
     ],
     "active": true,
-    "tier": "curated"
+    "tier": "curated",
+    "taggedNames": {
+      "music": [
+        "The Tortured Pitts Department"
+      ]
+    }
   },
   {
     "id": "tankbigsby_phi",
@@ -2766,7 +2800,8 @@
     "pos": "TE",
     "names": [
       "The Goedert, the Bad, and the Ugly",
-      "Goedert Bless America"
+      "Goedert Bless America",
+      "Goedert Done"
     ],
     "active": true,
     "tier": "curated"
@@ -2793,7 +2828,8 @@
       "Stroud Awakening",
       "Thinking Out Stroud",
       "I Hear You Stroud And Clear",
-      "Loud, Proud And Stroud"
+      "Loud, Proud And Stroud",
+      "Stroud Business"
     ],
     "active": true,
     "tier": "curated"
@@ -3063,7 +3099,8 @@
     "pos": "TE",
     "names": [
       "Turd Ferguson",
-      "Ferguson Jenkins My Roster"
+      "Ferguson Jenkins My Roster",
+      "Ferguson Jenkins"
     ],
     "active": true,
     "tier": "curated"
@@ -3281,7 +3318,9 @@
       "Hockenson Loogies",
       "Hocktoberfest",
       "Hock Crew-uh",
-      "Hockenson My Business"
+      "Hockenson My Business",
+      "Big Hock Energy",
+      "Hock and Roll"
     ],
     "active": true,
     "tier": "curated"
@@ -3577,7 +3616,8 @@
     "team": "LAC",
     "pos": "K",
     "names": [
-      "Do you like my Cameron Dicker"
+      "Do you like my Cameron Dicker",
+      "Dicker? I Barely Know Her"
     ],
     "active": true,
     "tier": "curated"
@@ -4115,7 +4155,8 @@
     "pos": "TE",
     "names": [
       "Am I A Njoku to You?",
-      "Njoku Time Like The Present"
+      "Njoku Time Like The Present",
+      "Njoku's on You"
     ],
     "active": true,
     "tier": "curated"
@@ -6860,10 +6901,20 @@
     "names": [
       "Ertz So Good",
       "Love Ertz",
-      "Ertz Doesn't Matter"
+      "Ertz Doesn't Matter",
+      "My Ball Zach Ertz",
+      "Ertz, Wind and Fire",
+      "It Ertz When I Pee",
+      "Death Ertz-tificate",
+      "So Good It Ertz"
     ],
     "active": true,
-    "tier": "curated"
+    "tier": "curated",
+    "taggedNames": {
+      "music": [
+        "Ertz, Wind and Fire"
+      ]
+    }
   },
   {
     "id": "michaelvick_atl",
