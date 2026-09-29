@@ -829,10 +829,22 @@ function buildEntities(){
         });
       }
     });
+    // Team-level puns can carry the same category tags as player puns (e.g.
+    // a team joke that's also a Star Wars reference).
+    const fromTeams = [];
+    TEAMS.forEach(t => {
+      if(t.taggedNames && t.taggedNames[category]){
+        t.taggedNames[category].forEach(n => {
+          fromTeams.push(n);
+          if(!TAGGED_NAME_SOURCE[n]) TAGGED_NAME_SOURCE[n] = [];
+          TAGGED_NAME_SOURCE[n].push(`${t.city} ${t.nickname}`);
+        });
+      }
+    });
     // The same pun text can be tagged on multiple players (e.g. "Wilsons of
     // Anarchy" appears on 8 different Wilsons), so dedupe before returning
     // — otherwise it shows up repeatedly in this category's search pool.
-    return [...new Set(fromGeneric.concat(fromPlayers))];
+    return [...new Set(fromGeneric.concat(fromPlayers).concat(fromTeams))];
   }
 
   ENTITIES.push({ id: 'generic_movie', kind: 'genericMovie', names: categoryPool('movie') });
