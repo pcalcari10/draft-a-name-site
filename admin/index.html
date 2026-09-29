@@ -25,6 +25,19 @@
   .progress-panel { background: var(--panel); border: 1px solid var(--line); border-radius: 10px; padding: 22px; margin-bottom: 24px; }
   .section-label { font-family: var(--mono); font-size: 12px; font-weight: 700; color: var(--amber); letter-spacing: 0.06em; margin: 32px 0 10px; text-transform: uppercase; }
   .section-label:first-of-type { margin-top: 0; }
+  .sport-select { display: flex; gap: 8px; margin-bottom: 20px; flex-wrap: wrap; }
+  .sport-select-btn {
+    font-family: var(--mono); font-size: 13.5px; font-weight: 600; color: var(--dim);
+    background: var(--panel-2); border: 1px solid var(--line); border-radius: 8px;
+    padding: 9px 16px; cursor: pointer; display: flex; align-items: center; gap: 6px;
+  }
+  .sport-select-btn:hover { color: var(--text); border-color: var(--dim); }
+  .sport-select-btn.active { color: var(--amber); border-color: var(--amber); background: rgba(255,176,32,0.08); }
+  .sport-select-btn.soon { opacity: 0.6; }
+  .sport-select-btn .soon-tag {
+    font-size: 9px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.03em;
+    background: var(--panel-3); color: var(--dim); padding: 1px 5px; border-radius: 8px;
+  }
   .tabs { display: flex; gap: 6px; margin-bottom: 24px; flex-wrap: wrap; border-bottom: 1px solid var(--line); padding-bottom: 0; }
   .tab-btn {
     font-family: var(--mono); font-size: 13px; font-weight: 600; color: var(--dim);
@@ -85,7 +98,14 @@
   <h1>Curation Tracker</h1>
   <p class="sub">Every player still on auto-generated placeholder puns, grouped by team, so you know exactly what's left to write real jokes for.</p>
 
-  <div class="tabs">
+  <div class="sport-select" id="sportSelect">
+    <button class="sport-select-btn active" data-sport="football">🏈 Football</button>
+    <button class="sport-select-btn" data-sport="hockey">🏒 Hockey</button>
+    <button class="sport-select-btn soon" data-sport="baseball">⚾ Baseball <span class="soon-tag">Soon</span></button>
+    <button class="sport-select-btn soon" data-sport="basketball">🏀 Basketball <span class="soon-tag">Soon</span></button>
+  </div>
+
+  <div class="tabs" id="sportTabs">
     <button class="tab-btn active" data-tab="sync">Sync &amp; Automation</button>
     <button class="tab-btn" data-tab="placeholders">Placeholders</button>
     <button class="tab-btn" data-tab="curated">Curated</button>
@@ -93,6 +113,10 @@
     <button class="tab-btn" data-tab="addname">Add a Name</button>
     <button class="tab-btn" data-tab="review">Review Submissions <span id="reviewCountBadge" style="display:none;"></span></button>
     <button class="tab-btn" data-tab="blocklist">Blocklist</button>
+  </div>
+
+  <div id="sportComingSoon" style="display:none; padding:40px 20px; text-align:center; color:var(--dim); font-family:var(--mono); font-size:14px;">
+    Admin tools for this sport haven't been built yet.
   </div>
 
   <div class="tab-panel active" id="tab-sync">
@@ -233,6 +257,9 @@
       <button class="ghost" id="loadPerfBtn" style="font-family:var(--mono);font-size:12.5px;background:none;border:1px solid var(--line);color:var(--text);border-radius:8px;padding:8px 14px;cursor:pointer;">Load performance data</button>
     </div>
     <div id="perfList" style="margin-top:14px;"></div>
+  </div>
+  <div id="perfUnavailable" style="display:none; padding:24px; text-align:center; color:var(--dim); font-family:var(--mono); font-size:13.5px;">
+    Not available for hockey yet \u2014 this needs a stats pipeline like football's Sleeper-based one, which hasn't been built for the NHL side.
   </div>
   </div>
 
@@ -531,6 +558,81 @@ let allCombos = [];
 let allGeneric = [];
 let genericByCategory = {};
 
+// Each sport gets its own copy of these five collections. Switching sports
+// just repoints the five variables above at a different sport's arrays/objects
+// (all the existing render functions keep working unmodified, since they
+// only ever read allPlayers/allTeams/etc, never SPORT_DATA directly) and
+// re-runs the render functions.
+const SPORT_DATA = {
+  football: { players: [], teams: [], combos: [], generic: [], genericByCategory: {} },
+  hockey:   { players: [], teams: [], combos: [], generic: [], genericByCategory: {} },
+};
+let currentAdminSport = 'football';
+
+function pointSportGlobalsAt(sport){
+  const d = SPORT_DATA[sport];
+  allPlayers = d.players;
+  allTeams = d.teams;
+  allCombos = d.combos;
+  allGeneric = d.generic;
+  genericByCategory = d.genericByCategory;
+}
+pointSportGlobalsAt('football');
+
+function switchAdminSport(sport){
+  const soonSection = document.getElementById('sportComingSoon');
+  const tabsSection = document.getElementById('sportTabs');
+  const tabPanels = document.querySelectorAll('.tab-panel');
+
+  document.querySelectorAll('.sport-select-btn').forEach(b => b.classList.toggle('active', b.dataset.sport === sport));
+
+  if(sport === 'baseball' || sport === 'basketball'){
+    tabsSection.style.display = 'none';
+    tabPanels.forEach(p => p.classList.remove('active'));
+    soonSection.style.display = 'block';
+    return;
+  }
+  soonSection.style.display = 'none';
+  tabsSection.style.display = 'flex';
+  // Restore whichever tab was active before (defaulting to the first one)
+  const activeBtn = document.querySelector('.tab-btn.active') || document.querySelector('.tab-btn');
+  document.getElementById('tab-' + activeBtn.dataset.tab).classList.add('active');
+
+  currentAdminSport = sport;
+  pointSportGlobalsAt(sport);
+
+  // Re-render everything that depends on the now-current sport's data.
+  updateProgressStats();
+  renderPlaceholders();
+  renderCurated();
+
+  // Best Performers only has data for football (Sleeper-based); hockey has
+  // no stats pipeline yet, so show a plain notice instead of a dead button.
+  const perfPanel = document.getElementById('perfPanel');
+  const perfUnavailable = document.getElementById('perfUnavailable');
+  if(sport === 'hockey'){
+    perfPanel.style.display = 'none';
+    perfUnavailable.style.display = 'block';
+  } else {
+    perfPanel.style.display = 'block';
+    perfUnavailable.style.display = 'none';
+  }
+
+  // Add a Name's search suggestions are keyed off whichever sport is active
+  // via allPlayers already, but clear any in-progress selection so a player
+  // from the old sport can't get submitted under the new one.
+  addNameSelectedPlayer = null;
+  document.getElementById('addNameSelected').style.display = 'none';
+  document.getElementById('addNameText').disabled = true;
+  document.getElementById('addNameSubmit').disabled = true;
+  document.getElementById('addNameSearch').value = '';
+  document.getElementById('addNameSearch').placeholder = sport === 'hockey' ? 'Search for an NHL player\u2026' : 'Search for an NFL player\u2026';
+}
+
+document.querySelectorAll('.sport-select-btn').forEach(btn => {
+  btn.addEventListener('click', () => switchAdminSport(btn.dataset.sport));
+});
+
 // ---------- Performance data (best placeholder players to prioritize) ----------
 let sleeperIdMap = null; // normalized "first last" -> sleeper_id
 
@@ -617,17 +719,24 @@ document.getElementById('loadPerfBtn').addEventListener('click', loadPerformance
 document.getElementById('perfPanel').style.display = 'block';
 
 async function loadExtraPlayers(){
+  // extra_players is football-only (populated by football's client-side
+  // Sleeper sync), so this always merges into SPORT_DATA.football.players
+  // directly rather than whatever allPlayers currently points to \u2014 otherwise
+  // a sync finishing while the hockey tab is open would merge football
+  // players into hockey's array.
   try {
     const snap = await db.collection('extra_players').get();
     snap.forEach(doc => {
       const d = doc.data();
-      if(allPlayers.find(p => p.id === doc.id)) return;
-      allPlayers.push({ id: doc.id, first: d.first, last: d.last, team: d.team, pos: d.pos || '', names: d.names || [], tier: 'template', active: true });
+      if(SPORT_DATA.football.players.find(p => p.id === doc.id)) return;
+      SPORT_DATA.football.players.push({ id: doc.id, first: d.first, last: d.last, team: d.team, pos: d.pos || '', names: d.names || [], tier: 'template', active: true });
     });
   } catch(err){ console.error('Failed to load extra_players', err); }
-  updateProgressStats();
-  renderPlaceholders();
-  renderCurated();
+  if(currentAdminSport === 'football'){
+    updateProgressStats();
+    renderPlaceholders();
+    renderCurated();
+  }
 }
 
 const POSITION_ORDER = { QB: 0, RB: 1, WR: 2, TE: 3, K: 4 };
@@ -858,7 +967,7 @@ addNameSubmitBtn.addEventListener('click', async () => {
       : [addNameSelectedPlayer];
 
     for(const player of targets){
-      await db.collection('pending_puns').add({
+      await db.collection(currentAdminSport === 'hockey' ? 'pending_puns_hockey' : 'pending_puns').add({
         playerId: player.id,
         playerName: `${player.first} ${player.last}`,
         newName,
@@ -968,31 +1077,57 @@ async function boot(){
   try {
     const res = await fetch('../players.json');
     const data = await res.json();
-    data.forEach(p => allPlayers.push(p));
+    data.forEach(p => SPORT_DATA.football.players.push(p));
   } catch(err){
     console.error('Failed to load players.json', err);
   }
   try {
     const res = await fetch('../teams.json');
     const data = await res.json();
-    data.forEach(t => allTeams.push(t));
+    data.forEach(t => SPORT_DATA.football.teams.push(t));
   } catch(err){
     console.error('Failed to load teams.json', err);
   }
   try {
     const res = await fetch('../combos.json');
-    allCombos = await res.json();
+    SPORT_DATA.football.combos = await res.json();
   } catch(err){
     console.error('Failed to load combos.json', err);
   }
   try {
     const res = await fetch('../generic.json');
     const data = await res.json();
-    genericByCategory = data;
-    allGeneric = data.general || [];
+    SPORT_DATA.football.genericByCategory = data;
+    SPORT_DATA.football.generic = data.general || [];
   } catch(err){
     console.error('Failed to load generic.json', err);
   }
+
+  try {
+    const res = await fetch('../players_hockey.json');
+    const data = await res.json();
+    data.forEach(p => SPORT_DATA.hockey.players.push(p));
+  } catch(err){
+    console.error('Failed to load players_hockey.json', err);
+  }
+  try {
+    const res = await fetch('../teams_hockey.json');
+    const data = await res.json();
+    data.forEach(t => SPORT_DATA.hockey.teams.push(t));
+  } catch(err){
+    console.error('Failed to load teams_hockey.json', err);
+  }
+  try {
+    const res = await fetch('../generic_hockey.json');
+    const data = await res.json();
+    SPORT_DATA.hockey.genericByCategory = data;
+    SPORT_DATA.hockey.generic = data.general || [];
+  } catch(err){
+    console.error('Failed to load generic_hockey.json', err);
+  }
+  // Hockey has no combos.json equivalent yet; SPORT_DATA.hockey.combos stays [].
+
+  pointSportGlobalsAt(currentAdminSport);
   updateProgressStats();
   renderPlaceholders();
   renderCurated();
