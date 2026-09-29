@@ -1026,7 +1026,7 @@
       "Drizzy Drake",
       "Maye-Day",
       "It's Gonna Be Maye",
-      "I Said Maye-be\u2026",
+      "I Said Maye-be…",
       "Drakes Coffee Cakes",
       "I Maye Score Tonight",
       "Drake It 'Til You Make It"
@@ -1185,7 +1185,7 @@
       "Joey Franchise",
       "Slim Shiesty",
       "The Real Slim Joey",
-      "My Name Is\u2026Slim Burrow",
+      "My Name Is…Slim Burrow",
       "You're On Burrowed Time",
       "The More You Joe",
       "Joe Exotic",
@@ -1224,7 +1224,7 @@
     "team": "NYJ",
     "pos": "WR",
     "names": [
-      "WILSON!\ud83c\udfd0",
+      "WILSON!🏐",
       "Garretteed Satisfaction",
       "Garrett Will Some Victories",
       "G-Force Wilson",
@@ -1644,7 +1644,7 @@
       "Caleb's Crusaders",
       "Pink Nails, Always Prevails",
       "All Eyes On Caleb",
-      "Nailed it \ud83d\udc85\ud83c\udffd",
+      "Nailed it 💅🏽",
       "The CW",
       "One In a Williams",
       "Mini Mahomes",
@@ -2369,7 +2369,7 @@
     "team": "ARI",
     "pos": "WR",
     "names": [
-      "WILSON!\ud83c\udfd0",
+      "WILSON!🏐",
       "G-Force Wilson",
       "Wilsons of Anarchy",
       "The Wilson Connection"
@@ -3983,7 +3983,7 @@
       "Fill My Kupp",
       "Pump Kupp The Volume",
       "Bottoms Kupp",
-      "Coop de Gr\u00e2ce",
+      "Coop de Grâce",
       "Kupp and Away",
       "Kupp and Out",
       "Sippy Kupps",
@@ -4462,7 +4462,7 @@
     "team": "SEA",
     "pos": "RB",
     "names": [
-      "WILSON!\ud83c\udfd0",
+      "WILSON!🏐",
       "G-Force Wilson",
       "Wilsons of Anarchy",
       "The Wilson Connection"
@@ -4823,7 +4823,7 @@
     "pos": "WR",
     "names": [
       "The Roman Empire",
-      "WILSON!\ud83c\udfd0",
+      "WILSON!🏐",
       "G-Force Wilson",
       "Wilsons of Anarchy",
       "The Wilson Connection"
@@ -6780,7 +6780,7 @@
       "Russell and Flow",
       "RussellMania",
       "Russell Sprouts",
-      "WILSON!\ud83c\udfd0",
+      "WILSON!🏐",
       "G-Force Wilson",
       "Wilsons of Anarchy",
       "The Wilson Connection"
@@ -6886,7 +6886,7 @@
       "Eks Gon' Give It To Ya",
       "Eks Marks the Spot",
       "Eks-Factor",
-      "My Ek, My Back\u2026",
+      "My Ek, My Back…",
       "Eks Men: First Class"
     ],
     "active": true,
@@ -9306,7 +9306,7 @@
     "team": "TEN",
     "pos": "TE",
     "names": [
-      "WILSON!\ud83c\udfd0",
+      "WILSON!🏐",
       "G-Force Wilson",
       "Wilsons of Anarchy",
       "The Wilson Connection"
@@ -9422,7 +9422,7 @@
     "team": "PHI",
     "pos": "WR",
     "names": [
-      "WILSON!\ud83c\udfd0",
+      "WILSON!🏐",
       "G-Force Wilson",
       "Wilsons of Anarchy",
       "The Wilson Connection"
@@ -12845,7 +12845,7 @@
     "team": "NO",
     "pos": "QB",
     "names": [
-      "WILSON!\ud83c\udfd0",
+      "WILSON!🏐",
       "G-Force Wilson",
       "Wilsons of Anarchy",
       "The Wilson Connection"
@@ -14596,5 +14596,325 @@
     ],
     "active": true,
     "tier": "curated"
+  },
+  {
+    "id": "nickfolk_atl",
+    "first": "Nick",
+    "last": "Folk",
+    "team": "ATL",
+    "pos": "K",
+    "names": [
+      "Folk-A-Palooza",
+      "In Folk We Trust",
+      "The Folk Show",
+      "Nick Folk and the Fantasy Machine",
+      "Livin' on a Folk"
+    ],
+    "active": true,
+    "tier": "template"
+  },
+  {
+    "id": "jasonsanders_nyj",
+    "first": "Jason",
+    "last": "Sanders",
+    "team": "NYJ",
+    "pos": "K",
+    "names": [
+      "Livin' on a Sanders",
+      "Sanders Happens",
+      "Jason Sanders and the Fantasy Machine",
+      "In Sanders We Trust",
+      "Straight Outta Sanders"
+    ],
+    "active": true,
+    "tier": "template"
+  },
+  {
+    "id": "mattgay_lv",
+    "first": "Matt",
+    "last": "Gay",
+    "team": "LV",
+    "pos": "K",
+    "names": [
+      "Matt's Excellent Adventure",
+      "Matt Vibes Only",
+      "Gay Happens",
+      "Gay-tastic Voyage",
+      "All Gay, No Filler"
+    ],
+    "active": true,
+    "tier": "template"
+  },
+  {
+    "id": "joeyslye_ten",
+    "first": "Joey",
+    "last": "Slye",
+    "team": "TEN",
+    "pos": "K",
+    "names": [
+      "Slye of Fame",
+      "The Slye Show",
+      "Livin' on a Slye",
+      "Slye Happens",
+      "Slye-A-Palooza"
+    ],
+    "active": true,
+    "tier": "template"
+  },
+  {
+    "id": "rileypatterson_mia",
+    "first": "Riley",
+    "last": "Patterson",
+    "team": "MIA",
+    "pos": "K",
+    "names": [
+      "Riley Patterson and the Fantasy Machine",
+      "Livin' on a Patterson",
+      "The Patterson Show",
+      "Riley Vibes Only",
+      "Patterson of Fame"
+    ],
+    "active": true,
+    "tier": "template"
+  },
+  {
+    "id": "alexkessman_car",
+    "first": "Alex",
+    "last": "Kessman",
+    "team": "CAR",
+    "pos": "K",
+    "names": [
+      "Alex Vibes Only",
+      "Kessman-A-Palooza",
+      "Kessman-tastic Voyage",
+      "Kessman of Fame",
+      "Livin' on a Kessman"
+    ],
+    "active": true,
+    "tier": "template"
+  },
+  {
+    "id": "tylerscott_lv",
+    "first": "Tyler",
+    "last": "Scott",
+    "team": "LV",
+    "pos": "WR",
+    "names": [
+      "Livin' on a Scott",
+      "In Scott We Trust",
+      "Tyler & Chill",
+      "The Scott Show",
+      "Tyler's Excellent Adventure"
+    ],
+    "active": true,
+    "tier": "template"
+  },
+  {
+    "id": "chadryland_ari",
+    "first": "Chad",
+    "last": "Ryland",
+    "team": "ARI",
+    "pos": "K",
+    "names": [
+      "Chad's Excellent Adventure",
+      "Ryland-A-Palooza",
+      "Straight Outta Ryland",
+      "Ryland of Fame",
+      "Chad Vibes Only"
+    ],
+    "active": true,
+    "tier": "template"
+  },
+  {
+    "id": "blakegrupe_nyj",
+    "first": "Blake",
+    "last": "Grupe",
+    "team": "NYJ",
+    "pos": "K",
+    "names": [
+      "Grupe-A-Palooza",
+      "Grupe Happens",
+      "Grupe's Fantasy Fortress",
+      "Straight Outta Grupe",
+      "Livin' on a Grupe"
+    ],
+    "active": true,
+    "tier": "template"
+  },
+  {
+    "id": "andreszmyt_cle",
+    "first": "Andre",
+    "last": "Szmyt",
+    "team": "CLE",
+    "pos": "K",
+    "names": [
+      "Andre's Excellent Adventure",
+      "Andre Szmyt and the Fantasy Machine",
+      "Livin' on a Szmyt",
+      "Szmyt'd Up and Ready",
+      "Szmyt's Fantasy Fortress"
+    ],
+    "active": true,
+    "tier": "template"
+  },
+  {
+    "id": "charliesmyth_no",
+    "first": "Charlie",
+    "last": "Smyth",
+    "team": "NO",
+    "pos": "K",
+    "names": [
+      "The Smyth Show",
+      "Smyth's Fantasy Fortress",
+      "Smyth'd Up and Ready",
+      "Smyth Happens",
+      "Livin' on a Smyth"
+    ],
+    "active": true,
+    "tier": "template"
+  },
+  {
+    "id": "spencershrader_ind",
+    "first": "Spencer",
+    "last": "Shrader",
+    "team": "IND",
+    "pos": "K",
+    "names": [
+      "Straight Outta Shrader",
+      "In Shrader We Trust",
+      "Spencer Shrader and the Fantasy Machine",
+      "Shrader's Fantasy Fortress",
+      "Shrader Happens"
+    ],
+    "active": true,
+    "tier": "template"
+  },
+  {
+    "id": "lennykrieg_gb",
+    "first": "Lenny",
+    "last": "Krieg",
+    "team": "GB",
+    "pos": "K",
+    "names": [
+      "Krieg'd Up and Ready",
+      "Lenny's Excellent Adventure",
+      "Krieg-tastic Voyage",
+      "Lenny Vibes Only",
+      "Livin' on a Krieg"
+    ],
+    "active": true,
+    "tier": "template"
+  },
+  {
+    "id": "ajhenning_mia",
+    "first": "AJ",
+    "last": "Henning",
+    "team": "MIA",
+    "pos": "WR",
+    "names": [
+      "AJ Henning and the Fantasy Machine",
+      "Straight Outta Henning",
+      "AJ & Chill",
+      "Henning's Fantasy Fortress",
+      "All Henning, No Filler"
+    ],
+    "active": true,
+    "tier": "template"
+  },
+  {
+    "id": "ryanfitzgerald_car",
+    "first": "Ryan",
+    "last": "Fitzgerald",
+    "team": "CAR",
+    "pos": "K",
+    "names": [
+      "Fitzgerald-A-Palooza",
+      "Fitzgerald Happens",
+      "Fitzgerald-tastic Voyage",
+      "Livin' on a Fitzgerald",
+      "In Fitzgerald We Trust"
+    ],
+    "active": true,
+    "tier": "template"
+  },
+  {
+    "id": "mileskitselman_det",
+    "first": "Miles",
+    "last": "Kitselman",
+    "team": "DET",
+    "pos": "TE",
+    "names": [
+      "The Kitselman Show",
+      "Kitselman'd Up and Ready",
+      "Miles & Chill",
+      "Miles's Excellent Adventure",
+      "Livin' on a Kitselman"
+    ],
+    "active": true,
+    "tier": "template"
+  },
+  {
+    "id": "kanseimatsuzawa_lv",
+    "first": "Kansei",
+    "last": "Matsuzawa",
+    "team": "LV",
+    "pos": "K",
+    "names": [
+      "Matsuzawa Happens",
+      "Straight Outta Matsuzawa",
+      "Matsuzawa-A-Palooza",
+      "Matsuzawa of Fame",
+      "Kansei & Chill"
+    ],
+    "active": true,
+    "tier": "template"
+  },
+  {
+    "id": "dominiczvada_nyg",
+    "first": "Dominic",
+    "last": "Zvada",
+    "team": "NYG",
+    "pos": "K",
+    "names": [
+      "Zvada Happens",
+      "Dominic & Chill",
+      "Dominic's Excellent Adventure",
+      "The Zvada Show",
+      "Zvada-A-Palooza"
+    ],
+    "active": true,
+    "tier": "template"
+  },
+  {
+    "id": "drewstevens_was",
+    "first": "Drew",
+    "last": "Stevens",
+    "team": "WAS",
+    "pos": "K",
+    "names": [
+      "Drew Vibes Only",
+      "In Stevens We Trust",
+      "Drew & Chill",
+      "Drew's Excellent Adventure",
+      "Stevens of Fame"
+    ],
+    "active": true,
+    "tier": "template"
+  },
+  {
+    "id": "malickmeiga_sea",
+    "first": "Malick",
+    "last": "Meiga",
+    "team": "SEA",
+    "pos": "WR",
+    "names": [
+      "Meiga'd Up and Ready",
+      "Straight Outta Meiga",
+      "Livin' on a Meiga",
+      "All Meiga, No Filler",
+      "Malick Meiga and the Fantasy Machine"
+    ],
+    "active": true,
+    "tier": "template"
   }
 ]
