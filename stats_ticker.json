@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-29T06:46:00.997Z",
+  "generatedAt": "2026-09-29T11:06:39.707Z",
   "season": "2026",
   "week": 3,
   "thisWeek": {
@@ -661,6 +661,15 @@
     ],
     "K": [
       {
+        "id": "spencershrader_ind",
+        "first": "Spencer",
+        "last": "Shrader",
+        "team": "IND",
+        "pos": "K",
+        "pts": 17,
+        "pun": "Straight Outta Shrader"
+      },
+      {
         "id": "willreichard_min",
         "first": "Will",
         "last": "Reichard",
@@ -679,6 +688,24 @@
         "pun": "Mevis's Fantasy Fortress"
       },
       {
+        "id": "ryanfitzgerald_car",
+        "first": "Ryan",
+        "last": "Fitzgerald",
+        "team": "CAR",
+        "pos": "K",
+        "pts": 15,
+        "pun": "Fitzgerald-A-Palooza"
+      },
+      {
+        "id": "chadryland_ari",
+        "first": "Chad",
+        "last": "Ryland",
+        "team": "ARI",
+        "pos": "K",
+        "pts": 14,
+        "pun": "Chad's Excellent Adventure"
+      },
+      {
         "id": "chrisboswell_pit",
         "first": "Chris",
         "last": "Boswell",
@@ -686,6 +713,15 @@
         "pos": "K",
         "pts": 13,
         "pun": "Chris & Chill"
+      },
+      {
+        "id": "mattgay_lv",
+        "first": "Matt",
+        "last": "Gay",
+        "team": "LV",
+        "pos": "K",
+        "pts": 12,
+        "pun": "Matt's Excellent Adventure"
       },
       {
         "id": "chasemclaughlin_tb",
@@ -713,42 +749,6 @@
         "pos": "K",
         "pts": 11,
         "pun": "McPherson-tastic Voyage"
-      },
-      {
-        "id": "cairosantos_chi",
-        "first": "Cairo",
-        "last": "Santos",
-        "team": "CHI",
-        "pos": "K",
-        "pts": 10,
-        "pun": "Santos of Fame"
-      },
-      {
-        "id": "brandonaubrey_dal",
-        "first": "Brandon",
-        "last": "Aubrey",
-        "team": "DAL",
-        "pos": "K",
-        "pts": 10,
-        "pun": "Aubrey'd Up and Ready"
-      },
-      {
-        "id": "jasonmyers_sea",
-        "first": "Jason",
-        "last": "Myers",
-        "team": "SEA",
-        "pos": "K",
-        "pts": 9,
-        "pun": "In Myers We Trust"
-      },
-      {
-        "id": "camerondicker_lac",
-        "first": "Cameron",
-        "last": "Dicker",
-        "team": "LAC",
-        "pos": "K",
-        "pts": 9,
-        "pun": "Do you like my Cameron Dicker"
       }
     ]
   },
@@ -1429,6 +1429,15 @@
         "pun": "Livin' on a McLaughlin"
       },
       {
+        "id": "spencershrader_ind",
+        "first": "Spencer",
+        "last": "Shrader",
+        "team": "IND",
+        "pos": "K",
+        "pts": 37,
+        "pun": "Straight Outta Shrader"
+      },
+      {
         "id": "willreichard_min",
         "first": "Will",
         "last": "Reichard",
@@ -1438,6 +1447,15 @@
         "pun": "Reichard Happens"
       },
       {
+        "id": "ryanfitzgerald_car",
+        "first": "Ryan",
+        "last": "Fitzgerald",
+        "team": "CAR",
+        "pos": "K",
+        "pts": 32,
+        "pun": "Fitzgerald-A-Palooza"
+      },
+      {
         "id": "tylerloop_bal",
         "first": "Tyler",
         "last": "Loop",
@@ -1445,6 +1463,24 @@
         "pos": "K",
         "pts": 31,
         "pun": "Jumping Through Loops"
+      },
+      {
+        "id": "mattgay_lv",
+        "first": "Matt",
+        "last": "Gay",
+        "team": "LV",
+        "pos": "K",
+        "pts": 30,
+        "pun": "Matt's Excellent Adventure"
+      },
+      {
+        "id": "chadryland_ari",
+        "first": "Chad",
+        "last": "Ryland",
+        "team": "ARI",
+        "pos": "K",
+        "pts": 30,
+        "pun": "Chad's Excellent Adventure"
       },
       {
         "id": "harrisonbutker_kc",
@@ -1463,42 +1499,6 @@
         "pos": "K",
         "pts": 27,
         "pun": "Aubrey'd Up and Ready"
-      },
-      {
-        "id": "cairosantos_chi",
-        "first": "Cairo",
-        "last": "Santos",
-        "team": "CHI",
-        "pos": "K",
-        "pts": 26,
-        "pun": "Santos of Fame"
-      },
-      {
-        "id": "chrisboswell_pit",
-        "first": "Chris",
-        "last": "Boswell",
-        "team": "PIT",
-        "pos": "K",
-        "pts": 25,
-        "pun": "Chris & Chill"
-      },
-      {
-        "id": "jasonmyers_sea",
-        "first": "Jason",
-        "last": "Myers",
-        "team": "SEA",
-        "pos": "K",
-        "pts": 23,
-        "pun": "In Myers We Trust"
-      },
-      {
-        "id": "tylerbass_buf",
-        "first": "Tyler",
-        "last": "Bass",
-        "team": "BUF",
-        "pos": "K",
-        "pts": 23,
-        "pun": "Bass-A-Palooza"
       }
     ]
   }
