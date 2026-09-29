@@ -161,7 +161,7 @@
     </div>
   </div>
 
-  <div class="progress-panel" id="hockeySyncPanel" style="margin-top:16px; border-top:3px solid var(--panel-3);">
+  <div class="progress-panel" id="hockeySyncPanel" style="display:none; margin-top:16px; border-top:3px solid var(--panel-3);">
     <div class="progress-top">
       <div>
         <div class="team-name" style="font-size:16px;">🏒 Sync full NHL roster</div>
@@ -617,6 +617,11 @@ function switchAdminSport(sport){
     perfPanel.style.display = 'block';
     perfUnavailable.style.display = 'none';
   }
+
+  // Sync & Automation shows only the panel for the currently selected sport.
+  document.getElementById('syncPanel').style.display = sport === 'football' ? 'block' : 'none';
+  document.getElementById('hockeySyncPanel').style.display = sport === 'hockey' ? 'block' : 'none';
+  document.getElementById('hockeySyncPanel').style.marginTop = sport === 'hockey' ? '0' : '16px';
 
   // Add a Name's search suggestions are keyed off whichever sport is active
   // via allPlayers already, but clear any in-progress selection so a player
