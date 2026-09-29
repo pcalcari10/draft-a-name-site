@@ -1,0 +1,38 @@
+name: Weekly Hockey Roster Sync
+
+on:
+  schedule:
+    # Every Tuesday at 11:00 UTC, an hour after the football sync, straight
+    # from the NHL's own live API rather than a third-party source.
+    - cron: '0 11 * * 2'
+  workflow_dispatch: {} # lets you trigger it manually from the Actions tab too
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repo
+        uses: actions/checkout@v4
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Run hockey roster sync
+        run: node scripts/sync-roster-hockey.js
+
+      - name: Commit and push if players_hockey.json changed
+        run: |
+          git config user.name "roster-sync-bot"
+          git config user.email "actions@github.com"
+          if ! git diff --quiet -- players_hockey.json; then
+            git add players_hockey.json
+            git commit -m "Weekly hockey roster sync: team changes, new call-ups, deactivations"
+            git push
+          else
+            echo "No changes to commit."
+          fi
