@@ -399,7 +399,17 @@ async function mergeSubmittedNames(){
       if(!entity.names) entity.names = [];
       if(!entity.names.includes(d.name)) entity.names.push(d.name);
     });
-  } catch(err){ console.error('mergeSubmittedNames failed', err); }
+  } catch(err){ console.error('mergeSubmittedNames (football) failed', err); }
+  try {
+    const snap = await db.collection('submitted_names_hockey').where('status', '==', 'approved').get();
+    snap.forEach(doc => {
+      const d = doc.data();
+      const entity = HOCKEY_ENTITIES.find(e => e.id === d.playerId);
+      if(!entity) return;
+      if(!entity.names) entity.names = [];
+      if(!entity.names.includes(d.name)) entity.names.push(d.name);
+    });
+  } catch(err){ console.error('mergeSubmittedNames (hockey) failed', err); }
 }
 
 // ---------- Suggest a name ----------
