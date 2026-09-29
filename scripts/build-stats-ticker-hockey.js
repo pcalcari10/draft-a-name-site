@@ -106,14 +106,22 @@ async function main() {
 
   seasonTotals.G = goalieLeaders.slice(0, TOP_N_BY_POS.G).map(toEntry);
 
-  const output = {
-    generatedAt: new Date().toISOString(),
-    season: SEASON,
-    seasonTotals,
-  };
+  // Merge into the existing output file rather than overwriting it, since
+  // build-weekly-ticker-hockey.js owns the separate thisWeek section of the
+  // same file \u2014 overwriting wholesale here would wipe out its data.
+  let existing = {};
+  try {
+    existing = JSON.parse(fs.readFileSync(OUT_PATH, 'utf8'));
+  } catch (err) {
+    console.log('No existing stats_ticker_hockey.json found (or unreadable) \u2014 starting fresh.');
+  }
 
-  fs.writeFileSync(OUT_PATH, JSON.stringify(output, null, 2) + '\n');
-  console.log(`Wrote stats_ticker_hockey.json (season ${SEASON}).`);
+  existing.generatedAt = new Date().toISOString();
+  existing.season = SEASON;
+  existing.seasonTotals = seasonTotals;
+
+  fs.writeFileSync(OUT_PATH, JSON.stringify(existing, null, 2) + '\n');
+  console.log(`Wrote seasonTotals section of stats_ticker_hockey.json (season ${SEASON}).`);
 }
 
 main().catch(err => {

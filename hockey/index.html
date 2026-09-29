@@ -543,9 +543,13 @@
 <body>
 <div class="ticker-wrap" id="tickerWrap" style="display:none;">
   <div class="ticker-bar">
-    <span class="ticker-title" id="tickerTitle">Season Leaders</span>
+    <span class="ticker-title" id="tickerTitle">This Week</span>
     <div class="ticker-track-outer">
       <div class="ticker-track" id="tickerTrack"></div>
+    </div>
+    <div class="ticker-toggle">
+      <button id="tickerWeekBtn" class="active">This Week</button>
+      <button id="tickerSeasonBtn">Season</button>
     </div>
   </div>
 </div>
@@ -1597,6 +1601,9 @@ Promise.all([
 (function initStatsTicker(){
   const wrapEl = document.getElementById('tickerWrap');
   const trackEl = document.getElementById('tickerTrack');
+  const titleEl = document.getElementById('tickerTitle');
+  const weekBtn = document.getElementById('tickerWeekBtn');
+  const seasonBtn = document.getElementById('tickerSeasonBtn');
   const POS_ORDER = ['C', 'LW', 'RW', 'D', 'G'];
 
   trackEl.addEventListener('click', (e) => {
@@ -1622,11 +1629,11 @@ Promise.all([
     return `<div class="ticker-divider">${pos}</div>`;
   }
 
-  function render(data){
-    const byPos = data.seasonTotals;
+  function render(data, view){
+    const byPos = view === 'season' ? data.seasonTotals : data.thisWeek;
     const groupsHtml = [];
     POS_ORDER.forEach(pos => {
-      const entries = byPos[pos] || [];
+      const entries = (byPos && byPos[pos]) || [];
       if(entries.length === 0) return;
       const cards = entries.map((e, i) => buildCard(e, i + 1)).join('');
       groupsHtml.push(buildDivider(pos) + cards);
@@ -1645,14 +1652,36 @@ Promise.all([
       const duration = Math.max(halfWidth / PIXELS_PER_SECOND, 20);
       trackEl.style.animationDuration = duration + 's';
     });
+
+    titleEl.textContent = view === 'season'
+      ? 'Season Leaders'
+      : (data.weekStart ? `This Week \u2014 since ${data.weekStart}` : 'This Week');
   }
 
   loadJson('../stats_ticker_hockey.json').then(data => {
-    if(!data || !data.seasonTotals){
+    const hasWeek = data && data.thisWeek && Object.values(data.thisWeek).some(arr => arr.length > 0);
+    const hasSeason = data && data.seasonTotals && Object.values(data.seasonTotals).some(arr => arr.length > 0);
+    if(!hasWeek && !hasSeason){
       wrapEl.style.display = 'none';
       return;
     }
-    render(data);
+    // Default to whichever view actually has data if one is empty (e.g. the
+    // very first Monday of a fantasy week, before any games are complete).
+    const defaultView = hasWeek ? 'week' : 'season';
+    render(data, defaultView);
+    weekBtn.classList.toggle('active', defaultView === 'week');
+    seasonBtn.classList.toggle('active', defaultView === 'season');
+
+    weekBtn.addEventListener('click', () => {
+      weekBtn.classList.add('active');
+      seasonBtn.classList.remove('active');
+      render(data, 'week');
+    });
+    seasonBtn.addEventListener('click', () => {
+      seasonBtn.classList.add('active');
+      weekBtn.classList.remove('active');
+      render(data, 'season');
+    });
   }).catch(err => {
     console.error('Hockey stats ticker failed to load (non-fatal)', err);
     wrapEl.style.display = 'none';

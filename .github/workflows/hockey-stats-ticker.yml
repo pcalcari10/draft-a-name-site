@@ -29,8 +29,11 @@ jobs:
         with:
           node-version: '20'
 
-      - name: Build hockey stats ticker
+      - name: Build hockey stats ticker (season leaders)
         run: node scripts/build-stats-ticker-hockey.js
+
+      - name: Build hockey stats ticker (this week, fantasy Monday-start)
+        run: node scripts/build-weekly-ticker-hockey.js
 
       - name: Commit and push if stats_ticker_hockey.json changed
         run: |
