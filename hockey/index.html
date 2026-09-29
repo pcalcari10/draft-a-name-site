@@ -520,6 +520,8 @@
     * { transition: none !important; }
   }
 </style>
+<script src="https://www.gstatic.com/firebasejs/10.13.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.13.0/firebase-firestore-compat.js"></script>
 </head>
 <body>
 <nav class="sport-nav">
@@ -607,6 +609,13 @@
         <span class="hint" id="hint">Add at least one player to get started</span>
       </div>
     </div>
+  </section>
+
+  <section class="popular-section" id="popularSection" style="display:none;">
+    <div class="popular-head">
+      <h2>🏆 Top 10 Most Popular</h2>
+    </div>
+    <div id="popularList" class="popular-list"></div>
   </section>
 
   <section class="results" id="resultsSection" style="display:none;">
@@ -1061,7 +1070,7 @@ async function renderAllNames(){
     <details class="entity-names">
       <summary>${icon}${label}<span class="count">${names.length} name${names.length !== 1 ? 's' : ''}</span></summary>
       <ul>
-        ${names.map(n => `<li><span>${n}</span><span style="display:flex;align-items:center;gap:6px;"><button class="copy-name" data-name="${escapeHtml(n)}" aria-label="Copy ${escapeHtml(n)}">⧉</button></span></li>`).join('')}
+        ${names.map(n => `<li><span>${n}</span><span style="display:flex;align-items:center;gap:6px;">${likeButtonHtml(e.id, n, label, true)}<button class="copy-name" data-name="${escapeHtml(n)}" aria-label="Copy ${escapeHtml(n)}">⧉</button></span></li>`).join('')}
       </ul>
     </details>`;
   }).join('');
@@ -1076,6 +1085,7 @@ async function renderAllNames(){
       celebrateCopy(btn.dataset.name);
     });
   });
+  wireLikeButtons(allNamesBox);
 }
 
 function shuffle(arr){
@@ -1087,17 +1097,207 @@ function shuffle(arr){
   return a;
 }
 
-// Uniform random pick without replacement. Football's version of this
-// weights by like count via a Firestore-backed LIKES_MAP, but hockey
-// doesn't have a likes system yet, so every name just has an equal chance
-// for now \u2014 this can be upgraded the same way football's was once a
-// popularity signal exists here too.
-function weightedPickBy(items, getText, n){
+// ---------- Likes / popularity (Firebase Firestore) ----------
+// Uses its own project collection (likes_hockey), fully separate from
+// football's "likes" collection, and its own localStorage key for which
+// puns this browser has liked, so the two sports never share state.
+const firebaseConfig = {
+  apiKey: "AIzaSyBrKEhoELjV_LBNYpqJgy_prsS9OPNjp5E",
+  authDomain: "draft-a-name.firebaseapp.com",
+  projectId: "draft-a-name",
+  storageBucket: "draft-a-name.firebasestorage.app",
+  messagingSenderId: "32475030057",
+  appId: "1:32475030057:web:8a1d4ec6e4725ae08c3238"
+};
+firebase.initializeApp(firebaseConfig);
+const likesDb = firebase.firestore();
+const LIKES_COLLECTION = 'likes_hockey';
+
+function hashKey(str){
+  let h = 5381;
+  for(let i = 0; i < str.length; i++){
+    h = ((h << 5) + h + str.charCodeAt(i)) >>> 0;
+  }
+  return 'l' + h.toString(36);
+}
+// Keyed by pun text alone, so the same joke always aggregates the same vote
+// count no matter which player/team surface it's liked from.
+function likeIdFor(punText){
+  return hashKey(punText);
+}
+
+// A local cache of like counts, used to bias which puns get picked when
+// generating results — not just to display counts.
+let LIKES_MAP = {};
+async function loadLikesMap(){
+  try {
+    const snap = await likesDb.collection(LIKES_COLLECTION).orderBy('count', 'desc').limit(500).get();
+    snap.forEach(doc => { LIKES_MAP[doc.id] = doc.data().count || 0; });
+  } catch(err){ console.error('loadLikesMap failed', err); }
+}
+
+// Weighted random pick without replacement: every name has a baseline weight
+// of 1 (so everything still has a chance), plus its like count, so more
+// popular puns come up more often without making results fully predictable.
+function weightedPickBy(items, getText, n, weightFn){
   if(!items || items.length === 0) return [];
-  return shuffle(items).slice(0, n);
+  const weigh = weightFn || (count => 1 + count);
+  const pool = items.map(item => ({ item, weight: weigh(LIKES_MAP[likeIdFor(getText(item))] || 0) }));
+  const picked = [];
+  for(let i = 0; i < n && pool.length > 0; i++){
+    const totalWeight = pool.reduce((sum, w) => sum + w.weight, 0);
+    let r = Math.random() * totalWeight;
+    let idx = 0;
+    for(; idx < pool.length - 1; idx++){
+      r -= pool[idx].weight;
+      if(r <= 0) break;
+    }
+    picked.push(pool[idx].item);
+    pool.splice(idx, 1);
+  }
+  return picked;
 }
 function weightedPick(names, n){
-  return weightedPickBy(names, x => x, n);
+  return weightedPickBy(names, n => n, n);
+}
+
+function getLikedSet(){
+  try {
+    return new Set(JSON.parse(localStorage.getItem('dan_liked_hockey') || '[]'));
+  } catch(e){ return new Set(); }
+}
+function saveLikedSet(set){
+  try { localStorage.setItem('dan_liked_hockey', JSON.stringify([...set])); } catch(e){}
+}
+
+function likeButtonHtml(entityId, punText, entityLabel, inline){
+  const likeId = likeIdFor(punText);
+  const liked = getLikedSet().has(likeId);
+  const cls = inline ? 'like-inline' : 'like-btn';
+  return `<button class="${cls}${liked ? ' liked' : ''}" data-like-id="${likeId}"
+      data-pun="${escapeHtml(punText)}" data-entity-id="${escapeHtml(entityId)}" data-entity-label="${escapeHtml(entityLabel)}"
+      ${liked ? 'aria-pressed="true"' : ''}>
+      <span class="heart">${liked ? '❤️' : '♡'}</span><span class="like-count">${liked ? '' : '·'}</span>
+    </button>`;
+}
+
+async function batchGetCounts(likeIds){
+  const counts = {};
+  const unique = [...new Set(likeIds)];
+  for(let i = 0; i < unique.length; i += 10){
+    const chunk = unique.slice(i, i + 10);
+    if(chunk.length === 0) continue;
+    try {
+      const snap = await likesDb.collection(LIKES_COLLECTION)
+        .where(firebase.firestore.FieldPath.documentId(), 'in', chunk)
+        .get();
+      snap.forEach(doc => { counts[doc.id] = doc.data().count || 0; });
+    } catch(err){ console.error('batchGetCounts failed', err); }
+  }
+  return counts;
+}
+
+async function wireLikeButtons(container){
+  const buttons = [...container.querySelectorAll('.like-btn, .like-inline')];
+  if(buttons.length === 0) return;
+  const ids = buttons.map(b => b.dataset.likeId);
+  const counts = await batchGetCounts(ids);
+  buttons.forEach(btn => {
+    const c = counts[btn.dataset.likeId] || 0;
+    const span = btn.querySelector('.like-count');
+    if(span) span.textContent = c > 0 ? c : (btn.classList.contains('liked') ? '' : '·');
+  });
+  buttons.forEach(btn => {
+    btn.onclick = () => handleLikeClick(btn);
+  });
+}
+
+async function handleLikeClick(btn){
+  const likedSet = getLikedSet();
+  const likeId = btn.dataset.likeId;
+  const isLiked = likedSet.has(likeId);
+  btn.classList.add('loading');
+  const ref = likesDb.collection(LIKES_COLLECTION).doc(likeId);
+  try {
+    if(isLiked){
+      const snap = await ref.get();
+      const current = snap.exists ? (snap.data().count || 0) : 0;
+      if(current > 0){
+        await ref.update({ count: firebase.firestore.FieldValue.increment(-1) });
+      }
+      likedSet.delete(likeId);
+      saveLikedSet(likedSet);
+      const fresh = await ref.get();
+      setLikedUI(btn, fresh.exists ? (fresh.data().count || 0) : 0, false);
+    } else {
+      const snap = await ref.get();
+      if(snap.exists){
+        await ref.update({ count: firebase.firestore.FieldValue.increment(1) });
+        const fresh = await ref.get();
+        setLikedUI(btn, fresh.data().count || 1, true);
+      } else {
+        await ref.set({
+          name: btn.dataset.pun,
+          entityId: btn.dataset.entityId,
+          entityLabel: btn.dataset.entityLabel,
+          count: 1
+        });
+        setLikedUI(btn, 1, true);
+      }
+      likedSet.add(likeId);
+      saveLikedSet(likedSet);
+    }
+  } catch(err){
+    console.error('Like toggle failed', err);
+  }
+  btn.classList.remove('loading');
+}
+
+function setLikedUI(btn, count, liked){
+  btn.classList.toggle('liked', liked);
+  btn.querySelector('.heart').textContent = liked ? '❤️' : '♡';
+  btn.querySelector('.like-count').textContent = count > 0 ? count : (liked ? '' : '·');
+}
+
+async function loadTopPopular(){
+  const sectionEl = document.getElementById('popularSection');
+  const listEl = document.getElementById('popularList');
+  try {
+    const snap = await likesDb.collection(LIKES_COLLECTION).orderBy('count', 'desc').limit(10).get();
+    const docs = [];
+    snap.forEach(d => docs.push({ id: d.id, ...d.data() }));
+
+    if(docs.length === 0){
+      sectionEl.style.display = 'none';
+      return;
+    }
+
+    sectionEl.style.display = 'block';
+    listEl.innerHTML = docs.map((d, i) => `
+      <div class="popular-row">
+        <span class="popular-rank">${i + 1}</span>
+        <div class="popular-body">
+          <div class="popular-name">${d.name}</div>
+          <div class="popular-meta">${d.count} like${d.count !== 1 ? 's' : ''} \u00b7 ${d.entityLabel || ''}</div>
+        </div>
+        <button class="popular-copy" data-text="${escapeHtml(d.name)}" aria-label="Copy name">⧉</button>
+        ${likeButtonHtml(d.entityId || 'unknown', d.name, d.entityLabel || '', true)}
+      </div>
+    `).join('');
+    wireLikeButtons(listEl);
+    listEl.querySelectorAll('.popular-copy').forEach(btn => {
+      btn.addEventListener('click', () => {
+        navigator.clipboard?.writeText(btn.dataset.text).catch(() => {});
+        btn.classList.add('copied');
+        btn.textContent = '✓';
+        setTimeout(() => { btn.classList.remove('copied'); btn.textContent = '⧉'; }, 1200);
+        celebrateCopy(btn.dataset.text);
+      });
+    });
+  } catch(err){
+    console.error('loadTopPopular failed', err);
+    sectionEl.style.display = 'none';
+  }
 }
 
 const TOTAL_RESULTS_CAP = 9;
@@ -1218,6 +1418,7 @@ function renderResultsList(results){
         <span class="tag">${r.type === 'solo' ? 'Player pun' : r.type === 'combo' ? 'Roster combo' : r.type === 'team' ? 'Team pun' : 'Wildcard'}</span>
         <span>${r.meta}</span>
       </div>
+      <div class="like-row">${likeButtonHtml('result_' + r.type, r.name, r.meta, false)}</div>
     </div>
   `).join('');
   resultCount.textContent = `${lastResults.length} names`;
@@ -1233,6 +1434,7 @@ function renderResultsList(results){
       celebrateCopy(text);
     });
   });
+  wireLikeButtons(resultsGrid);
 
   resultsSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
 }
@@ -1323,6 +1525,9 @@ Promise.all([
   searchInput.placeholder = 'Try \u201cMcDavid,\u201d \u201cOvechkin,\u201d or \u201cBruins\u201d\u2026';
   generateBtn.disabled = false;
   renderChips();
+
+  loadLikesMap();
+  loadTopPopular();
 }).catch(err => {
   console.error('Failed to load player database', err);
   searchInput.placeholder = 'Failed to load \u2014 try refreshing the page';
