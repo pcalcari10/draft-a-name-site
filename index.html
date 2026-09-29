@@ -1058,7 +1058,7 @@ function celebrateCopy(teamName){
 
   // A little burst of confetti right as the football "arrives," near where
   // it grows largest before fading out.
-  setTimeout(() => spawnLandingBurst(window.innerWidth * 0.57, window.innerHeight * 0.58), 1150);
+  setTimeout(() => celebrateFireworksShow(), 1150);
 
   const toast = document.createElement('div');
   toast.className = 'celebration-toast';
@@ -1083,13 +1083,13 @@ function spawnLandingBurst(x, y){
   setTimeout(() => flash.remove(), 550);
 
   const pieces = ['🎉', '✨', '🏈', '⭐', '🎊', '🏆'];
-  const count = 32;
+  const count = 60;
   for(let i = 0; i < count; i++){
     const piece = document.createElement('div');
     piece.className = 'landing-burst';
     piece.textContent = pieces[Math.floor(Math.random() * pieces.length)];
     const angle = (Math.PI * 2 * i) / count + (Math.random() * 0.3);
-    const distance = 60 + Math.random() * 90;
+    const distance = 120 + Math.random() * 220;
     const dx = Math.cos(angle) * distance;
     const dy = Math.sin(angle) * distance;
     piece.style.left = x + 'px';
@@ -1099,11 +1099,28 @@ function spawnLandingBurst(x, y){
     // After the initial burst, let gravity pull each piece down and a
     // little further outward, like real firework sparks falling.
     piece.style.setProperty('--dx-fall', (dx * 1.15) + 'px');
-    piece.style.setProperty('--dy-fall', (dy + 40 + Math.random() * 30) + 'px');
+    piece.style.setProperty('--dy-fall', (dy + 60 + Math.random() * 50) + 'px');
     piece.style.setProperty('--spin', (Math.random() > 0.5 ? 1 : -1) * (180 + Math.random() * 360) + 'deg');
     document.body.appendChild(piece);
     setTimeout(() => piece.remove(), 1150);
   }
+}
+
+// A full fireworks show rather than one burst: the main one where the ball
+// "lands," plus a couple more at random spots around the page shortly after,
+// so the celebration actually fills the screen instead of staying confined
+// to one small area.
+function celebrateFireworksShow(){
+  spawnLandingBurst(window.innerWidth * 0.57, window.innerHeight * 0.58);
+  setTimeout(() => {
+    spawnLandingBurst(window.innerWidth * (0.12 + Math.random() * 0.2), window.innerHeight * (0.2 + Math.random() * 0.25));
+  }, 180);
+  setTimeout(() => {
+    spawnLandingBurst(window.innerWidth * (0.68 + Math.random() * 0.22), window.innerHeight * (0.15 + Math.random() * 0.3));
+  }, 340);
+  setTimeout(() => {
+    spawnLandingBurst(window.innerWidth * (0.2 + Math.random() * 0.6), window.innerHeight * (0.55 + Math.random() * 0.3));
+  }, 520);
 }
 
 function escapeHtml(s){
