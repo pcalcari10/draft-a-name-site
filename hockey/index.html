@@ -1053,20 +1053,8 @@ async function renderAllNames(){
 
   const entityNames = toRender.map(e => e.kind === 'team' ? getTeamNames(e) : e.names);
 
-  // Fetch every displayed pun's like count once, up front, so player lists can be sorted by popularity before rendering
-  const allLikeIds = [];
-  entityNames.forEach(list => list.forEach(n => allLikeIds.push(likeIdFor(n))));
-  const counts = await batchGetCounts(allLikeIds);
-
   allNamesBox.innerHTML = toRender.map((e, idx) => {
-    let names = entityNames[idx];
-    if(e.kind === 'player'){
-      // Most-liked first; ties keep original order
-      names = names
-        .map((n, i) => ({ n, i, c: counts[likeIdFor(n)] || 0 }))
-        .sort((a, b) => b.c - a.c || a.i - b.i)
-        .map(x => x.n);
-    }
+    const names = entityNames[idx];
     const icon = e.kind === 'team' ? '🛡 ' : e.kind === 'genericAll' ? '🗂 ' : e.kind === 'genericMovie' ? '🎬 ' : e.kind === 'genericMusic' ? '🎵 ' : e.kind === 'genericTv' ? '📺 ' : e.kind === 'wildcard' ? '✨ ' : (DEFENSIVE_POS.has(e.pos) ? '🛡️ ' : '');
     const label = fullName(e);
     return `
@@ -1097,6 +1085,19 @@ function shuffle(arr){
     [a[i], a[j]] = [a[j], a[i]];
   }
   return a;
+}
+
+// Uniform random pick without replacement. Football's version of this
+// weights by like count via a Firestore-backed LIKES_MAP, but hockey
+// doesn't have a likes system yet, so every name just has an equal chance
+// for now \u2014 this can be upgraded the same way football's was once a
+// popularity signal exists here too.
+function weightedPickBy(items, getText, n){
+  if(!items || items.length === 0) return [];
+  return shuffle(items).slice(0, n);
+}
+function weightedPick(names, n){
+  return weightedPickBy(names, x => x, n);
 }
 
 const TOTAL_RESULTS_CAP = 9;
