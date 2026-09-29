@@ -15646,5 +15646,85 @@
     ],
     "active": true,
     "tier": "curated"
+  },
+  {
+    "id": "maxpacioretty_mtl",
+    "first": "Max",
+    "last": "Pacioretty",
+    "team": "MTL",
+    "pos": "LW",
+    "names": [
+      "Max I don't think you're ready for Pacioretty"
+    ],
+    "active": true,
+    "tier": "curated"
+  },
+  {
+    "id": "mariolemieux_pit",
+    "first": "Mario",
+    "last": "Lemieux",
+    "team": "PIT",
+    "pos": "C",
+    "names": [
+      "Order #66 Mario Lemieux"
+    ],
+    "active": true,
+    "tier": "curated",
+    "taggedNames": {
+      "movie": [
+        "Order #66 Mario Lemieux"
+      ]
+    }
+  },
+  {
+    "id": "jordintootoo_nsh",
+    "first": "Jordin",
+    "last": "Tootoo",
+    "team": "NSH",
+    "pos": "RW",
+    "names": [
+      "R2-DTootoo"
+    ],
+    "active": true,
+    "tier": "curated",
+    "taggedNames": {
+      "movie": [
+        "R2-DTootoo"
+      ]
+    }
+  },
+  {
+    "id": "alexandersteen_stl",
+    "first": "Alexander",
+    "last": "Steen",
+    "team": "STL",
+    "pos": "LW",
+    "names": [
+      "Alex Emperor Palpa-Steen"
+    ],
+    "active": true,
+    "tier": "curated",
+    "taggedNames": {
+      "movie": [
+        "Alex Emperor Palpa-Steen"
+      ]
+    }
+  },
+  {
+    "id": "sandisozolinsh_col",
+    "first": "Sandis",
+    "last": "Ozolinsh",
+    "team": "COL",
+    "pos": "D",
+    "names": [
+      "I don't like Sand-is Ozolinsh"
+    ],
+    "active": true,
+    "tier": "curated",
+    "taggedNames": {
+      "movie": [
+        "I don't like Sand-is Ozolinsh"
+      ]
+    }
   }
 ]
