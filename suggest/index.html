@@ -151,6 +151,13 @@
   }
 
   .picker { background: var(--navy-800); border: 1px solid var(--line); border-radius: 14px; padding: 20px; margin-bottom: 50px; }
+  .sport-toggle-btn {
+    font-family: var(--font-body); font-size: 13.5px; font-weight: 600; color: var(--chalk-300);
+    background: var(--navy-900); border: 1px solid var(--line); border-radius: 10px;
+    padding: 9px 16px; cursor: pointer; transition: background .15s ease, color .15s ease, border-color .15s ease;
+  }
+  .sport-toggle-btn:hover { background: var(--navy-700); color: var(--chalk-100); }
+  .sport-toggle-btn.active { background: var(--gold-400); color: var(--navy-950); border-color: var(--gold-400); }
   .suggest-row { position: relative; display: flex; gap: 8px; margin-bottom: 10px; }
   .suggest-row input {
     flex: 1; min-width: 160px; background: var(--navy-900); border: 1px solid var(--line); color: var(--chalk-100);
@@ -291,6 +298,10 @@
     <p class="sub">Think of a pun we're missing for a player or team? Send it our way — it'll go through a quick review before it shows up for everyone.</p>
 
     <div class="picker">
+      <div class="sport-toggle" id="suggestSportToggle" style="display:flex; gap:8px; margin-bottom:16px;">
+        <button type="button" class="sport-toggle-btn active" data-sport="football">🏈 Football</button>
+        <button type="button" class="sport-toggle-btn" data-sport="hockey">🏒 Hockey</button>
+      </div>
       <div class="suggest-row">
         <input id="suggestSearch" type="text" placeholder="Search for a player or team…" autocomplete="off">
         <div id="suggestSuggestions" class="suggestions"></div>
@@ -339,7 +350,10 @@
 </div>
 
 <script>
-const ENTITIES = [];
+const FOOTBALL_ENTITIES = [];
+const HOCKEY_ENTITIES = [];
+let currentSport = 'football';
+function currentEntities(){ return currentSport === 'hockey' ? HOCKEY_ENTITIES : FOOTBALL_ENTITIES; }
 
 function fullName(e){
   if(e.kind === 'team') return `${e.city} ${e.nickname}`;
@@ -369,8 +383,8 @@ async function mergeExtraPlayers(){
     const snap = await db.collection('extra_players').get();
     snap.forEach(doc => {
       const d = doc.data();
-      if(ENTITIES.find(e => e.id === doc.id)) return;
-      ENTITIES.push({ id: doc.id, kind: 'player', first: d.first, last: d.last, team: d.team, pos: d.pos || '', names: d.names || [] });
+      if(FOOTBALL_ENTITIES.find(e => e.id === doc.id)) return;
+      FOOTBALL_ENTITIES.push({ id: doc.id, kind: 'player', first: d.first, last: d.last, team: d.team, pos: d.pos || '', names: d.names || [] });
     });
   } catch(err){ console.error('mergeExtraPlayers failed', err); }
 }
@@ -380,7 +394,7 @@ async function mergeSubmittedNames(){
     const snap = await db.collection('submitted_names').where('status', '==', 'approved').get();
     snap.forEach(doc => {
       const d = doc.data();
-      const entity = ENTITIES.find(e => e.id === d.playerId);
+      const entity = FOOTBALL_ENTITIES.find(e => e.id === d.playerId);
       if(!entity) return;
       if(!entity.names) entity.names = [];
       if(!entity.names.includes(d.name)) entity.names.push(d.name);
@@ -432,7 +446,7 @@ const suggestStatusEl = document.getElementById('suggestStatus');
 function renderSuggestSuggestions(query){
   const q = query.trim().toLowerCase();
   if(!q){ suggestSuggestionsBox.classList.remove('open'); suggestSuggestionsBox.innerHTML = ''; return; }
-  const matches = ENTITIES.filter(e => fullName(e).toLowerCase().includes(q)).slice(0, 8);
+  const matches = currentEntities().filter(e => fullName(e).toLowerCase().includes(q)).slice(0, 8);
   if(matches.length === 0){
     suggestSuggestionsBox.innerHTML = `<div class="suggestion"><span class="pmeta">Nothing matched — try a different spelling</span></div>`;
     suggestSuggestionsBox.classList.add('open');
@@ -447,7 +461,7 @@ function renderSuggestSuggestions(query){
 }
 
 function selectSuggestEntity(id){
-  const entity = ENTITIES.find(en => en.id === id);
+  const entity = currentEntities().find(en => en.id === id);
   if(!entity) return;
   suggestSelected = entity;
   suggestSearchInput.value = '';
@@ -497,13 +511,14 @@ suggestSubmitBtn.addEventListener('click', async () => {
   }
 
   const flaggedUnrelated = !suggestReferencesEntity(suggestSelected, name);
+  const targetCollection = currentSport === 'hockey' ? 'submitted_names_hockey' : 'submitted_names';
 
   suggestSubmitBtn.disabled = true;
   suggestStatusEl.className = 'suggest-status';
   suggestStatusEl.textContent = 'Submitting…';
 
   try {
-    await db.collection('submitted_names').add({
+    await db.collection(targetCollection).add({
       playerId: suggestSelected.id,
       playerName: fullName(suggestSelected),
       name,
@@ -522,13 +537,51 @@ suggestSubmitBtn.addEventListener('click', async () => {
   suggestSubmitBtn.disabled = false;
 });
 
+// ---------- Sport toggle ----------
+document.querySelectorAll('.sport-toggle-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const sport = btn.dataset.sport;
+    if(sport === currentSport) return;
+    currentSport = sport;
+    document.querySelectorAll('.sport-toggle-btn').forEach(b => b.classList.toggle('active', b.dataset.sport === sport));
+
+    // Reset the picker entirely — a player picked under one sport doesn't
+    // carry over to the other, since they're completely separate databases.
+    suggestSelected = null;
+    suggestSelectedBox.style.display = 'none';
+    suggestSearchInput.value = '';
+    suggestSuggestionsBox.classList.remove('open');
+    suggestSuggestionsBox.innerHTML = '';
+    suggestNameInput.value = '';
+    suggestNameInput.disabled = true;
+    suggestSubmitBtn.disabled = true;
+    suggestStatusEl.textContent = '';
+    suggestSearchInput.placeholder = sport === 'hockey' ? 'Search for an NHL player or team…' : 'Search for an NFL player or team…';
+    suggestSearchInput.focus();
+  });
+});
+
 // ---------- Boot ----------
 Promise.all([
   loadJson('../players.json'),
-  loadJson('../teams.json')
-]).then(([playersData, teamsData]) => {
-  playersData.filter(p => p.active !== false).forEach(p => ENTITIES.push({ ...p, kind: 'player' }));
-  teamsData.forEach(t => ENTITIES.push({
+  loadJson('../teams.json'),
+  loadJson('../players_hockey.json'),
+  loadJson('../teams_hockey.json')
+]).then(([playersData, teamsData, hockeyPlayersData, hockeyTeamsData]) => {
+  playersData.filter(p => p.active !== false).forEach(p => FOOTBALL_ENTITIES.push({ ...p, kind: 'player' }));
+  teamsData.forEach(t => FOOTBALL_ENTITIES.push({
+    id: t.abbr.toLowerCase() + '_team',
+    kind: 'team',
+    city: t.city,
+    nickname: t.nickname,
+    abbr: t.abbr,
+    team: t.abbr,
+    pos: 'DST',
+    names: t.names
+  }));
+
+  hockeyPlayersData.filter(p => p.active !== false).forEach(p => HOCKEY_ENTITIES.push({ ...p, kind: 'player' }));
+  hockeyTeamsData.forEach(t => HOCKEY_ENTITIES.push({
     id: t.abbr.toLowerCase() + '_team',
     kind: 'team',
     city: t.city,
@@ -540,7 +593,7 @@ Promise.all([
   }));
 
   suggestSearchInput.disabled = false;
-  suggestSearchInput.placeholder = 'Search for a player or team…';
+  suggestSearchInput.placeholder = 'Search for an NFL player or team…';
 
   mergeExtraPlayers();
   mergeSubmittedNames();
