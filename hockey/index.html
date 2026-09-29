@@ -973,14 +973,7 @@ function renderChips(){
 }
 
 
-// Cycles the puck's visible width to fake a horizontal spin (like a coin
-// spinning on a table) \u2014 CSS transforms alone can't pull this off since
-// scaleX would also squash the rounded corners/gradient unnaturally, so
-// each frame is redrawn with its own proportions instead.
-function puckFrame(widthFrac){
-  const bodyW = 92 * widthFrac;
-  const x = 50 - bodyW / 2;
-  const rx = Math.min(16, bodyW / 2);
+function puckSvg(){
   return `<svg viewBox="0 0 100 40" width="100" height="40">
     <defs>
       <linearGradient id="puckGrad" x1="0%" y1="0%" x2="0%" y2="100%">
@@ -991,30 +984,19 @@ function puckFrame(widthFrac){
         <stop offset="100%" stop-color="#050505"/>
       </linearGradient>
     </defs>
-    <rect x="${x}" y="4" width="${bodyW}" height="32" rx="${rx}" ry="16" fill="url(#puckGrad)" stroke="#000" stroke-width="1.5"/>
-    <rect x="${x}" y="4" width="${bodyW}" height="8" rx="${Math.min(4, rx)}" fill="#FFFFFF" opacity="0.12"/>
-    <rect x="${x}" y="28" width="${bodyW}" height="6" rx="${Math.min(3, rx)}" fill="#000000" opacity="0.35"/>
+    <rect x="4" y="4" width="92" height="32" rx="16" ry="16" fill="url(#puckGrad)" stroke="#000" stroke-width="1.5"/>
+    <rect x="4" y="4" width="92" height="8" rx="4" fill="#FFFFFF" opacity="0.12"/>
+    <rect x="4" y="28" width="92" height="6" rx="3" fill="#000000" opacity="0.35"/>
   </svg>`;
 }
-
-const PUCK_SPIN_FRAMES = [1, 0.72, 0.4, 0.14, 0.4, 0.72];
 
 function celebrateCopy(teamName){
   const puck = document.createElement('div');
   puck.className = 'football-fly';
-  puck.innerHTML = puckFrame(PUCK_SPIN_FRAMES[0]);
+  puck.innerHTML = puckSvg();
   document.body.appendChild(puck);
 
-  // Cycle through the pre-drawn width frames rapidly to simulate the puck
-  // spinning horizontally, same trick football's ball spin uses.
-  let frameIndex = 0;
-  const spinInterval = setInterval(() => {
-    frameIndex = (frameIndex + 1) % PUCK_SPIN_FRAMES.length;
-    puck.innerHTML = puckFrame(PUCK_SPIN_FRAMES[frameIndex]);
-  }, 70);
-
   setTimeout(() => {
-    clearInterval(spinInterval);
     puck.remove();
   }, 1400);
 
