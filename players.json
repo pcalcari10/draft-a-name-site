@@ -600,7 +600,10 @@
       "It's Allen The Hips",
       "Allen A Day's Work",
       "Josh Allen Wrench",
-      "Josh Allen And His Bills"
+      "Josh Allen And His Bills",
+      "Joshin Around",
+      "Josh Darn It",
+      "Josh.0"
     ],
     "active": true,
     "tier": "curated"
@@ -682,10 +685,18 @@
       "Lamarvelous Victory",
       "In Lamar We Trust",
       "Dirty lamartini",
-      "Lamar You Serious"
+      "Lamar You Serious",
+      "Lamar The Merrier",
+      "Lamar You Not Entertained?",
+      "I'm Sorry Miss Jackson"
     ],
     "active": true,
-    "tier": "curated"
+    "tier": "curated",
+    "taggedNames": {
+      "music": [
+        "I'm Sorry Miss Jackson"
+      ]
+    }
   },
   {
     "id": "nicocollins_hou",
@@ -837,10 +848,17 @@
       "You Hurts My Feelings",
       "Hurts Donut",
       "It Hurts when I PPR",
-      "Jalen Hurts So Good"
+      "Jalen Hurts So Good",
+      "Hurts Locker",
+      "It Hurts So Good"
     ],
     "active": true,
-    "tier": "curated"
+    "tier": "curated",
+    "taggedNames": {
+      "movie": [
+        "Hurts Locker"
+      ]
+    }
   },
   {
     "id": "camskattebo_nyg",
@@ -1191,7 +1209,9 @@
       "Not Afraid of Burrowhead",
       "Burrow Please II",
       "Forgot About Joe",
-      "Burrow My Sorrows"
+      "Burrow My Sorrows",
+      "Beg, Burrow, Steal",
+      "Super Smash Burrows"
     ],
     "active": true,
     "tier": "curated"
@@ -1745,10 +1765,17 @@
       "Game of Mahomes",
       "Post Mahomes",
       "Take Mahomes Country Road",
-      "Mahomes Alone"
+      "Mahomes Alone",
+      "Super Mahomes Bros.",
+      "Country Roads, Take Mahomes"
     ],
     "active": true,
-    "tier": "curated"
+    "tier": "curated",
+    "taggedNames": {
+      "music": [
+        "Country Roads, Take Mahomes"
+      ]
+    }
   },
   {
     "id": "quentinjohnston_lac",
@@ -1930,7 +1957,9 @@
       "Goff Balls",
       "The Goff Goff 3000",
       "Goff The Rails",
-      "Turn Your Head And Goff"
+      "Turn Your Head And Goff",
+      "G'Off My Lawn",
+      "Turn Your Head & Goff"
     ],
     "active": true,
     "tier": "curated"
@@ -2636,10 +2665,20 @@
       "The Fast and the Murrayous",
       "Kyler's Contenders",
       "Murray Time",
-      "Kyler Instinct"
+      "Kyler Instinct",
+      "Sweep the Leg",
+      "Don't Murray, Be Happy"
     ],
     "active": true,
-    "tier": "curated"
+    "tier": "curated",
+    "taggedNames": {
+      "movie": [
+        "Sweep the Leg"
+      ],
+      "music": [
+        "Don't Murray, Be Happy"
+      ]
+    }
   },
   {
     "id": "dezhaunstribling_sf",
@@ -2934,10 +2973,16 @@
       "In Johnson We Trust",
       "Johnson'd Up and Ready",
       "Straight Outta Johnson",
-      "Emmett Johnson and the Fantasy Machine"
+      "Emmett Johnson and the Fantasy Machine",
+      "Great Scott, It's Emmett!"
     ],
     "active": true,
-    "tier": "template"
+    "tier": "curated",
+    "taggedNames": {
+      "movie": [
+        "Great Scott, It's Emmett!"
+      ]
+    }
   },
   {
     "id": "danieljones_ind",
@@ -3623,10 +3668,11 @@
       "Gunnar Vibes Only",
       "Helm Happens",
       "The Helm Show",
-      "Gunnar & Chill"
+      "Gunnar & Chill",
+      "No. 1 Gunnar"
     ],
     "active": true,
-    "tier": "template"
+    "tier": "curated"
   },
   {
     "id": "evanmcpherson_cin",
@@ -5166,7 +5212,8 @@
       "Tua Legit to Quit",
       "Tua Lipa",
       "Tua Steppin'",
-      "Losing Tua Girl"
+      "Losing Tua Girl",
+      "Just The Tua Of Us"
     ],
     "active": true,
     "tier": "curated"
@@ -6196,10 +6243,11 @@
       "J.J.'s Excellent Adventure",
       "McCarthy of Fame",
       "In McCarthy We Trust",
-      "McCarthy's Fantasy Fortress"
+      "McCarthy's Fantasy Fortress",
+      "J.J. McCarthyism"
     ],
     "active": true,
-    "tier": "template"
+    "tier": "curated"
   },
   {
     "id": "odellbeckhamjr_nyg",
@@ -6639,10 +6687,18 @@
       "The Richardson Revolution",
       "AR's Passing Academy",
       "AR's Revenge",
-      "Richardson's Rebellion"
+      "Richardson's Rebellion",
+      "99 Problems But A-Rich Ain't One",
+      "Get A-Rich Or Die Trying"
     ],
     "active": true,
-    "tier": "curated"
+    "tier": "curated",
+    "taggedNames": {
+      "music": [
+        "99 Problems But A-Rich Ain't One",
+        "Get A-Rich Or Die Trying"
+      ]
+    }
   },
   {
     "id": "spencerrattler_no",
