@@ -1127,6 +1127,19 @@ firebase.initializeApp(firebaseConfig);
 const likesDb = firebase.firestore();
 const LIKES_COLLECTION = 'likes_hockey';
 
+async function mergeSubmittedNames(){
+  try {
+    const snap = await likesDb.collection('submitted_names_hockey').where('status', '==', 'approved').get();
+    snap.forEach(doc => {
+      const d = doc.data();
+      const entity = PLAYERS.find(p => p.id === d.playerId) || TEAMS.find(t => t.abbr.toLowerCase() + '_team' === d.playerId);
+      if(!entity) return;
+      if(!entity.names) entity.names = [];
+      if(!entity.names.includes(d.name)) entity.names.push(d.name);
+    });
+  } catch(err){ console.error('mergeSubmittedNames (hockey) failed', err); }
+}
+
 function hashKey(str){
   let h = 5381;
   for(let i = 0; i < str.length; i++){
@@ -1546,6 +1559,7 @@ Promise.all([
 
   loadLikesMap();
   loadTopPopular();
+  mergeSubmittedNames();
 }).catch(err => {
   console.error('Failed to load player database', err);
   searchInput.placeholder = 'Failed to load \u2014 try refreshing the page';

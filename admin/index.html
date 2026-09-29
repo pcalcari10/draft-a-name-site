@@ -263,7 +263,7 @@
   <div class="tab-panel" id="tab-review">
   <div class="progress-panel">
     <div class="team-name" style="font-size:16px;">👀 Review public submissions</div>
-    <div class="progress-label" style="margin-top:4px;">Names visitors have suggested from the live site. Approving makes it show up immediately for everyone (via the same live merge the site already does); rejecting just discards it.</div>
+    <div class="progress-label" style="margin-top:4px;">Names visitors have suggested from the live site, for football or hockey. Approving makes it show up immediately for everyone (via the same live merge each site already does); rejecting just discards it.</div>
     <div id="reviewList" style="margin-top:16px;"></div>
   </div>
   </div>
@@ -891,9 +891,14 @@ async function loadReviewQueue(){
   const listEl = document.getElementById('reviewList');
   const badge = document.getElementById('reviewCountBadge');
   try {
-    const snap = await db.collection('submitted_names').where('status', '==', 'pending').get();
+    const [footballSnap, hockeySnap] = await Promise.all([
+      db.collection('submitted_names').where('status', '==', 'pending').get(),
+      db.collection('submitted_names_hockey').where('status', '==', 'pending').get(),
+    ]);
     const docs = [];
-    snap.forEach(doc => docs.push({ id: doc.id, ...doc.data() }));
+    footballSnap.forEach(doc => docs.push({ id: doc.id, sport: 'football', ...doc.data() }));
+    hockeySnap.forEach(doc => docs.push({ id: doc.id, sport: 'hockey', ...doc.data() }));
+    docs.sort((a, b) => (a.submittedAt || 0) - (b.submittedAt || 0));
 
     if(docs.length === 0){
       listEl.innerHTML = `<div class="empty">Nothing waiting on review right now.</div>`;
@@ -910,13 +915,13 @@ async function loadReviewQueue(){
         <div style="padding:12px 14px;">
           <div style="display:flex; justify-content:space-between; align-items:flex-start; gap:10px; flex-wrap:wrap;">
             <div>
-              <div style="font-size:14px; font-weight:600;">${escapeHtml(d.playerName)}</div>
+              <div style="font-size:14px; font-weight:600;">${d.sport === 'hockey' ? '\ud83c\udfd2' : '\ud83c\udfc8'} ${escapeHtml(d.playerName)}</div>
               <div style="font-family:var(--mono); font-size:13px; color:var(--amber); margin-top:4px;">"${escapeHtml(d.name)}"</div>
               ${d.flaggedUnrelated ? `<div style="font-size:11.5px; color:var(--dim); margin-top:4px;">\u26a0\ufe0f Doesn't obviously reference the name \u2014 double-check it makes sense</div>` : ''}
             </div>
             <div style="display:flex; gap:6px; flex-shrink:0;">
-              <button class="review-approve" data-id="${d.id}" style="font-family:var(--mono);font-size:12px;font-weight:600;background:var(--green);color:#08210F;border:none;border-radius:6px;padding:7px 12px;cursor:pointer;">Approve</button>
-              <button class="review-reject" data-id="${d.id}" style="font-family:var(--mono);font-size:12px;background:none;border:1px solid var(--line);color:var(--text);border-radius:6px;padding:7px 12px;cursor:pointer;">Reject</button>
+              <button class="review-approve" data-id="${d.id}" data-sport="${d.sport}" style="font-family:var(--mono);font-size:12px;font-weight:600;background:var(--green);color:#08210F;border:none;border-radius:6px;padding:7px 12px;cursor:pointer;">Approve</button>
+              <button class="review-reject" data-id="${d.id}" data-sport="${d.sport}" style="font-family:var(--mono);font-size:12px;background:none;border:1px solid var(--line);color:var(--text);border-radius:6px;padding:7px 12px;cursor:pointer;">Reject</button>
             </div>
           </div>
         </div>
@@ -924,10 +929,10 @@ async function loadReviewQueue(){
     `).join('');
 
     listEl.querySelectorAll('.review-approve').forEach(btn => {
-      btn.addEventListener('click', () => reviewDecision(btn.dataset.id, 'approved'));
+      btn.addEventListener('click', () => reviewDecision(btn.dataset.id, btn.dataset.sport, 'approved'));
     });
     listEl.querySelectorAll('.review-reject').forEach(btn => {
-      btn.addEventListener('click', () => reviewDecision(btn.dataset.id, 'rejected'));
+      btn.addEventListener('click', () => reviewDecision(btn.dataset.id, btn.dataset.sport, 'rejected'));
     });
   } catch(err){
     console.error('loadReviewQueue failed', err);
@@ -935,9 +940,10 @@ async function loadReviewQueue(){
   }
 }
 
-async function reviewDecision(id, status){
+async function reviewDecision(id, sport, status){
+  const collectionName = sport === 'hockey' ? 'submitted_names_hockey' : 'submitted_names';
   try {
-    await db.collection('submitted_names').doc(id).update({ status });
+    await db.collection(collectionName).doc(id).update({ status });
     loadReviewQueue();
   } catch(err){
     console.error('reviewDecision failed', err);
