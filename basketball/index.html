@@ -79,6 +79,12 @@
   header.top { display: flex; align-items: center; justify-content: space-between; padding: 24px 0 8px; }
   .brand { display: flex; align-items: center; gap: 10px; font-family: var(--font-display); font-weight: 700; font-size: 22px; letter-spacing: 0.02em; }
   .brand a { color: var(--chalk-100); text-decoration: none; display: flex; align-items: center; gap: 10px; }
+  .brand-text { display: flex; align-items: center; gap: 6px; }
+  .brand-the {
+    font-family: var(--font-body); font-weight: 800; font-size: 11px; letter-spacing: 0.16em;
+    text-transform: uppercase; color: var(--gold-400);
+  }
+  .brand-name { white-space: nowrap; }
 
   .coming-soon { padding: 90px 0; text-align: center; }
   .coming-soon .icon { font-size: 56px; margin-bottom: 10px; }
@@ -170,7 +176,7 @@
 <div class="wrap">
 
   <header class="top">
-    <div class="brand"><a href="/"><span class="ball">🏈</span>The Fantasy Name HQ</a></div>
+    <div class="brand"><a href="/"><span class="ball">🏈</span><span class="brand-text"><span class="brand-the">The</span><span class="brand-name">Fantasy Name HQ</span></span></a></div>
   </header>
 
   <section class="coming-soon">
@@ -183,7 +189,7 @@
   <footer>
     <div class="footer-grid">
       <div class="footer-col">
-        <div class="footer-brand">🏈 The Fantasy Name HQ</div>
+        <div class="footer-brand">🏈<span class="brand-text"><span class="brand-the">The</span><span class="brand-name">Fantasy Name HQ</span></span></div>
         <p class="footer-tagline">A prototype, not yet drafted into anyone's league.</p>
       </div>
       <div class="footer-col">
