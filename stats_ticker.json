@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-29T02:08:46.092Z",
+  "generatedAt": "2026-09-29T02:25:40.365Z",
   "season": "2026",
   "week": 3,
   "thisWeek": {
@@ -387,6 +387,15 @@
         "pun": "Elementary, My Dear Watson"
       },
       {
+        "id": "kalifraymond_chi",
+        "first": "Kalif",
+        "last": "Raymond",
+        "team": "CHI",
+        "pos": "WR",
+        "pts": 21,
+        "pun": "Livin' on a Raymond"
+      },
+      {
         "id": "teehiggins_cin",
         "first": "Tee",
         "last": "Higgins",
@@ -538,15 +547,6 @@
         "pos": "WR",
         "pts": 15,
         "pun": "The Roman Empire"
-      },
-      {
-        "id": "mackhollins_ne",
-        "first": "Mack",
-        "last": "Hollins",
-        "team": "NE",
-        "pos": "WR",
-        "pts": 14.7,
-        "pun": "Hollins-A-Palooza"
       }
     ],
     "TE": [
@@ -724,6 +724,15 @@
         "pun": "Aubrey'd Up and Ready"
       },
       {
+        "id": "cairosantos_chi",
+        "first": "Cairo",
+        "last": "Santos",
+        "team": "CHI",
+        "pos": "K",
+        "pts": 9,
+        "pun": "Santos of Fame"
+      },
+      {
         "id": "jasonmyers_sea",
         "first": "Jason",
         "last": "Myers",
@@ -740,15 +749,6 @@
         "pos": "K",
         "pts": 9,
         "pun": "Do you like my Cameron Dicker"
-      },
-      {
-        "id": "cairosantos_chi",
-        "first": "Cairo",
-        "last": "Santos",
-        "team": "CHI",
-        "pos": "K",
-        "pts": 8,
-        "pun": "Santos of Fame"
       }
     ]
   },
@@ -1182,6 +1182,15 @@
         "pun": "DeVonta's Inferno"
       },
       {
+        "id": "kalifraymond_chi",
+        "first": "Kalif",
+        "last": "Raymond",
+        "team": "CHI",
+        "pos": "WR",
+        "pts": 46.4,
+        "pun": "Livin' on a Raymond"
+      },
+      {
         "id": "matthewgolden_gb",
         "first": "Matthew",
         "last": "Golden",
@@ -1288,15 +1297,6 @@
         "pos": "WR",
         "pts": 37.7,
         "pun": "7th Evans"
-      },
-      {
-        "id": "laddmcconkey_lac",
-        "first": "Ladd",
-        "last": "McConkey",
-        "team": "LAC",
-        "pos": "WR",
-        "pts": 36.3,
-        "pun": "Ladd-y and the Tramp"
       }
     ],
     "TE": [
@@ -1479,7 +1479,7 @@
         "last": "Santos",
         "team": "CHI",
         "pos": "K",
-        "pts": 24,
+        "pts": 25,
         "pun": "Santos of Fame"
       },
       {
