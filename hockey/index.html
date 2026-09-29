@@ -65,6 +65,11 @@
     --pos-wr: #E85D4E;
     --pos-te: #4F9FD9;
     --pos-k: #B27FE0;
+    --pos-c: #F2B705;
+    --pos-lw: #3E8F63;
+    --pos-rw: #E85D4E;
+    --pos-d: #4F9FD9;
+    --pos-g: #B27FE0;
 
     --font-display: 'Big Shoulders', 'Arial Narrow', sans-serif;
     --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
@@ -147,6 +152,11 @@
   .ticker-card[data-pos="WR"] { --card-accent: var(--pos-wr); }
   .ticker-card[data-pos="TE"] { --card-accent: var(--pos-te); }
   .ticker-card[data-pos="K"]  { --card-accent: var(--pos-k); }
+  .ticker-card[data-pos="C"]  { --card-accent: var(--pos-c); }
+  .ticker-card[data-pos="LW"] { --card-accent: var(--pos-lw); }
+  .ticker-card[data-pos="RW"] { --card-accent: var(--pos-rw); }
+  .ticker-card[data-pos="D"]  { --card-accent: var(--pos-d); }
+  .ticker-card[data-pos="G"]  { --card-accent: var(--pos-g); }
   .ticker-divider {
     flex: 0 0 auto; display: flex; align-items: center; gap: 4px;
     color: var(--chalk-500); font-family: var(--font-body); font-size: 8px; font-weight: 700; letter-spacing: 0.08em;
@@ -531,6 +541,14 @@
 <script src="https://www.gstatic.com/firebasejs/10.13.0/firebase-firestore-compat.js"></script>
 </head>
 <body>
+<div class="ticker-wrap" id="tickerWrap" style="display:none;">
+  <div class="ticker-bar">
+    <span class="ticker-title" id="tickerTitle">Season Leaders</span>
+    <div class="ticker-track-outer">
+      <div class="ticker-track" id="tickerTrack"></div>
+    </div>
+  </div>
+</div>
 <nav class="sport-nav">
   <div class="sport-nav-inner">
     <a href="/" class="sport-tab" id="footballTab">🏈 Fantasy Football</a>
@@ -1572,6 +1590,74 @@ Promise.all([
   console.error('Failed to load player database', err);
   searchInput.placeholder = 'Failed to load \u2014 try refreshing the page';
 });
+
+// ---------- Stats ticker (season leaders only \u2014 no weekly view, since the
+// NHL doesn't have a clean one-game-per-team-per-week structure the way the
+// NFL does; independent of the main app, failures here never block search) ----------
+(function initStatsTicker(){
+  const wrapEl = document.getElementById('tickerWrap');
+  const trackEl = document.getElementById('tickerTrack');
+  const POS_ORDER = ['C', 'LW', 'RW', 'D', 'G'];
+
+  trackEl.addEventListener('click', (e) => {
+    const card = e.target.closest('.ticker-card');
+    if(!card || !card.dataset.id) return;
+    addPlayer(card.dataset.id);
+    searchInput.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  });
+
+  function buildCard(entry, rank){
+    const pun = entry.pun ? `<span class="ticker-pun">"${entry.pun}"</span>` : '';
+    return `
+      <div class="ticker-card" data-pos="${entry.pos}" data-id="${entry.id || ''}" title="Add ${entry.first} ${entry.last} to your roster">
+        <span class="ticker-pos">${entry.pos}${rank}</span>
+        <span class="ticker-name">${entry.first} ${entry.last}</span>
+        <span class="ticker-team">${entry.team}</span>
+        <span class="ticker-pts">${entry.pts}</span>
+        ${pun}
+      </div>`;
+  }
+
+  function buildDivider(pos){
+    return `<div class="ticker-divider">${pos}</div>`;
+  }
+
+  function render(data){
+    const byPos = data.seasonTotals;
+    const groupsHtml = [];
+    POS_ORDER.forEach(pos => {
+      const entries = byPos[pos] || [];
+      if(entries.length === 0) return;
+      const cards = entries.map((e, i) => buildCard(e, i + 1)).join('');
+      groupsHtml.push(buildDivider(pos) + cards);
+    });
+    if(groupsHtml.length === 0){
+      wrapEl.style.display = 'none';
+      return;
+    }
+    wrapEl.style.display = 'block';
+    const cardsHtml = groupsHtml.join('');
+    trackEl.innerHTML = cardsHtml + cardsHtml;
+
+    const PIXELS_PER_SECOND = 47;
+    requestAnimationFrame(() => {
+      const halfWidth = trackEl.scrollWidth / 2;
+      const duration = Math.max(halfWidth / PIXELS_PER_SECOND, 20);
+      trackEl.style.animationDuration = duration + 's';
+    });
+  }
+
+  loadJson('../stats_ticker_hockey.json').then(data => {
+    if(!data || !data.seasonTotals){
+      wrapEl.style.display = 'none';
+      return;
+    }
+    render(data);
+  }).catch(err => {
+    console.error('Hockey stats ticker failed to load (non-fatal)', err);
+    wrapEl.style.display = 'none';
+  });
+})();
 </script>
 </body>
 </html>
