@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-29T03:10:05.040Z",
+  "generatedAt": "2026-09-29T03:28:54.411Z",
   "season": "2026",
   "week": 3,
   "thisWeek": {
@@ -64,7 +64,7 @@
         "last": "Keenum",
         "team": "CHI",
         "pos": "QB",
-        "pts": 24.7,
+        "pts": 24.5,
         "pun": "Keenum of Fame"
       },
       {
@@ -304,6 +304,15 @@
         "pun": "Robinson's Revenge"
       },
       {
+        "id": "dandreswift_chi",
+        "first": "D'Andre",
+        "last": "Swift",
+        "team": "CHI",
+        "pos": "RB",
+        "pts": 10.8,
+        "pun": "50 Shades of D'Andre"
+      },
+      {
         "id": "georgeholani_sea",
         "first": "George",
         "last": "Holani",
@@ -320,15 +329,6 @@
         "pos": "RB",
         "pts": 10.7,
         "pun": "Two Face"
-      },
-      {
-        "id": "quinshonjudkins_cle",
-        "first": "Quinshon",
-        "last": "Judkins",
-        "team": "CLE",
-        "pos": "RB",
-        "pts": 9.9,
-        "pun": "Quinshon & Chill"
       }
     ],
     "WR": [
@@ -919,6 +919,15 @@
         "pun": "Run CMC"
       },
       {
+        "id": "dandreswift_chi",
+        "first": "D'Andre",
+        "last": "Swift",
+        "team": "CHI",
+        "pos": "RB",
+        "pts": 56.1,
+        "pun": "50 Shades of D'Andre"
+      },
+      {
         "id": "ashtonjeanty_lv",
         "first": "Ashton",
         "last": "Jeanty",
@@ -926,15 +935,6 @@
         "pos": "RB",
         "pts": 55.3,
         "pun": "Fire and Ashton"
-      },
-      {
-        "id": "dandreswift_chi",
-        "first": "D'Andre",
-        "last": "Swift",
-        "team": "CHI",
-        "pos": "RB",
-        "pts": 54.6,
-        "pun": "50 Shades of D'Andre"
       },
       {
         "id": "chubahubbard_car",
