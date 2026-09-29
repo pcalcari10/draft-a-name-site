@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-29T02:40:51.087Z",
+  "generatedAt": "2026-09-29T02:54:09.143Z",
   "season": "2026",
   "week": 3,
   "thisWeek": {
@@ -59,6 +59,15 @@
         "pun": "Aww Shoughs"
       },
       {
+        "id": "casekeenum_chi",
+        "first": "Case",
+        "last": "Keenum",
+        "team": "CHI",
+        "pos": "QB",
+        "pts": 24.7,
+        "pun": "Keenum of Fame"
+      },
+      {
         "id": "aaronrodgers_pit",
         "first": "Aaron",
         "last": "Rodgers",
@@ -102,15 +111,6 @@
         "pos": "QB",
         "pts": 20.8,
         "pun": "Long Arm of the Lawrence"
-      },
-      {
-        "id": "lamarjackson_bal",
-        "first": "Lamar",
-        "last": "Jackson",
-        "team": "BAL",
-        "pos": "QB",
-        "pts": 20.4,
-        "pun": "Lights, Camera, Jackson"
       }
     ],
     "RB": [
@@ -715,6 +715,15 @@
         "pun": "McPherson-tastic Voyage"
       },
       {
+        "id": "cairosantos_chi",
+        "first": "Cairo",
+        "last": "Santos",
+        "team": "CHI",
+        "pos": "K",
+        "pts": 10,
+        "pun": "Santos of Fame"
+      },
+      {
         "id": "brandonaubrey_dal",
         "first": "Brandon",
         "last": "Aubrey",
@@ -722,15 +731,6 @@
         "pos": "K",
         "pts": 10,
         "pun": "Aubrey'd Up and Ready"
-      },
-      {
-        "id": "cairosantos_chi",
-        "first": "Cairo",
-        "last": "Santos",
-        "team": "CHI",
-        "pos": "K",
-        "pts": 9,
-        "pun": "Santos of Fame"
       },
       {
         "id": "jasonmyers_sea",
@@ -951,7 +951,7 @@
         "last": "Swift",
         "team": "CHI",
         "pos": "RB",
-        "pts": 51.1,
+        "pts": 51.9,
         "pun": "50 Shades of D'Andre"
       },
       {
@@ -1063,6 +1063,15 @@
         "pun": "I Got This Icebox Where My Heart Used To Be"
       },
       {
+        "id": "kylemonangai_chi",
+        "first": "Kyle",
+        "last": "Monangai",
+        "team": "CHI",
+        "pos": "RB",
+        "pts": 31.3,
+        "pun": "Kyle Monangai and the Fantasy Machine"
+      },
+      {
         "id": "travisetiennejr_no",
         "first": "Travis",
         "last": "Etienne",
@@ -1070,15 +1079,6 @@
         "pos": "RB",
         "pts": 30.9,
         "pun": "The Etienne Express"
-      },
-      {
-        "id": "rachaadwhite_was",
-        "first": "Rachaad",
-        "last": "White",
-        "team": "WAS",
-        "pos": "RB",
-        "pts": 30.1,
-        "pun": "Rachaad White and the 7 Dwarfs"
       }
     ],
     "WR": [
@@ -1465,6 +1465,15 @@
         "pun": "Aubrey'd Up and Ready"
       },
       {
+        "id": "cairosantos_chi",
+        "first": "Cairo",
+        "last": "Santos",
+        "team": "CHI",
+        "pos": "K",
+        "pts": 26,
+        "pun": "Santos of Fame"
+      },
+      {
         "id": "chrisboswell_pit",
         "first": "Chris",
         "last": "Boswell",
@@ -1472,15 +1481,6 @@
         "pos": "K",
         "pts": 25,
         "pun": "Chris & Chill"
-      },
-      {
-        "id": "cairosantos_chi",
-        "first": "Cairo",
-        "last": "Santos",
-        "team": "CHI",
-        "pos": "K",
-        "pts": 25,
-        "pun": "Santos of Fame"
       },
       {
         "id": "jasonmyers_sea",
