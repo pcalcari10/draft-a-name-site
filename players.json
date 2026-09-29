@@ -65,7 +65,10 @@
       "Cooked to Perfection",
       "Cookin' The Competition",
       "Cookin' With Gas",
-      "Cook'n Up A Championship"
+      "Cook'n Up A Championship",
+      "Kiss the Cook",
+      "Let James Cook!",
+      "Tough Cookies"
     ],
     "active": true,
     "tier": "curated"
@@ -94,7 +97,8 @@
       "Jonathan Taylor-Made",
       "Jonathan (Taylor's Version)",
       "Taylor Park Boys",
-      "The ManTaylorian"
+      "The ManTaylorian",
+      "Taylormade"
     ],
     "active": true,
     "tier": "curated",
@@ -144,10 +148,16 @@
       "CMac And Cheese",
       "Christian McCarryMe",
       "McCaffrey Nightmares",
-      "I Think I Pulled McCaff(rey)"
+      "I Think I Pulled McCaff(rey)",
+      "McCaff Me If You Can"
     ],
     "active": true,
-    "tier": "curated"
+    "tier": "curated",
+    "taggedNames": {
+      "movie": [
+        "McCaff Me If You Can"
+      ]
+    }
   },
   {
     "id": "derrickhenry_bal",
@@ -173,7 +183,8 @@
       "One Derricktion",
       "Henry The Fourth Down",
       "Henry Given Sunday",
-      "Henrything Is Possible"
+      "Henrything Is Possible",
+      "Oh Henry!"
     ],
     "active": true,
     "tier": "curated"
@@ -202,7 +213,8 @@
       "Brown Out",
       "Brownie Points",
       "Take You To Brown Town",
-      "Chase Brown Sugar"
+      "Chase Brown Sugar",
+      "Cut to the Chase"
     ],
     "active": true,
     "tier": "curated"
@@ -236,7 +248,8 @@
       "Saquon for the Team",
       "Saquon Deez",
       "Barkley Sinatra",
-      "Gone In 60 Saquons"
+      "Gone In 60 Saquons",
+      "Quadzilla"
     ],
     "active": true,
     "tier": "curated",
@@ -258,10 +271,17 @@
       "I Dream of Jeanty",
       "Ashton Has Good Jean(ty)s",
       "Jeantrify",
-      "Ladies And Jeantymen"
+      "Ladies And Jeantymen",
+      "Premature Ejeantylation",
+      "Ashton Powers"
     ],
     "active": true,
-    "tier": "curated"
+    "tier": "curated",
+    "taggedNames": {
+      "movie": [
+        "Ashton Powers"
+      ]
+    }
   },
   {
     "id": "jamarrchase_cin",
@@ -288,13 +308,19 @@
       "The Great Chase",
       "Chase Ing Waterfalls",
       "Ja'Marr You Not Entertained?",
-      "Ja'Marrvelous Mrs. Maisel"
+      "Ja'Marrvelous Mrs. Maisel",
+      "Ja\u2019Marrch Madness",
+      "Ja\u2019Marr Ja\u2019Marr Binks",
+      "Super Ja'Marrio"
     ],
     "active": true,
     "tier": "curated",
     "taggedNames": {
       "tv": [
         "Ja'Marrvelous Mrs. Maisel"
+      ],
+      "movie": [
+        "Ja\u2019Marr Ja\u2019Marr Binks"
       ]
     }
   },
@@ -323,13 +349,16 @@
       "To Infinity and De'Von",
       "Alice Achains",
       "Achane in the Membrane",
-      "D'Jango Achaned"
+      "D'Jango Achaned",
+      "The A-Train",
+      "Crazy Rich Achanes"
     ],
     "active": true,
     "tier": "curated",
     "taggedNames": {
       "movie": [
-        "D'Jango Achaned"
+        "D'Jango Achaned",
+        "Crazy Rich Achanes"
       ]
     }
   },
@@ -342,7 +371,8 @@
     "names": [
       "I Got This Icebox Where My Heart Used To Be",
       "Hampton Inn",
-      "Super Omarion"
+      "Super Omarion",
+      "Summer in the Hamptons"
     ],
     "active": true,
     "tier": "curated"
@@ -360,13 +390,17 @@
       "Gettin' Njiggy With It",
       "Teenage Mutant Njigba Turtles",
       "Sorry Smith-Jaxon",
-      "American Njigba Warriors"
+      "American Njigba Warriors",
+      "Captain Jaxon Sparrow"
     ],
     "active": true,
     "tier": "curated",
     "taggedNames": {
       "tv": [
         "American Njigba Warriors"
+      ],
+      "movie": [
+        "Captain Jaxon Sparrow"
       ]
     }
   },
@@ -399,7 +433,9 @@
       "Puka-boo",
       "Puka My Heart",
       "Puka Face",
-      "Apukalypse Now"
+      "Apukalypse Now",
+      "Don't Puka The Bear",
+      "Puka Shelled"
     ],
     "active": true,
     "tier": "curated"
@@ -425,13 +461,20 @@
       "St. Brown Sugar",
       "Amon A Boat",
       "Amon A Roll",
-      "Sun God's Plan"
+      "Sun God's Plan",
+      "Sun God",
+      "Amonster's Ball",
+      "Amon The Edge Of Glory"
     ],
     "active": true,
     "tier": "curated",
     "taggedNames": {
       "music": [
-        "Sun God's Plan"
+        "Sun God's Plan",
+        "Amon The Edge Of Glory"
+      ],
+      "movie": [
+        "Amonster's Ball"
       ]
     }
   },
@@ -499,10 +542,21 @@
       "I CeeDee Light!",
       "CeeDeez",
       "Lamb Chops For Dinner",
-      "CeeDeez TDs"
+      "CeeDeez TDs",
+      "Lamb & Deliver",
+      "Easy As A-B-CeeDee",
+      "Silence Of The Lamb"
     ],
     "active": true,
-    "tier": "curated"
+    "tier": "curated",
+    "taggedNames": {
+      "music": [
+        "Easy As A-B-CeeDee"
+      ],
+      "movie": [
+        "Silence Of The Lamb"
+      ]
+    }
   },
   {
     "id": "breecehall_nyj",
@@ -563,7 +617,8 @@
       "The Griddy Gang",
       "Griddy Grind",
       "Justin Case You Forgot",
-      "Griddy City"
+      "Griddy City",
+      "Griddy Fly For a Vikes Guy"
     ],
     "active": true,
     "tier": "curated"
@@ -603,7 +658,8 @@
       "Josh Allen And His Bills",
       "Joshin Around",
       "Josh Darn It",
-      "Josh.0"
+      "Josh.0",
+      "Allen Force One"
     ],
     "active": true,
     "tier": "curated"
@@ -668,10 +724,16 @@
       "Sex, Love, and Rock n Roll",
       "Love Boat",
       "Whole Lotta Jeremiyah Love",
-      "Jeremiyah Love The Way You Lie"
+      "Jeremiyah Love The Way You Lie",
+      "The Love Shack"
     ],
     "active": true,
-    "tier": "curated"
+    "tier": "curated",
+    "taggedNames": {
+      "music": [
+        "The Love Shack"
+      ]
+    }
   },
   {
     "id": "lamarjackson_bal",
@@ -708,10 +770,16 @@
       "Nico Suave",
       "Nico-la",
       "Nico At Night",
-      "Nicolodeon"
+      "Nicolodeon",
+      "Finding Nico"
     ],
     "active": true,
-    "tier": "curated"
+    "tier": "curated",
+    "taggedNames": {
+      "movie": [
+        "Finding Nico"
+      ]
+    }
   },
   {
     "id": "chrisolave_no",
@@ -895,7 +963,8 @@
       "Point Drake",
       "Drake-Quake",
       "London Bridge Is Falling Down",
-      "Drake It 'Til You Make It"
+      "Drake It 'Til You Make It",
+      "Easy Drake Oven"
     ],
     "active": true,
     "tier": "curated",
@@ -934,7 +1003,8 @@
       "Nabers and Shakers",
       "Malik's Mayhem",
       "Malik the Menace",
-      "Nabers Think Im Selling Dope"
+      "Nabers Think Im Selling Dope",
+      "Welcome to the Naberhood"
     ],
     "active": true,
     "tier": "curated"
@@ -965,7 +1035,8 @@
       "Waddleburger",
       "Waddle You Doing?",
       "Waddle I Do",
-      "America's Next Top Waddle"
+      "America's Next Top Waddle",
+      "Waddle Rockets"
     ],
     "active": true,
     "tier": "curated"
@@ -1029,7 +1100,8 @@
       "I Said Maye-be\u2026",
       "Drakes Coffee Cakes",
       "I Maye Score Tonight",
-      "Drake It 'Til You Make It"
+      "Drake It 'Til You Make It",
+      "Drake 'N' Ball Z"
     ],
     "active": true,
     "tier": "curated",
@@ -1038,7 +1110,8 @@
         "Drizzy Drake"
       ],
       "tv": [
-        "Drake and Josh"
+        "Drake and Josh",
+        "Drake 'N' Ball Z"
       ]
     }
   },
@@ -1148,7 +1221,8 @@
       "Brown Out",
       "Brownie Points",
       "Take You To Brown Town",
-      "A.J. And The Bee"
+      "A.J. And The Bee",
+      "Brown-ing Out"
     ],
     "active": true,
     "tier": "curated"
@@ -1168,7 +1242,8 @@
       "McConk-a-donk",
       "McConkey Kong",
       "Ladd'r Day Saints",
-      "Shrek And McConkey"
+      "Shrek And McConkey",
+      "I Can't Find McConkeys"
     ],
     "active": true,
     "tier": "curated"
@@ -1262,7 +1337,8 @@
       "Prince Williams",
       "Williams & Mary Jane's Backfield",
       "Jameson On The Rocks",
-      "Jameson Williams On The Rocks"
+      "Jameson Williams On The Rocks",
+      "Shot Of Jameson"
     ],
     "active": true,
     "tier": "curated"
@@ -1312,7 +1388,8 @@
       "You Underestimate My Bowers",
       "Bower Rangers",
       "All the Small Bowers",
-      "All About That Bowers"
+      "All About That Bowers",
+      "Brock & Roll"
     ],
     "active": true,
     "tier": "curated",
@@ -1383,13 +1460,17 @@
       "McBride To Be",
       "McBridesmaids",
       "McBridal Shower",
-      "McBrideZilla"
+      "McBrideZilla",
+      "Trey's Company"
     ],
     "active": true,
     "tier": "curated",
     "taggedNames": {
       "movie": [
         "The Princess McBride"
+      ],
+      "tv": [
+        "Trey's Company"
       ]
     }
   },
@@ -1423,7 +1504,9 @@
       "Rice Rice Baby",
       "Rashee Will Be Loved",
       "Rice Cakes",
-      "Need for Rashee"
+      "Need for Rashee",
+      "Rice Above it",
+      "That's Rashee Said"
     ],
     "active": true,
     "tier": "curated"
@@ -1454,7 +1537,8 @@
       "Scary Terry",
       "Terryfying Team",
       "The Terryfiers",
-      "McLaurin Order"
+      "McLaurin Order",
+      "The Terry On Top"
     ],
     "active": true,
     "tier": "curated"
@@ -1620,7 +1704,8 @@
     "team": "DEN",
     "pos": "WR",
     "names": [
-      "Lord of the Court"
+      "Lord of the Court",
+      "Sutton For Punishment"
     ],
     "active": true,
     "tier": "curated"
@@ -1681,10 +1766,16 @@
       "God, I Need a Win",
       "Godwin It All",
       "Godwin Bless America",
-      "Thank Godwin"
+      "Thank Godwin",
+      "Chris Chris, Bang Bang"
     ],
     "active": true,
-    "tier": "curated"
+    "tier": "curated",
+    "taggedNames": {
+      "music": [
+        "Chris Chris, Bang Bang"
+      ]
+    }
   },
   {
     "id": "daltonkincaid_buf",
@@ -1727,13 +1818,17 @@
       "Greetings From Loveland",
       "No Man's Loveland",
       "Loveland Frog",
-      "Loveland Is a Battlefield"
+      "Loveland Is a Battlefield",
+      "Loveland Other Drugs"
     ],
     "active": true,
     "tier": "curated",
     "taggedNames": {
       "music": [
         "Loveland Is a Battlefield"
+      ],
+      "movie": [
+        "Loveland Other Drugs"
       ]
     }
   },
@@ -1821,7 +1916,8 @@
       "Golden Gate Bridge",
       "Holding On To What's Golden",
       "The Golden The Beautiful",
-      "Golden Jerry, Gold"
+      "Golden Jerry, Gold",
+      "Stay Golden, WR Boy"
     ],
     "active": true,
     "tier": "curated"
@@ -2318,10 +2414,16 @@
       "Pittman-tastic Voyage",
       "In Pittman We Trust",
       "Pittman-A-Palooza",
-      "Pittman'd Up and Ready"
+      "Pittman'd Up and Ready",
+      "Pitt Me Baby One More Time"
     ],
     "active": true,
-    "tier": "template"
+    "tier": "curated",
+    "taggedNames": {
+      "music": [
+        "Pitt Me Baby One More Time"
+      ]
+    }
   },
   {
     "id": "georgekittle_sf",
@@ -2338,10 +2440,16 @@
       "The Kittle",
       "Kittles & Pitts",
       "Kittle Me This",
-      "Say Hello to My Kittle Friend"
+      "Say Hello to My Kittle Friend",
+      "Kittlefinger"
     ],
     "active": true,
-    "tier": "curated"
+    "tier": "curated",
+    "taggedNames": {
+      "tv": [
+        "Kittlefinger"
+      ]
+    }
   },
   {
     "id": "xavierworthy_kc",
@@ -2831,10 +2939,16 @@
       "Thinking Out Stroud",
       "I Hear You Stroud And Clear",
       "Loud, Proud And Stroud",
-      "Stroud Business"
+      "Stroud Business",
+      "Stroudly With a Chance of Meatballs"
     ],
     "active": true,
-    "tier": "curated"
+    "tier": "curated",
+    "taggedNames": {
+      "movie": [
+        "Stroudly With a Chance of Meatballs"
+      ]
+    }
   },
   {
     "id": "kaelonblack_sf",
@@ -2995,10 +3109,11 @@
       "Tre & Chill",
       "Tre's Excellent Adventure",
       "All Tucker, No Filler",
-      "In Tucker We Trust"
+      "In Tucker We Trust",
+      "Tre Day"
     ],
     "active": true,
-    "tier": "template"
+    "tier": "curated"
   },
   {
     "id": "emmettjohnson_kc",
@@ -3216,7 +3331,8 @@
     "pos": "WR",
     "names": [
       "Reed My Lips",
-      "If You're Reeding This, It's Too Late"
+      "If You're Reeding This, It's Too Late",
+      "Reed Option"
     ],
     "active": true,
     "tier": "curated"
@@ -3686,10 +3802,11 @@
       "The Noel Show",
       "Noel of Fame",
       "Noel-A-Palooza",
-      "Noel Happens"
+      "Noel Happens",
+      "The First Noel"
     ],
     "active": true,
-    "tier": "template"
+    "tier": "curated"
   },
   {
     "id": "eddypineiro_sf",
@@ -3978,10 +4095,16 @@
     "pos": "WR",
     "names": [
       "Hunter Gatherer",
-      "Duck Hunter"
+      "Duck Hunter",
+      "The Hunter Games"
     ],
     "active": true,
-    "tier": "curated"
+    "tier": "curated",
+    "taggedNames": {
+      "movie": [
+        "The Hunter Games"
+      ]
+    }
   },
   {
     "id": "cooperkupp_sea",
@@ -4586,7 +4709,8 @@
     "team": "LV",
     "pos": "WR",
     "names": [
-      "Rack City Bech"
+      "Rack City Bech",
+      "Son Of A Bech"
     ],
     "active": true,
     "tier": "curated"
@@ -4644,10 +4768,16 @@
     "names": [
       "Neon Keon",
       "That's Ice Cole, Man",
-      "Spit Keon that thang!"
+      "Spit Keon that thang!",
+      "To Infinity & Keon"
     ],
     "active": true,
-    "tier": "curated"
+    "tier": "curated",
+    "taggedNames": {
+      "movie": [
+        "To Infinity & Keon"
+      ]
+    }
   },
   {
     "id": "troyfranklin_den",
@@ -6399,7 +6529,8 @@
       "Reek and Destroy",
       "Tyreek or Treat",
       "Hill-Matic",
-      "Hill Street Blues"
+      "Hill Street Blues",
+      "Tyreek & Roll"
     ],
     "active": true,
     "tier": "curated",
@@ -13592,10 +13723,11 @@
       "Cooks-A-Palooza",
       "Cooks's Fantasy Fortress",
       "The Cooks Show",
-      "Brandin & Chill"
+      "Brandin & Chill",
+      "Too Many Cooks In The Kitchen"
     ],
     "active": true,
-    "tier": "template"
+    "tier": "curated"
   },
   {
     "id": "brandonjohnson_pit",
