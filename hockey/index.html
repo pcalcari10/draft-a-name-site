@@ -419,19 +419,20 @@
 
   /* ---------- Copy celebration ---------- */
   .football-fly {
-    position: fixed; z-index: 300;
+    position: fixed; left: 0; top: 0; z-index: 300;
     pointer-events: none; animation: football-fly-across 1.3s cubic-bezier(0.25, 0.1, 0.4, 1) forwards;
     filter: drop-shadow(0 3px 6px rgba(0,0,0,0.35));
+    will-change: transform, opacity;
   }
   .football-fly svg { display: block; }
   @keyframes football-fly-across {
-    0%   { left: -5%;    top: 8%;    transform: scale(0.3); opacity: 0.9; }
-    15%  { left: 4.1%;   top: 8.4%;  transform: scale(0.5); }
-    35%  { left: 16.4%;  top: 13%;   transform: scale(0.85); }
-    55%  { left: 28.9%;  top: 22.2%; transform: scale(1.4); }
-    72%  { left: 39.8%;  top: 33.7%; transform: scale(2.1); }
-    86%  { left: 48.8%;  top: 45.7%; transform: scale(3); opacity: 1; }
-    100% { left: 58%;    top: 60%;   transform: scale(4.2); opacity: 0; }
+    0%   { transform: translate(-5vw,   8vh)   scale(0.3); opacity: 0.9; }
+    15%  { transform: translate(4.1vw,  8.4vh) scale(0.5); }
+    35%  { transform: translate(16.4vw, 13vh)  scale(0.85); }
+    55%  { transform: translate(28.9vw, 22.2vh) scale(1.4); }
+    72%  { transform: translate(39.8vw, 33.7vh) scale(2.1); }
+    86%  { transform: translate(48.8vw, 45.7vh) scale(3); opacity: 1; }
+    100% { transform: translate(58vw,   60vh)  scale(4.2); opacity: 0; }
   }
   .landing-burst {
     position: fixed; z-index: 300; pointer-events: none; font-size: 24px;
