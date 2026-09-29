@@ -306,7 +306,8 @@
       "Pastrnak and Cheese",
       "Pasta Fazool",
       "Al Pastrnak",
-      "Pasta Perfection"
+      "Pasta Perfection",
+      "Kyle Connor McDavid Pastrnak"
     ],
     "active": true,
     "tier": "curated"
@@ -876,10 +877,16 @@
       "In Chiarot We Trust",
       "Ben Chiarot and the Fantasy Machine",
       "Straight Outta Chiarot",
-      "Ben Vibes Only"
+      "Ben Vibes Only",
+      "Ben Chiarot's of Fire"
     ],
     "active": true,
-    "tier": "template"
+    "tier": "curated",
+    "taggedNames": {
+      "movie": [
+        "Ben Chiarot's of Fire"
+      ]
+    }
   },
   {
     "id": "jtcompher_det",
@@ -1103,10 +1110,16 @@
       "In Raymond We Trust",
       "Lucas Raymond and the Fantasy Machine",
       "Straight Outta Raymond",
-      "Lucas Vibes Only"
+      "Lucas Vibes Only",
+      "Lucas Everybody Loves Raymond"
     ],
     "active": true,
-    "tier": "template"
+    "tier": "curated",
+    "taggedNames": {
+      "tv": [
+        "Lucas Everybody Loves Raymond"
+      ]
+    }
   },
   {
     "id": "axelsandinpellikka_det",
@@ -2049,10 +2062,16 @@
       "Suzuki Side Up",
       "The Suzuki Swifties",
       "Suzuki and Destroy",
-      "Suzuki Roll"
+      "Suzuki Roll",
+      "The Nature of Things with Nick Suzuki"
     ],
     "active": true,
-    "tier": "curated"
+    "tier": "curated",
+    "taggedNames": {
+      "tv": [
+        "The Nature of Things with Nick Suzuki"
+      ]
+    }
   },
   {
     "id": "alexandretexier_mtl",
@@ -2259,10 +2278,11 @@
       "In Kleven We Trust",
       "Tyler Kleven and the Fantasy Machine",
       "Straight Outta Kleven",
-      "Tyler Vibes Only"
+      "Tyler Vibes Only",
+      "A mistake plus Tyler Kleven gets you home by 7"
     ],
     "active": true,
-    "tier": "template"
+    "tier": "curated"
   },
   {
     "id": "kurtismacdermid_ott",
@@ -2779,10 +2799,16 @@
       "Straight Outta Kucherov",
       "Nikita Vibes Only",
       "The Kucherov Kings",
-      "Kuch Control"
+      "Kuch Control",
+      "La Femme Nikita Kucherov"
     ],
     "active": true,
-    "tier": "curated"
+    "tier": "curated",
+    "taggedNames": {
+      "movie": [
+        "La Femme Nikita Kucherov"
+      ]
+    }
   },
   {
     "id": "emillilleberg_tbl",
@@ -2864,7 +2890,8 @@
       "The Pointdexter",
       "Point Taken",
       "Point of No Return",
-      "Point Break"
+      "Point Break",
+      "Brayden Right To The Point"
     ],
     "active": true,
     "tier": "curated"
@@ -2964,10 +2991,11 @@
       "In Carlo We Trust",
       "Brandon Carlo and the Fantasy Machine",
       "Straight Outta Carlo",
-      "Brandon Vibes Only"
+      "Brandon Vibes Only",
+      "Brandon Carlo Colaiacovo"
     ],
     "active": true,
-    "tier": "template"
+    "tier": "curated"
   },
   {
     "id": "eastoncowan_tor",
@@ -3155,7 +3183,8 @@
       "Matthews Multiplication",
       "The Matthews Principle",
       "Matthews Matters",
-      "Auston Matthews McConaughey"
+      "Auston Matthews McConaughey",
+      "Auston JackHughes"
     ],
     "active": true,
     "tier": "curated"
@@ -3237,10 +3266,16 @@
       "Straight Outta Nylander",
       "William Vibes Only",
       "Nylander the Wiser",
-      "The Nylander Effect"
+      "The Nylander Effect",
+      "William Homelander"
     ],
     "active": true,
-    "tier": "curated"
+    "tier": "curated",
+    "taggedNames": {
+      "tv": [
+        "William Homelander"
+      ]
+    }
   },
   {
     "id": "morganrielly_tor",
@@ -3254,10 +3289,16 @@
       "Morgan Rielly and the Fantasy Machine",
       "Straight Outta Rielly",
       "Morgan Vibes Only",
-      "The Rielly Renegades"
+      "The Rielly Renegades",
+      "Dexter Morgan Rielly"
     ],
     "active": true,
-    "tier": "curated"
+    "tier": "curated",
+    "taggedNames": {
+      "tv": [
+        "Dexter Morgan Rielly"
+      ]
+    }
   },
   {
     "id": "nicholasrobertson_tor",
@@ -3386,10 +3427,16 @@
       "Sebastian Vibes Only",
       "Aho My God!",
       "Aho Mate",
-      "Aho Captain, My Captain"
+      "Aho Captain, My Captain",
+      "Sebastian Aho, Aho, It's off to work we go"
     ],
     "active": true,
-    "tier": "curated"
+    "tier": "curated",
+    "taggedNames": {
+      "movie": [
+        "Sebastian Aho, Aho, It's off to work we go"
+      ]
+    }
   },
   {
     "id": "frederikandersen_car",
@@ -3483,10 +3530,16 @@
       "Nikolaj Ehlers and the Fantasy Machine",
       "Straight Outta Ehlers",
       "Nikolaj Vibes Only",
-      "Ehlers in Wonderland"
+      "Ehlers in Wonderland",
+      "Bingo and Nikolai Bluey-lers"
     ],
     "active": true,
-    "tier": "curated"
+    "tier": "curated",
+    "taggedNames": {
+      "tv": [
+        "Bingo and Nikolai Bluey-lers"
+      ]
+    }
   },
   {
     "id": "shaynegostisbehere_car",
@@ -3949,10 +4002,11 @@
       "In Jenner We Trust",
       "Boone Jenner and the Fantasy Machine",
       "Straight Outta Jenner",
-      "Boone Vibes Only"
+      "Boone Vibes Only",
+      "LabuBoone Jenner"
     ],
     "active": true,
-    "tier": "template"
+    "tier": "curated"
   },
   {
     "id": "kentjohnson_cbj",
@@ -4206,7 +4260,8 @@
       "Zach Werenski and the Fantasy Machine",
       "Straight Outta Werenski",
       "Zach Vibes Only",
-      "Werenski Business"
+      "Werenski Business",
+      "Zach What Is a Werenski"
     ],
     "active": true,
     "tier": "curated"
@@ -4272,10 +4327,16 @@
       "Straight Outta Bratt",
       "Jesper Vibes Only",
       "Original Brattwurst",
-      "Bratt Dolls"
+      "Bratt Dolls",
+      "Jesper Bratt Pack"
     ],
     "active": true,
-    "tier": "curated"
+    "tier": "curated",
+    "taggedNames": {
+      "movie": [
+        "Jesper Bratt Pack"
+      ]
+    }
   },
   {
     "id": "connorbrown_njd",
@@ -4435,7 +4496,8 @@
       "Jack Vibes Only",
       "The Jack Hughes Your Daddy?",
       "Hughes Your Daddy",
-      "A Jack Hughes Brothers Film"
+      "A Jack Hughes Brothers Film",
+      "Auston JackHughes"
     ],
     "active": true,
     "tier": "curated"
@@ -5306,7 +5368,8 @@
       "Straight Outta Panarin",
       "Artemi Vibes Only",
       "The Panarin Powerhouse",
-      "Panarin Bread"
+      "Panarin Bread",
+      "Artemi Panarinse and repeat"
     ],
     "active": true,
     "tier": "curated"
@@ -5786,10 +5849,11 @@
       "In Konecny We Trust",
       "Travis Konecny and the Fantasy Machine",
       "Straight Outta Konecny",
-      "Travis Vibes Only"
+      "Travis Vibes Only",
+      "Travis ConnectMe via LinkedIn"
     ],
     "active": true,
-    "tier": "template"
+    "tier": "curated"
   },
   {
     "id": "matveimichkov_phi",
@@ -5997,7 +6061,8 @@
       "Sidney Vibes Only",
       "The Crosby Crushers",
       "Crosby Checks In",
-      "The Crosby Show Continues"
+      "The Crosby Show Continues",
+      "Sidney Cros-bae"
     ],
     "active": true,
     "tier": "curated"
@@ -6256,10 +6321,11 @@
       "In Rakell We Trust",
       "Rickard Rakell and the Fantasy Machine",
       "Straight Outta Rakell",
-      "Rickard Vibes Only"
+      "Rickard Vibes Only",
+      "Captain Rikard Rakell"
     ],
     "active": true,
-    "tier": "template"
+    "tier": "curated"
   },
   {
     "id": "bryanrust_pit",
@@ -7594,10 +7660,16 @@
       "Leon Vibes Only",
       "Leon Night Riders",
       "Drai Another Day",
-      "Draisaitl Park"
+      "Draisaitl Park",
+      "Leon Forgot About Draisaitl"
     ],
     "active": true,
-    "tier": "curated"
+    "tier": "curated",
+    "taggedNames": {
+      "music": [
+        "Leon Forgot About Draisaitl"
+      ]
+    }
   },
   {
     "id": "mattiasekholm_edm",
@@ -7782,7 +7854,8 @@
       "McDavid's Farm",
       "McDavid's Secret",
       "McDavid Copperfield",
-      "McDavid's Anatomy"
+      "McDavid's Anatomy",
+      "Kyle Connor McDavid Pastrnak"
     ],
     "active": true,
     "tier": "curated"
@@ -8490,10 +8563,11 @@
       "In Graf We Trust",
       "Collin Graf and the Fantasy Machine",
       "Straight Outta Graf",
-      "Collin Vibes Only"
+      "Collin Vibes Only",
+      "Collin Steffi Graf"
     ],
     "active": true,
-    "tier": "template"
+    "tier": "curated"
   },
   {
     "id": "vincentiorio_sjs",
@@ -9165,10 +9239,11 @@
       "In Wright We Trust",
       "Shane Wright and the Fantasy Machine",
       "Straight Outta Wright",
-      "Shane Vibes Only"
+      "Shane Vibes Only",
+      "Matt Du-Shane Wright"
     ],
     "active": true,
-    "tier": "template"
+    "tier": "curated"
   },
   {
     "id": "arshdeepbains_van",
@@ -9990,7 +10065,8 @@
       "Colton Sissons and the Fantasy Machine",
       "Straight Outta Sissons",
       "Colton Vibes Only",
-      "Succ-Sissons"
+      "Succ-Sissons",
+      "Colton Rizz-ons"
     ],
     "active": true,
     "tier": "curated"
@@ -10660,7 +10736,8 @@
       "Nathan Vibes Only",
       "MacK Attack",
       "MacKinnon's Mile High Magic",
-      "MacKinnon's Peak Performance"
+      "MacKinnon's Peak Performance",
+      "Nathan's MacHotDog Eating Contest"
     ],
     "active": true,
     "tier": "curated"
@@ -10687,7 +10764,8 @@
       "Makar Polo",
       "Makar My Words",
       "Makar Me Laugh",
-      "Cale Cream"
+      "Cale Cream",
+      "Cale Makarbonated beverage"
     ],
     "active": true,
     "tier": "curated"
@@ -10994,7 +11072,8 @@
       "Matt Duchene and the Fantasy Machine",
       "Straight Outta Duchene",
       "Matt Vibes Only",
-      "The Duchene's Dynamite"
+      "The Duchene's Dynamite",
+      "Matt Du-Shane Wright"
     ],
     "active": true,
     "tier": "curated"
@@ -12893,10 +12972,11 @@
       "In Connor We Trust",
       "Kyle Connor and the Fantasy Machine",
       "Straight Outta Connor",
-      "Kyle Vibes Only"
+      "Kyle Vibes Only",
+      "Kyle Connor McDavid Pastrnak"
     ],
     "active": true,
-    "tier": "template"
+    "tier": "curated"
   },
   {
     "id": "dylandemelo_wpg",
