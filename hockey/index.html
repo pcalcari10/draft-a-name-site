@@ -974,18 +974,19 @@ function renderChips(){
 
 
 function puckSvg(){
-  return `<svg viewBox="0 0 100 100" width="90" height="90">
+  return `<svg viewBox="0 0 100 40" width="100" height="40">
     <defs>
-      <radialGradient id="puckGrad" cx="35%" cy="30%" r="75%">
-        <stop offset="0%" stop-color="#3A3A3A"/>
-        <stop offset="60%" stop-color="#161616"/>
-        <stop offset="100%" stop-color="#000000"/>
-      </radialGradient>
+      <linearGradient id="puckGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+        <stop offset="0%" stop-color="#4A4A4A"/>
+        <stop offset="12%" stop-color="#2A2A2A"/>
+        <stop offset="50%" stop-color="#0C0C0C"/>
+        <stop offset="88%" stop-color="#2A2A2A"/>
+        <stop offset="100%" stop-color="#050505"/>
+      </linearGradient>
     </defs>
-    <circle cx="50" cy="50" r="46" fill="url(#puckGrad)" stroke="#000" stroke-width="2"/>
-    <circle cx="50" cy="50" r="46" fill="none" stroke="#444" stroke-width="1" opacity="0.5"/>
-    <ellipse cx="36" cy="30" rx="16" ry="8" fill="#FFFFFF" opacity="0.15" transform="rotate(-20 36 30)"/>
-    <text x="50" y="57" text-anchor="middle" font-family="Arial, sans-serif" font-weight="700" font-size="16" fill="#555">NHL</text>
+    <rect x="4" y="4" width="92" height="32" rx="16" ry="16" fill="url(#puckGrad)" stroke="#000" stroke-width="1.5"/>
+    <rect x="4" y="4" width="92" height="8" rx="4" fill="#FFFFFF" opacity="0.12"/>
+    <rect x="4" y="28" width="92" height="6" rx="3" fill="#000000" opacity="0.35"/>
   </svg>`;
 }
 
