@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-29T20:28:49.693Z",
+  "generatedAt": "2026-09-29T20:45:32.129Z",
   "season": "20262027",
   "seasonTotals": {
     "C": [
@@ -688,6 +688,12 @@
       }
     ]
   },
-  "weekStart": null,
-  "thisWeek": {}
+  "weekStart": "2026-09-28",
+  "thisWeek": {
+    "C": [],
+    "LW": [],
+    "RW": [],
+    "D": [],
+    "G": []
+  }
 }
