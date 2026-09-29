@@ -136,6 +136,22 @@
       </div>
     </div>
   </div>
+
+  <div class="progress-panel" id="hockeySyncPanel" style="margin-top:16px; border-top:3px solid var(--panel-3);">
+    <div class="progress-top">
+      <div>
+        <div class="team-name" style="font-size:16px;">🏒 Sync full NHL roster</div>
+        <div class="progress-label">Pulls all 32 teams directly from the NHL's own live API, updates team changes, adds new call-ups, and deactivates anyone no longer rostered \u2014 all baked into <code style="background:var(--panel-2); padding:1px 5px; border-radius:4px;">players_hockey.json</code>.</div>
+      </div>
+    </div>
+    <div style="margin-top:10px; font-size:12.5px; color:var(--dim); line-height:1.5;">
+      This one runs entirely through GitHub Actions rather than this page directly \u2014 the NHL's API may not allow requests from a browser tab the way Sleeper's does, so \u201cRun sync\u201d here just takes you to trigger it safely on GitHub instead of risking a broken in-page button.
+    </div>
+    <div style="margin-top:14px; display:flex; gap:10px; align-items:center; flex-wrap:wrap;">
+      <a href="https://github.com/pcalcari10/draft-a-name-site/actions/workflows/weekly-hockey-roster-sync.yml" target="_blank" rel="noopener" class="ghost" style="font-family:var(--mono);font-size:12.5px;text-decoration:none;display:inline-block;border:1px solid var(--line);color:var(--text);border-radius:8px;padding:8px 14px;">Run sync on GitHub \u2192</a>
+    </div>
+    <div id="autoSyncStatusHockey" style="margin-top:14px; font-family:var(--mono); font-size:12.5px; color:var(--dim); line-height:1.8;">Checking last run\u2026</div>
+  </div>
   </div>
 
   <div class="tab-panel" id="tab-placeholders">
@@ -464,6 +480,37 @@ async function loadAutoSyncStatus(){
   `;
 }
 loadAutoSyncStatus();
+
+async function loadAutoSyncStatusHockey(){
+  const el = document.getElementById('autoSyncStatusHockey');
+  const currentSchedule = `${DAY_NAMES[2]} at 11:00 UTC`; // matches weekly-hockey-roster-sync.yml
+  const next = nextScheduledRun(2, 11);
+
+  let lastRunHtml = 'Couldn\u2019t reach GitHub to check \u2014 see the Actions tab directly.';
+  try {
+    const res = await fetch('https://api.github.com/repos/pcalcari10/draft-a-name-site/actions/workflows/weekly-hockey-roster-sync.yml/runs?per_page=1');
+    if(res.ok){
+      const data = await res.json();
+      const run = data.workflow_runs && data.workflow_runs[0];
+      if(run){
+        const when = new Date(run.run_started_at || run.created_at);
+        const status = run.status === 'completed'
+          ? (run.conclusion === 'success' ? '\u2705 succeeded' : `\u26a0\ufe0f ${run.conclusion}`)
+          : `\u23f3 ${run.status}`;
+        lastRunHtml = `${when.toLocaleString()} \u2014 ${status}`;
+      } else {
+        lastRunHtml = 'No runs yet \u2014 it hasn\u2019t fired for the first time.';
+      }
+    }
+  } catch(err){ console.error('loadAutoSyncStatusHockey failed', err); }
+
+  el.innerHTML = `
+    Current schedule: <strong style="color:var(--text);">${currentSchedule}</strong><br>
+    Next run: ${next.toLocaleString()}<br>
+    Last run: ${lastRunHtml}
+  `;
+}
+loadAutoSyncStatusHockey();
 
 
 const TEAM_FULL = {
