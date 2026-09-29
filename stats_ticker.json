@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-29T01:53:44.077Z",
+  "generatedAt": "2026-09-29T02:08:46.092Z",
   "season": "2026",
   "week": 3,
   "thisWeek": {
@@ -468,6 +468,15 @@
         "pun": "Mumpfield-tastic Voyage"
       },
       {
+        "id": "lutherburdeniii_chi",
+        "first": "Luther",
+        "last": "Burden",
+        "team": "CHI",
+        "pos": "WR",
+        "pts": 19,
+        "pun": "Un-Burden Me"
+      },
+      {
         "id": "wandalerobinson_ten",
         "first": "Wan'Dale",
         "last": "Robinson",
@@ -484,15 +493,6 @@
         "pos": "WR",
         "pts": 18.3,
         "pun": "I'm Allen Ears"
-      },
-      {
-        "id": "lutherburdeniii_chi",
-        "first": "Luther",
-        "last": "Burden",
-        "team": "CHI",
-        "pos": "WR",
-        "pts": 17.6,
-        "pun": "Un-Burden Me"
       },
       {
         "id": "rasheerice_kc",
@@ -742,13 +742,13 @@
         "pun": "Do you like my Cameron Dicker"
       },
       {
-        "id": "jakebates_det",
-        "first": "Jake",
-        "last": "Bates",
-        "team": "DET",
+        "id": "cairosantos_chi",
+        "first": "Cairo",
+        "last": "Santos",
+        "team": "CHI",
         "pos": "K",
-        "pts": 7,
-        "pun": "All Bates, No Filler"
+        "pts": 8,
+        "pun": "Santos of Fame"
       }
     ]
   },
@@ -946,6 +946,15 @@
         "pun": "Williams-Sonoma Touchdowns"
       },
       {
+        "id": "dandreswift_chi",
+        "first": "D'Andre",
+        "last": "Swift",
+        "team": "CHI",
+        "pos": "RB",
+        "pts": 50.8,
+        "pun": "50 Shades of D'Andre"
+      },
+      {
         "id": "javontewilliams_dal",
         "first": "Javonte",
         "last": "Williams",
@@ -962,15 +971,6 @@
         "pos": "RB",
         "pts": 50.2,
         "pun": "James Cooked"
-      },
-      {
-        "id": "dandreswift_chi",
-        "first": "D'Andre",
-        "last": "Swift",
-        "team": "CHI",
-        "pos": "RB",
-        "pts": 49.8,
-        "pun": "50 Shades of D'Andre"
       },
       {
         "id": "breecehall_nyj",
@@ -1474,6 +1474,15 @@
         "pun": "Chris & Chill"
       },
       {
+        "id": "cairosantos_chi",
+        "first": "Cairo",
+        "last": "Santos",
+        "team": "CHI",
+        "pos": "K",
+        "pts": 24,
+        "pun": "Santos of Fame"
+      },
+      {
         "id": "jasonmyers_sea",
         "first": "Jason",
         "last": "Myers",
@@ -1490,15 +1499,6 @@
         "pos": "K",
         "pts": 23,
         "pun": "Bass-A-Palooza"
-      },
-      {
-        "id": "camlittle_jac",
-        "first": "Cam",
-        "last": "Little",
-        "team": "JAC",
-        "pos": "K",
-        "pts": 23,
-        "pun": "Cam's Excellent Adventure"
       }
     ]
   }
