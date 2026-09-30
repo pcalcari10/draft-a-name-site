@@ -1,0 +1,48 @@
+name: Weekly Basketball Roster Sync
+
+on:
+  schedule:
+    # NBA rosters change less predictably than a fixed game day, so this
+    # just runs a couple of times a week rather than tracking specific game
+    # times: Tuesday and Friday mornings UTC.
+    - cron: '0 10 * * 2,5'
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+jobs:
+  sync-roster:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repo
+        uses: actions/checkout@v4
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Sync basketball roster from Sleeper
+        run: node scripts/sync-roster-basketball.js
+
+      - name: Commit and push if players_basketball.json changed
+        run: |
+          git config user.name "roster-sync-bot"
+          git config user.email "actions@github.com"
+          if git diff --quiet -- players_basketball.json; then
+            echo "No changes to commit."
+            exit 0
+          fi
+          git add players_basketball.json
+          git commit -m "Sync basketball roster from Sleeper"
+          for i in 1 2 3 4 5; do
+            if git pull --rebase origin main && git push; then
+              echo "Pushed successfully."
+              exit 0
+            fi
+            echo "Push attempt $i failed, retrying after a short wait..."
+            sleep 5
+          done
+          echo "Failed to push after 5 attempts."
+          exit 1

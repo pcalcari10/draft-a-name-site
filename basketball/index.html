@@ -11,10 +11,34 @@
 </script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Fantasy Basketball Team Names — Coming Soon — The Fantasy Name HQ</title>
-<meta name="description" content="Fantasy basketball team names are coming soon to The Fantasy Name HQ.">
-<meta name="robots" content="noindex, follow">
+<meta name="google-site-verification" content="utZfrgLwKrhhNq-WHWzLETe6h_YaL1P9Q4KWqfi14mA" />
+<title>Fantasy Basketball Team Names — The Fantasy Name HQ</title>
+<meta name="description" content="Generate funny fantasy basketball team names based on your actual roster. Search any NBA player or team and get instant pun suggestions.">
 <link rel="canonical" href="https://thefantasynamehq.com/basketball/">
+
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://thefantasynamehq.com/basketball/">
+<meta property="og:site_name" content="The Fantasy Name HQ">
+<meta property="og:title" content="Fantasy Basketball Team Names — The Fantasy Name HQ">
+<meta property="og:description" content="Generate funny fantasy basketball team names based on your actual roster. Search any NBA player or team and get instant pun suggestions.">
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Fantasy Basketball Team Names — The Fantasy Name HQ">
+<meta name="twitter:description" content="Generate funny fantasy basketball team names based on your actual roster.">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "The Fantasy Name HQ",
+  "url": "https://thefantasynamehq.com/basketball/",
+  "description": "Generate funny fantasy basketball team names based on your actual roster. Search any NBA player or team and get instant pun suggestions.",
+  "applicationCategory": "SportsApplication",
+  "operatingSystem": "Any",
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+}
+</script>
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -36,15 +60,138 @@
     --chalk-100: #F4F2EC;
     --chalk-300: #C9D2DC;
     --chalk-500: #8FA0B3;
+    --pos-qb: #F2B705;
+    --pos-rb: #3E8F63;
+    --pos-wr: #E85D4E;
+    --pos-te: #4F9FD9;
+    --pos-k: #B27FE0;
+    --pos-c: #F2B705;
+    --pos-lw: #3E8F63;
+    --pos-rw: #E85D4E;
+    --pos-d: #4F9FD9;
+    --pos-g: #B27FE0;
+    --pos-pg: #F2B705;
+    --pos-sg: #3E8F63;
+    --pos-sf: #E85D4E;
+    --pos-pf: #4F9FD9;
+    --pos-bc: #B27FE0;
 
     --font-display: 'Big Shoulders', 'Arial Narrow', sans-serif;
     --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
   }
-  * { box-sizing: inherit; }
-  html, body { height: 100%; }
-  body { margin: 0; background: var(--navy-950); color: var(--chalk-100); font-family: var(--font-body); font-size: 15px; line-height: 1.6; }
+  html { scroll-padding-top: env(safe-area-inset-top, 0px); }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--navy-950);
+    color: var(--chalk-100);
+    font-family: var(--font-body);
+    -webkit-font-smoothing: antialiased;
+    min-height: 100%;
+    background-image:
+      radial-gradient(circle at 15% 0%, rgba(62,143,99,0.18), transparent 45%),
+      radial-gradient(circle at 85% 10%, rgba(242,183,5,0.10), transparent 40%);
+  }
+
   .wrap { max-width: 920px; margin: 0 auto; padding: 0 24px; }
 
+  header.top {
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 24px 0 8px;
+  }
+  .brand { display: flex; align-items: center; gap: 10px; font-family: var(--font-display); font-weight: 700; font-size: 22px; letter-spacing: 0.02em; }
+  .brand .ball { font-size: 20px; transform: rotate(-15deg); display: inline-block; }
+  .brand small { font-family: var(--font-body); font-weight: 500; font-size: 12px; color: var(--chalk-500); display: block; letter-spacing: 0; }
+  .brand-text { display: flex; align-items: center; gap: 6px; }
+  .brand-the {
+    font-family: var(--font-body); font-weight: 800; font-size: 11px; letter-spacing: 0.16em;
+    text-transform: uppercase; color: var(--gold-400);
+  }
+  .brand-name { white-space: nowrap; }
+
+  .hero { padding: 28px 0 8px; }
+
+  /* ---------- Stats ticker (thin strip) ---------- */
+  .ticker-wrap {
+    background: var(--navy-900);
+    border-bottom: 1px solid var(--line);
+    overflow: hidden;
+    position: relative;
+  }
+  .ticker-bar {
+    width: 100%;
+    display: flex; align-items: center; gap: 10px;
+  }
+  .ticker-title { flex: 0 0 auto; font-family: var(--font-display); font-weight: 700; font-size: 13px; letter-spacing: 0.01em; color: var(--gold-300); padding: 5px 0 5px 24px; white-space: nowrap; }
+  .ticker-toggle { flex: 0 0 auto; display: flex; gap: 3px; background: var(--navy-800); border-radius: 6px; padding: 3px; margin-right: 24px; }
+  .ticker-toggle button {
+    font-family: var(--font-body); font-size: 12px; font-weight: 600; color: var(--chalk-500);
+    background: none; border: none; border-radius: 5px; padding: 3px 10px; cursor: pointer;
+  }
+  .ticker-toggle button.active { background: var(--navy-700); color: var(--chalk-100); }
+  .ticker-track-outer {
+    flex: 1 1 auto; min-width: 0; overflow: hidden;
+    -webkit-mask-image: linear-gradient(90deg, transparent, #000 24px, #000 calc(100% - 24px), transparent);
+    mask-image: linear-gradient(90deg, transparent, #000 24px, #000 calc(100% - 24px), transparent);
+  }
+  .ticker-track {
+    display: flex; gap: 8px; width: max-content;
+    animation: ticker-scroll 190s linear infinite;
+  }
+  .ticker-track-outer:hover .ticker-track { animation-play-state: paused; }
+  @keyframes ticker-scroll {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+  }
+  .ticker-card {
+    flex: 0 0 auto; display: flex; align-items: center; gap: 7px;
+    background: var(--navy-800); border: 1px solid var(--line); border-left: 2px solid var(--card-accent, var(--gold-400));
+    border-radius: 6px; padding: 4px 11px 4px 8px; white-space: nowrap; cursor: pointer;
+    transition: background .15s ease, border-color .15s ease;
+  }
+  .ticker-card:hover { background: var(--navy-700); border-color: var(--card-accent, var(--gold-400)); }
+  .ticker-pos { font-family: var(--font-display); font-weight: 700; font-size: 11px; color: var(--navy-950);
+    background: var(--card-accent, var(--gold-400)); border-radius: 4px; padding: 2px 5px; letter-spacing: 0.02em; }
+  .ticker-card[data-pos="QB"] { --card-accent: var(--pos-qb); }
+  .ticker-card[data-pos="RB"] { --card-accent: var(--pos-rb); }
+  .ticker-card[data-pos="WR"] { --card-accent: var(--pos-wr); }
+  .ticker-card[data-pos="TE"] { --card-accent: var(--pos-te); }
+  .ticker-card[data-pos="K"]  { --card-accent: var(--pos-k); }
+  .ticker-card[data-pos="C"]  { --card-accent: var(--pos-c); }
+  .ticker-card[data-pos="LW"] { --card-accent: var(--pos-lw); }
+  .ticker-card[data-pos="RW"] { --card-accent: var(--pos-rw); }
+  .ticker-card[data-pos="D"]  { --card-accent: var(--pos-d); }
+  .ticker-card[data-pos="G"]  { --card-accent: var(--pos-g); }
+  .ticker-card[data-pos="PG"] { --card-accent: var(--pos-pg); }
+  .ticker-card[data-pos="SG"] { --card-accent: var(--pos-sg); }
+  .ticker-card[data-pos="SF"] { --card-accent: var(--pos-sf); }
+  .ticker-card[data-pos="PF"] { --card-accent: var(--pos-pf); }
+  .ticker-divider {
+    flex: 0 0 auto; display: flex; align-items: center; gap: 5px;
+    color: var(--chalk-500); font-family: var(--font-body); font-size: 10px; font-weight: 700; letter-spacing: 0.08em;
+  }
+  .ticker-divider::before { content: ''; width: 1px; height: 16px; background: var(--line); }
+  .ticker-name { font-family: var(--font-display); font-weight: 700; font-size: 13px; color: var(--chalk-100); }
+  .ticker-team { font-family: var(--font-body); font-size: 11px; color: var(--chalk-500); }
+  .ticker-pun { font-family: var(--font-body); font-style: italic; font-size: 11.5px; color: var(--turf-500); }
+  .ticker-pun::before { content: '\2014 '; color: var(--line); font-style: normal; }
+  .ticker-pts { font-family: var(--font-display); font-weight: 700; font-size: 13px; color: var(--coral-500); white-space: nowrap; }
+  .ticker-empty { max-width: 920px; margin: 0 auto; padding: 14px 24px; color: var(--chalk-500); font-size: 14.5px; }
+  @media (max-width: 640px) {
+    .ticker-pun { display: none; }
+    .ticker-bar { flex-wrap: wrap; gap: 4px 0; }
+    .ticker-title { order: -1; padding: 4px 0 0 10px; }
+    .ticker-toggle { order: -1; margin: 4px 10px 0 auto; }
+    .ticker-toggle button { padding: 3px 10px; font-size: 10px; }
+    .ticker-track-outer {
+      order: 1; flex-basis: 100%;
+      padding-left: 10px;
+      -webkit-mask-image: linear-gradient(90deg, transparent, #000 10px, #000 calc(100% - 10px), transparent);
+      mask-image: linear-gradient(90deg, transparent, #000 10px, #000 calc(100% - 10px), transparent);
+    }
+  }
+
+  /* ---------- Sport nav ---------- */
   .sport-nav { background: var(--navy-800); border-bottom: 1px solid var(--line); }
   .sport-nav-inner { max-width: 920px; margin: 0 auto; padding: 10px 24px; display: flex; gap: 8px; flex-wrap: wrap; }
   @media (max-width: 640px) {
@@ -76,24 +223,304 @@
   }
   .sport-dropdown a:hover { background: var(--navy-700); color: var(--chalk-100); }
 
-  header.top { display: flex; align-items: center; justify-content: space-between; padding: 24px 0 8px; }
-  .brand { display: flex; align-items: center; gap: 10px; font-family: var(--font-display); font-weight: 700; font-size: 22px; letter-spacing: 0.02em; }
-  .brand a { color: var(--chalk-100); text-decoration: none; display: flex; align-items: center; gap: 10px; }
-  .brand-text { display: flex; align-items: center; gap: 6px; }
-  .brand-the {
-    font-family: var(--font-body); font-weight: 800; font-size: 11px; letter-spacing: 0.16em;
-    text-transform: uppercase; color: var(--gold-400);
+  h1 {
+    font-family: var(--font-display);
+    font-weight: 800;
+    font-size: clamp(38px, 7vw, 64px);
+    line-height: 0.98;
+    margin: 0 0 14px;
+    letter-spacing: 0.005em;
   }
-  .brand-name { white-space: nowrap; }
+  h1 .hl { color: var(--gold-400); }
+  .sub {
+    font-size: 17px;
+    line-height: 1.5;
+    color: var(--chalk-300);
+    max-width: 52ch;
+    margin: 0 0 16px;
+  }
 
-  .coming-soon { padding: 90px 0; text-align: center; }
-  .coming-soon .icon { font-size: 56px; margin-bottom: 10px; }
-  .coming-soon h1 { font-family: var(--font-display); font-weight: 800; font-size: clamp(32px, 6vw, 48px); margin: 0 0 12px; }
-  .coming-soon p { color: var(--chalk-300); font-size: 16px; max-width: 46ch; margin: 0 auto 24px; }
-  .coming-soon a.cta {
-    display: inline-block; font-family: var(--font-display); font-weight: 700; font-size: 15px;
-    background: var(--gold-400); color: var(--navy-950); text-decoration: none; padding: 12px 26px; border-radius: 10px;
+  .name-count-badge {
+    display: inline-flex; align-items: center; gap: 6px;
+    background: var(--navy-800); border: 1px solid var(--line); border-radius: 20px;
+    padding: 7px 16px; margin-bottom: 24px;
+    font-family: var(--font-display); font-weight: 700; font-size: 14px; color: var(--gold-300);
   }
+  .name-count-badge span { color: var(--chalk-100); }
+
+  /* Picker */
+  .picker {
+    background: var(--navy-800);
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    padding: 20px;
+  }
+  .picker-label { font-size: 13px; color: var(--chalk-500); margin: 0 0 10px; }
+  .search-row { position: relative; }
+  input#playerSearch {
+    width: 100%;
+    background: var(--navy-900);
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    color: var(--chalk-100);
+    font-family: var(--font-body);
+    font-size: 16px;
+    padding: 13px 14px;
+    outline: none;
+    transition: border-color .15s ease;
+  }
+  input#playerSearch:focus { border-color: var(--gold-400); }
+  .suggestions {
+    position: absolute; left: 0; right: 0; top: calc(100% + 6px);
+    background: var(--navy-900);
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    max-height: 260px; overflow-y: auto;
+    z-index: 20;
+    display: none;
+    box-shadow: 0 14px 30px rgba(0,0,0,0.35);
+  }
+  .suggestions.open { display: block; }
+  .suggestion {
+    padding: 11px 14px; cursor: pointer; display: flex; justify-content: space-between; align-items: baseline;
+    border-bottom: 1px solid var(--navy-800);
+  }
+  .suggestion:last-child { border-bottom: none; }
+  .suggestion:hover, .suggestion.active { background: var(--navy-700); }
+  .suggestion .pname { font-weight: 600; }
+  .suggestion .pmeta { font-size: 12px; color: var(--chalk-500); }
+
+  .chips { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px; min-height: 2px; }
+  .chip {
+    display: flex; align-items: center; gap: 8px;
+    background: var(--navy-900);
+    border: 1px solid var(--turf-500);
+    color: var(--chalk-100);
+    padding: 7px 8px 7px 12px;
+    border-radius: 999px;
+    font-size: 14px; font-weight: 500;
+  }
+  .chip button {
+    background: none; border: none; color: var(--chalk-500); cursor: pointer;
+    font-size: 15px; line-height: 1; padding: 2px 4px; border-radius: 50%;
+  }
+  .chip button:hover { color: var(--coral-500); }
+
+  .all-names { margin-top: 14px; display: flex; flex-direction: column; gap: 8px; }
+  .entity-names {
+    background: var(--navy-900);
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    padding: 2px 14px;
+  }
+  .entity-names summary {
+    cursor: pointer;
+    padding: 10px 0;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--chalk-100);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+  }
+  .entity-names summary::-webkit-details-marker { display: none; }
+  .entity-names summary::after {
+    content: '+';
+    font-size: 18px;
+    color: var(--chalk-500);
+    transition: transform .15s ease;
+  }
+  .entity-names[open] summary::after { transform: rotate(45deg); }
+  .entity-names summary .count { font-weight: 500; color: var(--chalk-500); font-size: 12.5px; }
+  .entity-names ul { list-style: none; margin: 0; padding: 0 0 12px; display: flex; flex-direction: column; gap: 6px; }
+  .entity-names li {
+    display: flex; justify-content: space-between; align-items: center; gap: 10px;
+    font-size: 14.5px; color: var(--chalk-100);
+    padding: 7px 10px;
+    background: var(--navy-800);
+    border-radius: 8px;
+  }
+  .entity-names li button {
+    background: none; border: none; color: var(--chalk-500); cursor: pointer; font-size: 14px; padding: 2px 4px; border-radius: 6px; flex-shrink: 0;
+  }
+  .entity-names li button:hover { color: var(--turf-500); background: rgba(255,255,255,0.06); }
+  .entity-names li button.copied { color: var(--turf-500); }
+  .tagged-credit { color: var(--chalk-500); font-size: 12.5px; margin-left: 6px; font-style: italic; }
+
+  .actions { display: flex; gap: 12px; align-items: center; margin-top: 18px; flex-wrap: wrap; }
+  button.primary {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 18px;
+    letter-spacing: 0.01em;
+    background: var(--gold-400);
+    color: #1A1300;
+    border: none;
+    border-radius: 10px;
+    padding: 12px 22px;
+    cursor: pointer;
+    transition: transform .1s ease, background .15s ease;
+  }
+  button.primary:hover { background: var(--gold-300); }
+  button.primary:active { transform: scale(0.98); }
+  button.primary:disabled { background: var(--navy-700); color: var(--chalk-500); cursor: not-allowed; }
+  button.ghost {
+    background: none; border: 1px solid var(--line); color: var(--chalk-300);
+    font-family: var(--font-body); font-size: 14px; font-weight: 500;
+    border-radius: 10px; padding: 11px 16px; cursor: pointer;
+  }
+  button.ghost:hover { border-color: var(--chalk-500); color: var(--chalk-100); }
+  .hint { font-size: 13px; color: var(--chalk-500); }
+
+  /* Results */
+  .results { margin: 40px 0 60px; }
+
+  .popular-section { margin: 10px 0 40px; }
+  .popular-head h2 { font-family: var(--font-display); font-size: 20px; font-weight: 700; margin: 0 0 14px; }
+  .popular-list { display: flex; flex-direction: column; gap: 8px; }
+  .popular-row {
+    display: flex; align-items: center; gap: 12px;
+    background: var(--navy-800); border: 1px solid var(--line); border-radius: 10px; padding: 10px 14px;
+  }
+  .popular-rank { font-family: var(--font-display); font-weight: 800; font-size: 17px; color: var(--gold-400); width: 22px; text-align: center; flex-shrink: 0; }
+  .popular-body { flex: 1; min-width: 0; }
+  .popular-name { font-weight: 600; font-size: 14.5px; }
+  .popular-meta { color: var(--chalk-500); font-size: 12px; margin-top: 1px; }
+  .popular-copy {
+    flex-shrink: 0; background: none; border: none; cursor: pointer;
+    color: var(--chalk-500); font-size: 15px; padding: 4px; border-radius: 6px;
+  }
+  .popular-copy:hover { background: var(--navy-700); color: var(--chalk-100); }
+  .popular-copy.copied { color: var(--turf-500); }
+  .results-head { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 16px; flex-wrap: wrap; gap: 8px; }
+  .results-head-left { display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap; }
+  .results-head h2 { font-family: var(--font-display); font-size: 26px; margin: 0; font-weight: 700; }
+  .results-head .count { color: var(--chalk-500); font-size: 14px; }
+
+  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 12px; }
+  .card {
+    background: var(--chalk-100);
+    color: var(--navy-950);
+    border-radius: 12px;
+    padding: 16px 16px 14px;
+    position: relative;
+    border-left: 5px solid var(--turf-500);
+    height: 175px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
+  }
+  .card.combo { border-left-color: var(--coral-500); }
+  .card.wild { border-left-color: var(--gold-400); }
+  .card.team { border-left-color: var(--chalk-500); }
+  .card .name {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 21px;
+    line-height: 1.12;
+    margin: 0 0 10px;
+    padding-right: 34px;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+  .card .meta { font-size: 12.5px; color: #4A5A6B; display: flex; gap: 8px; align-items: center; flex-wrap: wrap; }
+  .tag {
+    background: rgba(11,22,34,0.07);
+    border-radius: 999px;
+    padding: 2px 9px;
+    font-weight: 600;
+  }
+  .copy-btn {
+    position: absolute; top: 14px; right: 12px;
+    background: none; border: none; cursor: pointer;
+    color: #4A5A6B; font-size: 15px; padding: 4px;
+    border-radius: 6px;
+  }
+  .copy-btn:hover { background: rgba(11,22,34,0.08); }
+  .copy-btn.copied { color: var(--turf-500); }
+
+  /* ---------- Copy celebration ---------- */
+  .football-fly {
+    position: fixed; left: 0; top: 0; z-index: 300;
+    pointer-events: none; animation: football-fly-across 1.3s cubic-bezier(0.25, 0.1, 0.4, 1) forwards;
+    filter: drop-shadow(0 3px 6px rgba(0,0,0,0.35));
+    will-change: transform, opacity;
+  }
+  .football-fly svg { display: block; }
+  @keyframes football-fly-across {
+    0%   { transform: translate(-5vw,   8vh)   scale(0.3); opacity: 0.9; }
+    15%  { transform: translate(4.1vw,  8.4vh) scale(0.5); }
+    35%  { transform: translate(16.4vw, 13vh)  scale(0.85); }
+    55%  { transform: translate(28.9vw, 22.2vh) scale(1.4); }
+    72%  { transform: translate(39.8vw, 33.7vh) scale(2.1); }
+    86%  { transform: translate(48.8vw, 45.7vh) scale(3); opacity: 1; }
+    100% { transform: translate(58vw,   60vh)  scale(4.2); opacity: 0; }
+  }
+  .landing-burst {
+    position: fixed; z-index: 300; pointer-events: none; font-size: 24px;
+    animation: landing-burst-anim 1.1s cubic-bezier(0.15, 0.6, 0.4, 1) forwards;
+  }
+  @keyframes landing-burst-anim {
+    0%   { transform: translate(0, 0) scale(0.3) rotate(0deg); opacity: 1; }
+    55%  { transform: translate(var(--dx), var(--dy)) scale(1.15) rotate(var(--spin)); opacity: 1; }
+    100% { transform: translate(var(--dx-fall), var(--dy-fall)) scale(0.9) rotate(var(--spin)); opacity: 0; }
+  }
+  .firework-flash {
+    position: fixed; z-index: 299; pointer-events: none; border-radius: 50%;
+    background: radial-gradient(circle, rgba(255,240,200,0.95) 0%, rgba(255,200,80,0.5) 40%, transparent 75%);
+    animation: firework-flash-anim 0.5s ease-out forwards;
+  }
+  @keyframes firework-flash-anim {
+    0% { transform: scale(0); opacity: 1; }
+    100% { transform: scale(1); opacity: 0; }
+  }
+  .celebration-toast {
+    position: fixed; top: max(20px, env(safe-area-inset-top, 0px)); left: 50%;
+    transform: translateX(-50%) translateY(-16px);
+    background: var(--navy-800); border: 1px solid var(--gold-400); border-radius: 12px;
+    padding: 14px 24px; font-family: var(--font-display); font-weight: 700; font-size: 16px;
+    line-height: 1.3; color: var(--chalk-100); z-index: 301; opacity: 0;
+    transition: opacity .3s ease, transform .3s ease;
+    box-shadow: 0 14px 30px rgba(0,0,0,0.4); pointer-events: none; text-align: center; max-width: 88vw;
+  }
+  .celebration-toast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
+  .celebration-toast .team-quote { color: var(--gold-300); }
+
+  .like-row {
+    display: flex; align-items: center; gap: 6px; margin-top: 10px;
+  }
+  .like-btn {
+    display: flex; align-items: center; gap: 5px;
+    background: rgba(11,22,34,0.06); border: none; border-radius: 999px;
+    padding: 4px 10px 4px 8px; cursor: pointer; font-size: 13px; font-weight: 600;
+    color: #4A5A6B; font-family: var(--font-body);
+  }
+  .like-btn:hover { background: rgba(11,22,34,0.12); }
+  .like-btn.liked { background: rgba(232,93,74,0.14); color: var(--coral-500); cursor: pointer; }
+  .like-btn .heart { font-size: 15px; font-weight: 700; }
+  .like-btn.loading { opacity: 0.5; pointer-events: none; }
+
+  .like-inline {
+    background: none; border: none; cursor: pointer; font-size: 12.5px;
+    color: var(--chalk-500); padding: 2px 4px; border-radius: 6px;
+    display: inline-flex; align-items: center; gap: 3px; flex-shrink: 0;
+  }
+  .like-inline:hover { color: var(--coral-500); }
+  .like-inline.liked { color: var(--coral-500); }
+
+  .empty {
+    border: 1px dashed var(--line);
+    border-radius: 12px;
+    padding: 34px 24px;
+    text-align: center;
+    color: var(--chalk-500);
+    font-size: 15px;
+  }
+  .empty b { color: var(--chalk-300); }
 
   footer { border-top: 1px solid var(--line); margin-top: 30px; padding-top: 40px; }
   .footer-grid { display: grid; grid-template-columns: 1.4fr 1fr 1fr 1fr; gap: 24px; padding-bottom: 30px; }
@@ -114,17 +541,38 @@
     .footer-grid { grid-template-columns: 1fr 1fr; }
   }
 
-  @media (max-width: 520px) { .wrap { padding: 0 16px; } }
+  @media (max-width: 520px) {
+    .wrap { padding: 0 16px; }
+    .results-head { flex-direction: column; align-items: flex-start; }
+  }
+
   :focus-visible { outline: 2px solid var(--gold-400); outline-offset: 2px; }
+  @media (prefers-reduced-motion: reduce) {
+    * { transition: none !important; }
+  }
 </style>
+<script src="https://www.gstatic.com/firebasejs/10.13.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.13.0/firebase-firestore-compat.js"></script>
 </head>
 <body>
+<div class="ticker-wrap" id="tickerWrap" style="display:none;">
+  <div class="ticker-bar">
+    <span class="ticker-title" id="tickerTitle">This Week</span>
+    <div class="ticker-track-outer">
+      <div class="ticker-track" id="tickerTrack"></div>
+    </div>
+    <div class="ticker-toggle">
+      <button id="tickerWeekBtn" class="active">This Week</button>
+      <button id="tickerSeasonBtn">Season</button>
+    </div>
+  </div>
+</div>
 <nav class="sport-nav">
   <div class="sport-nav-inner">
     <a href="/" class="sport-tab" id="footballTab">🏈 Fantasy Football</a>
     <a href="/baseball/" class="sport-tab">⚾ Fantasy Baseball <span class="soon-badge">Soon</span></a>
+    <a href="/basketball/" class="sport-tab">🏀 Fantasy Basketball <span class="soon-badge">Soon</span></a>
     <a href="/basketball/" class="sport-tab active">🏀 Fantasy Basketball</a>
-    <a href="/hockey/" class="sport-tab">🏒 Fantasy Hockey</a>
     <a href="/suggest/" class="sport-tab">💡 Suggest a Name</a>
   </div>
 </nav>
@@ -162,6 +610,8 @@
   });
   dropdown.addEventListener('mouseleave', closeDropdown);
 
+  // Touch devices have no hover state at all, so the first tap opens the
+  // dropdown instead of navigating; a second tap on a link inside proceeds.
   trigger.addEventListener('click', (e) => {
     if(!dropdown.classList.contains('open')){
       e.preventDefault();
@@ -180,20 +630,51 @@
 <div class="wrap">
 
   <header class="top">
-    <div class="brand"><a href="/"><span class="ball">🏈</span><span class="brand-text"><span class="brand-the">The</span><span class="brand-name">Fantasy Name HQ</span></span></a></div>
+    <div class="brand"><span class="ball">🏀</span><span class="brand-text"><span class="brand-the">The</span><span class="brand-name">Fantasy Name HQ</span></span></div>
   </header>
 
-  <section class="coming-soon">
-    <div class="icon">🏀</div>
-    <h1>Fantasy Basketball is coming soon</h1>
-    <p>We're just getting started with football, but fantasy basketball team names are on the roadmap. Check back later in the year.</p>
-    <a href="/" class="cta">&larr; Back to Fantasy Football</a>
+  <section class="hero">
+    <h1>Find your team a<br>name with some real <span class="hl">buzzer-beater energy.</span></h1>
+    <p class="sub">Pick the players on your roster. We'll match their names against a growing pile of puns, chirps, and one-liners so you're not stuck as "Team Steve" again this year. Fresh off the court — we're still building out the pun library, so expect gaps here and there.</p>
+
+    <div class="name-count-badge">🔥 <span id="totalNameCount">—</span> team names and counting</div>
+
+    <div class="picker">
+      <p class="picker-label">Search for a player or team and add them to your roster</p>
+      <div class="search-row">
+        <input id="playerSearch" type="text" placeholder="Try “McDavid,” “Ovechkin,” or “Bruins”…" autocomplete="off">
+        <div id="suggestions" class="suggestions"></div>
+      </div>
+      <div id="chips" class="chips"></div>
+      <div id="allNames" class="all-names"></div>
+      <div class="actions">
+        <button class="primary" id="generateBtn" disabled>🎲 Can't decide? Let us take a shot.</button>
+        <span class="hint" id="hint">Add at least one player to get started</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="results" id="luckyPickSection" style="display:none;">
+    <div class="results-head">
+      <div class="results-head-left">
+        <h2>🎲 Your Pick</h2>
+      </div>
+      <button class="ghost" id="shuffleBtn" style="display:none;">Try another</button>
+    </div>
+    <div class="popular-list" id="luckyPickGrid"></div>
+  </section>
+
+  <section class="popular-section" id="popularSection" style="display:none;">
+    <div class="popular-head">
+      <h2>🏆 Top 10 Most Popular</h2>
+    </div>
+    <div id="popularList" class="popular-list"></div>
   </section>
 
   <footer>
     <div class="footer-grid">
       <div class="footer-col">
-        <div class="footer-brand">🏈<span class="brand-text"><span class="brand-the">The</span><span class="brand-name">Fantasy Name HQ</span></span></div>
+        <div class="footer-brand">🏀<span class="brand-text"><span class="brand-the">The</span><span class="brand-name">Fantasy Name HQ</span></span></div>
         <p class="footer-tagline">Built by a fan who takes team names way too seriously.</p>
       </div>
       <div class="footer-col">
@@ -207,7 +688,7 @@
         <a href="/">Fantasy Football</a>
         <a href="/baseball/">Fantasy Baseball</a>
         <a href="/basketball/">Fantasy Basketball</a>
-        <a href="/hockey/">Fantasy Hockey</a>
+        <a href="/basketball/">Fantasy Basketball</a>
       </div>
       <div class="footer-col">
         <h4>Legal</h4>
@@ -218,9 +699,1061 @@
     </div>
     <div class="footer-bottom">
       <span>&copy; 2026 The Fantasy Name HQ</span>
+      <span id="dbCount"></span>
     </div>
   </footer>
 
 </div>
+
+<script>
+// ---------- Data ----------
+// Each player carries curated, player-specific name options.
+// Covers the full active roster, mixing hand-curated puns with
+// template-generated placeholders and crowdsourced suggestions.
+const PLAYERS = [];
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+const TEAMS = [];
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Fallback puns for teams that don't have curated names yet
+const TEAM_TEMPLATES = [
+  (city,nick) => `${nick} or Nothing`,
+  (city,nick) => `In ${nick} We Trust`,
+  (city,nick) => `${city}'s Finest`,
+  (city,nick) => `Long Live the ${nick}`,
+  (city,nick) => `${nick} 'Til I Die`,
+  (city,nick) => `${city} Faithful`,
+  (city,nick) => `The ${nick} Way`,
+];
+
+function getTeamNames(team){
+  if(team.names.length > 0) return team.names;
+  const rnd = seededRandom(team.abbr);
+  return shuffleWith(rnd, TEAM_TEMPLATES).slice(0, 5).map(t => t(team.city, team.nickname));
+}
+
+function seededRandom(seed){
+  let h = 0;
+  for(let i=0;i<seed.length;i++) h = (h * 31 + seed.charCodeAt(i)) >>> 0;
+  return function(){ h = (h * 1664525 + 1013904223) >>> 0; return h / 4294967296; };
+}
+function shuffleWith(rnd, arr){
+  const a = arr.slice();
+  for(let i=a.length-1;i>0;i--){ const j=Math.floor(rnd()*(i+1)); [a[i],a[j]]=[a[j],a[i]]; }
+  return a;
+}
+
+// Unified searchable list: players and teams share one interface.
+// Populated by buildEntities() once players_basketball.json/teams_basketball.json/generic_basketball.json have loaded.
+const ENTITIES = [];
+let GENERIC_WILDCARDS = [];
+let GENERIC_BY_CATEGORY = {};
+let TAGGED_NAME_SOURCE = {};
+let CURATED_COMBOS = [];
+
+function buildEntities(){
+  PLAYERS.filter(p => p.active !== false).forEach(p => ENTITIES.push({ ...p, kind: 'player' }));
+  TEAMS.forEach(t => ENTITIES.push({
+    id: t.abbr.toLowerCase() + '_team',
+    kind: 'team',
+    city: t.city,
+    nickname: t.nickname,
+    abbr: t.abbr,
+    team: t.abbr,
+    pos: 'DST',
+    names: t.names
+  }));
+
+  // Individual generic names are intentionally not made searchable one by
+  // one here (for now) — only the bulk browse-all-of-this-category options
+  // below are, so search results stay to players, teams, and named
+  // categories rather than surfacing every single wildcard phrase directly.
+  ENTITIES.push({ id: 'generic_all', kind: 'genericAll', names: GENERIC_WILDCARDS });
+  function categoryPool(category){
+    const fromGeneric = GENERIC_BY_CATEGORY[category] || [];
+    // Player-specific puns can also carry a category tag (e.g. a pun that's
+    // both about a specific player AND a TV-show reference), so those get
+    // folded into the same searchable pool.
+    const fromPlayers = [];
+    PLAYERS.forEach(p => {
+      if(p.taggedNames && p.taggedNames[category]){
+        p.taggedNames[category].forEach(n => {
+          fromPlayers.push(n);
+          if(!TAGGED_NAME_SOURCE[n]) TAGGED_NAME_SOURCE[n] = [];
+          TAGGED_NAME_SOURCE[n].push(`${p.first} ${p.last}`);
+        });
+      }
+    });
+    // Team-level puns can carry the same category tags as player puns (e.g.
+    // a team joke that's also a Star Wars reference).
+    const fromTeams = [];
+    TEAMS.forEach(t => {
+      if(t.taggedNames && t.taggedNames[category]){
+        t.taggedNames[category].forEach(n => {
+          fromTeams.push(n);
+          if(!TAGGED_NAME_SOURCE[n]) TAGGED_NAME_SOURCE[n] = [];
+          TAGGED_NAME_SOURCE[n].push(`${t.city} ${t.nickname}`);
+        });
+      }
+    });
+    // The same pun text can be tagged on multiple players (e.g. "Wilsons of
+    // Anarchy" appears on 8 different Wilsons), so dedupe before returning
+    // — otherwise it shows up repeatedly in this category's search pool.
+    return [...new Set(fromGeneric.concat(fromPlayers).concat(fromTeams))];
+  }
+
+  ENTITIES.push({ id: 'generic_movie', kind: 'genericMovie', names: categoryPool('movie') });
+  ENTITIES.push({ id: 'generic_music', kind: 'genericMusic', names: categoryPool('music') });
+  ENTITIES.push({ id: 'generic_tv', kind: 'genericTv', names: categoryPool('tv') });
+  const starWarsPool = categoryPool('starwars');
+  if(starWarsPool.length > 0) ENTITIES.push({ id: 'generic_starwars', kind: 'genericStarWars', names: starWarsPool });
+  const foodPool = categoryPool('food');
+  if(foodPool.length > 0) ENTITIES.push({ id: 'generic_food', kind: 'genericFood', names: foodPool });
+  const marvelPool = categoryPool('marvel');
+  if(marvelPool.length > 0) ENTITIES.push({ id: 'generic_marvel', kind: 'genericMarvel', names: marvelPool });
+}
+
+function findCuratedCombo(a, b){
+  return CURATED_COMBOS.find(c =>
+    (c.ids[0] === a.id && c.ids[1] === b.id) || (c.ids[0] === b.id && c.ids[1] === a.id)
+  );
+}
+
+const COMBO_TEMPLATES = [
+  (a,b) => `${a.last} & ${b.last} Inc.`,
+  (a,b) => `${a.first}-${b.first} Connection`,
+  (a,b) => `${a.last}'s Neighborhood ft. ${b.last}`,
+  (a,b) => `The ${a.last}-${b.last} Experience`,
+  (a,b) => `${a.first} & ${b.first}'s Excellent Adventure`,
+  (a,b) => `Double ${a.pos === b.pos ? a.pos + ' Trouble' : 'Trouble, ' + a.last + ' Style'}`,
+  (a,b) => `${a.last} Feat. ${b.last}`,
+];
+
+// ---------- State ----------
+let selected = [];
+let lastResults = [];
+
+const searchInput = document.getElementById('playerSearch');
+const suggestionsBox = document.getElementById('suggestions');
+const chipsBox = document.getElementById('chips');
+const generateBtn = document.getElementById('generateBtn');
+const shuffleBtn = document.getElementById('shuffleBtn');
+const hint = document.getElementById('hint');
+const luckyPickSection = document.getElementById('luckyPickSection');
+const luckyPickGrid = document.getElementById('luckyPickGrid');
+
+function fullName(e){
+  if(e.kind === 'team') return `${e.city} ${e.nickname}`;
+  if(e.kind === 'wildcard') return e.names[0];
+  if(e.kind === 'genericAll') return 'Generic Names';
+  if(e.kind === 'genericMovie') return 'Movie Names';
+  if(e.kind === 'genericMusic') return 'Music Names';
+  if(e.kind === 'genericTv') return 'TV Show Names';
+  if(e.kind === 'genericStarWars') return 'Star Wars Names';
+  if(e.kind === 'genericFood') return 'Food Names';
+  if(e.kind === 'genericMarvel') return 'Marvel Names';
+  return `${e.first} ${e.last}`;
+}
+
+// Defensive players don't have "the defense" in their own name, so team searches need to reach them too
+const DEFENSIVE_POS = new Set(['DE','DT','LB','OLB','ILB','CB','S','FS','SS','DB','NT','EDGE']);
+function teamMatchesQuery(abbr, q){
+  const t = TEAMS.find(t => t.abbr === abbr);
+  if(!t) return false;
+  return t.abbr.toLowerCase().includes(q) || t.city.toLowerCase().includes(q) || t.nickname.toLowerCase().includes(q);
+}
+
+function renderSuggestions(query){
+  const q = query.trim().toLowerCase();
+  if(!q){ suggestionsBox.classList.remove('open'); suggestionsBox.innerHTML=''; return; }
+
+  const notSelected = e => !selected.find(s => s.id === e.id);
+  const matchesQuery = e => fullName(e).toLowerCase().includes(q) || (e.kind==='team' && e.abbr.toLowerCase().includes(q));
+
+  // Players and teams stay capped to a manageable dropdown; every matching generic name shows up regardless of count
+  const nonWildcardMatches = ENTITIES.filter(e => e.kind !== 'wildcard' && notSelected(e) && matchesQuery(e)).slice(0, 8);
+  const wildcardMatches = ENTITIES.filter(e => e.kind === 'wildcard' && notSelected(e) && matchesQuery(e));
+  const matches = [...nonWildcardMatches, ...wildcardMatches];
+
+  if(matches.length === 0){
+    suggestionsBox.innerHTML = `<div class="suggestion"><span class="pmeta">Nothing matched — try a different spelling</span></div>`;
+    suggestionsBox.classList.add('open');
+    return;
+  }
+  suggestionsBox.innerHTML = matches.map(e => `
+    <div class="suggestion" data-id="${e.id}">
+      <span class="pname">${fullName(e)}</span>
+      <span class="pmeta">${e.kind === 'team' ? `DST · ${e.abbr}` : e.kind === 'wildcard' ? 'Generic name' : e.kind === 'genericAll' ? `Browse all ${e.names.length}` : e.kind === 'genericMovie' ? `Browse all ${e.names.length}` : e.kind === 'genericMusic' ? `Browse all ${e.names.length}` : e.kind === 'genericTv' ? `Browse all ${e.names.length}` : e.kind === 'genericStarWars' ? `Browse all ${e.names.length}` : e.kind === 'genericFood' ? `Browse all ${e.names.length}` : e.kind === 'genericMarvel' ? `Browse all ${e.names.length}` : `${e.pos} · ${e.team}`}</span>
+    </div>`).join('');
+  suggestionsBox.classList.add('open');
+}
+
+suggestionsBox.addEventListener('click', (e) => {
+  const row = e.target.closest('.suggestion');
+  if(!row || !row.dataset.id) return;
+  addPlayer(row.dataset.id);
+});
+
+searchInput.addEventListener('input', () => renderSuggestions(searchInput.value));
+searchInput.addEventListener('focus', () => renderSuggestions(searchInput.value));
+document.addEventListener('click', (e) => {
+  if(!e.target.closest('.search-row')) suggestionsBox.classList.remove('open');
+});
+
+function addPlayer(id){
+  const e = ENTITIES.find(e => e.id === id);
+  if(!e || selected.find(s => s.id === id)) return;
+  selected.push(e);
+  searchInput.value = '';
+  suggestionsBox.classList.remove('open');
+  renderChips();
+}
+
+function removePlayer(id){
+  selected = selected.filter(s => s.id !== id);
+  renderChips();
+}
+
+function renderChips(){
+  chipsBox.innerHTML = selected.map(e => `
+    <span class="chip">${e.kind === 'team' ? '🛡 ' : e.kind === 'wildcard' ? '✨ ' : e.kind === 'genericAll' ? '🗂 ' : e.kind === 'genericMovie' ? '🎬 ' : e.kind === 'genericMusic' ? '🎵 ' : e.kind === 'genericTv' ? '📺 ' : e.kind === 'genericStarWars' ? '⭐ ' : e.kind === 'genericFood' ? '🍟 ' : e.kind === 'genericMarvel' ? '🦸 ' : ''}${fullName(e)}<button aria-label="Remove ${fullName(e)}" data-id="${e.id}">✕</button></span>
+  `).join('');
+  chipsBox.querySelectorAll('button').forEach(btn => {
+    btn.addEventListener('click', () => removePlayer(btn.dataset.id));
+  });
+  if(selected.length === 0){
+    hint.textContent = 'Or search above to build your own roster';
+  } else {
+    hint.textContent = `${selected.length} on the roster`;
+  }
+  renderAllNames();
+  if(selected.length === 0){
+    luckyPickSection.style.display = 'none';
+    shuffleBtn.style.display = 'none';
+  }
+}
+
+
+function puckSvg(){
+  return `<svg viewBox="0 0 100 100" width="90" height="90">
+    <defs>
+      <radialGradient id="bballGrad" cx="35%" cy="30%" r="75%">
+        <stop offset="0%" stop-color="#F2A65A"/>
+        <stop offset="55%" stop-color="#E8791A"/>
+        <stop offset="100%" stop-color="#B85C0F"/>
+      </radialGradient>
+    </defs>
+    <circle cx="50" cy="50" r="46" fill="url(#bballGrad)" stroke="#000" stroke-width="2"/>
+    <path d="M 50 4 L 50 96" stroke="#1a1a1a" stroke-width="2.5" fill="none"/>
+    <path d="M 4 50 L 96 50" stroke="#1a1a1a" stroke-width="2.5" fill="none"/>
+    <path d="M 15 15 Q 50 35 15 85" stroke="#1a1a1a" stroke-width="2.5" fill="none"/>
+    <path d="M 85 15 Q 50 35 85 85" stroke="#1a1a1a" stroke-width="2.5" fill="none"/>
+    <ellipse cx="36" cy="32" rx="14" ry="7" fill="#FFFFFF" opacity="0.2" transform="rotate(-20 36 32)"/>
+  </svg>`;
+}
+
+function celebrateCopy(teamName){
+  const puck = document.createElement('div');
+  puck.className = 'football-fly';
+  puck.innerHTML = puckSvg();
+  document.body.appendChild(puck);
+
+  setTimeout(() => {
+    puck.remove();
+  }, 1400);
+
+  // A little burst of confetti right as the ball "arrives," near where
+  // it grows largest before fading out.
+  setTimeout(() => celebrateFireworksShow(), 1150);
+
+  const toast = document.createElement('div');
+  toast.className = 'celebration-toast';
+  toast.innerHTML = `🏆 Good luck this season,<br><span class="team-quote">"${escapeHtml(teamName)}"</span>`;
+  document.body.appendChild(toast);
+  requestAnimationFrame(() => toast.classList.add('show'));
+  setTimeout(() => {
+    toast.classList.remove('show');
+    setTimeout(() => toast.remove(), 350);
+  }, 2200);
+}
+
+function spawnLandingBurst(x, y){
+  // A bright flash at the center, like the pop of a real firework.
+  const flash = document.createElement('div');
+  flash.className = 'firework-flash';
+  flash.style.left = (x - 60) + 'px';
+  flash.style.top = (y - 60) + 'px';
+  flash.style.width = '120px';
+  flash.style.height = '120px';
+  document.body.appendChild(flash);
+  setTimeout(() => flash.remove(), 550);
+
+  const pieces = ['🎉', '✨', '🏀', '🏆', '🔥', '🎊', '💯'];
+  const count = 60;
+  for(let i = 0; i < count; i++){
+    const piece = document.createElement('div');
+    piece.className = 'landing-burst';
+    piece.textContent = pieces[Math.floor(Math.random() * pieces.length)];
+    const angle = (Math.PI * 2 * i) / count + (Math.random() * 0.3);
+    const distance = 120 + Math.random() * 220;
+    const dx = Math.cos(angle) * distance;
+    const dy = Math.sin(angle) * distance;
+    piece.style.left = x + 'px';
+    piece.style.top = y + 'px';
+    piece.style.setProperty('--dx', dx + 'px');
+    piece.style.setProperty('--dy', dy + 'px');
+    // After the initial burst, let gravity pull each piece down and a
+    // little further outward, like real firework sparks falling.
+    piece.style.setProperty('--dx-fall', (dx * 1.15) + 'px');
+    piece.style.setProperty('--dy-fall', (dy + 60 + Math.random() * 50) + 'px');
+    piece.style.setProperty('--spin', (Math.random() > 0.5 ? 1 : -1) * (180 + Math.random() * 360) + 'deg');
+    document.body.appendChild(piece);
+    setTimeout(() => piece.remove(), 1150);
+  }
+}
+
+// A full fireworks show rather than one burst: the main one where the ball
+// "lands," plus a couple more at random spots around the page shortly after,
+// so the celebration actually fills the screen instead of staying confined
+// to one small area.
+function celebrateFireworksShow(){
+  spawnLandingBurst(window.innerWidth * 0.57, window.innerHeight * 0.58);
+  setTimeout(() => {
+    spawnLandingBurst(window.innerWidth * (0.12 + Math.random() * 0.2), window.innerHeight * (0.2 + Math.random() * 0.25));
+  }, 180);
+  setTimeout(() => {
+    spawnLandingBurst(window.innerWidth * (0.68 + Math.random() * 0.22), window.innerHeight * (0.15 + Math.random() * 0.3));
+  }, 340);
+  setTimeout(() => {
+    spawnLandingBurst(window.innerWidth * (0.2 + Math.random() * 0.6), window.innerHeight * (0.55 + Math.random() * 0.3));
+  }, 520);
+}
+
+function escapeHtml(s){
+  return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+}
+
+function getDefensivePlayersForTeam(abbr){
+  return ENTITIES.filter(e => e.kind === 'player' && DEFENSIVE_POS.has(e.pos) && e.team === abbr);
+}
+
+const allNamesBox = document.getElementById('allNames');
+
+async function renderAllNames(){
+  if(selected.length === 0){ allNamesBox.innerHTML = ''; return; }
+
+  // Selecting a team auto-pulls in that team's defensive players too, unless already picked directly
+  const seenIds = new Set();
+  const toRender = [];
+  selected.forEach(e => {
+    if(!seenIds.has(e.id)){ toRender.push(e); seenIds.add(e.id); }
+    if(e.kind === 'team'){
+      getDefensivePlayersForTeam(e.abbr).forEach(dp => {
+        if(!seenIds.has(dp.id)){ toRender.push(dp); seenIds.add(dp.id); }
+      });
+    }
+  });
+
+  const entityNames = toRender.map(e => e.kind === 'team' ? getTeamNames(e) : e.names);
+
+  allNamesBox.innerHTML = toRender.map((e, idx) => {
+    const names = entityNames[idx];
+    const icon = e.kind === 'team' ? '🛡 ' : e.kind === 'genericAll' ? '🗂 ' : e.kind === 'genericMovie' ? '🎬 ' : e.kind === 'genericMusic' ? '🎵 ' : e.kind === 'genericTv' ? '📺 ' : e.kind === 'genericStarWars' ? '⭐ ' : e.kind === 'genericFood' ? '🍟 ' : e.kind === 'genericMarvel' ? '🦸 ' : e.kind === 'wildcard' ? '✨ ' : (DEFENSIVE_POS.has(e.pos) ? '🛡️ ' : '');
+    const label = fullName(e);
+    const isGenericCategory = e.kind && e.kind.startsWith('generic');
+    return `
+    <details class="entity-names">
+      <summary>${icon}${label}<span class="count">${names.length} name${names.length !== 1 ? 's' : ''}</span></summary>
+      <ul>
+        ${names.map(n => {
+          // A generic-category name can secretly be tied to one specific
+          // player (e.g. "McDavidpool" tagged as a Movie reference on
+          // Connor McDavid) \u2014 credit them so it's not a mystery why this
+          // name is in the list.
+          const sources = isGenericCategory ? TAGGED_NAME_SOURCE[n] : null;
+          const credit = sources && sources.length === 1 ? `<span class="tagged-credit">\u2014 ${escapeHtml(sources[0])}</span>` : '';
+          return `<li><span>${n}${credit}</span><span style="display:flex;align-items:center;gap:6px;">${likeButtonHtml(e.id, n, label, true)}<button class="copy-name" data-name="${escapeHtml(n)}" aria-label="Copy ${escapeHtml(n)}">⧉</button></span></li>`;
+        }).join('')}
+      </ul>
+    </details>`;
+  }).join('');
+
+  allNamesBox.querySelectorAll('.copy-name').forEach(btn => {
+    btn.addEventListener('click', () => {
+      navigator.clipboard?.writeText(btn.dataset.name).catch(() => {});
+      const original = btn.textContent;
+      btn.classList.add('copied');
+      btn.textContent = '✓';
+      setTimeout(() => { btn.classList.remove('copied'); btn.textContent = original; }, 1200);
+      celebrateCopy(btn.dataset.name);
+    });
+  });
+  wireLikeButtons(allNamesBox);
+}
+
+function shuffle(arr){
+  const a = arr.slice();
+  for(let i = a.length - 1; i > 0; i--){
+    const j = Math.floor(Math.random() * (i + 1));
+    [a[i], a[j]] = [a[j], a[i]];
+  }
+  return a;
+}
+
+// ---------- Likes / popularity (Firebase Firestore) ----------
+// Uses its own project collection (likes_basketball), fully separate from
+// football's "likes" collection, and its own localStorage key for which
+// puns this browser has liked, so the two sports never share state.
+const firebaseConfig = {
+  apiKey: "AIzaSyBrKEhoELjV_LBNYpqJgy_prsS9OPNjp5E",
+  authDomain: "draft-a-name.firebaseapp.com",
+  projectId: "draft-a-name",
+  storageBucket: "draft-a-name.firebasestorage.app",
+  messagingSenderId: "32475030057",
+  appId: "1:32475030057:web:8a1d4ec6e4725ae08c3238"
+};
+firebase.initializeApp(firebaseConfig);
+const likesDb = firebase.firestore();
+const LIKES_COLLECTION = 'likes_basketball';
+
+async function mergeSubmittedNames(){
+  try {
+    const snap = await likesDb.collection('submitted_names_basketball').where('status', '==', 'approved').get();
+    snap.forEach(doc => {
+      const d = doc.data();
+      const entity = PLAYERS.find(p => p.id === d.playerId) || TEAMS.find(t => t.abbr.toLowerCase() + '_team' === d.playerId);
+      if(!entity) return;
+      if(!entity.names) entity.names = [];
+      if(!entity.names.includes(d.name)) entity.names.push(d.name);
+    });
+  } catch(err){ console.error('mergeSubmittedNames (basketball) failed', err); }
+}
+
+function hashKey(str){
+  let h = 5381;
+  for(let i = 0; i < str.length; i++){
+    h = ((h << 5) + h + str.charCodeAt(i)) >>> 0;
+  }
+  return 'l' + h.toString(36);
+}
+// Keyed by pun text alone, so the same joke always aggregates the same vote
+// count no matter which player/team surface it's liked from.
+function likeIdFor(punText){
+  return hashKey(punText);
+}
+
+// A local cache of like counts, used to bias which puns get picked when
+// generating results — not just to display counts.
+let LIKES_MAP = {};
+async function loadLikesMap(){
+  try {
+    const snap = await likesDb.collection(LIKES_COLLECTION).orderBy('count', 'desc').limit(500).get();
+    snap.forEach(doc => { LIKES_MAP[doc.id] = doc.data().count || 0; });
+  } catch(err){ console.error('loadLikesMap failed', err); }
+}
+
+// Weighted random pick without replacement: every name has a baseline weight
+// of 1 (so everything still has a chance), plus its like count, so more
+// popular puns come up more often without making results fully predictable.
+function weightedPickBy(items, getText, n, weightFn){
+  if(!items || items.length === 0) return [];
+  const weigh = weightFn || (count => 1 + count);
+  const pool = items.map(item => ({ item, weight: weigh(LIKES_MAP[likeIdFor(getText(item))] || 0) }));
+  const picked = [];
+  for(let i = 0; i < n && pool.length > 0; i++){
+    const totalWeight = pool.reduce((sum, w) => sum + w.weight, 0);
+    let r = Math.random() * totalWeight;
+    let idx = 0;
+    for(; idx < pool.length - 1; idx++){
+      r -= pool[idx].weight;
+      if(r <= 0) break;
+    }
+    picked.push(pool[idx].item);
+    pool.splice(idx, 1);
+  }
+  return picked;
+}
+function weightedPick(names, n){
+  return weightedPickBy(names, n => n, n);
+}
+
+function getLikedSet(){
+  try {
+    return new Set(JSON.parse(localStorage.getItem('dan_liked_basketball') || '[]'));
+  } catch(e){ return new Set(); }
+}
+function saveLikedSet(set){
+  try { localStorage.setItem('dan_liked_basketball', JSON.stringify([...set])); } catch(e){}
+}
+
+function likeButtonHtml(entityId, punText, entityLabel, inline){
+  const likeId = likeIdFor(punText);
+  const liked = getLikedSet().has(likeId);
+  const cls = inline ? 'like-inline' : 'like-btn';
+  return `<button class="${cls}${liked ? ' liked' : ''}" data-like-id="${likeId}"
+      data-pun="${escapeHtml(punText)}" data-entity-id="${escapeHtml(entityId)}" data-entity-label="${escapeHtml(entityLabel)}"
+      ${liked ? 'aria-pressed="true"' : ''}>
+      <span class="heart">${liked ? '❤️' : '♡'}</span><span class="like-count">${liked ? '' : '·'}</span>
+    </button>`;
+}
+
+async function batchGetCounts(likeIds){
+  const counts = {};
+  const unique = [...new Set(likeIds)];
+  for(let i = 0; i < unique.length; i += 10){
+    const chunk = unique.slice(i, i + 10);
+    if(chunk.length === 0) continue;
+    try {
+      const snap = await likesDb.collection(LIKES_COLLECTION)
+        .where(firebase.firestore.FieldPath.documentId(), 'in', chunk)
+        .get();
+      snap.forEach(doc => { counts[doc.id] = doc.data().count || 0; });
+    } catch(err){ console.error('batchGetCounts failed', err); }
+  }
+  return counts;
+}
+
+async function wireLikeButtons(container){
+  const buttons = [...container.querySelectorAll('.like-btn, .like-inline')];
+  if(buttons.length === 0) return;
+  const ids = buttons.map(b => b.dataset.likeId);
+  const counts = await batchGetCounts(ids);
+  buttons.forEach(btn => {
+    const c = counts[btn.dataset.likeId] || 0;
+    const span = btn.querySelector('.like-count');
+    if(span) span.textContent = c > 0 ? c : (btn.classList.contains('liked') ? '' : '·');
+  });
+  buttons.forEach(btn => {
+    btn.onclick = () => handleLikeClick(btn);
+  });
+}
+
+async function handleLikeClick(btn){
+  const likedSet = getLikedSet();
+  const likeId = btn.dataset.likeId;
+  const isLiked = likedSet.has(likeId);
+  btn.classList.add('loading');
+  const ref = likesDb.collection(LIKES_COLLECTION).doc(likeId);
+  try {
+    if(isLiked){
+      const snap = await ref.get();
+      const current = snap.exists ? (snap.data().count || 0) : 0;
+      if(current > 0){
+        await ref.update({ count: firebase.firestore.FieldValue.increment(-1) });
+      }
+      likedSet.delete(likeId);
+      saveLikedSet(likedSet);
+      const fresh = await ref.get();
+      setLikedUI(btn, fresh.exists ? (fresh.data().count || 0) : 0, false);
+    } else {
+      const snap = await ref.get();
+      if(snap.exists){
+        await ref.update({ count: firebase.firestore.FieldValue.increment(1) });
+        const fresh = await ref.get();
+        setLikedUI(btn, fresh.data().count || 1, true);
+      } else {
+        await ref.set({
+          name: btn.dataset.pun,
+          entityId: btn.dataset.entityId,
+          entityLabel: btn.dataset.entityLabel,
+          count: 1
+        });
+        setLikedUI(btn, 1, true);
+      }
+      likedSet.add(likeId);
+      saveLikedSet(likedSet);
+    }
+  } catch(err){
+    console.error('Like toggle failed', err);
+  }
+  btn.classList.remove('loading');
+}
+
+function setLikedUI(btn, count, liked){
+  btn.classList.toggle('liked', liked);
+  btn.querySelector('.heart').textContent = liked ? '❤️' : '♡';
+  btn.querySelector('.like-count').textContent = count > 0 ? count : (liked ? '' : '·');
+}
+
+async function loadTopPopular(){
+  const sectionEl = document.getElementById('popularSection');
+  const listEl = document.getElementById('popularList');
+  try {
+    const snap = await likesDb.collection(LIKES_COLLECTION).orderBy('count', 'desc').limit(10).get();
+    const docs = [];
+    snap.forEach(d => docs.push({ id: d.id, ...d.data() }));
+
+    if(docs.length === 0){
+      sectionEl.style.display = 'none';
+      return;
+    }
+
+    sectionEl.style.display = 'block';
+    listEl.innerHTML = docs.map((d, i) => `
+      <div class="popular-row">
+        <span class="popular-rank">${i + 1}</span>
+        <div class="popular-body">
+          <div class="popular-name">${d.name}</div>
+          <div class="popular-meta">${d.count} like${d.count !== 1 ? 's' : ''} \u00b7 ${d.entityLabel || ''}</div>
+        </div>
+        <button class="popular-copy" data-text="${escapeHtml(d.name)}" aria-label="Copy name">⧉</button>
+        ${likeButtonHtml(d.entityId || 'unknown', d.name, d.entityLabel || '', true)}
+      </div>
+    `).join('');
+    wireLikeButtons(listEl);
+    listEl.querySelectorAll('.popular-copy').forEach(btn => {
+      btn.addEventListener('click', () => {
+        navigator.clipboard?.writeText(btn.dataset.text).catch(() => {});
+        btn.classList.add('copied');
+        btn.textContent = '✓';
+        setTimeout(() => { btn.classList.remove('copied'); btn.textContent = '⧉'; }, 1200);
+        celebrateCopy(btn.dataset.text);
+      });
+    });
+  } catch(err){
+    console.error('loadTopPopular failed', err);
+    sectionEl.style.display = 'none';
+  }
+}
+
+const TOTAL_RESULTS_CAP = 9;
+
+function buildResults(){
+  const guaranteed = [];
+  const bonusPool = [];
+  const selectedPlayers = selected.filter(e => e.kind === 'player');
+  const selectedTeams = selected.filter(e => e.kind === 'team');
+  const selectedWildcards = selected.filter(e => e.kind === 'wildcard');
+  const selectedGenericAll = selected.filter(e => e.kind === 'genericAll');
+  const selectedGenericMovie = selected.filter(e => e.kind === 'genericMovie');
+  const selectedGenericMusic = selected.filter(e => e.kind === 'genericMusic');
+  const selectedGenericTv = selected.filter(e => e.kind === 'genericTv');
+  const selectedGenericStarWars = selected.filter(e => e.kind === 'genericStarWars');
+  const selectedGenericFood = selected.filter(e => e.kind === 'genericFood');
+  const selectedGenericMarvel = selected.filter(e => e.kind === 'genericMarvel');
+
+  // Guarantee exactly one result for every entity the user actually searched
+  // for and added — so nothing they picked gets crowded out of the results.
+  // Picks favor more-liked puns via weightedPick, but still land on
+  // everything eventually since every name keeps a baseline chance.
+  selectedPlayers.forEach(p => {
+    const picks = weightedPick(p.names, Math.min(p.names.length, 3));
+    if(picks[0]) guaranteed.push({ name: picks[0], type: 'solo', meta: `${fullName(p)} · ${p.team}` });
+    picks.slice(1).forEach(n => bonusPool.push({ name: n, type: 'solo', meta: `${fullName(p)} · ${p.team}` }));
+  });
+  selectedTeams.forEach(t => {
+    const teamNames = getTeamNames(t);
+    const picks = weightedPick(teamNames, Math.min(teamNames.length, 3));
+    if(picks[0]) guaranteed.push({ name: picks[0], type: 'team', meta: `${fullName(t)} defense` });
+    picks.slice(1).forEach(n => bonusPool.push({ name: n, type: 'team', meta: `${fullName(t)} defense` }));
+    // Defensive players on that team are bonus content only, not guaranteed —
+    // this used to multiply fast when a team had a lot of defenders.
+    getDefensivePlayersForTeam(t.abbr)
+      .filter(dp => !selectedPlayers.find(p => p.id === dp.id))
+      .forEach(dp => {
+        weightedPick(dp.names, 1).forEach(n => {
+          bonusPool.push({ name: n, type: 'solo', meta: `${fullName(dp)} · ${dp.team} defense` });
+        });
+      });
+  });
+  selectedWildcards.forEach(w => {
+    guaranteed.push({ name: w.names[0], type: 'wild', meta: 'Handpicked' });
+  });
+  function categoryMeta(baseLabel, name){
+    const sources = TAGGED_NAME_SOURCE[name];
+    // Only credit a specific player when the pun maps to exactly one —
+    // some (like "Wilsons of Anarchy") are shared across several players
+    // by surname, and naming all of them would be more clutter than help.
+    if(sources && sources.length === 1) return `${baseLabel} \u2014 ${sources[0]}`;
+    return baseLabel;
+  }
+  selectedGenericAll.forEach(g => {
+    weightedPick(g.names, Math.min(g.names.length, 3)).forEach(n => bonusPool.push({ name: n, type: 'wild', meta: 'From the generic list' }));
+  });
+  selectedGenericMovie.forEach(g => {
+    weightedPick(g.names, Math.min(g.names.length, 3)).forEach(n => bonusPool.push({ name: n, type: 'wild', meta: categoryMeta('Movie-themed pick', n) }));
+  });
+  selectedGenericMusic.forEach(g => {
+    weightedPick(g.names, Math.min(g.names.length, 3)).forEach(n => bonusPool.push({ name: n, type: 'wild', meta: categoryMeta('Music-themed pick', n) }));
+  });
+  selectedGenericTv.forEach(g => {
+    weightedPick(g.names, Math.min(g.names.length, 3)).forEach(n => bonusPool.push({ name: n, type: 'wild', meta: categoryMeta('TV-themed pick', n) }));
+  });
+  selectedGenericStarWars.forEach(g => {
+    weightedPick(g.names, Math.min(g.names.length, 3)).forEach(n => bonusPool.push({ name: n, type: 'wild', meta: categoryMeta('Star Wars-themed pick', n) }));
+  });
+  selectedGenericFood.forEach(g => {
+    weightedPick(g.names, Math.min(g.names.length, 3)).forEach(n => bonusPool.push({ name: n, type: 'wild', meta: categoryMeta('Food-themed pick', n) }));
+  });
+  selectedGenericMarvel.forEach(g => {
+    weightedPick(g.names, Math.min(g.names.length, 3)).forEach(n => bonusPool.push({ name: n, type: 'wild', meta: categoryMeta('Marvel-themed pick', n) }));
+  });
+
+  // Combos only make sense between two players — bonus content, not guaranteed
+  if(selectedPlayers.length >= 2){
+    const pairs = [];
+    for(let i = 0; i < selectedPlayers.length; i++){
+      for(let j = i + 1; j < selectedPlayers.length; j++){
+        pairs.push([selectedPlayers[i], selectedPlayers[j]]);
+      }
+    }
+    shuffle(pairs).forEach(([a, b]) => {
+      const curated = findCuratedCombo(a, b);
+      if(curated){
+        const n = weightedPick(curated.names, 1)[0];
+        bonusPool.push({ name: n, type: 'combo', meta: `${fullName(a)} + ${fullName(b)}` });
+      } else {
+        const template = COMBO_TEMPLATES[Math.floor(Math.random() * COMBO_TEMPLATES.length)];
+        bonusPool.push({ name: template(a, b), type: 'combo', meta: `${fullName(a)} + ${fullName(b)}` });
+      }
+    });
+  }
+
+  // Bonus team pride from a selected player's team, skipping teams already picked directly
+  const directTeamAbbrs = new Set(selectedTeams.map(t => t.abbr));
+  const bonusTeamAbbrs = [...new Set(selectedPlayers.map(p => p.team))].filter(a => !directTeamAbbrs.has(a));
+  const bonusTeams = bonusTeamAbbrs.map(abbr => TEAMS.find(t => t.abbr === abbr)).filter(Boolean);
+  bonusTeams.forEach(team => {
+    weightedPick(getTeamNames(team), 1).forEach(n => {
+      bonusPool.push({ name: n, type: 'wild', meta: `${team.city} ${team.nickname} pride` });
+    });
+  });
+
+  // A couple of generic crowd-favorites, always as bonus content
+  const pickedWildcardNames = new Set(selectedWildcards.map(w => w.names[0]));
+  weightedPick(GENERIC_WILDCARDS.filter(n => !pickedWildcardNames.has(n)), 2).forEach(n => {
+    bonusPool.push({ name: n, type: 'wild', meta: 'Crowd favorite' });
+  });
+
+  // Fill any remaining room (up to the cap) with a weighted sample of bonus
+  // content, so results stay varied (and lean toward what's popular) without
+  // growing unbounded as more players get added to the roster.
+  const remainingSlots = Math.max(TOTAL_RESULTS_CAP - guaranteed.length, 0);
+  const bonusPicked = weightedPickBy(bonusPool, r => r.name, remainingSlots);
+  const finalResults = guaranteed.concat(bonusPicked);
+
+  return shuffle(finalResults);
+}
+
+
+function renderLuckyPick(result){
+  lastResults = [result];
+  const typeLabel = result.type === 'solo' ? 'Player pun' : result.type === 'team' ? 'Team pun' : 'Wildcard';
+  luckyPickGrid.innerHTML = `
+    <div class="popular-row">
+      <span class="popular-rank">🎲</span>
+      <div class="popular-body">
+        <div class="popular-name">${result.name}</div>
+        <div class="popular-meta">${typeLabel} \u00b7 ${result.meta}</div>
+      </div>
+      <button class="popular-copy" data-idx="0" aria-label="Copy name">⧉</button>
+      ${likeButtonHtml('result_' + result.type, result.name, result.meta, true)}
+    </div>
+  `;
+  luckyPickSection.style.display = 'block';
+  shuffleBtn.style.display = 'inline-block';
+
+  luckyPickGrid.querySelectorAll('.popular-copy').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const text = lastResults[btn.dataset.idx].name;
+      navigator.clipboard?.writeText(text).catch(() => {});
+      btn.classList.add('copied');
+      btn.textContent = '✓';
+      setTimeout(() => { btn.classList.remove('copied'); btn.textContent = '⧉'; }, 1200);
+      celebrateCopy(text);
+    });
+  });
+  wireLikeButtons(luckyPickGrid);
+
+  luckyPickSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+
+function renderResults(){
+  shuffleBtn.style.display = 'inline-block';
+  renderResultsList(buildResults());
+}
+
+// The "Don't know what to pick?" button always gives exactly one pick,
+// leaning heavily toward what's already popular. With no roster selected,
+// it draws from the generic name pool; with players/teams selected, it
+// draws from their own curated puns plus the generic pool combined \u2014 never
+// the full "every curated player in the database" pool, so the pick still
+// feels tied to what's actually on the roster when there is one.
+function surpriseResults(){
+  const pool = [];
+
+  // For a selected generic category (Movie Names, Star Wars Names, etc.),
+  // some of the names pulled in are actually tagged to one specific player
+  // (see categoryPool/TAGGED_NAME_SOURCE) rather than being purely generic.
+  // Crediting that player instead of just the category name means the user
+  // isn't left wondering why "Auston Powers" showed up with no context, and
+  // the result is labeled as a player pun rather than a generic wildcard.
+  function attributionFor(e, n){
+    const isGenericCategory = e.kind && e.kind.startsWith('generic');
+    if(isGenericCategory){
+      const sources = TAGGED_NAME_SOURCE[n];
+      if(sources && sources.length === 1) return { type: 'solo', meta: sources[0] };
+      return { type: 'wild', meta: fullName(e) };
+    }
+    return { type: 'solo', meta: fullName(e) };
+  }
+
+  if(selected.length === 0){
+    GENERIC_WILDCARDS.forEach(n => pool.push({ name: n, type: 'wild', meta: 'Crowd favorite' }));
+  } else {
+    selected.forEach(e => {
+      if(e.kind === 'team' && e.names && e.names.length > 0){
+        e.names.forEach(n => pool.push({ name: n, type: 'team', meta: `${e.city} ${e.nickname} pride` }));
+      } else if(e.names && e.names.length > 0){
+        e.names.forEach(n => pool.push({ name: n, ...attributionFor(e, n) }));
+      }
+    });
+  }
+
+  if(pool.length === 0){
+    // A selected player/team with no curated puns yet and nothing else to
+    // fall back on \u2014 fall back to the generic pool rather than showing
+    // nothing at all.
+    GENERIC_WILDCARDS.forEach(n => pool.push({ name: n, type: 'wild', meta: 'Crowd favorite' }));
+  }
+  if(pool.length === 0) return;
+
+  // Squares the like count instead of just adding it, so popularity is a
+  // much stronger pull here than in the regular roster-based generation.
+  const popularityWeight = count => 1 + count * count;
+  const [result] = weightedPickBy(pool, r => r.name, 1, popularityWeight);
+  renderLuckyPick(result);
+}
+
+generateBtn.addEventListener('click', () => {
+  surpriseResults();
+});
+shuffleBtn.addEventListener('click', () => {
+  surpriseResults();
+});
+
+// ---------- Load shared data files, then boot the app ----------
+searchInput.disabled = true;
+searchInput.placeholder = 'Loading players\u2026';
+
+async function loadJson(path){
+  const res = await fetch(path);
+  if(!res.ok) throw new Error('Failed to load ' + path + ' (HTTP ' + res.status + ')');
+  return res.json();
+}
+
+Promise.all([
+  loadJson('../players_basketball.json'),
+  loadJson('../teams_basketball.json'),
+  loadJson('../generic_basketball.json')
+]).then(([playersData, teamsData, genericData]) => {
+  playersData.forEach(p => PLAYERS.push(p));
+  teamsData.forEach(t => TEAMS.push(t));
+  GENERIC_BY_CATEGORY = genericData;
+  (genericData.general || []).forEach(n => GENERIC_WILDCARDS.push(n));
+
+  buildEntities();
+
+  document.getElementById('dbCount').textContent = `${ENTITIES.filter(e => e.kind === 'player').length} players + ${TEAMS.length} teams in the database`;
+
+  const totalNames = playersData.filter(p => p.tier === 'curated').reduce((sum, p) => sum + (p.names ? p.names.length : 0), 0)
+    + teamsData.reduce((sum, t) => sum + (t.names ? t.names.length : 0), 0)
+    + (genericData.general || []).length;
+  document.getElementById('totalNameCount').textContent = totalNames.toLocaleString();
+
+  searchInput.disabled = false;
+  searchInput.placeholder = 'Try \u201cMcDavid,\u201d \u201cOvechkin,\u201d or \u201cBruins\u201d\u2026';
+  generateBtn.disabled = false;
+  renderChips();
+
+  loadLikesMap();
+  loadTopPopular();
+  mergeSubmittedNames();
+}).catch(err => {
+  console.error('Failed to load player database', err);
+  searchInput.placeholder = 'Failed to load \u2014 try refreshing the page';
+});
+
+// ---------- Stats ticker (season leaders only \u2014 no weekly view, since the
+// The NBA doesn't have a clean one-game-per-team-per-week structure the way the
+// NFL does; independent of the main app, failures here never block search) ----------
+(function initStatsTicker(){
+  const wrapEl = document.getElementById('tickerWrap');
+  const trackEl = document.getElementById('tickerTrack');
+  const titleEl = document.getElementById('tickerTitle');
+  const weekBtn = document.getElementById('tickerWeekBtn');
+  const seasonBtn = document.getElementById('tickerSeasonBtn');
+  const POS_ORDER = ['PG', 'SG', 'SF', 'PF', 'C'];
+
+  trackEl.addEventListener('click', (e) => {
+    const card = e.target.closest('.ticker-card');
+    if(!card || !card.dataset.id) return;
+    addPlayer(card.dataset.id);
+    searchInput.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  });
+
+  function buildCard(entry, rank){
+    const pun = entry.pun ? `<span class="ticker-pun">"${entry.pun}"</span>` : '';
+    return `
+      <div class="ticker-card" data-pos="${entry.pos}" data-id="${entry.id || ''}" title="Add ${entry.first} ${entry.last} to your roster">
+        <span class="ticker-pos">${entry.pos}${rank}</span>
+        <span class="ticker-name">${entry.first} ${entry.last}</span>
+        <span class="ticker-team">${entry.team}</span>
+        <span class="ticker-pts">${entry.pts}</span>
+        ${pun}
+      </div>`;
+  }
+
+  function buildDivider(pos){
+    return `<div class="ticker-divider">${pos}</div>`;
+  }
+
+  function render(data, view){
+    const byPos = view === 'season' ? data.seasonTotals : data.thisWeek;
+    const groupsHtml = [];
+    POS_ORDER.forEach(pos => {
+      const entries = (byPos && byPos[pos]) || [];
+      if(entries.length === 0) return;
+      const cards = entries.map((e, i) => buildCard(e, i + 1)).join('');
+      groupsHtml.push(buildDivider(pos) + cards);
+    });
+    if(groupsHtml.length === 0){
+      wrapEl.style.display = 'none';
+      return;
+    }
+    wrapEl.style.display = 'block';
+    const cardsHtml = groupsHtml.join('');
+    trackEl.innerHTML = cardsHtml + cardsHtml;
+
+    const PIXELS_PER_SECOND = 47;
+    requestAnimationFrame(() => {
+      const halfWidth = trackEl.scrollWidth / 2;
+      const duration = Math.max(halfWidth / PIXELS_PER_SECOND, 20);
+      trackEl.style.animationDuration = duration + 's';
+    });
+
+    titleEl.textContent = view === 'season'
+      ? 'Season Leaders'
+      : (data.weekStart ? `This Week \u2014 since ${data.weekStart}` : 'This Week');
+  }
+
+  loadJson('../stats_ticker_basketball.json').then(data => {
+    const hasWeek = data && data.thisWeek && Object.values(data.thisWeek).some(arr => arr.length > 0);
+    const hasSeason = data && data.seasonTotals && Object.values(data.seasonTotals).some(arr => arr.length > 0);
+    if(!hasWeek && !hasSeason){
+      wrapEl.style.display = 'none';
+      return;
+    }
+    // Default to whichever view actually has data if one is empty (e.g. the
+    // very first Monday of a fantasy week, before any games are complete).
+    const defaultView = hasWeek ? 'week' : 'season';
+    render(data, defaultView);
+    weekBtn.classList.toggle('active', defaultView === 'week');
+    seasonBtn.classList.toggle('active', defaultView === 'season');
+
+    weekBtn.addEventListener('click', () => {
+      weekBtn.classList.add('active');
+      seasonBtn.classList.remove('active');
+      render(data, 'week');
+    });
+    seasonBtn.addEventListener('click', () => {
+      seasonBtn.classList.add('active');
+      weekBtn.classList.remove('active');
+      render(data, 'season');
+    });
+  }).catch(err => {
+    console.error('Basketball stats ticker failed to load (non-fatal)', err);
+    wrapEl.style.display = 'none';
+  });
+})();
+</script>
 </body>
 </html>
