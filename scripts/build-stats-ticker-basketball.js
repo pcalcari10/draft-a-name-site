@@ -82,18 +82,27 @@ async function main() {
   let seasonUsed = SEASON;
   let isLastSeason = false;
 
-  if (!statsData || Object.keys(statsData).length === 0) {
+  // Sleeper can return an entry for every player in its database even
+  // before the season starts, each with gp: 0 (confirmed by a real
+  // response: 1817 entries, zero of them with any games played) \u2014 so
+  // "did we get any keys back" isn't a reliable signal that real data
+  // exists. Checking for at least one player with gp > 0 is.
+  function hasRealData(data) {
+    return !!data && Object.values(data).some(stat => stat && stat.gp > 0);
+  }
+
+  if (!hasRealData(statsData)) {
     const priorSeason = (parseInt(SEASON, 10) - 1).toString();
-    console.log(`No data for ${SEASON} yet (season probably hasn't started). Falling back to ${priorSeason}...`);
+    console.log(`No real data for ${SEASON} yet (season probably hasn't started \u2014 got ${statsData ? Object.keys(statsData).length : 0} entries, all with 0 games played). Falling back to ${priorSeason}...`);
     statsData = await fetchSeasonStats(priorSeason);
-    if (statsData && Object.keys(statsData).length > 0) {
+    if (hasRealData(statsData)) {
       seasonUsed = priorSeason;
       isLastSeason = true;
     }
   }
 
-  if (!statsData || Object.keys(statsData).length === 0) {
-    console.log('No season-level data found for the current or prior season \u2014 writing an empty ticker.');
+  if (!hasRealData(statsData)) {
+    console.log('No season-level data with real games played found for the current or prior season \u2014 writing an empty ticker.');
     fs.writeFileSync(OUT_PATH, JSON.stringify({
       generatedAt: new Date().toISOString(),
       season: SEASON,
@@ -103,7 +112,7 @@ async function main() {
     }, null, 2) + '\n');
     return;
   }
-  console.log(`Found season-level stats for ${Object.keys(statsData).length} players (season ${seasonUsed}).`);
+  console.log(`Found season-level stats for ${Object.values(statsData).filter(s => s && s.gp > 0).length} players with real games played (season ${seasonUsed}).`);
 
   function buildEntry(sid, stat, extra) {
     const player = bySleeperId[sid];
