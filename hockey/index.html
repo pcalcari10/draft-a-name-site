@@ -1560,15 +1560,15 @@ function surpriseResults(){
         e.names.forEach(n => pool.push({ name: n, type: 'solo', meta: fullName(e) }));
       }
     });
-    GENERIC_WILDCARDS.forEach(n => pool.push({ name: n, type: 'wild', meta: 'Crowd favorite' }));
   }
 
   if(pool.length === 0){
     // A selected player/team with no curated puns yet and nothing else to
-    // fall back on \u2014 shouldn't normally happen since GENERIC_WILDCARDS is
-    // always added, but guard against an empty weightedPick regardless.
-    return;
+    // fall back on \u2014 fall back to the generic pool rather than showing
+    // nothing at all.
+    GENERIC_WILDCARDS.forEach(n => pool.push({ name: n, type: 'wild', meta: 'Crowd favorite' }));
   }
+  if(pool.length === 0) return;
 
   // Squares the like count instead of just adding it, so popularity is a
   // much stronger pull here than in the regular roster-based generation.
