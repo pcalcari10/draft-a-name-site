@@ -1720,9 +1720,16 @@ Promise.all([
       trackEl.style.animationDuration = duration + 's';
     });
 
+    const seasonLabel = data.isLastSeason ? ` (${formatSeasonLabel(data.season)})` : '';
     titleEl.textContent = view === 'season'
-      ? 'Season Leaders'
-      : (data.weekStart ? `This Week \u2014 since ${data.weekStart}` : 'This Week');
+      ? `Season Leaders${seasonLabel}`
+      : `Week ${data.week} Top Scorers${seasonLabel}`;
+  }
+
+  function formatSeasonLabel(season){
+    if(!season) return '';
+    const startYear = parseInt(season, 10);
+    return `${startYear}-${(startYear + 1).toString().slice(-2)} Season`;
   }
 
   loadJson('../stats_ticker_basketball.json').then(data => {

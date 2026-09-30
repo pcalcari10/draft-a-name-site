@@ -95,45 +95,69 @@ async function main() {
 
   const weeklyPoints = {};
   let lastWeekWithData = null;
+  let seasonUsed = SEASON;
+  let isLastSeason = false;
 
-  for (let week = 1; week <= MAX_WEEKS_TO_CHECK; week++) {
-    try {
-      const res = await fetch(`https://api.sleeper.app/v1/stats/nba/regular/${SEASON}/${week}`);
-      if (!res.ok) continue;
-      const weekStats = await res.json();
-      const entries = Object.keys(weekStats);
-      if (entries.length === 0) continue;
+  async function findDataForSeason(season) {
+    const points = {};
+    let lastWeek = null;
+    for (let week = 1; week <= MAX_WEEKS_TO_CHECK; week++) {
+      try {
+        const res = await fetch(`https://api.sleeper.app/v1/stats/nba/regular/${season}/${week}`);
+        if (!res.ok) continue;
+        const weekStats = await res.json();
+        const entries = Object.keys(weekStats);
+        if (entries.length === 0) continue;
 
-      const pointsThisWeek = {};
-      let anyRealPoints = false;
-      entries.forEach(sid => {
-        const stat = weekStats[sid];
-        // NBA fantasy scoring doesn't have a single universal "pts_ppr"
-        // equivalent the way NFL does; pts_half_ppr is Sleeper's closest
-        // standard basketball scoring field.
-        const pts = stat && (stat.pts_half_ppr || stat.pts_ppr || stat.pts_std);
-        if (pts) {
-          pointsThisWeek[sid] = pts;
-          anyRealPoints = true;
+        const pointsThisWeek = {};
+        let anyRealPoints = false;
+        entries.forEach(sid => {
+          const stat = weekStats[sid];
+          const pts = stat && (stat.pts_half_ppr || stat.pts_ppr || stat.pts_std);
+          if (pts) {
+            pointsThisWeek[sid] = pts;
+            anyRealPoints = true;
+          }
+        });
+
+        if (anyRealPoints) {
+          points[week] = pointsThisWeek;
+          lastWeek = week;
+          console.log(`  Season ${season}, Week ${week}: ${Object.keys(pointsThisWeek).length} players with points.`);
         }
-      });
-
-      if (anyRealPoints) {
-        weeklyPoints[week] = pointsThisWeek;
-        lastWeekWithData = week;
-        console.log(`Week ${week}: ${Object.keys(pointsThisWeek).length} players with points.`);
+      } catch (err) {
+        console.log(`  Season ${season}, Week ${week}: skipped (${err.message})`);
       }
-    } catch (err) {
-      console.log(`Week ${week}: skipped (${err.message})`);
+    }
+    return { points, lastWeek };
+  }
+
+  console.log(`Checking current season (${SEASON}) for weekly data...`);
+  let found = await findDataForSeason(SEASON);
+
+  if (found.lastWeek === null) {
+    // The current season likely hasn't started yet \u2014 fall back to last
+    // season's final data so the ticker shows something meaningful in the
+    // meantime, rather than sitting empty for weeks before opening night.
+    const priorSeason = (parseInt(SEASON, 10) - 1).toString();
+    console.log(`No data for ${SEASON} yet (season probably hasn't started). Falling back to ${priorSeason}...`);
+    found = await findDataForSeason(priorSeason);
+    if (found.lastWeek !== null) {
+      seasonUsed = priorSeason;
+      isLastSeason = true;
     }
   }
 
+  Object.assign(weeklyPoints, found.points);
+  lastWeekWithData = found.lastWeek;
+
   if (lastWeekWithData === null) {
-    console.log('No weeks with data found yet \u2014 writing an empty ticker. If this persists, Sleeper\u2019s NBA stats coverage may not support this endpoint the way NFL does, and a boxscore-based approach (like hockey\u2019s) would be needed instead.');
+    console.log('No weeks with data found for the current or prior season \u2014 writing an empty ticker. If this persists once the season is underway, Sleeper\u2019s NBA stats coverage may not support this endpoint the way NFL does, and a boxscore-based approach (like hockey\u2019s) would be needed instead.');
     fs.writeFileSync(OUT_PATH, JSON.stringify({
       generatedAt: new Date().toISOString(),
       season: SEASON,
       week: null,
+      isLastSeason: false,
       thisWeek: {},
       seasonTotals: {},
     }, null, 2) + '\n');
@@ -171,14 +195,15 @@ async function main() {
 
   const output = {
     generatedAt: new Date().toISOString(),
-    season: SEASON,
+    season: seasonUsed,
     week: lastWeekWithData,
+    isLastSeason,
     thisWeek: topByPosition(weeklyPoints[lastWeekWithData]),
     seasonTotals: topByPosition(seasonPoints),
   };
 
   fs.writeFileSync(OUT_PATH, JSON.stringify(output, null, 2) + '\n');
-  console.log(`Wrote stats_ticker_basketball.json (week ${lastWeekWithData}, season ${SEASON}).`);
+  console.log(`Wrote stats_ticker_basketball.json (season ${seasonUsed}${isLastSeason ? ' \u2014 last season, current season has no data yet' : ''}, week ${lastWeekWithData}).`);
 }
 
 main().catch(err => {
