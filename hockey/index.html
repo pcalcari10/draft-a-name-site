@@ -644,22 +644,21 @@
     </div>
   </section>
 
+  <section class="results" id="luckyPickSection" style="display:none;">
+    <div class="results-head">
+      <div class="results-head-left">
+        <h2>🎲 Your Pick</h2>
+      </div>
+      <button class="ghost" id="shuffleBtn" style="display:none;">Try another</button>
+    </div>
+    <div class="grid" id="luckyPickGrid"></div>
+  </section>
+
   <section class="popular-section" id="popularSection" style="display:none;">
     <div class="popular-head">
       <h2>🏆 Top 10 Most Popular</h2>
     </div>
     <div id="popularList" class="popular-list"></div>
-  </section>
-
-  <section class="results" id="resultsSection" style="display:none;">
-    <div class="results-head">
-      <div class="results-head-left">
-        <h2>🚨 Lamp Lit</h2>
-        <span class="count" id="resultCount"></span>
-      </div>
-      <button class="ghost" id="shuffleBtn" style="display:none;">Shuffle again</button>
-    </div>
-    <div class="grid" id="resultsGrid"></div>
   </section>
 
   <footer>
@@ -918,9 +917,8 @@ const chipsBox = document.getElementById('chips');
 const generateBtn = document.getElementById('generateBtn');
 const shuffleBtn = document.getElementById('shuffleBtn');
 const hint = document.getElementById('hint');
-const resultsSection = document.getElementById('resultsSection');
-const resultsGrid = document.getElementById('resultsGrid');
-const resultCount = document.getElementById('resultCount');
+const luckyPickSection = document.getElementById('luckyPickSection');
+const luckyPickGrid = document.getElementById('luckyPickGrid');
 
 function fullName(e){
   if(e.kind === 'team') return `${e.city} ${e.nickname}`;
@@ -1008,7 +1006,7 @@ function renderChips(){
   }
   renderAllNames();
   if(selected.length === 0){
-    resultsSection.style.display = 'none';
+    luckyPickSection.style.display = 'none';
     shuffleBtn.style.display = 'none';
   }
 }
@@ -1506,23 +1504,23 @@ function buildResults(){
 }
 
 
-function renderResultsList(results){
-  lastResults = results;
-  resultsGrid.innerHTML = lastResults.map((r, idx) => `
-    <div class="card ${r.type}">
-      <button class="copy-btn" data-idx="${idx}" aria-label="Copy name">⧉</button>
-      <p class="name">${r.name}</p>
+function renderLuckyPick(result){
+  lastResults = [result];
+  luckyPickGrid.innerHTML = `
+    <div class="card ${result.type}">
+      <button class="copy-btn" data-idx="0" aria-label="Copy name">⧉</button>
+      <p class="name">${result.name}</p>
       <div class="meta">
-        <span class="tag">${r.type === 'solo' ? 'Player pun' : r.type === 'combo' ? 'Roster combo' : r.type === 'team' ? 'Team pun' : 'Wildcard'}</span>
-        <span>${r.meta}</span>
+        <span class="tag">${result.type === 'solo' ? 'Player pun' : result.type === 'team' ? 'Team pun' : 'Wildcard'}</span>
+        <span>${result.meta}</span>
       </div>
-      <div class="like-row">${likeButtonHtml('result_' + r.type, r.name, r.meta, false)}</div>
+      <div class="like-row">${likeButtonHtml('result_' + result.type, result.name, result.meta, false)}</div>
     </div>
-  `).join('');
-  resultCount.textContent = `${lastResults.length} names`;
-  resultsSection.style.display = 'block';
+  `;
+  luckyPickSection.style.display = 'block';
+  shuffleBtn.style.display = 'inline-block';
 
-  resultsGrid.querySelectorAll('.copy-btn').forEach(btn => {
+  luckyPickGrid.querySelectorAll('.copy-btn').forEach(btn => {
     btn.addEventListener('click', () => {
       const text = lastResults[btn.dataset.idx].name;
       navigator.clipboard?.writeText(text).catch(() => {});
@@ -1532,9 +1530,9 @@ function renderResultsList(results){
       celebrateCopy(text);
     });
   });
-  wireLikeButtons(resultsGrid);
+  wireLikeButtons(luckyPickGrid);
 
-  resultsSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  luckyPickSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
 }
 
 function renderResults(){
@@ -1542,52 +1540,47 @@ function renderResults(){
   renderResultsList(buildResults());
 }
 
-// Used by the "Don't know what to pick?" button when the roster is empty:
-// pulls a random sample from every player with at least one curated pun,
-// leaning heavily toward what's already popular, without touching the
-// search or adding anything to the roster.
-const SURPRISE_RESULTS_COUNT = 6;
+// The "Don't know what to pick?" button always gives exactly one pick,
+// leaning heavily toward what's already popular. With no roster selected,
+// it draws from the generic name pool; with players/teams selected, it
+// draws from their own curated puns plus the generic pool combined \u2014 never
+// the full "every curated player in the database" pool, so the pick still
+// feels tied to what's actually on the roster when there is one.
 function surpriseResults(){
   const pool = [];
 
-  ENTITIES.forEach(e => {
-    if(e.kind === 'player' && e.tier === 'curated' && e.names && e.names.length > 0){
-      e.names.forEach(n => pool.push({ name: n, type: 'solo', meta: `${fullName(e)} \u00b7 ${e.team}` }));
-    }
-    if(e.kind === 'team' && e.names && e.names.length > 0){
-      e.names.forEach(n => pool.push({ name: n, type: 'team', meta: `${e.city} ${e.nickname} defense` }));
-    }
-  });
+  if(selected.length === 0){
+    GENERIC_WILDCARDS.forEach(n => pool.push({ name: n, type: 'wild', meta: 'Crowd favorite' }));
+  } else {
+    selected.forEach(e => {
+      if(e.kind === 'team' && e.names && e.names.length > 0){
+        e.names.forEach(n => pool.push({ name: n, type: 'team', meta: `${e.city} ${e.nickname} pride` }));
+      } else if(e.names && e.names.length > 0){
+        e.names.forEach(n => pool.push({ name: n, type: 'solo', meta: fullName(e) }));
+      }
+    });
+    GENERIC_WILDCARDS.forEach(n => pool.push({ name: n, type: 'wild', meta: 'Crowd favorite' }));
+  }
 
-  GENERIC_WILDCARDS.forEach(n => pool.push({ name: n, type: 'wild', meta: 'Crowd favorite' }));
+  if(pool.length === 0){
+    // A selected player/team with no curated puns yet and nothing else to
+    // fall back on \u2014 shouldn't normally happen since GENERIC_WILDCARDS is
+    // always added, but guard against an empty weightedPick regardless.
+    return;
+  }
 
-  CURATED_COMBOS.forEach(c => {
-    const a = ENTITIES.find(e => e.id === c.ids[0]);
-    const b = ENTITIES.find(e => e.id === c.ids[1]);
-    if(!a || !b || !c.names) return;
-    c.names.forEach(n => pool.push({ name: n, type: 'combo', meta: `${fullName(a)} + ${fullName(b)}` }));
-  });
-
-  shuffleBtn.style.display = 'inline-block';
   // Squares the like count instead of just adding it, so popularity is a
-  // much stronger pull here than in the regular roster-based results.
+  // much stronger pull here than in the regular roster-based generation.
   const popularityWeight = count => 1 + count * count;
-  renderResultsList(weightedPickBy(pool, r => r.name, SURPRISE_RESULTS_COUNT, popularityWeight));
+  const [result] = weightedPickBy(pool, r => r.name, 1, popularityWeight);
+  renderLuckyPick(result);
 }
 
 generateBtn.addEventListener('click', () => {
-  if(selected.length === 0){
-    surpriseResults();
-  } else {
-    renderResults();
-  }
+  surpriseResults();
 });
 shuffleBtn.addEventListener('click', () => {
-  if(selected.length === 0){
-    surpriseResults();
-  } else {
-    renderResults();
-  }
+  surpriseResults();
 });
 
 // ---------- Load shared data files, then boot the app ----------
