@@ -5876,10 +5876,16 @@
       "In Letang We Trust",
       "Kris Letang and the Fantasy Machine",
       "Straight Outta Letang",
-      "Kris Vibes Only"
+      "Kris Vibes Only",
+      "Wu Letang Clan"
     ],
     "active": true,
-    "tier": "template"
+    "tier": "curated",
+    "taggedNames": {
+      "music": [
+        "Wu Letang Clan"
+      ]
+    }
   },
   {
     "id": "blakelizotte_pit",
@@ -14986,10 +14992,16 @@
     "team": "WSH",
     "pos": "RW",
     "names": [
-      "Oshie Can You See"
+      "Oshie Can You See",
+      "Oshie's Eleven"
     ],
     "active": true,
-    "tier": "curated"
+    "tier": "curated",
+    "taggedNames": {
+      "movie": [
+        "Oshie's Eleven"
+      ]
+    }
   },
   {
     "id": "thomasvanek_buf",
