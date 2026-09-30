@@ -28,8 +28,11 @@ jobs:
         with:
           node-version: '20'
 
-      - name: Build basketball stats ticker
+      - name: Build basketball stats ticker (season, from Sleeper)
         run: node scripts/build-stats-ticker-basketball.js
+
+      - name: Build basketball stats ticker (this week, from ESPN box scores)
+        run: node scripts/build-weekly-ticker-basketball.js
 
       - name: Commit and push if stats_ticker_basketball.json changed
         run: |

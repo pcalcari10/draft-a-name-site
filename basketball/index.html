@@ -562,6 +562,7 @@
       <div class="ticker-track" id="tickerTrack"></div>
     </div>
     <div class="ticker-toggle">
+      <button id="tickerThisWeekBtn">This Week</button>
       <button id="tickerWeekBtn" class="active">Fantasy Points</button>
       <button id="tickerSeasonBtn">Season Stats</button>
     </div>
@@ -1662,16 +1663,19 @@ Promise.all([
   searchInput.placeholder = 'Failed to load \u2014 try refreshing the page';
 });
 
-// ---------- Stats ticker: Fantasy Points view and Season Stats (PPG/APG/RPG/
-// SPG/BPG) view, both drawn from Sleeper's season-level stats; independent
-// of the main app, failures here never block search ----------
+// ---------- Stats ticker: This Week (from real box scores), Fantasy Points
+// (season, from Sleeper) and Season Stats (PPG/APG/RPG/SPG/BPG, from
+// Sleeper) views; independent of the main app, failures here never block
+// search ----------
 (function initStatsTicker(){
   const wrapEl = document.getElementById('tickerWrap');
   const trackEl = document.getElementById('tickerTrack');
   const titleEl = document.getElementById('tickerTitle');
+  const thisWeekBtn = document.getElementById('tickerThisWeekBtn');
   const fantasyBtn = document.getElementById('tickerWeekBtn');
   const statsBtn = document.getElementById('tickerSeasonBtn');
   const POS_ORDER = ['PG', 'SG', 'SF', 'PF', 'C'];
+  const allButtons = [thisWeekBtn, fantasyBtn, statsBtn];
 
   trackEl.addEventListener('click', (e) => {
     const card = e.target.closest('.ticker-card');
@@ -1710,8 +1714,20 @@ Promise.all([
   }
 
   function render(data, view){
-    const byPos = view === 'stats' ? data.statsLeaders : data.fantasyLeaders;
-    const buildCard = view === 'stats' ? buildStatsCard : buildFantasyCard;
+    let byPos, buildCard, label;
+    if(view === 'thisweek'){
+      byPos = data.thisWeekFantasy;
+      buildCard = buildFantasyCard;
+      label = 'This Week';
+    } else if(view === 'stats'){
+      byPos = data.statsLeaders;
+      buildCard = buildStatsCard;
+      label = 'Season Stats Leaders';
+    } else {
+      byPos = data.fantasyLeaders;
+      buildCard = buildFantasyCard;
+      label = 'Fantasy Points Leaders';
+    }
     const groupsHtml = [];
     POS_ORDER.forEach(pos => {
       const entries = (byPos && byPos[pos]) || [];
@@ -1734,8 +1750,8 @@ Promise.all([
       trackEl.style.animationDuration = duration + 's';
     });
 
-    const seasonLabel = data.isLastSeason ? ` (${formatSeasonLabel(data.season)})` : '';
-    titleEl.textContent = (view === 'stats' ? 'Season Stats Leaders' : 'Fantasy Points Leaders') + seasonLabel;
+    const seasonLabel = (view !== 'thisweek' && data.isLastSeason) ? ` (${formatSeasonLabel(data.season)})` : '';
+    titleEl.textContent = label + seasonLabel;
   }
 
   function formatSeasonLabel(season){
@@ -1744,28 +1760,34 @@ Promise.all([
     return `${startYear}-${(startYear + 1).toString().slice(-2)} Season`;
   }
 
+  function setActive(view, btn){
+    allButtons.forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+  }
+
   loadJson('../stats_ticker_basketball.json').then(data => {
+    const hasThisWeek = data && data.thisWeekFantasy && Object.values(data.thisWeekFantasy).some(arr => arr.length > 0);
     const hasFantasy = data && data.fantasyLeaders && Object.values(data.fantasyLeaders).some(arr => arr.length > 0);
     const hasStats = data && data.statsLeaders && Object.values(data.statsLeaders).some(arr => arr.length > 0);
-    if(!hasFantasy && !hasStats){
+    if(!hasThisWeek && !hasFantasy && !hasStats){
       wrapEl.style.display = 'none';
       return;
     }
-    const defaultView = hasFantasy ? 'fantasy' : 'stats';
-    render(data, defaultView);
-    fantasyBtn.classList.toggle('active', defaultView === 'fantasy');
-    statsBtn.classList.toggle('active', defaultView === 'stats');
 
-    fantasyBtn.addEventListener('click', () => {
-      fantasyBtn.classList.add('active');
-      statsBtn.classList.remove('active');
-      render(data, 'fantasy');
-    });
-    statsBtn.addEventListener('click', () => {
-      statsBtn.classList.add('active');
-      fantasyBtn.classList.remove('active');
-      render(data, 'stats');
-    });
+    // Only show a button for a view that actually has data (e.g. hide
+    // "This Week" entirely until the current week has any completed games).
+    if(!hasThisWeek) thisWeekBtn.style.display = 'none';
+    if(!hasFantasy) fantasyBtn.style.display = 'none';
+    if(!hasStats) statsBtn.style.display = 'none';
+
+    const defaultView = hasThisWeek ? 'thisweek' : (hasFantasy ? 'fantasy' : 'stats');
+    const defaultBtn = defaultView === 'thisweek' ? thisWeekBtn : (defaultView === 'fantasy' ? fantasyBtn : statsBtn);
+    render(data, defaultView);
+    setActive(defaultView, defaultBtn);
+
+    thisWeekBtn.addEventListener('click', () => { setActive('thisweek', thisWeekBtn); render(data, 'thisweek'); });
+    fantasyBtn.addEventListener('click', () => { setActive('fantasy', fantasyBtn); render(data, 'fantasy'); });
+    statsBtn.addEventListener('click', () => { setActive('stats', statsBtn); render(data, 'stats'); });
   }).catch(err => {
     console.error('Basketball stats ticker failed to load (non-fatal)', err);
     wrapEl.style.display = 'none';

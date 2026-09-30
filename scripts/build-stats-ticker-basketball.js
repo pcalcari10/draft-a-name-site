@@ -103,13 +103,14 @@ async function main() {
 
   if (!hasRealData(statsData)) {
     console.log('No season-level data with real games played found for the current or prior season \u2014 writing an empty ticker.');
-    fs.writeFileSync(OUT_PATH, JSON.stringify({
-      generatedAt: new Date().toISOString(),
-      season: SEASON,
-      isLastSeason: false,
-      fantasyLeaders: {},
-      statsLeaders: {},
-    }, null, 2) + '\n');
+    let existingEmpty = {};
+    try { existingEmpty = JSON.parse(fs.readFileSync(OUT_PATH, 'utf8')); } catch (err) {}
+    existingEmpty.generatedAt = new Date().toISOString();
+    existingEmpty.season = SEASON;
+    existingEmpty.isLastSeason = false;
+    existingEmpty.fantasyLeaders = {};
+    existingEmpty.statsLeaders = {};
+    fs.writeFileSync(OUT_PATH, JSON.stringify(existingEmpty, null, 2) + '\n');
     return;
   }
   console.log(`Found season-level stats for ${Object.values(statsData).filter(s => s && s.gp > 0).length} players with real games played (season ${seasonUsed}).`);
@@ -169,15 +170,20 @@ async function main() {
       }));
   });
 
-  const output = {
-    generatedAt: new Date().toISOString(),
-    season: seasonUsed,
-    isLastSeason,
-    fantasyLeaders,
-    statsLeaders,
-  };
+  let existing = {};
+  try {
+    existing = JSON.parse(fs.readFileSync(OUT_PATH, 'utf8'));
+  } catch (err) {
+    console.log('No existing stats_ticker_basketball.json found (or unreadable) \u2014 starting fresh.');
+  }
 
-  fs.writeFileSync(OUT_PATH, JSON.stringify(output, null, 2) + '\n');
+  existing.generatedAt = new Date().toISOString();
+  existing.season = seasonUsed;
+  existing.isLastSeason = isLastSeason;
+  existing.fantasyLeaders = fantasyLeaders;
+  existing.statsLeaders = statsLeaders;
+
+  fs.writeFileSync(OUT_PATH, JSON.stringify(existing, null, 2) + '\n');
   console.log(`Wrote stats_ticker_basketball.json (season ${seasonUsed}${isLastSeason ? ' \u2014 last season, current season has no data yet' : ''}).`);
 }
 
