@@ -307,6 +307,7 @@
       <div class="sport-toggle" id="suggestSportToggle" style="display:flex; gap:8px; margin-bottom:16px;">
         <button type="button" class="sport-toggle-btn active" data-sport="football">🏈 Football</button>
         <button type="button" class="sport-toggle-btn" data-sport="hockey">🏒 Hockey</button>
+        <button type="button" class="sport-toggle-btn" data-sport="basketball">🏀 Basketball</button>
       </div>
       <div class="suggest-row">
         <input id="suggestSearch" type="text" placeholder="Search for a player or team…" autocomplete="off">
@@ -359,8 +360,13 @@
 <script>
 const FOOTBALL_ENTITIES = [];
 const HOCKEY_ENTITIES = [];
+const BASKETBALL_ENTITIES = [];
 let currentSport = 'football';
-function currentEntities(){ return currentSport === 'hockey' ? HOCKEY_ENTITIES : FOOTBALL_ENTITIES; }
+function currentEntities(){
+  if(currentSport === 'hockey') return HOCKEY_ENTITIES;
+  if(currentSport === 'basketball') return BASKETBALL_ENTITIES;
+  return FOOTBALL_ENTITIES;
+}
 
 function fullName(e){
   if(e.kind === 'team') return `${e.city} ${e.nickname}`;
@@ -417,6 +423,16 @@ async function mergeSubmittedNames(){
       if(!entity.names.includes(d.name)) entity.names.push(d.name);
     });
   } catch(err){ console.error('mergeSubmittedNames (hockey) failed', err); }
+  try {
+    const snap = await db.collection('submitted_names_basketball').where('status', '==', 'approved').get();
+    snap.forEach(doc => {
+      const d = doc.data();
+      const entity = BASKETBALL_ENTITIES.find(e => e.id === d.playerId);
+      if(!entity) return;
+      if(!entity.names) entity.names = [];
+      if(!entity.names.includes(d.name)) entity.names.push(d.name);
+    });
+  } catch(err){ console.error('mergeSubmittedNames (basketball) failed', err); }
 }
 
 // ---------- Suggest a name ----------
@@ -528,7 +544,7 @@ suggestSubmitBtn.addEventListener('click', async () => {
   }
 
   const flaggedUnrelated = !suggestReferencesEntity(suggestSelected, name);
-  const targetCollection = currentSport === 'hockey' ? 'submitted_names_hockey' : 'submitted_names';
+  const targetCollection = currentSport === 'hockey' ? 'submitted_names_hockey' : currentSport === 'basketball' ? 'submitted_names_basketball' : 'submitted_names';
 
   suggestSubmitBtn.disabled = true;
   suggestStatusEl.className = 'suggest-status';
@@ -573,7 +589,7 @@ document.querySelectorAll('.sport-toggle-btn').forEach(btn => {
     suggestNameInput.disabled = true;
     suggestSubmitBtn.disabled = true;
     suggestStatusEl.textContent = '';
-    suggestSearchInput.placeholder = sport === 'hockey' ? 'Search for an NHL player or team…' : 'Search for an NFL player or team…';
+    suggestSearchInput.placeholder = sport === 'hockey' ? 'Search for an NHL player or team…' : sport === 'basketball' ? 'Search for an NBA player or team…' : 'Search for an NFL player or team…';
     suggestSearchInput.focus();
   });
 });
@@ -583,8 +599,10 @@ Promise.all([
   loadJson('../players.json'),
   loadJson('../teams.json'),
   loadJson('../players_hockey.json'),
-  loadJson('../teams_hockey.json')
-]).then(([playersData, teamsData, hockeyPlayersData, hockeyTeamsData]) => {
+  loadJson('../teams_hockey.json'),
+  loadJson('../players_basketball.json'),
+  loadJson('../teams_basketball.json')
+]).then(([playersData, teamsData, hockeyPlayersData, hockeyTeamsData, basketballPlayersData, basketballTeamsData]) => {
   playersData.filter(p => p.active !== false).forEach(p => FOOTBALL_ENTITIES.push({ ...p, kind: 'player' }));
   teamsData.forEach(t => FOOTBALL_ENTITIES.push({
     id: t.abbr.toLowerCase() + '_team',
@@ -599,6 +617,18 @@ Promise.all([
 
   hockeyPlayersData.filter(p => p.active !== false).forEach(p => HOCKEY_ENTITIES.push({ ...p, kind: 'player' }));
   hockeyTeamsData.forEach(t => HOCKEY_ENTITIES.push({
+    id: t.abbr.toLowerCase() + '_team',
+    kind: 'team',
+    city: t.city,
+    nickname: t.nickname,
+    abbr: t.abbr,
+    team: t.abbr,
+    pos: 'DST',
+    names: t.names
+  }));
+
+  basketballPlayersData.filter(p => p.active !== false).forEach(p => BASKETBALL_ENTITIES.push({ ...p, kind: 'player' }));
+  basketballTeamsData.forEach(t => BASKETBALL_ENTITIES.push({
     id: t.abbr.toLowerCase() + '_team',
     kind: 'team',
     city: t.city,
