@@ -53,18 +53,16 @@ function mostRecentMonday(today) {
   return d;
 }
 
-// Extracts a player's full name from a boxscore entry, handling the two
-// field shapes the NHL API uses across different endpoints defensively,
-// since this script can't be live-tested against real game data before
-// its first real run.
-function boxscorePlayerName(p) {
-  if (p.name && p.name.default) return p.name.default;
-  if (p.firstName && p.lastName) {
-    const first = p.firstName.default || p.firstName;
-    const last = p.lastName.default || p.lastName;
-    return `${first} ${last}`;
-  }
-  return null;
+// Extracts the last name from the boxscore's "F. Lastname" format (e.g.
+// "K. Kaprizov"), which is all we can reliably compare against our own
+// roster data \u2014 the boxscore never gives a full first name, so matching on
+// full name (as this script originally tried) silently matches nobody.
+// Handles multi-word last names (e.g. "Q. Hughes" vs a hyphenated or
+// two-part surname) by taking everything after the first ". ".
+function boxscoreLastName(nameDefault) {
+  const parts = nameDefault.split('. ');
+  if (parts.length < 2) return normalizeName(nameDefault);
+  return normalizeName(parts.slice(1).join('. '));
 }
 
 async function fetchScheduleGameIds(mondayDate) {
@@ -94,14 +92,19 @@ async function fetchBoxscorePoints(gameId) {
   const stats = data.playerByGameStats;
   if (!stats) return [];
   const out = [];
+  const teamAbbrevBySide = {
+    awayTeam: data.awayTeam && data.awayTeam.abbrev,
+    homeTeam: data.homeTeam && data.homeTeam.abbrev,
+  };
   ['awayTeam', 'homeTeam'].forEach(side => {
     const team = stats[side];
-    if (!team) return;
+    const teamAbbrev = teamAbbrevBySide[side];
+    if (!team || !teamAbbrev) return;
     ['forwards', 'defense', 'goalies'].forEach(group => {
       (team[group] || []).forEach(p => {
-        const name = boxscorePlayerName(p);
-        if (!name) return;
-        out.push({ name, points: p.points || 0 });
+        if (!p.name || !p.name.default) return;
+        const lastName = boxscoreLastName(p.name.default);
+        out.push({ lastName, team: teamAbbrev, points: p.points || 0 });
       });
     });
   });
@@ -111,10 +114,13 @@ async function fetchBoxscorePoints(gameId) {
 async function main() {
   console.log('Loading players_hockey.json...');
   const players = JSON.parse(fs.readFileSync(PLAYERS_PATH, 'utf8'));
-  const byName = {};
+  // Keyed by "lastname_TEAM" since that's all the boxscore reliably gives us
+  // (see boxscoreLastName above) \u2014 full-name matching doesn't work here.
+  const byLastNameTeam = {};
   players.forEach(p => {
-    if (!p.first || !p.last) return;
-    byName[normalizeName(`${p.first} ${p.last}`)] = p;
+    if (!p.first || !p.last || !p.team) return;
+    const key = `${normalizeName(p.last)}_${p.team}`;
+    byLastNameTeam[key] = p;
   });
 
   const monday = mostRecentMonday(new Date());
@@ -123,22 +129,24 @@ async function main() {
   const gameIds = await fetchScheduleGameIds(monday);
   console.log(`Found ${gameIds.length} completed games so far this week.`);
 
-  const pointsByName = {};
+  const pointsByKey = {};
   for (const gameId of gameIds) {
     const entries = await fetchBoxscorePoints(gameId);
-    entries.forEach(({ name, points }) => {
-      const key = normalizeName(name);
-      pointsByName[key] = (pointsByName[key] || 0) + points;
+    entries.forEach(({ lastName, team, points }) => {
+      const key = `${lastName}_${team}`;
+      pointsByKey[key] = (pointsByKey[key] || 0) + points;
     });
   }
-  console.log(`Aggregated stats for ${Object.keys(pointsByName).length} players.`);
+  console.log(`Aggregated stats for ${Object.keys(pointsByKey).length} players.`);
 
   const thisWeek = {};
   SKATER_POSITIONS.concat('G').forEach(pos => { thisWeek[pos] = []; });
 
-  Object.keys(pointsByName).forEach(key => {
-    const match = byName[key];
-    if (!match) return; // not someone in our curated roster
+  let matched = 0;
+  Object.keys(pointsByKey).forEach(key => {
+    const match = byLastNameTeam[key];
+    if (!match) return; // not someone in our curated roster (or a team mismatch, e.g. recently traded)
+    matched++;
     const pos = SKATER_POSITIONS.includes(match.pos) ? match.pos : (match.pos === 'G' ? 'G' : null);
     if (!pos) return;
     thisWeek[pos].push({
@@ -147,10 +155,11 @@ async function main() {
       last: match.last,
       team: match.team,
       pos: match.pos,
-      pts: pointsByName[key],
+      pts: pointsByKey[key],
       pun: pickPun(match),
     });
   });
+  console.log(`Matched ${matched} of those to players in our roster.`);
 
   SKATER_POSITIONS.concat('G').forEach(pos => {
     thisWeek[pos].sort((a, b) => b.pts - a.pts);
