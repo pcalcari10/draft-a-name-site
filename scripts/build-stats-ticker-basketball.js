@@ -136,7 +136,9 @@ async function main() {
       .map(([sid, stat]) => ({ sid, stat, player: bySleeperId[sid] }))
       .filter(x => x.player && x.player.pos === pos && x.stat && x.stat.gp > 0);
 
-    // Fantasy view: ranked by total fantasy points across the season.
+    // Fantasy view: ranked by total fantasy points across the season, still
+    // grouped by position (this ranking is meant to reflect roster-building
+    // value at each spot, so position grouping stays here).
     fantasyLeaders[pos] = candidates
       .map(x => ({
         sid: x.sid,
@@ -145,21 +147,31 @@ async function main() {
       .sort((a, b) => b.pts - a.pts)
       .slice(0, TOP_N_BY_POS[pos])
       .map(x => buildEntry(x.sid, statsData[x.sid], { pts: round1(x.pts) }));
+  });
 
-    // Stats view: ranked by points per game, with the other per-game
-    // averages carried alongside for display.
-    statsLeaders[pos] = candidates
-      .map(x => ({
-        sid: x.sid,
-        gp: x.stat.gp,
-        ppg: (x.stat.pts || 0) / x.stat.gp,
-        apg: (x.stat.ast || 0) / x.stat.gp,
-        rpg: (x.stat.reb || 0) / x.stat.gp,
-        spg: (x.stat.stl || 0) / x.stat.gp,
-        bpg: (x.stat.blk || 0) / x.stat.gp,
-      }))
-      .sort((a, b) => b.ppg - a.ppg)
-      .slice(0, TOP_N_BY_POS[pos])
+  // Stats view: top 10 league-wide per category (PPG/APG/RPG/SPG/BPG),
+  // regardless of position -- these are meant to answer "who's the best at
+  // X this season," not "who's the best X at each position."
+  const allCandidates = Object.entries(statsData)
+    .map(([sid, stat]) => ({ sid, stat, player: bySleeperId[sid] }))
+    .filter(x => x.player && x.stat && x.stat.gp > 0)
+    .map(x => ({
+      sid: x.sid,
+      gp: x.stat.gp,
+      ppg: (x.stat.pts || 0) / x.stat.gp,
+      apg: (x.stat.ast || 0) / x.stat.gp,
+      rpg: (x.stat.reb || 0) / x.stat.gp,
+      spg: (x.stat.stl || 0) / x.stat.gp,
+      bpg: (x.stat.blk || 0) / x.stat.gp,
+    }));
+
+  const STAT_CATEGORIES = ['ppg', 'apg', 'rpg', 'spg', 'bpg'];
+  const TOP_N_STATS = 10;
+  STAT_CATEGORIES.forEach(cat => {
+    statsLeaders[cat] = allCandidates
+      .slice()
+      .sort((a, b) => b[cat] - a[cat])
+      .slice(0, TOP_N_STATS)
       .map(x => buildEntry(x.sid, statsData[x.sid], {
         gp: x.gp,
         ppg: round1(x.ppg),
