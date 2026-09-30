@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-30T01:29:38.781Z",
+  "generatedAt": "2026-09-30T01:33:56.486Z",
   "season": "20262027",
   "seasonTotals": {
     "C": [
@@ -40,10 +40,366 @@
   },
   "weekStart": "2026-09-28",
   "thisWeek": {
-    "C": [],
-    "LW": [],
-    "RW": [],
-    "D": [],
-    "G": []
+    "C": [
+      {
+        "id": "carterverhaeghe_fla",
+        "first": "Carter",
+        "last": "Verhaeghe",
+        "team": "FLA",
+        "pos": "C",
+        "pts": 1,
+        "pun": "Verhaeghe's Fantasy Fortress"
+      },
+      {
+        "id": "sambennett_fla",
+        "first": "Sam",
+        "last": "Bennett",
+        "team": "FLA",
+        "pos": "C",
+        "pts": 0,
+        "pun": "Bennett's Fantasy Fortress"
+      },
+      {
+        "id": "samreinhart_fla",
+        "first": "Sam",
+        "last": "Reinhart",
+        "team": "FLA",
+        "pos": "C",
+        "pts": 0,
+        "pun": "Reinhart's Fantasy Fortress"
+      },
+      {
+        "id": "antonlundell_fla",
+        "first": "Anton",
+        "last": "Lundell",
+        "team": "FLA",
+        "pos": "C",
+        "pts": 0,
+        "pun": "Lundell's Fantasy Fortress"
+      },
+      {
+        "id": "aleksanderbarkov_fla",
+        "first": "Aleksander",
+        "last": "Barkov",
+        "team": "FLA",
+        "pos": "C",
+        "pts": 0,
+        "pun": "Barkov's Fantasy Fortress"
+      },
+      {
+        "id": "larseller_ott",
+        "first": "Lars",
+        "last": "Eller",
+        "team": "FLA",
+        "pos": "C",
+        "pts": 0,
+        "pun": "Eller's Fantasy Fortress"
+      },
+      {
+        "id": "eetuluostarinen_fla",
+        "first": "Eetu",
+        "last": "Luostarinen",
+        "team": "FLA",
+        "pos": "C",
+        "pts": 0,
+        "pun": "Luostarinen's Fantasy Fortress"
+      },
+      {
+        "id": "jordanstaal_car",
+        "first": "Jordan",
+        "last": "Staal",
+        "team": "CAR",
+        "pos": "C",
+        "pts": 0,
+        "pun": "Staal's Fantasy Fortress"
+      },
+      {
+        "id": "sebastianaho_car",
+        "first": "Sebastian",
+        "last": "Aho",
+        "team": "CAR",
+        "pos": "C",
+        "pts": 0,
+        "pun": "Aho's Fantasy Fortress"
+      },
+      {
+        "id": "loganstankoven_car",
+        "first": "Logan",
+        "last": "Stankoven",
+        "team": "CAR",
+        "pos": "C",
+        "pts": 0,
+        "pun": "Stankoven's Fantasy Fortress"
+      }
+    ],
+    "LW": [
+      {
+        "id": "bradytkachuk_ott",
+        "first": "Brady",
+        "last": "Tkachuk",
+        "team": "FLA",
+        "pos": "LW",
+        "pts": 0,
+        "pun": "Tkachuk's Fantasy Fortress"
+      },
+      {
+        "id": "bokondjiimama_fla",
+        "first": "Bokondji",
+        "last": "Imama",
+        "team": "FLA",
+        "pos": "LW",
+        "pts": 0,
+        "pun": "Imama's Fantasy Fortress"
+      },
+      {
+        "id": "sandisvilmanis_fla",
+        "first": "Sandis",
+        "last": "Vilmanis",
+        "team": "FLA",
+        "pos": "LW",
+        "pts": 0,
+        "pun": "Sandis Vibes Only"
+      },
+      {
+        "id": "nikolajehlers_car",
+        "first": "Nikolaj",
+        "last": "Ehlers",
+        "team": "CAR",
+        "pos": "LW",
+        "pts": 0,
+        "pun": "Ehlers's Fantasy Fortress"
+      },
+      {
+        "id": "williamcarrier_car",
+        "first": "William",
+        "last": "Carrier",
+        "team": "CAR",
+        "pos": "LW",
+        "pts": 0,
+        "pun": "Carrier's Fantasy Fortress"
+      },
+      {
+        "id": "nicolasdeslauriers_phi",
+        "first": "Nicolas",
+        "last": "Deslauriers",
+        "team": "CAR",
+        "pos": "LW",
+        "pts": 0,
+        "pun": "Deslauriers's Fantasy Fortress"
+      },
+      {
+        "id": "jordanmartinook_car",
+        "first": "Jordan",
+        "last": "Martinook",
+        "team": "CAR",
+        "pos": "LW",
+        "pts": 0,
+        "pun": "Martinook's Fantasy Fortress"
+      },
+      {
+        "id": "ericrobinson_car",
+        "first": "Eric",
+        "last": "Robinson",
+        "team": "CAR",
+        "pos": "LW",
+        "pts": 0,
+        "pun": "Robinson's Fantasy Fortress"
+      },
+      {
+        "id": "taylorhall_car",
+        "first": "Taylor",
+        "last": "Hall",
+        "team": "CAR",
+        "pos": "LW",
+        "pts": 0,
+        "pun": "Hall's Fantasy Fortress"
+      },
+      {
+        "id": "markjankowski_car",
+        "first": "Mark",
+        "last": "Jankowski",
+        "team": "CAR",
+        "pos": "LW",
+        "pts": 0,
+        "pun": "Jankowski's Fantasy Fortress"
+      }
+    ],
+    "RW": [
+      {
+        "id": "garnethathaway_phi",
+        "first": "Garnet",
+        "last": "Hathaway",
+        "team": "FLA",
+        "pos": "RW",
+        "pts": 0,
+        "pun": "Hathaway's Fantasy Fortress"
+      },
+      {
+        "id": "andreisvechnikov_car",
+        "first": "Andrei",
+        "last": "Svechnikov",
+        "team": "CAR",
+        "pos": "RW",
+        "pts": 0,
+        "pun": "Svechnikov's Fantasy Fortress"
+      },
+      {
+        "id": "jacksonblake_car",
+        "first": "Jackson",
+        "last": "Blake",
+        "team": "CAR",
+        "pos": "RW",
+        "pts": 0,
+        "pun": "Blake's Fantasy Fortress"
+      }
+    ],
+    "D": [
+      {
+        "id": "gustavforsling_fla",
+        "first": "Gustav",
+        "last": "Forsling",
+        "team": "FLA",
+        "pos": "D",
+        "pts": 1,
+        "pun": "Forsling's Fantasy Fortress"
+      },
+      {
+        "id": "sethjones_fla",
+        "first": "Seth",
+        "last": "Jones",
+        "team": "FLA",
+        "pos": "D",
+        "pts": 0,
+        "pun": "Jones's Fantasy Fortress"
+      },
+      {
+        "id": "aaronekblad_fla",
+        "first": "Aaron",
+        "last": "Ekblad",
+        "team": "FLA",
+        "pos": "D",
+        "pts": 0,
+        "pun": "Ekblad's Fantasy Fortress"
+      },
+      {
+        "id": "radkogudas_ana",
+        "first": "Radko",
+        "last": "Gudas",
+        "team": "FLA",
+        "pos": "D",
+        "pts": 0,
+        "pun": "Gudas's Fantasy Fortress"
+      },
+      {
+        "id": "dmitrykulikov_fla",
+        "first": "Dmitry",
+        "last": "Kulikov",
+        "team": "FLA",
+        "pos": "D",
+        "pts": 0,
+        "pun": "Kulikov's Fantasy Fortress"
+      },
+      {
+        "id": "nikomikkola_fla",
+        "first": "Niko",
+        "last": "Mikkola",
+        "team": "FLA",
+        "pos": "D",
+        "pts": 0,
+        "pun": "Mikkola's Fantasy Fortress"
+      },
+      {
+        "id": "shaynegostisbehere_car",
+        "first": "Shayne",
+        "last": "Gostisbehere",
+        "team": "CAR",
+        "pos": "D",
+        "pts": 0,
+        "pun": "Gostisbehere's Fantasy Fortress"
+      },
+      {
+        "id": "jalenchatfield_car",
+        "first": "Jalen",
+        "last": "Chatfield",
+        "team": "CAR",
+        "pos": "D",
+        "pts": 0,
+        "pun": "Chatfield's Fantasy Fortress"
+      },
+      {
+        "id": "kandremiller_car",
+        "first": "K'Andre",
+        "last": "Miller",
+        "team": "CAR",
+        "pos": "D",
+        "pts": 0,
+        "pun": "Miller's Fantasy Fortress"
+      },
+      {
+        "id": "seanwalker_car",
+        "first": "Sean",
+        "last": "Walker",
+        "team": "CAR",
+        "pos": "D",
+        "pts": 0,
+        "pun": "Walker's Fantasy Fortress"
+      },
+      {
+        "id": "charlesalexislegault_car",
+        "first": "Charles-Alexis",
+        "last": "Legault",
+        "team": "CAR",
+        "pos": "D",
+        "pts": 0,
+        "pun": "Legault's Fantasy Fortress"
+      },
+      {
+        "id": "jaccobslavin_car",
+        "first": "Jaccob",
+        "last": "Slavin",
+        "team": "CAR",
+        "pos": "D",
+        "pts": 0,
+        "pun": "Slavin's Fantasy Fortress"
+      }
+    ],
+    "G": [
+      {
+        "id": "jacobmarkstrom_njd",
+        "first": "Jacob",
+        "last": "Markstrom",
+        "team": "FLA",
+        "pos": "G",
+        "pts": 0,
+        "pun": "Markstrom's Fantasy Fortress"
+      },
+      {
+        "id": "akiraschmid_vgk",
+        "first": "Akira",
+        "last": "Schmid",
+        "team": "FLA",
+        "pos": "G",
+        "pts": 0,
+        "pun": "Schmid's Fantasy Fortress"
+      },
+      {
+        "id": "brandonbussi_car",
+        "first": "Brandon",
+        "last": "Bussi",
+        "team": "CAR",
+        "pos": "G",
+        "pts": 0,
+        "pun": "Bussi's Fantasy Fortress"
+      },
+      {
+        "id": "pyotrkochetkov_car",
+        "first": "Pyotr",
+        "last": "Kochetkov",
+        "team": "CAR",
+        "pos": "G",
+        "pts": 0,
+        "pun": "Kochetkov's Fantasy Fortress"
+      }
+    ]
   }
 }
