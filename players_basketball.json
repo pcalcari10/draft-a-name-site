@@ -10,10 +10,11 @@
       "Livin' on a Butler",
       "All Butler, No Filler",
       "Straight Outta Butler",
-      "Jimmy & Chill"
+      "Jimmy & Chill",
+      "I Can't Believe It's Not Butler"
     ],
     "active": true,
-    "tier": "template"
+    "tier": "curated"
   },
   {
     "id": "timhardaway_mia",
@@ -58,10 +59,17 @@
       "Paul's Excellent Adventure",
       "George's Fantasy Fortress",
       "George-A-Palooza",
-      "George of Fame"
+      "George of Fame",
+      "John, Paul George and Ringo",
+      "Keep It PG"
     ],
     "active": true,
-    "tier": "template"
+    "tier": "curated",
+    "taggedNames": {
+      "music": [
+        "John, Paul George and Ringo"
+      ]
+    }
   },
   {
     "id": "klaythompson_mia",
@@ -74,10 +82,18 @@
       "Straight Outta Thompson",
       "Thompson'd Up and Ready",
       "Livin' on a Thompson",
-      "Klay's Excellent Adventure"
+      "Klay's Excellent Adventure",
+      "Come Out and Klay",
+      "Every Kiss Begins with Klay",
+      "Fifty Shades Of Klay"
     ],
     "active": true,
-    "tier": "template"
+    "tier": "curated",
+    "taggedNames": {
+      "movie": [
+        "Fifty Shades Of Klay"
+      ]
+    }
   },
   {
     "id": "draymondgreen_gsw",
@@ -90,10 +106,21 @@
       "In Green We Trust",
       "Livin' on a Green",
       "Green's Fantasy Fortress",
-      "Straight Outta Green"
+      "Straight Outta Green",
+      "Beats By Dray",
+      "Everybody Loves Draymond",
+      "Glass Cleanin' Greens"
     ],
     "active": true,
-    "tier": "template"
+    "tier": "curated",
+    "taggedNames": {
+      "music": [
+        "Beats By Dray"
+      ],
+      "tv": [
+        "Everybody Loves Draymond"
+      ]
+    }
   },
   {
     "id": "stephencurry_gsw",
@@ -106,10 +133,17 @@
       "Livin' on a Curry",
       "In Curry We Trust",
       "All Curry, No Filler",
-      "The Curry Show"
+      "The Curry Show",
+      "Steph Infection",
+      "Shang-Chi and the Legend of the Ten Currys"
     ],
     "active": true,
-    "tier": "template"
+    "tier": "curated",
+    "taggedNames": {
+      "movie": [
+        "Shang-Chi and the Legend of the Ten Currys"
+      ]
+    }
   },
   {
     "id": "harrisonbarnes_sas",
@@ -138,10 +172,17 @@
       "In Beal We Trust",
       "Straight Outta Beal",
       "Beal's Fantasy Fortress",
-      "Beal Happens"
+      "Beal Happens",
+      "Beal or No Beal",
+      "Breaking Bradley"
     ],
     "active": true,
-    "tier": "template"
+    "tier": "curated",
+    "taggedNames": {
+      "tv": [
+        "Breaking Bradley"
+      ]
+    }
   },
   {
     "id": "andredrummond_nyk",
@@ -154,10 +195,16 @@
       "Straight Outta Drummond",
       "Drummond of Fame",
       "Andre Vibes Only",
-      "Drummond-A-Palooza"
+      "Drummond-A-Palooza",
+      "Little Drummond Boys"
     ],
     "active": true,
-    "tier": "template"
+    "tier": "curated",
+    "taggedNames": {
+      "music": [
+        "Little Drummond Boys"
+      ]
+    }
   },
   {
     "id": "kentaviouscaldwellpope_phi",
@@ -234,10 +281,12 @@
       "Harden-tastic Voyage",
       "In Harden We Trust",
       "James Vibes Only",
-      "James's Excellent Adventure"
+      "James's Excellent Adventure",
+      "Go Harden Or Go Home",
+      "Harden the Paint"
     ],
     "active": true,
-    "tier": "template"
+    "tier": "curated"
   },
   {
     "id": "dennisschrder_cha",
@@ -250,10 +299,16 @@
       "All Schr\u00f6der, No Filler",
       "Schr\u00f6der-tastic Voyage",
       "Dennis Schr\u00f6der and the Fantasy Machine",
-      "Schr\u00f6der's Fantasy Fortress"
+      "Schr\u00f6der's Fantasy Fortress",
+      "Dwight K. Schroder"
     ],
     "active": true,
-    "tier": "template"
+    "tier": "curated",
+    "taggedNames": {
+      "tv": [
+        "Dwight K. Schroder"
+      ]
+    }
   },
   {
     "id": "alhorford_gsw",
@@ -282,10 +337,17 @@
       "Holiday'd Up and Ready",
       "Holiday Happens",
       "Holiday-A-Palooza",
-      "Holiday's Fantasy Fortress"
+      "Holiday's Fantasy Fortress",
+      "Girl You Know It's Jrue",
+      "Too Good to be Jrue"
     ],
     "active": true,
-    "tier": "template"
+    "tier": "curated",
+    "taggedNames": {
+      "music": [
+        "Girl You Know It's Jrue"
+      ]
+    }
   },
   {
     "id": "anthonydavis_was",
@@ -314,10 +376,13 @@
       "Leonard-tastic Voyage",
       "All Leonard, No Filler",
       "Kawhi's Excellent Adventure",
-      "Leonard Happens"
+      "Leonard Happens",
+      "Big Girls Don't Kawhi",
+      "Kawhi Bother",
+      "Kawhi Me A River"
     ],
     "active": true,
-    "tier": "template"
+    "tier": "curated"
   },
   {
     "id": "demarderozan_den",
@@ -362,10 +427,16 @@
       "Straight Outta Gobert",
       "Gobert's Fantasy Fortress",
       "The Gobert Show",
-      "All Gobert, No Filler"
+      "All Gobert, No Filler",
+      "Frozen Gobert"
     ],
     "active": true,
-    "tier": "template"
+    "tier": "curated",
+    "taggedNames": {
+      "movie": [
+        "Frozen Gobert"
+      ]
+    }
   },
   {
     "id": "lebronjames_phi",
@@ -378,10 +449,18 @@
       "Straight Outta James",
       "LeBron James and the Fantasy Machine",
       "James-tastic Voyage",
-      "LeBron's Excellent Adventure"
+      "LeBron's Excellent Adventure",
+      "Bron & Son",
+      "Going, Going, LeBron!",
+      "LeBrontourage"
     ],
     "active": true,
-    "tier": "template"
+    "tier": "curated",
+    "taggedNames": {
+      "tv": [
+        "LeBrontourage"
+      ]
+    }
   },
   {
     "id": "khrismiddleton_was",
@@ -410,10 +489,12 @@
       "Antetokounmpo'd Up and Ready",
       "Giannis & Chill",
       "Giannis Antetokounmpo and the Fantasy Machine",
-      "Antetokounmpo's Fantasy Fortress"
+      "Antetokounmpo's Fantasy Fortress",
+      "Antetokounmpbros",
+      "Antetokounmpocaypse"
     ],
     "active": true,
-    "tier": "template"
+    "tier": "curated"
   },
   {
     "id": "stevenadams_hou",
@@ -442,10 +523,11 @@
       "The Durant Show",
       "Durant's Fantasy Fortress",
       "Durant'd Up and Ready",
-      "Kevin's Excellent Adventure"
+      "Kevin's Excellent Adventure",
+      "Alien Durant Farm"
     ],
     "active": true,
-    "tier": "template"
+    "tier": "curated"
   },
   {
     "id": "damianlillard_por",
@@ -458,10 +540,23 @@
       "Lillard of Fame",
       "Livin' on a Lillard",
       "Damian Lillard and the Fantasy Machine",
-      "Straight Outta Lillard"
+      "Straight Outta Lillard",
+      "Damian Thrillard",
+      "Dame Time Travelers",
+      "Dame Park After Dark",
+      "Lillard the Cable Guy",
+      "From Deep Dame"
     ],
     "active": true,
-    "tier": "template"
+    "tier": "curated",
+    "taggedNames": {
+      "tv": [
+        "Dame Park After Dark"
+      ],
+      "movie": [
+        "Lillard the Cable Guy"
+      ]
+    }
   },
   {
     "id": "cjmccollum_atl",
@@ -474,10 +569,11 @@
       "McCollum-tastic Voyage",
       "The McCollum Show",
       "Livin' on a McCollum",
-      "McCollum-A-Palooza"
+      "McCollum-A-Palooza",
+      "McCollum as I McSee'em"
     ],
     "active": true,
-    "tier": "template"
+    "tier": "curated"
   },
   {
     "id": "nikolavuevi_orl",
@@ -522,10 +618,18 @@
       "Embiid-A-Palooza",
       "Joel Vibes Only",
       "Embiid-tastic Voyage",
-      "Joel Embiid and the Fantasy Machine"
+      "Joel Embiid and the Fantasy Machine",
+      "A Friend In Need Is A Friend Embiid",
+      "Embiid For Speed: Underground 2",
+      "WebEmbiid"
     ],
     "active": true,
-    "tier": "template"
+    "tier": "curated",
+    "taggedNames": {
+      "movie": [
+        "WebEmbiid"
+      ]
+    }
   },
   {
     "id": "jeramigrant_mem",
@@ -554,10 +658,16 @@
       "Wiggins Happens",
       "Andrew Wiggins and the Fantasy Machine",
       "In Wiggins We Trust",
-      "All Wiggins, No Filler"
+      "All Wiggins, No Filler",
+      "Wiggins of Oz"
     ],
     "active": true,
-    "tier": "template"
+    "tier": "curated",
+    "taggedNames": {
+      "movie": [
+        "Wiggins of Oz"
+      ]
+    }
   },
   {
     "id": "zachlavine_sac",
@@ -570,10 +680,16 @@
       "LaVine Happens",
       "LaVine of Fame",
       "LaVine-tastic Voyage",
-      "Livin' on a LaVine"
+      "Livin' on a LaVine",
+      "Lavine' On A Prayer"
     ],
     "active": true,
-    "tier": "template"
+    "tier": "curated",
+    "taggedNames": {
+      "music": [
+        "Lavine' On A Prayer"
+      ]
+    }
   },
   {
     "id": "jordanclarkson_nyk",
@@ -586,10 +702,16 @@
       "Jordan Clarkson and the Fantasy Machine",
       "Clarkson'd Up and Ready",
       "Jordan & Chill",
-      "Clarkson's Fantasy Fortress"
+      "Clarkson's Fantasy Fortress",
+      "Clarkson 5"
     ],
     "active": true,
-    "tier": "template"
+    "tier": "curated",
+    "taggedNames": {
+      "tv": [
+        "Clarkson 5"
+      ]
+    }
   },
   {
     "id": "juliusrandle_bkn",
@@ -602,10 +724,11 @@
       "Julius & Chill",
       "In Randle We Trust",
       "Randle-A-Palooza",
-      "Livin' on a Randle"
+      "Livin' on a Randle",
+      "Too Hot To Randle"
     ],
     "active": true,
-    "tier": "template"
+    "tier": "curated"
   },
   {
     "id": "clintcapela_hou",
@@ -698,10 +821,11 @@
       "In Gordon We Trust",
       "Gordon's Fantasy Fortress",
       "Aaron & Chill",
-      "Livin' on a Gordon"
+      "Livin' on a Gordon",
+      "Chicken Gordon Bleu"
     ],
     "active": true,
-    "tier": "template"
+    "tier": "curated"
   },
   {
     "id": "elfridpayton_sac",
@@ -778,10 +902,16 @@
       "Kevon & Chill",
       "The Looney Show",
       "Looney-A-Palooza",
-      "All Looney, No Filler"
+      "All Looney, No Filler",
+      "Looney Toons"
     ],
     "active": true,
-    "tier": "template"
+    "tier": "curated",
+    "taggedNames": {
+      "tv": [
+        "Looney Toons"
+      ]
+    }
   },
   {
     "id": "tjmcconnell_ind",
@@ -826,10 +956,12 @@
       "Livin' on a Towns",
       "Karl-Anthony's Excellent Adventure",
       "Straight Outta Towns",
-      "Towns Happens"
+      "Towns Happens",
+      "KAT In The Hat",
+      "Towns With The Sickness"
     ],
     "active": true,
-    "tier": "template"
+    "tier": "curated"
   },
   {
     "id": "tyusjones_den",
@@ -938,10 +1070,12 @@
       "Joki\u0107-tastic Voyage",
       "Nikola's Excellent Adventure",
       "Joki\u0107'd Up and Ready",
-      "The Joki\u0107 Show"
+      "The Joki\u0107 Show",
+      "Jokic Dokic",
+      "My Team is a Jokic"
     ],
     "active": true,
-    "tier": "template"
+    "tier": "curated"
   },
   {
     "id": "mariohezonja_cle",
@@ -1018,10 +1152,16 @@
       "Dunn of Fame",
       "In Dunn We Trust",
       "Dunn'd Up and Ready",
-      "Dunn's Fantasy Fortress"
+      "Dunn's Fantasy Fortress",
+      "Dunn and Dunner"
     ],
     "active": true,
-    "tier": "template"
+    "tier": "curated",
+    "taggedNames": {
+      "movie": [
+        "Dunn and Dunner"
+      ]
+    }
   },
   {
     "id": "ivicazubac_ind",
@@ -1035,7 +1175,8 @@
       "Ivica Zubac and the Fantasy Machine",
       "In Zubac We Trust",
       "Zubac of Fame",
-      "Zuby Do"
+      "Zuby Do",
+      "Hit it From Zubac"
     ],
     "active": true,
     "tier": "curated"
@@ -1051,10 +1192,11 @@
       "All Ingram, No Filler",
       "Livin' on a Ingram",
       "Ingram of Fame",
-      "The Ingram Show"
+      "The Ingram Show",
+      "Ingram Things"
     ],
     "active": true,
-    "tier": "template"
+    "tier": "curated"
   },
   {
     "id": "taureanprince_det",
@@ -1083,10 +1225,16 @@
       "Hield Happens",
       "All Hield, No Filler",
       "Buddy & Chill",
-      "In Hield We Trust"
+      "In Hield We Trust",
+      "Hield of Dreams"
     ],
     "active": true,
-    "tier": "template"
+    "tier": "curated",
+    "taggedNames": {
+      "movie": [
+        "Hield of Dreams"
+      ]
+    }
   },
   {
     "id": "jaylenbrown_phi",
@@ -1131,10 +1279,16 @@
       "Siakam-A-Palooza",
       "Siakam-tastic Voyage",
       "Straight Outta Siakam",
-      "Siakam of Fame"
+      "Siakam of Fame",
+      "Rock 'Em, Siakam Robots"
     ],
     "active": true,
-    "tier": "template"
+    "tier": "curated",
+    "taggedNames": {
+      "movie": [
+        "Rock 'Em, Siakam Robots"
+      ]
+    }
   },
   {
     "id": "fredvanvleet_hou",
@@ -1227,10 +1381,11 @@
       "Domantas & Chill",
       "Sabonis's Fantasy Fortress",
       "Domantas Sabonis and the Fantasy Machine",
-      "Domantas's Excellent Adventure"
+      "Domantas's Excellent Adventure",
+      "SupercalifragilisticexpialiDomantasSabonis"
     ],
     "active": true,
-    "tier": "template"
+    "tier": "curated"
   },
   {
     "id": "jamalmurray_den",
@@ -1243,10 +1398,11 @@
       "All Murray, No Filler",
       "Jamal's Excellent Adventure",
       "Murray-tastic Voyage",
-      "Murray's Fantasy Fortress"
+      "Murray's Fantasy Fortress",
+      "Jamal About The Money"
     ],
     "active": true,
-    "tier": "template"
+    "tier": "curated"
   },
   {
     "id": "laurimarkkanen_uta",
@@ -1259,10 +1415,16 @@
       "All Markkanen, No Filler",
       "Livin' on a Markkanen",
       "Lauri & Chill",
-      "The Markkanen Show"
+      "The Markkanen Show",
+      "Jurassic Markkanen"
     ],
     "active": true,
-    "tier": "template"
+    "tier": "curated",
+    "taggedNames": {
+      "movie": [
+        "Jurassic Markkanen"
+      ]
+    }
   },
   {
     "id": "lukekornet_sas",
@@ -1435,10 +1597,16 @@
       "Jayson Tatum and the Fantasy Machine",
       "Jayson & Chill",
       "Jayson's Excellent Adventure",
-      "All Tatum, No Filler"
+      "All Tatum, No Filler",
+      "Don't Go Jayson Waterfalls"
     ],
     "active": true,
-    "tier": "template"
+    "tier": "curated",
+    "taggedNames": {
+      "music": [
+        "Don't Go Jayson Waterfalls"
+      ]
+    }
   },
   {
     "id": "derrickwhite_bos",
@@ -1515,10 +1683,16 @@
       "Mitchell of Fame",
       "Donovan & Chill",
       "Mitchell-tastic Voyage",
-      "Mitchell's Fantasy Fortress"
+      "Mitchell's Fantasy Fortress",
+      "Spider-Verse Mitchell"
     ],
     "active": true,
-    "tier": "template"
+    "tier": "curated",
+    "taggedNames": {
+      "movie": [
+        "Spider-Verse Mitchell"
+      ]
+    }
   },
   {
     "id": "bamadebayo_mia",
@@ -1595,10 +1769,12 @@
       "De'Aaron Fox and the Fantasy Machine",
       "Straight Outta Fox",
       "Fox-tastic Voyage",
-      "Fox-A-Palooza"
+      "Fox-A-Palooza",
+      "De'Aaron on the Side of Caution",
+      "Zero Fox Given"
     ],
     "active": true,
-    "tier": "template"
+    "tier": "curated"
   },
   {
     "id": "jonathanisaac_orl",
@@ -1675,10 +1851,16 @@
       "Straight Outta Sexton",
       "The Sexton Show",
       "Sexton-tastic Voyage",
-      "Sexton'd Up and Ready"
+      "Sexton'd Up and Ready",
+      "Let's Talk About Sexton"
     ],
     "active": true,
-    "tier": "template"
+    "tier": "curated",
+    "taggedNames": {
+      "music": [
+        "Let's Talk About Sexton"
+      ]
+    }
   },
   {
     "id": "landryshamet_nyk",
@@ -1867,10 +2049,17 @@
       "Young Happens",
       "Young-A-Palooza",
       "Young's Fantasy Fortress",
-      "Young-tastic Voyage"
+      "Young-tastic Voyage",
+      "Ice Trae",
+      "Ice Trae Baby"
     ],
     "active": true,
-    "tier": "template"
+    "tier": "curated",
+    "taggedNames": {
+      "music": [
+        "Ice Trae Baby"
+      ]
+    }
   },
   {
     "id": "kenrichwilliams_okc",
@@ -1947,10 +2136,11 @@
       "Livin' on a Gilgeous-Alexander",
       "Shai Gilgeous-Alexander and the Fantasy Machine",
       "Gilgeous-Alexander-tastic Voyage",
-      "Shai's Excellent Adventure"
+      "Shai's Excellent Adventure",
+      "Shai It Ain't So"
     ],
     "active": true,
-    "tier": "template"
+    "tier": "curated"
   },
   {
     "id": "graysonallen_cha",
@@ -2011,10 +2201,11 @@
       "Jalen Brunson and the Fantasy Machine",
       "In Brunson We Trust",
       "Jalen Vibes Only",
-      "Jalen's Excellent Adventure"
+      "Jalen's Excellent Adventure",
+      "Brunson Burner"
     ],
     "active": true,
-    "tier": "template"
+    "tier": "curated"
   },
   {
     "id": "lukadoni_lal",
@@ -2027,10 +2218,23 @@
       "Don\u010di\u0107'd Up and Ready",
       "All Don\u010di\u0107, No Filler",
       "Don\u010di\u0107-tastic Voyage",
-      "Luka & Chill"
+      "Luka & Chill",
+      "Doncic Forget About Me",
+      "It's On Like Doncic Kong",
+      "Luka Dong Thicc",
+      "Luka Skywalker",
+      "Scooby Doncic"
     ],
     "active": true,
-    "tier": "template"
+    "tier": "curated",
+    "taggedNames": {
+      "starwars": [
+        "Luka Skywalker"
+      ],
+      "tv": [
+        "Scooby Doncic"
+      ]
+    }
   },
   {
     "id": "deanthonymelton_gsw",
@@ -2059,10 +2263,17 @@
       "Ayton'd Up and Ready",
       "Deandre & Chill",
       "Livin' on a Ayton",
-      "In Ayton We Trust"
+      "In Ayton We Trust",
+      "Ayton Of Drugs",
+      "Ayton Powers"
     ],
     "active": true,
-    "tier": "template"
+    "tier": "curated",
+    "taggedNames": {
+      "movie": [
+        "Ayton Powers"
+      ]
+    }
   },
   {
     "id": "mikalbridges_nyk",
@@ -2075,10 +2286,16 @@
       "All Bridges, No Filler",
       "Mikal & Chill",
       "Livin' on a Bridges",
-      "Bridges-A-Palooza"
+      "Bridges-A-Palooza",
+      "Bridges Over Troubled Waters"
     ],
     "active": true,
-    "tier": "template"
+    "tier": "curated",
+    "taggedNames": {
+      "music": [
+        "Bridges Over Troubled Waters"
+      ]
+    }
   },
   {
     "id": "garytrent_mil",
@@ -2107,10 +2324,12 @@
       "Anfernee's Excellent Adventure",
       "Anfernee Vibes Only",
       "In Simons We Trust",
-      "Simons-A-Palooza"
+      "Simons-A-Palooza",
+      "Simons Says",
+      "Simons Says Win"
     ],
     "active": true,
-    "tier": "template"
+    "tier": "curated"
   },
   {
     "id": "marvinbagley_den",
@@ -2123,10 +2342,11 @@
       "Livin' on a Bagley",
       "Marvin's Excellent Adventure",
       "Bagley of Fame",
-      "In Bagley We Trust"
+      "In Bagley We Trust",
+      "Secured the Bagley"
     ],
     "active": true,
-    "tier": "template"
+    "tier": "curated"
   },
   {
     "id": "jarredvanderbilt_lal",
@@ -2171,10 +2391,11 @@
       "Bamba of Fame",
       "All Bamba, No Filler",
       "Mo Bamba and the Fantasy Machine",
-      "Mo & Chill"
+      "Mo & Chill",
+      "Mo Problems Mo Bamba"
     ],
     "active": true,
-    "tier": "template"
+    "tier": "curated"
   },
   {
     "id": "danielgafford_dal",
@@ -2203,10 +2424,11 @@
       "The White Show",
       "In White We Trust",
       "White of Fame",
-      "White'd Up and Ready"
+      "White'd Up and Ready",
+      "Coby or Not Coby"
     ],
     "active": true,
-    "tier": "template"
+    "tier": "curated"
   },
   {
     "id": "maxstrus_lac",
@@ -2235,10 +2457,11 @@
       "The Barrett Show",
       "Barrett'd Up and Ready",
       "Barrett-A-Palooza",
-      "RJ Vibes Only"
+      "RJ Vibes Only",
+      "Barrett Essentials"
     ],
     "active": true,
-    "tier": "template"
+    "tier": "curated"
   },
   {
     "id": "dariusgarland_lac",
@@ -2315,10 +2538,21 @@
       "Poole-A-Palooza",
       "Poole-tastic Voyage",
       "Poole of Fame",
-      "The Poole Show"
+      "The Poole Show",
+      "DeadPoole",
+      "Poole Party 2.0",
+      "Shaqtin A Poole"
     ],
     "active": true,
-    "tier": "template"
+    "tier": "curated",
+    "taggedNames": {
+      "movie": [
+        "DeadPoole"
+      ],
+      "tv": [
+        "Shaqtin A Poole"
+      ]
+    }
   },
   {
     "id": "matissethybulle_lal",
@@ -2459,10 +2693,23 @@
       "Morant Happens",
       "Ja Vibes Only",
       "Ja Morant and the Fantasy Machine",
-      "Morant-tastic Voyage"
+      "Morant-tastic Voyage",
+      "Ja And Order",
+      "Ja Patrol",
+      "Ja Wick",
+      "Mr. Morantastic"
     ],
     "active": true,
-    "tier": "template"
+    "tier": "curated",
+    "taggedNames": {
+      "tv": [
+        "Ja And Order"
+      ],
+      "movie": [
+        "Ja Wick",
+        "Mr. Morantastic"
+      ]
+    }
   },
   {
     "id": "deandrehunter_sac",
@@ -2507,10 +2754,16 @@
       "Livin' on a Williamson",
       "Zion Vibes Only",
       "In Williamson We Trust",
-      "Williamson'd Up and Ready"
+      "Williamson'd Up and Ready",
+      "The Zion King"
     ],
     "active": true,
-    "tier": "template"
+    "tier": "curated",
+    "taggedNames": {
+      "movie": [
+        "The Zion King"
+      ]
+    }
   },
   {
     "id": "nickeilalexanderwalker_atl",
@@ -2603,10 +2856,14 @@
       "Tyler Vibes Only",
       "Herro Happens",
       "Tyler's Excellent Adventure",
-      "Herro'd Up and Ready"
+      "Herro'd Up and Ready",
+      "Herro Ball",
+      "Herro Sandwich",
+      "There Goes Ty Herro",
+      "Zeroes to Herros"
     ],
     "active": true,
-    "tier": "template"
+    "tier": "curated"
   },
   {
     "id": "tyjerome_mem",
@@ -2796,10 +3053,17 @@
       "Anthony & Chill",
       "Livin' on a Edwards",
       "Edwards Happens",
-      "Edwards-tastic Voyage"
+      "Edwards-tastic Voyage",
+      "Edwards Scissorhands",
+      "Rebound Edwards"
     ],
     "active": true,
-    "tier": "template"
+    "tier": "curated",
+    "taggedNames": {
+      "movie": [
+        "Edwards Scissorhands"
+      ]
+    }
   },
   {
     "id": "jadenmcdaniels_min",
@@ -3004,10 +3268,11 @@
       "Quickley's Fantasy Fortress",
       "In Quickley We Trust",
       "Quickley of Fame",
-      "Quickley-tastic Voyage"
+      "Quickley-tastic Voyage",
+      "Quickley Does It"
     ],
     "active": true,
-    "tier": "template"
+    "tier": "curated"
   },
   {
     "id": "isaiahstewart_mem",
@@ -3036,10 +3301,11 @@
       "All Haliburton, No Filler",
       "The Haliburton Show",
       "Livin' on a Haliburton",
-      "Tyrese Haliburton and the Fantasy Machine"
+      "Tyrese Haliburton and the Fantasy Machine",
+      "Haliburton Prescription"
     ],
     "active": true,
-    "tier": "template"
+    "tier": "curated"
   },
   {
     "id": "zekennaji_den",
@@ -3068,10 +3334,11 @@
       "Ball'd Up and Ready",
       "LaMelo Vibes Only",
       "Straight Outta Ball",
-      "LaMelo & Chill"
+      "LaMelo & Chill",
+      "LaMelo Out Loud"
     ],
     "active": true,
-    "tier": "template"
+    "tier": "curated"
   },
   {
     "id": "deniavdija_por",
@@ -3228,10 +3495,11 @@
       "Livin' on a Grimes",
       "The Grimes Show",
       "Grimes's Fantasy Fortress",
-      "Straight Outta Grimes"
+      "Straight Outta Grimes",
+      "Grimes Against Humanity"
     ],
     "active": true,
-    "tier": "template"
+    "tier": "curated"
   },
   {
     "id": "evanmobley_cle",
@@ -3244,10 +3512,20 @@
       "Straight Outta Mobley",
       "Mobley's Fantasy Fortress",
       "Evan & Chill",
-      "Mobley Happens"
+      "Mobley Happens",
+      "Mobley Dick",
+      "Scooby-Doobley (Mobley)"
     ],
     "active": true,
-    "tier": "template"
+    "tier": "curated",
+    "taggedNames": {
+      "movie": [
+        "Mobley Dick"
+      ],
+      "tv": [
+        "Scooby-Doobley (Mobley)"
+      ]
+    }
   },
   {
     "id": "isaiahjackson_lac",
@@ -3468,10 +3746,11 @@
       "Scottie Vibes Only",
       "Barnes-tastic Voyage",
       "Scottie Barnes and the Fantasy Machine",
-      "Barnes's Fantasy Fortress"
+      "Barnes's Fantasy Fortress",
+      "Barnes&Noble"
     ],
     "active": true,
-    "tier": "template"
+    "tier": "curated"
   },
   {
     "id": "brandonboston_chi",
@@ -3602,10 +3881,23 @@
       "Franz Vibes Only",
       "The Wagner Show",
       "Wagner-tastic Voyage",
-      "Livin' on a Wagner"
+      "Livin' on a Wagner",
+      "Franz Ferdinand Wagner",
+      "Tour De Franz",
+      "Fast & Franzious",
+      "Free Throw Franz",
+      "Full Court Franz"
     ],
     "active": true,
-    "tier": "template"
+    "tier": "curated",
+    "taggedNames": {
+      "music": [
+        "Franz Ferdinand Wagner"
+      ],
+      "movie": [
+        "Fast & Franzious"
+      ]
+    }
   },
   {
     "id": "jalensuggs_orl",
@@ -3634,10 +3926,11 @@
       "Jonathan & Chill",
       "Straight Outta Kuminga",
       "Kuminga's Fantasy Fortress",
-      "Kuminga-tastic Voyage"
+      "Kuminga-tastic Voyage",
+      "Kuminga Attractions"
     ],
     "active": true,
-    "tier": "template"
+    "tier": "curated"
   },
   {
     "id": "alperenengn_hou",
@@ -3650,10 +3943,19 @@
       "Livin' on a \u015eeng\u00fcn",
       "Alperen Vibes Only",
       "The \u015eeng\u00fcn Show",
-      "Straight Outta \u015eeng\u00fcn"
+      "Straight Outta \u015eeng\u00fcn",
+      "Sengun and Done",
+      "Sengun Thrones",
+      "Stranger Senguns"
     ],
     "active": true,
-    "tier": "template"
+    "tier": "curated",
+    "taggedNames": {
+      "tv": [
+        "Sengun Thrones",
+        "Stranger Senguns"
+      ]
+    }
   },
   {
     "id": "jalengreen_phx",
@@ -3666,10 +3968,11 @@
       "Green-tastic Voyage",
       "Green-A-Palooza",
       "Green of Fame",
-      "Jalen's Excellent Adventure"
+      "Jalen's Excellent Adventure",
+      "Jalen Green Light"
     ],
     "active": true,
-    "tier": "template"
+    "tier": "curated"
   },
   {
     "id": "joshgiddey_chi",
@@ -3682,10 +3985,11 @@
       "Straight Outta Giddey",
       "Josh Giddey and the Fantasy Machine",
       "Giddey's Fantasy Fortress",
-      "Giddey Happens"
+      "Giddey Happens",
+      "Giddey Up"
     ],
     "active": true,
-    "tier": "template"
+    "tier": "curated"
   },
   {
     "id": "austinreaves_lal",
@@ -4098,10 +4402,21 @@
       "Kessler Happens",
       "Kessler'd Up and Ready",
       "Walker Vibes Only",
-      "Kessler-A-Palooza"
+      "Kessler-A-Palooza",
+      "SkyWalker Kessler",
+      "Walker Texas Kessler",
+      "Kessler's Rejects"
     ],
     "active": true,
-    "tier": "template"
+    "tier": "curated",
+    "taggedNames": {
+      "starwars": [
+        "SkyWalker Kessler"
+      ],
+      "tv": [
+        "Walker Texas Kessler"
+      ]
+    }
   },
   {
     "id": "wendellmoore_det",
@@ -4162,10 +4477,21 @@
       "Smith-A-Palooza",
       "The Smith Show",
       "Smith's Fantasy Fortress",
-      "Jabari Vibes Only"
+      "Jabari Vibes Only",
+      "Jabari The Hutt",
+      "Jabari's Playground",
+      "Jabari Park Life"
     ],
     "active": true,
-    "tier": "template"
+    "tier": "curated",
+    "taggedNames": {
+      "starwars": [
+        "Jabari The Hutt"
+      ],
+      "tv": [
+        "Jabari Park Life"
+      ]
+    }
   },
   {
     "id": "tarieason_hou",
@@ -4227,10 +4553,11 @@
       "Sochan-A-Palooza",
       "Jeremy & Chill",
       "Sochan's Fantasy Fortress",
-      "Sochan-tastic Voyage"
+      "Sochan-tastic Voyage",
+      "Dont Mess With The Sochan"
     ],
     "active": true,
-    "tier": "template"
+    "tier": "curated"
   },
   {
     "id": "malakibranham_orl",
@@ -4291,10 +4618,20 @@
       "Holmgren of Fame",
       "The Holmgren Show",
       "Holmgren's Fantasy Fortress",
-      "Holmgren-tastic Voyage"
+      "Holmgren-tastic Voyage",
+      "ChetGPT",
+      "Holmgren's Homeboys",
+      "Chetflix Originals",
+      "Crossover Chet",
+      "Holmgren's Hoop House"
     ],
     "active": true,
-    "tier": "template"
+    "tier": "curated",
+    "taggedNames": {
+      "tv": [
+        "Chetflix Originals"
+      ]
+    }
   },
   {
     "id": "keeganmurray_sac",
@@ -4307,10 +4644,11 @@
       "All Murray, No Filler",
       "The Murray Show",
       "Murray'd Up and Ready",
-      "Murray-tastic Voyage"
+      "Murray-tastic Voyage",
+      "Murray Up Already"
     ],
     "active": true,
-    "tier": "template"
+    "tier": "curated"
   },
   {
     "id": "christianbraun_den",
@@ -4339,10 +4677,13 @@
       "Paolo & Chill",
       "Banchero's Fantasy Fortress",
       "Paolo Vibes Only",
-      "Paolo's Excellent Adventure"
+      "Paolo's Excellent Adventure",
+      "Huevos Bancheros",
+      "Paolo Party",
+      "Banchero Bench Bosses"
     ],
     "active": true,
-    "tier": "template"
+    "tier": "curated"
   },
   {
     "id": "trevorkeels_mia",
@@ -4371,10 +4712,11 @@
       "All Nembhard, No Filler",
       "Nembhard-tastic Voyage",
       "The Nembhard Show",
-      "Straight Outta Nembhard"
+      "Straight Outta Nembhard",
+      "MikeNembHard Lemonade"
     ],
     "active": true,
-    "tier": "template"
+    "tier": "curated"
   },
   {
     "id": "ryanrollins_mil",
@@ -4628,10 +4970,16 @@
       "The Dieng Show",
       "Ousmane's Excellent Adventure",
       "Dieng-A-Palooza",
-      "The Yin and Dieng"
+      "The Yin and Dieng",
+      "The Big Dieng Theory"
     ],
     "active": true,
-    "tier": "curated"
+    "tier": "curated",
+    "taggedNames": {
+      "tv": [
+        "The Big Dieng Theory"
+      ]
+    }
   },
   {
     "id": "khalifadiop_cle",
@@ -4954,10 +5302,11 @@
       "Thompson Happens",
       "Ausar Thompson and the Fantasy Machine",
       "Livin' on a Thompson",
-      "Ausar & Chill"
+      "Ausar & Chill",
+      "Ausar-vivors"
     ],
     "active": true,
-    "tier": "template"
+    "tier": "curated"
   },
   {
     "id": "marcussasser_dal",
@@ -5035,10 +5384,11 @@
       "Thompson'd Up and Ready",
       "Amen Thompson and the Fantasy Machine",
       "The Thompson Show",
-      "Amen & Chill"
+      "Amen & Chill",
+      "Amen Break"
     ],
     "active": true,
-    "tier": "template"
+    "tier": "curated"
   },
   {
     "id": "kobebufkin_nop",
@@ -5083,10 +5433,30 @@
       "Victor Vibes Only",
       "Straight Outta Wembanyama",
       "The Wembanyama Show",
-      "Victor Wembanyama and the Fantasy Machine"
+      "Victor Wembanyama and the Fantasy Machine",
+      "Sir This Is A Wemby's",
+      "WembanYama Mama",
+      "Wemby's World",
+      "House of Wemby",
+      "Wemby Wonka",
+      "Dunkin' Wembys",
+      "The Wemby Blockade",
+      "Wembanama Slamma"
     ],
     "active": true,
-    "tier": "template"
+    "tier": "curated",
+    "taggedNames": {
+      "music": [
+        "WembanYama Mama"
+      ],
+      "tv": [
+        "Wemby's World",
+        "House of Wemby"
+      ],
+      "movie": [
+        "Wemby Wonka"
+      ]
+    }
   },
   {
     "id": "gradeydick_lac",
@@ -5131,10 +5501,11 @@
       "All George, No Filler",
       "George of Fame",
       "Keyonte & Chill",
-      "The George Show"
+      "The George Show",
+      "Keyonte Content"
     ],
     "active": true,
-    "tier": "template"
+    "tier": "curated"
   },
   {
     "id": "bricesensabaugh_uta",
@@ -5563,10 +5934,19 @@
       "In Henderson We Trust",
       "Straight Outta Henderson",
       "Henderson'd Up and Ready",
-      "Scoot's Excellent Adventure"
+      "Scoot's Excellent Adventure",
+      "Scoot Troop",
+      "Scoot Dogg",
+      "Scoot Scoot Baby",
+      "Clutch City Scoot"
     ],
     "active": true,
-    "tier": "template"
+    "tier": "curated",
+    "taggedNames": {
+      "music": [
+        "Scoot Dogg"
+      ]
+    }
   },
   {
     "id": "leonardmiller_chi",
@@ -6482,10 +6862,18 @@
       "James-tastic Voyage",
       "Bronny James and the Fantasy Machine",
       "James of Fame",
-      "Livin' on a James"
+      "Livin' on a James",
+      "Bronny Ballers",
+      "Bronny Bunch",
+      "Boardmen Bronny"
     ],
     "active": true,
-    "tier": "template"
+    "tier": "curated",
+    "taggedNames": {
+      "tv": [
+        "Bronny Bunch"
+      ]
+    }
   },
   {
     "id": "nfalydante_nyk",

@@ -3,7 +3,9 @@
     "abbr": "ATL",
     "city": "Atlanta",
     "nickname": "Hawks",
-    "names": []
+    "names": [
+      "Hawking Your Wares"
+    ]
   },
   {
     "abbr": "BOS",
@@ -15,49 +17,75 @@
     "abbr": "BKN",
     "city": "Brooklyn",
     "nickname": "Nets",
-    "names": []
+    "names": [
+      "Nets Gains"
+    ]
   },
   {
     "abbr": "CHA",
     "city": "Charlotte",
     "nickname": "Hornets",
-    "names": []
+    "names": [
+      "Blow Your Hornet"
+    ]
   },
   {
     "abbr": "CHI",
     "city": "Chicago",
     "nickname": "Bulls",
-    "names": []
+    "names": [
+      "Running of The Bulls"
+    ]
   },
   {
     "abbr": "CLE",
     "city": "Cleveland",
     "nickname": "Cavaliers",
-    "names": []
+    "names": [
+      "Cavalier Steer Clear"
+    ]
   },
   {
     "abbr": "DAL",
     "city": "Dallas",
     "nickname": "Mavericks",
-    "names": []
+    "names": [
+      "Mavericks and Goose"
+    ],
+    "taggedNames": {
+      "movie": [
+        "Mavericks and Goose"
+      ]
+    }
   },
   {
     "abbr": "DEN",
     "city": "Denver",
     "nickname": "Nuggets",
-    "names": []
+    "names": [
+      "Chuck n Nuggets"
+    ]
   },
   {
     "abbr": "DET",
     "city": "Detroit",
     "nickname": "Pistons",
-    "names": []
+    "names": [
+      "Piston In The Wind"
+    ],
+    "taggedNames": {
+      "music": [
+        "Piston In The Wind"
+      ]
+    }
   },
   {
     "abbr": "GSW",
     "city": "Golden State",
     "nickname": "Warriors",
-    "names": []
+    "names": [
+      "Ultimate Warriors"
+    ]
   },
   {
     "abbr": "HOU",
@@ -69,61 +97,91 @@
     "abbr": "IND",
     "city": "Indiana",
     "nickname": "Pacers",
-    "names": []
+    "names": [
+      "Setting the Pacers"
+    ]
   },
   {
     "abbr": "LAC",
     "city": "LA",
     "nickname": "Clippers",
-    "names": []
+    "names": [
+      "Robe and Clippers"
+    ]
   },
   {
     "abbr": "LAL",
     "city": "Los Angeles",
     "nickname": "Lakers",
-    "names": []
+    "names": [
+      "D'yer Lakers"
+    ],
+    "taggedNames": {
+      "music": [
+        "D'yer Lakers"
+      ]
+    }
   },
   {
     "abbr": "MEM",
     "city": "Memphis",
     "nickname": "Grizzlies",
-    "names": []
+    "names": [
+      "Grizzly Veterans"
+    ]
   },
   {
     "abbr": "MIA",
     "city": "Miami",
     "nickname": "Heat",
-    "names": []
+    "names": [
+      "Bring The Heat"
+    ]
   },
   {
     "abbr": "MIL",
     "city": "Milwaukee",
     "nickname": "Bucks",
-    "names": []
+    "names": [
+      "The Bucks Stop Here"
+    ]
   },
   {
     "abbr": "MIN",
     "city": "Minnesota",
     "nickname": "Timberwolves",
-    "names": []
+    "names": [
+      "Going Down, Going Timberwolves"
+    ]
   },
   {
     "abbr": "NOP",
     "city": "New Orleans",
     "nickname": "Pelicans",
-    "names": []
+    "names": [
+      "The Pelicans Brief"
+    ],
+    "taggedNames": {
+      "movie": [
+        "The Pelicans Brief"
+      ]
+    }
   },
   {
     "abbr": "NYK",
     "city": "New York",
     "nickname": "Knicks",
-    "names": []
+    "names": [
+      "No Knicks or Scratches"
+    ]
   },
   {
     "abbr": "OKC",
     "city": "Oklahoma City",
     "nickname": "Thunder",
-    "names": []
+    "names": [
+      "Thunder From Brown Under"
+    ]
   },
   {
     "abbr": "ORL",
@@ -141,7 +199,14 @@
     "abbr": "PHX",
     "city": "Phoenix",
     "nickname": "Suns",
-    "names": []
+    "names": [
+      "Suns of Anarchy"
+    ],
+    "taggedNames": {
+      "tv": [
+        "Suns of Anarchy"
+      ]
+    }
   },
   {
     "abbr": "POR",
@@ -153,7 +218,9 @@
     "abbr": "SAC",
     "city": "Sacramento",
     "nickname": "Kings",
-    "names": []
+    "names": [
+      "Kings and Queens"
+    ]
   },
   {
     "abbr": "SAS",
@@ -165,7 +232,9 @@
     "abbr": "TOR",
     "city": "Toronto",
     "nickname": "Raptors",
-    "names": []
+    "names": [
+      "En-Raptor-ed"
+    ]
   },
   {
     "abbr": "UTA",
