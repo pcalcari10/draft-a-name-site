@@ -32,22 +32,6 @@
     "tier": "template"
   },
   {
-    "id": "mikeyeyssimont_bos",
-    "first": "Mikey",
-    "last": "Eyssimont",
-    "team": "BOS",
-    "pos": "LW",
-    "names": [
-      "Eyssimont's Fantasy Fortress",
-      "In Eyssimont We Trust",
-      "Mikey Eyssimont and the Fantasy Machine",
-      "Straight Outta Eyssimont",
-      "Mikey Vibes Only"
-    ],
-    "active": false,
-    "tier": "template"
-  },
-  {
     "id": "morgangeekie_bos",
     "first": "Morgan",
     "last": "Geekie",
@@ -3422,22 +3406,6 @@
     "tier": "template"
   },
   {
-    "id": "christophertanev_tor",
-    "first": "Christopher",
-    "last": "Tanev",
-    "team": "TOR",
-    "pos": "D",
-    "names": [
-      "Tanev's Fantasy Fortress",
-      "In Tanev We Trust",
-      "Christopher Tanev and the Fantasy Machine",
-      "Straight Outta Tanev",
-      "Christopher Vibes Only"
-    ],
-    "active": false,
-    "tier": "template"
-  },
-  {
     "id": "johntavares_tor",
     "first": "John",
     "last": "Tavares",
@@ -6054,22 +6022,6 @@
     "tier": "template"
   },
   {
-    "id": "danielvladar_phi",
-    "first": "Daniel",
-    "last": "Vladar",
-    "team": "PHI",
-    "pos": "G",
-    "names": [
-      "Vladar's Fantasy Fortress",
-      "In Vladar We Trust",
-      "Daniel Vladar and the Fantasy Machine",
-      "Straight Outta Vladar",
-      "Daniel Vibes Only"
-    ],
-    "active": false,
-    "tier": "template"
-  },
-  {
     "id": "camyork_phi",
     "first": "Cam",
     "last": "York",
@@ -6810,22 +6762,6 @@
     ],
     "active": false,
     "tier": "curated"
-  },
-  {
-    "id": "alexanderovechkin_wsh",
-    "first": "Alexander",
-    "last": "Ovechkin",
-    "team": "WSH",
-    "pos": "LW",
-    "names": [
-      "Ovechkin's Fantasy Fortress",
-      "In Ovechkin We Trust",
-      "Alexander Ovechkin and the Fantasy Machine",
-      "Straight Outta Ovechkin",
-      "Alexander Vibes Only"
-    ],
-    "active": false,
-    "tier": "template"
   },
   {
     "id": "aliakseiprotas_wsh",
@@ -8279,22 +8215,6 @@
     "tier": "template"
   },
   {
-    "id": "phillipdanault_lak",
-    "first": "Phillip",
-    "last": "Danault",
-    "team": "MTL",
-    "pos": "C",
-    "names": [
-      "Danault's Fantasy Fortress",
-      "In Danault We Trust",
-      "Phillip Danault and the Fantasy Machine",
-      "Straight Outta Danault",
-      "Phillip Vibes Only"
-    ],
-    "active": true,
-    "tier": "template"
-  },
-  {
     "id": "drewdoughty_lak",
     "first": "Drew",
     "last": "Doughty",
@@ -9238,22 +9158,6 @@
       "Josh Mahura and the Fantasy Machine",
       "Straight Outta Mahura",
       "Josh Vibes Only"
-    ],
-    "active": true,
-    "tier": "template"
-  },
-  {
-    "id": "masonmarchment_sea",
-    "first": "Mason",
-    "last": "Marchment",
-    "team": "SJS",
-    "pos": "LW",
-    "names": [
-      "Marchment's Fantasy Fortress",
-      "In Marchment We Trust",
-      "Mason Marchment and the Fantasy Machine",
-      "Straight Outta Marchment",
-      "Mason Vibes Only"
     ],
     "active": true,
     "tier": "template"
@@ -14644,38 +14548,6 @@
     "tier": "template"
   },
   {
-    "id": "samuelmontembeault_mtl",
-    "first": "Samuel",
-    "last": "Montembeault",
-    "team": "MTL",
-    "pos": "G",
-    "names": [
-      "Straight Outta Montembeault",
-      "Samuel Vibes Only",
-      "Montembeault's Fantasy Fortress",
-      "Samuel Montembeault and the Fantasy Machine",
-      "In Montembeault We Trust"
-    ],
-    "active": true,
-    "tier": "template"
-  },
-  {
-    "id": "arsenygritsyuk_njd",
-    "first": "Arseny",
-    "last": "Gritsyuk",
-    "team": "NJD",
-    "pos": "RW",
-    "names": [
-      "Arseny Vibes Only",
-      "Arseny Gritsyuk and the Fantasy Machine",
-      "Gritsyuk's Fantasy Fortress",
-      "In Gritsyuk We Trust",
-      "Straight Outta Gritsyuk"
-    ],
-    "active": true,
-    "tier": "template"
-  },
-  {
     "id": "amadeuslombardi_njd",
     "first": "Amadeus",
     "last": "Lombardi",
@@ -15055,22 +14927,6 @@
       "Vladar's Fantasy Fortress",
       "In Vladar We Trust",
       "Dan Vladar and the Fantasy Machine"
-    ],
-    "active": true,
-    "tier": "template"
-  },
-  {
-    "id": "egorchinakhov_pit",
-    "first": "Egor",
-    "last": "Chinakhov",
-    "team": "PIT",
-    "pos": "RW",
-    "names": [
-      "Straight Outta Chinakhov",
-      "Egor Chinakhov and the Fantasy Machine",
-      "Chinakhov's Fantasy Fortress",
-      "Egor Vibes Only",
-      "In Chinakhov We Trust"
     ],
     "active": true,
     "tier": "template"
@@ -15737,22 +15593,6 @@
     ],
     "active": true,
     "tier": "curated"
-  },
-  {
-    "id": "ilyaprotas_wsh",
-    "first": "Ilya",
-    "last": "Protas",
-    "team": "WSH",
-    "pos": "LW",
-    "names": [
-      "Ilya Protas and the Fantasy Machine",
-      "Straight Outta Protas",
-      "Ilya Vibes Only",
-      "Protas's Fantasy Fortress",
-      "In Protas We Trust"
-    ],
-    "active": true,
-    "tier": "template"
   },
   {
     "id": "martinfehrvry_wsh",
