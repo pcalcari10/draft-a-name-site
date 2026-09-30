@@ -337,6 +337,7 @@
   }
   .entity-names li button:hover { color: var(--turf-500); background: rgba(255,255,255,0.06); }
   .entity-names li button.copied { color: var(--turf-500); }
+  .tagged-credit { color: var(--chalk-500); font-size: 12.5px; margin-left: 6px; font-style: italic; }
 
   .actions { display: flex; gap: 12px; align-items: center; margin-top: 18px; flex-wrap: wrap; }
   button.primary {
@@ -1137,11 +1138,20 @@ async function renderAllNames(){
     const names = entityNames[idx];
     const icon = e.kind === 'team' ? '🛡 ' : e.kind === 'genericAll' ? '🗂 ' : e.kind === 'genericMovie' ? '🎬 ' : e.kind === 'genericMusic' ? '🎵 ' : e.kind === 'genericTv' ? '📺 ' : e.kind === 'genericStarWars' ? '⭐ ' : e.kind === 'genericFood' ? '🍟 ' : e.kind === 'genericMarvel' ? '🦸 ' : e.kind === 'wildcard' ? '✨ ' : (DEFENSIVE_POS.has(e.pos) ? '🛡️ ' : '');
     const label = fullName(e);
+    const isGenericCategory = e.kind && e.kind.startsWith('generic');
     return `
     <details class="entity-names">
       <summary>${icon}${label}<span class="count">${names.length} name${names.length !== 1 ? 's' : ''}</span></summary>
       <ul>
-        ${names.map(n => `<li><span>${n}</span><span style="display:flex;align-items:center;gap:6px;">${likeButtonHtml(e.id, n, label, true)}<button class="copy-name" data-name="${escapeHtml(n)}" aria-label="Copy ${escapeHtml(n)}">⧉</button></span></li>`).join('')}
+        ${names.map(n => {
+          // A generic-category name can secretly be tied to one specific
+          // player (e.g. "McDavidpool" tagged as a Movie reference on
+          // Connor McDavid) \u2014 credit them so it's not a mystery why this
+          // name is in the list.
+          const sources = isGenericCategory ? TAGGED_NAME_SOURCE[n] : null;
+          const credit = sources && sources.length === 1 ? `<span class="tagged-credit">\u2014 ${escapeHtml(sources[0])}</span>` : '';
+          return `<li><span>${n}${credit}</span><span style="display:flex;align-items:center;gap:6px;">${likeButtonHtml(e.id, n, label, true)}<button class="copy-name" data-name="${escapeHtml(n)}" aria-label="Copy ${escapeHtml(n)}">⧉</button></span></li>`;
+        }).join('')}
       </ul>
     </details>`;
   }).join('');
