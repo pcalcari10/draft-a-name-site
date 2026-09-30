@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-4LH65WP5G7"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag("js", new Date());
+  gtag("config", "G-4LH65WP5G7");
+</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>About — The Fantasy Name HQ</title>
+<meta name="description" content="Meet the guy behind The Fantasy Name HQ — a fantasy football and hockey team name generator built by someone who just really loves puns.">
+<link rel="canonical" href="https://thefantasynamehq.com/about/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    box-sizing: border-box;
+    padding-top: env(safe-area-inset-top, 0px);
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+
+    --navy-950: #0B1622;
+    --navy-900: #101E2E;
+    --navy-800: #16283C;
+    --navy-700: #1F3650;
+    --line: #2B4560;
+    --gold-400: #F2B705;
+    --gold-300: #F7CB3E;
+    --turf-500: #3E8F63;
+    --coral-500: #E85D4E;
+    --chalk-100: #F4F2EC;
+    --chalk-300: #C9D2DC;
+    --chalk-500: #8FA0B3;
+    --pos-qb: #F2B705;
+    --pos-rb: #3E8F63;
+    --pos-wr: #E85D4E;
+    --pos-te: #4F9FD9;
+    --pos-k: #B27FE0;
+
+    --font-display: 'Big Shoulders', 'Arial Narrow', sans-serif;
+    --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  }
+  * { box-sizing: inherit; }
+  html, body { height: 100%; }
+  body {
+    margin: 0; background: var(--navy-950); color: var(--chalk-100);
+    font-family: var(--font-body); font-size: 15px; line-height: 1.6;
+  }
+  .wrap { max-width: 720px; margin: 0 auto; padding: 0 24px; }
+
+  header.top { display: flex; align-items: center; justify-content: space-between; padding: 24px 0 8px; }
+  .brand { display: flex; align-items: center; gap: 10px; font-family: var(--font-display); font-weight: 700; font-size: 22px; letter-spacing: 0.02em; }
+  .brand .ball { font-size: 20px; transform: rotate(-15deg); display: inline-block; }
+  .brand-text { display: flex; align-items: center; gap: 6px; }
+  .brand-the {
+    font-family: var(--font-body); font-weight: 800; font-size: 11px; letter-spacing: 0.16em;
+    text-transform: uppercase; color: var(--gold-400);
+  }
+  .brand-name { white-space: nowrap; }
+  .brand a { color: var(--chalk-100); text-decoration: none; display: flex; align-items: center; gap: 10px; }
+
+  .hero { padding: 28px 0 8px; }
+  h1 { font-family: var(--font-display); font-weight: 800; font-size: clamp(30px, 6vw, 44px); line-height: 0.98; margin: 0 0 10px; }
+  .sub { color: var(--chalk-300); font-size: 16px; margin: 0 0 30px; max-width: 56ch; }
+
+  .content { background: var(--navy-800); border: 1px solid var(--line); border-radius: 14px; padding: 28px; margin-bottom: 30px; }
+  .content h2 { font-family: var(--font-display); font-weight: 700; font-size: 19px; margin: 26px 0 8px; }
+  .content h2:first-child { margin-top: 0; }
+  .content p { color: var(--chalk-300); margin: 0 0 14px; }
+  .content a { color: var(--gold-400); }
+
+  .stat-strip {
+    display: flex; gap: 14px; flex-wrap: wrap; margin-bottom: 50px;
+  }
+  .stat-card {
+    flex: 1 1 140px; background: var(--navy-800); border: 1px solid var(--line); border-radius: 12px;
+    padding: 16px 18px;
+  }
+  .stat-num { font-family: var(--font-display); font-weight: 800; font-size: 28px; color: var(--gold-400); line-height: 1; }
+  .stat-label { font-size: 12.5px; color: var(--chalk-500); margin-top: 4px; }
+
+  .signoff {
+    font-family: var(--font-display); font-weight: 700; font-size: 20px; color: var(--chalk-100);
+    text-align: center; margin: 0 0 50px; padding: 24px; border: 1px dashed var(--line); border-radius: 14px;
+  }
+  .signoff span { color: var(--gold-400); }
+
+  footer { border-top: 1px solid var(--line); margin-top: 30px; padding-top: 40px; }
+  .footer-grid { display: grid; grid-template-columns: 1.4fr 1fr 1fr 1fr; gap: 24px; padding-bottom: 30px; }
+  .footer-brand { font-family: var(--font-display); font-weight: 700; font-size: 18px; color: var(--chalk-100); margin-bottom: 8px; display: flex; align-items: center; gap: 8px; }
+  .footer-tagline { color: var(--chalk-500); font-size: 13px; max-width: 30ch; margin: 0; }
+  .footer-col h4 { font-family: var(--font-body); font-size: 11.5px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; color: var(--chalk-500); margin: 0 0 12px; }
+  .footer-col a { display: block; color: var(--chalk-300); text-decoration: none; font-size: 13.5px; margin-bottom: 9px; }
+  .footer-col a:hover { color: var(--gold-400); }
+  .footer-bottom {
+    border-top: 1px solid var(--line); padding: 16px 0 calc(24px + env(safe-area-inset-bottom, 0px));
+    color: var(--chalk-500); font-size: 12.5px; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px;
+  }
+  @media (max-width: 640px) {
+    .footer-grid { grid-template-columns: 1fr 1fr; }
+  }
+
+  /* ---------- Sport nav ---------- */
+  .sport-nav { background: var(--navy-800); border-bottom: 1px solid var(--line); }
+  .sport-nav-inner { max-width: 720px; margin: 0 auto; padding: 10px 24px; display: flex; gap: 8px; flex-wrap: wrap; }
+  @media (max-width: 640px) {
+    .sport-nav-inner { flex-wrap: nowrap; overflow-x: auto; -webkit-overflow-scrolling: touch; scrollbar-width: none; }
+    .sport-nav-inner::-webkit-scrollbar { display: none; }
+    .sport-tab { flex-shrink: 0; }
+  }
+  .sport-tab {
+    font-family: var(--font-body); font-size: 13px; font-weight: 600; color: var(--chalk-500); text-decoration: none;
+    padding: 6px 14px; border-radius: 20px; display: flex; align-items: center; gap: 6px;
+    transition: background .15s ease, color .15s ease;
+  }
+  .sport-tab:hover { background: var(--navy-700); color: var(--chalk-100); }
+  .sport-tab.active { background: var(--gold-400); color: var(--navy-950); }
+  .sport-tab .soon-badge {
+    font-size: 9px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.03em;
+    background: var(--navy-950); color: var(--chalk-500); padding: 2px 5px; border-radius: 6px;
+  }
+</style>
+</head>
+<body>
+<nav class="sport-nav">
+  <div class="sport-nav-inner">
+    <a href="/" class="sport-tab">🏈 Fantasy Football</a>
+    <a href="/baseball/" class="sport-tab">⚾ Fantasy Baseball <span class="soon-badge">Soon</span></a>
+    <a href="/basketball/" class="sport-tab">🏀 Fantasy Basketball <span class="soon-badge">Soon</span></a>
+    <a href="/hockey/" class="sport-tab">🏒 Fantasy Hockey</a>
+    <a href="/suggest/" class="sport-tab">💡 Suggest a Name</a>
+  </div>
+</nav>
+<div class="wrap">
+
+  <header class="top">
+    <div class="brand"><a href="/"><span class="ball">🏈</span><span class="brand-text"><span class="brand-the">The</span><span class="brand-name">Fantasy Name HQ</span></span></a></div>
+  </header>
+
+  <section class="hero">
+    <h1>Hi, I'm Just a Guy<br>Who Really Loves Puns.</h1>
+    <p class="sub">No venture capital. No sports analytics degree. No business plan. Just a guy with an unreasonable amount of enthusiasm for a really good fantasy team name.</p>
+
+    <div class="content">
+      <h2>The Origin Story</h2>
+      <p>Every year, the hardest part of fantasy draft day wasn't the draft. It was staring at the "Team Name" field for twenty minutes and eventually giving up and typing "Team Dan" again. Meanwhile, somewhere in my league, someone always shows up with something genuinely great — the kind of name that gets a laugh in the group chat every single week.</p>
+      <p>I wanted to be that person. So I started keeping a running list of puns. Then the list got out of hand. Then I figured other people probably have the same problem I did, so here we are.</p>
+
+      <h2>What This Actually Is</h2>
+      <p>A hand-built (and still growing) pile of player puns, team jokes, and pop-culture nonsense, organized so you can search your actual roster and get something better than "Team Dan." Nothing here is generated by some black-box algorithm pretending to be funny — every pun was picked, written, or approved by an actual human who thought it was funny enough to include.</p>
+      <p>That human is me. I'm not a professional comedy writer or a fantasy sports insider. I just really, really like puns, and I think your team deserves a name that actually slaps.</p>
+
+      <h2>Why It Keeps Growing</h2>
+      <p>Because a pun library is never actually "done." New players show up, guys get traded, someone's last name turns out to be a perfect setup I somehow missed for months — there's always more to add. If you've got one, <a href="/suggest/">the suggestion box</a> is always open, and I read every single one.</p>
+    </div>
+
+    <div class="stat-strip">
+      <div class="stat-card">
+        <div class="stat-num" id="statPlayers">—</div>
+        <div class="stat-label">players in the database</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-num" id="statNames">—</div>
+        <div class="stat-label">hand-picked puns and counting</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-num">2</div>
+        <div class="stat-label">sports covered (for now)</div>
+      </div>
+    </div>
+
+    <p class="signoff">Thanks for stopping by. Now go find your team a name that actually <span>slaps.</span></p>
+  </section>
+
+  <footer>
+    <div class="footer-grid">
+      <div class="footer-col">
+        <div class="footer-brand">🏈<span class="brand-text"><span class="brand-the">The</span><span class="brand-name">Fantasy Name HQ</span></span></div>
+        <p class="footer-tagline">A prototype, not yet drafted into anyone's league.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Tools</h4>
+        <a href="/suggest/">Suggest a name</a>
+        <a href="/league-importer/">Import your team</a>
+        <a href="/trade-calculator/">Trade calculator</a>
+      </div>
+      <div class="footer-col">
+        <h4>Sports</h4>
+        <a href="/">Fantasy Football</a>
+        <a href="/baseball/">Fantasy Baseball</a>
+        <a href="/basketball/">Fantasy Basketball</a>
+        <a href="/hockey/">Fantasy Hockey</a>
+      </div>
+      <div class="footer-col">
+        <h4>Legal</h4>
+        <a href="/about/">About</a>
+        <a href="/terms/">Terms</a>
+        <a href="/privacy/">Privacy</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 The Fantasy Name HQ</span>
+    </div>
+  </footer>
+
+</div>
+
+<script>
+async function loadJson(path){
+  const res = await fetch(path);
+  if(!res.ok) throw new Error('Failed to load ' + path);
+  return res.json();
+}
+
+Promise.all([
+  loadJson('../players.json'),
+  loadJson('../players_hockey.json'),
+  loadJson('../generic.json'),
+  loadJson('../generic_hockey.json'),
+  loadJson('../teams.json'),
+  loadJson('../teams_hockey.json'),
+]).then(([fbPlayers, hkPlayers, fbGeneric, hkGeneric, fbTeams, hkTeams]) => {
+  const totalPlayers = fbPlayers.length + hkPlayers.length;
+  const punCount = p => p.tier === 'curated' ? (p.names ? p.names.length : 0) : 0;
+  const totalNames =
+    fbPlayers.reduce((s, p) => s + punCount(p), 0) +
+    hkPlayers.reduce((s, p) => s + punCount(p), 0) +
+    (fbGeneric.general || []).length +
+    (hkGeneric.general || []).length +
+    fbTeams.reduce((s, t) => s + (t.names ? t.names.length : 0), 0) +
+    hkTeams.reduce((s, t) => s + (t.names ? t.names.length : 0), 0);
+
+  document.getElementById('statPlayers').textContent = totalPlayers.toLocaleString();
+  document.getElementById('statNames').textContent = totalNames.toLocaleString();
+}).catch(err => {
+  console.error('Failed to load stats for About page (non-fatal)', err);
+});
+</script>
+</body>
+</html>
