@@ -1,0 +1,53 @@
+name: Basketball Stats Ticker Update
+
+on:
+  schedule:
+    # NBA games happen most nights of the week rather than specific windows
+    # like the NFL, so this runs a handful of times a day rather than
+    # tracking exact game times: once before the day's games (11:00 UTC),
+    # and three more times through the evening/night US game window to catch
+    # results as they finish.
+    - cron: '0 11 * * *'
+    - cron: '0 3 * * *'
+    - cron: '0 6 * * *'
+    - cron: '0 9 * * *'
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+jobs:
+  update-ticker:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repo
+        uses: actions/checkout@v4
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Build basketball stats ticker
+        run: node scripts/build-stats-ticker-basketball.js
+
+      - name: Commit and push if stats_ticker_basketball.json changed
+        run: |
+          git config user.name "stats-ticker-bot"
+          git config user.email "actions@github.com"
+          if git diff --quiet -- stats_ticker_basketball.json; then
+            echo "No changes to commit."
+            exit 0
+          fi
+          git add stats_ticker_basketball.json
+          git commit -m "Update basketball stats ticker data"
+          for i in 1 2 3 4 5; do
+            if git pull --rebase origin main && git push; then
+              echo "Pushed successfully."
+              exit 0
+            fi
+            echo "Push attempt $i failed, retrying after a short wait..."
+            sleep 5
+          done
+          echo "Failed to push after 5 attempts."
+          exit 1
