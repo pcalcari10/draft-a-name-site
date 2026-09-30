@@ -884,8 +884,10 @@ function buildEntities(){
   ENTITIES.push({ id: 'generic_movie', kind: 'genericMovie', names: categoryPool('movie') });
   ENTITIES.push({ id: 'generic_music', kind: 'genericMusic', names: categoryPool('music') });
   ENTITIES.push({ id: 'generic_tv', kind: 'genericTv', names: categoryPool('tv') });
-  ENTITIES.push({ id: 'generic_starwars', kind: 'genericStarWars', names: categoryPool('starwars') });
-  ENTITIES.push({ id: 'generic_food', kind: 'genericFood', names: categoryPool('food') });
+  const starWarsPool = categoryPool('starwars');
+  if(starWarsPool.length > 0) ENTITIES.push({ id: 'generic_starwars', kind: 'genericStarWars', names: starWarsPool });
+  const foodPool = categoryPool('food');
+  if(foodPool.length > 0) ENTITIES.push({ id: 'generic_food', kind: 'genericFood', names: foodPool });
 }
 
 function findCuratedCombo(a, b){
