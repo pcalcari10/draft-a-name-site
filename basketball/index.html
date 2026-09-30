@@ -452,13 +452,13 @@
   }
   .football-fly svg { display: block; }
   @keyframes football-fly-across {
-    0%   { transform: translate(-5vw,   8vh)   scale(0.3); opacity: 0.9; }
-    15%  { transform: translate(4.1vw,  8.4vh) scale(0.5); }
-    35%  { transform: translate(16.4vw, 13vh)  scale(0.85); }
-    55%  { transform: translate(28.9vw, 22.2vh) scale(1.4); }
-    72%  { transform: translate(39.8vw, 33.7vh) scale(2.1); }
-    86%  { transform: translate(48.8vw, 45.7vh) scale(3); opacity: 1; }
-    100% { transform: translate(58vw,   60vh)  scale(4.2); opacity: 0; }
+    0%   { transform: translate(-5vw,   8vh)   rotate(0deg)   scale(0.3); opacity: 0.9; }
+    15%  { transform: translate(4.1vw,  8.4vh) rotate(130deg) scale(0.5); }
+    35%  { transform: translate(16.4vw, 13vh)  rotate(300deg) scale(0.85); }
+    55%  { transform: translate(28.9vw, 22.2vh) rotate(480deg) scale(1.4); }
+    72%  { transform: translate(39.8vw, 33.7vh) rotate(620deg) scale(2.1); }
+    86%  { transform: translate(48.8vw, 45.7vh) rotate(750deg) scale(3); opacity: 1; }
+    100% { transform: translate(58vw,   60vh)  rotate(900deg) scale(4.2); opacity: 0; }
   }
   .landing-burst {
     position: fixed; z-index: 300; pointer-events: none; font-size: 24px;
