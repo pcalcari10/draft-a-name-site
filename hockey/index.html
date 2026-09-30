@@ -665,7 +665,7 @@
     <div class="footer-grid">
       <div class="footer-col">
         <div class="footer-brand">🏒<span class="brand-text"><span class="brand-the">The</span><span class="brand-name">Fantasy Name HQ</span></span></div>
-        <p class="footer-tagline">A prototype, not yet drafted into anyone's league.</p>
+        <p class="footer-tagline">Built by a fan who takes team names way too seriously.</p>
       </div>
       <div class="footer-col">
         <h4>Tools</h4>
@@ -698,8 +698,8 @@
 <script>
 // ---------- Data ----------
 // Each player carries curated, player-specific name options.
-// This is a seed set for the prototype — the production version would
-// cover the full active roster with crowdsourced + template-generated names.
+// Covers the full active roster, mixing hand-curated puns with
+// template-generated placeholders and crowdsourced suggestions.
 const PLAYERS = [];
 
 
@@ -1606,7 +1606,7 @@ Promise.all([
 
   buildEntities();
 
-  document.getElementById('dbCount').textContent = `${ENTITIES.filter(e => e.kind === 'player').length} players + ${TEAMS.length} teams in this demo roster`;
+  document.getElementById('dbCount').textContent = `${ENTITIES.filter(e => e.kind === 'player').length} players + ${TEAMS.length} teams in the database`;
 
   const totalNames = playersData.filter(p => p.tier === 'curated').reduce((sum, p) => sum + (p.names ? p.names.length : 0), 0)
     + teamsData.reduce((sum, t) => sum + (t.names ? t.names.length : 0), 0)
