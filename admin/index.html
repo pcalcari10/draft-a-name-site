@@ -190,6 +190,35 @@
       <a href="https://github.com/pcalcari10/draft-a-name-site/actions/workflows/weekly-basketball-roster-sync.yml" target="_blank" rel="noopener" class="ghost" style="font-family:var(--mono);font-size:12.5px;text-decoration:none;display:inline-block;border:1px solid var(--line);color:var(--text);border-radius:8px;padding:8px 14px;">Run roster sync on GitHub \u2192</a>
       <a href="https://github.com/pcalcari10/draft-a-name-site/actions/workflows/basketball-stats-ticker.yml" target="_blank" rel="noopener" class="ghost" style="font-family:var(--mono);font-size:12.5px;text-decoration:none;display:inline-block;border:1px solid var(--line);color:var(--text);border-radius:8px;padding:8px 14px;">Run stats ticker on GitHub \u2192</a>
     </div>
+
+    <div style="margin-top:20px; padding-top:16px; border-top:1px solid var(--line);">
+      <div class="team-name" style="font-size:14px; margin-bottom:8px;">⏰ Automated schedule (roster sync)</div>
+      <div id="autoSyncStatusBasketball" style="font-family:var(--mono); font-size:12.5px; color:var(--dim); line-height:1.8;">Checking last run\u2026</div>
+
+      <div style="margin-top:14px;">
+        <div class="progress-label" style="margin-bottom:8px;">Want a different day or time? Pick one below \u2014 it won't change anything by itself, but gives you the exact line to use. Note the roster sync currently runs twice a week (Tue and Fri); this builds a single-day line to replace both with, if you'd rather have one run day instead.</div>
+        <div style="display:flex; gap:8px; flex-wrap:wrap; align-items:center;">
+          <select id="cronDayBasketball" style="background:var(--panel-2); border:1px solid var(--line); color:var(--text); border-radius:8px; padding:8px 10px; font-family:var(--sans); font-size:13px;">
+            <option value="1">Monday</option>
+            <option value="2" selected>Tuesday</option>
+            <option value="3">Wednesday</option>
+            <option value="4">Thursday</option>
+            <option value="5">Friday</option>
+            <option value="6">Saturday</option>
+            <option value="0">Sunday</option>
+          </select>
+          <select id="cronHourBasketball" style="background:var(--panel-2); border:1px solid var(--line); color:var(--text); border-radius:8px; padding:8px 10px; font-family:var(--sans); font-size:13px;"></select>
+          <span style="color:var(--dim); font-size:12.5px;">UTC</span>
+          <button class="ghost" id="copyCronBtnBasketball" style="font-family:var(--mono);font-size:12.5px;background:none;border:1px solid var(--line);color:var(--text);border-radius:8px;padding:8px 14px;cursor:pointer;">Copy cron line</button>
+        </div>
+        <div id="cronPreviewBasketball" style="margin-top:10px; font-family:var(--mono); font-size:12.5px; background:var(--panel-2); border-radius:6px; padding:8px 12px; color:var(--amber);"></div>
+        <div style="margin-top:8px; font-size:12px; color:var(--dim);">
+          Paste that line in place of one of the existing <code style="background:var(--panel-2); padding:1px 5px; border-radius:4px;">cron:</code> values in
+          <a href="https://github.com/pcalcari10/draft-a-name-site/edit/main/.github/workflows/weekly-basketball-roster-sync.yml" target="_blank" rel="noopener" style="color:var(--amber);">weekly-basketball-roster-sync.yml</a>
+          on GitHub, then commit \u2014 or just tell Claude the day/time you picked and it'll do that for you.
+        </div>
+      </div>
+    </div>
   </div>
   </div>
 
@@ -553,6 +582,73 @@ async function loadAutoSyncStatusHockey(){
   `;
 }
 loadAutoSyncStatusHockey();
+
+// Basketball's cron picker (mirrors football's) \u2014 the underlying sync
+// still runs via GitHub Actions rather than in-browser, since it's already
+// proven out that way, but the scheduling UI is the same as football's.
+const cronHourSelectBasketball = document.getElementById('cronHourBasketball');
+for(let h = 0; h < 24; h++){
+  const opt = document.createElement('option');
+  opt.value = h;
+  opt.textContent = String(h).padStart(2,'0') + ':00';
+  if(h === 10) opt.selected = true; // matches the current default schedule
+  cronHourSelectBasketball.appendChild(opt);
+}
+
+function updateCronPreviewBasketball(){
+  const day = document.getElementById('cronDayBasketball').value;
+  const hour = document.getElementById('cronHourBasketball').value;
+  const cronLine = `    - cron: '0 ${hour} * * ${day}'`;
+  document.getElementById('cronPreviewBasketball').textContent = cronLine;
+}
+document.getElementById('cronDayBasketball').addEventListener('change', updateCronPreviewBasketball);
+document.getElementById('cronHourBasketball').addEventListener('change', updateCronPreviewBasketball);
+updateCronPreviewBasketball();
+
+document.getElementById('copyCronBtnBasketball').addEventListener('click', () => {
+  const text = document.getElementById('cronPreviewBasketball').textContent;
+  navigator.clipboard?.writeText(text).catch(() => {});
+  const btn = document.getElementById('copyCronBtnBasketball');
+  const original = btn.textContent;
+  btn.textContent = 'Copied!';
+  setTimeout(() => { btn.textContent = original; }, 1200);
+});
+
+async function loadAutoSyncStatusBasketball(){
+  const el = document.getElementById('autoSyncStatusBasketball');
+  // The roster sync currently runs twice a week (Tue and Fri, 10:00 UTC)
+  // rather than football/hockey's single day, so "next run" checks both
+  // and takes whichever comes first.
+  const currentSchedule = 'Tuesday and Friday at 10:00 UTC';
+  const nextTue = nextScheduledRun(2, 10);
+  const nextFri = nextScheduledRun(5, 10);
+  const next = nextTue < nextFri ? nextTue : nextFri;
+
+  let lastRunHtml = 'Couldn\u2019t reach GitHub to check \u2014 see the Actions tab directly.';
+  try {
+    const res = await fetch('https://api.github.com/repos/pcalcari10/draft-a-name-site/actions/workflows/weekly-basketball-roster-sync.yml/runs?per_page=1');
+    if(res.ok){
+      const data = await res.json();
+      const run = data.workflow_runs && data.workflow_runs[0];
+      if(run){
+        const when = new Date(run.run_started_at || run.created_at);
+        const status = run.status === 'completed'
+          ? (run.conclusion === 'success' ? '\u2705 succeeded' : `\u26a0\ufe0f ${run.conclusion}`)
+          : `\u23f3 ${run.status}`;
+        lastRunHtml = `${when.toLocaleString()} \u2014 ${status}`;
+      } else {
+        lastRunHtml = 'No runs yet \u2014 it hasn\u2019t fired for the first time.';
+      }
+    }
+  } catch(err){ console.error('loadAutoSyncStatusBasketball failed', err); }
+
+  el.innerHTML = `
+    Current schedule: <strong style="color:var(--text);">${currentSchedule}</strong><br>
+    Next run: ${next.toLocaleString()}<br>
+    Last run: ${lastRunHtml}
+  `;
+}
+loadAutoSyncStatusBasketball();
 
 
 const TEAM_FULL = {
