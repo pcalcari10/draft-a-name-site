@@ -283,7 +283,11 @@
       "Al Pastrnak",
       "Pasta Perfection",
       "Kyle Connor McDavid Pastrnak",
-      "Talk To Your Pastrnak"
+      "Talk To Your Pastrnak",
+      "Pasta Your Prime",
+      "Al Dente Dangles",
+      "Pasta Your Bedtime",
+      "Impasta Syndrome"
     ],
     "active": true,
     "tier": "curated"
@@ -432,7 +436,10 @@
       "Oh, My Dahlin Clementine",
       "The Dahlin's Dazzlers",
       "Drunk Dahlin",
-      "Don\u2019t Worry Dahlin"
+      "Don\u2019t Worry Dahlin",
+      "Dahlin Out of Favor",
+      "Dahl Out Boy",
+      "Dahlin It In"
     ],
     "active": true,
     "tier": "curated"
@@ -932,10 +939,18 @@
     "names": [
       "The Kane Train",
       "Kane Is Abel",
-      "Patrick Kane In The Membrane"
+      "Patrick Kane In The Membrane",
+      "Kane You Dig It",
+      "Citizen Kane",
+      "HurriKane Warning"
     ],
     "active": true,
-    "tier": "curated"
+    "tier": "curated",
+    "taggedNames": {
+      "movie": [
+        "Citizen Kane"
+      ]
+    }
   },
   {
     "id": "marcokasper_det",
@@ -957,7 +972,8 @@
     "pos": "C",
     "names": [
       "Larkin's Legion",
-      "Dylan Barry Larkin"
+      "Dylan Barry Larkin",
+      "Larkin Order"
     ],
     "active": true,
     "tier": "curated"
@@ -1034,7 +1050,10 @@
     "team": "DET",
     "pos": "D",
     "names": [
-      "Mo Money, Mo Problem, Mo Seider"
+      "Mo Money, Mo Problem, Mo Seider",
+      "Seider House Rules",
+      "Seider To Side",
+      "Seider Sense"
     ],
     "active": true,
     "tier": "curated"
@@ -1110,7 +1129,13 @@
       "The Barkov Bites Back",
       "The Barkov Code",
       "All Barkov, No Bite",
-      "The Great British Barkov"
+      "The Great British Barkov",
+      "Bark and Bite",
+      "Barkov to the Future",
+      "Barkov at the Moon",
+      "Bark in Business",
+      "Jurassic Barkov",
+      "Barkov Side of the Moon"
     ],
     "active": true,
     "tier": "curated",
@@ -1346,7 +1371,10 @@
     "names": [
       "The Marchand Marauders",
       "Marchand of Happiness",
-      "When The Saints Go Marchand In"
+      "When The Saints Go Marchand In",
+      "Marchand and Deliver",
+      "Lickin' My Chops",
+      "Brad to the Bone"
     ],
     "active": true,
     "tier": "curated"
@@ -1515,7 +1543,10 @@
     "pos": "LW",
     "names": [
       "What the Tkachuk?!",
-      "Tkachuk Norris"
+      "Tkachuk Norris",
+      "Shut the Tkachuk Up",
+      "Tkachuk & Roll",
+      "Tkachuk It in the Trash"
     ],
     "active": true,
     "tier": "curated"
@@ -2248,10 +2279,16 @@
     "pos": "LW",
     "names": [
       "What the Tkachuk?!",
-      "Tkachuk Norris"
+      "Tkachuk Norris",
+      "The Brady Bunch"
     ],
     "active": true,
-    "tier": "curated"
+    "tier": "curated",
+    "taggedNames": {
+      "tv": [
+        "The Brady Bunch"
+      ]
+    }
   },
   {
     "id": "linusullmark_ott",
@@ -2672,7 +2709,10 @@
       "Point of No Return",
       "Point Break",
       "Brayden Right To The Point",
-      "You Make A Good Brayden Point"
+      "You Make A Good Brayden Point",
+      "Point Blank",
+      "Zero Point Line",
+      "Points of Interest"
     ],
     "active": true,
     "tier": "curated"
@@ -2934,10 +2974,18 @@
       "The Matthews Principle",
       "Matthews Matters",
       "Auston Matthews McConaughey",
-      "Auston JackHughes"
+      "Auston JackHughes",
+      "Auston Powers",
+      "Auston Translation",
+      "Auston-tacious"
     ],
     "active": true,
-    "tier": "curated"
+    "tier": "curated",
+    "taggedNames": {
+      "movie": [
+        "Auston Powers"
+      ]
+    }
   },
   {
     "id": "jakemccabe_tor",
@@ -3014,7 +3062,9 @@
       "The Nylander Effect",
       "William Homelander",
       "Nylander \u2014 There Can Be Only One",
-      "Nylanderthals"
+      "Nylanderthals",
+      "The End Is Ny(lander)",
+      "Bend The Nylander"
     ],
     "active": true,
     "tier": "curated",
@@ -3160,7 +3210,9 @@
       "Aho Mate",
       "Aho Captain, My Captain",
       "Sebastian Aho, Aho, It's off to work we go",
-      "Aho New World"
+      "Aho New World",
+      "Aho No!",
+      "Aho Tuna Sandwich"
     ],
     "active": true,
     "tier": "curated",
@@ -3498,7 +3550,10 @@
     "pos": "C",
     "names": [
       "Staaled Out",
-      "Staal In The Family"
+      "Staal In The Family",
+      "Staal-ing for Time",
+      "Staalwarts",
+      "Staal'in the Show"
     ],
     "active": true,
     "tier": "curated",
@@ -4149,7 +4204,8 @@
       "Hughes Your Daddy",
       "A Jack Hughes Brothers Film",
       "Auston JackHughes",
-      "Hughes it Or Lose It"
+      "Hughes it Or Lose It",
+      "The Hughes Brothers"
     ],
     "active": true,
     "tier": "curated"
@@ -4874,7 +4930,10 @@
     "names": [
       "Fox in the Box",
       "Fox Mulder's Power Play",
-      "20th Century Fox"
+      "20th Century Fox",
+      "What the Fox?!",
+      "Fox Trot",
+      "Out-Foxed"
     ],
     "active": true,
     "tier": "curated",
@@ -5002,7 +5061,8 @@
       "The Panarin Powerhouse",
       "Panarin Bread",
       "Artemi Panarinse and repeat",
-      "Art For Artemi\u2019s Sake"
+      "Art For Artemi\u2019s Sake",
+      "Panarin Express"
     ],
     "active": true,
     "tier": "curated"
@@ -5137,7 +5197,11 @@
       "The Shesterkin Shockers",
       "Shesterkin Stones",
       "Igor-ance Is Bliss",
-      "The Shesterkin Shield"
+      "The Shesterkin Shield",
+      "Igor's Lab",
+      "The Shest is Yet to Come",
+      "Shest-height",
+      "Shest Friends Forever"
     ],
     "active": true,
     "tier": "curated"
@@ -5637,7 +5701,9 @@
       "Crosby Checks In",
       "The Crosby Show Continues",
       "Sidney Cros-bae",
-      "Sidney Crosby, Stills & Nash"
+      "Sidney Crosby, Stills & Nash",
+      "Bing! Crosby",
+      "Crosby's Still Gnashin'"
     ],
     "active": true,
     "tier": "curated"
@@ -6912,7 +6978,10 @@
     "team": "COL",
     "pos": "C",
     "names": [
-      "Kadri Ishmael"
+      "Kadri Ishmael",
+      "Against All Kadri",
+      "Kadri Gras",
+      "The Kad-ream Team"
     ],
     "active": true,
     "tier": "curated"
@@ -7115,13 +7184,19 @@
       "Leon Night Riders",
       "Drai Another Day",
       "Draisaitl Park",
-      "Leon Forgot About Draisaitl"
+      "Leon Forgot About Draisaitl",
+      "All Drai'd Out",
+      "Draisaitl in Relief",
+      "The Leon King"
     ],
     "active": true,
     "tier": "curated",
     "taggedNames": {
       "music": [
         "Leon Forgot About Draisaitl"
+      ],
+      "movie": [
+        "The Leon King"
       ]
     }
   },
@@ -7293,10 +7368,17 @@
       "McDavid's Anatomy",
       "Kyle Connor McDavid Pastrnak",
       "Star Of McDavid, Draisaitl Of Clay",
-      "Full McDavid Jacket"
+      "Full McDavid Jacket",
+      "McDavid Blaine",
+      "Keeping Up with the McDavids"
     ],
     "active": true,
-    "tier": "curated"
+    "tier": "curated",
+    "taggedNames": {
+      "tv": [
+        "Keeping Up with the McDavids"
+      ]
+    }
   },
   {
     "id": "ryannugenthopkins_edm",
@@ -7667,7 +7749,8 @@
     "team": "LAK",
     "pos": "C",
     "names": [
-      "Kopi Tar Pits"
+      "Kopi Tar Pits",
+      "Kopi and Paste"
     ],
     "active": false,
     "tier": "curated"
@@ -8740,7 +8823,9 @@
     "names": [
       "The Quinn Hughes Cruise Control",
       "Quinn It to Win It",
-      "Hughes Control"
+      "Hughes Control",
+      "Quinncredible",
+      "Quinn-tessential Defense"
     ],
     "active": true,
     "tier": "curated"
@@ -9065,7 +9150,8 @@
       "Eichel Be Back",
       "Eichel Power Play",
       "Eichel Tower",
-      "The Eichel Tower"
+      "The Eichel Tower",
+      "Jack of All Trades"
     ],
     "active": true,
     "tier": "curated"
@@ -9262,7 +9348,11 @@
       "Marner's Market",
       "Marner's Ark",
       "Marner of the Moment",
-      "Marner in the Middle"
+      "Marner in the Middle",
+      "Mitch Please",
+      "Marner's Mitchfits",
+      "Mind Your Marners",
+      "Mitch Perfect"
     ],
     "active": true,
     "tier": "curated"
@@ -9376,10 +9466,20 @@
     "team": "VGK",
     "pos": "RW",
     "names": [
-      "The Mark Stone Masons"
+      "The Mark Stone Masons",
+      "Stone Cold Mark Stone",
+      "Stone's Throw",
+      "Rolling Stone",
+      "Sticks n' Stone",
+      "Stone Age"
     ],
     "active": true,
-    "tier": "curated"
+    "tier": "curated",
+    "taggedNames": {
+      "music": [
+        "Rolling Stone"
+      ]
+    }
   },
   {
     "id": "sheatheodore_vgk",
@@ -9426,10 +9526,25 @@
       "Bedard News Bears",
       "Bedard And Breakfast",
       "Second-Best Bedard",
-      "Bedard, Bath & Beyond"
+      "Bedard, Bath & Beyond",
+      "The Bedard Identity",
+      "Bedard Knock Life",
+      "Bedardvark",
+      "Breaking Bedard"
     ],
     "active": false,
-    "tier": "curated"
+    "tier": "curated",
+    "taggedNames": {
+      "movie": [
+        "The Bedard Identity"
+      ],
+      "music": [
+        "Bedard Knock Life"
+      ],
+      "tv": [
+        "Breaking Bedard"
+      ]
+    }
   },
   {
     "id": "tylerbertuzzi_chi",
@@ -9980,10 +10095,19 @@
       "MacK Attack",
       "MacKinnon's Mile High Magic",
       "MacKinnon's Peak Performance",
-      "Nathan's MacHotDog Eating Contest"
+      "Nathan's MacHotDog Eating Contest",
+      "MacKinn' It to Win It",
+      "McWin-non",
+      "SnackKinnon Time",
+      "Mac to the Future"
     ],
     "active": true,
-    "tier": "curated"
+    "tier": "curated",
+    "taggedNames": {
+      "movie": [
+        "Mac to the Future"
+      ]
+    }
   },
   {
     "id": "calemakar_col",
@@ -10005,10 +10129,21 @@
       "Cale Cream",
       "Cale Makarbonated beverage",
       "Meet Your Makar",
-      "Cale Salad"
+      "Cale Salad",
+      "Holy Makaroni",
+      "Makaroni & Cheese",
+      "License to Cale",
+      "Cale Force Winds",
+      "D'Yer Makar",
+      "Dude, Where's Makar?"
     ],
     "active": true,
-    "tier": "curated"
+    "tier": "curated",
+    "taggedNames": {
+      "music": [
+        "D'Yer Makar"
+      ]
+    }
   },
   {
     "id": "sammalinski_col",
@@ -10208,13 +10343,17 @@
       "Jamie Benn and the Fantasy Machine",
       "Straight Outta Benn",
       "Jamie Vibes Only",
-      "Since You Benn Gone"
+      "Since You Benn Gone",
+      "Benn There, Done That",
+      "Benny and the Jets",
+      "Three Day Benn-der"
     ],
     "active": true,
     "tier": "curated",
     "taggedNames": {
       "music": [
-        "Since You Benn Gone"
+        "Since You Benn Gone",
+        "Benny and the Jets"
       ]
     }
   },
@@ -10355,7 +10494,10 @@
     "team": "DAL",
     "pos": "D",
     "names": [
-      "Miro the Hero"
+      "Miro the Hero",
+      "Heis and Shine",
+      "Puck Heist",
+      "Heiskanen in the Membrane"
     ],
     "active": true,
     "tier": "curated"
@@ -10503,7 +10645,9 @@
     "names": [
       "Rantanen Claus",
       "Rantanen Your Way",
-      "The Mikkodo"
+      "The Mikkodo",
+      "Ty-ranta-saurus Rex",
+      "Ranta Claus"
     ],
     "active": true,
     "tier": "curated"
@@ -10779,7 +10923,12 @@
       "Kirill the Thrill",
       "Kaprizov and Let Die",
       "Kaprizov Your Mind",
-      "Thrill of a Kirill"
+      "Thrill of a Kirill",
+      "The Kaprizov'd Crusader",
+      "Kirilluminati",
+      "Kirill Me Softly",
+      "License to Kirill",
+      "Night Kap"
     ],
     "active": true,
     "tier": "curated"
@@ -11203,7 +11352,9 @@
     "pos": "C",
     "names": [
       "The Stamkos Slayers",
-      "The Stamkos Symphony of Snipes"
+      "The Stamkos Symphony of Snipes",
+      "Stam and Deliver",
+      "It's Stammer Time"
     ],
     "active": true,
     "tier": "curated"
@@ -11747,7 +11898,8 @@
     "names": [
       "Natural Born Keller",
       "Noxi Clayton Kell-er",
-      "Natural Born Kellers"
+      "Natural Born Kellers",
+      "Keller Instinct"
     ],
     "active": true,
     "tier": "curated",
@@ -14437,10 +14589,23 @@
     "names": [
       "The Ovechkin Express",
       "The Great Eight's Gr8ness",
-      "Sweet Ovechkin Music"
+      "Sweet Ovechkin Music",
+      "Ovi-Course I Scored",
+      "Ovi-Wan Kenobi",
+      "Gr8 Expectations",
+      "The Gr8 Escape"
     ],
     "active": true,
-    "tier": "curated"
+    "tier": "curated",
+    "taggedNames": {
+      "starwars": [
+        "Ovi-Wan Kenobi"
+      ],
+      "movie": [
+        "Gr8 Expectations",
+        "The Gr8 Escape"
+      ]
+    }
   },
   {
     "id": "martinfehrvry_wsh",
