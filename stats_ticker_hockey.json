@@ -1,8 +1,17 @@
 {
-  "generatedAt": "2026-09-30T06:09:00.666Z",
+  "generatedAt": "2026-09-30T09:17:08.837Z",
   "season": "20262027",
   "seasonTotals": {
     "C": [
+      {
+        "id": "jackeichel_vgk",
+        "first": "Jack",
+        "last": "Eichel",
+        "team": "VGK",
+        "pos": "C",
+        "pts": 3,
+        "pun": "The Eichel Tower of Power"
+      },
       {
         "id": "fraserminten_bos",
         "first": "Fraser",
@@ -110,6 +119,24 @@
         "pos": "C",
         "pts": 1,
         "pun": "Karlsson's Fantasy Fortress"
+      },
+      {
+        "id": "nicdowd_wsh",
+        "first": "Nic",
+        "last": "Dowd",
+        "team": "VGK",
+        "pos": "C",
+        "pts": 1,
+        "pun": "Dowd's Fantasy Fortress"
+      },
+      {
+        "id": "ryangreene_chi",
+        "first": "Ryan",
+        "last": "Greene",
+        "team": "CHI",
+        "pos": "C",
+        "pts": 1,
+        "pun": "Greene's Fantasy Fortress"
       }
     ],
     "LW": [
@@ -121,6 +148,42 @@
         "pos": "LW",
         "pts": 2,
         "pun": "Cotter's Fantasy Fortress"
+      },
+      {
+        "id": "ivanbarbashev_vgk",
+        "first": "Ivan",
+        "last": "Barbashev",
+        "team": "VGK",
+        "pos": "LW",
+        "pts": 2,
+        "pun": "Close Shave America, Close Shave Barbashev"
+      },
+      {
+        "id": "victorolofsson_col",
+        "first": "Victor",
+        "last": "Olofsson",
+        "team": "VGK",
+        "pos": "LW",
+        "pts": 1,
+        "pun": "Olofsson's Fantasy Fortress"
+      },
+      {
+        "id": "jordangreenway_buf",
+        "first": "Jordan",
+        "last": "Greenway",
+        "team": "CHI",
+        "pos": "LW",
+        "pts": 1,
+        "pun": "Greenway's Fantasy Fortress"
+      },
+      {
+        "id": "trevorconnelly_vgk",
+        "first": "Trevor",
+        "last": "Connelly",
+        "team": "VGK",
+        "pos": "LW",
+        "pts": 1,
+        "pun": "In Connelly We Trust"
       },
       {
         "id": "jakedebrusk_van",
@@ -215,6 +278,24 @@
         "pun": "Straight Outta Lekkerimäki"
       },
       {
+        "id": "patrickkane_det",
+        "first": "Patrick",
+        "last": "Kane",
+        "team": "CHI",
+        "pos": "RW",
+        "pts": 1,
+        "pun": "The Kane Train"
+      },
+      {
+        "id": "markstone_vgk",
+        "first": "Mark",
+        "last": "Stone",
+        "team": "VGK",
+        "pos": "RW",
+        "pts": 1,
+        "pun": "The Mark Stone Masons"
+      },
+      {
         "id": "kirillmarchenko_cbj",
         "first": "Kirill",
         "last": "Marchenko",
@@ -271,6 +352,24 @@
         "pun": "Hronek's Fantasy Fortress"
       },
       {
+        "id": "braydenmcnabb_vgk",
+        "first": "Brayden",
+        "last": "McNabb",
+        "team": "VGK",
+        "pos": "D",
+        "pts": 2,
+        "pun": "McNabb's Fantasy Fortress"
+      },
+      {
+        "id": "sheatheodore_vgk",
+        "first": "Shea",
+        "last": "Theodore",
+        "team": "VGK",
+        "pos": "D",
+        "pts": 2,
+        "pun": "Alvin, Simon And Shea Theodore"
+      },
+      {
         "id": "gustavforsling_fla",
         "first": "Gustav",
         "last": "Forsling",
@@ -287,6 +386,15 @@
         "pos": "D",
         "pts": 1,
         "pun": "Pettersson's Fantasy Fortress"
+      },
+      {
+        "id": "noahhanifin_vgk",
+        "first": "Noah",
+        "last": "Hanifin",
+        "team": "VGK",
+        "pos": "D",
+        "pts": 1,
+        "pun": "Hanifin's Fantasy Fortress"
       },
       {
         "id": "morganrielly_tor",
@@ -341,6 +449,15 @@
         "pos": "D",
         "pts": 1,
         "pun": "Shea's Fantasy Fortress"
+      },
+      {
+        "id": "wyattkaiser_chi",
+        "first": "Wyatt",
+        "last": "Kaiser",
+        "team": "CHI",
+        "pos": "D",
+        "pts": 1,
+        "pun": "Kaiser's Fantasy Fortress"
       }
     ],
     "G": [
@@ -379,6 +496,15 @@
         "pos": "G",
         "pts": 1,
         "pun": "Lankinen's Fantasy Fortress"
+      },
+      {
+        "id": "carterhart_vgk",
+        "first": "Carter",
+        "last": "Hart",
+        "team": "VGK",
+        "pos": "G",
+        "pts": 1,
+        "pun": "In Hart We Trust"
       }
     ]
   },
