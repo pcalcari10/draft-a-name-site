@@ -1739,6 +1739,16 @@ Promise.all([
       wrapEl.style.display = 'none';
       return;
     }
+    // While showing last season's fallback data, "this week" would really
+    // mean "the final week of last season," which reads as confusingly
+    // current rather than historical \u2014 so show season totals only, with no
+    // toggle, until this season has its own weekly data.
+    if(data.isLastSeason){
+      render(data, 'season');
+      weekBtn.style.display = 'none';
+      seasonBtn.style.display = 'none';
+      return;
+    }
     // Default to whichever view actually has data if one is empty (e.g. the
     // very first Monday of a fantasy week, before any games are complete).
     const defaultView = hasWeek ? 'week' : 'season';
