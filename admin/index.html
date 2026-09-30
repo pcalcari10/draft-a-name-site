@@ -101,8 +101,8 @@
   <div class="sport-select" id="sportSelect">
     <button class="sport-select-btn active" data-sport="football">🏈 Football</button>
     <button class="sport-select-btn" data-sport="hockey">🏒 Hockey</button>
+    <button class="sport-select-btn" data-sport="basketball">🏀 Basketball</button>
     <button class="sport-select-btn soon" data-sport="baseball">⚾ Baseball <span class="soon-tag">Soon</span></button>
-    <button class="sport-select-btn soon" data-sport="basketball">🏀 Basketball <span class="soon-tag">Soon</span></button>
   </div>
 
   <div class="tabs" id="sportTabs">
@@ -175,6 +175,21 @@
       <a href="https://github.com/pcalcari10/draft-a-name-site/actions/workflows/weekly-hockey-roster-sync.yml" target="_blank" rel="noopener" class="ghost" style="font-family:var(--mono);font-size:12.5px;text-decoration:none;display:inline-block;border:1px solid var(--line);color:var(--text);border-radius:8px;padding:8px 14px;">Run sync on GitHub \u2192</a>
     </div>
     <div id="autoSyncStatusHockey" style="margin-top:14px; font-family:var(--mono); font-size:12.5px; color:var(--dim); line-height:1.8;">Checking last run\u2026</div>
+  </div>
+  <div class="progress-panel" id="basketballSyncPanel" style="display:none; margin-top:16px; border-top:3px solid var(--panel-3);">
+    <div class="progress-top">
+      <div>
+        <div class="team-name" style="font-size:16px;">🏀 Sync full NBA roster</div>
+        <div class="progress-label">Pulls active PG/SG/SF/PF/C players league-wide from Sleeper's API, adding anyone missing \u2014 all baked into <code style="background:var(--panel-2); padding:1px 5px; border-radius:4px;">players_basketball.json</code>.</div>
+      </div>
+    </div>
+    <div style="margin-top:10px; font-size:12.5px; color:var(--dim); line-height:1.5;">
+      This one runs entirely through GitHub Actions rather than this page directly, same as hockey's.
+    </div>
+    <div style="margin-top:14px; display:flex; gap:10px; align-items:center; flex-wrap:wrap;">
+      <a href="https://github.com/pcalcari10/draft-a-name-site/actions/workflows/weekly-basketball-roster-sync.yml" target="_blank" rel="noopener" class="ghost" style="font-family:var(--mono);font-size:12.5px;text-decoration:none;display:inline-block;border:1px solid var(--line);color:var(--text);border-radius:8px;padding:8px 14px;">Run roster sync on GitHub \u2192</a>
+      <a href="https://github.com/pcalcari10/draft-a-name-site/actions/workflows/basketball-stats-ticker.yml" target="_blank" rel="noopener" class="ghost" style="font-family:var(--mono);font-size:12.5px;text-decoration:none;display:inline-block;border:1px solid var(--line);color:var(--text);border-radius:8px;padding:8px 14px;">Run stats ticker on GitHub \u2192</a>
+    </div>
   </div>
   </div>
 
@@ -576,6 +591,7 @@ let genericByCategory = {};
 const SPORT_DATA = {
   football: { players: [], teams: [], combos: [], generic: [], genericByCategory: {} },
   hockey:   { players: [], teams: [], combos: [], generic: [], genericByCategory: {} },
+  basketball: { players: [], teams: [], combos: [], generic: [], genericByCategory: {} },
 };
 let currentAdminSport = 'football';
 
@@ -596,7 +612,7 @@ function switchAdminSport(sport){
 
   document.querySelectorAll('.sport-select-btn').forEach(b => b.classList.toggle('active', b.dataset.sport === sport));
 
-  if(sport === 'baseball' || sport === 'basketball'){
+  if(sport === 'baseball'){
     tabsSection.style.display = 'none';
     tabPanels.forEach(p => p.classList.remove('active'));
     soonSection.style.display = 'block';
@@ -632,6 +648,8 @@ function switchAdminSport(sport){
   document.getElementById('syncPanel').style.display = sport === 'football' ? 'block' : 'none';
   document.getElementById('hockeySyncPanel').style.display = sport === 'hockey' ? 'block' : 'none';
   document.getElementById('hockeySyncPanel').style.marginTop = sport === 'hockey' ? '0' : '16px';
+  document.getElementById('basketballSyncPanel').style.display = sport === 'basketball' ? 'block' : 'none';
+  document.getElementById('basketballSyncPanel').style.marginTop = sport === 'basketball' ? '0' : '16px';
 
   // Add a Name's search suggestions are keyed off whichever sport is active
   // via allPlayers already, but clear any in-progress selection so a player
@@ -683,34 +701,62 @@ async function loadPerformanceData(){
   const listEl = document.getElementById('perfList');
   btn.disabled = true;
   btn.textContent = 'Loading…';
-  listEl.innerHTML = `<div class="empty" style="padding:16px;">Fetching Sleeper ID mapping and season stats — this pulls one request per week, give it a moment…</div>`;
 
   try {
-    const idMap = await loadSleeperIdMap();
-    const season = 2026;
-    const pointsBySleeperId = {};
+    let ranked;
+    if(currentAdminSport === 'basketball'){
+      listEl.innerHTML = `<div class="empty" style="padding:16px;">Fetching Sleeper's NBA player list and season stats…</div>`;
+      const [allSleeperPlayers, statsData] = await Promise.all([
+        fetch('https://api.sleeper.app/v1/players/nba').then(r => r.json()),
+        fetch('https://api.sleeper.app/v1/stats/nba/regular/2026').then(r => r.json())
+          .then(async data => {
+            const hasReal = data && Object.values(data).some(s => s && s.gp > 0);
+            if(hasReal) return data;
+            return fetch('https://api.sleeper.app/v1/stats/nba/regular/2025').then(r => r.json());
+          }),
+      ]);
+      const byName = {};
+      Object.entries(allSleeperPlayers).forEach(([sid, p]) => {
+        if(!p || !p.first_name || !p.last_name) return;
+        byName[normalizeName(`${p.first_name} ${p.last_name}`)] = sid;
+      });
+      const placeholders = allPlayers.filter(p => p.active !== false && p.first && p.last && p.tier !== 'curated');
+      ranked = placeholders.map(p => {
+        const sid = byName[normalizeName(p.first + ' ' + p.last)];
+        const stat = sid ? statsData[sid] : null;
+        const points = stat && stat.gp > 0 ? (stat.pts_half_ppr || stat.pts_ppr || stat.pts_std || 0) : 0;
+        return { ...p, points };
+      }).filter(p => p.points > 0)
+        .sort((a,b) => b.points - a.points)
+        .slice(0, 20);
+    } else {
+      listEl.innerHTML = `<div class="empty" style="padding:16px;">Fetching Sleeper ID mapping and season stats — this pulls one request per week, give it a moment…</div>`;
+      const idMap = await loadSleeperIdMap();
+      const season = 2026;
+      const pointsBySleeperId = {};
 
-    // Sleeper's stats endpoint is per-week and undocumented; missing/future weeks just come back empty, which is fine
-    for(let week = 1; week <= 18; week++){
-      try {
-        const res = await fetch(`https://api.sleeper.app/v1/stats/nfl/regular/${season}/${week}`);
-        if(!res.ok) continue;
-        const weekStats = await res.json();
-        Object.keys(weekStats).forEach(sid => {
-          const pts = weekStats[sid] && (weekStats[sid].pts_ppr || 0);
-          if(pts) pointsBySleeperId[sid] = (pointsBySleeperId[sid] || 0) + pts;
-        });
-      } catch(e){ /* skip a bad week, keep going */ }
+      // Sleeper's stats endpoint is per-week and undocumented; missing/future weeks just come back empty, which is fine
+      for(let week = 1; week <= 18; week++){
+        try {
+          const res = await fetch(`https://api.sleeper.app/v1/stats/nfl/regular/${season}/${week}`);
+          if(!res.ok) continue;
+          const weekStats = await res.json();
+          Object.keys(weekStats).forEach(sid => {
+            const pts = weekStats[sid] && (weekStats[sid].pts_ppr || 0);
+            if(pts) pointsBySleeperId[sid] = (pointsBySleeperId[sid] || 0) + pts;
+          });
+        } catch(e){ /* skip a bad week, keep going */ }
+      }
+
+      const placeholders = allPlayers.filter(p => p.active !== false && p.first && p.last && p.tier !== 'curated');
+      ranked = placeholders.map(p => {
+        const sid = idMap[normalizeName(p.first + ' ' + p.last)];
+        const points = sid ? (pointsBySleeperId[sid] || 0) : 0;
+        return { ...p, points };
+      }).filter(p => p.points > 0)
+        .sort((a,b) => b.points - a.points)
+        .slice(0, 20);
     }
-
-    const placeholders = allPlayers.filter(p => p.active !== false && p.first && p.last && p.tier !== 'curated');
-    const ranked = placeholders.map(p => {
-      const sid = idMap[normalizeName(p.first + ' ' + p.last)];
-      const points = sid ? (pointsBySleeperId[sid] || 0) : 0;
-      return { ...p, points };
-    }).filter(p => p.points > 0)
-      .sort((a,b) => b.points - a.points)
-      .slice(0, 20);
 
     if(ranked.length === 0){
       listEl.innerHTML = `<div class="empty" style="padding:16px;">No scoring data found yet for this season \u2014 try again once games have been played, or double check the season year.</div>`;
@@ -985,7 +1031,7 @@ addNameSubmitBtn.addEventListener('click', async () => {
       : [addNameSelectedPlayer];
 
     for(const player of targets){
-      await db.collection(currentAdminSport === 'hockey' ? 'pending_puns_hockey' : 'pending_puns').add({
+      await db.collection(currentAdminSport === 'hockey' ? 'pending_puns_hockey' : currentAdminSport === 'basketball' ? 'pending_puns_basketball' : 'pending_puns').add({
         playerId: player.id,
         playerName: `${player.first} ${player.last}`,
         newName,
@@ -1018,13 +1064,15 @@ async function loadReviewQueue(){
   const listEl = document.getElementById('reviewList');
   const badge = document.getElementById('reviewCountBadge');
   try {
-    const [footballSnap, hockeySnap] = await Promise.all([
+    const [footballSnap, hockeySnap, basketballSnap] = await Promise.all([
       db.collection('submitted_names').where('status', '==', 'pending').get(),
       db.collection('submitted_names_hockey').where('status', '==', 'pending').get(),
+      db.collection('submitted_names_basketball').where('status', '==', 'pending').get(),
     ]);
     const docs = [];
     footballSnap.forEach(doc => docs.push({ id: doc.id, sport: 'football', ...doc.data() }));
     hockeySnap.forEach(doc => docs.push({ id: doc.id, sport: 'hockey', ...doc.data() }));
+    basketballSnap.forEach(doc => docs.push({ id: doc.id, sport: 'basketball', ...doc.data() }));
     docs.sort((a, b) => (a.submittedAt || 0) - (b.submittedAt || 0));
 
     if(docs.length === 0){
@@ -1042,7 +1090,7 @@ async function loadReviewQueue(){
         <div style="padding:12px 14px;">
           <div style="display:flex; justify-content:space-between; align-items:flex-start; gap:10px; flex-wrap:wrap;">
             <div>
-              <div style="font-size:14px; font-weight:600;">${d.sport === 'hockey' ? '\ud83c\udfd2' : '\ud83c\udfc8'} ${escapeHtml(d.playerName)}</div>
+              <div style="font-size:14px; font-weight:600;">${d.sport === 'hockey' ? '\ud83c\udfd2' : d.sport === 'basketball' ? '\ud83c\udfc0' : '\ud83c\udfc8'} ${escapeHtml(d.playerName)}</div>
               <div style="font-family:var(--mono); font-size:13px; color:var(--amber); margin-top:4px;">"${escapeHtml(d.name)}"</div>
               ${d.flaggedUnrelated ? `<div style="font-size:11.5px; color:var(--dim); margin-top:4px;">\u26a0\ufe0f Doesn't obviously reference the name \u2014 double-check it makes sense</div>` : ''}
             </div>
@@ -1068,7 +1116,7 @@ async function loadReviewQueue(){
 }
 
 async function reviewDecision(id, sport, status){
-  const collectionName = sport === 'hockey' ? 'submitted_names_hockey' : 'submitted_names';
+  const collectionName = sport === 'hockey' ? 'submitted_names_hockey' : sport === 'basketball' ? 'submitted_names_basketball' : 'submitted_names';
   try {
     await db.collection(collectionName).doc(id).update({ status });
     loadReviewQueue();
@@ -1144,6 +1192,30 @@ async function boot(){
     console.error('Failed to load generic_hockey.json', err);
   }
   // Hockey has no combos.json equivalent yet; SPORT_DATA.hockey.combos stays [].
+
+  try {
+    const res = await fetch('../players_basketball.json');
+    const data = await res.json();
+    data.forEach(p => SPORT_DATA.basketball.players.push(p));
+  } catch(err){
+    console.error('Failed to load players_basketball.json', err);
+  }
+  try {
+    const res = await fetch('../teams_basketball.json');
+    const data = await res.json();
+    data.forEach(t => SPORT_DATA.basketball.teams.push(t));
+  } catch(err){
+    console.error('Failed to load teams_basketball.json', err);
+  }
+  try {
+    const res = await fetch('../generic_basketball.json');
+    const data = await res.json();
+    SPORT_DATA.basketball.genericByCategory = data;
+    SPORT_DATA.basketball.generic = data.general || [];
+  } catch(err){
+    console.error('Failed to load generic_basketball.json', err);
+  }
+  // Basketball has no combos.json equivalent yet; SPORT_DATA.basketball.combos stays [].
 
   pointSportGlobalsAt(currentAdminSport);
   updateProgressStats();
