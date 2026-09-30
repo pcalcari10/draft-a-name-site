@@ -1061,9 +1061,8 @@ function celebrateCopy(teamName){
     puck.remove();
   }, 1400);
 
-  // The hoop flashes in slightly before the confetti fires, so it's
-  // visible right as the ball "arrives" and the burst looks like a swish.
-  setTimeout(() => spawnHoop(window.innerWidth * 0.57, window.innerHeight * 0.58), 950);
+  // Hoop flash disabled for now (kept below, unused, in case it's wanted
+  // back later): setTimeout(() => spawnHoop(window.innerWidth * 0.57, window.innerHeight * 0.58), 950);
 
   // A little burst of confetti right as the ball "arrives," near where
   // it grows largest before fading out.
