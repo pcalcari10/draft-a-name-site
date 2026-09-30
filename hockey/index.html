@@ -888,6 +888,8 @@ function buildEntities(){
   if(starWarsPool.length > 0) ENTITIES.push({ id: 'generic_starwars', kind: 'genericStarWars', names: starWarsPool });
   const foodPool = categoryPool('food');
   if(foodPool.length > 0) ENTITIES.push({ id: 'generic_food', kind: 'genericFood', names: foodPool });
+  const marvelPool = categoryPool('marvel');
+  if(marvelPool.length > 0) ENTITIES.push({ id: 'generic_marvel', kind: 'genericMarvel', names: marvelPool });
 }
 
 function findCuratedCombo(a, b){
@@ -929,6 +931,7 @@ function fullName(e){
   if(e.kind === 'genericTv') return 'TV Show Names';
   if(e.kind === 'genericStarWars') return 'Star Wars Names';
   if(e.kind === 'genericFood') return 'Food Names';
+  if(e.kind === 'genericMarvel') return 'Marvel Names';
   return `${e.first} ${e.last}`;
 }
 
@@ -960,7 +963,7 @@ function renderSuggestions(query){
   suggestionsBox.innerHTML = matches.map(e => `
     <div class="suggestion" data-id="${e.id}">
       <span class="pname">${fullName(e)}</span>
-      <span class="pmeta">${e.kind === 'team' ? `DST · ${e.abbr}` : e.kind === 'wildcard' ? 'Generic name' : e.kind === 'genericAll' ? `Browse all ${e.names.length}` : e.kind === 'genericMovie' ? `Browse all ${e.names.length}` : e.kind === 'genericMusic' ? `Browse all ${e.names.length}` : e.kind === 'genericTv' ? `Browse all ${e.names.length}` : e.kind === 'genericStarWars' ? `Browse all ${e.names.length}` : e.kind === 'genericFood' ? `Browse all ${e.names.length}` : `${e.pos} · ${e.team}`}</span>
+      <span class="pmeta">${e.kind === 'team' ? `DST · ${e.abbr}` : e.kind === 'wildcard' ? 'Generic name' : e.kind === 'genericAll' ? `Browse all ${e.names.length}` : e.kind === 'genericMovie' ? `Browse all ${e.names.length}` : e.kind === 'genericMusic' ? `Browse all ${e.names.length}` : e.kind === 'genericTv' ? `Browse all ${e.names.length}` : e.kind === 'genericStarWars' ? `Browse all ${e.names.length}` : e.kind === 'genericFood' ? `Browse all ${e.names.length}` : e.kind === 'genericMarvel' ? `Browse all ${e.names.length}` : `${e.pos} · ${e.team}`}</span>
     </div>`).join('');
   suggestionsBox.classList.add('open');
 }
@@ -993,7 +996,7 @@ function removePlayer(id){
 
 function renderChips(){
   chipsBox.innerHTML = selected.map(e => `
-    <span class="chip">${e.kind === 'team' ? '🛡 ' : e.kind === 'wildcard' ? '✨ ' : e.kind === 'genericAll' ? '🗂 ' : e.kind === 'genericMovie' ? '🎬 ' : e.kind === 'genericMusic' ? '🎵 ' : e.kind === 'genericTv' ? '📺 ' : e.kind === 'genericStarWars' ? '⭐ ' : e.kind === 'genericFood' ? '🍟 ' : ''}${fullName(e)}<button aria-label="Remove ${fullName(e)}" data-id="${e.id}">✕</button></span>
+    <span class="chip">${e.kind === 'team' ? '🛡 ' : e.kind === 'wildcard' ? '✨ ' : e.kind === 'genericAll' ? '🗂 ' : e.kind === 'genericMovie' ? '🎬 ' : e.kind === 'genericMusic' ? '🎵 ' : e.kind === 'genericTv' ? '📺 ' : e.kind === 'genericStarWars' ? '⭐ ' : e.kind === 'genericFood' ? '🍟 ' : e.kind === 'genericMarvel' ? '🦸 ' : ''}${fullName(e)}<button aria-label="Remove ${fullName(e)}" data-id="${e.id}">✕</button></span>
   `).join('');
   chipsBox.querySelectorAll('button').forEach(btn => {
     btn.addEventListener('click', () => removePlayer(btn.dataset.id));
@@ -1134,7 +1137,7 @@ async function renderAllNames(){
 
   allNamesBox.innerHTML = toRender.map((e, idx) => {
     const names = entityNames[idx];
-    const icon = e.kind === 'team' ? '🛡 ' : e.kind === 'genericAll' ? '🗂 ' : e.kind === 'genericMovie' ? '🎬 ' : e.kind === 'genericMusic' ? '🎵 ' : e.kind === 'genericTv' ? '📺 ' : e.kind === 'genericStarWars' ? '⭐ ' : e.kind === 'genericFood' ? '🍟 ' : e.kind === 'wildcard' ? '✨ ' : (DEFENSIVE_POS.has(e.pos) ? '🛡️ ' : '');
+    const icon = e.kind === 'team' ? '🛡 ' : e.kind === 'genericAll' ? '🗂 ' : e.kind === 'genericMovie' ? '🎬 ' : e.kind === 'genericMusic' ? '🎵 ' : e.kind === 'genericTv' ? '📺 ' : e.kind === 'genericStarWars' ? '⭐ ' : e.kind === 'genericFood' ? '🍟 ' : e.kind === 'genericMarvel' ? '🦸 ' : e.kind === 'wildcard' ? '✨ ' : (DEFENSIVE_POS.has(e.pos) ? '🛡️ ' : '');
     const label = fullName(e);
     return `
     <details class="entity-names">
@@ -1397,6 +1400,7 @@ function buildResults(){
   const selectedGenericTv = selected.filter(e => e.kind === 'genericTv');
   const selectedGenericStarWars = selected.filter(e => e.kind === 'genericStarWars');
   const selectedGenericFood = selected.filter(e => e.kind === 'genericFood');
+  const selectedGenericMarvel = selected.filter(e => e.kind === 'genericMarvel');
 
   // Guarantee exactly one result for every entity the user actually searched
   // for and added — so nothing they picked gets crowded out of the results.
@@ -1450,6 +1454,9 @@ function buildResults(){
   });
   selectedGenericFood.forEach(g => {
     weightedPick(g.names, Math.min(g.names.length, 3)).forEach(n => bonusPool.push({ name: n, type: 'wild', meta: categoryMeta('Food-themed pick', n) }));
+  });
+  selectedGenericMarvel.forEach(g => {
+    weightedPick(g.names, Math.min(g.names.length, 3)).forEach(n => bonusPool.push({ name: n, type: 'wild', meta: categoryMeta('Marvel-themed pick', n) }));
   });
 
   // Combos only make sense between two players — bonus content, not guaranteed
