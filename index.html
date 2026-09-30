@@ -637,7 +637,7 @@
       </div>
       <button class="ghost" id="shuffleBtn" style="display:none;">Try another</button>
     </div>
-    <div class="grid" id="luckyPickGrid"></div>
+    <div class="popular-list" id="luckyPickGrid"></div>
   </section>
 
   <section class="popular-section" id="popularSection" style="display:none;">
@@ -1566,21 +1566,22 @@ loadTopPopular();
 
 function renderLuckyPick(result){
   lastResults = [result];
+  const typeLabel = result.type === 'solo' ? 'Player pun' : result.type === 'team' ? 'Team pun' : 'Wildcard';
   luckyPickGrid.innerHTML = `
-    <div class="card ${result.type}">
-      <button class="copy-btn" data-idx="0" aria-label="Copy name">⧉</button>
-      <p class="name">${result.name}</p>
-      <div class="meta">
-        <span class="tag">${result.type === 'solo' ? 'Player pun' : result.type === 'team' ? 'Team pun' : 'Wildcard'}</span>
-        <span>${result.meta}</span>
+    <div class="popular-row">
+      <span class="popular-rank">🎲</span>
+      <div class="popular-body">
+        <div class="popular-name">${result.name}</div>
+        <div class="popular-meta">${typeLabel} \u00b7 ${result.meta}</div>
       </div>
-      <div class="like-row">${likeButtonHtml('result_' + result.type, result.name, result.meta, false)}</div>
+      <button class="popular-copy" data-idx="0" aria-label="Copy name">⧉</button>
+      ${likeButtonHtml('result_' + result.type, result.name, result.meta, true)}
     </div>
   `;
   luckyPickSection.style.display = 'block';
   shuffleBtn.style.display = 'inline-block';
 
-  luckyPickGrid.querySelectorAll('.copy-btn').forEach(btn => {
+  luckyPickGrid.querySelectorAll('.popular-copy').forEach(btn => {
     btn.addEventListener('click', () => {
       const text = lastResults[btn.dataset.idx].name;
       navigator.clipboard?.writeText(text).catch(() => {});
