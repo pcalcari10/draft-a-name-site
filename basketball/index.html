@@ -1702,15 +1702,12 @@ Promise.all([
     const pun = entry.pun ? `<span class="ticker-pun">"${entry.pun}"</span>` : '';
     const mainValue = category ? entry[category] : entry.ppg;
     const mainLabel = category ? STAT_CAT_LABEL[category] : 'PPG';
-    const otherCats = STAT_CAT_ORDER.filter(c => c !== category);
-    const otherLine = otherCats.map(c => `${entry[c]} ${STAT_CAT_LABEL[c]}`).join(' \u00b7 ');
     return `
       <div class="ticker-card" data-pos="${entry.pos}" data-id="${entry.id || ''}" title="Add ${entry.first} ${entry.last} to your roster">
         <span class="ticker-pos">${rank}</span>
         <span class="ticker-name">${entry.first} ${entry.last}</span>
         <span class="ticker-team">${entry.team} \u00b7 ${entry.pos}</span>
         <span class="ticker-pts">${mainValue} ${mainLabel}</span>
-        <span class="ticker-pun">${otherLine}</span>
         ${pun}
       </div>`;
   }
