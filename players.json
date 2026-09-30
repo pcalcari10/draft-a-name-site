@@ -49,6 +49,9 @@
     "taggedNames": {
       "movie": [
         "Obi-Jan Kenobi"
+      ],
+      "starwars": [
+        "Obi-Jan Kenobi"
       ]
     }
   },
@@ -804,7 +807,12 @@
       "Olave's Air Yards"
     ],
     "active": true,
-    "tier": "curated"
+    "tier": "curated",
+    "taggedNames": {
+      "food": [
+        "Olave Garden"
+      ]
+    }
   },
   {
     "id": "davidmontgomery_hou",
@@ -1669,13 +1677,17 @@
       "Unsolicited Dak Pics",
       "Prescott To Fill",
       "Dak To The Future",
-      "Baby Got Dak"
+      "Baby Got Dak",
+      "The Dak Side"
     ],
     "active": true,
     "tier": "curated",
     "taggedNames": {
       "music": [
         "The Boys Are Dak In Town"
+      ],
+      "starwars": [
+        "The Dak Side"
       ]
     }
   },
