@@ -1,18 +1,19 @@
-// Builds stats_ticker_basketball.json: the top-scoring players at each
-// position, for the most recently completed week and for the season so far.
-// Runs headless via GitHub Actions, but can also be run locally with
+// Builds stats_ticker_basketball.json: top players at each position by
+// fantasy points, plus a per-game stats view (PPG/APG/RPG/SPG/BPG). Runs
+// headless via GitHub Actions, but can also be run locally with
 // `node scripts/build-stats-ticker-basketball.js`.
 //
-// This mirrors build-stats-ticker.js (football) exactly, using Sleeper's own
-// /v1/stats/nba/regular/{season}/{week} endpoint and walking weeks until we
-// stop finding data, rather than trusting a "current week" field. NBA
-// doesn't have a native week structure the way the NFL does, but Sleeper
-// appears to impose its own fantasy-week numbering across all sports it
-// supports (confirmed working for player data already) \u2014 this is the first
-// real test of whether that holds for stats too. If Sleeper's NBA stats
-// coverage turns out to be thin or empty, this script will simply produce a
-// mostly-empty ticker rather than fail outright, which is the signal to
-// switch to a boxscore-aggregation approach like hockey's weekly ticker uses.
+// Uses Sleeper's season-level stats endpoint (/v1/stats/nba/regular/{season},
+// no week number) rather than walking individual weeks. That earlier
+// week-by-week approach was dropped after inspecting a real weekly response:
+// it included quarter-by-quarter breakdown fields (q1_pts, h1_ast, etc.)
+// that only make sense for a single game, strongly suggesting the "weekly"
+// endpoint returns one box score rather than a true aggregate of that
+// week's (usually 3-4) games -- which would have made summed "season
+// totals" built from it silently wrong. The season-level endpoint, by
+// contrast, includes a real games-played field (gp) and totals that match
+// realistic full-season production, so it's used as the single source of
+// truth for both views here.
 
 const fs = require('fs');
 const path = require('path');
@@ -28,7 +29,6 @@ const SEASON = (() => {
 })();
 const POSITIONS = ['PG', 'SG', 'SF', 'PF', 'C'];
 const TOP_N_BY_POS = { PG: 15, SG: 15, SF: 15, PF: 15, C: 15 };
-const MAX_WEEKS_TO_CHECK = 26; // generous upper bound for a ~6-month season
 
 function normalizeName(name) {
   return name
@@ -46,27 +46,14 @@ function pickPun(player) {
   return player.names[0];
 }
 
-async function loadSleeperIdMap() {
-  // Reuses the same DynastyProcess ID crosswalk football's script uses \u2014
-  // it's NFL-focused, so this may only resolve a subset of NBA players.
-  // Matching by normalized name as a fallback covers the rest.
-  const res = await fetch('https://raw.githubusercontent.com/dynastyprocess/data/master/files/db_playerids.csv');
-  if (!res.ok) throw new Error(`DynastyProcess CSV fetch failed: HTTP ${res.status}`);
-  const text = await res.text();
-  const lines = text.split('\n');
-  const header = lines[0].split(',');
-  const nameIdx = header.indexOf('name');
-  const sleeperIdx = header.indexOf('sleeper_id');
-  const map = {};
-  for (let i = 1; i < lines.length; i++) {
-    const cols = lines[i].split(',');
-    const name = cols[nameIdx];
-    const sid = cols[sleeperIdx];
-    if (name && sid && sid !== 'NA') {
-      map[normalizeName(name)] = sid;
-    }
-  }
-  return map;
+function round1(n) {
+  return Math.round(n * 10) / 10;
+}
+
+async function fetchSeasonStats(season) {
+  const res = await fetch(`https://api.sleeper.app/v1/stats/nba/regular/${season}`);
+  if (!res.ok) throw new Error(`Sleeper season stats fetch failed: HTTP ${res.status}`);
+  return res.json();
 }
 
 async function main() {
@@ -82,9 +69,6 @@ async function main() {
     byName[normalizeName(`${p.first} ${p.last}`)] = p;
   });
 
-  // Sleeper's NBA player IDs are the keys of the /players/nba response
-  // itself (unlike NFL, which needed the DynastyProcess crosswalk) \u2014 build
-  // sleeperId -> our player record directly from that.
   const bySleeperId = {};
   Object.entries(allSleeperPlayers).forEach(([sid, p]) => {
     if (!p || !p.first_name || !p.last_name) return;
@@ -93,117 +77,99 @@ async function main() {
   });
   console.log(`Matched ${Object.keys(bySleeperId).length} of ${players.length} players to a Sleeper ID.`);
 
-  const weeklyPoints = {};
-  let lastWeekWithData = null;
+  console.log(`Checking current season (${SEASON}) for season-level stats...`);
+  let statsData = await fetchSeasonStats(SEASON);
   let seasonUsed = SEASON;
   let isLastSeason = false;
 
-  async function findDataForSeason(season) {
-    const points = {};
-    let lastWeek = null;
-    for (let week = 1; week <= MAX_WEEKS_TO_CHECK; week++) {
-      try {
-        const res = await fetch(`https://api.sleeper.app/v1/stats/nba/regular/${season}/${week}`);
-        if (!res.ok) continue;
-        const weekStats = await res.json();
-        const entries = Object.keys(weekStats);
-        if (entries.length === 0) continue;
-
-        const pointsThisWeek = {};
-        let anyRealPoints = false;
-        entries.forEach(sid => {
-          const stat = weekStats[sid];
-          const pts = stat && (stat.pts_half_ppr || stat.pts_ppr || stat.pts_std);
-          if (pts) {
-            pointsThisWeek[sid] = pts;
-            anyRealPoints = true;
-          }
-        });
-
-        if (anyRealPoints) {
-          points[week] = pointsThisWeek;
-          lastWeek = week;
-          console.log(`  Season ${season}, Week ${week}: ${Object.keys(pointsThisWeek).length} players with points.`);
-        }
-      } catch (err) {
-        console.log(`  Season ${season}, Week ${week}: skipped (${err.message})`);
-      }
-    }
-    return { points, lastWeek };
-  }
-
-  console.log(`Checking current season (${SEASON}) for weekly data...`);
-  let found = await findDataForSeason(SEASON);
-
-  if (found.lastWeek === null) {
-    // The current season likely hasn't started yet \u2014 fall back to last
-    // season's final data so the ticker shows something meaningful in the
-    // meantime, rather than sitting empty for weeks before opening night.
+  if (!statsData || Object.keys(statsData).length === 0) {
     const priorSeason = (parseInt(SEASON, 10) - 1).toString();
     console.log(`No data for ${SEASON} yet (season probably hasn't started). Falling back to ${priorSeason}...`);
-    found = await findDataForSeason(priorSeason);
-    if (found.lastWeek !== null) {
+    statsData = await fetchSeasonStats(priorSeason);
+    if (statsData && Object.keys(statsData).length > 0) {
       seasonUsed = priorSeason;
       isLastSeason = true;
     }
   }
 
-  Object.assign(weeklyPoints, found.points);
-  lastWeekWithData = found.lastWeek;
-
-  if (lastWeekWithData === null) {
-    console.log('No weeks with data found for the current or prior season \u2014 writing an empty ticker. If this persists once the season is underway, Sleeper\u2019s NBA stats coverage may not support this endpoint the way NFL does, and a boxscore-based approach (like hockey\u2019s) would be needed instead.');
+  if (!statsData || Object.keys(statsData).length === 0) {
+    console.log('No season-level data found for the current or prior season \u2014 writing an empty ticker.');
     fs.writeFileSync(OUT_PATH, JSON.stringify({
       generatedAt: new Date().toISOString(),
       season: SEASON,
-      week: null,
       isLastSeason: false,
-      thisWeek: {},
-      seasonTotals: {},
+      fantasyLeaders: {},
+      statsLeaders: {},
     }, null, 2) + '\n');
     return;
   }
+  console.log(`Found season-level stats for ${Object.keys(statsData).length} players (season ${seasonUsed}).`);
 
-  const seasonPoints = {};
-  Object.values(weeklyPoints).forEach(weekMap => {
-    Object.keys(weekMap).forEach(sid => {
-      seasonPoints[sid] = (seasonPoints[sid] || 0) + weekMap[sid];
-    });
-  });
-
-  function topByPosition(pointsMap) {
-    const result = {};
-    POSITIONS.forEach(pos => {
-      const ranked = Object.keys(pointsMap)
-        .map(sid => ({ sid, pts: pointsMap[sid], player: bySleeperId[sid] }))
-        .filter(x => x.player && x.player.pos === pos)
-        .sort((a, b) => b.pts - a.pts)
-        .slice(0, TOP_N_BY_POS[pos])
-        .map(x => ({
-          id: x.player.id,
-          first: x.player.first,
-          last: x.player.last,
-          team: x.player.team,
-          pos: x.player.pos,
-          pts: Math.round(x.pts * 10) / 10,
-          pun: pickPun(x.player),
-        }));
-      result[pos] = ranked;
-    });
-    return result;
+  function buildEntry(sid, stat, extra) {
+    const player = bySleeperId[sid];
+    return {
+      id: player.id,
+      first: player.first,
+      last: player.last,
+      team: player.team,
+      pos: player.pos,
+      pun: pickPun(player),
+      ...extra,
+    };
   }
+
+  const fantasyLeaders = {};
+  const statsLeaders = {};
+
+  POSITIONS.forEach(pos => {
+    const candidates = Object.entries(statsData)
+      .map(([sid, stat]) => ({ sid, stat, player: bySleeperId[sid] }))
+      .filter(x => x.player && x.player.pos === pos && x.stat && x.stat.gp > 0);
+
+    // Fantasy view: ranked by total fantasy points across the season.
+    fantasyLeaders[pos] = candidates
+      .map(x => ({
+        sid: x.sid,
+        pts: x.stat.pts_half_ppr || x.stat.pts_ppr || x.stat.pts_std || 0,
+      }))
+      .sort((a, b) => b.pts - a.pts)
+      .slice(0, TOP_N_BY_POS[pos])
+      .map(x => buildEntry(x.sid, statsData[x.sid], { pts: round1(x.pts) }));
+
+    // Stats view: ranked by points per game, with the other per-game
+    // averages carried alongside for display.
+    statsLeaders[pos] = candidates
+      .map(x => ({
+        sid: x.sid,
+        gp: x.stat.gp,
+        ppg: (x.stat.pts || 0) / x.stat.gp,
+        apg: (x.stat.ast || 0) / x.stat.gp,
+        rpg: (x.stat.reb || 0) / x.stat.gp,
+        spg: (x.stat.stl || 0) / x.stat.gp,
+        bpg: (x.stat.blk || 0) / x.stat.gp,
+      }))
+      .sort((a, b) => b.ppg - a.ppg)
+      .slice(0, TOP_N_BY_POS[pos])
+      .map(x => buildEntry(x.sid, statsData[x.sid], {
+        gp: x.gp,
+        ppg: round1(x.ppg),
+        apg: round1(x.apg),
+        rpg: round1(x.rpg),
+        spg: round1(x.spg),
+        bpg: round1(x.bpg),
+      }));
+  });
 
   const output = {
     generatedAt: new Date().toISOString(),
     season: seasonUsed,
-    week: lastWeekWithData,
     isLastSeason,
-    thisWeek: topByPosition(weeklyPoints[lastWeekWithData]),
-    seasonTotals: topByPosition(seasonPoints),
+    fantasyLeaders,
+    statsLeaders,
   };
 
   fs.writeFileSync(OUT_PATH, JSON.stringify(output, null, 2) + '\n');
-  console.log(`Wrote stats_ticker_basketball.json (season ${seasonUsed}${isLastSeason ? ' \u2014 last season, current season has no data yet' : ''}, week ${lastWeekWithData}).`);
+  console.log(`Wrote stats_ticker_basketball.json (season ${seasonUsed}${isLastSeason ? ' \u2014 last season, current season has no data yet' : ''}).`);
 }
 
 main().catch(err => {

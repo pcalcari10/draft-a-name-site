@@ -562,8 +562,8 @@
       <div class="ticker-track" id="tickerTrack"></div>
     </div>
     <div class="ticker-toggle">
-      <button id="tickerWeekBtn" class="active">This Week</button>
-      <button id="tickerSeasonBtn">Season</button>
+      <button id="tickerWeekBtn" class="active">Fantasy Points</button>
+      <button id="tickerSeasonBtn">Season Stats</button>
     </div>
   </div>
 </div>
@@ -1662,15 +1662,15 @@ Promise.all([
   searchInput.placeholder = 'Failed to load \u2014 try refreshing the page';
 });
 
-// ---------- Stats ticker (season leaders only \u2014 no weekly view, since the
-// The NBA doesn't have a clean one-game-per-team-per-week structure the way the
-// NFL does; independent of the main app, failures here never block search) ----------
+// ---------- Stats ticker: Fantasy Points view and Season Stats (PPG/APG/RPG/
+// SPG/BPG) view, both drawn from Sleeper's season-level stats; independent
+// of the main app, failures here never block search ----------
 (function initStatsTicker(){
   const wrapEl = document.getElementById('tickerWrap');
   const trackEl = document.getElementById('tickerTrack');
   const titleEl = document.getElementById('tickerTitle');
-  const weekBtn = document.getElementById('tickerWeekBtn');
-  const seasonBtn = document.getElementById('tickerSeasonBtn');
+  const fantasyBtn = document.getElementById('tickerWeekBtn');
+  const statsBtn = document.getElementById('tickerSeasonBtn');
   const POS_ORDER = ['PG', 'SG', 'SF', 'PF', 'C'];
 
   trackEl.addEventListener('click', (e) => {
@@ -1680,14 +1680,27 @@ Promise.all([
     searchInput.scrollIntoView({ behavior: 'smooth', block: 'center' });
   });
 
-  function buildCard(entry, rank){
+  function buildFantasyCard(entry, rank){
     const pun = entry.pun ? `<span class="ticker-pun">"${entry.pun}"</span>` : '';
     return `
       <div class="ticker-card" data-pos="${entry.pos}" data-id="${entry.id || ''}" title="Add ${entry.first} ${entry.last} to your roster">
         <span class="ticker-pos">${entry.pos}${rank}</span>
         <span class="ticker-name">${entry.first} ${entry.last}</span>
         <span class="ticker-team">${entry.team}</span>
-        <span class="ticker-pts">${entry.pts}</span>
+        <span class="ticker-pts">${entry.pts} pts</span>
+        ${pun}
+      </div>`;
+  }
+
+  function buildStatsCard(entry, rank){
+    const pun = entry.pun ? `<span class="ticker-pun">"${entry.pun}"</span>` : '';
+    return `
+      <div class="ticker-card" data-pos="${entry.pos}" data-id="${entry.id || ''}" title="Add ${entry.first} ${entry.last} to your roster">
+        <span class="ticker-pos">${entry.pos}${rank}</span>
+        <span class="ticker-name">${entry.first} ${entry.last}</span>
+        <span class="ticker-team">${entry.team}</span>
+        <span class="ticker-pts">${entry.ppg} PPG</span>
+        <span class="ticker-pun">${entry.apg} APG \u00b7 ${entry.rpg} RPG \u00b7 ${entry.spg} SPG \u00b7 ${entry.bpg} BPG</span>
         ${pun}
       </div>`;
   }
@@ -1697,7 +1710,8 @@ Promise.all([
   }
 
   function render(data, view){
-    const byPos = view === 'season' ? data.seasonTotals : data.thisWeek;
+    const byPos = view === 'stats' ? data.statsLeaders : data.fantasyLeaders;
+    const buildCard = view === 'stats' ? buildStatsCard : buildFantasyCard;
     const groupsHtml = [];
     POS_ORDER.forEach(pos => {
       const entries = (byPos && byPos[pos]) || [];
@@ -1721,9 +1735,7 @@ Promise.all([
     });
 
     const seasonLabel = data.isLastSeason ? ` (${formatSeasonLabel(data.season)})` : '';
-    titleEl.textContent = view === 'season'
-      ? `Season Leaders${seasonLabel}`
-      : `Week ${data.week} Top Scorers${seasonLabel}`;
+    titleEl.textContent = (view === 'stats' ? 'Season Stats Leaders' : 'Fantasy Points Leaders') + seasonLabel;
   }
 
   function formatSeasonLabel(season){
@@ -1733,38 +1745,26 @@ Promise.all([
   }
 
   loadJson('../stats_ticker_basketball.json').then(data => {
-    const hasWeek = data && data.thisWeek && Object.values(data.thisWeek).some(arr => arr.length > 0);
-    const hasSeason = data && data.seasonTotals && Object.values(data.seasonTotals).some(arr => arr.length > 0);
-    if(!hasWeek && !hasSeason){
+    const hasFantasy = data && data.fantasyLeaders && Object.values(data.fantasyLeaders).some(arr => arr.length > 0);
+    const hasStats = data && data.statsLeaders && Object.values(data.statsLeaders).some(arr => arr.length > 0);
+    if(!hasFantasy && !hasStats){
       wrapEl.style.display = 'none';
       return;
     }
-    // While showing last season's fallback data, "this week" would really
-    // mean "the final week of last season," which reads as confusingly
-    // current rather than historical \u2014 so show season totals only, with no
-    // toggle, until this season has its own weekly data.
-    if(data.isLastSeason){
-      render(data, 'season');
-      weekBtn.style.display = 'none';
-      seasonBtn.style.display = 'none';
-      return;
-    }
-    // Default to whichever view actually has data if one is empty (e.g. the
-    // very first Monday of a fantasy week, before any games are complete).
-    const defaultView = hasWeek ? 'week' : 'season';
+    const defaultView = hasFantasy ? 'fantasy' : 'stats';
     render(data, defaultView);
-    weekBtn.classList.toggle('active', defaultView === 'week');
-    seasonBtn.classList.toggle('active', defaultView === 'season');
+    fantasyBtn.classList.toggle('active', defaultView === 'fantasy');
+    statsBtn.classList.toggle('active', defaultView === 'stats');
 
-    weekBtn.addEventListener('click', () => {
-      weekBtn.classList.add('active');
-      seasonBtn.classList.remove('active');
-      render(data, 'week');
+    fantasyBtn.addEventListener('click', () => {
+      fantasyBtn.classList.add('active');
+      statsBtn.classList.remove('active');
+      render(data, 'fantasy');
     });
-    seasonBtn.addEventListener('click', () => {
-      seasonBtn.classList.add('active');
-      weekBtn.classList.remove('active');
-      render(data, 'season');
+    statsBtn.addEventListener('click', () => {
+      statsBtn.classList.add('active');
+      fantasyBtn.classList.remove('active');
+      render(data, 'stats');
     });
   }).catch(err => {
     console.error('Basketball stats ticker failed to load (non-fatal)', err);
