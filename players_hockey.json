@@ -154,10 +154,11 @@
       "In Korpisalo We Trust",
       "Joonas Korpisalo and the Fantasy Machine",
       "Straight Outta Korpisalo",
-      "Joonas Vibes Only"
+      "Joonas Vibes Only",
+      "His Name is Joonas"
     ],
     "active": true,
-    "tier": "template"
+    "tier": "curated"
   },
   {
     "id": "seankuraly_bos",
@@ -287,7 +288,8 @@
       "Pasta Your Prime",
       "Al Dente Dangles",
       "Pasta Your Bedtime",
-      "Impasta Syndrome"
+      "Impasta Syndrome",
+      "Dirty Pastrnak Water"
     ],
     "active": true,
     "tier": "curated"
@@ -684,7 +686,8 @@
     "team": "BUF",
     "pos": "D",
     "names": [
-      "Owen Power Up"
+      "Owen Power Up",
+      "We've Got the Owen Power"
     ],
     "active": true,
     "tier": "curated"
@@ -833,7 +836,8 @@
     "team": "DET",
     "pos": "C",
     "names": [
-      "Andrew Copp A Feel"
+      "Andrew Copp A Feel",
+      "Best Copp on the Force"
     ],
     "active": true,
     "tier": "curated"
@@ -973,7 +977,8 @@
     "names": [
       "Larkin's Legion",
       "Dylan Barry Larkin",
-      "Larkin Order"
+      "Larkin Order",
+      "Happy as a Larkin"
     ],
     "active": true,
     "tier": "curated"
@@ -1017,13 +1022,15 @@
     "team": "DET",
     "pos": "LW",
     "names": [
-      "Lucas Everybody Loves Raymond"
+      "Lucas Everybody Loves Raymond",
+      "Everybody Loves Raymond"
     ],
     "active": true,
     "tier": "curated",
     "taggedNames": {
       "tv": [
-        "Lucas Everybody Loves Raymond"
+        "Lucas Everybody Loves Raymond",
+        "Everybody Loves Raymond"
       ]
     }
   },
@@ -1053,7 +1060,8 @@
       "Mo Money, Mo Problem, Mo Seider",
       "Seider House Rules",
       "Seider To Side",
-      "Seider Sense"
+      "Seider Sense",
+      "Apple Vinegar Seider"
     ],
     "active": true,
     "tier": "curated"
@@ -1233,10 +1241,16 @@
       "In Forsling We Trust",
       "Gustav Forsling and the Fantasy Machine",
       "Straight Outta Forsling",
-      "Gustav Vibes Only"
+      "Gustav Vibes Only",
+      "The Forsling Awakens"
     ],
     "active": true,
-    "tier": "template"
+    "tier": "curated",
+    "taggedNames": {
+      "starwars": [
+        "The Forsling Awakens"
+      ]
+    }
   },
   {
     "id": "jonahgadjovich_fla",
@@ -1297,10 +1311,11 @@
       "In Jones We Trust",
       "Seth Jones and the Fantasy Machine",
       "Straight Outta Jones",
-      "Seth Vibes Only"
+      "Seth Vibes Only",
+      "Call Him Dr. (Seth) Jones!"
     ],
     "active": true,
-    "tier": "template"
+    "tier": "curated"
   },
   {
     "id": "dmitrykulikov_fla",
@@ -1357,7 +1372,8 @@
     "team": "FLA",
     "pos": "C",
     "names": [
-      "Eetu Luosta Rhymes"
+      "Eetu Luosta Rhymes",
+      "Eetu, Brute?"
     ],
     "active": true,
     "tier": "curated"
@@ -1546,7 +1562,10 @@
       "Tkachuk Norris",
       "Shut the Tkachuk Up",
       "Tkachuk & Roll",
-      "Tkachuk It in the Trash"
+      "Tkachuk It in the Trash",
+      "Tkachuk Around and Find Out",
+      "Tkachuk E. Cheese",
+      "The Wood Tkachuks"
     ],
     "active": true,
     "tier": "curated"
@@ -1731,10 +1750,16 @@
     "team": "MTL",
     "pos": "D",
     "names": [
-      "The Dobson's Defenders"
+      "The Dobson's Defenders",
+      "Dobson's Creek"
     ],
     "active": true,
-    "tier": "curated"
+    "tier": "curated",
+    "taggedNames": {
+      "tv": [
+        "Dobson's Creek"
+      ]
+    }
   },
   {
     "id": "jakeevans_mtl",
@@ -1904,10 +1929,11 @@
       "In Slafkovsky We Trust",
       "Juraj Slafkovsky and the Fantasy Machine",
       "Straight Outta Slafkovsky",
-      "Juraj Vibes Only"
+      "Juraj Vibes Only",
+      "Slaf Happens"
     ],
     "active": false,
-    "tier": "template"
+    "tier": "curated"
   },
   {
     "id": "jaydenstruble_mtl",
@@ -2034,7 +2060,8 @@
       "Thomas Chabot and the Fantasy Machine",
       "Straight Outta Chabot",
       "Thomas Vibes Only",
-      "ChabotGPT"
+      "ChabotGPT",
+      "Thomas Chat Bot"
     ],
     "active": true,
     "tier": "curated"
@@ -2505,10 +2532,11 @@
       "In Gourde We Trust",
       "Yanni Gourde and the Fantasy Machine",
       "Straight Outta Gourde",
-      "Yanni Vibes Only"
+      "Yanni Vibes Only",
+      "Yanni Bitter Gourde"
     ],
     "active": false,
-    "tier": "template"
+    "tier": "curated"
   },
   {
     "id": "maximgroshev_tbl",
@@ -3189,7 +3217,8 @@
       "Joseph Woll and the Fantasy Machine",
       "Straight Outta Woll",
       "Joseph Vibes Only",
-      "Wonder Woll"
+      "Wonder Woll",
+      "Joey Wollworth's"
     ],
     "active": true,
     "tier": "curated",
@@ -3441,10 +3470,16 @@
       "In Miller We Trust",
       "K'Andre Miller and the Fantasy Machine",
       "Straight Outta Miller",
-      "K'Andre Vibes Only"
+      "K'Andre Vibes Only",
+      "K'Andre the Giant"
     ],
     "active": true,
-    "tier": "template"
+    "tier": "curated",
+    "taggedNames": {
+      "movie": [
+        "K'Andre the Giant"
+      ]
+    }
   },
   {
     "id": "alexandernikishin_car",
@@ -3537,10 +3572,16 @@
       "In Slavin We Trust",
       "Jaccob Slavin and the Fantasy Machine",
       "Straight Outta Slavin",
-      "Jaccob Vibes Only"
+      "Jaccob Vibes Only",
+      "Jaccob I'm a Slavin 4 U"
     ],
     "active": true,
-    "tier": "template"
+    "tier": "curated",
+    "taggedNames": {
+      "music": [
+        "Jaccob I'm a Slavin 4 U"
+      ]
+    }
   },
   {
     "id": "jordanstaal_car",
@@ -3553,13 +3594,16 @@
       "Staal In The Family",
       "Staal-ing for Time",
       "Staalwarts",
-      "Staal'in the Show"
+      "Staal'in the Show",
+      "Bathroom Staals",
+      "Better Call Staal"
     ],
     "active": true,
     "tier": "curated",
     "taggedNames": {
       "tv": [
-        "Staal In The Family"
+        "Staal In The Family",
+        "Better Call Staal"
       ]
     }
   },
@@ -3571,10 +3615,16 @@
     "pos": "C",
     "names": [
       "Ludwig Von Stankoven",
-      "Got That Stankoven On Him"
+      "Got That Stankoven On Him",
+      "Hoobastankoven"
     ],
     "active": true,
-    "tier": "curated"
+    "tier": "curated",
+    "taggedNames": {
+      "music": [
+        "Hoobastankoven"
+      ]
+    }
   },
   {
     "id": "andreisvechnikov_car",
@@ -4047,7 +4097,8 @@
     "names": [
       "Original Brattwurst",
       "Bratt Dolls",
-      "Jesper Bratt Pack"
+      "Jesper Bratt Pack",
+      "Jesper's Bratz"
     ],
     "active": true,
     "tier": "curated",
@@ -4100,10 +4151,11 @@
       "In Dadonov We Trust",
       "Evgenii Dadonov and the Fantasy Machine",
       "Straight Outta Dadonov",
-      "Evgenii Vibes Only"
+      "Evgenii Vibes Only",
+      "Evgenii Who's Your Dadanov"
     ],
     "active": false,
-    "tier": "template"
+    "tier": "curated"
   },
   {
     "id": "brendendillon_njd",
@@ -4132,10 +4184,16 @@
       "In Glass We Trust",
       "Cody Glass and the Fantasy Machine",
       "Straight Outta Glass",
-      "Cody Vibes Only"
+      "Cody Vibes Only",
+      "Cody Glass Onion: A First-Round Mystery"
     ],
     "active": true,
-    "tier": "template"
+    "tier": "curated",
+    "taggedNames": {
+      "movie": [
+        "Cody Glass Onion: A First-Round Mystery"
+      ]
+    }
   },
   {
     "id": "lukeglendening_njd",
@@ -4172,7 +4230,8 @@
     "team": "NJD",
     "pos": "D",
     "names": [
-      "Teach Me How To Dougie Hamilton"
+      "Teach Me How To Dougie Hamilton",
+      "Do the Dougie"
     ],
     "active": true,
     "tier": "curated"
@@ -4205,7 +4264,8 @@
       "A Jack Hughes Brothers Film",
       "Auston JackHughes",
       "Hughes it Or Lose It",
-      "The Hughes Brothers"
+      "The Hughes Brothers",
+      "Jacked Huge"
     ],
     "active": true,
     "tier": "curated"
@@ -4296,7 +4356,8 @@
     "names": [
       "Oscar Meier Wiener",
       "Meier Of Kingstown",
-      "Finding Timo"
+      "Finding Timo",
+      "Oscar Meier Weiner"
     ],
     "active": true,
     "tier": "curated",
@@ -4317,10 +4378,16 @@
       "In Mercer We Trust",
       "Dawson Mercer and the Fantasy Machine",
       "Straight Outta Mercer",
-      "Dawson Vibes Only"
+      "Dawson Vibes Only",
+      "Dawson Mercer's Creek"
     ],
     "active": true,
-    "tier": "template"
+    "tier": "curated",
+    "taggedNames": {
+      "tv": [
+        "Dawson Mercer's Creek"
+      ]
+    }
   },
   {
     "id": "simonnemec_njd",
@@ -4578,10 +4645,11 @@
       "In Horvat We Trust",
       "Bo Horvat and the Fantasy Machine",
       "Straight Outta Horvat",
-      "Bo Vibes Only"
+      "Bo Vibes Only",
+      "Bo Scorevat"
     ],
     "active": true,
-    "tier": "template"
+    "tier": "curated"
   },
   {
     "id": "anderslee_nyi",
@@ -4739,10 +4807,16 @@
       "In Rittich We Trust",
       "David Rittich and the Fantasy Machine",
       "Straight Outta Rittich",
-      "David Vibes Only"
+      "David Vibes Only",
+      "Chronicles of Rittich"
     ],
     "active": false,
-    "tier": "template"
+    "tier": "curated",
+    "taggedNames": {
+      "movie": [
+        "Chronicles of Rittich"
+      ]
+    }
   },
   {
     "id": "alexanderromanov_nyi",
@@ -4933,13 +5007,15 @@
       "20th Century Fox",
       "What the Fox?!",
       "Fox Trot",
-      "Out-Foxed"
+      "Out-Foxed",
+      "Fantastic Mr. Adam Fox"
     ],
     "active": true,
     "tier": "curated",
     "taggedNames": {
       "movie": [
-        "20th Century Fox"
+        "20th Century Fox",
+        "Fantastic Mr. Adam Fox"
       ]
     }
   },
@@ -5911,7 +5987,9 @@
     "pos": "C",
     "names": [
       "Malkin Mind Meld",
-      "Malkin in the Middle"
+      "Malkin in the Middle",
+      "Genormous Malkin",
+      "Got Malkin?"
     ],
     "active": true,
     "tier": "curated"
@@ -6011,10 +6089,16 @@
       "In Silovs We Trust",
       "Arturs Silovs and the Fantasy Machine",
       "Straight Outta Silovs",
-      "Arturs Vibes Only"
+      "Arturs Vibes Only",
+      "King Arturs: Legend of the Silovs"
     ],
     "active": true,
-    "tier": "template"
+    "tier": "curated",
+    "taggedNames": {
+      "movie": [
+        "King Arturs: Legend of the Silovs"
+      ]
+    }
   },
   {
     "id": "stuartskinner_pit",
@@ -6123,10 +6207,16 @@
       "In Chychrun We Trust",
       "Jakob Chychrun and the Fantasy Machine",
       "Straight Outta Chychrun",
-      "Jakob Vibes Only"
+      "Jakob Vibes Only",
+      "Jakob Chicken Run"
     ],
     "active": true,
-    "tier": "template"
+    "tier": "curated",
+    "taggedNames": {
+      "movie": [
+        "Jakob Chicken Run"
+      ]
+    }
   },
   {
     "id": "nicdowd_wsh",
@@ -6377,10 +6467,11 @@
       "In Strome We Trust",
       "Dylan Strome and the Fantasy Machine",
       "Straight Outta Strome",
-      "Dylan Vibes Only"
+      "Dylan Vibes Only",
+      "Calm Before the Strome"
     ],
     "active": true,
-    "tier": "template"
+    "tier": "curated"
   },
   {
     "id": "loganthompson_wsh",
@@ -6493,10 +6584,16 @@
       "In Gudas We Trust",
       "Radko Gudas and the Fantasy Machine",
       "Straight Outta Gudas",
-      "Radko Vibes Only"
+      "Radko Vibes Only",
+      "As Gudas It Gets"
     ],
     "active": true,
-    "tier": "template"
+    "tier": "curated",
+    "taggedNames": {
+      "movie": [
+        "As Gudas It Gets"
+      ]
+    }
   },
   {
     "id": "jansenharkins_ana",
@@ -6722,10 +6819,16 @@
       "In Terry We Trust",
       "Troy Terry and the Fantasy Machine",
       "Straight Outta Terry",
-      "Troy Vibes Only"
+      "Troy Vibes Only",
+      "Yer a Wizard, Terry"
     ],
     "active": false,
-    "tier": "template"
+    "tier": "curated",
+    "taggedNames": {
+      "movie": [
+        "Yer a Wizard, Terry"
+      ]
+    }
   },
   {
     "id": "jacobtrouba_ana",
@@ -7140,10 +7243,16 @@
       "In Wolf We Trust",
       "Dustin Wolf and the Fantasy Machine",
       "Straight Outta Wolf",
-      "Dustin Vibes Only"
+      "Dustin Vibes Only",
+      "Dustin Teen Wolf: The Movie"
     ],
     "active": true,
-    "tier": "template"
+    "tier": "curated",
+    "taggedNames": {
+      "movie": [
+        "Dustin Teen Wolf: The Movie"
+      ]
+    }
   },
   {
     "id": "connorzary_cgy",
@@ -7389,13 +7498,17 @@
       "Star Of McDavid, Draisaitl Of Clay",
       "Full McDavid Jacket",
       "McDavid Blaine",
-      "Keeping Up with the McDavids"
+      "Keeping Up with the McDavids",
+      "McDavidpool"
     ],
     "active": true,
     "tier": "curated",
     "taggedNames": {
       "tv": [
         "Keeping Up with the McDavids"
+      ],
+      "movie": [
+        "McDavidpool"
       ]
     }
   },
@@ -7648,7 +7761,8 @@
     "names": [
       "Doughty's Dynasty",
       "Drew Never In Doughty",
-      "Me Tie Doughty Walker"
+      "Me Tie Doughty Walker",
+      "Doughty Deeds"
     ],
     "active": true,
     "tier": "curated"
@@ -7756,10 +7870,11 @@
       "In Kempe We Trust",
       "Adrian Kempe and the Fantasy Machine",
       "Straight Outta Kempe",
-      "Adrian Vibes Only"
+      "Adrian Vibes Only",
+      "Gone Kempe-ing"
     ],
     "active": true,
-    "tier": "template"
+    "tier": "curated"
   },
   {
     "id": "anzekopitar_lak",
@@ -8067,7 +8182,8 @@
     "team": "SJS",
     "pos": "D",
     "names": [
-      "StewJon Klingberg"
+      "StewJon Klingberg",
+      "Klingberg, Right Ahead!"
     ],
     "active": false,
     "tier": "curated"
@@ -8334,10 +8450,11 @@
       "In Dunn We Trust",
       "Vince Dunn and the Fantasy Machine",
       "Straight Outta Dunn",
-      "Vince Vibes Only"
+      "Vince Vibes Only",
+      "Dun Dun Dunn!"
     ],
     "active": true,
-    "tier": "template"
+    "tier": "curated"
   },
   {
     "id": "jordaneberle_sea",
@@ -8630,13 +8747,15 @@
     "team": "SEA",
     "pos": "C",
     "names": [
-      "Monica And Chandler Stephenson"
+      "Monica And Chandler Stephenson",
+      "Chanandler Bong Stephenson"
     ],
     "active": true,
     "tier": "curated",
     "taggedNames": {
       "tv": [
-        "Monica And Chandler Stephenson"
+        "Monica And Chandler Stephenson",
+        "Chanandler Bong Stephenson"
       ]
     }
   },
@@ -8679,10 +8798,16 @@
     "team": "SEA",
     "pos": "C",
     "names": [
-      "Matt Du-Shane Wright"
+      "Matt Du-Shane Wright",
+      "The Wright Stuff"
     ],
     "active": true,
-    "tier": "curated"
+    "tier": "curated",
+    "taggedNames": {
+      "movie": [
+        "The Wright Stuff"
+      ]
+    }
   },
   {
     "id": "arshdeepbains_van",
@@ -8844,10 +8969,16 @@
       "Quinn It to Win It",
       "Hughes Control",
       "Quinncredible",
-      "Quinn-tessential Defense"
+      "Quinn-tessential Defense",
+      "Dr. Quinn, Defense Man"
     ],
     "active": true,
-    "tier": "curated"
+    "tier": "curated",
+    "taggedNames": {
+      "tv": [
+        "Dr. Quinn, Defense Man"
+      ]
+    }
   },
   {
     "id": "pierreolivierjoseph_van",
@@ -9371,10 +9502,16 @@
       "Mitch Please",
       "Marner's Mitchfits",
       "Mind Your Marners",
-      "Mitch Perfect"
+      "Mitch Perfect",
+      "I Got 99 Problems but a Mitch Ain't One"
     ],
     "active": true,
-    "tier": "curated"
+    "tier": "curated",
+    "taggedNames": {
+      "music": [
+        "I Got 99 Problems but a Mitch Ain't One"
+      ]
+    }
   },
   {
     "id": "braydenmcnabb_vgk",
@@ -9431,10 +9568,17 @@
     "team": "VGK",
     "pos": "LW",
     "names": [
-      "Saad Story"
+      "Saad Story",
+      "Saad and Lonely",
+      "Why So Saad?"
     ],
     "active": false,
-    "tier": "curated"
+    "tier": "curated",
+    "taggedNames": {
+      "movie": [
+        "Why So Saad?"
+      ]
+    }
   },
   {
     "id": "akiraschmid_vgk",
@@ -10305,7 +10449,8 @@
     "team": "COL",
     "pos": "D",
     "names": [
-      "Toews Me Bro"
+      "Toews Me Bro",
+      "Don't Toews Me, Bro"
     ],
     "active": true,
     "tier": "curated"
@@ -10373,14 +10518,16 @@
       "Since You Benn Gone",
       "Benn There, Done That",
       "Benny and the Jets",
-      "Three Day Benn-der"
+      "Three Day Benn-der",
+      "All About the Bennjamins"
     ],
     "active": true,
     "tier": "curated",
     "taggedNames": {
       "music": [
         "Since You Benn Gone",
-        "Benny and the Jets"
+        "Benny and the Jets",
+        "All About the Bennjamins"
       ]
     }
   },
@@ -10538,7 +10685,8 @@
     "names": [
       "Hintz of Victory",
       "Skipping Roope",
-      "Hintz 57"
+      "Hintz 57",
+      "Roop, There It Is!"
     ],
     "active": true,
     "tier": "curated"
@@ -11238,13 +11386,15 @@
     "team": "LAK",
     "pos": "LW",
     "names": [
-      "Erik Haula If You Hear Me"
+      "Erik Haula If You Hear Me",
+      "Haula-back Girl"
     ],
     "active": true,
     "tier": "curated",
     "taggedNames": {
       "music": [
-        "Erik Haula If You Hear Me"
+        "Erik Haula If You Hear Me",
+        "Haula-back Girl"
       ]
     }
   },
@@ -11256,10 +11406,17 @@
     "pos": "D",
     "names": [
       "The Outlaw Josi Wales",
-      "Josi\u2019s Girl"
+      "Josi\u2019s Girl",
+      "Josi What I See",
+      "Josi and the Pussycats"
     ],
     "active": true,
-    "tier": "curated"
+    "tier": "curated",
+    "taggedNames": {
+      "movie": [
+        "Josi and the Pussycats"
+      ]
+    }
   },
   {
     "id": "tysonjost_nsh",
@@ -11338,7 +11495,8 @@
     "names": [
       "Gin and Juuse",
       "Do Juuse what I see?",
-      "Orange Juuse Saros"
+      "Orange Juuse Saros",
+      "Juuse Fruit"
     ],
     "active": true,
     "tier": "curated"
@@ -11381,7 +11539,8 @@
       "The Stamkos Slayers",
       "The Stamkos Symphony of Snipes",
       "Stam and Deliver",
-      "It's Stammer Time"
+      "It's Stammer Time",
+      "Stammer Time"
     ],
     "active": true,
     "tier": "curated"
@@ -11622,13 +11781,15 @@
     "pos": "D",
     "names": [
       "Matthew Kessel Run",
-      "The Kessel Run"
+      "The Kessel Run",
+      "Kessel Run"
     ],
     "active": true,
     "tier": "curated",
     "taggedNames": {
       "starwars": [
-        "The Kessel Run"
+        "The Kessel Run",
+        "Kessel Run"
       ]
     }
   },
@@ -11955,7 +12116,8 @@
     "team": "MIN",
     "pos": "D",
     "names": [
-      "Olli Maata and Faata"
+      "Olli Maata and Faata",
+      "What's the Maatta"
     ],
     "active": true,
     "tier": "curated"
@@ -12133,10 +12295,11 @@
       "In Valimaki We Trust",
       "Juuso Valimaki and the Fantasy Machine",
       "Straight Outta Valimaki",
-      "Juuso Vibes Only"
+      "Juuso Vibes Only",
+      "Valimaki Roll"
     ],
     "active": false,
-    "tier": "template"
+    "tier": "curated"
   },
   {
     "id": "vitekvanecek_uta",
@@ -12165,10 +12328,11 @@
       "In Vejmelka We Trust",
       "Karel Vejmelka and the Fantasy Machine",
       "Straight Outta Vejmelka",
-      "Karel Vibes Only"
+      "Karel Vibes Only",
+      "Karel Veggie Milk"
     ],
     "active": true,
-    "tier": "template"
+    "tier": "curated"
   },
   {
     "id": "kaileryamamoto_uta",
@@ -12296,7 +12460,8 @@
       "Hellebuyck Girl",
       "Helle Good Saves",
       "Hellebuyck to the Future",
-      "Go To Hellebuyck"
+      "Go To Hellebuyck",
+      "Come Hell or Hellebuyck"
     ],
     "active": true,
     "tier": "curated"
@@ -12420,10 +12585,11 @@
       "In Niederreiter We Trust",
       "Nino Niederreiter and the Fantasy Machine",
       "Straight Outta Niederreiter",
-      "Nino Vibes Only"
+      "Nino Vibes Only",
+      "El Nino Niederreiter"
     ],
     "active": true,
-    "tier": "template"
+    "tier": "curated"
   },
   {
     "id": "gustavnyquist_wpg",
@@ -13973,10 +14139,16 @@
       "Straight Outta Vladar",
       "Vladar's Fantasy Fortress",
       "In Vladar We Trust",
-      "Dan Vladar and the Fantasy Machine"
+      "Dan Vladar and the Fantasy Machine",
+      "Darth Vladar"
     ],
     "active": true,
-    "tier": "template"
+    "tier": "curated",
+    "taggedNames": {
+      "starwars": [
+        "Darth Vladar"
+      ]
+    }
   },
   {
     "id": "davidgustafsson_pit",
@@ -14274,10 +14446,16 @@
     "pos": "C",
     "names": [
       "Connor Geekie Squad",
-      "Nerdy And Geekie"
+      "Nerdy And Geekie",
+      "Geekie Blinders"
     ],
     "active": true,
-    "tier": "curated"
+    "tier": "curated",
+    "taggedNames": {
+      "tv": [
+        "Geekie Blinders"
+      ]
+    }
   },
   {
     "id": "bogroulx_tor",
@@ -14627,7 +14805,8 @@
       "Ovi and the Beast",
       "Great Ovi",
       "Ovi the Moon",
-      "Ovi Achievers"
+      "Ovi Achievers",
+      "Alexander Oven Chicken"
     ],
     "active": true,
     "tier": "curated",
@@ -14695,7 +14874,8 @@
     "pos": "RW",
     "names": [
       "Jagr's Legacy",
-      "Moves Like Jagr"
+      "Moves Like Jagr",
+      "Jagr Bombs"
     ],
     "active": true,
     "tier": "curated"
@@ -14743,7 +14923,8 @@
     "team": "MTL",
     "pos": "G",
     "names": [
-      "The Price is Right"
+      "The Price is Right",
+      "Price is Right"
     ],
     "active": true,
     "tier": "curated"
@@ -14859,7 +15040,8 @@
     "team": "EDM",
     "pos": "D",
     "names": [
-      "Venti Paul Coffey"
+      "Venti Paul Coffey",
+      "Coffey Crisp"
     ],
     "active": true,
     "tier": "curated"
