@@ -96,6 +96,10 @@
   .footer-col h4 { font-family: var(--font-body); font-size: 11.5px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; color: var(--chalk-500); margin: 0 0 12px; }
   .footer-col a { display: block; color: var(--chalk-300); text-decoration: none; font-size: 13.5px; margin-bottom: 9px; }
   .footer-col a:hover { color: var(--gold-400); }
+  .footer-col .sport-badge {
+    display: inline-block; font-size: 9px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.03em;
+    background: var(--navy-700); color: var(--chalk-500); padding: 1px 5px; border-radius: 6px; margin-left: 6px; vertical-align: middle;
+  }
   .footer-bottom {
     border-top: 1px solid var(--line); padding: 16px 0 calc(24px + env(safe-area-inset-bottom, 0px));
     color: var(--chalk-500); font-size: 12.5px; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px;
@@ -297,8 +301,8 @@
       <div class="footer-col">
         <h4>Tools</h4>
         <a href="/suggest/">Suggest a name</a>
-        <a href="/league-importer/">Import your team</a>
-        <a href="/trade-calculator/">Trade calculator</a>
+        <a href="/league-importer/">Import your team <span class="sport-badge">NFL</span></a>
+        <a href="/trade-calculator/">Trade calculator <span class="sport-badge">NFL</span></a>
       </div>
       <div class="footer-col">
         <h4>Sports</h4>
