@@ -478,6 +478,16 @@
     0% { transform: scale(0); opacity: 1; }
     100% { transform: scale(1); opacity: 0; }
   }
+  .hoop-flash {
+    position: fixed; z-index: 298; pointer-events: none;
+    animation: hoop-flash-anim 1.1s ease-out forwards;
+  }
+  @keyframes hoop-flash-anim {
+    0% { transform: scale(0.4); opacity: 0; }
+    18% { transform: scale(1); opacity: 1; }
+    75% { transform: scale(1); opacity: 1; }
+    100% { transform: scale(1.1); opacity: 0; }
+  }
   .celebration-toast {
     position: fixed; top: max(20px, env(safe-area-inset-top, 0px)); left: 50%;
     transform: translateX(-50%) translateY(-16px);
@@ -1051,6 +1061,10 @@ function celebrateCopy(teamName){
     puck.remove();
   }, 1400);
 
+  // The hoop flashes in slightly before the confetti fires, so it's
+  // visible right as the ball "arrives" and the burst looks like a swish.
+  setTimeout(() => spawnHoop(window.innerWidth * 0.57, window.innerHeight * 0.58), 950);
+
   // A little burst of confetti right as the ball "arrives," near where
   // it grows largest before fading out.
   setTimeout(() => celebrateFireworksShow(), 1150);
@@ -1064,6 +1078,30 @@ function celebrateCopy(teamName){
     toast.classList.remove('show');
     setTimeout(() => toast.remove(), 350);
   }, 2200);
+}
+
+// A basketball hoop that flashes into view right where the ball "lands,"
+// timed to make it look like the ball is swishing through the net just as
+// the confetti explodes.
+function hoopSvg(){
+  return `<svg viewBox="0 0 140 110" width="140" height="110">
+    <rect x="30" y="4" width="80" height="46" rx="3" fill="#F4F2EC" stroke="#1a1a1a" stroke-width="2" opacity="0.92"/>
+    <rect x="52" y="16" width="36" height="22" fill="none" stroke="#E8402A" stroke-width="2.5"/>
+    <ellipse cx="70" cy="50" rx="34" ry="8" fill="none" stroke="#E8402A" stroke-width="5"/>
+    <path d="M 40 52 L 48 88 L 56 54 M 56 54 L 60 90 L 64 55 M 64 55 L 70 92 L 76 55 M 76 55 L 80 90 L 84 54 M 84 54 L 92 88 L 100 52"
+      stroke="#FFFFFF" stroke-width="1.5" fill="none" opacity="0.85"/>
+    <path d="M 40 52 Q 70 62 100 52" stroke="#FFFFFF" stroke-width="1.5" fill="none" opacity="0.6"/>
+  </svg>`;
+}
+
+function spawnHoop(x, y){
+  const hoop = document.createElement('div');
+  hoop.className = 'hoop-flash';
+  hoop.style.left = (x - 70) + 'px';
+  hoop.style.top = (y - 55) + 'px';
+  hoop.innerHTML = hoopSvg();
+  document.body.appendChild(hoop);
+  setTimeout(() => hoop.remove(), 1150);
 }
 
 function spawnLandingBurst(x, y){
