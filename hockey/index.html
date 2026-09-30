@@ -1550,6 +1550,22 @@ function renderResults(){
 function surpriseResults(){
   const pool = [];
 
+  // For a selected generic category (Movie Names, Star Wars Names, etc.),
+  // some of the names pulled in are actually tagged to one specific player
+  // (see categoryPool/TAGGED_NAME_SOURCE) rather than being purely generic.
+  // Crediting that player instead of just the category name means the user
+  // isn't left wondering why "Auston Powers" showed up with no context, and
+  // the result is labeled as a player pun rather than a generic wildcard.
+  function attributionFor(e, n){
+    const isGenericCategory = e.kind && e.kind.startsWith('generic');
+    if(isGenericCategory){
+      const sources = TAGGED_NAME_SOURCE[n];
+      if(sources && sources.length === 1) return { type: 'solo', meta: sources[0] };
+      return { type: 'wild', meta: fullName(e) };
+    }
+    return { type: 'solo', meta: fullName(e) };
+  }
+
   if(selected.length === 0){
     GENERIC_WILDCARDS.forEach(n => pool.push({ name: n, type: 'wild', meta: 'Crowd favorite' }));
   } else {
@@ -1557,7 +1573,7 @@ function surpriseResults(){
       if(e.kind === 'team' && e.names && e.names.length > 0){
         e.names.forEach(n => pool.push({ name: n, type: 'team', meta: `${e.city} ${e.nickname} pride` }));
       } else if(e.names && e.names.length > 0){
-        e.names.forEach(n => pool.push({ name: n, type: 'solo', meta: fullName(e) }));
+        e.names.forEach(n => pool.push({ name: n, ...attributionFor(e, n) }));
       }
     });
   }
