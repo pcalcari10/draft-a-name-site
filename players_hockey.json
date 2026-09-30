@@ -1109,10 +1109,16 @@
       "The Barkov Battalion",
       "The Barkov Bites Back",
       "The Barkov Code",
-      "All Barkov, No Bite"
+      "All Barkov, No Bite",
+      "The Great British Barkov"
     ],
     "active": true,
-    "tier": "curated"
+    "tier": "curated",
+    "taggedNames": {
+      "tv": [
+        "The Great British Barkov"
+      ]
+    }
   },
   {
     "id": "sambennett_fla",
@@ -1619,10 +1625,16 @@
     "names": [
       "The Caufield Paradox",
       "Caufield Advantage",
-      "Cole-den Caufield"
+      "Cole-den Caufield",
+      "Cole Slawfield"
     ],
     "active": true,
-    "tier": "curated"
+    "tier": "curated",
+    "taggedNames": {
+      "food": [
+        "Cole Slawfield"
+      ]
+    }
   },
   {
     "id": "kirbydach_mtl",
@@ -1990,10 +2002,11 @@
       "In Chabot We Trust",
       "Thomas Chabot and the Fantasy Machine",
       "Straight Outta Chabot",
-      "Thomas Vibes Only"
+      "Thomas Vibes Only",
+      "ChabotGPT"
     ],
     "active": true,
-    "tier": "template"
+    "tier": "curated"
   },
   {
     "id": "nickcousins_ott",
@@ -3125,10 +3138,16 @@
       "In Woll We Trust",
       "Joseph Woll and the Fantasy Machine",
       "Straight Outta Woll",
-      "Joseph Vibes Only"
+      "Joseph Vibes Only",
+      "Wonder Woll"
     ],
     "active": true,
-    "tier": "template"
+    "tier": "curated",
+    "taggedNames": {
+      "movie": [
+        "Wonder Woll"
+      ]
+    }
   },
   {
     "id": "sebastianaho_car",
@@ -3478,10 +3497,16 @@
     "team": "CAR",
     "pos": "C",
     "names": [
-      "Staaled Out"
+      "Staaled Out",
+      "Staal In The Family"
     ],
     "active": true,
-    "tier": "curated"
+    "tier": "curated",
+    "taggedNames": {
+      "tv": [
+        "Staal In The Family"
+      ]
+    }
   },
   {
     "id": "loganstankoven_car",
@@ -4123,7 +4148,8 @@
       "The Jack Hughes Your Daddy?",
       "Hughes Your Daddy",
       "A Jack Hughes Brothers Film",
-      "Auston JackHughes"
+      "Auston JackHughes",
+      "Hughes it Or Lose It"
     ],
     "active": true,
     "tier": "curated"
@@ -4213,10 +4239,16 @@
     "pos": "RW",
     "names": [
       "Oscar Meier Wiener",
-      "Meier Of Kingstown"
+      "Meier Of Kingstown",
+      "Finding Timo"
     ],
     "active": true,
-    "tier": "curated"
+    "tier": "curated",
+    "taggedNames": {
+      "movie": [
+        "Finding Timo"
+      ]
+    }
   },
   {
     "id": "dawsonmercer_njd",
@@ -8183,10 +8215,11 @@
       "In Daccord We Trust",
       "Joey Daccord and the Fantasy Machine",
       "Straight Outta Daccord",
-      "Joey Vibes Only"
+      "Joey Vibes Only",
+      "Paris Daccord"
     ],
     "active": true,
-    "tier": "template"
+    "tier": "curated"
   },
   {
     "id": "vincedunn_sea",
@@ -8385,10 +8418,16 @@
       "In McCann We Trust",
       "Jared McCann and the Fantasy Machine",
       "Straight Outta McCann",
-      "Jared Vibes Only"
+      "Jared Vibes Only",
+      "McCann of Corn"
     ],
     "active": true,
-    "tier": "template"
+    "tier": "curated",
+    "taggedNames": {
+      "food": [
+        "McCann of Corn"
+      ]
+    }
   },
   {
     "id": "benmeyers_sea",
@@ -9740,10 +9779,16 @@
     "team": "CHI",
     "pos": "D",
     "names": [
-      "Vlasic Pickle"
+      "Vlasic Pickle",
+      "Vlasic Pickles"
     ],
     "active": true,
-    "tier": "curated"
+    "tier": "curated",
+    "taggedNames": {
+      "food": [
+        "Vlasic Pickles"
+      ]
+    }
   },
   {
     "id": "zakharbardakov_col",
@@ -10162,10 +10207,16 @@
       "In Benn We Trust",
       "Jamie Benn and the Fantasy Machine",
       "Straight Outta Benn",
-      "Jamie Vibes Only"
+      "Jamie Vibes Only",
+      "Since You Benn Gone"
     ],
     "active": true,
-    "tier": "template"
+    "tier": "curated",
+    "taggedNames": {
+      "music": [
+        "Since You Benn Gone"
+      ]
+    }
   },
   {
     "id": "lianbichsel_dal",
@@ -11392,10 +11443,16 @@
     "team": "NYI",
     "pos": "D",
     "names": [
-      "Matthew Kessel Run"
+      "Matthew Kessel Run",
+      "The Kessel Run"
     ],
     "active": true,
-    "tier": "curated"
+    "tier": "curated",
+    "taggedNames": {
+      "starwars": [
+        "The Kessel Run"
+      ]
+    }
   },
   {
     "id": "jordankyrou_stl",
@@ -11689,10 +11746,16 @@
     "pos": "RW",
     "names": [
       "Natural Born Keller",
-      "Noxi Clayton Kell-er"
+      "Noxi Clayton Kell-er",
+      "Natural Born Kellers"
     ],
     "active": true,
-    "tier": "curated"
+    "tier": "curated",
+    "taggedNames": {
+      "movie": [
+        "Natural Born Kellers"
+      ]
+    }
   },
   {
     "id": "alexanderkerfoot_uta",
@@ -13099,10 +13162,11 @@
       "In Formenton We Trust",
       "Formenton's Fantasy Fortress",
       "Straight Outta Formenton",
-      "Alex Formenton and the Fantasy Machine"
+      "Alex Formenton and the Fantasy Machine",
+      "Formenton's Construction Company"
     ],
     "active": true,
-    "tier": "template"
+    "tier": "curated"
   },
   {
     "id": "isaachoward_edm",
