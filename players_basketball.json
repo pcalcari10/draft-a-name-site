@@ -137,7 +137,8 @@
       "The Curry Show",
       "Steph Infection",
       "Shang-Chi and the Legend of the Ten Currys",
-      "Curry's Comrades"
+      "Curry's Comrades",
+      "Seth Chicken Curry"
     ],
     "active": true,
     "tier": "curated",
@@ -1105,10 +1106,11 @@
       "Livin' on a Connaughton",
       "Connaughton of Fame",
       "Pat's Excellent Adventure",
-      "Connaughton-A-Palooza"
+      "Connaughton-A-Palooza",
+      "Pro And Connaughton"
     ],
     "active": true,
-    "tier": "template"
+    "tier": "curated"
   },
   {
     "id": "nikolajoki_den",
@@ -1994,10 +1996,16 @@
       "Livin' on a Bridges",
       "All Bridges, No Filler",
       "In Bridges We Trust",
-      "Miles Vibes Only"
+      "Miles Vibes Only",
+      "Miles Bridges Of Madison County"
     ],
     "active": true,
-    "tier": "template"
+    "tier": "curated",
+    "taggedNames": {
+      "movie": [
+        "Miles Bridges Of Madison County"
+      ]
+    }
   },
   {
     "id": "joshokogie_uta",
@@ -3421,7 +3429,9 @@
       "LaMelo Vibes Only",
       "Straight Outta Ball",
       "LaMelo & Chill",
-      "LaMelo Out Loud"
+      "LaMelo Out Loud",
+      "There's Always Room For LaMelo",
+      "Why Have A Ballroom With No LaMelo Ball"
     ],
     "active": true,
     "tier": "curated"
@@ -5432,10 +5442,16 @@
       "The Miller Show",
       "Miller Happens",
       "Miller-tastic Voyage",
-      "Brandon & Chill"
+      "Brandon & Chill",
+      "Brandon Miller's Crossing"
     ],
     "active": true,
-    "tier": "template"
+    "tier": "curated",
+    "taggedNames": {
+      "movie": [
+        "Brandon Miller's Crossing"
+      ]
+    }
   },
   {
     "id": "noahclowney_bkn",
@@ -7638,7 +7654,9 @@
       "Knueppel Happens",
       "Kon Knueppel and the Fantasy Machine",
       "Kon Vibes Only",
-      "Wrath of Kon"
+      "Wrath of Kon",
+      "Pro And Kon",
+      "Can You See My Knueppels"
     ],
     "active": true,
     "tier": "curated"
@@ -10686,7 +10704,8 @@
     "team": "BKN",
     "pos": "PG",
     "names": [
-      "Dinwiddie's Clan"
+      "Dinwiddie's Clan",
+      "Dinwiddie Retory"
     ],
     "active": true,
     "tier": "curated"
