@@ -240,6 +240,10 @@
 
   <div class="filter-row">
     <input id="search" type="text" placeholder="Filter by team or player name…">
+    <select id="groupBy">
+      <option value="team" selected>Group by team</option>
+      <option value="category">Group by category</option>
+    </select>
     <select id="sortBy">
       <option value="most">Most remaining first</option>
       <option value="fewest">Fewest remaining first</option>
@@ -281,6 +285,10 @@
 
   <div class="filter-row">
     <input id="searchCurated" type="text" placeholder="Filter by team or player name…">
+    <select id="groupByCurated">
+      <option value="team" selected>Group by team</option>
+      <option value="category">Group by category</option>
+    </select>
     <select id="sortByCurated">
       <option value="most">Most curated first</option>
       <option value="fewest">Fewest curated first</option>
@@ -952,7 +960,130 @@ function updateProgressStats(){
   }
 }
 
-function renderTierList(tier, searchElId, sortElId, containerElId){
+const CATEGORY_LABELS = {
+  general: { label: 'Generic Names', icon: '🗂' },
+  movie: { label: 'Movie Names', icon: '🎬' },
+  music: { label: 'Music Names', icon: '🎵' },
+  tv: { label: 'TV Show Names', icon: '📺' },
+  starwars: { label: 'Star Wars Names', icon: '⭐' },
+  food: { label: 'Food Names', icon: '🍟' },
+  marvel: { label: 'Marvel Names', icon: '🦸' },
+  legacy: { label: 'Legacy Names', icon: '🏆' },
+  coach: { label: 'Coach Names', icon: '📋' },
+};
+
+function renderCategoryGroupedList(tier, searchElId, containerElId){
+  const query = document.getElementById(searchElId).value.trim().toLowerCase();
+  const sportData = SPORT_DATA[currentAdminSport] || {};
+  const categories = Object.keys(sportData.genericByCategory || {});
+  const container = document.getElementById(containerElId);
+
+  if(categories.length === 0){
+    container.innerHTML = `<div class="empty">This sport doesn't have category-tagged names yet.</div>`;
+    return;
+  }
+
+  // Build entries per category: generic-pool items (not tied to a specific
+  // player/team), plus anything a player or team has tagged into that
+  // category. Players are filtered by tier; generic-pool and team entries
+  // only make sense under "curated" (there's no template-tier concept for
+  // them), so they're left out of the template/placeholder view entirely.
+  const byCategory = {};
+  categories.forEach(cat => { byCategory[cat] = []; });
+
+  if(tier === 'curated'){
+    categories.forEach(cat => {
+      (sportData.genericByCategory[cat] || []).forEach(name => {
+        byCategory[cat].push({ name, source: 'Generic', sourceType: 'generic' });
+      });
+    });
+    (sportData.teams || []).forEach(t => {
+      Object.entries(t.taggedNames || {}).forEach(([cat, names]) => {
+        if(!byCategory[cat]) byCategory[cat] = [];
+        names.forEach(name => byCategory[cat].push({ name, source: teamFullName(t.abbr), sourceType: 'team' }));
+      });
+    });
+  }
+
+  const relevantPlayers = (sportData.players || []).filter(p =>
+    p.active !== false && p.first && p.last && (tier === 'curated' ? p.tier === 'curated' : p.tier !== 'curated')
+  );
+  relevantPlayers.forEach(p => {
+    Object.entries(p.taggedNames || {}).forEach(([cat, names]) => {
+      if(!byCategory[cat]) byCategory[cat] = [];
+      names.forEach(name => byCategory[cat].push({ name, source: `${p.first} ${p.last}`, sourceType: 'player', team: p.team, pos: p.pos }));
+    });
+  });
+
+  let displayCats = Object.keys(byCategory).filter(cat => byCategory[cat].length > 0);
+
+  if(query){
+    displayCats = displayCats.filter(cat => {
+      const catMatch = cat.toLowerCase().includes(query);
+      if(catMatch) return true;
+      return byCategory[cat].some(e => e.name.toLowerCase().includes(query) || e.source.toLowerCase().includes(query));
+    });
+  }
+
+  displayCats.sort((a, b) => (CATEGORY_LABELS[a]?.label || a).localeCompare(CATEGORY_LABELS[b]?.label || b));
+
+  if(displayCats.length === 0){
+    container.innerHTML = `<div class="empty">${query ? 'No matches for that filter.' : 'No category-tagged names yet.'}</div>`;
+    return;
+  }
+
+  container.innerHTML = displayCats.map(cat => {
+    let entries = byCategory[cat].slice();
+    if(query){
+      const catMatch = cat.toLowerCase().includes(query);
+      if(!catMatch){
+        entries = entries.filter(e => e.name.toLowerCase().includes(query) || e.source.toLowerCase().includes(query));
+      }
+    }
+    entries.sort((a, b) => a.source.localeCompare(b.source) || a.name.localeCompare(b.name));
+    const label = (CATEGORY_LABELS[cat] && CATEGORY_LABELS[cat].label) || cat;
+    const icon = (CATEGORY_LABELS[cat] && CATEGORY_LABELS[cat].icon) || '🏷';
+
+    const rowsHtml = entries.map((e, i) => `
+      <li>
+        <span>"${e.name}" <span class="player-pos" style="margin-left:4px;">${e.sourceType === 'generic' ? 'Generic' : e.source}${e.team ? ` \u00b7 ${e.team}` : ''}</span></span>
+        <button class="copy-pun" data-name="${escapeHtml(e.name)}" data-uid="${containerElId}-${cat}-${i}">⧉ copy</button>
+      </li>`).join('');
+
+    return `
+    <div class="team-block" data-category="${cat}">
+      <div class="team-header">
+        <span class="team-name">${icon} ${label}</span>
+        <span class="team-count">${entries.length} name${entries.length !== 1 ? 's' : ''} <span class="chevron">▸</span></span>
+      </div>
+      <div class="team-players">
+        <ul class="player-names-list">${rowsHtml}</ul>
+      </div>
+    </div>`;
+  }).join('');
+
+  container.querySelectorAll('.team-header').forEach(h => {
+    h.addEventListener('click', () => h.closest('.team-block').classList.toggle('open'));
+  });
+  container.querySelectorAll('.copy-pun').forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
+      navigator.clipboard?.writeText(btn.dataset.name).catch(() => {});
+      const original = btn.textContent;
+      btn.textContent = '✓ copied';
+      btn.classList.add('copied');
+      setTimeout(() => { btn.textContent = original; btn.classList.remove('copied'); }, 1200);
+    });
+  });
+}
+
+function renderTierList(tier, searchElId, sortElId, containerElId, groupByElId){
+  const groupBy = document.getElementById(groupByElId).value;
+  if(groupBy === 'category'){
+    renderCategoryGroupedList(tier, searchElId, containerElId);
+    return;
+  }
+
   const query = document.getElementById(searchElId).value.trim().toLowerCase();
   const sortBy = document.getElementById(sortElId).value;
 
@@ -1051,13 +1182,15 @@ function renderTierList(tier, searchElId, sortElId, containerElId){
   });
 }
 
-function renderPlaceholders(){ renderTierList('template', 'search', 'sortBy', 'teamsContainer'); }
-function renderCurated(){ renderTierList('curated', 'searchCurated', 'sortByCurated', 'teamsContainerCurated'); }
+function renderPlaceholders(){ renderTierList('template', 'search', 'sortBy', 'teamsContainer', 'groupBy'); }
+function renderCurated(){ renderTierList('curated', 'searchCurated', 'sortByCurated', 'teamsContainerCurated', 'groupByCurated'); }
 
 document.getElementById('search').addEventListener('input', renderPlaceholders);
 document.getElementById('sortBy').addEventListener('change', renderPlaceholders);
+document.getElementById('groupBy').addEventListener('change', renderPlaceholders);
 document.getElementById('searchCurated').addEventListener('input', renderCurated);
 document.getElementById('sortByCurated').addEventListener('change', renderCurated);
+document.getElementById('groupByCurated').addEventListener('change', renderCurated);
 
 // ---------- Add a Name ----------
 let addNameSelectedPlayer = null;
