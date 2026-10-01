@@ -9996,6 +9996,9 @@
     "taggedNames": {
       "starwars": [
         "Kobe Wan Kenobi"
+      ],
+      "legacy": [
+        "Kobe Wan Kenobi"
       ]
     }
   },
@@ -10010,7 +10013,13 @@
       "Yao Ming Dynasty"
     ],
     "active": true,
-    "tier": "curated"
+    "tier": "curated",
+    "taggedNames": {
+      "legacy": [
+        "Yao Know What I Ming",
+        "Yao Ming Dynasty"
+      ]
+    }
   },
   {
     "id": "johnwall_was",
@@ -10022,7 +10031,12 @@
       "Wall Don't Lie"
     ],
     "active": true,
-    "tier": "curated"
+    "tier": "curated",
+    "taggedNames": {
+      "legacy": [
+        "Wall Don't Lie"
+      ]
+    }
   },
   {
     "id": "rajonrondo_bos",
@@ -10035,7 +10049,13 @@
       "Rondo's Court"
     ],
     "active": true,
-    "tier": "curated"
+    "tier": "curated",
+    "taggedNames": {
+      "legacy": [
+        "Grand Theft Rondo",
+        "Rondo's Court"
+      ]
+    }
   },
   {
     "id": "sergeibaka_tor",
@@ -10050,6 +10070,9 @@
     "tier": "curated",
     "taggedNames": {
       "music": [
+        "Ibaka Flocka Flame"
+      ],
+      "legacy": [
         "Ibaka Flocka Flame"
       ]
     }
@@ -10068,6 +10091,9 @@
     "taggedNames": {
       "music": [
         "Everyday I'm Russelin"
+      ],
+      "legacy": [
+        "Everyday I'm Russelin"
       ]
     }
   },
@@ -10081,7 +10107,12 @@
       "The Old Artestament"
     ],
     "active": true,
-    "tier": "curated"
+    "tier": "curated",
+    "taggedNames": {
+      "legacy": [
+        "The Old Artestament"
+      ]
+    }
   },
   {
     "id": "tackofall_bos",
@@ -10097,6 +10128,10 @@
     "tier": "curated",
     "taggedNames": {
       "food": [
+        "Tacko Bell",
+        "Tacko Tuesday"
+      ],
+      "legacy": [
         "Tacko Bell",
         "Tacko Tuesday"
       ]
@@ -10119,6 +10154,12 @@
     "taggedNames": {
       "movie": [
         "How To Train Your Dragic"
+      ],
+      "legacy": [
+        "Dragic The Gathering",
+        "How To Train Your Dragic",
+        "Believe in Dragic",
+        "Dragic's Dragons"
       ]
     }
   },
@@ -10135,6 +10176,9 @@
     "tier": "curated",
     "taggedNames": {
       "music": [
+        "Jonas Valanciunas Brothers"
+      ],
+      "legacy": [
         "Jonas Valanciunas Brothers"
       ]
     }
@@ -10155,6 +10199,11 @@
     "taggedNames": {
       "movie": [
         "Joe Ingles Wilder"
+      ],
+      "legacy": [
+        "Joe Hablo Ingl\u00e9s",
+        "Ingles All The Way",
+        "Joe Ingles Wilder"
       ]
     }
   },
@@ -10168,7 +10217,12 @@
       "Dinero Gallinari"
     ],
     "active": true,
-    "tier": "curated"
+    "tier": "curated",
+    "taggedNames": {
+      "legacy": [
+        "Dinero Gallinari"
+      ]
+    }
   },
   {
     "id": "christianwood_hou",
@@ -10180,7 +10234,12 @@
       "Christian's Wood"
     ],
     "active": true,
-    "tier": "curated"
+    "tier": "curated",
+    "taggedNames": {
+      "legacy": [
+        "Christian's Wood"
+      ]
+    }
   },
   {
     "id": "hassanwhiteside_mia",
@@ -10196,6 +10255,10 @@
     "tier": "curated",
     "taggedNames": {
       "music": [
+        "Pretty Fly For A Whiteside"
+      ],
+      "legacy": [
+        "Mr. Whiteside",
         "Pretty Fly For A Whiteside"
       ]
     }
@@ -10216,6 +10279,11 @@
     "taggedNames": {
       "movie": [
         "A Teague Of Their Own"
+      ],
+      "legacy": [
+        "A Teague Of Their Own",
+        "Out Of My Teague",
+        "Teague's League"
       ]
     }
   },
@@ -10229,7 +10297,12 @@
       "Dunk Like Duncan"
     ],
     "active": true,
-    "tier": "curated"
+    "tier": "curated",
+    "taggedNames": {
+      "legacy": [
+        "Dunk Like Duncan"
+      ]
+    }
   },
   {
     "id": "bismackbiyombo_cha",
@@ -10243,7 +10316,14 @@
       "Bismack North Dakota"
     ],
     "active": true,
-    "tier": "curated"
+    "tier": "curated",
+    "taggedNames": {
+      "legacy": [
+        "Bed Bath and Biyombo",
+        "Biyombo the Arc",
+        "Bismack North Dakota"
+      ]
+    }
   },
   {
     "id": "nikolavucevic_chi",
@@ -10255,7 +10335,12 @@
       "Vucevictory"
     ],
     "active": true,
-    "tier": "curated"
+    "tier": "curated",
+    "taggedNames": {
+      "legacy": [
+        "Vucevictory"
+      ]
+    }
   },
   {
     "id": "rickyrubio_min",
@@ -10267,7 +10352,12 @@
       "Rubio's Ring"
     ],
     "active": true,
-    "tier": "curated"
+    "tier": "curated",
+    "taggedNames": {
+      "legacy": [
+        "Rubio's Ring"
+      ]
+    }
   },
   {
     "id": "alfarouqaminu_por",
@@ -10280,7 +10370,13 @@
       "Al-Farouq Style"
     ],
     "active": true,
-    "tier": "curated"
+    "tier": "curated",
+    "taggedNames": {
+      "legacy": [
+        "Aminu's Alley Oops",
+        "Al-Farouq Style"
+      ]
+    }
   },
   {
     "id": "spencerdinwiddie_bkn",
@@ -10310,6 +10406,10 @@
     "taggedNames": {
       "movie": [
         "Dedmon Walking"
+      ],
+      "legacy": [
+        "Dedmon Walking",
+        "Dedmon's Distinctive"
       ]
     }
   },
@@ -10326,7 +10426,15 @@
       "Bol-ing for Hoop"
     ],
     "active": true,
-    "tier": "curated"
+    "tier": "curated",
+    "taggedNames": {
+      "legacy": [
+        "Bol Movement",
+        "Smokin' A Bol",
+        "Give Me the Bol",
+        "Bol-ing for Hoop"
+      ]
+    }
   },
   {
     "id": "blakegriffin_lac",
@@ -10342,6 +10450,9 @@
     "taggedNames": {
       "music": [
         "Don't Go Blakin' My Heart"
+      ],
+      "legacy": [
+        "Don't Go Blakin' My Heart"
       ]
     }
   },
@@ -10355,7 +10466,12 @@
       "Markelle My Words"
     ],
     "active": true,
-    "tier": "curated"
+    "tier": "curated",
+    "taggedNames": {
+      "legacy": [
+        "Markelle My Words"
+      ]
+    }
   },
   {
     "id": "dikembemutombo_atl",
@@ -10367,7 +10483,12 @@
       "Who Wants To Sex Mutombo?"
     ],
     "active": true,
-    "tier": "curated"
+    "tier": "curated",
+    "taggedNames": {
+      "legacy": [
+        "Who Wants To Sex Mutombo?"
+      ]
+    }
   },
   {
     "id": "patrickbeverley_lac",
@@ -10383,6 +10504,9 @@
     "taggedNames": {
       "tv": [
         "Patrick Beverley Hillbillies"
+      ],
+      "legacy": [
+        "Patrick Beverley Hillbillies"
       ]
     }
   },
@@ -10396,7 +10520,12 @@
       "Roe v. Dwyane Wade"
     ],
     "active": true,
-    "tier": "curated"
+    "tier": "curated",
+    "taggedNames": {
+      "legacy": [
+        "Roe v. Dwyane Wade"
+      ]
+    }
   },
   {
     "id": "manuginobili_sas",
@@ -10412,6 +10541,10 @@
     "tier": "curated",
     "taggedNames": {
       "starwars": [
+        "Obi-Wan Ginobili"
+      ],
+      "legacy": [
+        "He\u2019s The Manu",
         "Obi-Wan Ginobili"
       ]
     }
@@ -10430,6 +10563,9 @@
     "taggedNames": {
       "movie": [
         "Steve Nash Bridges"
+      ],
+      "legacy": [
+        "Steve Nash Bridges"
       ]
     }
   },
@@ -10443,7 +10579,12 @@
       "Ulysses S Grant Hill"
     ],
     "active": true,
-    "tier": "curated"
+    "tier": "curated",
+    "taggedNames": {
+      "legacy": [
+        "Ulysses S Grant Hill"
+      ]
+    }
   },
   {
     "id": "alonzomourning_mia",
@@ -10455,7 +10596,12 @@
       "Alonzo Mourning Glory"
     ],
     "active": true,
-    "tier": "curated"
+    "tier": "curated",
+    "taggedNames": {
+      "legacy": [
+        "Alonzo Mourning Glory"
+      ]
+    }
   },
   {
     "id": "charlesbarkley_phi",
@@ -10467,7 +10613,12 @@
       "His Bite Is Worse Than His Barkley"
     ],
     "active": true,
-    "tier": "curated"
+    "tier": "curated",
+    "taggedNames": {
+      "legacy": [
+        "His Bite Is Worse Than His Barkley"
+      ]
+    }
   },
   {
     "id": "jamesworthy_lal",
@@ -10479,7 +10630,12 @@
       "We\u2019re Not James Worthy"
     ],
     "active": true,
-    "tier": "curated"
+    "tier": "curated",
+    "taggedNames": {
+      "legacy": [
+        "We\u2019re Not James Worthy"
+      ]
+    }
   },
   {
     "id": "eneskanter_bos",
@@ -10491,7 +10647,12 @@
       "Enes Envy"
     ],
     "active": true,
-    "tier": "curated"
+    "tier": "curated",
+    "taggedNames": {
+      "legacy": [
+        "Enes Envy"
+      ]
+    }
   },
   {
     "id": "paugasol_lal",
@@ -10508,6 +10669,10 @@
     "taggedNames": {
       "tv": [
         "Better Call Gasol"
+      ],
+      "legacy": [
+        "Better Call Gasol",
+        "LaMarcGasolridge"
       ]
     }
   },
@@ -10615,6 +10780,9 @@
     "taggedNames": {
       "tv": [
         "MTV's Dario"
+      ],
+      "legacy": [
+        "MTV's Dario"
       ]
     }
   },
@@ -10631,6 +10799,9 @@
     "tier": "curated",
     "taggedNames": {
       "movie": [
+        "Doug McDermott Mulroney"
+      ],
+      "legacy": [
         "Doug McDermott Mulroney"
       ]
     }
