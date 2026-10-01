@@ -611,7 +611,8 @@
     "names": [
       "Wiggins of Oz",
       "Gettin' Wiggy Wit It",
-      "Wiggins Out"
+      "Wiggins Out",
+      "Flip Your Wiggins"
     ],
     "active": true,
     "tier": "curated",
@@ -934,10 +935,16 @@
       "Straight Outta Powell",
       "Norman Vibes Only",
       "Powell of Fame",
-      "The Powell Show"
+      "The Powell Show",
+      "Norman Bates Powell"
     ],
     "active": true,
-    "tier": "template"
+    "tier": "curated",
+    "taggedNames": {
+      "movie": [
+        "Norman Bates Powell"
+      ]
+    }
   },
   {
     "id": "treylyles_min",
@@ -1567,10 +1574,16 @@
     "pos": "C",
     "names": [
       "Bam's Battalion",
-      "Fun Adebayo"
+      "Fun Adebayo",
+      "Pebbles And Bam-Bam Adebayo"
     ],
     "active": true,
-    "tier": "curated"
+    "tier": "curated",
+    "taggedNames": {
+      "tv": [
+        "Pebbles And Bam-Bam Adebayo"
+      ]
+    }
   },
   {
     "id": "dennissmith_mia",
@@ -2645,7 +2658,9 @@
       "There Goes Ty Herro",
       "Zeroes to Herros",
       "Herro's Heroes",
-      "Herro's Advantage"
+      "Herro's Advantage",
+      "Herro's Journey",
+      "There Goes My Herro"
     ],
     "active": true,
     "tier": "curated"
@@ -6595,10 +6610,11 @@
       "Larsson of Fame",
       "Pelle Vibes Only",
       "Larsson'd Up and Ready",
-      "Larsson's Fantasy Fortress"
+      "Larsson's Fantasy Fortress",
+      "Pelle Larsson Grant"
     ],
     "active": true,
-    "tier": "template"
+    "tier": "curated"
   },
   {
     "id": "osoighodaro_phx",
