@@ -265,10 +265,16 @@
       "Harden the Paint",
       "Harden's House",
       "Harden Of Eden",
-      "Harden Your Arteries"
+      "Harden Your Arteries",
+      "Harden the Interruption"
     ],
     "active": true,
-    "tier": "curated"
+    "tier": "curated",
+    "taggedNames": {
+      "tv": [
+        "Harden the Interruption"
+      ]
+    }
   },
   {
     "id": "dennisschrder_cha",
@@ -311,13 +317,15 @@
       "Jrue Religion",
       "Jrue or False",
       "This Much Is Jrue",
-      "Jrue Holiday Inn"
+      "Jrue Holiday Inn",
+      "Jrue Let the Dogs Out"
     ],
     "active": true,
     "tier": "curated",
     "taggedNames": {
       "music": [
-        "Girl You Know It's Jrue"
+        "Girl You Know It's Jrue",
+        "Jrue Let the Dogs Out"
       ]
     }
   },
@@ -348,7 +356,10 @@
       "Kawhi Leonard Planting Trees",
       "Who, What, When, Where, Kawhi",
       "Kawhi So Serious",
-      "Kawhi Gon Jinn"
+      "Kawhi Gon Jinn",
+      "Kawhian Punch",
+      "Kawhi So Serious?",
+      "Kawhiet Riot"
     ],
     "active": true,
     "tier": "curated",
@@ -357,7 +368,8 @@
         "Kawhaii Five-O"
       ],
       "movie": [
-        "Kawhi So Serious"
+        "Kawhi So Serious",
+        "Kawhi So Serious?"
       ],
       "starwars": [
         "Kawhi Gon Jinn"
@@ -1018,10 +1030,18 @@
     "names": [
       "Jokic Dokic",
       "My Team is a Jokic",
-      "Jokic's On You"
+      "Jokic's On You",
+      "Full Metal Jokic",
+      "Jokic of the Year",
+      "Jokic of All Trades"
     ],
     "active": true,
-    "tier": "curated"
+    "tier": "curated",
+    "taggedNames": {
+      "movie": [
+        "Full Metal Jokic"
+      ]
+    }
   },
   {
     "id": "mariohezonja_cle",
@@ -2794,7 +2814,8 @@
     "pos": "PF",
     "names": [
       "Toppin Off",
-      "Obi-Wan Toppin"
+      "Obi-Wan Toppin",
+      "Obi tappin"
     ],
     "active": true,
     "tier": "curated",
@@ -3134,7 +3155,8 @@
     "pos": "PG",
     "names": [
       "Haliburton Prescription",
-      "HaliLevarBurton"
+      "HaliLevarBurton",
+      "Haliburton Co."
     ],
     "active": true,
     "tier": "curated",
@@ -5230,7 +5252,8 @@
       "The Wemby Blockade",
       "Wembanama Slamma",
       "Sir, This Is A Wemby's",
-      "Diary Of A Wemby Kid"
+      "Diary Of A Wemby Kid",
+      "Winbanyama"
     ],
     "active": true,
     "tier": "curated",
@@ -10935,6 +10958,23 @@
     "taggedNames": {
       "coach": [
         "Jason Kidd Mero"
+      ]
+    }
+  },
+  {
+    "id": "joakimnoah_chi",
+    "first": "Joakim",
+    "last": "Noah",
+    "team": "CHI",
+    "pos": "C",
+    "names": [
+      "I'm just Joakim with ya"
+    ],
+    "active": true,
+    "tier": "curated",
+    "taggedNames": {
+      "legacy": [
+        "I'm just Joakim with ya"
       ]
     }
   }
