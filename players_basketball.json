@@ -1446,10 +1446,11 @@
       "Caruso Happens",
       "Livin' on a Caruso",
       "All Caruso, No Filler",
-      "Caruso-A-Palooza"
+      "Caruso-A-Palooza",
+      "Alex David Caruso"
     ],
     "active": true,
-    "tier": "template"
+    "tier": "curated"
   },
   {
     "id": "joshhart_nyk",
@@ -1893,10 +1894,16 @@
       "Hartenstein-A-Palooza",
       "Straight Outta Hartenstein",
       "Hartenstein's Fantasy Fortress",
-      "All Hartenstein, No Filler"
+      "All Hartenstein, No Filler",
+      "Hartenstein's Monster"
     ],
     "active": true,
-    "tier": "template"
+    "tier": "curated",
+    "taggedNames": {
+      "movie": [
+        "Hartenstein's Monster"
+      ]
+    }
   },
   {
     "id": "kevinhuerter_det",
@@ -2001,7 +2008,8 @@
     "team": "OKC",
     "pos": "PG",
     "names": [
-      "Shai It Ain't So"
+      "Shai It Ain't So",
+      "Shai Stadium"
     ],
     "active": true,
     "tier": "curated"
@@ -2730,10 +2738,11 @@
       "Dort Happens",
       "All Dort, No Filler",
       "Dort's Fantasy Fortress",
-      "Dort-A-Palooza"
+      "Dort-A-Palooza",
+      "Surf Dort"
     ],
     "active": true,
-    "tier": "template"
+    "tier": "curated"
   },
   {
     "id": "patrickwilliams_chi",
@@ -4374,13 +4383,17 @@
       "Holmgren's Homeboys",
       "Chetflix Originals",
       "Crossover Chet",
-      "Holmgren's Hoop House"
+      "Holmgren's Hoop House",
+      "\u201cYes, Chet!\u201d",
+      "Sherlock Holmgren"
     ],
     "active": true,
     "tier": "curated",
     "taggedNames": {
       "tv": [
-        "Chetflix Originals"
+        "Chetflix Originals",
+        "\u201cYes, Chet!\u201d",
+        "Sherlock Holmgren"
       ]
     }
   },
@@ -5297,10 +5310,11 @@
       "Wallace-A-Palooza",
       "The Wallace Show",
       "Cason & Chill",
-      "Cason's Excellent Adventure"
+      "Cason's Excellent Adventure",
+      "Just In Cason"
     ],
     "active": true,
-    "tier": "template"
+    "tier": "curated"
   },
   {
     "id": "krismurray_mem",
@@ -7536,10 +7550,11 @@
       "Sorber Happens",
       "In Sorber We Trust",
       "Thomas's Excellent Adventure",
-      "Livin' on a Sorber"
+      "Livin' on a Sorber",
+      "Raspberry Sorber"
     ],
     "active": true,
-    "tier": "template"
+    "tier": "curated"
   },
   {
     "id": "yanghansen_por",
@@ -7951,10 +7966,11 @@
       "In Barnhizer We Trust",
       "Barnhizer's Fantasy Fortress",
       "Barnhizer'd Up and Ready",
-      "Barnhizer-tastic Voyage"
+      "Barnhizer-tastic Voyage",
+      "Brooks Brothers Barnhizer"
     ],
     "active": true,
-    "tier": "template"
+    "tier": "curated"
   },
   {
     "id": "maximeraynaud_sac",
