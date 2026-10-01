@@ -2485,7 +2485,8 @@
       "Ja And Order",
       "Ja Patrol",
       "Ja Wick",
-      "Mr. Morantastic"
+      "Mr. Morantastic",
+      "Ja Rules"
     ],
     "active": true,
     "tier": "curated",
@@ -2496,6 +2497,9 @@
       "movie": [
         "Ja Wick",
         "Mr. Morantastic"
+      ],
+      "music": [
+        "Ja Rules"
       ]
     }
   },
@@ -3725,10 +3729,16 @@
       "In Landale We Trust",
       "Jock Vibes Only",
       "Jock Landale and the Fantasy Machine",
-      "All Landale, No Filler"
+      "All Landale, No Filler",
+      "Jock Jams Landale"
     ],
     "active": true,
-    "tier": "template"
+    "tier": "curated",
+    "taggedNames": {
+      "music": [
+        "Jock Jams Landale"
+      ]
+    }
   },
   {
     "id": "josealvarado_nyk",
@@ -3917,10 +3927,16 @@
       "Pippen Happens",
       "Scotty Vibes Only",
       "Livin' on a Pippen",
-      "Pippen-tastic Voyage"
+      "Pippen-tastic Voyage",
+      "Merry And Pippen"
     ],
     "active": true,
-    "tier": "template"
+    "tier": "curated",
+    "taggedNames": {
+      "movie": [
+        "Merry And Pippen"
+      ]
+    }
   },
   {
     "id": "ajgreen_mil",
@@ -5960,10 +5976,11 @@
       "Straight Outta Edey",
       "Zach's Excellent Adventure",
       "Edey-tastic Voyage",
-      "The Edey Show"
+      "The Edey Show",
+      "Garden Of Edey"
     ],
     "active": true,
-    "tier": "template"
+    "tier": "curated"
   },
   {
     "id": "reedsheppard_hou",
@@ -7210,10 +7227,17 @@
       "In Coward We Trust",
       "Cedric's Excellent Adventure",
       "Livin' on a Coward",
-      "Coward-tastic Voyage"
+      "Coward-tastic Voyage",
+      "Cedric The Entertainer",
+      "The Cedric Coward's Way Out"
     ],
     "active": true,
-    "tier": "template"
+    "tier": "curated",
+    "taggedNames": {
+      "movie": [
+        "Cedric The Entertainer"
+      ]
+    }
   },
   {
     "id": "asanewell_atl",
