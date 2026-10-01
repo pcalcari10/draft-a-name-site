@@ -420,7 +420,8 @@
       "The Big LeBronski",
       "Irrefutable James",
       "King James Version",
-      "LeBron's Legacy"
+      "LeBron's Legacy",
+      "Brains Before LeBron"
     ],
     "active": true,
     "tier": "curated",
@@ -694,10 +695,11 @@
       "Marcus Vibes Only",
       "Smart of Fame",
       "The Smart Show",
-      "All Smart, No Filler"
+      "All Smart, No Filler",
+      "Marcus Smart Aleck"
     ],
     "active": true,
-    "tier": "template"
+    "tier": "curated"
   },
   {
     "id": "dwightpowell_dal",
@@ -2046,7 +2048,9 @@
       "Luka Dong Thicc",
       "Luka Skywalker",
       "Scooby Doncic",
-      "On Like Doncic Kong"
+      "On Like Doncic Kong",
+      "Living La Vida Luka",
+      "Lukalike"
     ],
     "active": true,
     "tier": "curated",
@@ -2056,6 +2060,9 @@
       ],
       "tv": [
         "Scooby Doncic"
+      ],
+      "music": [
+        "Living La Vida Luka"
       ]
     }
   },
@@ -2083,13 +2090,17 @@
     "pos": "C",
     "names": [
       "Ayton Of Drugs",
-      "Ayton Powers"
+      "Ayton Powers",
+      "Deandre Ayton Place"
     ],
     "active": true,
     "tier": "curated",
     "taggedNames": {
       "movie": [
         "Ayton Powers"
+      ],
+      "tv": [
+        "Deandre Ayton Place"
       ]
     }
   },
@@ -2162,10 +2173,16 @@
       "Vanderbilt of Fame",
       "Jarred Vanderbilt and the Fantasy Machine",
       "Vanderbilt Happens",
-      "Vanderbilt'd Up and Ready"
+      "Vanderbilt'd Up and Ready",
+      "Jarred Vanderbilt Commodores"
     ],
     "active": true,
-    "tier": "template"
+    "tier": "curated",
+    "taggedNames": {
+      "music": [
+        "Jarred Vanderbilt Commodores"
+      ]
+    }
   },
   {
     "id": "michaelporter_bkn",
@@ -2360,10 +2377,11 @@
       "Straight Outta Hachimura",
       "Rui Hachimura and the Fantasy Machine",
       "Rui Vibes Only",
-      "All Hachimura, No Filler"
+      "All Hachimura, No Filler",
+      "You'll Rui The Day"
     ],
     "active": true,
-    "tier": "template"
+    "tier": "curated"
   },
   {
     "id": "calebmartin_dal",
@@ -3690,10 +3708,11 @@
       "Reaves'd Up and Ready",
       "Livin' on a Reaves",
       "All Reaves, No Filler",
-      "Reaves of Fame"
+      "Reaves of Fame",
+      "Reaves Of Grass"
     ],
     "active": true,
-    "tier": "template"
+    "tier": "curated"
   },
   {
     "id": "jocklandale_atl",
@@ -4480,10 +4499,16 @@
       "Straight Outta Koloko",
       "Koloko Happens",
       "Christian Vibes Only",
-      "Christian & Chill"
+      "Christian & Chill",
+      "That's Where We Wanna Go, Way Down In Koloko"
     ],
     "active": true,
-    "tier": "template"
+    "tier": "curated",
+    "taggedNames": {
+      "music": [
+        "That's Where We Wanna Go, Way Down In Koloko"
+      ]
+    }
   },
   {
     "id": "moussadiabat_cha",
@@ -5809,10 +5834,12 @@
       "Dalton's Excellent Adventure",
       "In Knecht We Trust",
       "Dalton & Chill",
-      "All Knecht, No Filler"
+      "All Knecht, No Filler",
+      "Knecht The Dots",
+      "Knecht Four"
     ],
     "active": true,
-    "tier": "template"
+    "tier": "curated"
   },
   {
     "id": "ryandunn_phx",
