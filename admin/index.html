@@ -676,6 +676,7 @@ const TEAM_FULL = {
 // sport's teams file has city/nickname fields), falling back to TEAM_FULL
 // for anything allTeams doesn't cover, and the bare code as a last resort.
 function teamFullName(abbr){
+  if(abbr === '__LEGACY__') return '🏆 Legacy Players';
   const t = allTeams.find(t => t.abbr === abbr);
   if(t) return `${t.city} ${t.nickname}`;
   return TEAM_FULL[abbr] || abbr;
@@ -1114,8 +1115,13 @@ function renderTierList(tier, searchElId, sortElId, containerElId, groupByElId){
 
   const byTeam = {};
   active.filter(p => tier === 'curated' ? p.tier === 'curated' : p.tier !== 'curated').forEach(p => {
-    const rawTeam = p.team || 'FA';
-    const team = TEAM_ABBR_NORMALIZE[rawTeam] || rawTeam;
+    // Legacy players (retired/off-roster, tagged accordingly) get pulled out
+    // of their team's active roster and grouped into their own section
+    // instead, since mixing them in makes a team's roster look padded with
+    // people who aren't actually on it. Their real team still shows on
+    // their row so the context isn't lost.
+    const isLegacy = p.taggedNames && p.taggedNames.legacy;
+    const team = isLegacy ? '__LEGACY__' : (TEAM_ABBR_NORMALIZE[p.team || 'FA'] || p.team || 'FA');
     if(!byTeam[team]) byTeam[team] = [];
     byTeam[team].push(p);
   });
@@ -1154,9 +1160,11 @@ function renderTierList(tier, searchElId, sortElId, containerElId, groupByElId){
 
   let teams = Object.keys(displayData);
 
-  if(sortBy === 'most') teams.sort((a,b) => byTeam[b].length - byTeam[a].length);
-  else if(sortBy === 'fewest') teams.sort((a,b) => byTeam[a].length - byTeam[b].length);
-  else teams.sort((a,b) => teamFullName(a).localeCompare(teamFullName(b)));
+  // The Legacy section always sorts to the end, regardless of sort mode,
+  // since it's not a real team and doesn't compete with them for ranking.
+  if(sortBy === 'most') teams.sort((a,b) => (a === '__LEGACY__') - (b === '__LEGACY__') || byTeam[b].length - byTeam[a].length);
+  else if(sortBy === 'fewest') teams.sort((a,b) => (a === '__LEGACY__') - (b === '__LEGACY__') || byTeam[a].length - byTeam[b].length);
+  else teams.sort((a,b) => (a === '__LEGACY__') - (b === '__LEGACY__') || teamFullName(a).localeCompare(teamFullName(b)));
 
   const container = document.getElementById(containerElId);
   if(teams.length === 0){
@@ -1168,16 +1176,22 @@ function renderTierList(tier, searchElId, sortElId, containerElId, groupByElId){
   }
 
   container.innerHTML = teams.map(t => {
-    const players = displayData[t].slice().sort((a,b) =>
-      (POSITION_ORDER[a.pos] ?? 5) - (POSITION_ORDER[b.pos] ?? 5) || (a.last||'').localeCompare(b.last||'')
+    const isLegacySection = t === '__LEGACY__';
+    const players = displayData[t].slice().sort((a,b) => isLegacySection
+      ? (teamFullName(TEAM_ABBR_NORMALIZE[a.team] || a.team).localeCompare(teamFullName(TEAM_ABBR_NORMALIZE[b.team] || b.team)) || (a.last||'').localeCompare(b.last||''))
+      : (POSITION_ORDER[a.pos] ?? 5) - (POSITION_ORDER[b.pos] ?? 5) || (a.last||'').localeCompare(b.last||'')
     );
     const isPartial = players.length !== byTeam[t].length;
     const shouldExpand = query && !matchedByTeamName[t];
 
-    let lastPos = null;
+    let lastGroupKey = null;
     const playerRowsHtml = players.map((p, idx) => {
-      const posHeader = p.pos !== lastPos ? `<div class="pos-group-header">${p.pos}</div>` : '';
-      lastPos = p.pos;
+      // Legacy section sub-groups by the player's real team (since they're
+      // no longer under that team's own block); everywhere else, by position.
+      const groupKey = isLegacySection ? (TEAM_ABBR_NORMALIZE[p.team] || p.team || 'FA') : p.pos;
+      const groupLabel = isLegacySection ? teamFullName(groupKey) : groupKey;
+      const posHeader = groupKey !== lastGroupKey ? `<div class="pos-group-header">${groupLabel}</div>` : '';
+      lastGroupKey = groupKey;
       return posHeader + `<details class="player-row"${shouldExpand ? ' open' : ''}>
           <summary class="player-row-top"><span>${p.first} ${p.last}</span><span style="display:flex;align-items:center;"><span class="player-pos">${p.names.length} name${p.names.length !== 1 ? 's' : ''} \u00b7 ${p.pos}</span><span class="chevron-small">▸</span></span></summary>
           <ul class="player-names-list">
