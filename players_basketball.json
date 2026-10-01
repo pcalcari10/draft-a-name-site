@@ -454,10 +454,11 @@
       "Khris Middleton and the Fantasy Machine",
       "Straight Outta Middleton",
       "Middleton-tastic Voyage",
-      "In Middleton We Trust"
+      "In Middleton We Trust",
+      "Khris Topton, Khris Bottomton, Khris Middleton"
     ],
     "active": true,
-    "tier": "template"
+    "tier": "curated"
   },
   {
     "id": "giannisantetokounmpo_mia",
@@ -1238,10 +1239,16 @@
       "All Poeltl, No Filler",
       "Poeltl's Fantasy Fortress",
       "Poeltl of Fame",
-      "In Poeltl We Trust"
+      "In Poeltl We Trust",
+      "Poeltl The Turtle"
     ],
     "active": true,
-    "tier": "template"
+    "tier": "curated",
+    "taggedNames": {
+      "tv": [
+        "Poeltl The Turtle"
+      ]
+    }
   },
   {
     "id": "garypayton_gsw",
@@ -1344,10 +1351,11 @@
       "Luke Kornet and the Fantasy Machine",
       "Luke & Chill",
       "Kornet Happens",
-      "Straight Outta Kornet"
+      "Straight Outta Kornet",
+      "Kornet Trilogy"
     ],
     "active": true,
-    "tier": "template"
+    "tier": "curated"
   },
   {
     "id": "lukekennard_phx",
@@ -1668,7 +1676,8 @@
     "pos": "PG",
     "names": [
       "De'Aaron on the Side of Caution",
-      "Zero Fox Given"
+      "Zero Fox Given",
+      "20th Century Fox"
     ],
     "active": true,
     "tier": "curated"
@@ -2311,7 +2320,8 @@
     "team": "TOR",
     "pos": "SF",
     "names": [
-      "Barrett Essentials"
+      "Barrett Essentials",
+      "RJ Barrett Browning"
     ],
     "active": true,
     "tier": "curated"
@@ -3094,7 +3104,8 @@
     "team": "TOR",
     "pos": "PG",
     "names": [
-      "Quickley Does It"
+      "Quickley Does It",
+      "Immanuel Slowley"
     ],
     "active": true,
     "tier": "curated"
@@ -3931,10 +3942,16 @@
       "Potter-tastic Voyage",
       "Potter-A-Palooza",
       "Potter of Fame",
-      "Potter Happens"
+      "Potter Happens",
+      "Micah Harry Potter"
     ],
     "active": true,
-    "tier": "template"
+    "tier": "curated",
+    "taggedNames": {
+      "movie": [
+        "Micah Harry Potter"
+      ]
+    }
   },
   {
     "id": "drusmith_mia",
@@ -4151,10 +4168,11 @@
       "Straight Outta Agbaji",
       "The Agbaji Show",
       "Livin' on a Agbaji",
-      "Ochai Vibes Only"
+      "Ochai Vibes Only",
+      "Ochai Can You See"
     ],
     "active": true,
-    "tier": "template"
+    "tier": "curated"
   },
   {
     "id": "bennedictmathurin_nop",
@@ -4855,10 +4873,17 @@
       "Champagnie's Fantasy Fortress",
       "In Champagnie We Trust",
       "Julian & Chill",
-      "Champagnie'd Up and Ready"
+      "Champagnie'd Up and Ready",
+      "The Champagnie Region",
+      "The Champagnie Room"
     ],
     "active": true,
-    "tier": "template"
+    "tier": "curated",
+    "taggedNames": {
+      "music": [
+        "The Champagnie Room"
+      ]
+    }
   },
   {
     "id": "tysonetienne_bkn",
@@ -5061,10 +5086,11 @@
       "Straight Outta Coulibaly",
       "Bilal Vibes Only",
       "Coulibaly Happens",
-      "All Coulibaly, No Filler"
+      "All Coulibaly, No Filler",
+      "Raspberry Coulibaly"
     ],
     "active": true,
-    "tier": "template"
+    "tier": "curated"
   },
   {
     "id": "ausarthompson_det",
@@ -5132,7 +5158,8 @@
     "team": "DEN",
     "pos": "PF",
     "names": [
-      "Whitmore Could You Ask For?"
+      "Whitmore Could You Ask For?",
+      "Cam President Whitmore"
     ],
     "active": true,
     "tier": "curated"
@@ -5201,7 +5228,9 @@
       "Wemby Wonka",
       "Dunkin' Wembys",
       "The Wemby Blockade",
-      "Wembanama Slamma"
+      "Wembanama Slamma",
+      "Sir, This Is A Wemby's",
+      "Diary Of A Wemby Kid"
     ],
     "active": true,
     "tier": "curated",
@@ -5214,7 +5243,8 @@
         "House of Wemby"
       ],
       "movie": [
-        "Wemby Wonka"
+        "Wemby Wonka",
+        "Diary Of A Wemby Kid"
       ]
     }
   },
@@ -5229,10 +5259,11 @@
       "Dick-tastic Voyage",
       "The Dick Show",
       "In Dick We Trust",
-      "Dick's Fantasy Fortress"
+      "Dick's Fantasy Fortress",
+      "I Refuse To Make A Gradey Dick Pun"
     ],
     "active": true,
-    "tier": "template"
+    "tier": "curated"
   },
   {
     "id": "kobebrown_ind",
@@ -5273,10 +5304,11 @@
       "Brice Vibes Only",
       "The Sensabaugh Show",
       "In Sensabaugh We Trust",
-      "Sensabaugh of Fame"
+      "Sensabaugh of Fame",
+      "The Sixth Sensabaugh"
     ],
     "active": true,
-    "tier": "template"
+    "tier": "curated"
   },
   {
     "id": "taylorhendricks_mem",
@@ -5289,10 +5321,17 @@
       "Taylor Vibes Only",
       "All Hendricks, No Filler",
       "Livin' on a Hendricks",
-      "The Hendricks Show"
+      "The Hendricks Show",
+      "Taylor Hendrick Motorsports",
+      "Jimi Hendricks"
     ],
     "active": true,
-    "tier": "template"
+    "tier": "curated",
+    "taggedNames": {
+      "music": [
+        "Jimi Hendricks"
+      ]
+    }
   },
   {
     "id": "jaimejaquez_mil",
@@ -5731,10 +5770,11 @@
       "Tshiebwe's Fantasy Fortress",
       "Tshiebwe of Fame",
       "Tshiebwe-tastic Voyage",
-      "Straight Outta Tshiebwe"
+      "Straight Outta Tshiebwe",
+      "Oscar Mayer Tshiebwe"
     ],
     "active": true,
-    "tier": "template"
+    "tier": "curated"
   },
   {
     "id": "drewtimme_min",
@@ -5892,10 +5932,11 @@
       "Flagler's Fantasy Fortress",
       "Flagler'd Up and Ready",
       "Flagler Happens",
-      "Flagler-A-Palooza"
+      "Flagler-A-Palooza",
+      "Adam Flagler On The Play"
     ],
     "active": true,
-    "tier": "template"
+    "tier": "curated"
   },
   {
     "id": "danegoodwin_den",
@@ -6067,10 +6108,21 @@
       "Carrington-A-Palooza",
       "Bub Vibes Only",
       "Carrington of Fame",
-      "Livin' on a Carrington"
+      "Livin' on a Carrington",
+      "Carlton Banks Carrington",
+      "Bub Gump Shrimp Company",
+      "Bub Shot The Jukebox"
     ],
     "active": true,
-    "tier": "template"
+    "tier": "curated",
+    "taggedNames": {
+      "tv": [
+        "Carlton Banks Carrington"
+      ],
+      "movie": [
+        "Bub Gump Shrimp Company"
+      ]
+    }
   },
   {
     "id": "terrenceshannon_min",
@@ -6178,7 +6230,8 @@
     "team": "TOR",
     "pos": "SG",
     "names": [
-      "Obi-Wan Ja'Kobi"
+      "Obi-Wan Ja'Kobi",
+      "Ja'Kobe Ja'Bryant"
     ],
     "active": true,
     "tier": "curated",
@@ -6325,7 +6378,8 @@
     "team": "WAS",
     "pos": "C",
     "names": [
-      "Dancin' with the Sarrs"
+      "Dancin' with the Sarrs",
+      "Sir Laurence Olivier Sarr"
     ],
     "active": true,
     "tier": "curated"
@@ -6934,10 +6988,11 @@
       "Jamison Vibes Only",
       "Jamison & Chill",
       "Battle-A-Palooza",
-      "Battle of Fame"
+      "Battle of Fame",
+      "Lose The Jamison Battle, Win The Jamison War"
     ],
     "active": true,
-    "tier": "template"
+    "tier": "curated"
   },
   {
     "id": "spencerjones_den",
@@ -7472,10 +7527,11 @@
       "Harper-A-Palooza",
       "Livin' on a Harper",
       "Harper'd Up and Ready",
-      "Dylan Harper and the Fantasy Machine"
+      "Dylan Harper and the Fantasy Machine",
+      "Dylan Harper's Bazaar"
     ],
     "active": true,
-    "tier": "template"
+    "tier": "curated"
   },
   {
     "id": "collinmurrayboyles_tor",
@@ -7536,10 +7592,11 @@
       "Ace Bailey and the Fantasy Machine",
       "Ace Vibes Only",
       "Bailey-A-Palooza",
-      "The Bailey Show"
+      "The Bailey Show",
+      "Ace Bailey Up Your Sleeve"
     ],
     "active": true,
-    "tier": "template"
+    "tier": "curated"
   },
   {
     "id": "kasparasjakuionis_mil",
@@ -8076,10 +8133,17 @@
       "Hepburn'd Up and Ready",
       "Hepburn-A-Palooza",
       "Chucky Hepburn and the Fantasy Machine",
-      "Hepburn-tastic Voyage"
+      "Hepburn-tastic Voyage",
+      "The Bride Of Chucky Hepburn",
+      "Chucky Audrey Hepburn"
     ],
     "active": true,
-    "tier": "template"
+    "tier": "curated",
+    "taggedNames": {
+      "movie": [
+        "The Bride Of Chucky Hepburn"
+      ]
+    }
   },
   {
     "id": "vladislavgoldin_mia",
