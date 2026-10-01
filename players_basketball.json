@@ -28,10 +28,11 @@
       "Hardaway-A-Palooza",
       "Straight Outta Hardaway",
       "Hardaway's Fantasy Fortress",
-      "All Hardaway, No Filler"
+      "All Hardaway, No Filler",
+      "The Easy Way Or The Hardaway"
     ],
     "active": true,
-    "tier": "template"
+    "tier": "curated"
   },
   {
     "id": "kyrieirving_dal",
@@ -1134,7 +1135,8 @@
       "Joki\u0107'd Up and Ready",
       "The Joki\u0107 Show",
       "Jokic Dokic",
-      "My Team is a Jokic"
+      "My Team is a Jokic",
+      "Jokic's On You"
     ],
     "active": true,
     "tier": "curated"
@@ -4779,10 +4781,11 @@
       "Braun's Fantasy Fortress",
       "Straight Outta Braun",
       "Braun-A-Palooza",
-      "Livin' on a Braun"
+      "Livin' on a Braun",
+      "Brains Over Christian Braun"
     ],
     "active": true,
-    "tier": "template"
+    "tier": "curated"
   },
   {
     "id": "paolobanchero_orl",
@@ -5769,10 +5772,11 @@
       "Julian's Excellent Adventure",
       "In Strawther We Trust",
       "Julian Strawther and the Fantasy Machine",
-      "Strawther Happens"
+      "Strawther Happens",
+      "The Strawther That Stirs The Drink"
     ],
     "active": true,
-    "tier": "template"
+    "tier": "curated"
   },
   {
     "id": "anthonyblack_orl",
@@ -6064,10 +6068,11 @@
       "Jalen's Excellent Adventure",
       "Straight Outta Pickett",
       "In Pickett We Trust",
-      "Pickett of Fame"
+      "Pickett of Fame",
+      "Jalen Pickett Fence"
     ],
     "active": true,
-    "tier": "template"
+    "tier": "curated"
   },
   {
     "id": "scoothenderson_por",
@@ -7375,10 +7380,11 @@
       "Jones's Fantasy Fortress",
       "Jones Happens",
       "Jones of Fame",
-      "All Jones, No Filler"
+      "All Jones, No Filler",
+      "Spencer Jones' Gifts"
     ],
     "active": true,
-    "tier": "template"
+    "tier": "curated"
   },
   {
     "id": "matasbuzelis_chi",
@@ -8563,10 +8569,16 @@
       "In Bates We Trust",
       "Bates's Fantasy Fortress",
       "Bates'd Up and Ready",
-      "The Bates Show"
+      "The Bates Show",
+      "Tamar Bates Motel"
     ],
     "active": true,
-    "tier": "template"
+    "tier": "curated",
+    "taggedNames": {
+      "movie": [
+        "Tamar Bates Motel"
+      ]
+    }
   },
   {
     "id": "dylancardwell_sac",
