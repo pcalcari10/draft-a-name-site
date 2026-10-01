@@ -239,7 +239,7 @@
   </div>
 
   <div class="filter-row">
-    <input id="search" type="text" placeholder="Filter by team or player name…">
+    <input id="search" type="text" placeholder="Filter by team, player, or category name…">
     <select id="groupBy">
       <option value="team" selected>Group by team</option>
       <option value="category">Group by category</option>
@@ -284,7 +284,7 @@
   </div>
 
   <div class="filter-row">
-    <input id="searchCurated" type="text" placeholder="Filter by team or player name…">
+    <input id="searchCurated" type="text" placeholder="Filter by team, player, or category name…">
     <select id="groupByCurated">
       <option value="team" selected>Group by team</option>
       <option value="category">Group by category</option>
@@ -1098,8 +1098,11 @@ function renderTierList(tier, searchElId, sortElId, containerElId, groupByElId){
   });
 
   // Decide, per team, what to show and why: a team-name match shows the whole
-  // roster (collapsed by default); a player-name match shows only that player,
-  // auto-expanded so you don't have to click to see them.
+  // roster (collapsed by default); a player-name or category match shows
+  // only the relevant players, auto-expanded so you don't have to click to
+  // see them. A category match (e.g. typing "movie") finds anyone with a
+  // name tagged into that category, so category names work as a filter
+  // here too, not just in the dedicated "Group by category" view.
   const displayData = {};
   const matchedByTeamName = {};
   if(query){
@@ -1109,7 +1112,13 @@ function renderTierList(tier, searchElId, sortElId, containerElId, groupByElId){
         displayData[t] = byTeam[t];
         matchedByTeamName[t] = true;
       } else {
-        const matchingPlayers = byTeam[t].filter(p => (p.first + ' ' + p.last).toLowerCase().includes(query));
+        const matchingPlayers = byTeam[t].filter(p => {
+          if((p.first + ' ' + p.last).toLowerCase().includes(query)) return true;
+          return Object.keys(p.taggedNames || {}).some(cat => {
+            const label = (CATEGORY_LABELS[cat] && CATEGORY_LABELS[cat].label) || cat;
+            return cat.toLowerCase().includes(query) || label.toLowerCase().includes(query);
+          });
+        });
         if(matchingPlayers.length > 0){
           displayData[t] = matchingPlayers;
           matchedByTeamName[t] = false;
