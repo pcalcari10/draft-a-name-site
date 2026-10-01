@@ -4,7 +4,8 @@
     "city": "Atlanta",
     "nickname": "Hawks",
     "names": [
-      "Hawking Your Wares"
+      "Hawking Your Wares",
+      "Hawks Eye View"
     ]
   },
   {
@@ -13,15 +14,22 @@
     "nickname": "Celtics",
     "names": [
       "Boston Strangler Stats",
-      "Celtics Pride"
-    ]
+      "Celtics Pride",
+      "Boston Cream Celtics"
+    ],
+    "taggedNames": {
+      "food": [
+        "Boston Cream Celtics"
+      ]
+    }
   },
   {
     "abbr": "BKN",
     "city": "Brooklyn",
     "nickname": "Nets",
     "names": [
-      "Nets Gains"
+      "Nets Gains",
+      "Nets Worth It"
     ]
   },
   {
@@ -29,7 +37,8 @@
     "city": "Charlotte",
     "nickname": "Hornets",
     "names": [
-      "Blow Your Hornet"
+      "Blow Your Hornet",
+      "Hornets Nest Egg"
     ]
   },
   {
@@ -37,7 +46,8 @@
     "city": "Chicago",
     "nickname": "Bulls",
     "names": [
-      "Running of The Bulls"
+      "Running of The Bulls",
+      "Bulls in a China Shop"
     ]
   },
   {
@@ -45,7 +55,8 @@
     "city": "Cleveland",
     "nickname": "Cavaliers",
     "names": [
-      "Cavalier Steer Clear"
+      "Cavalier Steer Clear",
+      "Cavs In My Own Way"
     ]
   },
   {
@@ -53,7 +64,8 @@
     "city": "Dallas",
     "nickname": "Mavericks",
     "names": [
-      "Mavericks and Goose"
+      "Mavericks and Goose",
+      "Mavs Assessment"
     ],
     "taggedNames": {
       "movie": [
@@ -75,7 +87,8 @@
     "city": "Detroit",
     "nickname": "Pistons",
     "names": [
-      "Piston In The Wind"
+      "Piston In The Wind",
+      "Pistons Firing"
     ],
     "taggedNames": {
       "music": [
@@ -89,21 +102,25 @@
     "nickname": "Warriors",
     "names": [
       "Ultimate Warriors",
-      "Golden State of Mind"
+      "Golden State of Mind",
+      "Warriors Never Lose Faith"
     ]
   },
   {
     "abbr": "HOU",
     "city": "Houston",
     "nickname": "Rockets",
-    "names": []
+    "names": [
+      "Rockets Science"
+    ]
   },
   {
     "abbr": "IND",
     "city": "Indiana",
     "nickname": "Pacers",
     "names": [
-      "Setting the Pacers"
+      "Setting the Pacers",
+      "Pacers Setter"
     ]
   },
   {
@@ -113,7 +130,8 @@
     "names": [
       "Robe and Clippers",
       "Steve Ballmer's Aspirations",
-      "Clippers Coupon"
+      "Clippers Coupon",
+      "Clippers Coupon Crew"
     ]
   },
   {
@@ -122,7 +140,8 @@
     "nickname": "Lakers",
     "names": [
       "D'yer Lakers",
-      "Laker Effect"
+      "Laker Effect",
+      "Lake Show Business"
     ],
     "taggedNames": {
       "music": [
@@ -135,7 +154,8 @@
     "city": "Memphis",
     "nickname": "Grizzlies",
     "names": [
-      "Grizzly Veterans"
+      "Grizzly Veterans",
+      "Grizzlies Adjusted"
     ]
   },
   {
@@ -145,7 +165,8 @@
     "names": [
       "Bring The Heat",
       "Miami Thrice",
-      "Heat Check Nation"
+      "Heat Check Nation",
+      "Heat Wave Warning"
     ]
   },
   {
@@ -161,7 +182,8 @@
     "city": "Minnesota",
     "nickname": "Timberwolves",
     "names": [
-      "Going Down, Going Timberwolves"
+      "Going Down, Going Timberwolves",
+      "Timberwolves in Sheeps Clothing"
     ]
   },
   {
@@ -169,7 +191,8 @@
     "city": "New Orleans",
     "nickname": "Pelicans",
     "names": [
-      "The Pelicans Brief"
+      "The Pelicans Brief",
+      "Pelicans Cant Fly"
     ],
     "taggedNames": {
       "movie": [
@@ -184,7 +207,8 @@
     "names": [
       "No Knicks or Scratches",
       "New York Block Exchange",
-      "Knick of Time"
+      "Knick of Time",
+      "Knicks and Chill"
     ]
   },
   {
@@ -192,20 +216,25 @@
     "city": "Oklahoma City",
     "nickname": "Thunder",
     "names": [
-      "Thunder From Brown Under"
+      "Thunder From Brown Under",
+      "Thunder Struck Squad"
     ]
   },
   {
     "abbr": "ORL",
     "city": "Orlando",
     "nickname": "Magic",
-    "names": []
+    "names": [
+      "Magic Number Crunch"
+    ]
   },
   {
     "abbr": "PHI",
     "city": "Philadelphia",
     "nickname": "76ers",
-    "names": []
+    "names": [
+      "Sixers Sense"
+    ]
   },
   {
     "abbr": "PHX",
@@ -225,14 +254,17 @@
     "abbr": "POR",
     "city": "Portland",
     "nickname": "Trail Blazers",
-    "names": []
+    "names": [
+      "Blazers of Glory"
+    ]
   },
   {
     "abbr": "SAC",
     "city": "Sacramento",
     "nickname": "Kings",
     "names": [
-      "Kings and Queens"
+      "Kings and Queens",
+      "Kings Ransom"
     ]
   },
   {
@@ -248,19 +280,24 @@
     "city": "Toronto",
     "nickname": "Raptors",
     "names": [
-      "En-Raptor-ed"
+      "En-Raptor-ed",
+      "Raptors Without Borders"
     ]
   },
   {
     "abbr": "UTA",
     "city": "Utah",
     "nickname": "Jazz",
-    "names": []
+    "names": [
+      "Jazz Hands Only"
+    ]
   },
   {
     "abbr": "WAS",
     "city": "Washington",
     "nickname": "Wizards",
-    "names": []
+    "names": [
+      "Wizards of Odd"
+    ]
   }
 ]
