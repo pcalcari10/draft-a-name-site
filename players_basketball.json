@@ -2689,10 +2689,11 @@
       "Nic Vibes Only",
       "Claxton of Fame",
       "Claxton-tastic Voyage",
-      "The Claxton Show"
+      "The Claxton Show",
+      "Alert The Claxton"
     ],
     "active": true,
-    "tier": "template"
+    "tier": "curated"
   },
   {
     "id": "nazreid_cha",
@@ -2909,10 +2910,16 @@
       "Straight Outta Mann",
       "Mann of Fame",
       "Mann Happens",
-      "Terance Vibes Only"
+      "Terance Vibes Only",
+      "Terance Mann The Battle Stations"
     ],
     "active": true,
-    "tier": "template"
+    "tier": "curated",
+    "taggedNames": {
+      "starwars": [
+        "Terance Mann The Battle Stations"
+      ]
+    }
   },
   {
     "id": "tylerherro_mil",
@@ -3729,10 +3736,11 @@
       "All Sharpe, No Filler",
       "Livin' on a Sharpe",
       "Straight Outta Sharpe",
-      "Sharpe Happens"
+      "Sharpe Happens",
+      "Day'Ron Come And Me Wanna Go Home"
     ],
     "active": true,
-    "tier": "template"
+    "tier": "curated"
   },
   {
     "id": "ziairewilliams_lal",
@@ -3745,10 +3753,11 @@
       "Livin' on a Williams",
       "Ziaire Vibes Only",
       "Williams Happens",
-      "Williams's Fantasy Fortress"
+      "Williams's Fantasy Fortress",
+      "Ziaire, Now Called The Democratic Republic Of The Congo"
     ],
     "active": true,
-    "tier": "template"
+    "tier": "curated"
   },
   {
     "id": "santialdama_dal",
@@ -5176,10 +5185,16 @@
       "Etienne-A-Palooza",
       "All Etienne, No Filler",
       "Etienne of Fame",
-      "Tyson Vibes Only"
+      "Tyson Vibes Only",
+      "Etienne: The Extraterrestrial"
     ],
     "active": true,
-    "tier": "template"
+    "tier": "curated",
+    "taggedNames": {
+      "movie": [
+        "Etienne: The Extraterrestrial"
+      ]
+    }
   },
   {
     "id": "simonefontecchio_mia",
@@ -5433,10 +5448,11 @@
       "All Clowney, No Filler",
       "The Clowney Show",
       "Noah & Chill",
-      "Clowney-A-Palooza"
+      "Clowney-A-Palooza",
+      "Send In The Clowney"
     ],
     "active": true,
-    "tier": "template"
+    "tier": "curated"
   },
   {
     "id": "camwhitmore_den",
@@ -7670,10 +7686,11 @@
       "Danny Wolf and the Fantasy Machine",
       "All Wolf, No Filler",
       "Wolf Happens",
-      "Danny Vibes Only"
+      "Danny Vibes Only",
+      "Danny Wolf In Sheep's Clothing"
     ],
     "active": true,
-    "tier": "template"
+    "tier": "curated"
   },
   {
     "id": "egordmin_bkn",
@@ -7718,10 +7735,11 @@
       "Ben's Excellent Adventure",
       "The Saraf Show",
       "Livin' on a Saraf",
-      "All Saraf, No Filler"
+      "All Saraf, No Filler",
+      "Sans Saraf Font"
     ],
     "active": true,
-    "tier": "template"
+    "tier": "curated"
   },
   {
     "id": "joanberinger_min",
