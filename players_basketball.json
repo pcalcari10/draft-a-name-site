@@ -10339,5 +10339,383 @@
     ],
     "active": true,
     "tier": "template"
+  },
+  {
+    "id": "kobebryant_lal",
+    "first": "Kobe",
+    "last": "Bryant",
+    "team": "LAL",
+    "pos": "SG",
+    "names": [
+      "Kobe Wan Kenobi"
+    ],
+    "active": true,
+    "tier": "curated",
+    "taggedNames": {
+      "starwars": [
+        "Kobe Wan Kenobi"
+      ]
+    }
+  },
+  {
+    "id": "yaoming_hou",
+    "first": "Yao",
+    "last": "Ming",
+    "team": "HOU",
+    "pos": "C",
+    "names": [
+      "Yao Know What I Ming"
+    ],
+    "active": true,
+    "tier": "curated"
+  },
+  {
+    "id": "johnwall_was",
+    "first": "John",
+    "last": "Wall",
+    "team": "WAS",
+    "pos": "PG",
+    "names": [
+      "Wall Don't Lie"
+    ],
+    "active": true,
+    "tier": "curated"
+  },
+  {
+    "id": "rajonrondo_bos",
+    "first": "Rajon",
+    "last": "Rondo",
+    "team": "BOS",
+    "pos": "PG",
+    "names": [
+      "Grand Theft Rondo",
+      "Rondo's Court"
+    ],
+    "active": true,
+    "tier": "curated"
+  },
+  {
+    "id": "sergeibaka_tor",
+    "first": "Serge",
+    "last": "Ibaka",
+    "team": "TOR",
+    "pos": "PF",
+    "names": [
+      "Ibaka Flocka Flame"
+    ],
+    "active": true,
+    "tier": "curated",
+    "taggedNames": {
+      "music": [
+        "Ibaka Flocka Flame"
+      ]
+    }
+  },
+  {
+    "id": "russellwestbrook_okc",
+    "first": "Russell",
+    "last": "Westbrook",
+    "team": "OKC",
+    "pos": "PG",
+    "names": [
+      "Everyday I'm Russelin"
+    ],
+    "active": true,
+    "tier": "curated",
+    "taggedNames": {
+      "music": [
+        "Everyday I'm Russelin"
+      ]
+    }
+  },
+  {
+    "id": "ronartest_lal",
+    "first": "Ron",
+    "last": "Artest",
+    "team": "LAL",
+    "pos": "SF",
+    "names": [
+      "The Old Artestament"
+    ],
+    "active": true,
+    "tier": "curated"
+  },
+  {
+    "id": "tackofall_bos",
+    "first": "Tacko",
+    "last": "Fall",
+    "team": "BOS",
+    "pos": "C",
+    "names": [
+      "Tacko Bell",
+      "Tacko Tuesday"
+    ],
+    "active": true,
+    "tier": "curated",
+    "taggedNames": {
+      "food": [
+        "Tacko Bell",
+        "Tacko Tuesday"
+      ]
+    }
+  },
+  {
+    "id": "gorandragic_mia",
+    "first": "Goran",
+    "last": "Dragic",
+    "team": "MIA",
+    "pos": "PG",
+    "names": [
+      "Dragic The Gathering",
+      "How To Train Your Dragic",
+      "Believe in Dragic",
+      "Dragic's Dragons"
+    ],
+    "active": true,
+    "tier": "curated",
+    "taggedNames": {
+      "movie": [
+        "How To Train Your Dragic"
+      ]
+    }
+  },
+  {
+    "id": "jonasvalanciunas_tor",
+    "first": "Jonas",
+    "last": "Valanciunas",
+    "team": "TOR",
+    "pos": "C",
+    "names": [
+      "Jonas Valanciunas Brothers"
+    ],
+    "active": true,
+    "tier": "curated",
+    "taggedNames": {
+      "music": [
+        "Jonas Valanciunas Brothers"
+      ]
+    }
+  },
+  {
+    "id": "joeingles_uta",
+    "first": "Joe",
+    "last": "Ingles",
+    "team": "UTA",
+    "pos": "SF",
+    "names": [
+      "Joe Hablo Ingl\u00e9s",
+      "Ingles All The Way"
+    ],
+    "active": true,
+    "tier": "curated"
+  },
+  {
+    "id": "danilogallinari_den",
+    "first": "Danilo",
+    "last": "Gallinari",
+    "team": "DEN",
+    "pos": "PF",
+    "names": [
+      "Dinero Gallinari"
+    ],
+    "active": true,
+    "tier": "curated"
+  },
+  {
+    "id": "christianwood_hou",
+    "first": "Christian",
+    "last": "Wood",
+    "team": "HOU",
+    "pos": "PF",
+    "names": [
+      "Christian's Wood"
+    ],
+    "active": true,
+    "tier": "curated"
+  },
+  {
+    "id": "hassanwhiteside_mia",
+    "first": "Hassan",
+    "last": "Whiteside",
+    "team": "MIA",
+    "pos": "C",
+    "names": [
+      "Mr. Whiteside",
+      "Pretty Fly For A Whiteside"
+    ],
+    "active": true,
+    "tier": "curated",
+    "taggedNames": {
+      "music": [
+        "Pretty Fly For A Whiteside"
+      ]
+    }
+  },
+  {
+    "id": "jeffteague_ind",
+    "first": "Jeff",
+    "last": "Teague",
+    "team": "IND",
+    "pos": "PG",
+    "names": [
+      "A Teague Of Their Own",
+      "Out Of My Teague",
+      "Teague's League"
+    ],
+    "active": true,
+    "tier": "curated",
+    "taggedNames": {
+      "movie": [
+        "A Teague Of Their Own"
+      ]
+    }
+  },
+  {
+    "id": "timduncan_sas",
+    "first": "Tim",
+    "last": "Duncan",
+    "team": "SAS",
+    "pos": "PF",
+    "names": [
+      "Dunk Like Duncan"
+    ],
+    "active": true,
+    "tier": "curated"
+  },
+  {
+    "id": "bismackbiyombo_cha",
+    "first": "Bismack",
+    "last": "Biyombo",
+    "team": "CHA",
+    "pos": "C",
+    "names": [
+      "Bed Bath and Biyombo",
+      "Biyombo the Arc"
+    ],
+    "active": true,
+    "tier": "curated"
+  },
+  {
+    "id": "nikolavucevic_chi",
+    "first": "Nikola",
+    "last": "Vucevic",
+    "team": "CHI",
+    "pos": "C",
+    "names": [
+      "Vucevictory"
+    ],
+    "active": true,
+    "tier": "curated"
+  },
+  {
+    "id": "rickyrubio_min",
+    "first": "Ricky",
+    "last": "Rubio",
+    "team": "MIN",
+    "pos": "PG",
+    "names": [
+      "Rubio's Ring"
+    ],
+    "active": true,
+    "tier": "curated"
+  },
+  {
+    "id": "alfarouqaminu_por",
+    "first": "Al-Farouq",
+    "last": "Aminu",
+    "team": "POR",
+    "pos": "SF",
+    "names": [
+      "Aminu's Alley Oops",
+      "Al-Farouq Style"
+    ],
+    "active": true,
+    "tier": "curated"
+  },
+  {
+    "id": "spencerdinwiddie_bkn",
+    "first": "Spencer",
+    "last": "Dinwiddie",
+    "team": "BKN",
+    "pos": "PG",
+    "names": [
+      "Dinwiddie's Clan"
+    ],
+    "active": true,
+    "tier": "curated"
+  },
+  {
+    "id": "dewaynededmon_atl",
+    "first": "Dewayne",
+    "last": "Dedmon",
+    "team": "ATL",
+    "pos": "C",
+    "names": [
+      "Dedmon Walking",
+      "Dedmon's Distinctive"
+    ],
+    "active": true,
+    "tier": "curated",
+    "taggedNames": {
+      "movie": [
+        "Dedmon Walking"
+      ]
+    }
+  },
+  {
+    "id": "bolbol_den",
+    "first": "Bol",
+    "last": "Bol",
+    "team": "DEN",
+    "pos": "C",
+    "names": [
+      "Bol Movement",
+      "Smokin' A Bol",
+      "Give Me the Bol",
+      "Bol-ing for Hoop"
+    ],
+    "active": true,
+    "tier": "curated"
+  },
+  {
+    "id": "marcussmart_bos",
+    "first": "Marcus",
+    "last": "Smart",
+    "team": "BOS",
+    "pos": "PG",
+    "names": [
+      "Smart's Squad"
+    ],
+    "active": true,
+    "tier": "curated"
+  },
+  {
+    "id": "blakegriffin_lac",
+    "first": "Blake",
+    "last": "Griffin",
+    "team": "LAC",
+    "pos": "PF",
+    "names": [
+      "Don't Go Blakin' My Heart"
+    ],
+    "active": true,
+    "tier": "curated",
+    "taggedNames": {
+      "music": [
+        "Don't Go Blakin' My Heart"
+      ]
+    }
+  },
+  {
+    "id": "markellefultz_orl",
+    "first": "Markelle",
+    "last": "Fultz",
+    "team": "ORL",
+    "pos": "PG",
+    "names": [
+      "Markelle My Words"
+    ],
+    "active": true,
+    "tier": "curated"
   }
 ]
