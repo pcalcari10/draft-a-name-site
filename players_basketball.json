@@ -2515,10 +2515,11 @@
       "Strus-tastic Voyage",
       "Strus-A-Palooza",
       "Max Strus and the Fantasy Machine",
-      "Strus's Fantasy Fortress"
+      "Strus's Fantasy Fortress",
+      "Min Strus And Max Strus"
     ],
     "active": true,
-    "tier": "template"
+    "tier": "curated"
   },
   {
     "id": "rjbarrett_tor",
@@ -2797,10 +2798,11 @@
       "In Hunter We Trust",
       "Hunter'd Up and Ready",
       "Livin' on a Hunter",
-      "De'Andre's Excellent Adventure"
+      "De'Andre's Excellent Adventure",
+      "De\u2019Andre Hunter Gatherer"
     ],
     "active": true,
-    "tier": "template"
+    "tier": "curated"
   },
   {
     "id": "jaxsonhayes_uta",
@@ -3202,10 +3204,11 @@
       "The Merrill Show",
       "Merrill of Fame",
       "Sam Vibes Only",
-      "Sam & Chill"
+      "Sam & Chill",
+      "Sam Merrill Lynch"
     ],
     "active": true,
-    "tier": "template"
+    "tier": "curated"
   },
   {
     "id": "nickrichards_mia",
@@ -6406,10 +6409,11 @@
       "All Tyson, No Filler",
       "Tyson Happens",
       "Tyson's Fantasy Fortress",
-      "Jaylon Tyson and the Fantasy Machine"
+      "Jaylon Tyson and the Fantasy Machine",
+      "Jaylon Tyson Chicken"
     ],
     "active": true,
-    "tier": "template"
+    "tier": "curated"
   },
   {
     "id": "jaredmccain_okc",
@@ -7419,10 +7423,11 @@
       "Tomlin'd Up and Ready",
       "Tomlin of Fame",
       "Tomlin-A-Palooza",
-      "The Tomlin Show"
+      "The Tomlin Show",
+      "Nae\u2019Qwan Lily Tomlin"
     ],
     "active": true,
-    "tier": "template"
+    "tier": "curated"
   },
   {
     "id": "jahmiryoung_mia",
@@ -8102,10 +8107,11 @@
       "Proctor-A-Palooza",
       "Tyrese Proctor and the Fantasy Machine",
       "Proctor's Fantasy Fortress",
-      "The Proctor Show"
+      "The Proctor Show",
+      "Tyrese Proctor & Gamble"
     ],
     "active": true,
-    "tier": "template"
+    "tier": "curated"
   },
   {
     "id": "kamjones_mil",
@@ -10959,6 +10965,19 @@
     "pos": "C",
     "names": [
       "Merry Kristaps"
+    ],
+    "active": true,
+    "tier": "curated"
+  },
+  {
+    "id": "lonzoball_cle",
+    "first": "Lonzo",
+    "last": "Ball",
+    "team": "CLE",
+    "pos": "PG",
+    "names": [
+      "Why Have A Ballroom With No Lonzo Ball",
+      "Kermit And Lonzo"
     ],
     "active": true,
     "tier": "curated"
