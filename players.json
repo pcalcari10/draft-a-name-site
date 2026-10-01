@@ -13,10 +13,18 @@
       "I Call Gibbs",
       "Gibbs Me Shelter",
       "Never Gonna Gibbs You Up",
-      "The Man In Jahmyrror"
+      "The Man In Jahmyrror",
+      "Lisan al-Gibbs",
+      "Jahmyr Is the Mind Killer"
     ],
     "active": true,
-    "tier": "curated"
+    "tier": "curated",
+    "taggedNames": {
+      "movie": [
+        "Lisan al-Gibbs",
+        "Jahmyr Is the Mind Killer"
+      ]
+    }
   },
   {
     "id": "bijanrobinson_atl",
@@ -42,16 +50,25 @@
       "Bed, Bath, and Bijan",
       "Robinson And Bijan Crusoe",
       "Bed, Bath and Bijan",
-      "Obi-Jan Kenobi"
+      "Obi-Jan Kenobi",
+      "Bed Bath & Bijan",
+      "Bijan al-Ghaib",
+      "Crazy Rich Bijans",
+      "OBijan Kenobi",
+      "O-Bijan Kenobi"
     ],
     "active": true,
     "tier": "curated",
     "taggedNames": {
       "movie": [
-        "Obi-Jan Kenobi"
+        "Obi-Jan Kenobi",
+        "Bijan al-Ghaib",
+        "Crazy Rich Bijans"
       ],
       "starwars": [
-        "Obi-Jan Kenobi"
+        "Obi-Jan Kenobi",
+        "OBijan Kenobi",
+        "O-Bijan Kenobi"
       ]
     }
   },
@@ -217,10 +234,17 @@
       "Brownie Points",
       "Take You To Brown Town",
       "Chase Brown Sugar",
-      "Cut to the Chase"
+      "Cut to the Chase",
+      "I Chase Brown People",
+      "Chase Brown Boutte"
     ],
     "active": true,
-    "tier": "curated"
+    "tier": "curated",
+    "taggedNames": {
+      "movie": [
+        "I Chase Brown People"
+      ]
+    }
   },
   {
     "id": "saquonbarkley_phi",
@@ -252,7 +276,8 @@
       "Saquon Deez",
       "Barkley Sinatra",
       "Gone In 60 Saquons",
-      "Quadzilla"
+      "Quadzilla",
+      "Make Em Saquon"
     ],
     "active": true,
     "tier": "curated",
@@ -276,13 +301,16 @@
       "Jeantrify",
       "Ladies And Jeantymen",
       "Premature Ejeantylation",
-      "Ashton Powers"
+      "Ashton Powers",
+      "Fava Beans and a Nice Jeanty",
+      "Ladies and Jeantyman"
     ],
     "active": true,
     "tier": "curated",
     "taggedNames": {
       "movie": [
-        "Ashton Powers"
+        "Ashton Powers",
+        "Fava Beans and a Nice Jeanty"
       ]
     }
   },
@@ -314,13 +342,18 @@
       "Ja'Marrvelous Mrs. Maisel",
       "Ja\u2019Marrch Madness",
       "Ja\u2019Marr Ja\u2019Marr Binks",
-      "Super Ja'Marrio"
+      "Super Ja'Marrio",
+      "Super Ja'Mario",
+      "Ja'Marr-a-Lago",
+      "Ja Price Is Right"
     ],
     "active": true,
     "tier": "curated",
     "taggedNames": {
       "tv": [
-        "Ja'Marrvelous Mrs. Maisel"
+        "Ja'Marrvelous Mrs. Maisel",
+        "Super Ja'Mario",
+        "Ja Price Is Right"
       ],
       "movie": [
         "Ja\u2019Marr Ja\u2019Marr Binks"
@@ -394,7 +427,8 @@
       "Teenage Mutant Njigba Turtles",
       "Sorry Smith-Jaxon",
       "American Njigba Warriors",
-      "Captain Jaxon Sparrow"
+      "Captain Jaxon Sparrow",
+      "JSN Bourne"
     ],
     "active": true,
     "tier": "curated",
@@ -403,7 +437,8 @@
         "American Njigba Warriors"
       ],
       "movie": [
-        "Captain Jaxon Sparrow"
+        "Captain Jaxon Sparrow",
+        "JSN Bourne"
       ]
     }
   },
@@ -438,10 +473,18 @@
       "Puka Face",
       "Apukalypse Now",
       "Don't Puka The Bear",
-      "Puka Shelled"
+      "Puka Shelled",
+      "Puka Nacua D.D.S.",
+      "Puka Doncic",
+      "I Choose You, Pukachu"
     ],
     "active": true,
-    "tier": "curated"
+    "tier": "curated",
+    "taggedNames": {
+      "tv": [
+        "I Choose You, Pukachu"
+      ]
+    }
   },
   {
     "id": "amonrastbrown_det",
@@ -696,7 +739,8 @@
       "Slim Pickens",
       "Pickens Up The Pace",
       "Pickens My Nose",
-      "Pickens A Wedgie"
+      "Pickens A Wedgie",
+      "Look at All Those Pickens"
     ],
     "active": true,
     "tier": "curated"
@@ -753,13 +797,17 @@
       "Lamar You Serious",
       "Lamar The Merrier",
       "Lamar You Not Entertained?",
-      "I'm Sorry Miss Jackson"
+      "I'm Sorry Miss Jackson",
+      "Lamar al-Ghaib"
     ],
     "active": true,
     "tier": "curated",
     "taggedNames": {
       "music": [
         "I'm Sorry Miss Jackson"
+      ],
+      "movie": [
+        "Lamar al-Ghaib"
       ]
     }
   },
@@ -804,7 +852,8 @@
       "In Olave I Trust",
       "Olave Cake",
       "Chris Lights The Way",
-      "Olave's Air Yards"
+      "Olave's Air Yards",
+      "Amon Olave of Drugs"
     ],
     "active": true,
     "tier": "curated",
@@ -847,7 +896,8 @@
       "All You Can Etienne",
       "Etienne Phone Home",
       "Public Etiennemy",
-      "SpaghEtienne Meatballs"
+      "SpaghEtienne Meatballs",
+      "Etienne T (AT&T)"
     ],
     "active": true,
     "tier": "curated",
@@ -887,10 +937,16 @@
       "Byashul Profiling",
       "Byashul Awareness",
       "Tuten Your Horn",
-      "I Can't Quit Tuten"
+      "I Can't Quit Tuten",
+      "Tutenfinity and Bijan"
     ],
     "active": true,
-    "tier": "curated"
+    "tier": "curated",
+    "taggedNames": {
+      "marvel": [
+        "Tutenfinity and Bijan"
+      ]
+    }
   },
   {
     "id": "jalenhurts_phi",
@@ -926,7 +982,9 @@
       "It Hurts when I PPR",
       "Jalen Hurts So Good",
       "Hurts Locker",
-      "It Hurts So Good"
+      "It Hurts So Good",
+      "Hurts Standing There",
+      "Hurt's Lemon Ade Stand"
     ],
     "active": true,
     "tier": "curated",
@@ -1012,10 +1070,20 @@
       "Malik's Mayhem",
       "Malik the Menace",
       "Nabers Think Im Selling Dope",
-      "Welcome to the Naberhood"
+      "Welcome to the Naberhood",
+      "Nabers Think I'm Selling Dope",
+      "Hi-Diddly-o-Nabers"
     ],
     "active": true,
-    "tier": "curated"
+    "tier": "curated",
+    "taggedNames": {
+      "music": [
+        "Nabers Think I'm Selling Dope"
+      ],
+      "tv": [
+        "Hi-Diddly-o-Nabers"
+      ]
+    }
   },
   {
     "id": "devontasmith_phi",
@@ -1109,7 +1177,8 @@
       "Drakes Coffee Cakes",
       "I Maye Score Tonight",
       "Drake It 'Til You Make It",
-      "Drake 'N' Ball Z"
+      "Drake 'N' Ball Z",
+      "Maye I Use the Laporta Potty"
     ],
     "active": true,
     "tier": "curated",
@@ -1212,7 +1281,8 @@
       "Lawrence Legend",
       "The Golden Locks",
       "In Trevor We Trust",
-      "Lawrence Welk, Yeah"
+      "Lawrence Welk, Yeah",
+      "Trevor Lawrence Hair"
     ],
     "active": true,
     "tier": "curated"
@@ -1249,10 +1319,17 @@
       "McConkey Kong",
       "Ladd'r Day Saints",
       "Shrek And McConkey",
-      "I Can't Find McConkeys"
+      "I Can't Find McConkeys",
+      "Playin with McConk",
+      "No Country for Old Ladds"
     ],
     "active": true,
-    "tier": "curated"
+    "tier": "curated",
+    "taggedNames": {
+      "movie": [
+        "No Country for Old Ladds"
+      ]
+    }
   },
   {
     "id": "joeburrow_cin",
@@ -1293,7 +1370,8 @@
       "Burrow My Sorrows",
       "Beg, Burrow, Steal",
       "Super Smash Burrows",
-      "G.I. Joe"
+      "G.I. Joe",
+      "B-B-B-Burrow and the Jeants"
     ],
     "active": true,
     "tier": "curated"
@@ -1395,7 +1473,12 @@
       "Bower Rangers",
       "All the Small Bowers",
       "All About That Bowers",
-      "Brock & Roll"
+      "Brock & Roll",
+      "Golden Bowers Bring Zay Flowers",
+      "Prepare to Die BOWERS",
+      "You Can't Win BOWERS",
+      "The Fall Will Kill Us Both BOWERS",
+      "Rock Out with Your Brock Out"
     ],
     "active": true,
     "tier": "curated",
@@ -1403,6 +1486,11 @@
       "music": [
         "All the Small Bowers",
         "All About That Bowers"
+      ],
+      "movie": [
+        "Prepare to Die BOWERS",
+        "You Can't Win BOWERS",
+        "The Fall Will Kill Us Both BOWERS"
       ]
     }
   },
@@ -1512,7 +1600,9 @@
       "Rice Cakes",
       "Need for Rashee",
       "Rice Above it",
-      "That's Rashee Said"
+      "That's Rashee Said",
+      "Crashee Rice",
+      "Rashee Rice Racing Inc"
     ],
     "active": true,
     "tier": "curated"
@@ -2088,7 +2178,8 @@
       "Goff The Rails",
       "Turn Your Head And Goff",
       "G'Off My Lawn",
-      "Turn Your Head & Goff"
+      "Turn Your Head & Goff",
+      "Kirking Goff Mahomies"
     ],
     "active": true,
     "tier": "curated"
@@ -2233,7 +2324,8 @@
       "Sam LaPorta Potty",
       "LaPorta Potty",
       "LaPorta Potties",
-      "LaPorta Authority"
+      "LaPorta Authority",
+      "ItSadiq in a Box!"
     ],
     "active": true,
     "tier": "curated"
@@ -2290,7 +2382,9 @@
     "pos": "QB",
     "names": [
       "Aww Shoughs",
-      "Sucks To Shough"
+      "Sucks To Shough",
+      "Shough'n Off for the Nabers",
+      "Shough Ones, Pt. II"
     ],
     "active": true,
     "tier": "curated"
@@ -2532,10 +2626,17 @@
       "Eat a bag of Nix",
       "Unsolicited Nix Pics",
       "Nix in a box",
-      "Bo Knows Fantasy"
+      "Bo Knows Fantasy",
+      "Got a Rodon",
+      "Nix Jackson if Ya Nasty"
     ],
     "active": true,
-    "tier": "curated"
+    "tier": "curated",
+    "taggedNames": {
+      "music": [
+        "Nix Jackson if Ya Nasty"
+      ]
+    }
   },
   {
     "id": "rachaadwhite_was",
@@ -5114,7 +5215,8 @@
       "Christian Mingle",
       "Living the Christian Life",
       "Christian's Zealots",
-      "Don't Kirk Me When I'm Down"
+      "Don't Kirk Me When I'm Down",
+      "We Are Christian Kirk"
     ],
     "active": true,
     "tier": "curated"
@@ -5379,10 +5481,18 @@
       "Tua Lipa",
       "Tua Steppin'",
       "Losing Tua Girl",
-      "Just The Tua Of Us"
+      "Just The Tua Of Us",
+      "Tuafinity and Bijan",
+      "Tua Fant Tee & Bijan",
+      "Tual"
     ],
     "active": true,
-    "tier": "curated"
+    "tier": "curated",
+    "taggedNames": {
+      "marvel": [
+        "Tuafinity and Bijan"
+      ]
+    }
   },
   {
     "id": "joshuapalmer_buf",
@@ -5609,7 +5719,8 @@
       "Tanks For the Memories",
       "Tank You, Next",
       "I'm Tank'ing",
-      "Tank You Very Much"
+      "Tank You Very Much",
+      "Dude, You're Getting Tank Dell'd!"
     ],
     "active": true,
     "tier": "curated"
@@ -15036,5 +15147,39 @@
     ],
     "active": true,
     "tier": "template"
+  },
+  {
+    "id": "reggiebush_no",
+    "first": "Reggie",
+    "last": "Bush",
+    "team": "NO",
+    "pos": "RB",
+    "names": [
+      "Kanye Stole Reggie's Bush"
+    ],
+    "active": true,
+    "tier": "curated",
+    "taggedNames": {
+      "legacy": [
+        "Kanye Stole Reggie's Bush"
+      ]
+    }
+  },
+  {
+    "id": "dwaynebowe_kc",
+    "first": "Dwayne",
+    "last": "Bowe",
+    "team": "KC",
+    "pos": "WR",
+    "names": [
+      "Somewhere Over Dwayne Bowe"
+    ],
+    "active": true,
+    "tier": "curated",
+    "taggedNames": {
+      "legacy": [
+        "Somewhere Over Dwayne Bowe"
+      ]
+    }
   }
 ]
