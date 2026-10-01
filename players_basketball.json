@@ -56,13 +56,17 @@
     "pos": "SF",
     "names": [
       "John, Paul George and Ringo",
-      "Keep It PG"
+      "Keep It PG",
+      "PG-13"
     ],
     "active": true,
     "tier": "curated",
     "taggedNames": {
       "music": [
         "John, Paul George and Ringo"
+      ],
+      "movie": [
+        "PG-13"
       ]
     }
   },
@@ -174,13 +178,15 @@
     "team": "NYK",
     "pos": "C",
     "names": [
-      "Little Drummond Boys"
+      "Little Drummond Boys",
+      "Little Drummond Boy"
     ],
     "active": true,
     "tier": "curated",
     "taggedNames": {
       "music": [
-        "Little Drummond Boys"
+        "Little Drummond Boys",
+        "Little Drummond Boy"
       ]
     }
   },
@@ -2830,7 +2836,8 @@
     "team": "PHI",
     "pos": "PG",
     "names": [
-      "Maxey Pad My Stats"
+      "Maxey Pad My Stats",
+      "Maxey Pad"
     ],
     "active": true,
     "tier": "curated"
@@ -4670,10 +4677,16 @@
       "Livin' on a Walker",
       "Jabari's Excellent Adventure",
       "Jabari & Chill",
-      "The Walker Show"
+      "The Walker Show",
+      "Jabari Walker, Texas Ranger"
     ],
     "active": true,
-    "tier": "template"
+    "tier": "curated",
+    "taggedNames": {
+      "tv": [
+        "Jabari Walker, Texas Ranger"
+      ]
+    }
   },
   {
     "id": "calebhoustan_nop",
@@ -7160,10 +7173,11 @@
       "Edgecombe Happens",
       "Edgecombe-tastic Voyage",
       "Edgecombe's Fantasy Fortress",
-      "VJ & Chill"
+      "VJ & Chill",
+      "Cutting Edgecombe"
     ],
     "active": true,
-    "tier": "template"
+    "tier": "curated"
   },
   {
     "id": "trejohnson_was",
