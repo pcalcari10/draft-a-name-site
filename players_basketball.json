@@ -84,13 +84,15 @@
       "Every Kiss Begins with Klay",
       "Fifty Shades Of Klay",
       "Klay Pigeon",
-      "KlayStation"
+      "KlayStation",
+      "50 Shades of Klay"
     ],
     "active": true,
     "tier": "curated",
     "taggedNames": {
       "movie": [
-        "Fifty Shades Of Klay"
+        "Fifty Shades Of Klay",
+        "50 Shades of Klay"
       ]
     }
   },
@@ -295,7 +297,8 @@
     "team": "CHA",
     "pos": "PG",
     "names": [
-      "Dwight K. Schroder"
+      "Dwight K. Schroder",
+      "Schroder's KAT"
     ],
     "active": true,
     "tier": "curated",
@@ -1774,7 +1777,8 @@
     "team": "ORL",
     "pos": "PF",
     "names": [
-      "Kevin Fort Knox"
+      "Kevin Fort Knox",
+      "School of Hard Knox"
     ],
     "active": true,
     "tier": "curated"
@@ -1798,7 +1802,8 @@
     "team": "LAL",
     "pos": "SG",
     "names": [
-      "Let's Talk About Sexton"
+      "Let's Talk About Sexton",
+      "Sexton at Work"
     ],
     "active": true,
     "tier": "curated",
@@ -2330,7 +2335,8 @@
     "team": "UTA",
     "pos": "C",
     "names": [
-      "Mo Problems Mo Bamba"
+      "Mo Problems Mo Bamba",
+      "Mo Bamba No. 5"
     ],
     "active": true,
     "tier": "curated"
@@ -2383,7 +2389,8 @@
     "pos": "SF",
     "names": [
       "Barrett Essentials",
-      "RJ Barrett Browning"
+      "RJ Barrett Browning",
+      "Grin and Barrett"
     ],
     "active": true,
     "tier": "curated"
@@ -2780,7 +2787,8 @@
       "Herro's Heroes",
       "Herro's Advantage",
       "Herro's Journey",
-      "There Goes My Herro"
+      "There Goes My Herro",
+      "SuperHerro's"
     ],
     "active": true,
     "tier": "curated"
@@ -10208,7 +10216,8 @@
     "team": "TOR",
     "pos": "PF",
     "names": [
-      "Ibaka Flocka Flame"
+      "Ibaka Flocka Flame",
+      "Serge Protector"
     ],
     "active": true,
     "tier": "curated",
@@ -10543,13 +10552,15 @@
     "pos": "C",
     "names": [
       "Dedmon Walking",
-      "Dedmon's Distinctive"
+      "Dedmon's Distinctive",
+      "Dedmon Tells No Tales"
     ],
     "active": true,
     "tier": "curated",
     "taggedNames": {
       "movie": [
-        "Dedmon Walking"
+        "Dedmon Walking",
+        "Dedmon Tells No Tales"
       ],
       "legacy": [
         "Dedmon Walking",
@@ -10843,7 +10854,8 @@
     "pos": "PG",
     "names": [
       "Why Have A Ballroom With No Lonzo Ball",
-      "Kermit And Lonzo"
+      "Kermit And Lonzo",
+      "Get Off My Lonzo"
     ],
     "active": true,
     "tier": "curated"
@@ -10920,7 +10932,8 @@
     "team": "SAC",
     "pos": "PF",
     "names": [
-      "MTV's Dario"
+      "MTV's Dario",
+      "Super Dario Bros."
     ],
     "active": true,
     "tier": "curated",
@@ -10930,6 +10943,9 @@
       ],
       "legacy": [
         "MTV's Dario"
+      ],
+      "movie": [
+        "Super Dario Bros."
       ]
     }
   },
@@ -11081,6 +11097,57 @@
     "taggedNames": {
       "legacy": [
         "Eric Bledsoe Much That He Needed a Transfusion"
+      ]
+    }
+  },
+  {
+    "id": "nicolasbatum_lac",
+    "first": "Nicolas",
+    "last": "Batum",
+    "team": "LAC",
+    "pos": "SF",
+    "names": [
+      "Batum Raiders"
+    ],
+    "active": true,
+    "tier": "curated",
+    "taggedNames": {
+      "movie": [
+        "Batum Raiders"
+      ]
+    }
+  },
+  {
+    "id": "evanfournier_nyk",
+    "first": "Evan",
+    "last": "Fournier",
+    "team": "NYK",
+    "pos": "SG",
+    "names": [
+      "Team Never Google Fournier"
+    ],
+    "active": true,
+    "tier": "curated",
+    "taggedNames": {
+      "legacy": [
+        "Team Never Google Fournier"
+      ]
+    }
+  },
+  {
+    "id": "victoroladipo_mia",
+    "first": "Victor",
+    "last": "Oladipo",
+    "team": "MIA",
+    "pos": "SG",
+    "names": [
+      "Oladipo's OlaStars"
+    ],
+    "active": true,
+    "tier": "curated",
+    "taggedNames": {
+      "legacy": [
+        "Oladipo's OlaStars"
       ]
     }
   }
