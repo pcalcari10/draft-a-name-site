@@ -12,10 +12,16 @@
       "Straight Outta Butler",
       "Jimmy & Chill",
       "I Can't Believe It's Not Butler",
-      "The Butler Brigade"
+      "The Butler Brigade",
+      "The Jimmy Butler Did It"
     ],
     "active": true,
-    "tier": "curated"
+    "tier": "curated",
+    "taggedNames": {
+      "movie": [
+        "The Jimmy Butler Did It"
+      ]
+    }
   },
   {
     "id": "timhardaway_mia",
@@ -148,7 +154,8 @@
       "Steph Infection",
       "Shang-Chi and the Legend of the Ten Currys",
       "Curry's Comrades",
-      "Seth Chicken Curry"
+      "Seth Chicken Curry",
+      "Steph Chicken Curry"
     ],
     "active": true,
     "tier": "curated",
@@ -1292,7 +1299,8 @@
       "All Hield, No Filler",
       "Buddy & Chill",
       "In Hield We Trust",
-      "Hield of Dreams"
+      "Hield of Dreams",
+      "Buddy Wounded, Buddy Hield"
     ],
     "active": true,
     "tier": "curated",
@@ -1399,10 +1407,16 @@
       "Straight Outta Payton",
       "Gary Vibes Only",
       "Payton'd Up and Ready",
-      "The Payton Show"
+      "The Payton Show",
+      "Gary Payton Place"
     ],
     "active": true,
-    "tier": "template"
+    "tier": "curated",
+    "taggedNames": {
+      "tv": [
+        "Gary Payton Place"
+      ]
+    }
   },
   {
     "id": "dorianfinneysmith_atl",
@@ -1890,10 +1904,11 @@
       "Knox'd Up and Ready",
       "Kevin Vibes Only",
       "In Knox We Trust",
-      "Knox-A-Palooza"
+      "Knox-A-Palooza",
+      "Kevin Fort Knox"
     ],
     "active": true,
-    "tier": "template"
+    "tier": "curated"
   },
   {
     "id": "mitchellrobinson_bos",
@@ -3672,10 +3687,17 @@
       "In Moody We Trust",
       "Livin' on a Moody",
       "All Moody, No Filler",
-      "Moody's Fantasy Fortress"
+      "Moody's Fantasy Fortress",
+      "Moses Moody Blues",
+      "Moses Moody Teenagers"
     ],
     "active": true,
-    "tier": "template"
+    "tier": "curated",
+    "taggedNames": {
+      "music": [
+        "Moses Moody Blues"
+      ]
+    }
   },
   {
     "id": "charlesbassey_gsw",
@@ -5406,10 +5428,11 @@
       "Brandin Vibes Only",
       "Brandin & Chill",
       "Podziemski Happens",
-      "Brandin's Excellent Adventure"
+      "Brandin's Excellent Adventure",
+      "Two Peas In A Podziemski"
     ],
     "active": true,
-    "tier": "template"
+    "tier": "curated"
   },
   {
     "id": "bilalcoulibaly_was",
@@ -5868,10 +5891,11 @@
       "Straight Outta Jackson-Davis",
       "Jackson-Davis'd Up and Ready",
       "The Jackson-Davis Show",
-      "Jackson-Davis-A-Palooza"
+      "Jackson-Davis-A-Palooza",
+      "Trayce Elements"
     ],
     "active": true,
-    "tier": "template"
+    "tier": "curated"
   },
   {
     "id": "jalenwilson_atl",
@@ -6927,10 +6951,11 @@
       "Quinten Vibes Only",
       "Livin' on a Post",
       "Quinten & Chill",
-      "Post's Fantasy Fortress"
+      "Post's Fantasy Fortress",
+      "I'll Fix It In Quinten Post"
     ],
     "active": true,
-    "tier": "template"
+    "tier": "curated"
   },
   {
     "id": "justinedwards_phi",
