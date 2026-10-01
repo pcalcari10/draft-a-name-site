@@ -1878,10 +1878,11 @@
       "All Wagner, No Filler",
       "Wagner'd Up and Ready",
       "Moritz & Chill",
-      "The Wagner Show"
+      "The Wagner Show",
+      "Less Is Moritz"
     ],
     "active": true,
-    "tier": "template"
+    "tier": "curated"
   },
   {
     "id": "isaiahhartenstein_okc",
@@ -2967,10 +2968,11 @@
       "Desmond's Excellent Adventure",
       "All Bane, No Filler",
       "Bane-tastic Voyage",
-      "Desmond Vibes Only"
+      "Desmond Vibes Only",
+      "Desmond Bane Of My Existence"
     ],
     "active": true,
-    "tier": "template"
+    "tier": "curated"
   },
   {
     "id": "aaronnesmith_ind",
@@ -3700,10 +3702,11 @@
       "Suggs-tastic Voyage",
       "Straight Outta Suggs",
       "Jalen & Chill",
-      "Suggs's Fantasy Fortress"
+      "Suggs's Fantasy Fortress",
+      "Jalen Terrell Suggs"
     ],
     "active": true,
-    "tier": "template"
+    "tier": "curated"
   },
   {
     "id": "jonathankuminga_min",
@@ -4430,10 +4433,19 @@
     "names": [
       "Huevos Bancheros",
       "Paolo Party",
-      "Banchero Bench Bosses"
+      "Banchero Bench Bosses",
+      "Rachel And Paolo Banchero",
+      "Nikki And Paolo Banchero (pick your pop culture preference!)",
+      "Paolo Banchero Finds Out"
     ],
     "active": true,
-    "tier": "curated"
+    "tier": "curated",
+    "taggedNames": {
+      "tv": [
+        "Rachel And Paolo Banchero",
+        "Nikki And Paolo Banchero (pick your pop culture preference!)"
+      ]
+    }
   },
   {
     "id": "trevorkeels_mia",
@@ -4946,10 +4958,11 @@
       "The Cain Show",
       "Cain Happens",
       "Cain'd Up and Ready",
-      "Livin' on a Cain"
+      "Livin' on a Cain",
+      "Jamal Cain And Abel"
     ],
     "active": true,
-    "tier": "template"
+    "tier": "curated"
   },
   {
     "id": "natewilliams_gsw",
@@ -5367,7 +5380,8 @@
     "team": "DAL",
     "pos": "SF",
     "names": [
-      "The Price Is Dwight"
+      "The Price Is Dwight",
+      "The Famous Jett Howard"
     ],
     "active": true,
     "tier": "curated",
@@ -5958,10 +5972,11 @@
       "Straight Outta da Silva",
       "The da Silva Show",
       "In da Silva We Trust",
-      "da Silva-A-Palooza"
+      "da Silva-A-Palooza",
+      "Gold And Da Silva"
     ],
     "active": true,
-    "tier": "template"
+    "tier": "curated"
   },
   {
     "id": "jaylontyson_cle",
@@ -7999,10 +8014,11 @@
       "Straight Outta Penda",
       "Livin' on a Penda",
       "Penda of Fame",
-      "Noah & Chill"
+      "Noah & Chill",
+      "Noah Penda Bear"
     ],
     "active": true,
-    "tier": "template"
+    "tier": "curated"
   },
   {
     "id": "chuckyhepburn_tor",
