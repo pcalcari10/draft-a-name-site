@@ -89,10 +89,15 @@ async function main() {
       p.team &&
       p.first_name &&
       p.last_name &&
-      VALID_POSITIONS.includes(p.position) &&
-      (p.status === 'Active' || p.active === true)
+      VALID_POSITIONS.includes(p.position)
+      // Deliberately not checking p.active/p.status here: Sleeper appears to
+      // flip active to false for some injured players even while they
+      // remain genuinely rostered (confirmed via Kristaps Porzingis, who
+      // was missing from our synced data despite being a real, currently-
+      // signed player sidelined by injury). Having a team assigned is a
+      // more reliable signal of being rostered than the active flag.
   );
-  console.log(`Found ${relevant.length} active PG/SG/SF/PF/C league-wide.`);
+  console.log(`Found ${relevant.length} rostered PG/SG/SF/PF/C league-wide (including injured).`);
 
   let players = [];
   try {
