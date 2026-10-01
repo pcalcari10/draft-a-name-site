@@ -310,7 +310,8 @@
       "Too Good to be Jrue",
       "Jrue Religion",
       "Jrue or False",
-      "This Much Is Jrue"
+      "This Much Is Jrue",
+      "Jrue Holiday Inn"
     ],
     "active": true,
     "tier": "curated",
@@ -2413,10 +2414,16 @@
       "Thybulle'd Up and Ready",
       "Matisse Thybulle and the Fantasy Machine",
       "Matisse & Chill",
-      "Thybulle's Fantasy Fortress"
+      "Thybulle's Fantasy Fortress",
+      "Henri Matisse Thybulle"
     ],
     "active": true,
-    "tier": "template"
+    "tier": "curated",
+    "taggedNames": {
+      "movie": [
+        "Henri Matisse Thybulle"
+      ]
+    }
   },
   {
     "id": "ruihachimura_lac",
@@ -3167,10 +3174,11 @@
       "The Avdija Show",
       "All Avdija, No Filler",
       "In Avdija We Trust",
-      "Deni Vibes Only"
+      "Deni Vibes Only",
+      "Deni's, Open 24 Hours"
     ],
     "active": true,
-    "tier": "template"
+    "tier": "curated"
   },
   {
     "id": "vtkrej_por",
@@ -4664,10 +4672,11 @@
       "Sharpe Happens",
       "Sharpe-A-Palooza",
       "Sharpe-tastic Voyage",
-      "Shaedon's Excellent Adventure"
+      "Shaedon's Excellent Adventure",
+      "Lower The Shaedon"
     ],
     "active": true,
-    "tier": "template"
+    "tier": "curated"
   },
   {
     "id": "jabariwalker_phi",
@@ -5602,10 +5611,17 @@
       "The Camara Show",
       "Camara-A-Palooza",
       "Toumani Camara and the Fantasy Machine",
-      "In Camara We Trust"
+      "In Camara We Trust",
+      "Digital Camara",
+      "Toumani Or Not Enough"
     ],
     "active": true,
-    "tier": "template"
+    "tier": "curated",
+    "taggedNames": {
+      "music": [
+        "Digital Camara"
+      ]
+    }
   },
   {
     "id": "rayanrupert_phi",
@@ -5794,10 +5810,11 @@
       "Reath'd Up and Ready",
       "Duop's Excellent Adventure",
       "Duop Reath and the Fantasy Machine",
-      "Duop & Chill"
+      "Duop & Chill",
+      "Christmas Reath"
     ],
     "active": true,
-    "tier": "template"
+    "tier": "curated"
   },
   {
     "id": "petenance_mil",
@@ -6245,10 +6262,12 @@
       "In Clingan We Trust",
       "Clingan Happens",
       "Clingan of Fame",
-      "Clingan'd Up and Ready"
+      "Clingan'd Up and Ready",
+      "Do You Speak Clingan",
+      "Stage 5 Clingan"
     ],
     "active": true,
-    "tier": "template"
+    "tier": "curated"
   },
   {
     "id": "devincarter_bos",
@@ -7599,10 +7618,11 @@
       "Livin' on a Hansen",
       "Hansen Happens",
       "Yang's Excellent Adventure",
-      "The Hansen Show"
+      "The Hansen Show",
+      "Yin Yang Hansen"
     ],
     "active": true,
-    "tier": "template"
+    "tier": "curated"
   },
   {
     "id": "niqueclifford_sac",
