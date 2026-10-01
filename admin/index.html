@@ -951,15 +951,7 @@ function updateProgressStats(){
       const fromTeams = allTeams.reduce((sum, t) => sum + (t.taggedNames && t.taggedNames[category] ? t.taggedNames[category].length : 0), 0);
       return fromGeneric + fromPlayers + fromTeams;
     }
-    const tags = [];
-    if(categoryCount('movie') > 0) tags.push(`${categoryCount('movie')} tagged movie`);
-    if(categoryCount('music') > 0) tags.push(`${categoryCount('music')} tagged music`);
-    if(categoryCount('tv') > 0) tags.push(`${categoryCount('tv')} tagged tv`);
-    if(categoryCount('starwars') > 0) tags.push(`${categoryCount('starwars')} tagged star wars`);
-    if(categoryCount('food') > 0) tags.push(`${categoryCount('food')} tagged food`);
-    if(categoryCount('marvel') > 0) tags.push(`${categoryCount('marvel')} tagged marvel`);
-    const tagText = tags.length > 0 ? ` <span style="color:var(--dim); font-size:11.5px;">(${tags.join(', ')})</span>` : '';
-    genericWrap.innerHTML = `🃏 <span class="js-breakdown-generic">${allGeneric.length}</span> generic names${tagText}`;
+    genericWrap.innerHTML = `🃏 <span class="js-breakdown-generic">${allGeneric.length}</span> generic names`;
 
     // A readable, vertical breakdown of every category this sport has,
     // sorted by count so the richest categories surface first.
