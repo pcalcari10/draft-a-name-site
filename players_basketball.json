@@ -38,7 +38,8 @@
     "pos": "PG",
     "names": [
       "Kyrie Irving Berlin",
-      "Kyrie's Flat Earth Society"
+      "Kyrie's Flat Earth Society",
+      "Kyrie's Flat Earth Dunkers"
     ],
     "active": true,
     "tier": "curated",
@@ -124,7 +125,8 @@
       "Shang-Chi and the Legend of the Ten Currys",
       "Curry's Comrades",
       "Seth Chicken Curry",
-      "Steph Chicken Curry"
+      "Steph Chicken Curry",
+      "Curry's Splash Potatoes"
     ],
     "active": true,
     "tier": "curated",
@@ -266,7 +268,8 @@
       "Harden's House",
       "Harden Of Eden",
       "Harden Your Arteries",
-      "Harden the Interruption"
+      "Harden the Interruption",
+      "Harden's Beard Ticklers"
     ],
     "active": true,
     "tier": "curated",
@@ -442,7 +445,8 @@
       "Irrefutable James",
       "King James Version",
       "LeBron's Legacy",
-      "Brains Before LeBron"
+      "Brains Before LeBron",
+      "LeBron's Hairline Hustle"
     ],
     "active": true,
     "tier": "curated",
@@ -481,7 +485,8 @@
     "names": [
       "Antetokounmpbros",
       "Antetokounmpocaypse",
-      "Giannis Generation"
+      "Giannis Generation",
+      "Giannis' Freaky Dunks"
     ],
     "active": true,
     "tier": "curated"
@@ -512,7 +517,8 @@
     "names": [
       "Alien Durant Farm",
       "Durant Durant",
-      "Durantula"
+      "Durantula",
+      "KD's Burner Accounts"
     ],
     "active": true,
     "tier": "curated",
@@ -598,7 +604,8 @@
     "names": [
       "A Friend In Need Is A Friend Embiid",
       "Embiid For Speed: Underground 2",
-      "WebEmbiid"
+      "WebEmbiid",
+      "Embiid's Process Servers"
     ],
     "active": true,
     "tier": "curated",
@@ -1004,10 +1011,11 @@
       "All Booker, No Filler",
       "Booker's Fantasy Fortress",
       "Livin' on a Booker",
-      "Devin Vibes Only"
+      "Devin Vibes Only",
+      "Booker's Phoenix Burners"
     ],
     "active": true,
-    "tier": "template"
+    "tier": "curated"
   },
   {
     "id": "patconnaughton_cha",
@@ -1033,7 +1041,8 @@
       "Jokic's On You",
       "Full Metal Jokic",
       "Jokic of the Year",
-      "Jokic of All Trades"
+      "Jokic of All Trades",
+      "Jokic's Nugget Nuzzlers"
     ],
     "active": true,
     "tier": "curated",
@@ -1528,7 +1537,8 @@
     "pos": "SF",
     "names": [
       "Don't Go Jayson Waterfalls",
-      "Jayson Tatum O'Neal"
+      "Jayson Tatum O'Neal",
+      "Tatum's Celtic Ticklers"
     ],
     "active": true,
     "tier": "curated",
@@ -1697,7 +1707,8 @@
     "names": [
       "De'Aaron on the Side of Caution",
       "Zero Fox Given",
-      "20th Century Fox"
+      "20th Century Fox",
+      "Fox's Sacramento Speedsters"
     ],
     "active": true,
     "tier": "curated"
@@ -1970,7 +1981,8 @@
     "names": [
       "Ice Trae",
       "Ice Trae Baby",
-      "Trae Tables Upright And Locked Position"
+      "Trae Tables Upright And Locked Position",
+      "Trae's Ice Cold Trayes"
     ],
     "active": true,
     "tier": "curated",
@@ -2048,10 +2060,16 @@
     "pos": "PG",
     "names": [
       "Shai It Ain't So",
-      "Shai Stadium"
+      "Shai Stadium",
+      "Shai's Smooth Operators"
     ],
     "active": true,
-    "tier": "curated"
+    "tier": "curated",
+    "taggedNames": {
+      "music": [
+        "Shai's Smooth Operators"
+      ]
+    }
   },
   {
     "id": "graysonallen_cha",
@@ -2127,7 +2145,8 @@
       "Scooby Doncic",
       "On Like Doncic Kong",
       "Living La Vida Luka",
-      "Lukalike"
+      "Lukalike",
+      "Luka's Magic Doncic"
     ],
     "active": true,
     "tier": "curated",
@@ -2575,7 +2594,8 @@
       "Ja Patrol",
       "Ja Wick",
       "Mr. Morantastic",
-      "Ja Rules"
+      "Ja Rules",
+      "Ja Morant's Dunk Dynasty"
     ],
     "active": true,
     "tier": "curated",
@@ -2629,7 +2649,8 @@
     "names": [
       "The Zion King",
       "Zion Impact",
-      "Zion the Top"
+      "Zion the Top",
+      "Zion's Pelican Pounders"
     ],
     "active": true,
     "tier": "curated",
@@ -2922,13 +2943,17 @@
     "pos": "SG",
     "names": [
       "Edwards Scissorhands",
-      "Rebound Edwards"
+      "Rebound Edwards",
+      "Ant-Man's Tiny Terrors"
     ],
     "active": true,
     "tier": "curated",
     "taggedNames": {
       "movie": [
         "Edwards Scissorhands"
+      ],
+      "marvel": [
+        "Ant-Man's Tiny Terrors"
       ]
     }
   },
@@ -3459,10 +3484,11 @@
       "Cade's Excellent Adventure",
       "Cunningham-A-Palooza",
       "Cade & Chill",
-      "All Cunningham, No Filler"
+      "All Cunningham, No Filler",
+      "Cade's Motor City Mavericks"
     ],
     "active": true,
-    "tier": "template"
+    "tier": "curated"
   },
   {
     "id": "lukagarza_bos",
@@ -3781,7 +3807,8 @@
       "Sengun and Done",
       "Sengun Thrones",
       "Stranger Senguns",
-      "The Swiss Alperens"
+      "The Swiss Alperens",
+      "Sengun's Houston Hookers"
     ],
     "active": true,
     "tier": "curated",
@@ -4446,7 +4473,8 @@
       "Crossover Chet",
       "Holmgren's Hoop House",
       "\u201cYes, Chet!\u201d",
-      "Sherlock Holmgren"
+      "Sherlock Holmgren",
+      "Chet's Unicorn Block Party"
     ],
     "active": true,
     "tier": "curated",
@@ -5253,7 +5281,8 @@
       "Wembanama Slamma",
       "Sir, This Is A Wemby's",
       "Diary Of A Wemby Kid",
-      "Winbanyama"
+      "Winbanyama",
+      "Wemby's Web Blockers"
     ],
     "active": true,
     "tier": "curated",
@@ -10076,7 +10105,8 @@
     "team": "LAL",
     "pos": "SG",
     "names": [
-      "Kobe Wan Kenobi"
+      "Kobe Wan Kenobi",
+      "Mamba Mentality Misfits"
     ],
     "active": true,
     "tier": "curated",
@@ -10085,7 +10115,8 @@
         "Kobe Wan Kenobi"
       ],
       "legacy": [
-        "Kobe Wan Kenobi"
+        "Kobe Wan Kenobi",
+        "Mamba Mentality Misfits"
       ]
     }
   },
@@ -10975,6 +11006,23 @@
     "taggedNames": {
       "legacy": [
         "I'm just Joakim with ya"
+      ]
+    }
+  },
+  {
+    "id": "shaquilleoneal_lal",
+    "first": "Shaquille",
+    "last": "O'Neal",
+    "team": "LAL",
+    "pos": "C",
+    "names": [
+      "Hack-a-Shaq Pack"
+    ],
+    "active": true,
+    "tier": "curated",
+    "taggedNames": {
+      "legacy": [
+        "Hack-a-Shaq Pack"
       ]
     }
   }
