@@ -15,7 +15,10 @@
       "Never Gonna Gibbs You Up",
       "The Man In Jahmyrror",
       "Lisan al-Gibbs",
-      "Jahmyr Is the Mind Killer"
+      "Jahmyr Is the Mind Killer",
+      "Gibbs You Hell",
+      "London Gibbs Is Falling Down",
+      "Any Gibb'n Sunday"
     ],
     "active": true,
     "tier": "curated",
@@ -241,7 +244,9 @@
       "Chase Brown Sugar",
       "Cut to the Chase",
       "I Chase Brown People",
-      "Chase Brown Boutte"
+      "Chase Brown Boutte",
+      "My Nabers Chase Brown People",
+      "I Chase Brown Nabers"
     ],
     "active": true,
     "tier": "curated",
@@ -282,13 +287,17 @@
       "Barkley Sinatra",
       "Gone In 60 Saquons",
       "Quadzilla",
-      "Make Em Saquon"
+      "Make Em Saquon",
+      "The Saquanos"
     ],
     "active": true,
     "tier": "curated",
     "taggedNames": {
       "movie": [
         "Gone In 60 Saquons"
+      ],
+      "marvel": [
+        "The Saquanos"
       ]
     }
   },
@@ -308,7 +317,8 @@
       "Premature Ejeantylation",
       "Ashton Powers",
       "Fava Beans and a Nice Jeanty",
-      "Ladies and Jeantyman"
+      "Ladies and Jeantyman",
+      "B-B-B-Burrow and the Jeants"
     ],
     "active": true,
     "tier": "curated",
@@ -515,7 +525,8 @@
       "Sun God's Plan",
       "Sun God",
       "Amonster's Ball",
-      "Amon The Edge Of Glory"
+      "Amon The Edge Of Glory",
+      "Amon Olave of Drugs"
     ],
     "active": true,
     "tier": "curated",
@@ -803,7 +814,8 @@
       "Lamar The Merrier",
       "Lamar You Not Entertained?",
       "I'm Sorry Miss Jackson",
-      "Lamar al-Ghaib"
+      "Lamar al-Ghaib",
+      "Lamarvel Cinematic Universe"
     ],
     "active": true,
     "tier": "curated",
@@ -813,6 +825,9 @@
       ],
       "movie": [
         "Lamar al-Ghaib"
+      ],
+      "marvel": [
+        "Lamarvel Cinematic Universe"
       ]
     }
   },
@@ -926,7 +941,9 @@
       "Zay My Name",
       "April Showers Bring Zay Flowers",
       "Gen Zay",
-      "Flowers For Algernon"
+      "Flowers For Algernon",
+      "Golden Bowers Bring Zay Flowers",
+      "Golden Flowers"
     ],
     "active": true,
     "tier": "curated"
@@ -1077,7 +1094,10 @@
       "Nabers Think Im Selling Dope",
       "Welcome to the Naberhood",
       "Nabers Think I'm Selling Dope",
-      "Hi-Diddly-o-Nabers"
+      "Hi-Diddly-o-Nabers",
+      "My Nabers Chase Brown People",
+      "I Chase Brown Nabers",
+      "Naberhood Watch"
     ],
     "active": true,
     "tier": "curated",
@@ -1483,7 +1503,8 @@
       "Prepare to Die BOWERS",
       "You Can't Win BOWERS",
       "The Fall Will Kill Us Both BOWERS",
-      "Rock Out with Your Brock Out"
+      "Rock Out with Your Brock Out",
+      "Irritable Bowers Syndrome"
     ],
     "active": true,
     "tier": "curated",
@@ -1773,7 +1794,8 @@
       "Prescott To Fill",
       "Dak To The Future",
       "Baby Got Dak",
-      "The Dak Side"
+      "The Dak Side",
+      "Giving Out Dakshots"
     ],
     "active": true,
     "tier": "curated",
@@ -2184,7 +2206,8 @@
       "Turn Your Head And Goff",
       "G'Off My Lawn",
       "Turn Your Head & Goff",
-      "Kirking Goff Mahomies"
+      "Kirking Goff Mahomies",
+      "JaGoff in LaPorta-Potty"
     ],
     "active": true,
     "tier": "curated"
@@ -2330,8 +2353,8 @@
       "LaPorta Potty",
       "LaPorta Potties",
       "LaPorta Authority",
-      "ItSadiq in a Box!",
-      "Maye I Use the Laporta Potty"
+      "Maye I Use the Laporta Potty",
+      "JaGoff in LaPorta-Potty"
     ],
     "active": true,
     "tier": "curated"
@@ -2390,7 +2413,8 @@
       "Aww Shoughs",
       "Sucks To Shough",
       "Shough'n Off for the Nabers",
-      "Shough Ones, Pt. II"
+      "Shough Ones, Pt. II",
+      "Shough Around and Find Out"
     ],
     "active": true,
     "tier": "curated"
@@ -2633,7 +2657,6 @@
       "Unsolicited Nix Pics",
       "Nix in a box",
       "Bo Knows Fantasy",
-      "Got a Rodon",
       "Nix Jackson if Ya Nasty"
     ],
     "active": true,
@@ -2827,7 +2850,9 @@
     "names": [
       "Kicking Your Boutte",
       "My Team Sucks Boutte",
-      "Brazilian Boutte Lift"
+      "Brazilian Boutte Lift",
+      "Chase Brown Boutte",
+      "Golden Boutte"
     ],
     "active": true,
     "tier": "curated"
@@ -5417,10 +5442,20 @@
     "pos": "QB",
     "names": [
       "Watson Clinic",
-      "Elementary, My Dear Watson"
+      "Elementary, My Dear Watson",
+      "De'Zhaun Wick",
+      "'Zhaun Wick",
+      "De\u2019Zhaun of the Dead"
     ],
     "active": true,
-    "tier": "curated"
+    "tier": "curated",
+    "taggedNames": {
+      "movie": [
+        "De'Zhaun Wick",
+        "'Zhaun Wick",
+        "De\u2019Zhaun of the Dead"
+      ]
+    }
   },
   {
     "id": "olliegordonii_mia",
