@@ -44,10 +44,17 @@
       "All Irving, No Filler",
       "Straight Outta Irving",
       "In Irving We Trust",
-      "Livin' on a Irving"
+      "Livin' on a Irving",
+      "Kyrie Irving Berlin",
+      "Kyrie's Flat Earth Society"
     ],
     "active": true,
-    "tier": "template"
+    "tier": "curated",
+    "taggedNames": {
+      "music": [
+        "Kyrie Irving Berlin"
+      ]
+    }
   },
   {
     "id": "paulgeorge_bos",
@@ -86,7 +93,9 @@
       "Klay's Excellent Adventure",
       "Come Out and Klay",
       "Every Kiss Begins with Klay",
-      "Fifty Shades Of Klay"
+      "Fifty Shades Of Klay",
+      "Klay Pigeon",
+      "KlayStation"
     ],
     "active": true,
     "tier": "curated",
@@ -4902,10 +4911,16 @@
       "Christie of Fame",
       "Max & Chill",
       "All Christie, No Filler",
-      "Christie Happens"
+      "Christie Happens",
+      "Max Christie Brinkley"
     ],
     "active": true,
-    "tier": "template"
+    "tier": "curated",
+    "taggedNames": {
+      "movie": [
+        "Max Christie Brinkley"
+      ]
+    }
   },
   {
     "id": "tyresemartin_phi",
@@ -5689,10 +5704,11 @@
       "Dereck Vibes Only",
       "Dereck Lively and the Fantasy Machine",
       "Straight Outta Lively",
-      "Lively-A-Palooza"
+      "Lively-A-Palooza",
+      "Dereck Lively Banter"
     ],
     "active": true,
-    "tier": "template"
+    "tier": "curated"
   },
   {
     "id": "oliviermaxenceprosper_mem",
@@ -7995,10 +8011,17 @@
       "In Flagg We Trust",
       "The Flagg Show",
       "Flagg-tastic Voyage",
-      "Cooper's Excellent Adventure"
+      "Cooper's Excellent Adventure",
+      "Cooper Flagg On The Play",
+      "False Flagg Operation"
     ],
     "active": true,
-    "tier": "template"
+    "tier": "curated",
+    "taggedNames": {
+      "movie": [
+        "False Flagg Operation"
+      ]
+    }
   },
   {
     "id": "khamanmaluach_phx",
@@ -10981,5 +11004,22 @@
     ],
     "active": true,
     "tier": "curated"
+  },
+  {
+    "id": "danteexum_dal",
+    "first": "Dante",
+    "last": "Exum",
+    "team": "DAL",
+    "pos": "PG",
+    "names": [
+      "All My Exums Live In Texas"
+    ],
+    "active": true,
+    "tier": "curated",
+    "taggedNames": {
+      "music": [
+        "All My Exums Live In Texas"
+      ]
+    }
   }
 ]
