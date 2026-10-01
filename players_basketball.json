@@ -2361,7 +2361,8 @@
     "names": [
       "DeadPoole",
       "Poole Party 2.0",
-      "Shaqtin A Poole"
+      "Shaqtin A Poole",
+      "Swimming Poole"
     ],
     "active": true,
     "tier": "curated",
@@ -3484,10 +3485,11 @@
       "Murphy'd Up and Ready",
       "Livin' on a Murphy",
       "Trey's Excellent Adventure",
-      "Murphy-A-Palooza"
+      "Murphy-A-Palooza",
+      "Trey Murphy's Law"
     ],
     "active": true,
-    "tier": "template"
+    "tier": "curated"
   },
   {
     "id": "herbertjones_nop",
@@ -6050,10 +6052,11 @@
       "Straight Outta Missi",
       "Missi's Fantasy Fortress",
       "Missi-tastic Voyage",
-      "Missi-A-Palooza"
+      "Missi-A-Palooza",
+      "Yves Saint Laurent"
     ],
     "active": true,
-    "tier": "template"
+    "tier": "curated"
   },
   {
     "id": "baylorscheierman_bos",
@@ -7308,10 +7311,16 @@
       "Jeremiah Vibes Only",
       "Jeremiah & Chill",
       "Jeremiah's Excellent Adventure",
-      "Fears-A-Palooza"
+      "Fears-A-Palooza",
+      "Tears For Jeremiah Fears"
     ],
     "active": true,
-    "tier": "template"
+    "tier": "curated",
+    "taggedNames": {
+      "music": [
+        "Tears For Jeremiah Fears"
+      ]
+    }
   },
   {
     "id": "derikqueen_nop",
