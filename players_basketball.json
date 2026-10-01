@@ -1118,10 +1118,11 @@
       "Prince'd Up and Ready",
       "Livin' on a Prince",
       "Prince Happens",
-      "The Prince Show"
+      "The Prince Show",
+      "Taurean And Guarana"
     ],
     "active": true,
-    "tier": "template"
+    "tier": "curated"
   },
   {
     "id": "buddyhield_chi",
@@ -1413,10 +1414,16 @@
       "Kuzma'd Up and Ready",
       "Kyle Kuzma and the Fantasy Machine",
       "Kuzma of Fame",
-      "Kuzma-tastic Voyage"
+      "Kuzma-tastic Voyage",
+      "Emperor Kuzma"
     ],
     "active": true,
-    "tier": "template"
+    "tier": "curated",
+    "taggedNames": {
+      "starwars": [
+        "Emperor Kuzma"
+      ]
+    }
   },
   {
     "id": "alexcaruso_okc",
@@ -3253,10 +3260,11 @@
       "Jericho Vibes Only",
       "Sims of Fame",
       "Sims-A-Palooza",
-      "Sims'd Up and Ready"
+      "Sims'd Up and Ready",
+      "The Walls Of Jericho Sims"
     ],
     "active": true,
-    "tier": "template"
+    "tier": "curated"
   },
   {
     "id": "quentingrimes_lal",
@@ -4028,10 +4036,16 @@
       "Livin' on a Bouyea",
       "All Bouyea, No Filler",
       "Bouyea of Fame",
-      "Jamaree's Excellent Adventure"
+      "Jamaree's Excellent Adventure",
+      "\u201cBouyea\u201d \u2013 Stuart Scott"
     ],
     "active": true,
-    "tier": "template"
+    "tier": "curated",
+    "taggedNames": {
+      "tv": [
+        "\u201cBouyea\u201d \u2013 Stuart Scott"
+      ]
+    }
   },
   {
     "id": "keonellis_bkn",
