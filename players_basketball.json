@@ -575,7 +575,8 @@
       "Durant'd Up and Ready",
       "Kevin's Excellent Adventure",
       "Alien Durant Farm",
-      "Durant Durant"
+      "Durant Durant",
+      "Durantula"
     ],
     "active": true,
     "tier": "curated",
@@ -807,7 +808,9 @@
       "Livin' on a Capela",
       "The Capela Show",
       "Capela-tastic Voyage",
-      "Clint Take the Heat"
+      "Clint Take the Heat",
+      "A Capela",
+      "Capela University"
     ],
     "active": true,
     "tier": "curated"
@@ -1375,10 +1378,16 @@
       "VanVleet-tastic Voyage",
       "Straight Outta VanVleet",
       "VanVleet-A-Palooza",
-      "In VanVleet We Trust"
+      "In VanVleet We Trust",
+      "Greta VanVleet"
     ],
     "active": true,
-    "tier": "template"
+    "tier": "curated",
+    "taggedNames": {
+      "music": [
+        "Greta VanVleet"
+      ]
+    }
   },
   {
     "id": "jakobpoeltl_tor",
@@ -1582,10 +1591,11 @@
       "In Brooks We Trust",
       "Straight Outta Brooks",
       "Brooks of Fame",
-      "Livin' on a Brooks"
+      "Livin' on a Brooks",
+      "Dillon Brooks Brothers"
     ],
     "active": true,
-    "tier": "template"
+    "tier": "curated"
   },
   {
     "id": "thomasbryant_cle",
@@ -2046,10 +2056,16 @@
       "Okogie'd Up and Ready",
       "Straight Outta Okogie",
       "Okogie's Fantasy Fortress",
-      "Okogie Happens"
+      "Okogie Happens",
+      "An Okogie From Muskogee"
     ],
     "active": true,
-    "tier": "template"
+    "tier": "curated",
+    "taggedNames": {
+      "music": [
+        "An Okogie From Muskogee"
+      ]
+    }
   },
   {
     "id": "jarenjackson_uta",
@@ -4088,7 +4104,8 @@
       "Straight Outta \u015eeng\u00fcn",
       "Sengun and Done",
       "Sengun Thrones",
-      "Stranger Senguns"
+      "Stranger Senguns",
+      "The Swiss Alperens"
     ],
     "active": true,
     "tier": "curated",
@@ -4648,7 +4665,8 @@
       "Eason-A-Palooza",
       "Tari Eason and the Fantasy Machine",
       "Tari Vibes Only",
-      "Eason Down The Road"
+      "Eason Down The Road",
+      "Nintendo And A Tari"
     ],
     "active": true,
     "tier": "curated"
@@ -5558,10 +5576,16 @@
       "Amen Thompson and the Fantasy Machine",
       "The Thompson Show",
       "Amen & Chill",
-      "Amen Break"
+      "Amen Break",
+      "Forever And Ever, Amen Thompson"
     ],
     "active": true,
-    "tier": "curated"
+    "tier": "curated",
+    "taggedNames": {
+      "music": [
+        "Forever And Ever, Amen Thompson"
+      ]
+    }
   },
   {
     "id": "kobebufkin_nop",
@@ -6560,10 +6584,16 @@
       "Sheppard'd Up and Ready",
       "Sheppard Happens",
       "Straight Outta Sheppard",
-      "In Sheppard We Trust"
+      "In Sheppard We Trust",
+      "The Good Sheppard"
     ],
     "active": true,
-    "tier": "template"
+    "tier": "curated",
+    "taggedNames": {
+      "movie": [
+        "The Good Sheppard"
+      ]
+    }
   },
   {
     "id": "yvesmissi_nop",
