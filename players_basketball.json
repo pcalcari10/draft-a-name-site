@@ -10600,5 +10600,39 @@
     ],
     "active": true,
     "tier": "template"
+  },
+  {
+    "id": "dariosaric_sac",
+    "first": "Dario",
+    "last": "Saric",
+    "team": "SAC",
+    "pos": "PF",
+    "names": [
+      "MTV's Dario"
+    ],
+    "active": true,
+    "tier": "curated",
+    "taggedNames": {
+      "tv": [
+        "MTV's Dario"
+      ]
+    }
+  },
+  {
+    "id": "dougmcdermott_sac",
+    "first": "Doug",
+    "last": "McDermott",
+    "team": "SAC",
+    "pos": "SF",
+    "names": [
+      "Doug McDermott Mulroney"
+    ],
+    "active": true,
+    "tier": "curated",
+    "taggedNames": {
+      "movie": [
+        "Doug McDermott Mulroney"
+      ]
+    }
   }
 ]
