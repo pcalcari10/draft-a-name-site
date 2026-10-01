@@ -4425,7 +4425,8 @@
     "team": "SAC",
     "pos": "PF",
     "names": [
-      "Murray Up Already"
+      "Murray Up Already",
+      "Keegan Murray Key"
     ],
     "active": true,
     "tier": "curated"
@@ -7635,10 +7636,16 @@
       "All Clifford, No Filler",
       "The Clifford Show",
       "Straight Outta Clifford",
-      "Nique Clifford and the Fantasy Machine"
+      "Nique Clifford and the Fantasy Machine",
+      "Nique Clifford The Big Red Dog"
     ],
     "active": true,
-    "tier": "template"
+    "tier": "curated",
+    "taggedNames": {
+      "movie": [
+        "Nique Clifford The Big Red Dog"
+      ]
+    }
   },
   {
     "id": "jaserichardson_orl",
