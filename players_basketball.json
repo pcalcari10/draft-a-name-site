@@ -1504,10 +1504,11 @@
       "Kennard Happens",
       "Luke Kennard and the Fantasy Machine",
       "Luke & Chill",
-      "Livin' on a Kennard"
+      "Livin' on a Kennard",
+      "Saint Kennard"
     ],
     "active": true,
-    "tier": "template"
+    "tier": "curated"
   },
   {
     "id": "malikmonk_sac",
@@ -2106,7 +2107,8 @@
       "Young's Fantasy Fortress",
       "Young-tastic Voyage",
       "Ice Trae",
-      "Ice Trae Baby"
+      "Ice Trae Baby",
+      "Trae Tables Upright And Locked Position"
     ],
     "active": true,
     "tier": "curated",
@@ -2835,10 +2837,17 @@
       "Alexander-Walker-tastic Voyage",
       "Alexander-Walker's Fantasy Fortress",
       "Alexander-Walker'd Up and Ready",
-      "Alexander-Walker Happens"
+      "Alexander-Walker Happens",
+      "Quarter, Dime And Nickeil Alexander-Walker",
+      "Nickeilback"
     ],
     "active": true,
-    "tier": "template"
+    "tier": "curated",
+    "taggedNames": {
+      "music": [
+        "Nickeilback"
+      ]
+    }
   },
   {
     "id": "javontegreen_det",
@@ -3001,10 +3010,11 @@
       "Toppin-A-Palooza",
       "Toppin's Fantasy Fortress",
       "Toppin'd Up and Ready",
-      "Toppin-tastic Voyage"
+      "Toppin-tastic Voyage",
+      "Toppin Off"
     ],
     "active": true,
-    "tier": "template"
+    "tier": "curated"
   },
   {
     "id": "isaacokoro_chi",
@@ -3153,10 +3163,11 @@
       "Onyeka & Chill",
       "Okongwu Happens",
       "Onyeka's Excellent Adventure",
-      "Onyeka Okongwu and the Fantasy Machine"
+      "Onyeka Okongwu and the Fantasy Machine",
+      "Onyeka And Offyega"
     ],
     "active": true,
-    "tier": "template"
+    "tier": "curated"
   },
   {
     "id": "sammerrill_cle",
@@ -4589,10 +4600,11 @@
       "Daniels-A-Palooza",
       "Dyson Vibes Only",
       "Daniels of Fame",
-      "Dyson's Excellent Adventure"
+      "Dyson's Excellent Adventure",
+      "Dyson Vacuum"
     ],
     "active": true,
-    "tier": "template"
+    "tier": "curated"
   },
   {
     "id": "blakewesley_lac",
@@ -4989,10 +5001,11 @@
       "Caleb Houstan and the Fantasy Machine",
       "Caleb Vibes Only",
       "Houstan'd Up and Ready",
-      "The Houstan Show"
+      "The Houstan Show",
+      "Houstan Texas"
     ],
     "active": true,
-    "tier": "template"
+    "tier": "curated"
   },
   {
     "id": "nikolajovi_mia",
@@ -6961,10 +6974,16 @@
       "The Dante Show",
       "Dante-tastic Voyage",
       "Livin' on a Dante",
-      "All Dante, No Filler"
+      "All Dante, No Filler",
+      "N'Faly Dante's Inferno"
     ],
     "active": true,
-    "tier": "template"
+    "tier": "curated",
+    "taggedNames": {
+      "movie": [
+        "N'Faly Dante's Inferno"
+      ]
+    }
   },
   {
     "id": "harrisoningram_uta",
