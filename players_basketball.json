@@ -385,7 +385,12 @@
       "Kawhi So Serious?",
       "Kawhiet Riot",
       "Don't Kawhi About It",
-      "Kawhi Not Us"
+      "Kawhi Not Us",
+      "Kawhi's Tree Planting Co. LTD",
+      "Kawhitely Aspirational",
+      "Boardmangetspaid",
+      "A Kawhiet Place",
+      "Kawhi While Kuminga"
     ],
     "active": true,
     "tier": "curated",
@@ -395,7 +400,8 @@
       ],
       "movie": [
         "Kawhi So Serious",
-        "Kawhi So Serious?"
+        "Kawhi So Serious?",
+        "A Kawhiet Place"
       ],
       "starwars": [
         "Kawhi Gon Jinn"
@@ -445,7 +451,8 @@
       "The Gobert Report",
       "Grin And Gobert It",
       "Gobert Or Go Home",
-      "Rudy Gobert-Minded"
+      "Rudy Gobert-Minded",
+      "I Only Gobert Back"
     ],
     "active": true,
     "tier": "curated",
@@ -474,7 +481,10 @@
       "LeBrains and LeBron",
       "Bron Voyage",
       "Bron's Anatomy",
-      "King James Gang"
+      "King James Gang",
+      "LeBron's Sciatica",
+      "Area 51 and LeBrontourage",
+      "LeBrons Awaiting Room"
     ],
     "active": true,
     "tier": "curated",
@@ -556,7 +566,8 @@
       "Durantula",
       "KD's Burner Accounts",
       "KD's Not Here",
-      "KD Trey Five Alive"
+      "KD Trey Five Alive",
+      "Kevin Deodurant"
     ],
     "active": true,
     "tier": "curated",
@@ -1098,7 +1109,11 @@
       "Joki\u0107 and Roll",
       "Joki\u0107's Wild Ride",
       "Joki\u0107's Wild Kingdom",
-      "Jokic and Awe"
+      "Jokic and Awe",
+      "Not a Jokic Matter",
+      "Joker's Wild",
+      "The Joker and the Smokers",
+      "Big Joki\u0107 Energy"
     ],
     "active": true,
     "tier": "curated",
@@ -1110,7 +1125,8 @@
         "Joki\u0107 and Roll"
       ],
       "tv": [
-        "Joki\u0107's Wild Kingdom"
+        "Joki\u0107's Wild Kingdom",
+        "Joker's Wild"
       ]
     }
   },
@@ -1200,10 +1216,20 @@
     "names": [
       "Zuby Do",
       "Hit it From Zubac",
-      "Wearing Your Zubac"
+      "Wearing Your Zubac",
+      "Zubac, I Choose You!",
+      "We Bought a Zu"
     ],
     "active": true,
-    "tier": "curated"
+    "tier": "curated",
+    "taggedNames": {
+      "tv": [
+        "Zubac, I Choose You!"
+      ],
+      "movie": [
+        "We Bought a Zu"
+      ]
+    }
   },
   {
     "id": "brandoningram_lac",
@@ -1630,10 +1656,16 @@
       "White Happens",
       "White of Fame",
       "Derrick & Chill",
-      "Derrick Vibes Only"
+      "Derrick Vibes Only",
+      "Yo Mista White"
     ],
     "active": true,
-    "tier": "template"
+    "tier": "curated",
+    "taggedNames": {
+      "tv": [
+        "Yo Mista White"
+      ]
+    }
   },
   {
     "id": "oganunoby_nyk",
@@ -2022,13 +2054,17 @@
       "Straight Outta Hartenstein",
       "Hartenstein's Fantasy Fortress",
       "All Hartenstein, No Filler",
-      "Hartenstein's Monster"
+      "Hartenstein's Monster",
+      "My Hartenstein Will Go On"
     ],
     "active": true,
     "tier": "curated",
     "taggedNames": {
       "movie": [
         "Hartenstein's Monster"
+      ],
+      "music": [
+        "My Hartenstein Will Go On"
       ]
     }
   },
@@ -2150,13 +2186,19 @@
       "Shai Guys Finish Last",
       "SGA's Anatomy",
       "SGA All Day",
-      "SGA Shootin Gunners"
+      "SGA Shootin Gunners",
+      "The Real Slim Shai'dy",
+      "$hai la Vie",
+      "Shae-Pop Free Throw Hunters",
+      "SGA Is a Fraud"
     ],
     "active": true,
     "tier": "curated",
     "taggedNames": {
       "music": [
-        "Shai's Smooth Operators"
+        "Shai's Smooth Operators",
+        "The Real Slim Shai'dy",
+        "$hai la Vie"
       ],
       "tv": [
         "SGA's Anatomy"
@@ -2242,7 +2284,11 @@
       "Luka's Magic Doncic",
       "Luka My Way",
       "Luka Warm Feelings",
-      "Luka Dunkin Donuts"
+      "Luka Dunkin Donuts",
+      "Luka's Mansion",
+      "Luka's Ozempic Plug",
+      "Luka Mickey Mouse Magic",
+      "LUKA MAtaTAS"
     ],
     "active": true,
     "tier": "curated",
@@ -2256,6 +2302,9 @@
       "music": [
         "Living La Vida Luka",
         "Luka My Way"
+      ],
+      "movie": [
+        "Luka Mickey Mouse Magic"
       ]
     }
   },
@@ -2343,10 +2392,16 @@
     "pos": "PG",
     "names": [
       "Simons Says",
-      "Simons Says Win"
+      "Simons Says Win",
+      "Simons and Garlandfunkel"
     ],
     "active": true,
-    "tier": "curated"
+    "tier": "curated",
+    "taggedNames": {
+      "music": [
+        "Simons and Garlandfunkel"
+      ]
+    }
   },
   {
     "id": "marvinbagley_den",
@@ -2647,10 +2702,16 @@
       "Naz Reid and the Fantasy Machine",
       "Reid of Fame",
       "Reid's Fantasy Fortress",
-      "Naz Reid or Not"
+      "Naz Reid or Not",
+      "Smoke Reed Errydayyyy"
     ],
     "active": true,
-    "tier": "curated"
+    "tier": "curated",
+    "taggedNames": {
+      "music": [
+        "Smoke Reed Errydayyyy"
+      ]
+    }
   },
   {
     "id": "jordanmclaughlin_sas",
@@ -2754,13 +2815,17 @@
       "Zion the Top",
       "Zion's Pelican Pounders",
       "Zion and On",
-      "Zion of Zeal"
+      "Zion of Zeal",
+      "C\u00e9line Zion"
     ],
     "active": true,
     "tier": "curated",
     "taggedNames": {
       "movie": [
         "The Zion King"
+      ],
+      "music": [
+        "C\u00e9line Zion"
       ]
     }
   },
@@ -2863,10 +2928,16 @@
       "Herro's Journey",
       "There Goes My Herro",
       "SuperHerro's",
-      "Herro World Order"
+      "Herro World Order",
+      "Juke Box Herro"
     ],
     "active": true,
-    "tier": "curated"
+    "tier": "curated",
+    "taggedNames": {
+      "music": [
+        "Juke Box Herro"
+      ]
+    }
   },
   {
     "id": "tyjerome_mem",
@@ -3005,10 +3076,17 @@
     "names": [
       "Maxey Pad My Stats",
       "Maxey Pad",
-      "Maxey Effort Only"
+      "Maxey Effort Only",
+      "Tyrese's Pieces & Kit KAT",
+      "Curryous Maxeymus"
     ],
     "active": true,
-    "tier": "curated"
+    "tier": "curated",
+    "taggedNames": {
+      "food": [
+        "Tyrese's Pieces & Kit KAT"
+      ]
+    }
   },
   {
     "id": "paulreed_det",
@@ -3055,7 +3133,8 @@
       "Ant-Man Standing",
       "Ant-Man and the Wasp",
       "Ant Invasion",
-      "Ant-Man and the Splash"
+      "Ant-Man and the Splash",
+      "Paid in Antvance"
     ],
     "active": true,
     "tier": "curated",
@@ -3083,10 +3162,11 @@
       "McDaniels Happens",
       "Straight Outta McDaniels",
       "In McDaniels We Trust",
-      "McDaniels'd Up and Ready"
+      "McDaniels'd Up and Ready",
+      "Jaden McDaniels"
     ],
     "active": true,
-    "tier": "template"
+    "tier": "curated"
   },
   {
     "id": "onyekaokongwu_atl",
@@ -3266,7 +3346,8 @@
     "pos": "PG",
     "names": [
       "Quickley Does It",
-      "Immanuel Slowley"
+      "Immanuel Slowley",
+      "IQuickleyEdgecombe"
     ],
     "active": true,
     "tier": "curated"
@@ -3332,7 +3413,8 @@
     "names": [
       "LaMelo Out Loud",
       "There's Always Room For LaMelo",
-      "Why Have A Ballroom With No LaMelo Ball"
+      "Why Have A Ballroom With No LaMelo Ball",
+      "Lamelos Balls"
     ],
     "active": true,
     "tier": "curated"
@@ -3510,7 +3592,8 @@
     "pos": "C",
     "names": [
       "Mobley Dick",
-      "Scooby-Doobley (Mobley)"
+      "Scooby-Doobley (Mobley)",
+      "Mobley Balls"
     ],
     "active": true,
     "tier": "curated",
@@ -3693,10 +3776,11 @@
       "Johnson of Fame",
       "In Johnson We Trust",
       "All Johnson, No Filler",
-      "Johnson'd Up and Ready"
+      "Johnson'd Up and Ready",
+      "Jalen's Johnson"
     ],
     "active": true,
-    "tier": "template"
+    "tier": "curated"
   },
   {
     "id": "treymurphy_nop",
@@ -3914,7 +3998,8 @@
     "team": "MIN",
     "pos": "PF",
     "names": [
-      "Kuminga Attractions"
+      "Kuminga Attractions",
+      "KUMINGa WHITE everyWARE"
     ],
     "active": true,
     "tier": "curated"
@@ -3930,7 +4015,9 @@
       "Sengun Thrones",
       "Stranger Senguns",
       "The Swiss Alperens",
-      "Sengun's Houston Hookers"
+      "Sengun's Houston Hookers",
+      "Senguners",
+      "Sengooners"
     ],
     "active": true,
     "tier": "curated",
@@ -3979,7 +4066,9 @@
       "All Reaves, No Filler",
       "Reaves of Fame",
       "Reaves Of Grass",
-      "Reaves the Building"
+      "Reaves the Building",
+      "Austin 3:16",
+      "Reaves From La Vine"
     ],
     "active": true,
     "tier": "curated"
@@ -4502,7 +4591,8 @@
     "team": "ATL",
     "pos": "SG",
     "names": [
-      "Dyson Vacuum"
+      "Dyson Vacuum",
+      "Dyson Daniels Bladeless Fans"
     ],
     "active": true,
     "tier": "curated"
@@ -4597,7 +4687,8 @@
       "Holmgren's Hoop House",
       "\u201cYes, Chet!\u201d",
       "Sherlock Holmgren",
-      "Chet's Unicorn Block Party"
+      "Chet's Unicorn Block Party",
+      "Chet Happens"
     ],
     "active": true,
     "tier": "curated",
@@ -4648,7 +4739,10 @@
       "Nikki And Paolo Banchero (pick your pop culture preference!)",
       "Paolo Banchero Finds Out",
       "Paolo's Comet",
-      "Banchero and a Half"
+      "Banchero and a Half",
+      "Paolo Your Heart",
+      "El Paolo Loco",
+      "Spicy Banchero Taco @ TBell"
     ],
     "active": true,
     "tier": "curated",
@@ -4656,6 +4750,12 @@
       "tv": [
         "Rachel And Paolo Banchero",
         "Nikki And Paolo Banchero (pick your pop culture preference!)"
+      ],
+      "music": [
+        "Paolo Your Heart"
+      ],
+      "food": [
+        "Spicy Banchero Taco @ TBell"
       ]
     }
   },
@@ -4867,7 +4967,8 @@
       "Sharpe-A-Palooza",
       "Sharpe-tastic Voyage",
       "Shaedon's Excellent Adventure",
-      "Lower The Shaedon"
+      "Lower The Shaedon",
+      "Shaedon's Sharpest"
     ],
     "active": true,
     "tier": "curated"
@@ -5276,13 +5377,16 @@
     "names": [
       "Ausar-vivors",
       "Ausar, Can You See",
-      "Wish Upon Ausar"
+      "Wish Upon Ausar",
+      "Dancing with Ausars",
+      "Ausar-ry Night"
     ],
     "active": true,
     "tier": "curated",
     "taggedNames": {
       "music": [
-        "Ausar, Can You See"
+        "Ausar, Can You See",
+        "Ausar-ry Night"
       ]
     }
   },
@@ -5348,13 +5452,16 @@
     "pos": "SG",
     "names": [
       "Amen Break",
-      "Forever And Ever, Amen Thompson"
+      "Forever And Ever, Amen Thompson",
+      "Amen Among Boys",
+      "Ever and Ever Amen"
     ],
     "active": true,
     "tier": "curated",
     "taggedNames": {
       "music": [
-        "Forever And Ever, Amen Thompson"
+        "Forever And Ever, Amen Thompson",
+        "Ever and Ever Amen"
       ]
     }
   },
@@ -5410,7 +5517,13 @@
       "Winbanyama",
       "Wemby's Web Blockers",
       "Wemby or Not",
-      "Wemby Long Way From Home"
+      "Wemby Long Way From Home",
+      "Pulmonary Wembolism",
+      "The World Wide Wemb",
+      "Wemby Madness",
+      "Victor Win-ya-Moolah",
+      "Wemby Shai Gilgius Alexanyama",
+      "Wemby-wan Kenobi"
     ],
     "active": true,
     "tier": "curated",
@@ -5426,6 +5539,9 @@
       "movie": [
         "Wemby Wonka",
         "Diary Of A Wemby Kid"
+      ],
+      "starwars": [
+        "Wemby-wan Kenobi"
       ]
     }
   },
@@ -5834,7 +5950,9 @@
       "Toumani Camara and the Fantasy Machine",
       "In Camara We Trust",
       "Digital Camara",
-      "Toumani Or Not Enough"
+      "Toumani Or Not Enough",
+      "Toumani Cooks",
+      "The Camara ADs 10 Pounds"
     ],
     "active": true,
     "tier": "curated",
@@ -6561,10 +6679,17 @@
     "pos": "C",
     "names": [
       "Dancin' with the Sarrs",
-      "Sir Laurence Olivier Sarr"
+      "Sir Laurence Olivier Sarr",
+      "A Sarr is Born",
+      "Also Sarr Dude"
     ],
     "active": true,
-    "tier": "curated"
+    "tier": "curated",
+    "taggedNames": {
+      "movie": [
+        "A Sarr is Born"
+      ]
+    }
   },
   {
     "id": "nikolatopi_okc",
@@ -7434,7 +7559,8 @@
       "Edgecombe-tastic Voyage",
       "Edgecombe's Fantasy Fortress",
       "VJ & Chill",
-      "Cutting Edgecombe"
+      "Cutting Edgecombe",
+      "The Bearded VJ-J"
     ],
     "active": true,
     "tier": "curated"
@@ -7480,7 +7606,9 @@
     "names": [
       "Wrath of Kon",
       "Pro And Kon",
-      "Can You See My Knueppels"
+      "Can You See My Knueppels",
+      "Free the Knueppels",
+      "KONSTANTIN1PPLE"
     ],
     "active": true,
     "tier": "curated"
@@ -7859,10 +7987,17 @@
       "Hansen Happens",
       "Yang's Excellent Adventure",
       "The Hansen Show",
-      "Yin Yang Hansen"
+      "Yin Yang Hansen",
+      "Yang Handsome",
+      "Yang Can Cook"
     ],
     "active": true,
-    "tier": "curated"
+    "tier": "curated",
+    "taggedNames": {
+      "tv": [
+        "Yang Can Cook"
+      ]
+    }
   },
   {
     "id": "niqueclifford_sac",
@@ -8034,10 +8169,12 @@
       "Kalkbrenner of Fame",
       "The Kalkbrenner Show",
       "Ryan & Chill",
-      "Kalkbrenner-tastic Voyage"
+      "Kalkbrenner-tastic Voyage",
+      "Party Big Kalks",
+      "Kalk Kumin Buckets"
     ],
     "active": true,
-    "tier": "template"
+    "tier": "curated"
   },
   {
     "id": "sionjames_cha",
@@ -11106,7 +11243,8 @@
     "team": "POR",
     "pos": "PG",
     "names": [
-      "Captain Billups"
+      "Captain Billups",
+      "Billups's Bookie"
     ],
     "active": true,
     "tier": "curated",
