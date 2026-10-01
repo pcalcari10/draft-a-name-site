@@ -1357,7 +1357,8 @@
       "Siakam-tastic Voyage",
       "Straight Outta Siakam",
       "Siakam of Fame",
-      "Rock 'Em, Siakam Robots"
+      "Rock 'Em, Siakam Robots",
+      "Pascal's Triangle"
     ],
     "active": true,
     "tier": "curated",
@@ -3079,10 +3080,16 @@
       "Toppin's Fantasy Fortress",
       "Toppin'd Up and Ready",
       "Toppin-tastic Voyage",
-      "Toppin Off"
+      "Toppin Off",
+      "Obi-Wan Toppin"
     ],
     "active": true,
-    "tier": "curated"
+    "tier": "curated",
+    "taggedNames": {
+      "starwars": [
+        "Obi-Wan Toppin"
+      ]
+    }
   },
   {
     "id": "isaacokoro_chi",
@@ -3111,10 +3118,11 @@
       "Wiseman Happens",
       "James Wiseman and the Fantasy Machine",
       "James's Excellent Adventure",
-      "Wiseman of Fame"
+      "Wiseman of Fame",
+      "The Three Wiseman"
     ],
     "active": true,
-    "tier": "template"
+    "tier": "curated"
   },
   {
     "id": "isaiahjoe_det",
@@ -3449,10 +3457,16 @@
       "The Haliburton Show",
       "Livin' on a Haliburton",
       "Tyrese Haliburton and the Fantasy Machine",
-      "Haliburton Prescription"
+      "Haliburton Prescription",
+      "HaliLevarBurton"
     ],
     "active": true,
-    "tier": "curated"
+    "tier": "curated",
+    "taggedNames": {
+      "tv": [
+        "HaliLevarBurton"
+      ]
+    }
   },
   {
     "id": "zekennaji_den",
@@ -4514,10 +4528,11 @@
       "In Mathurin We Trust",
       "Mathurin's Fantasy Fortress",
       "Mathurin-A-Palooza",
-      "Bennedict Vibes Only"
+      "Bennedict Vibes Only",
+      "Eggs Bennedict Mathurin"
     ],
     "active": true,
-    "tier": "template"
+    "tier": "curated"
   },
   {
     "id": "jalenduren_det",
@@ -4876,7 +4891,8 @@
       "Nembhard-tastic Voyage",
       "The Nembhard Show",
       "Straight Outta Nembhard",
-      "MikeNembHard Lemonade"
+      "MikeNembHard Lemonade",
+      "Nembhard-Boiled Eggs"
     ],
     "active": true,
     "tier": "curated"
@@ -6933,10 +6949,11 @@
       "Furphy-tastic Voyage",
       "Furphy of Fame",
       "Johnny's Excellent Adventure",
-      "Johnny & Chill"
+      "Johnny & Chill",
+      "Furphy's Law"
     ],
     "active": true,
-    "tier": "template"
+    "tier": "curated"
   },
   {
     "id": "tristennewton_sac",
@@ -7608,10 +7625,16 @@
       "Dennis-tastic Voyage",
       "Dennis'd Up and Ready",
       "In Dennis We Trust",
-      "RayJ's Excellent Adventure"
+      "RayJ's Excellent Adventure",
+      "Kim Kardashian And RayJ Dennis"
     ],
     "active": true,
-    "tier": "template"
+    "tier": "curated",
+    "taggedNames": {
+      "tv": [
+        "Kim Kardashian And RayJ Dennis"
+      ]
+    }
   },
   {
     "id": "tolusmith_det",
@@ -8235,10 +8258,16 @@
       "Peter of Fame",
       "Taelon Vibes Only",
       "Peter'd Up and Ready",
-      "Livin' on a Peter"
+      "Livin' on a Peter",
+      "Do The Chickens Have Large Taelons"
     ],
     "active": true,
-    "tier": "template"
+    "tier": "curated",
+    "taggedNames": {
+      "tv": [
+        "Do The Chickens Have Large Taelons"
+      ]
+    }
   },
   {
     "id": "alextoohey_gsw",
