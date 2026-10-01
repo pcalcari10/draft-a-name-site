@@ -651,13 +651,17 @@
     "team": "NYK",
     "pos": "SG",
     "names": [
-      "Clarkson 5"
+      "Clarkson 5",
+      "Jordan Kelly Clarkson"
     ],
     "active": true,
     "tier": "curated",
     "taggedNames": {
       "tv": [
         "Clarkson 5"
+      ],
+      "music": [
+        "Jordan Kelly Clarkson"
       ]
     }
   },
@@ -891,7 +895,9 @@
       "KAT In The Hat",
       "Towns With The Sickness",
       "KATastrophe",
-      "The Towns Zone"
+      "The Towns Zone",
+      "KAT Scan",
+      "Karl-Anthony Cities"
     ],
     "active": true,
     "tier": "curated"
@@ -2135,13 +2141,17 @@
     "team": "NYK",
     "pos": "SF",
     "names": [
-      "Bridges Over Troubled Waters"
+      "Bridges Over Troubled Waters",
+      "Mikal Bridges Of Madison County"
     ],
     "active": true,
     "tier": "curated",
     "taggedNames": {
       "music": [
         "Bridges Over Troubled Waters"
+      ],
+      "movie": [
+        "Mikal Bridges Of Madison County"
       ]
     }
   },
@@ -3249,10 +3259,17 @@
       "McBride-A-Palooza",
       "Miles McBride and the Fantasy Machine",
       "Straight Outta McBride",
-      "McBride of Fame"
+      "McBride of Fame",
+      "Miles McBride And The Ride",
+      "Always A McBridesmaid"
     ],
     "active": true,
-    "tier": "template"
+    "tier": "curated",
+    "taggedNames": {
+      "movie": [
+        "Always A McBridesmaid"
+      ]
+    }
   },
   {
     "id": "jerichosims_mil",
@@ -3803,10 +3820,11 @@
       "Champagnie-tastic Voyage",
       "Champagnie's Fantasy Fortress",
       "In Champagnie We Trust",
-      "The Champagnie Show"
+      "The Champagnie Show",
+      "Champagnie For My Real Friends, Cam Payne For My Sham Friends"
     ],
     "active": true,
-    "tier": "template"
+    "tier": "curated"
   },
   {
     "id": "trendonwatford_nop",
@@ -6338,10 +6356,11 @@
       "Kolek's Fantasy Fortress",
       "The Kolek Show",
       "In Kolek We Trust",
-      "Kolek-A-Palooza"
+      "Kolek-A-Palooza",
+      "Tyler Kolek Call"
     ],
     "active": true,
-    "tier": "template"
+    "tier": "curated"
   },
   {
     "id": "arielhukporti_phi",
@@ -6354,10 +6373,16 @@
       "Hukporti Happens",
       "Livin' on a Hukporti",
       "Hukporti'd Up and Ready",
-      "The Hukporti Show"
+      "The Hukporti Show",
+      "The Little Mermaid, Ariel Hukporti"
     ],
     "active": true,
-    "tier": "template"
+    "tier": "curated",
+    "taggedNames": {
+      "movie": [
+        "The Little Mermaid, Ariel Hukporti"
+      ]
+    }
   },
   {
     "id": "johnnyfurphy_ind",
