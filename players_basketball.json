@@ -1029,7 +1029,8 @@
       "Booker's Fantasy Fortress",
       "Livin' on a Booker",
       "Devin Vibes Only",
-      "Booker's Phoenix Burners"
+      "Booker's Phoenix Burners",
+      "Stairway to Devin"
     ],
     "active": true,
     "tier": "curated"
@@ -1198,7 +1199,8 @@
     "pos": "SG",
     "names": [
       "Hield of Dreams",
-      "Buddy Wounded, Buddy Hield"
+      "Buddy Wounded, Buddy Hield",
+      "My Soul Shall Be Hield"
     ],
     "active": true,
     "tier": "curated",
@@ -11064,5 +11066,22 @@
     ],
     "active": true,
     "tier": "curated"
+  },
+  {
+    "id": "ericbledsoe_phx",
+    "first": "Eric",
+    "last": "Bledsoe",
+    "team": "PHX",
+    "pos": "PG",
+    "names": [
+      "Eric Bledsoe Much That He Needed a Transfusion"
+    ],
+    "active": true,
+    "tier": "curated",
+    "taggedNames": {
+      "legacy": [
+        "Eric Bledsoe Much That He Needed a Transfusion"
+      ]
+    }
   }
 ]
