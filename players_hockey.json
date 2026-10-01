@@ -15022,7 +15022,12 @@
       "The Sound And The Fleury"
     ],
     "active": true,
-    "tier": "curated"
+    "tier": "curated",
+    "taggedNames": {
+      "legacy": [
+        "The Sound And The Fleury"
+      ]
+    }
   },
   {
     "id": "ericlindros_phi",
@@ -15034,7 +15039,12 @@
       "To The Lindros, To the Wall"
     ],
     "active": true,
-    "tier": "curated"
+    "tier": "curated",
+    "taggedNames": {
+      "legacy": [
+        "To The Lindros, To the Wall"
+      ]
+    }
   },
   {
     "id": "paulcoffey_edm",
@@ -15047,7 +15057,13 @@
       "Coffey Crisp"
     ],
     "active": true,
-    "tier": "curated"
+    "tier": "curated",
+    "taggedNames": {
+      "legacy": [
+        "Venti Paul Coffey",
+        "Coffey Crisp"
+      ]
+    }
   },
   {
     "id": "markmessier_nyr",
@@ -15059,7 +15075,12 @@
       "I Made A Messier"
     ],
     "active": true,
-    "tier": "curated"
+    "tier": "curated",
+    "taggedNames": {
+      "legacy": [
+        "I Made A Messier"
+      ]
+    }
   },
   {
     "id": "jarikurri_edm",
@@ -15071,7 +15092,12 @@
       "Steph Kurri"
     ],
     "active": true,
-    "tier": "curated"
+    "tier": "curated",
+    "taggedNames": {
+      "legacy": [
+        "Steph Kurri"
+      ]
+    }
   },
   {
     "id": "jeremyroenick_chi",
@@ -15083,7 +15109,12 @@
       "Jeremy Roenick Class Today"
     ],
     "active": true,
-    "tier": "curated"
+    "tier": "curated",
+    "taggedNames": {
+      "legacy": [
+        "Jeremy Roenick Class Today"
+      ]
+    }
   },
   {
     "id": "bretthull_stl",
@@ -15098,6 +15129,9 @@
     "tier": "curated",
     "taggedNames": {
       "music": [
+        "Hull And Oates"
+      ],
+      "legacy": [
         "Hull And Oates"
       ]
     }
@@ -15116,6 +15150,9 @@
     "taggedNames": {
       "music": [
         "Kendruck Lamundqvist"
+      ],
+      "legacy": [
+        "Kendruck Lamundqvist"
       ]
     }
   },
@@ -15132,6 +15169,9 @@
     "tier": "curated",
     "taggedNames": {
       "tv": [
+        "Barry Melrose Place"
+      ],
+      "legacy": [
         "Barry Melrose Place"
       ]
     }
@@ -15150,6 +15190,9 @@
     "taggedNames": {
       "movie": [
         "Dumba and Dumber"
+      ],
+      "legacy": [
+        "Dumba and Dumber"
       ]
     }
   },
@@ -15166,6 +15209,9 @@
     "tier": "curated",
     "taggedNames": {
       "movie": [
+        "Weekend at Bernier's"
+      ],
+      "legacy": [
         "Weekend at Bernier's"
       ]
     }
@@ -15185,6 +15231,10 @@
     "taggedNames": {
       "movie": [
         "Oshie's Eleven"
+      ],
+      "legacy": [
+        "Oshie Can You See",
+        "Oshie's Eleven"
       ]
     }
   },
@@ -15202,6 +15252,9 @@
     "taggedNames": {
       "music": [
         "Vanek At The Disco"
+      ],
+      "legacy": [
+        "Vanek At The Disco"
       ]
     }
   },
@@ -15215,6 +15268,11 @@
       "Getzlaf My Lawn"
     ],
     "active": true,
-    "tier": "curated"
+    "tier": "curated",
+    "taggedNames": {
+      "legacy": [
+        "Getzlaf My Lawn"
+      ]
+    }
   }
 ]
