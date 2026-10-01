@@ -908,6 +908,8 @@ function buildEntities(){
   if(starWarsPool.length > 0) ENTITIES.push({ id: 'generic_starwars', kind: 'genericStarWars', names: starWarsPool });
   const legacyPool = categoryPool('legacy');
   if(legacyPool.length > 0) ENTITIES.push({ id: 'generic_legacy', kind: 'genericLegacy', names: legacyPool });
+  const coachPool = categoryPool('coach');
+  if(coachPool.length > 0) ENTITIES.push({ id: 'generic_coach', kind: 'genericCoach', names: coachPool });
   const foodPool = categoryPool('food');
   if(foodPool.length > 0) ENTITIES.push({ id: 'generic_food', kind: 'genericFood', names: foodPool });
   const marvelPool = categoryPool('marvel');
@@ -952,6 +954,7 @@ function fullName(e){
   if(e.kind === 'genericTv') return 'TV Show Names';
   if(e.kind === 'genericStarWars') return 'Star Wars Names';
     if(e.kind === 'genericLegacy') return 'Legacy Names';
+    if(e.kind === 'genericCoach') return 'Coach Names';
   if(e.kind === 'genericFood') return 'Food Names';
   if(e.kind === 'genericMarvel') return 'Marvel Names';
   return `${e.first} ${e.last}`;
@@ -985,7 +988,7 @@ function renderSuggestions(query){
   suggestionsBox.innerHTML = matches.map(e => `
     <div class="suggestion" data-id="${e.id}">
       <span class="pname">${fullName(e)}</span>
-      <span class="pmeta">${e.kind === 'team' ? `DST · ${e.abbr}` : e.kind === 'wildcard' ? 'Generic name' : e.kind === 'genericAll' ? `Browse all ${e.names.length}` : e.kind === 'genericMovie' ? `Browse all ${e.names.length}` : e.kind === 'genericMusic' ? `Browse all ${e.names.length}` : e.kind === 'genericTv' ? `Browse all ${e.names.length}` : e.kind === 'genericStarWars' ? `Browse all ${e.names.length}` : e.kind === 'genericLegacy' ? `Browse all ${e.names.length}` : e.kind === 'genericFood' ? `Browse all ${e.names.length}` : e.kind === 'genericMarvel' ? `Browse all ${e.names.length}` : `${e.pos} · ${e.team}`}</span>
+      <span class="pmeta">${e.kind === 'team' ? `DST · ${e.abbr}` : e.kind === 'wildcard' ? 'Generic name' : e.kind === 'genericAll' ? `Browse all ${e.names.length}` : e.kind === 'genericMovie' ? `Browse all ${e.names.length}` : e.kind === 'genericMusic' ? `Browse all ${e.names.length}` : e.kind === 'genericTv' ? `Browse all ${e.names.length}` : e.kind === 'genericStarWars' ? `Browse all ${e.names.length}` : e.kind === 'genericLegacy' ? `Browse all ${e.names.length}` : e.kind === 'genericCoach' ? `Browse all ${e.names.length}` : e.kind === 'genericFood' ? `Browse all ${e.names.length}` : e.kind === 'genericMarvel' ? `Browse all ${e.names.length}` : `${e.pos} · ${e.team}`}</span>
     </div>`).join('');
   suggestionsBox.classList.add('open');
 }
@@ -1018,7 +1021,7 @@ function removePlayer(id){
 
 function renderChips(){
   chipsBox.innerHTML = selected.map(e => `
-    <span class="chip">${e.kind === 'team' ? '🛡 ' : e.kind === 'wildcard' ? '✨ ' : e.kind === 'genericAll' ? '🗂 ' : e.kind === 'genericMovie' ? '🎬 ' : e.kind === 'genericMusic' ? '🎵 ' : e.kind === 'genericTv' ? '📺 ' : e.kind === 'genericStarWars' ? '⭐ ' : e.kind === 'genericLegacy' ? '🏆 ' : e.kind === 'genericFood' ? '🍟 ' : e.kind === 'genericMarvel' ? '🦸 ' : ''}${fullName(e)}<button aria-label="Remove ${fullName(e)}" data-id="${e.id}">✕</button></span>
+    <span class="chip">${e.kind === 'team' ? '🛡 ' : e.kind === 'wildcard' ? '✨ ' : e.kind === 'genericAll' ? '🗂 ' : e.kind === 'genericMovie' ? '🎬 ' : e.kind === 'genericMusic' ? '🎵 ' : e.kind === 'genericTv' ? '📺 ' : e.kind === 'genericStarWars' ? '⭐ ' : e.kind === 'genericLegacy' ? '🏆 ' : e.kind === 'genericCoach' ? '📋 ' : e.kind === 'genericFood' ? '🍟 ' : e.kind === 'genericMarvel' ? '🦸 ' : ''}${fullName(e)}<button aria-label="Remove ${fullName(e)}" data-id="${e.id}">✕</button></span>
   `).join('');
   chipsBox.querySelectorAll('button').forEach(btn => {
     btn.addEventListener('click', () => removePlayer(btn.dataset.id));
@@ -1187,7 +1190,7 @@ async function renderAllNames(){
 
   allNamesBox.innerHTML = toRender.map((e, idx) => {
     const names = entityNames[idx];
-    const icon = e.kind === 'team' ? '🛡 ' : e.kind === 'genericAll' ? '🗂 ' : e.kind === 'genericMovie' ? '🎬 ' : e.kind === 'genericMusic' ? '🎵 ' : e.kind === 'genericTv' ? '📺 ' : e.kind === 'genericStarWars' ? '⭐ ' : e.kind === 'genericLegacy' ? '🏆 ' : e.kind === 'genericFood' ? '🍟 ' : e.kind === 'genericMarvel' ? '🦸 ' : e.kind === 'wildcard' ? '✨ ' : (DEFENSIVE_POS.has(e.pos) ? '🛡️ ' : '');
+    const icon = e.kind === 'team' ? '🛡 ' : e.kind === 'genericAll' ? '🗂 ' : e.kind === 'genericMovie' ? '🎬 ' : e.kind === 'genericMusic' ? '🎵 ' : e.kind === 'genericTv' ? '📺 ' : e.kind === 'genericStarWars' ? '⭐ ' : e.kind === 'genericLegacy' ? '🏆 ' : e.kind === 'genericCoach' ? '📋 ' : e.kind === 'genericFood' ? '🍟 ' : e.kind === 'genericMarvel' ? '🦸 ' : e.kind === 'wildcard' ? '✨ ' : (DEFENSIVE_POS.has(e.pos) ? '🛡️ ' : '');
     const label = fullName(e);
     const isGenericCategory = e.kind && e.kind.startsWith('generic');
     return `
@@ -1459,6 +1462,7 @@ function buildResults(){
   const selectedGenericTv = selected.filter(e => e.kind === 'genericTv');
   const selectedGenericStarWars = selected.filter(e => e.kind === 'genericStarWars');
   const selectedGenericLegacy = selected.filter(e => e.kind === 'genericLegacy');
+  const selectedGenericCoach = selected.filter(e => e.kind === 'genericCoach');
   const selectedGenericFood = selected.filter(e => e.kind === 'genericFood');
   const selectedGenericMarvel = selected.filter(e => e.kind === 'genericMarvel');
 
@@ -1514,6 +1518,9 @@ function buildResults(){
   });
   selectedGenericLegacy.forEach(g => {
     weightedPick(g.names, Math.min(g.names.length, 3)).forEach(n => bonusPool.push({ name: n, type: 'wild', meta: categoryMeta('Legacy-themed pick', n) }));
+  });
+  selectedGenericCoach.forEach(g => {
+    weightedPick(g.names, Math.min(g.names.length, 3)).forEach(n => bonusPool.push({ name: n, type: 'wild', meta: categoryMeta('Coach-themed pick', n) }));
   });
   selectedGenericFood.forEach(g => {
     weightedPick(g.names, Math.min(g.names.length, 3)).forEach(n => bonusPool.push({ name: n, type: 'wild', meta: categoryMeta('Food-themed pick', n) }));
