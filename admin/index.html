@@ -1044,11 +1044,34 @@ function renderCategoryGroupedList(tier, searchElId, containerElId){
     const label = (CATEGORY_LABELS[cat] && CATEGORY_LABELS[cat].label) || cat;
     const icon = (CATEGORY_LABELS[cat] && CATEGORY_LABELS[cat].icon) || '🏷';
 
-    const rowsHtml = entries.map((e, i) => `
-      <li>
-        <span>"${e.name}" <span class="player-pos" style="margin-left:4px;">${e.sourceType === 'generic' ? 'Generic' : e.source}${e.team ? ` \u00b7 ${e.team}` : ''}</span></span>
-        <button class="copy-pun" data-name="${escapeHtml(e.name)}" data-uid="${containerElId}-${cat}-${i}">⧉ copy</button>
-      </li>`).join('');
+    // Within a category, group entries by team so it reads the same way the
+    // team view does: a mini team header, then that team's names under it.
+    // Generic-pool entries (not tied to any team) get their own "Generic"
+    // group, sorted to the end rather than alphabetically with real teams.
+    const byTeamWithinCat = {};
+    entries.forEach(e => {
+      const teamKey = e.sourceType === 'generic' ? 'Generic' : (e.sourceType === 'team' ? e.source : (e.team || 'FA'));
+      if(!byTeamWithinCat[teamKey]) byTeamWithinCat[teamKey] = [];
+      byTeamWithinCat[teamKey].push(e);
+    });
+    const teamKeys = Object.keys(byTeamWithinCat).sort((a, b) => {
+      if(a === 'Generic') return 1;
+      if(b === 'Generic') return -1;
+      return teamFullName(a).localeCompare(teamFullName(b));
+    });
+
+    const teamSectionsHtml = teamKeys.map(teamKey => {
+      const teamEntries = byTeamWithinCat[teamKey];
+      const teamLabel = teamKey === 'Generic' ? 'Generic' : (teamFullName(teamKey) !== teamKey ? teamFullName(teamKey) : teamKey);
+      const rowsHtml = teamEntries.map((e, i) => `
+        <li>
+          <span>"${e.name}"${e.sourceType === 'player' ? ` <span class="player-pos" style="margin-left:4px;">${e.source}</span>` : ''}</span>
+          <button class="copy-pun" data-name="${escapeHtml(e.name)}" data-uid="${containerElId}-${cat}-${teamKey}-${i}">⧉ copy</button>
+        </li>`).join('');
+      return `
+        <div class="pos-group-header">${teamLabel} <span style="font-weight:400; color:var(--dim);">(${teamEntries.length})</span></div>
+        <ul class="player-names-list">${rowsHtml}</ul>`;
+    }).join('');
 
     return `
     <div class="team-block" data-category="${cat}">
@@ -1057,7 +1080,7 @@ function renderCategoryGroupedList(tier, searchElId, containerElId){
         <span class="team-count">${entries.length} name${entries.length !== 1 ? 's' : ''} <span class="chevron">▸</span></span>
       </div>
       <div class="team-players">
-        <ul class="player-names-list">${rowsHtml}</ul>
+        ${teamSectionsHtml}
       </div>
     </div>`;
   }).join('');
