@@ -1505,7 +1505,13 @@ async function boot(){
   } catch(err){
     console.error('Failed to load generic_basketball.json', err);
   }
-  // Basketball has no combos.json equivalent yet; SPORT_DATA.basketball.combos stays [].
+  try {
+    const res = await fetch('../combos_basketball.json');
+    const data = await res.json();
+    data.forEach(c => SPORT_DATA.basketball.combos.push(c));
+  } catch(err){
+    console.error('Failed to load combos_basketball.json', err);
+  }
 
   pointSportGlobalsAt(currentAdminSport);
   updateProgressStats();

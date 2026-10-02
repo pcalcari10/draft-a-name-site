@@ -1692,12 +1692,14 @@ async function loadJson(path){
 Promise.all([
   loadJson('../players_basketball.json'),
   loadJson('../teams_basketball.json'),
-  loadJson('../generic_basketball.json')
-]).then(([playersData, teamsData, genericData]) => {
+  loadJson('../generic_basketball.json'),
+  loadJson('../combos_basketball.json')
+]).then(([playersData, teamsData, genericData, combosData]) => {
   playersData.forEach(p => PLAYERS.push(p));
   teamsData.forEach(t => TEAMS.push(t));
   GENERIC_BY_CATEGORY = genericData;
   (genericData.general || []).forEach(n => GENERIC_WILDCARDS.push(n));
+  combosData.forEach(c => CURATED_COMBOS.push(c));
 
   buildEntities();
 
@@ -1705,7 +1707,8 @@ Promise.all([
 
   const totalNames = playersData.filter(p => p.tier === 'curated').reduce((sum, p) => sum + (p.names ? p.names.length : 0), 0)
     + teamsData.reduce((sum, t) => sum + (t.names ? t.names.length : 0), 0)
-    + (genericData.general || []).length;
+    + (genericData.general || []).length
+    + combosData.reduce((sum, c) => sum + (c.names ? c.names.length : 0), 0);
   document.getElementById('totalNameCount').textContent = totalNames.toLocaleString();
 
   searchInput.disabled = false;
