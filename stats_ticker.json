@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-02T02:28:08.749Z",
+  "generatedAt": "2026-10-02T02:45:09.799Z",
   "season": "2026",
   "week": 4,
   "thisWeek": {
@@ -10,7 +10,7 @@
         "last": "Watson",
         "team": "CLE",
         "pos": "QB",
-        "pts": 12.1,
+        "pts": 9.9,
         "pun": "Watson Clinic"
       },
       {
@@ -19,7 +19,7 @@
         "last": "Rodgers",
         "team": "PIT",
         "pos": "QB",
-        "pts": 8.5,
+        "pts": 8.8,
         "pun": "Mr. Rodgers' Neighborhood"
       }
     ],
@@ -30,7 +30,7 @@
         "last": "Judkins",
         "team": "CLE",
         "pos": "RB",
-        "pts": 15.6,
+        "pts": 17.5,
         "pun": "Quinshon & Chill"
       },
       {
@@ -39,7 +39,7 @@
         "last": "Warren",
         "team": "PIT",
         "pos": "RB",
-        "pts": 10.6,
+        "pts": 11.9,
         "pun": "This is Your Final Warren"
       },
       {
@@ -57,7 +57,7 @@
         "last": "Sanders",
         "team": "CLE",
         "pos": "RB",
-        "pts": 3.3,
+        "pts": 3.6,
         "pun": "Straight Outta Sanders"
       },
       {
@@ -115,6 +115,24 @@
         "pos": "WR",
         "pts": 3.5,
         "pun": "Pittman Happens"
+      },
+      {
+        "id": "jerryjeudy_cle",
+        "first": "Jerry",
+        "last": "Jeudy",
+        "team": "CLE",
+        "pos": "WR",
+        "pts": 1.9,
+        "pun": "Judge Jeudy"
+      },
+      {
+        "id": "benskowronek_pit",
+        "first": "Ben",
+        "last": "Skowronek",
+        "team": "PIT",
+        "pos": "WR",
+        "pts": 1.7,
+        "pun": "Ben Skowronek and the Fantasy Machine"
       },
       {
         "id": "isaiahbond_cle",
@@ -224,15 +242,6 @@
         "pun": "Sherlock Mahomes"
       },
       {
-        "id": "deshaunwatson_cle",
-        "first": "Deshaun",
-        "last": "Watson",
-        "team": "CLE",
-        "pos": "QB",
-        "pts": 67.1,
-        "pun": "Watson Clinic"
-      },
-      {
         "id": "jaredgoff_det",
         "first": "Jared",
         "last": "Goff",
@@ -240,6 +249,15 @@
         "pos": "QB",
         "pts": 65.6,
         "pun": "I'm About To Go Goff"
+      },
+      {
+        "id": "deshaunwatson_cle",
+        "first": "Deshaun",
+        "last": "Watson",
+        "team": "CLE",
+        "pos": "QB",
+        "pts": 64.9,
+        "pun": "Watson Clinic"
       },
       {
         "id": "dakprescott_dal",
@@ -384,7 +402,7 @@
         "last": "Warren",
         "team": "PIT",
         "pos": "RB",
-        "pts": 51.2,
+        "pts": 52.5,
         "pun": "This is Your Final Warren"
       },
       {
@@ -406,6 +424,15 @@
         "pun": "James Cooked"
       },
       {
+        "id": "quinshonjudkins_cle",
+        "first": "Quinshon",
+        "last": "Judkins",
+        "team": "CLE",
+        "pos": "RB",
+        "pts": 44.2,
+        "pun": "Quinshon & Chill"
+      },
+      {
         "id": "breecehall_nyj",
         "first": "Breece",
         "last": "Hall",
@@ -422,15 +449,6 @@
         "pos": "RB",
         "pts": 42.4,
         "pun": "Come and Get Your Love"
-      },
-      {
-        "id": "quinshonjudkins_cle",
-        "first": "Quinshon",
-        "last": "Judkins",
-        "team": "CLE",
-        "pos": "RB",
-        "pts": 42.3,
-        "pun": "Quinshon & Chill"
       },
       {
         "id": "buckyirving_tb",
