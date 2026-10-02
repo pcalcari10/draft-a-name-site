@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-02T03:19:08.342Z",
+  "generatedAt": "2026-10-02T03:43:54.947Z",
   "season": "2026",
   "week": 4,
   "thisWeek": {
@@ -10,7 +10,7 @@
         "last": "Rodgers",
         "team": "PIT",
         "pos": "QB",
-        "pts": 15.9,
+        "pts": 25,
         "pun": "Mr. Rodgers' Neighborhood"
       },
       {
@@ -19,7 +19,7 @@
         "last": "Watson",
         "team": "CLE",
         "pos": "QB",
-        "pts": 12.2,
+        "pts": 14,
         "pun": "Watson Clinic"
       }
     ],
@@ -72,12 +72,21 @@
     ],
     "WR": [
       {
+        "id": "dkmetcalf_pit",
+        "first": "DK",
+        "last": "Metcalf",
+        "team": "PIT",
+        "pos": "WR",
+        "pts": 16.5,
+        "pun": "How I Metcalf Your Mother"
+      },
+      {
         "id": "romanwilson_pit",
         "first": "Roman",
         "last": "Wilson",
         "team": "PIT",
         "pos": "WR",
-        "pts": 14.1,
+        "pts": 16.4,
         "pun": "The Roman Empire"
       },
       {
@@ -95,17 +104,17 @@
         "last": "Concepcion",
         "team": "CLE",
         "pos": "WR",
-        "pts": 9.8,
+        "pts": 11.4,
         "pun": "You Are the Only Concepcion"
       },
       {
-        "id": "dkmetcalf_pit",
-        "first": "DK",
-        "last": "Metcalf",
-        "team": "PIT",
+        "id": "jerryjeudy_cle",
+        "first": "Jerry",
+        "last": "Jeudy",
+        "team": "CLE",
         "pos": "WR",
-        "pts": 9.5,
-        "pun": "How I Metcalf Your Mother"
+        "pts": 6.6,
+        "pun": "Judge Jeudy"
       },
       {
         "id": "michaelpittmanjr_pit",
@@ -117,13 +126,13 @@
         "pun": "Pittman Happens"
       },
       {
-        "id": "jerryjeudy_cle",
-        "first": "Jerry",
-        "last": "Jeudy",
-        "team": "CLE",
+        "id": "germiebernard_pit",
+        "first": "Germie",
+        "last": "Bernard",
+        "team": "PIT",
         "pos": "WR",
-        "pts": 1.9,
-        "pun": "Judge Jeudy"
+        "pts": 3.1,
+        "pun": "Straight Outta Bernard"
       },
       {
         "id": "benskowronek_pit",
@@ -160,7 +169,7 @@
         "last": "Fannin",
         "team": "CLE",
         "pos": "TE",
-        "pts": 9.5,
+        "pts": 11.7,
         "pun": "Fannin Fodder"
       },
       {
@@ -169,7 +178,7 @@
         "last": "Freiermuth",
         "team": "PIT",
         "pos": "TE",
-        "pts": 3.4,
+        "pts": 10.7,
         "pun": "The Muth Is Luth"
       }
     ],
@@ -180,7 +189,7 @@
         "last": "Szmyt",
         "team": "CLE",
         "pos": "K",
-        "pts": 7,
+        "pts": 12,
         "pun": "Andre's Excellent Adventure"
       },
       {
@@ -233,6 +242,15 @@
         "pun": "The Bryce Is Right"
       },
       {
+        "id": "deshaunwatson_cle",
+        "first": "Deshaun",
+        "last": "Watson",
+        "team": "CLE",
+        "pos": "QB",
+        "pts": 69,
+        "pun": "Watson Clinic"
+      },
+      {
         "id": "patrickmahomesii_kc",
         "first": "Patrick",
         "last": "Mahomes",
@@ -242,13 +260,13 @@
         "pun": "Sherlock Mahomes"
       },
       {
-        "id": "deshaunwatson_cle",
-        "first": "Deshaun",
-        "last": "Watson",
-        "team": "CLE",
+        "id": "aaronrodgers_pit",
+        "first": "Aaron",
+        "last": "Rodgers",
+        "team": "PIT",
         "pos": "QB",
-        "pts": 67.2,
-        "pun": "Watson Clinic"
+        "pts": 66.2,
+        "pun": "Mr. Rodgers' Neighborhood"
       },
       {
         "id": "jaredgoff_det",
@@ -285,15 +303,6 @@
         "pos": "QB",
         "pts": 59.2,
         "pun": "I Married my Cousins"
-      },
-      {
-        "id": "aaronrodgers_pit",
-        "first": "Aaron",
-        "last": "Rodgers",
-        "team": "PIT",
-        "pos": "QB",
-        "pts": 57.1,
-        "pun": "Mr. Rodgers' Neighborhood"
       },
       {
         "id": "jalenhurts_phi",
@@ -660,6 +669,15 @@
         "pun": "Carry On, My Wayward Jefferson"
       },
       {
+        "id": "romanwilson_pit",
+        "first": "Roman",
+        "last": "Wilson",
+        "team": "PIT",
+        "pos": "WR",
+        "pts": 44.8,
+        "pun": "The Roman Empire"
+      },
+      {
         "id": "stefondiggs_was",
         "first": "Stefon",
         "last": "Diggs",
@@ -678,6 +696,15 @@
         "pun": "Tee Time"
       },
       {
+        "id": "dkmetcalf_pit",
+        "first": "DK",
+        "last": "Metcalf",
+        "team": "PIT",
+        "pos": "WR",
+        "pts": 43.3,
+        "pun": "How I Metcalf Your Mother"
+      },
+      {
         "id": "drakelondon_atl",
         "first": "Drake",
         "last": "London",
@@ -685,15 +712,6 @@
         "pos": "WR",
         "pts": 42.8,
         "pun": "Drake London Calling"
-      },
-      {
-        "id": "romanwilson_pit",
-        "first": "Roman",
-        "last": "Wilson",
-        "team": "PIT",
-        "pos": "WR",
-        "pts": 42.5,
-        "pun": "The Roman Empire"
       },
       {
         "id": "zayflowers_bal",
@@ -730,15 +748,6 @@
         "pos": "WR",
         "pts": 38.2,
         "pun": "Devaughn Vibes Only"
-      },
-      {
-        "id": "rasheerice_kc",
-        "first": "Rashee",
-        "last": "Rice",
-        "team": "KC",
-        "pos": "WR",
-        "pts": 38,
-        "pun": "Rice Rice Baby"
       }
     ],
     "TE": [
@@ -750,6 +759,15 @@
         "pos": "TE",
         "pts": 59.1,
         "pun": "50 Shades of Trey"
+      },
+      {
+        "id": "haroldfanninjr_cle",
+        "first": "Harold",
+        "last": "Fannin",
+        "team": "CLE",
+        "pos": "TE",
+        "pts": 50.3,
+        "pun": "Fannin Fodder"
       },
       {
         "id": "traviskelce_kc",
@@ -768,15 +786,6 @@
         "pos": "TE",
         "pts": 48.3,
         "pun": "Juwan's Johnson"
-      },
-      {
-        "id": "haroldfanninjr_cle",
-        "first": "Harold",
-        "last": "Fannin",
-        "team": "CLE",
-        "pos": "TE",
-        "pts": 48.1,
-        "pun": "Fannin Fodder"
       },
       {
         "id": "georgekittle_sf",
@@ -824,6 +833,15 @@
         "pun": "Isaiah & Chill"
       },
       {
+        "id": "patfreiermuth_pit",
+        "first": "Pat",
+        "last": "Freiermuth",
+        "team": "PIT",
+        "pos": "TE",
+        "pts": 38.8,
+        "pun": "The Muth Is Luth"
+      },
+      {
         "id": "kenyonsadiq_nyj",
         "first": "Kenyon",
         "last": "Sadiq",
@@ -840,15 +858,6 @@
         "pos": "TE",
         "pts": 34.4,
         "pun": "Sam LaPorta Potty"
-      },
-      {
-        "id": "darrenwaller_car",
-        "first": "Darren",
-        "last": "Waller",
-        "team": "CAR",
-        "pos": "TE",
-        "pts": 33.2,
-        "pun": "Waller'd Up and Ready"
       }
     ],
     "K": [
@@ -871,6 +880,15 @@
         "pun": "Livin' on a McLaughlin"
       },
       {
+        "id": "andreszmyt_cle",
+        "first": "Andre",
+        "last": "Szmyt",
+        "team": "CLE",
+        "pos": "K",
+        "pts": 38,
+        "pun": "Andre's Excellent Adventure"
+      },
+      {
         "id": "spencershrader_ind",
         "first": "Spencer",
         "last": "Shrader",
@@ -878,15 +896,6 @@
         "pos": "K",
         "pts": 37,
         "pun": "Straight Outta Shrader"
-      },
-      {
-        "id": "andreszmyt_cle",
-        "first": "Andre",
-        "last": "Szmyt",
-        "team": "CLE",
-        "pos": "K",
-        "pts": 33,
-        "pun": "Andre's Excellent Adventure"
       },
       {
         "id": "willreichard_min",
