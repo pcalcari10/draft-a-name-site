@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-02T03:43:54.947Z",
+  "generatedAt": "2026-10-02T03:58:14.132Z",
   "season": "2026",
   "week": 4,
   "thisWeek": {
@@ -10,7 +10,7 @@
         "last": "Rodgers",
         "team": "PIT",
         "pos": "QB",
-        "pts": 25,
+        "pts": 24,
         "pun": "Mr. Rodgers' Neighborhood"
       },
       {
@@ -19,7 +19,7 @@
         "last": "Watson",
         "team": "CLE",
         "pos": "QB",
-        "pts": 14,
+        "pts": 13.9,
         "pun": "Watson Clinic"
       }
     ],
@@ -247,7 +247,7 @@
         "last": "Watson",
         "team": "CLE",
         "pos": "QB",
-        "pts": 69,
+        "pts": 68.9,
         "pun": "Watson Clinic"
       },
       {
@@ -260,15 +260,6 @@
         "pun": "Sherlock Mahomes"
       },
       {
-        "id": "aaronrodgers_pit",
-        "first": "Aaron",
-        "last": "Rodgers",
-        "team": "PIT",
-        "pos": "QB",
-        "pts": 66.2,
-        "pun": "Mr. Rodgers' Neighborhood"
-      },
-      {
         "id": "jaredgoff_det",
         "first": "Jared",
         "last": "Goff",
@@ -276,6 +267,15 @@
         "pos": "QB",
         "pts": 65.6,
         "pun": "I'm About To Go Goff"
+      },
+      {
+        "id": "aaronrodgers_pit",
+        "first": "Aaron",
+        "last": "Rodgers",
+        "team": "PIT",
+        "pos": "QB",
+        "pts": 65.2,
+        "pun": "Mr. Rodgers' Neighborhood"
       },
       {
         "id": "dakprescott_dal",
