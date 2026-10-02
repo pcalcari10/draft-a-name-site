@@ -1,26 +1,26 @@
 {
-  "generatedAt": "2026-10-02T02:45:09.799Z",
+  "generatedAt": "2026-10-02T02:58:48.689Z",
   "season": "2026",
   "week": 4,
   "thisWeek": {
     "QB": [
-      {
-        "id": "deshaunwatson_cle",
-        "first": "Deshaun",
-        "last": "Watson",
-        "team": "CLE",
-        "pos": "QB",
-        "pts": 9.9,
-        "pun": "Watson Clinic"
-      },
       {
         "id": "aaronrodgers_pit",
         "first": "Aaron",
         "last": "Rodgers",
         "team": "PIT",
         "pos": "QB",
-        "pts": 8.8,
+        "pts": 15.9,
         "pun": "Mr. Rodgers' Neighborhood"
+      },
+      {
+        "id": "deshaunwatson_cle",
+        "first": "Deshaun",
+        "last": "Watson",
+        "team": "CLE",
+        "pos": "QB",
+        "pts": 8.3,
+        "pun": "Watson Clinic"
       }
     ],
     "RB": [
@@ -30,7 +30,7 @@
         "last": "Judkins",
         "team": "CLE",
         "pos": "RB",
-        "pts": 17.5,
+        "pts": 18.3,
         "pun": "Quinshon & Chill"
       },
       {
@@ -39,7 +39,7 @@
         "last": "Warren",
         "team": "PIT",
         "pos": "RB",
-        "pts": 11.9,
+        "pts": 15.1,
         "pun": "This is Your Final Warren"
       },
       {
@@ -104,7 +104,7 @@
         "last": "Metcalf",
         "team": "PIT",
         "pos": "WR",
-        "pts": 4.2,
+        "pts": 9.5,
         "pun": "How I Metcalf Your Mother"
       },
       {
@@ -146,6 +146,15 @@
     ],
     "TE": [
       {
+        "id": "darnellwashington_pit",
+        "first": "Darnell",
+        "last": "Washington",
+        "team": "PIT",
+        "pos": "TE",
+        "pts": 11.7,
+        "pun": "Washington The Pain Down"
+      },
+      {
         "id": "haroldfanninjr_cle",
         "first": "Harold",
         "last": "Fannin",
@@ -162,15 +171,6 @@
         "pos": "TE",
         "pts": 3.4,
         "pun": "The Muth Is Luth"
-      },
-      {
-        "id": "darnellwashington_pit",
-        "first": "Darnell",
-        "last": "Washington",
-        "team": "PIT",
-        "pos": "TE",
-        "pts": 2.6,
-        "pun": "Washington The Pain Down"
       }
     ],
     "K": [
@@ -251,15 +251,6 @@
         "pun": "I'm About To Go Goff"
       },
       {
-        "id": "deshaunwatson_cle",
-        "first": "Deshaun",
-        "last": "Watson",
-        "team": "CLE",
-        "pos": "QB",
-        "pts": 64.9,
-        "pun": "Watson Clinic"
-      },
-      {
         "id": "dakprescott_dal",
         "first": "Dak",
         "last": "Prescott",
@@ -267,6 +258,15 @@
         "pos": "QB",
         "pts": 64.1,
         "pun": "The Boys Are Dak In Town"
+      },
+      {
+        "id": "deshaunwatson_cle",
+        "first": "Deshaun",
+        "last": "Watson",
+        "team": "CLE",
+        "pos": "QB",
+        "pts": 63.3,
+        "pun": "Watson Clinic"
       },
       {
         "id": "lamarjackson_bal",
@@ -287,6 +287,15 @@
         "pun": "I Married my Cousins"
       },
       {
+        "id": "aaronrodgers_pit",
+        "first": "Aaron",
+        "last": "Rodgers",
+        "team": "PIT",
+        "pos": "QB",
+        "pts": 57.1,
+        "pun": "Mr. Rodgers' Neighborhood"
+      },
+      {
         "id": "jalenhurts_phi",
         "first": "Jalen",
         "last": "Hurts",
@@ -294,15 +303,6 @@
         "pos": "QB",
         "pts": 56.5,
         "pun": "Hurts So Good"
-      },
-      {
-        "id": "matthewstafford_lar",
-        "first": "Matthew",
-        "last": "Stafford",
-        "team": "LAR",
-        "pos": "QB",
-        "pts": 56,
-        "pun": "Stafford Infection"
       }
     ],
     "RB": [
@@ -370,6 +370,15 @@
         "pun": "50 Shades of D'Andre"
       },
       {
+        "id": "jaylenwarren_pit",
+        "first": "Jaylen",
+        "last": "Warren",
+        "team": "PIT",
+        "pos": "RB",
+        "pts": 55.7,
+        "pun": "This is Your Final Warren"
+      },
+      {
         "id": "ashtonjeanty_lv",
         "first": "Ashton",
         "last": "Jeanty",
@@ -397,15 +406,6 @@
         "pun": "Williams-Sonoma Touchdowns"
       },
       {
-        "id": "jaylenwarren_pit",
-        "first": "Jaylen",
-        "last": "Warren",
-        "team": "PIT",
-        "pos": "RB",
-        "pts": 52.5,
-        "pun": "This is Your Final Warren"
-      },
-      {
         "id": "javontewilliams_dal",
         "first": "Javonte",
         "last": "Williams",
@@ -429,7 +429,7 @@
         "last": "Judkins",
         "team": "CLE",
         "pos": "RB",
-        "pts": 44.2,
+        "pts": 45,
         "pun": "Quinshon & Chill"
       },
       {
