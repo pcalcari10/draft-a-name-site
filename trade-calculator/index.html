@@ -281,16 +281,16 @@
 </div>
 <nav class="sport-nav">
   <div class="sport-nav-inner">
-    <a href="/" class="sport-tab active" id="footballTab">🏈 Fantasy Football</a>
+    <a href="/" class="sport-tab" id="footballTab">🏈 Fantasy Football</a>
     <a href="/baseball/" class="sport-tab">⚾ Fantasy Baseball <span class="soon-badge">Soon</span></a>
     <a href="/basketball/" class="sport-tab">🏀 Fantasy Basketball</a>
     <a href="/hockey/" class="sport-tab">🏒 Fantasy Hockey</a>
     <a href="/suggest/" class="sport-tab">💡 Suggest a Name</a>
-    <a href="/league-importer/" class="sport-tab">📥 Team Importer</a>
+    <a href="#" class="sport-tab active" id="toolsTab">🛠 Tools</a>
   </div>
 </nav>
 <div class="sport-dropdown" id="sportDropdown">
-  <a href="/">🔍 Search</a>
+  <a href="/league-importer/">📥 Team Importer</a>
   <a href="/trade-calculator/">⚖️ Trade Calculator</a>
 </div>
 
@@ -378,7 +378,7 @@
 <script>
 // ---------- Sport nav dropdown (tap-to-toggle + hover) ----------
 (function(){
-  const trigger = document.getElementById('footballTab');
+  const trigger = document.getElementById('toolsTab');
   const dropdown = document.getElementById('sportDropdown');
   if(!trigger || !dropdown) return;
   function positionDropdown(){
@@ -392,7 +392,10 @@
   trigger.addEventListener('mouseleave', () => { setTimeout(() => { if(!dropdown.matches(':hover')) closeDropdown(); }, 100); });
   dropdown.addEventListener('mouseleave', closeDropdown);
   trigger.addEventListener('click', (e) => {
-    if(!dropdown.classList.contains('open')){ e.preventDefault(); openDropdown(); }
+    // The trigger is now a pure dropdown opener with no real destination
+    // (href="#"), so always prevent navigation and just toggle the menu.
+    e.preventDefault();
+    if(dropdown.classList.contains('open')){ closeDropdown(); } else { openDropdown(); }
   });
   document.addEventListener('click', (e) => {
     if(e.target !== trigger && !trigger.contains(e.target) && !e.target.closest('.sport-dropdown')) closeDropdown();

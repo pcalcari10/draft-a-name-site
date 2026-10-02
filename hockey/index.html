@@ -565,11 +565,11 @@
     <a href="/basketball/" class="sport-tab">🏀 Fantasy Basketball</a>
     <a href="/hockey/" class="sport-tab active">🏒 Fantasy Hockey</a>
     <a href="/suggest/" class="sport-tab">💡 Suggest a Name</a>
-    <a href="/league-importer/" class="sport-tab">📥 Team Importer</a>
+    <a href="#" class="sport-tab" id="toolsTab">🛠 Tools</a>
   </div>
 </nav>
 <div class="sport-dropdown" id="sportDropdown">
-  <a href="/">🔍 Search</a>
+  <a href="/league-importer/">📥 Team Importer</a>
         <a href="/trade-calculator/">⚖️ Trade Calculator</a>
 </div>
 <script>
@@ -578,7 +578,7 @@
 // coordinates, so it can never get clipped by a scrolling/overflow ancestor
 // the way a nested absolutely-positioned child would be.
 (function(){
-  const trigger = document.getElementById('footballTab');
+  const trigger = document.getElementById('toolsTab');
   const dropdown = document.getElementById('sportDropdown');
   if(!trigger || !dropdown) return;
 
@@ -604,8 +604,12 @@
   // Touch devices have no hover state at all, so the first tap opens the
   // dropdown instead of navigating; a second tap on a link inside proceeds.
   trigger.addEventListener('click', (e) => {
-    if(!dropdown.classList.contains('open')){
-      e.preventDefault();
+    // The trigger is now a pure dropdown opener with no real destination
+    // (href="#"), so always prevent navigation and just toggle the menu.
+    e.preventDefault();
+    if(dropdown.classList.contains('open')){
+      closeDropdown();
+    } else {
       openDropdown();
     }
   });
