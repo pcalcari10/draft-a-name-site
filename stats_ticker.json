@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-02T01:29:45.456Z",
+  "generatedAt": "2026-10-02T01:46:50.978Z",
   "season": "2026",
   "week": 4,
   "thisWeek": {
@@ -10,7 +10,7 @@
         "last": "Watson",
         "team": "CLE",
         "pos": "QB",
-        "pts": 6.6,
+        "pts": 11.2,
         "pun": "Watson Clinic"
       },
       {
@@ -30,7 +30,7 @@
         "last": "Judkins",
         "team": "CLE",
         "pos": "RB",
-        "pts": 10.9,
+        "pts": 14.6,
         "pun": "Quinshon & Chill"
       },
       {
@@ -119,6 +119,15 @@
     ],
     "TE": [
       {
+        "id": "haroldfanninjr_cle",
+        "first": "Harold",
+        "last": "Fannin",
+        "team": "CLE",
+        "pos": "TE",
+        "pts": 9.5,
+        "pun": "Fannin Fodder"
+      },
+      {
         "id": "patfreiermuth_pit",
         "first": "Pat",
         "last": "Freiermuth",
@@ -135,15 +144,6 @@
         "pos": "TE",
         "pts": 2.6,
         "pun": "Washington The Pain Down"
-      },
-      {
-        "id": "haroldfanninjr_cle",
-        "first": "Harold",
-        "last": "Fannin",
-        "team": "CLE",
-        "pos": "TE",
-        "pts": 2.3,
-        "pun": "Fannin Fodder"
       }
     ],
     "K": [
@@ -153,7 +153,7 @@
         "last": "Szmyt",
         "team": "CLE",
         "pos": "K",
-        "pts": 2,
+        "pts": 3,
         "pun": "Andre's Excellent Adventure"
       }
     ]
@@ -206,6 +206,15 @@
         "pun": "Sherlock Mahomes"
       },
       {
+        "id": "deshaunwatson_cle",
+        "first": "Deshaun",
+        "last": "Watson",
+        "team": "CLE",
+        "pos": "QB",
+        "pts": 66.2,
+        "pun": "Watson Clinic"
+      },
+      {
         "id": "jaredgoff_det",
         "first": "Jared",
         "last": "Goff",
@@ -222,15 +231,6 @@
         "pos": "QB",
         "pts": 64.1,
         "pun": "The Boys Are Dak In Town"
-      },
-      {
-        "id": "deshaunwatson_cle",
-        "first": "Deshaun",
-        "last": "Watson",
-        "team": "CLE",
-        "pos": "QB",
-        "pts": 61.6,
-        "pun": "Watson Clinic"
       },
       {
         "id": "lamarjackson_bal",
@@ -406,6 +406,15 @@
         "pun": "Come and Get Your Love"
       },
       {
+        "id": "quinshonjudkins_cle",
+        "first": "Quinshon",
+        "last": "Judkins",
+        "team": "CLE",
+        "pos": "RB",
+        "pts": 41.3,
+        "pun": "Quinshon & Chill"
+      },
+      {
         "id": "buckyirving_tb",
         "first": "Bucky",
         "last": "Irving",
@@ -440,15 +449,6 @@
         "pos": "RB",
         "pts": 38.9,
         "pun": "High-Speed Chase"
-      },
-      {
-        "id": "quinshonjudkins_cle",
-        "first": "Quinshon",
-        "last": "Judkins",
-        "team": "CLE",
-        "pos": "RB",
-        "pts": 37.6,
-        "pun": "Quinshon & Chill"
       },
       {
         "id": "camskattebo_nyg",
@@ -734,6 +734,15 @@
         "pun": "Juwan's Johnson"
       },
       {
+        "id": "haroldfanninjr_cle",
+        "first": "Harold",
+        "last": "Fannin",
+        "team": "CLE",
+        "pos": "TE",
+        "pts": 48.1,
+        "pun": "Fannin Fodder"
+      },
+      {
         "id": "georgekittle_sf",
         "first": "George",
         "last": "Kittle",
@@ -750,15 +759,6 @@
         "pos": "TE",
         "pts": 44.3,
         "pun": "Dalton Abbey"
-      },
-      {
-        "id": "haroldfanninjr_cle",
-        "first": "Harold",
-        "last": "Fannin",
-        "team": "CLE",
-        "pos": "TE",
-        "pts": 40.9,
-        "pun": "Fannin Fodder"
       },
       {
         "id": "daltonschultz_hou",
@@ -889,6 +889,15 @@
         "pun": "Chad's Excellent Adventure"
       },
       {
+        "id": "andreszmyt_cle",
+        "first": "Andre",
+        "last": "Szmyt",
+        "team": "CLE",
+        "pos": "K",
+        "pts": 29,
+        "pun": "Andre's Excellent Adventure"
+      },
+      {
         "id": "harrisonbutker_kc",
         "first": "Harrison",
         "last": "Butker",
@@ -896,15 +905,6 @@
         "pos": "K",
         "pts": 28,
         "pun": "I Like Big Butker, And I Cannot Lie"
-      },
-      {
-        "id": "andreszmyt_cle",
-        "first": "Andre",
-        "last": "Szmyt",
-        "team": "CLE",
-        "pos": "K",
-        "pts": 28,
-        "pun": "Andre's Excellent Adventure"
       }
     ]
   }
