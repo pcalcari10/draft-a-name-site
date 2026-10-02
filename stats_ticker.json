@@ -1,29 +1,47 @@
 {
-  "generatedAt": "2026-10-02T01:11:27.074Z",
+  "generatedAt": "2026-10-02T01:29:45.456Z",
   "season": "2026",
   "week": 4,
   "thisWeek": {
     "QB": [
-      {
-        "id": "aaronrodgers_pit",
-        "first": "Aaron",
-        "last": "Rodgers",
-        "team": "PIT",
-        "pos": "QB",
-        "pts": 6,
-        "pun": "Mr. Rodgers' Neighborhood"
-      },
       {
         "id": "deshaunwatson_cle",
         "first": "Deshaun",
         "last": "Watson",
         "team": "CLE",
         "pos": "QB",
-        "pts": 4.6,
+        "pts": 6.6,
         "pun": "Watson Clinic"
+      },
+      {
+        "id": "aaronrodgers_pit",
+        "first": "Aaron",
+        "last": "Rodgers",
+        "team": "PIT",
+        "pos": "QB",
+        "pts": 6.6,
+        "pun": "Mr. Rodgers' Neighborhood"
       }
     ],
     "RB": [
+      {
+        "id": "quinshonjudkins_cle",
+        "first": "Quinshon",
+        "last": "Judkins",
+        "team": "CLE",
+        "pos": "RB",
+        "pts": 10.9,
+        "pun": "Quinshon & Chill"
+      },
+      {
+        "id": "jaylenwarren_pit",
+        "first": "Jaylen",
+        "last": "Warren",
+        "team": "PIT",
+        "pos": "RB",
+        "pts": 10.1,
+        "pun": "This is Your Final Warren"
+      },
       {
         "id": "jaleelmclaughlin_cle",
         "first": "Jaleel",
@@ -32,24 +50,6 @@
         "pos": "RB",
         "pts": 8.8,
         "pun": "Jaleel McLaughlin and the Fantasy Machine"
-      },
-      {
-        "id": "jaylenwarren_pit",
-        "first": "Jaylen",
-        "last": "Warren",
-        "team": "PIT",
-        "pos": "RB",
-        "pts": 7.5,
-        "pun": "This is Your Final Warren"
-      },
-      {
-        "id": "quinshonjudkins_cle",
-        "first": "Quinshon",
-        "last": "Judkins",
-        "team": "CLE",
-        "pos": "RB",
-        "pts": 2.9,
-        "pun": "Quinshon & Chill"
       },
       {
         "id": "travishomer_pit",
@@ -68,8 +68,17 @@
         "last": "Boston",
         "team": "CLE",
         "pos": "WR",
-        "pts": 8.6,
+        "pts": 10.4,
         "pun": "Finding the Denzone"
+      },
+      {
+        "id": "kcconcepcionjr_cle",
+        "first": "KC",
+        "last": "Concepcion",
+        "team": "CLE",
+        "pos": "WR",
+        "pts": 9.8,
+        "pun": "You Are the Only Concepcion"
       },
       {
         "id": "romanwilson_pit",
@@ -90,21 +99,12 @@
         "pun": "How I Metcalf Your Mother"
       },
       {
-        "id": "kcconcepcionjr_cle",
-        "first": "KC",
-        "last": "Concepcion",
-        "team": "CLE",
-        "pos": "WR",
-        "pts": 3.1,
-        "pun": "You Are the Only Concepcion"
-      },
-      {
         "id": "michaelpittmanjr_pit",
         "first": "Michael",
         "last": "Pittman",
         "team": "PIT",
         "pos": "WR",
-        "pts": 1.9,
+        "pts": 3.5,
         "pun": "Pittman Happens"
       },
       {
@@ -118,6 +118,15 @@
       }
     ],
     "TE": [
+      {
+        "id": "patfreiermuth_pit",
+        "first": "Pat",
+        "last": "Freiermuth",
+        "team": "PIT",
+        "pos": "TE",
+        "pts": 3.4,
+        "pun": "The Muth Is Luth"
+      },
       {
         "id": "darnellwashington_pit",
         "first": "Darnell",
@@ -135,34 +144,16 @@
         "pos": "TE",
         "pts": 2.3,
         "pun": "Fannin Fodder"
-      },
-      {
-        "id": "patfreiermuth_pit",
-        "first": "Pat",
-        "last": "Freiermuth",
-        "team": "PIT",
-        "pos": "TE",
-        "pts": 1.5,
-        "pun": "The Muth Is Luth"
       }
     ],
     "K": [
-      {
-        "id": "chrisboswell_pit",
-        "first": "Chris",
-        "last": "Boswell",
-        "team": "PIT",
-        "pos": "K",
-        "pts": 1,
-        "pun": "Chris & Chill"
-      },
       {
         "id": "andreszmyt_cle",
         "first": "Andre",
         "last": "Szmyt",
         "team": "CLE",
         "pos": "K",
-        "pts": 1,
+        "pts": 2,
         "pun": "Andre's Excellent Adventure"
       }
     ]
@@ -233,6 +224,15 @@
         "pun": "The Boys Are Dak In Town"
       },
       {
+        "id": "deshaunwatson_cle",
+        "first": "Deshaun",
+        "last": "Watson",
+        "team": "CLE",
+        "pos": "QB",
+        "pts": 61.6,
+        "pun": "Watson Clinic"
+      },
+      {
         "id": "lamarjackson_bal",
         "first": "Lamar",
         "last": "Jackson",
@@ -240,15 +240,6 @@
         "pos": "QB",
         "pts": 61.2,
         "pun": "Lights, Camera, Jackson"
-      },
-      {
-        "id": "deshaunwatson_cle",
-        "first": "Deshaun",
-        "last": "Watson",
-        "team": "CLE",
-        "pos": "QB",
-        "pts": 59.5,
-        "pun": "Watson Clinic"
       },
       {
         "id": "kirkcousins_lv",
@@ -370,6 +361,15 @@
         "pun": "Williams-Sonoma Touchdowns"
       },
       {
+        "id": "jaylenwarren_pit",
+        "first": "Jaylen",
+        "last": "Warren",
+        "team": "PIT",
+        "pos": "RB",
+        "pts": 50.7,
+        "pun": "This is Your Final Warren"
+      },
+      {
         "id": "javontewilliams_dal",
         "first": "Javonte",
         "last": "Williams",
@@ -386,15 +386,6 @@
         "pos": "RB",
         "pts": 50.2,
         "pun": "James Cooked"
-      },
-      {
-        "id": "jaylenwarren_pit",
-        "first": "Jaylen",
-        "last": "Warren",
-        "team": "PIT",
-        "pos": "RB",
-        "pts": 48.1,
-        "pun": "This is Your Final Warren"
       },
       {
         "id": "breecehall_nyj",
@@ -451,6 +442,15 @@
         "pun": "High-Speed Chase"
       },
       {
+        "id": "quinshonjudkins_cle",
+        "first": "Quinshon",
+        "last": "Judkins",
+        "team": "CLE",
+        "pos": "RB",
+        "pts": 37.6,
+        "pun": "Quinshon & Chill"
+      },
+      {
         "id": "camskattebo_nyg",
         "first": "Cam",
         "last": "Skattebo",
@@ -485,15 +485,6 @@
         "pos": "RB",
         "pts": 31.3,
         "pun": "Kyle Monangai and the Fantasy Machine"
-      },
-      {
-        "id": "travisetiennejr_no",
-        "first": "Travis",
-        "last": "Etienne",
-        "team": "NO",
-        "pos": "RB",
-        "pts": 30.9,
-        "pun": "The Etienne Express"
       }
     ],
     "WR": [
@@ -570,6 +561,15 @@
         "pun": "Ja'Marrvelous"
       },
       {
+        "id": "denzelboston_cle",
+        "first": "Denzel",
+        "last": "Boston",
+        "team": "CLE",
+        "pos": "WR",
+        "pts": 52.9,
+        "pun": "Finding the Denzone"
+      },
+      {
         "id": "jalencoker_car",
         "first": "Jalen",
         "last": "Coker",
@@ -577,15 +577,6 @@
         "pos": "WR",
         "pts": 52.2,
         "pun": "Coker Head"
-      },
-      {
-        "id": "denzelboston_cle",
-        "first": "Denzel",
-        "last": "Boston",
-        "team": "CLE",
-        "pos": "WR",
-        "pts": 51.1,
-        "pun": "Finding the Denzone"
       },
       {
         "id": "parkerwashington_jac",
@@ -912,7 +903,7 @@
         "last": "Szmyt",
         "team": "CLE",
         "pos": "K",
-        "pts": 27,
+        "pts": 28,
         "pun": "Andre's Excellent Adventure"
       }
     ]
