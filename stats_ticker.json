@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-02T00:47:05.208Z",
+  "generatedAt": "2026-10-02T01:11:27.074Z",
   "season": "2026",
   "week": 4,
   "thisWeek": {
@@ -10,7 +10,7 @@
         "last": "Rodgers",
         "team": "PIT",
         "pos": "QB",
-        "pts": 6.4,
+        "pts": 6,
         "pun": "Mr. Rodgers' Neighborhood"
       },
       {
@@ -19,18 +19,27 @@
         "last": "Watson",
         "team": "CLE",
         "pos": "QB",
-        "pts": 1.1,
+        "pts": 4.6,
         "pun": "Watson Clinic"
       }
     ],
     "RB": [
+      {
+        "id": "jaleelmclaughlin_cle",
+        "first": "Jaleel",
+        "last": "McLaughlin",
+        "team": "CLE",
+        "pos": "RB",
+        "pts": 8.8,
+        "pun": "Jaleel McLaughlin and the Fantasy Machine"
+      },
       {
         "id": "jaylenwarren_pit",
         "first": "Jaylen",
         "last": "Warren",
         "team": "PIT",
         "pos": "RB",
-        "pts": 4.2,
+        "pts": 7.5,
         "pun": "This is Your Final Warren"
       },
       {
@@ -39,7 +48,7 @@
         "last": "Judkins",
         "team": "CLE",
         "pos": "RB",
-        "pts": 0.4,
+        "pts": 2.9,
         "pun": "Quinshon & Chill"
       },
       {
@@ -53,6 +62,15 @@
       }
     ],
     "WR": [
+      {
+        "id": "denzelboston_cle",
+        "first": "Denzel",
+        "last": "Boston",
+        "team": "CLE",
+        "pos": "WR",
+        "pts": 8.6,
+        "pun": "Finding the Denzone"
+      },
       {
         "id": "romanwilson_pit",
         "first": "Roman",
@@ -90,15 +108,6 @@
         "pun": "Pittman Happens"
       },
       {
-        "id": "denzelboston_cle",
-        "first": "Denzel",
-        "last": "Boston",
-        "team": "CLE",
-        "pos": "WR",
-        "pts": 1.5,
-        "pun": "Finding the Denzone"
-      },
-      {
         "id": "isaiahbond_cle",
         "first": "Isaiah",
         "last": "Bond",
@@ -115,8 +124,26 @@
         "last": "Washington",
         "team": "PIT",
         "pos": "TE",
-        "pts": 1.6,
+        "pts": 2.6,
         "pun": "Washington The Pain Down"
+      },
+      {
+        "id": "haroldfanninjr_cle",
+        "first": "Harold",
+        "last": "Fannin",
+        "team": "CLE",
+        "pos": "TE",
+        "pts": 2.3,
+        "pun": "Fannin Fodder"
+      },
+      {
+        "id": "patfreiermuth_pit",
+        "first": "Pat",
+        "last": "Freiermuth",
+        "team": "PIT",
+        "pos": "TE",
+        "pts": 1.5,
+        "pun": "The Muth Is Luth"
       }
     ],
     "K": [
@@ -128,6 +155,15 @@
         "pos": "K",
         "pts": 1,
         "pun": "Chris & Chill"
+      },
+      {
+        "id": "andreszmyt_cle",
+        "first": "Andre",
+        "last": "Szmyt",
+        "team": "CLE",
+        "pos": "K",
+        "pts": 1,
+        "pun": "Andre's Excellent Adventure"
       }
     ]
   },
@@ -206,6 +242,15 @@
         "pun": "Lights, Camera, Jackson"
       },
       {
+        "id": "deshaunwatson_cle",
+        "first": "Deshaun",
+        "last": "Watson",
+        "team": "CLE",
+        "pos": "QB",
+        "pts": 59.5,
+        "pun": "Watson Clinic"
+      },
+      {
         "id": "kirkcousins_lv",
         "first": "Kirk",
         "last": "Cousins",
@@ -222,15 +267,6 @@
         "pos": "QB",
         "pts": 56.5,
         "pun": "Hurts So Good"
-      },
-      {
-        "id": "deshaunwatson_cle",
-        "first": "Deshaun",
-        "last": "Watson",
-        "team": "CLE",
-        "pos": "QB",
-        "pts": 56.1,
-        "pun": "Watson Clinic"
       },
       {
         "id": "matthewstafford_lar",
@@ -357,7 +393,7 @@
         "last": "Warren",
         "team": "PIT",
         "pos": "RB",
-        "pts": 44.8,
+        "pts": 48.1,
         "pun": "This is Your Final Warren"
       },
       {
@@ -543,6 +579,15 @@
         "pun": "Coker Head"
       },
       {
+        "id": "denzelboston_cle",
+        "first": "Denzel",
+        "last": "Boston",
+        "team": "CLE",
+        "pos": "WR",
+        "pts": 51.1,
+        "pun": "Finding the Denzone"
+      },
+      {
         "id": "parkerwashington_jac",
         "first": "Parker",
         "last": "Washington",
@@ -604,15 +649,6 @@
         "pos": "WR",
         "pts": 44.4,
         "pun": "Tee Time"
-      },
-      {
-        "id": "denzelboston_cle",
-        "first": "Denzel",
-        "last": "Boston",
-        "team": "CLE",
-        "pos": "WR",
-        "pts": 44,
-        "pun": "Finding the Denzone"
       },
       {
         "id": "drakelondon_atl",
@@ -725,6 +761,15 @@
         "pun": "Dalton Abbey"
       },
       {
+        "id": "haroldfanninjr_cle",
+        "first": "Harold",
+        "last": "Fannin",
+        "team": "CLE",
+        "pos": "TE",
+        "pts": 40.9,
+        "pun": "Fannin Fodder"
+      },
+      {
         "id": "daltonschultz_hou",
         "first": "Dalton",
         "last": "Schultz",
@@ -750,15 +795,6 @@
         "pos": "TE",
         "pts": 39.4,
         "pun": "Isaiah & Chill"
-      },
-      {
-        "id": "haroldfanninjr_cle",
-        "first": "Harold",
-        "last": "Fannin",
-        "team": "CLE",
-        "pos": "TE",
-        "pts": 38.6,
-        "pun": "Fannin Fodder"
       },
       {
         "id": "kenyonsadiq_nyj",
@@ -871,13 +907,13 @@
         "pun": "I Like Big Butker, And I Cannot Lie"
       },
       {
-        "id": "brandonaubrey_dal",
-        "first": "Brandon",
-        "last": "Aubrey",
-        "team": "DAL",
+        "id": "andreszmyt_cle",
+        "first": "Andre",
+        "last": "Szmyt",
+        "team": "CLE",
         "pos": "K",
         "pts": 27,
-        "pun": "Aubrey'd Up and Ready"
+        "pun": "Andre's Excellent Adventure"
       }
     ]
   }
