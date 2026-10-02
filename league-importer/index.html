@@ -12,7 +12,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Team Importer — The Fantasy Name HQ</title>
-<meta name="description" content="Import your fantasy football league from Sleeper or ESPN and instantly see every team name pun we have for your players and franchises.">
+<meta name="description" content="Import your fantasy football or basketball league from Sleeper (football also supports ESPN) and instantly see every team name pun we have for your players and franchises.">
 <link rel="canonical" href="https://thefantasynamehq.com/league-importer/">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -381,12 +381,17 @@
   <header>
     <div class="tag">local tool — runs entirely in this browser tab</div>
     <h1 style="font-family:var(--display); font-weight:800;">Team Importer</h1>
-    <p class="sub">Pull your roster from Sleeper or ESPN and see every pun we have for each player — plus team-pride names for whichever franchises are on your roster. Nothing is uploaded anywhere.</p>
+    <p class="sub">Pull your roster from Sleeper (football also supports ESPN) and see every pun we have for each player — plus team-pride names for whichever franchises are on your roster. Nothing is uploaded anywhere.</p>
   </header>
+
+  <div class="platform-tabs" id="sportTabs" style="margin-bottom:10px;">
+    <div class="platform-tab sport-select-tab active" data-sport="nfl">🏈 Football</div>
+    <div class="platform-tab sport-select-tab" data-sport="nba">🏀 Basketball</div>
+  </div>
 
   <div class="platform-tabs">
     <div class="platform-tab active" data-platform="sleeper">Sleeper</div>
-    <div class="platform-tab" data-platform="espn">ESPN</div>
+    <div class="platform-tab" data-platform="espn" id="espnTab">ESPN</div>
   </div>
 
   <!-- ---------- Sleeper panel ---------- -->
@@ -478,7 +483,7 @@
       </div>
     </div>
     <div class="footer-bottom">
-      <div>Data sources: Sleeper's public API (rosters, no login) and ESPN's undocumented fantasy API (read-only, no login for public leagues; private leagues proxied through a small Cloudflare Worker, no credentials ever stored). Neither integration is officially supported, so either could change or break without notice. The pun database embedded in this file is a snapshot from when it was built — ask for a refreshed copy after a big batch of new puns.</div>
+      <div>Data sources: Sleeper's public API (rosters, no login, both football and basketball) and ESPN's undocumented fantasy API (read-only, football only for now; no login for public leagues; private leagues proxied through a small Cloudflare Worker, no credentials ever stored). None of these integrations are officially supported, so any could change or break without notice. Pun data is pulled live from the site's own database each time this page loads, so it's always current.</div>
       <div style="margin-top:8px;">&copy; 2026 The Fantasy Name HQ</div>
     </div>
   </footer>
@@ -491,6 +496,21 @@
 let OUR_DB = [];
 let OUR_TEAMS = [];
 let TEAMS_LIST = [];
+
+// Holds both sports' data once loaded; OUR_DB/OUR_TEAMS/etc above are
+// "pointers" repointed at whichever sport is currently selected, same
+// pattern as admin's pointSportGlobalsAt().
+const SPORT_DATA = {
+  nfl: { players: [], teams: [] },
+  nba: { players: [], teams: [] },
+};
+function pointSportDataAt(sport){
+  OUR_DB = SPORT_DATA[sport].players;
+  OUR_TEAMS = SPORT_DATA[sport].teams;
+  for(const k in DB_BY_NAME) delete DB_BY_NAME[k];
+  for(const k in TEAMS_BY_ABBR) delete TEAMS_BY_ABBR[k];
+  indexData();
+}
 
 function normalize(name){
   return name.toLowerCase()
@@ -524,8 +544,13 @@ function matchOurTeam(fullName){
   );
 }
 
-const TEAM_CODE_FIX = { LVR:'LV', SFO:'SF', GBP:'GB', KCC:'KC', NEP:'NE', TBB:'TB', JAX:'JAC' };
-function fixTeam(code){ return TEAM_CODE_FIX[code] || code; }
+const TEAM_CODE_FIX_NFL = { LVR:'LV', SFO:'SF', GBP:'GB', KCC:'KC', NEP:'NE', TBB:'TB', JAX:'JAC' };
+// Same mismatches identified when building basketball's own roster sync.
+const TEAM_CODE_FIX_NBA = { GS:'GSW', SA:'SAS', NO:'NOP', NY:'NYK', UTAH:'UTA', PHO:'PHX' };
+function fixTeam(code){
+  const fix = activeSport === 'nba' ? TEAM_CODE_FIX_NBA : TEAM_CODE_FIX_NFL;
+  return fix[code] || code;
+}
 
 // ---------- Auto-add missing players (Firestore) ----------
 const firebaseConfig = {
@@ -791,11 +816,40 @@ function renderRosterResults({ groups, teamPrideAbbrs, banner, summaryLine }){
 
 // ---------- Platform tab switching ----------
 let activePlatform = 'sleeper';
-document.querySelectorAll('.platform-tab').forEach(tab => {
+document.querySelectorAll('.platform-tab:not(.sport-select-tab)').forEach(tab => {
   tab.addEventListener('click', () => {
     activePlatform = tab.dataset.platform;
-    document.querySelectorAll('.platform-tab').forEach(t => t.classList.toggle('active', t === tab));
+    document.querySelectorAll('.platform-tab:not(.sport-select-tab)').forEach(t => t.classList.toggle('active', t === tab));
     document.querySelectorAll('.platform-panel').forEach(p => p.classList.toggle('active', p.id === 'panel-' + activePlatform));
+    leaguesPanel.style.display = 'none';
+    resultsPanel.style.display = 'none';
+  });
+});
+
+// Basketball is Sleeper-only for now (no ESPN NBA integration built yet),
+// so selecting it hides the ESPN tab and forces Sleeper as the platform.
+// If someone had ESPN selected and switches to basketball, snap back to
+// Sleeper's panel so they're not left on a hidden tab.
+let activeSport = 'nfl';
+const espnTabEl = document.getElementById('espnTab');
+document.querySelectorAll('.sport-select-tab').forEach(tab => {
+  tab.addEventListener('click', () => {
+    activeSport = tab.dataset.sport;
+    document.querySelectorAll('.sport-select-tab').forEach(t => t.classList.toggle('active', t === tab));
+    pointSportDataAt(activeSport);
+
+    if(activeSport === 'nba'){
+      espnTabEl.style.display = 'none';
+      if(activePlatform === 'espn'){
+        activePlatform = 'sleeper';
+        document.querySelectorAll('.platform-tab:not(.sport-select-tab)').forEach(t => t.classList.toggle('active', t.dataset.platform === 'sleeper'));
+        document.querySelectorAll('.platform-panel').forEach(p => p.classList.toggle('active', p.id === 'panel-sleeper'));
+      }
+    } else {
+      espnTabEl.style.display = '';
+    }
+
+    usernameInput.placeholder = activeSport === 'nba' ? 'e.g. pcalcari' : 'e.g. pcalcari';
     leaguesPanel.style.display = 'none';
     resultsPanel.style.display = 'none';
   });
@@ -817,8 +871,21 @@ function setSleeperStatus(msg, isError){
   sleeperStatusEl.className = 'status-line' + (isError ? ' error' : '');
 }
 
+// Football needs a separate ID-mapping file (DynastyProcess) because
+// Sleeper's NFL player objects are keyed oddly for this purpose; basketball
+// doesn't need that detour -- Sleeper's own /v1/players/nba response already
+// has everything (name, team, position) keyed by the same sleeper_id used
+// in roster data, confirmed working directly against real data earlier.
+let playerIdMapNfl = null;
+let playerIdMapNba = null;
+
 async function loadPlayerIdMap(){
-  if(playerIdMap) return playerIdMap;
+  if(activeSport === 'nba') return loadPlayerIdMapNba();
+  return loadPlayerIdMapNfl();
+}
+
+async function loadPlayerIdMapNfl(){
+  if(playerIdMapNfl) return playerIdMapNfl;
   setSleeperStatus('Downloading player ID mapping (dynastyprocess/data)\u2026');
   const res = await fetch('https://raw.githubusercontent.com/dynastyprocess/data/master/files/db_playerids.csv');
   if(!res.ok) throw new Error('Could not download player ID mapping (HTTP ' + res.status + ')');
@@ -830,7 +897,22 @@ async function loadPlayerIdMap(){
       map[row.sleeper_id] = { name: row.name, position: row.position, team: row.team };
     }
   });
-  playerIdMap = map;
+  playerIdMapNfl = map;
+  return map;
+}
+
+async function loadPlayerIdMapNba(){
+  if(playerIdMapNba) return playerIdMapNba;
+  setSleeperStatus('Downloading NBA player list from Sleeper\u2026');
+  const res = await fetch('https://api.sleeper.app/v1/players/nba');
+  if(!res.ok) throw new Error('Could not download the NBA player list (HTTP ' + res.status + ')');
+  const data = await res.json();
+  const map = {};
+  Object.entries(data).forEach(([sid, p]) => {
+    if(!p || !p.first_name || !p.last_name) return;
+    map[sid] = { name: `${p.first_name} ${p.last_name}`, position: p.position, team: p.team };
+  });
+  playerIdMapNba = map;
   return map;
 }
 
@@ -850,7 +932,7 @@ sleeperLookupBtn.addEventListener('click', async () => {
 
     const season = sleeperSeasonSelect.value;
     setSleeperStatus('Fetching leagues for ' + season + '\u2026');
-    const leaguesRes = await fetch(`https://api.sleeper.app/v1/user/${user.user_id}/leagues/nfl/${season}`);
+    const leaguesRes = await fetch(`https://api.sleeper.app/v1/user/${user.user_id}/leagues/${activeSport}/${season}`);
     if(!leaguesRes.ok) throw new Error('Could not fetch leagues (HTTP ' + leaguesRes.status + ')');
     const leagues = await leaguesRes.json();
 
@@ -917,6 +999,13 @@ async function loadSleeperRoster(leagueId, leagueName){
       const parts = raw.name.trim().split(' ');
       const first = parts[0];
       const last = parts.slice(1).join(' ') || parts[0];
+      if(activeSport === 'nba'){
+        // Basketball's main page has no extra_players merge step the way
+        // football's does, so auto-adding a Firestore record here would
+        // never actually surface anywhere -- the roster sync (GitHub
+        // Actions) is basketball's real path for picking up new players.
+        return { name: raw.name, team, pos: raw.position || '', status: 'missing', names: [] };
+      }
       const extra = await getOrCreateExtraPlayer(first, last, team, raw.position, 'sleeper_auto_add');
       return { name: raw.name, team, pos: raw.position || '', status: 'template', names: extra.names || [] };
     }
@@ -1144,11 +1233,15 @@ setEspnStatus('Loading player database\u2026');
 
 Promise.all([
   fetch('../players.json').then(r => r.json()),
-  fetch('../teams.json').then(r => r.json())
-]).then(([playersData, teamsData]) => {
-  playersData.forEach(p => OUR_DB.push(p));
-  teamsData.forEach(t => OUR_TEAMS.push(t));
-  indexData();
+  fetch('../teams.json').then(r => r.json()),
+  fetch('../players_basketball.json').then(r => r.json()),
+  fetch('../teams_basketball.json').then(r => r.json()),
+]).then(([fbPlayers, fbTeams, bbPlayers, bbTeams]) => {
+  fbPlayers.forEach(p => SPORT_DATA.nfl.players.push(p));
+  fbTeams.forEach(t => SPORT_DATA.nfl.teams.push(t));
+  bbPlayers.forEach(p => SPORT_DATA.nba.players.push(p));
+  bbTeams.forEach(t => SPORT_DATA.nba.teams.push(t));
+  pointSportDataAt(activeSport);
   sleeperLookupBtn.disabled = false;
   espnLookupBtn.disabled = false;
   setSleeperStatus('');
