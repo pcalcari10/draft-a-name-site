@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-02T01:46:50.978Z",
+  "generatedAt": "2026-10-02T02:11:08.413Z",
   "season": "2026",
   "week": 4,
   "thisWeek": {
@@ -10,7 +10,7 @@
         "last": "Watson",
         "team": "CLE",
         "pos": "QB",
-        "pts": 11.2,
+        "pts": 11.1,
         "pun": "Watson Clinic"
       },
       {
@@ -19,7 +19,7 @@
         "last": "Rodgers",
         "team": "PIT",
         "pos": "QB",
-        "pts": 6.6,
+        "pts": 8.5,
         "pun": "Mr. Rodgers' Neighborhood"
       }
     ],
@@ -63,6 +63,15 @@
     ],
     "WR": [
       {
+        "id": "romanwilson_pit",
+        "first": "Roman",
+        "last": "Wilson",
+        "team": "PIT",
+        "pos": "WR",
+        "pts": 14.1,
+        "pun": "The Roman Empire"
+      },
+      {
         "id": "denzelboston_cle",
         "first": "Denzel",
         "last": "Boston",
@@ -79,15 +88,6 @@
         "pos": "WR",
         "pts": 9.8,
         "pun": "You Are the Only Concepcion"
-      },
-      {
-        "id": "romanwilson_pit",
-        "first": "Roman",
-        "last": "Wilson",
-        "team": "PIT",
-        "pos": "WR",
-        "pts": 8.2,
-        "pun": "The Roman Empire"
       },
       {
         "id": "dkmetcalf_pit",
@@ -147,6 +147,15 @@
       }
     ],
     "K": [
+      {
+        "id": "chrisboswell_pit",
+        "first": "Chris",
+        "last": "Boswell",
+        "team": "PIT",
+        "pos": "K",
+        "pts": 3,
+        "pun": "Chris & Chill"
+      },
       {
         "id": "andreszmyt_cle",
         "first": "Andre",
@@ -211,7 +220,7 @@
         "last": "Watson",
         "team": "CLE",
         "pos": "QB",
-        "pts": 66.2,
+        "pts": 66.1,
         "pun": "Watson Clinic"
       },
       {
@@ -651,6 +660,15 @@
         "pun": "Drake London Calling"
       },
       {
+        "id": "romanwilson_pit",
+        "first": "Roman",
+        "last": "Wilson",
+        "team": "PIT",
+        "pos": "WR",
+        "pts": 42.5,
+        "pun": "The Roman Empire"
+      },
+      {
         "id": "zayflowers_bal",
         "first": "Zay",
         "last": "Flowers",
@@ -694,15 +712,6 @@
         "pos": "WR",
         "pts": 38,
         "pun": "Rice Rice Baby"
-      },
-      {
-        "id": "mikeevans_sf",
-        "first": "Mike",
-        "last": "Evans",
-        "team": "SF",
-        "pos": "WR",
-        "pts": 37.7,
-        "pun": "7th Evans"
       }
     ],
     "TE": [
@@ -898,13 +907,13 @@
         "pun": "Andre's Excellent Adventure"
       },
       {
-        "id": "harrisonbutker_kc",
-        "first": "Harrison",
-        "last": "Butker",
-        "team": "KC",
+        "id": "chrisboswell_pit",
+        "first": "Chris",
+        "last": "Boswell",
+        "team": "PIT",
         "pos": "K",
         "pts": 28,
-        "pun": "I Like Big Butker, And I Cannot Lie"
+        "pun": "Chris & Chill"
       }
     ]
   }
