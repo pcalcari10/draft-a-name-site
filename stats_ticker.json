@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-02T02:58:48.689Z",
+  "generatedAt": "2026-10-02T03:19:08.342Z",
   "season": "2026",
   "week": 4,
   "thisWeek": {
@@ -19,7 +19,7 @@
         "last": "Watson",
         "team": "CLE",
         "pos": "QB",
-        "pts": 8.3,
+        "pts": 12.2,
         "pun": "Watson Clinic"
       }
     ],
@@ -30,7 +30,7 @@
         "last": "Judkins",
         "team": "CLE",
         "pos": "RB",
-        "pts": 18.3,
+        "pts": 21.6,
         "pun": "Quinshon & Chill"
       },
       {
@@ -39,7 +39,7 @@
         "last": "Warren",
         "team": "PIT",
         "pos": "RB",
-        "pts": 15.1,
+        "pts": 15.6,
         "pun": "This is Your Final Warren"
       },
       {
@@ -86,7 +86,7 @@
         "last": "Boston",
         "team": "CLE",
         "pos": "WR",
-        "pts": 10.4,
+        "pts": 12.9,
         "pun": "Finding the Denzone"
       },
       {
@@ -175,6 +175,15 @@
     ],
     "K": [
       {
+        "id": "andreszmyt_cle",
+        "first": "Andre",
+        "last": "Szmyt",
+        "team": "CLE",
+        "pos": "K",
+        "pts": 7,
+        "pun": "Andre's Excellent Adventure"
+      },
+      {
         "id": "chrisboswell_pit",
         "first": "Chris",
         "last": "Boswell",
@@ -182,15 +191,6 @@
         "pos": "K",
         "pts": 3,
         "pun": "Chris & Chill"
-      },
-      {
-        "id": "andreszmyt_cle",
-        "first": "Andre",
-        "last": "Szmyt",
-        "team": "CLE",
-        "pos": "K",
-        "pts": 3,
-        "pun": "Andre's Excellent Adventure"
       }
     ]
   },
@@ -242,6 +242,15 @@
         "pun": "Sherlock Mahomes"
       },
       {
+        "id": "deshaunwatson_cle",
+        "first": "Deshaun",
+        "last": "Watson",
+        "team": "CLE",
+        "pos": "QB",
+        "pts": 67.2,
+        "pun": "Watson Clinic"
+      },
+      {
         "id": "jaredgoff_det",
         "first": "Jared",
         "last": "Goff",
@@ -258,15 +267,6 @@
         "pos": "QB",
         "pts": 64.1,
         "pun": "The Boys Are Dak In Town"
-      },
-      {
-        "id": "deshaunwatson_cle",
-        "first": "Deshaun",
-        "last": "Watson",
-        "team": "CLE",
-        "pos": "QB",
-        "pts": 63.3,
-        "pun": "Watson Clinic"
       },
       {
         "id": "lamarjackson_bal",
@@ -361,6 +361,15 @@
         "pun": "Run CMC"
       },
       {
+        "id": "jaylenwarren_pit",
+        "first": "Jaylen",
+        "last": "Warren",
+        "team": "PIT",
+        "pos": "RB",
+        "pts": 56.2,
+        "pun": "This is Your Final Warren"
+      },
+      {
         "id": "dandreswift_chi",
         "first": "D'Andre",
         "last": "Swift",
@@ -368,15 +377,6 @@
         "pos": "RB",
         "pts": 56.1,
         "pun": "50 Shades of D'Andre"
-      },
-      {
-        "id": "jaylenwarren_pit",
-        "first": "Jaylen",
-        "last": "Warren",
-        "team": "PIT",
-        "pos": "RB",
-        "pts": 55.7,
-        "pun": "This is Your Final Warren"
       },
       {
         "id": "ashtonjeanty_lv",
@@ -429,7 +429,7 @@
         "last": "Judkins",
         "team": "CLE",
         "pos": "RB",
-        "pts": 45,
+        "pts": 48.3,
         "pun": "Quinshon & Chill"
       },
       {
@@ -588,6 +588,15 @@
         "pun": "WILSON!🏐"
       },
       {
+        "id": "denzelboston_cle",
+        "first": "Denzel",
+        "last": "Boston",
+        "team": "CLE",
+        "pos": "WR",
+        "pts": 55.4,
+        "pun": "Finding the Denzone"
+      },
+      {
         "id": "jamarrchase_cin",
         "first": "Ja'Marr",
         "last": "Chase",
@@ -595,15 +604,6 @@
         "pos": "WR",
         "pts": 54.5,
         "pun": "Ja'Marrvelous"
-      },
-      {
-        "id": "denzelboston_cle",
-        "first": "Denzel",
-        "last": "Boston",
-        "team": "CLE",
-        "pos": "WR",
-        "pts": 52.9,
-        "pun": "Finding the Denzone"
       },
       {
         "id": "jalencoker_car",
@@ -880,6 +880,15 @@
         "pun": "Straight Outta Shrader"
       },
       {
+        "id": "andreszmyt_cle",
+        "first": "Andre",
+        "last": "Szmyt",
+        "team": "CLE",
+        "pos": "K",
+        "pts": 33,
+        "pun": "Andre's Excellent Adventure"
+      },
+      {
         "id": "willreichard_min",
         "first": "Will",
         "last": "Reichard",
@@ -923,15 +932,6 @@
         "pos": "K",
         "pts": 30,
         "pun": "Chad's Excellent Adventure"
-      },
-      {
-        "id": "andreszmyt_cle",
-        "first": "Andre",
-        "last": "Szmyt",
-        "team": "CLE",
-        "pos": "K",
-        "pts": 29,
-        "pun": "Andre's Excellent Adventure"
       },
       {
         "id": "chrisboswell_pit",
