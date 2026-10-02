@@ -335,20 +335,30 @@ async function loadJson(path){
 Promise.all([
   loadJson('../players.json'),
   loadJson('../players_hockey.json'),
+  loadJson('../players_basketball.json'),
   loadJson('../generic.json'),
   loadJson('../generic_hockey.json'),
+  loadJson('../generic_basketball.json'),
   loadJson('../teams.json'),
   loadJson('../teams_hockey.json'),
-]).then(([fbPlayers, hkPlayers, fbGeneric, hkGeneric, fbTeams, hkTeams]) => {
-  const totalPlayers = fbPlayers.length + hkPlayers.length;
+  loadJson('../teams_basketball.json'),
+  loadJson('../combos.json'),
+  loadJson('../combos_basketball.json'),
+]).then(([fbPlayers, hkPlayers, bbPlayers, fbGeneric, hkGeneric, bbGeneric, fbTeams, hkTeams, bbTeams, fbCombos, bbCombos]) => {
+  const totalPlayers = fbPlayers.length + hkPlayers.length + bbPlayers.length;
   const punCount = p => p.tier === 'curated' ? (p.names ? p.names.length : 0) : 0;
   const totalNames =
     fbPlayers.reduce((s, p) => s + punCount(p), 0) +
     hkPlayers.reduce((s, p) => s + punCount(p), 0) +
+    bbPlayers.reduce((s, p) => s + punCount(p), 0) +
     (fbGeneric.general || []).length +
     (hkGeneric.general || []).length +
+    (bbGeneric.general || []).length +
     fbTeams.reduce((s, t) => s + (t.names ? t.names.length : 0), 0) +
-    hkTeams.reduce((s, t) => s + (t.names ? t.names.length : 0), 0);
+    hkTeams.reduce((s, t) => s + (t.names ? t.names.length : 0), 0) +
+    bbTeams.reduce((s, t) => s + (t.names ? t.names.length : 0), 0) +
+    fbCombos.reduce((s, c) => s + (c.names ? c.names.length : 0), 0) +
+    bbCombos.reduce((s, c) => s + (c.names ? c.names.length : 0), 0);
 
   document.getElementById('statPlayers').textContent = totalPlayers.toLocaleString();
   document.getElementById('statNames').textContent = totalNames.toLocaleString();
