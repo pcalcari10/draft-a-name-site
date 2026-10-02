@@ -1181,7 +1181,7 @@ function shuffle(arr){
 // ---------- Likes / popularity (Firebase Firestore) ----------
 // Uses its own project collection (likes_hockey), fully separate from
 // football's "likes" collection, and its own localStorage key for which
-// puns this browser has liked, so the two sports never share state.
+// puns this browser has liked, so each sport's likes stay separate.
 const firebaseConfig = {
   apiKey: "AIzaSyBrKEhoELjV_LBNYpqJgy_prsS9OPNjp5E",
   authDomain: "draft-a-name.firebaseapp.com",
