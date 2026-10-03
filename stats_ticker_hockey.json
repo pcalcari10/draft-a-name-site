@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-03T03:14:03.133Z",
+  "generatedAt": "2026-10-03T06:14:05.666Z",
   "season": "20262027",
   "seasonTotals": {
     "C": [
@@ -11,6 +11,15 @@
         "pos": "C",
         "pts": 7,
         "pun": "McDavid's Marvels"
+      },
+      {
+        "id": "jackeichel_vgk",
+        "first": "Jack",
+        "last": "Eichel",
+        "team": "VGK",
+        "pos": "C",
+        "pts": 5,
+        "pun": "The Eichel Tower of Power"
       },
       {
         "id": "marcorossi_min",
@@ -38,15 +47,6 @@
         "pos": "C",
         "pts": 3,
         "pun": "Smith's Fantasy Fortress"
-      },
-      {
-        "id": "jackeichel_vgk",
-        "first": "Jack",
-        "last": "Eichel",
-        "team": "VGK",
-        "pos": "C",
-        "pts": 3,
-        "pun": "The Eichel Tower of Power"
       },
       {
         "id": "filiphallander_pit",
@@ -103,15 +103,6 @@
         "pun": "Eetu Luosta Rhymes"
       },
       {
-        "id": "fraserminten_bos",
-        "first": "Fraser",
-        "last": "Minten",
-        "team": "BOS",
-        "pos": "C",
-        "pts": 2,
-        "pun": "Minten's Fantasy Fortress"
-      },
-      {
         "id": "hendrixlapierre_wsh",
         "first": "Hendrix",
         "last": "Lapierre",
@@ -137,6 +128,15 @@
         "pos": "C",
         "pts": 2,
         "pun": "Beniers's Fantasy Fortress"
+      },
+      {
+        "id": "piussuter_stl",
+        "first": "Pius",
+        "last": "Suter",
+        "team": "STL",
+        "pos": "C",
+        "pts": 2,
+        "pun": "A Pius Man"
       }
     ],
     "LW": [
@@ -195,6 +195,15 @@
         "pun": "Carcone's Fantasy Fortress"
       },
       {
+        "id": "kyleconnor_wpg",
+        "first": "Kyle",
+        "last": "Connor",
+        "team": "WPG",
+        "pos": "LW",
+        "pts": 2,
+        "pun": "Kyle Connor McDavid Pastrnak"
+      },
+      {
         "id": "arshdeepbains_van",
         "first": "Arshdeep",
         "last": "Bains",
@@ -204,13 +213,13 @@
         "pun": "Bains's Fantasy Fortress"
       },
       {
-        "id": "ivanbarbashev_vgk",
-        "first": "Ivan",
-        "last": "Barbashev",
+        "id": "victorolofsson_col",
+        "first": "Victor",
+        "last": "Olofsson",
         "team": "VGK",
         "pos": "LW",
         "pts": 2,
-        "pun": "Close Shave America, Close Shave Barbashev"
+        "pun": "Olofsson's Fantasy Fortress"
       },
       {
         "id": "jadenschwartz_sea",
@@ -231,22 +240,13 @@
         "pun": "Ohgren's Fantasy Fortress"
       },
       {
-        "id": "victorolofsson_col",
-        "first": "Victor",
-        "last": "Olofsson",
+        "id": "ivanbarbashev_vgk",
+        "first": "Ivan",
+        "last": "Barbashev",
         "team": "VGK",
         "pos": "LW",
-        "pts": 1,
-        "pun": "Olofsson's Fantasy Fortress"
-      },
-      {
-        "id": "trevorconnelly_vgk",
-        "first": "Trevor",
-        "last": "Connelly",
-        "team": "VGK",
-        "pos": "LW",
-        "pts": 1,
-        "pun": "In Connelly We Trust"
+        "pts": 2,
+        "pun": "Close Shave America, Close Shave Barbashev"
       },
       {
         "id": "emilheineman_nyi",
@@ -332,6 +332,15 @@
         "pun": "Nylander the Wiser"
       },
       {
+        "id": "jjpeterka_uta",
+        "first": "JJ",
+        "last": "Peterka",
+        "team": "BOS",
+        "pos": "RW",
+        "pts": 2,
+        "pun": "Peterka's Fantasy Fortress"
+      },
+      {
         "id": "eelitolvanen_sea",
         "first": "Eeli",
         "last": "Tolvanen",
@@ -357,6 +366,15 @@
         "pos": "RW",
         "pts": 2,
         "pun": "Polly Want a Kaapo Kakko"
+      },
+      {
+        "id": "jimmysnuggerud_stl",
+        "first": "Jimmy",
+        "last": "Snuggerud",
+        "team": "STL",
+        "pos": "RW",
+        "pts": 2,
+        "pun": "Snuggerud As A Bug In A Rug"
       },
       {
         "id": "kasperikapanen_edm",
@@ -393,24 +411,6 @@
         "pos": "RW",
         "pts": 2,
         "pun": "Perreault's Fantasy Fortress"
-      },
-      {
-        "id": "alexlaferriere_lak",
-        "first": "Alex",
-        "last": "Laferriere",
-        "team": "LAK",
-        "pos": "RW",
-        "pts": 2,
-        "pun": "Laferriere's Fantasy Fortress"
-      },
-      {
-        "id": "claytonkeller_uta",
-        "first": "Clayton",
-        "last": "Keller",
-        "team": "UTA",
-        "pos": "RW",
-        "pts": 2,
-        "pun": "Natural Born Keller"
       }
     ],
     "D": [
@@ -460,6 +460,24 @@
         "pun": "Oleksiak's Fantasy Fortress"
       },
       {
+        "id": "sheatheodore_vgk",
+        "first": "Shea",
+        "last": "Theodore",
+        "team": "VGK",
+        "pos": "D",
+        "pts": 3,
+        "pun": "Alvin, Simon And Shea Theodore"
+      },
+      {
+        "id": "braydenmcnabb_vgk",
+        "first": "Brayden",
+        "last": "McNabb",
+        "team": "VGK",
+        "pos": "D",
+        "pts": 3,
+        "pun": "McNabb's Fantasy Fortress"
+      },
+      {
         "id": "adamfox_nyr",
         "first": "Adam",
         "last": "Fox",
@@ -496,6 +514,15 @@
         "pun": "Chychrun's Fantasy Fortress"
       },
       {
+        "id": "hampuslindholm_bos",
+        "first": "Hampus",
+        "last": "Lindholm",
+        "team": "BOS",
+        "pos": "D",
+        "pts": 2,
+        "pun": "Christmas Hampus"
+      },
+      {
         "id": "ryanshea_pit",
         "first": "Ryan",
         "last": "Shea",
@@ -512,24 +539,6 @@
         "pos": "D",
         "pts": 2,
         "pun": "Sanheim Steamroller"
-      },
-      {
-        "id": "braydenmcnabb_vgk",
-        "first": "Brayden",
-        "last": "McNabb",
-        "team": "VGK",
-        "pos": "D",
-        "pts": 2,
-        "pun": "McNabb's Fantasy Fortress"
-      },
-      {
-        "id": "sheatheodore_vgk",
-        "first": "Shea",
-        "last": "Theodore",
-        "team": "VGK",
-        "pos": "D",
-        "pts": 2,
-        "pun": "Alvin, Simon And Shea Theodore"
       },
       {
         "id": "samuelgirard_pit",
@@ -584,18 +593,18 @@
         "pos": "D",
         "pts": 2,
         "pun": "Owen Power Up"
-      },
-      {
-        "id": "morganrielly_tor",
-        "first": "Morgan",
-        "last": "Rielly",
-        "team": "TOR",
-        "pos": "D",
-        "pts": 2,
-        "pun": "The Rielly Renegades"
       }
     ],
     "G": [
+      {
+        "id": "jeremyswayman_bos",
+        "first": "Jeremy",
+        "last": "Swayman",
+        "team": "BOS",
+        "pos": "G",
+        "pts": 2,
+        "pun": "The Swayman Show"
+      },
       {
         "id": "igorshesterkin_nyr",
         "first": "Igor",
@@ -615,6 +624,15 @@
         "pun": "Lankinen's Fantasy Fortress"
       },
       {
+        "id": "carterhart_vgk",
+        "first": "Carter",
+        "last": "Hart",
+        "team": "VGK",
+        "pos": "G",
+        "pts": 1,
+        "pun": "In Hart We Trust"
+      },
+      {
         "id": "jacobmarkstrom_njd",
         "first": "Jacob",
         "last": "Markstrom",
@@ -631,24 +649,6 @@
         "pos": "G",
         "pts": 1,
         "pun": "Dobes's Fantasy Fortress"
-      },
-      {
-        "id": "jeremyswayman_bos",
-        "first": "Jeremy",
-        "last": "Swayman",
-        "team": "BOS",
-        "pos": "G",
-        "pts": 1,
-        "pun": "The Swayman Show"
-      },
-      {
-        "id": "carterhart_vgk",
-        "first": "Carter",
-        "last": "Hart",
-        "team": "VGK",
-        "pos": "G",
-        "pts": 1,
-        "pun": "In Hart We Trust"
       },
       {
         "id": "arturssilovs_pit",
@@ -701,6 +701,15 @@
         "pun": "McDavid's Marvels"
       },
       {
+        "id": "jackeichel_vgk",
+        "first": "Jack",
+        "last": "Eichel",
+        "team": "VGK",
+        "pos": "C",
+        "pts": 5,
+        "pun": "The Eichel Tower of Power"
+      },
+      {
         "id": "marcorossi_min",
         "first": "Marco",
         "last": "Rossi",
@@ -717,15 +726,6 @@
         "pos": "C",
         "pts": 4,
         "pun": "Leon Night Riders"
-      },
-      {
-        "id": "jackeichel_vgk",
-        "first": "Jack",
-        "last": "Eichel",
-        "team": "VGK",
-        "pos": "C",
-        "pts": 3,
-        "pun": "The Eichel Tower of Power"
       },
       {
         "id": "filiphallander_pit",
@@ -883,6 +883,15 @@
         "pun": "Close Shave America, Close Shave Barbashev"
       },
       {
+        "id": "victorolofsson_col",
+        "first": "Victor",
+        "last": "Olofsson",
+        "team": "VGK",
+        "pos": "LW",
+        "pts": 2,
+        "pun": "Olofsson's Fantasy Fortress"
+      },
+      {
         "id": "nickrobertson_pit",
         "first": "Nick",
         "last": "Robertson",
@@ -953,15 +962,6 @@
         "pos": "LW",
         "pts": 1,
         "pun": "William Carrier Pigeon"
-      },
-      {
-        "id": "nickpaul_tbl",
-        "first": "Nick",
-        "last": "Paul",
-        "team": "TOR",
-        "pos": "LW",
-        "pts": 1,
-        "pun": "Pope Nick Paul XX"
       }
     ],
     "RW": [
@@ -1157,6 +1157,24 @@
         "pun": "Oleksiak's Fantasy Fortress"
       },
       {
+        "id": "braydenmcnabb_vgk",
+        "first": "Brayden",
+        "last": "McNabb",
+        "team": "VGK",
+        "pos": "D",
+        "pts": 3,
+        "pun": "McNabb's Fantasy Fortress"
+      },
+      {
+        "id": "sheatheodore_vgk",
+        "first": "Shea",
+        "last": "Theodore",
+        "team": "VGK",
+        "pos": "D",
+        "pts": 3,
+        "pun": "Alvin, Simon And Shea Theodore"
+      },
+      {
         "id": "vincedunn_sea",
         "first": "Vince",
         "last": "Dunn",
@@ -1209,24 +1227,6 @@
         "pos": "D",
         "pts": 2,
         "pun": "Shea's Fantasy Fortress"
-      },
-      {
-        "id": "braydenmcnabb_vgk",
-        "first": "Brayden",
-        "last": "McNabb",
-        "team": "VGK",
-        "pos": "D",
-        "pts": 2,
-        "pun": "McNabb's Fantasy Fortress"
-      },
-      {
-        "id": "sheatheodore_vgk",
-        "first": "Shea",
-        "last": "Theodore",
-        "team": "VGK",
-        "pos": "D",
-        "pts": 2,
-        "pun": "Alvin, Simon And Shea Theodore"
       },
       {
         "id": "kaedankorczak_vgk",
