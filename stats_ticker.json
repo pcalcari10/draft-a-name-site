@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-04T23:08:48.950Z",
+  "generatedAt": "2026-10-04T23:26:21.486Z",
   "season": "2026",
   "week": 4,
   "thisWeek": {
@@ -50,6 +50,15 @@
         "pun": "Winston's Fantasy Fortress"
       },
       {
+        "id": "brockpurdy_sf",
+        "first": "Brock",
+        "last": "Purdy",
+        "team": "SF",
+        "pos": "QB",
+        "pts": 19.8,
+        "pun": "Purdy Good Team"
+      },
+      {
         "id": "joshallen_buf",
         "first": "Josh",
         "last": "Allen",
@@ -77,6 +86,15 @@
         "pun": "The Boys Are Dak In Town"
       },
       {
+        "id": "patrickmahomesii_kc",
+        "first": "Patrick",
+        "last": "Mahomes",
+        "team": "KC",
+        "pos": "QB",
+        "pts": 17.1,
+        "pun": "Sherlock Mahomes"
+      },
+      {
         "id": "camward_ten",
         "first": "Cam",
         "last": "Ward",
@@ -86,31 +104,13 @@
         "pun": "Lights, Cameron, Action"
       },
       {
-        "id": "patrickmahomesii_kc",
-        "first": "Patrick",
-        "last": "Mahomes",
-        "team": "KC",
-        "pos": "QB",
-        "pts": 14.9,
-        "pun": "Sherlock Mahomes"
-      },
-      {
         "id": "kirkcousins_lv",
         "first": "Kirk",
         "last": "Cousins",
         "team": "LV",
         "pos": "QB",
-        "pts": 14.6,
+        "pts": 15.6,
         "pun": "I Married my Cousins"
-      },
-      {
-        "id": "samdarnold_sea",
-        "first": "Sam",
-        "last": "Darnold",
-        "team": "SEA",
-        "pos": "QB",
-        "pts": 14.5,
-        "pun": "Hey Darnold"
       }
     ],
     "RB": [
@@ -133,6 +133,15 @@
         "pun": "One In a Williams"
       },
       {
+        "id": "kennethwalkeriii_kc",
+        "first": "Kenneth",
+        "last": "Walker",
+        "team": "KC",
+        "pos": "RB",
+        "pts": 30.7,
+        "pun": "Walker in the Park"
+      },
+      {
         "id": "kylemonangai_chi",
         "first": "Kyle",
         "last": "Monangai",
@@ -147,7 +156,7 @@
         "last": "Wilson",
         "team": "SEA",
         "pos": "RB",
-        "pts": 25.1,
+        "pts": 26.8,
         "pun": "WILSON!🏐"
       },
       {
@@ -167,6 +176,15 @@
         "pos": "RB",
         "pts": 21.6,
         "pun": "Quinshon & Chill"
+      },
+      {
+        "id": "rjharvey_den",
+        "first": "RJ",
+        "last": "Harvey",
+        "team": "DEN",
+        "pos": "RB",
+        "pts": 19.3,
+        "pun": "Two Face"
       },
       {
         "id": "chasebrown_cin",
@@ -205,6 +223,15 @@
         "pun": "Keeping Up With the Jones"
       },
       {
+        "id": "ashtonjeanty_lv",
+        "first": "Ashton",
+        "last": "Jeanty",
+        "team": "LV",
+        "pos": "RB",
+        "pts": 16.4,
+        "pun": "Fire and Ashton"
+      },
+      {
         "id": "jamescookiii_buf",
         "first": "James",
         "last": "Cook",
@@ -214,13 +241,13 @@
         "pun": "James Cooked"
       },
       {
-        "id": "kennethwalkeriii_kc",
-        "first": "Kenneth",
-        "last": "Walker",
-        "team": "KC",
+        "id": "christianmccaffrey_sf",
+        "first": "Christian",
+        "last": "McCaffrey",
+        "team": "SF",
         "pos": "RB",
-        "pts": 16.3,
-        "pun": "Walker in the Park"
+        "pts": 16,
+        "pun": "Run CMC"
       },
       {
         "id": "derrickhenry_bal",
@@ -241,22 +268,13 @@
         "pun": "This is Your Final Warren"
       },
       {
-        "id": "christianmccaffrey_sf",
-        "first": "Christian",
-        "last": "McCaffrey",
-        "team": "SF",
+        "id": "omarionhampton_lac",
+        "first": "Omarion",
+        "last": "Hampton",
+        "team": "LAC",
         "pos": "RB",
-        "pts": 13.9,
-        "pun": "Run CMC"
-      },
-      {
-        "id": "rjharvey_den",
-        "first": "RJ",
-        "last": "Harvey",
-        "team": "DEN",
-        "pos": "RB",
-        "pts": 13.9,
-        "pun": "Two Face"
+        "pts": 13.3,
+        "pun": "I Got This Icebox Where My Heart Used To Be"
       },
       {
         "id": "tonypollard_ten",
@@ -275,15 +293,6 @@
         "pos": "RB",
         "pts": 12.9,
         "pun": "Allgeier-tastic Voyage"
-      },
-      {
-        "id": "ashtonjeanty_lv",
-        "first": "Ashton",
-        "last": "Jeanty",
-        "team": "LV",
-        "pos": "RB",
-        "pts": 12.8,
-        "pun": "Fire and Ashton"
       },
       {
         "id": "bhayshultuten_jac",
@@ -309,7 +318,7 @@
         "last": "Mitchell",
         "team": "LAC",
         "pos": "RB",
-        "pts": 10.1,
+        "pts": 10,
         "pun": "Straight Outta Mitchell"
       },
       {
@@ -320,15 +329,6 @@
         "pos": "RB",
         "pts": 9.9,
         "pun": "Beast Mode 2.0"
-      },
-      {
-        "id": "chrisrodriguezjr_jac",
-        "first": "Chris",
-        "last": "Rodriguez",
-        "team": "JAC",
-        "pos": "RB",
-        "pts": 9.5,
-        "pun": "Rodriguez Happens"
       }
     ],
     "WR": [
@@ -349,6 +349,15 @@
         "pos": "WR",
         "pts": 30.8,
         "pun": "Nico Suave"
+      },
+      {
+        "id": "tyquanthornton_kc",
+        "first": "Tyquan",
+        "last": "Thornton",
+        "team": "KC",
+        "pos": "WR",
+        "pts": 28.1,
+        "pun": "The Thornton Show"
       },
       {
         "id": "pukanacua_lar",
@@ -403,15 +412,6 @@
         "pos": "WR",
         "pts": 23.2,
         "pun": "Love thy Nabers"
-      },
-      {
-        "id": "tyquanthornton_kc",
-        "first": "Tyquan",
-        "last": "Thornton",
-        "team": "KC",
-        "pos": "WR",
-        "pts": 21.6,
-        "pun": "The Thornton Show"
       },
       {
         "id": "carnelltate_ten",
@@ -513,6 +513,15 @@
         "pun": "Fields of Dreams"
       },
       {
+        "id": "jaylenwaddle_den",
+        "first": "Jaylen",
+        "last": "Waddle",
+        "team": "DEN",
+        "pos": "WR",
+        "pts": 13,
+        "pun": "A Waddle to Remember"
+      },
+      {
         "id": "denzelboston_cle",
         "first": "Denzel",
         "last": "Boston",
@@ -538,15 +547,6 @@
         "pos": "WR",
         "pts": 12.6,
         "pun": "I'm Sorry Ms. Jaxon"
-      },
-      {
-        "id": "rashidshaheed_sea",
-        "first": "Rashid",
-        "last": "Shaheed",
-        "team": "SEA",
-        "pos": "WR",
-        "pts": 12.3,
-        "pun": "Rashid & Chill"
       }
     ],
     "TE": [
@@ -558,6 +558,15 @@
         "pos": "TE",
         "pts": 24.9,
         "pun": "Hockenson Loogies"
+      },
+      {
+        "id": "georgekittle_sf",
+        "first": "George",
+        "last": "Kittle",
+        "team": "SF",
+        "pos": "TE",
+        "pts": 17,
+        "pun": "Kittle Big Town"
       },
       {
         "id": "brentonstrange_jac",
@@ -648,15 +657,6 @@
         "pos": "TE",
         "pts": 11.7,
         "pun": "Colston Creamery"
-      },
-      {
-        "id": "brockbowers_lv",
-        "first": "Brock",
-        "last": "Bowers",
-        "team": "LV",
-        "pos": "TE",
-        "pts": 11.6,
-        "pun": "Mighty Morphin Bower Rangers"
       }
     ],
     "K": [
@@ -769,7 +769,7 @@
         "last": "Purdy",
         "team": "SF",
         "pos": "QB",
-        "pts": 94.9,
+        "pts": 101.7,
         "pun": "Purdy Good Team"
       },
       {
@@ -778,7 +778,7 @@
         "last": "Mahomes",
         "team": "KC",
         "pos": "QB",
-        "pts": 83.5,
+        "pts": 85.7,
         "pun": "Sherlock Mahomes"
       },
       {
@@ -814,7 +814,7 @@
         "last": "Cousins",
         "team": "LV",
         "pos": "QB",
-        "pts": 73.9,
+        "pts": 74.9,
         "pun": "I Married my Cousins"
       },
       {
@@ -865,6 +865,15 @@
     ],
     "RB": [
       {
+        "id": "kennethwalkeriii_kc",
+        "first": "Kenneth",
+        "last": "Walker",
+        "team": "KC",
+        "pos": "RB",
+        "pts": 109.9,
+        "pun": "Walker in the Park"
+      },
+      {
         "id": "jahmyrgibbs_det",
         "first": "Jahmyr",
         "last": "Gibbs",
@@ -872,15 +881,6 @@
         "pos": "RB",
         "pts": 98.3,
         "pun": "Baby Back Gibbs"
-      },
-      {
-        "id": "kennethwalkeriii_kc",
-        "first": "Kenneth",
-        "last": "Walker",
-        "team": "KC",
-        "pos": "RB",
-        "pts": 95.5,
-        "pun": "Walker in the Park"
       },
       {
         "id": "derrickhenry_bal",
@@ -933,7 +933,7 @@
         "last": "McCaffrey",
         "team": "SF",
         "pos": "RB",
-        "pts": 71.9,
+        "pts": 74,
         "pun": "Run CMC"
       },
       {
@@ -942,7 +942,7 @@
         "last": "Jeanty",
         "team": "LV",
         "pos": "RB",
-        "pts": 68.1,
+        "pts": 71.7,
         "pun": "Fire and Ashton"
       },
       {
@@ -1045,6 +1045,15 @@
         "pun": "Bucky Beaver Dam"
       },
       {
+        "id": "omarionhampton_lac",
+        "first": "Omarion",
+        "last": "Hampton",
+        "team": "LAC",
+        "pos": "RB",
+        "pts": 44.7,
+        "pun": "I Got This Icebox Where My Heart Used To Be"
+      },
+      {
         "id": "davidmontgomery_hou",
         "first": "David",
         "last": "Montgomery",
@@ -1070,15 +1079,6 @@
         "pos": "RB",
         "pts": 43.3,
         "pun": "Rhamondre The Giant"
-      },
-      {
-        "id": "breecehall_nyj",
-        "first": "Breece",
-        "last": "Hall",
-        "team": "NYJ",
-        "pos": "RB",
-        "pts": 42.5,
-        "pun": "Breece Lightning"
       }
     ],
     "WR": [
@@ -1310,6 +1310,15 @@
         "pun": "50 Shades of Trey"
       },
       {
+        "id": "georgekittle_sf",
+        "first": "George",
+        "last": "Kittle",
+        "team": "SF",
+        "pos": "TE",
+        "pts": 64.4,
+        "pun": "Kittle Big Town"
+      },
+      {
         "id": "isaiahlikely_nyg",
         "first": "Isaiah",
         "last": "Likely",
@@ -1326,15 +1335,6 @@
         "pos": "TE",
         "pts": 52.6,
         "pun": "Truth & Kelcequences"
-      },
-      {
-        "id": "georgekittle_sf",
-        "first": "George",
-        "last": "Kittle",
-        "team": "SF",
-        "pos": "TE",
-        "pts": 51.8,
-        "pun": "Kittle Big Town"
       },
       {
         "id": "haroldfanninjr_cle",
