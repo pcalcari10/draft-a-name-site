@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-04T21:56:43.146Z",
+  "generatedAt": "2026-10-04T22:13:36.917Z",
   "season": "2026",
   "week": 4,
   "thisWeek": {
@@ -250,6 +250,15 @@
         "pun": "Beast Mode 2.0"
       },
       {
+        "id": "olliegordonii_mia",
+        "first": "Ollie",
+        "last": "Gordon",
+        "team": "MIA",
+        "pos": "RB",
+        "pts": 9.7,
+        "pun": "The Gordon Show"
+      },
+      {
         "id": "rjharvey_den",
         "first": "RJ",
         "last": "Harvey",
@@ -268,13 +277,13 @@
         "pun": "Rodriguez Happens"
       },
       {
-        "id": "olliegordonii_mia",
-        "first": "Ollie",
-        "last": "Gordon",
-        "team": "MIA",
+        "id": "aaronjonessr_min",
+        "first": "Aaron",
+        "last": "Jones",
+        "team": "MIN",
         "pos": "RB",
-        "pts": 9.5,
-        "pun": "The Gordon Show"
+        "pts": 9.4,
+        "pun": "Keeping Up With the Jones"
       },
       {
         "id": "jaleelmclaughlin_cle",
@@ -304,31 +313,22 @@
         "pun": "Marks-tastic Voyage"
       },
       {
-        "id": "camskattebo_nyg",
-        "first": "Cam",
-        "last": "Skattebo",
-        "team": "NYG",
-        "pos": "RB",
-        "pts": 7.6,
-        "pun": "The Skattebo Express"
-      },
-      {
-        "id": "dandreswift_chi",
-        "first": "D'Andre",
-        "last": "Swift",
-        "team": "CHI",
-        "pos": "RB",
-        "pts": 7.4,
-        "pun": "50 Shades of D'Andre"
-      },
-      {
         "id": "kennethwalkeriii_kc",
         "first": "Kenneth",
         "last": "Walker",
         "team": "KC",
         "pos": "RB",
-        "pts": 7.4,
+        "pts": 8,
         "pun": "Walker in the Park"
+      },
+      {
+        "id": "ashtonjeanty_lv",
+        "first": "Ashton",
+        "last": "Jeanty",
+        "team": "LV",
+        "pos": "RB",
+        "pts": 7.8,
+        "pun": "Fire and Ashton"
       }
     ],
     "WR": [
@@ -670,6 +670,15 @@
         "pun": "Fairbairn-A-Palooza"
       },
       {
+        "id": "willreichard_min",
+        "first": "Will",
+        "last": "Reichard",
+        "team": "MIN",
+        "pos": "K",
+        "pts": 16,
+        "pun": "Reichard Happens"
+      },
+      {
         "id": "spencershrader_ind",
         "first": "Spencer",
         "last": "Shrader",
@@ -695,15 +704,6 @@
         "pos": "K",
         "pts": 12,
         "pun": "Andre's Excellent Adventure"
-      },
-      {
-        "id": "willreichard_min",
-        "first": "Will",
-        "last": "Reichard",
-        "team": "MIN",
-        "pos": "K",
-        "pts": 12,
-        "pun": "Reichard Happens"
       },
       {
         "id": "cairosantos_chi",
@@ -769,7 +769,7 @@
         "last": "Purdy",
         "team": "SF",
         "pos": "QB",
-        "pts": 87,
+        "pts": 87.1,
         "pun": "Purdy Good Team"
       },
       {
@@ -805,7 +805,7 @@
         "last": "Mahomes",
         "team": "KC",
         "pos": "QB",
-        "pts": 78.2,
+        "pts": 78.9,
         "pun": "Sherlock Mahomes"
       },
       {
@@ -827,6 +827,15 @@
         "pun": "The Bryce Is Right"
       },
       {
+        "id": "kirkcousins_lv",
+        "first": "Kirk",
+        "last": "Cousins",
+        "team": "LV",
+        "pos": "QB",
+        "pts": 70.2,
+        "pun": "I Married my Cousins"
+      },
+      {
         "id": "jalenhurts_phi",
         "first": "Jalen",
         "last": "Hurts",
@@ -834,15 +843,6 @@
         "pos": "QB",
         "pts": 70,
         "pun": "Hurts So Good"
-      },
-      {
-        "id": "kirkcousins_lv",
-        "first": "Kirk",
-        "last": "Cousins",
-        "team": "LV",
-        "pos": "QB",
-        "pts": 69.1,
-        "pun": "I Married my Cousins"
       },
       {
         "id": "deshaunwatson_cle",
@@ -897,7 +897,7 @@
         "last": "Walker",
         "team": "KC",
         "pos": "RB",
-        "pts": 86.6,
+        "pts": 87.2,
         "pun": "Walker in the Park"
       },
       {
@@ -946,6 +946,15 @@
         "pun": "50 Shades of D'Andre"
       },
       {
+        "id": "ashtonjeanty_lv",
+        "first": "Ashton",
+        "last": "Jeanty",
+        "team": "LV",
+        "pos": "RB",
+        "pts": 63.1,
+        "pun": "Fire and Ashton"
+      },
+      {
         "id": "christianmccaffrey_sf",
         "first": "Christian",
         "last": "McCaffrey",
@@ -971,15 +980,6 @@
         "pos": "RB",
         "pts": 58,
         "pun": "High-Speed Chase"
-      },
-      {
-        "id": "ashtonjeanty_lv",
-        "first": "Ashton",
-        "last": "Jeanty",
-        "team": "LV",
-        "pos": "RB",
-        "pts": 58,
-        "pun": "Fire and Ashton"
       },
       {
         "id": "jaylenwarren_pit",
@@ -1054,6 +1054,15 @@
         "pun": "The Skattebo Express"
       },
       {
+        "id": "aaronjonessr_min",
+        "first": "Aaron",
+        "last": "Jones",
+        "team": "MIN",
+        "pos": "RB",
+        "pts": 44.1,
+        "pun": "Keeping Up With the Jones"
+      },
+      {
         "id": "rhamondrestevenson_ne",
         "first": "Rhamondre",
         "last": "Stevenson",
@@ -1070,15 +1079,6 @@
         "pos": "RB",
         "pts": 42.5,
         "pun": "Breece Lightning"
-      },
-      {
-        "id": "aaronjonessr_min",
-        "first": "Aaron",
-        "last": "Jones",
-        "team": "MIN",
-        "pos": "RB",
-        "pts": 41.4,
-        "pun": "Keeping Up With the Jones"
       }
     ],
     "WR": [
@@ -1420,6 +1420,15 @@
         "pun": "Straight Outta Shrader"
       },
       {
+        "id": "willreichard_min",
+        "first": "Will",
+        "last": "Reichard",
+        "team": "MIN",
+        "pos": "K",
+        "pts": 49,
+        "pun": "Reichard Happens"
+      },
+      {
         "id": "evanmcpherson_cin",
         "first": "Evan",
         "last": "McPherson",
@@ -1427,15 +1436,6 @@
         "pos": "K",
         "pts": 47,
         "pun": "McPherson-tastic Voyage"
-      },
-      {
-        "id": "willreichard_min",
-        "first": "Will",
-        "last": "Reichard",
-        "team": "MIN",
-        "pos": "K",
-        "pts": 45,
-        "pun": "Reichard Happens"
       },
       {
         "id": "chasemclaughlin_tb",
