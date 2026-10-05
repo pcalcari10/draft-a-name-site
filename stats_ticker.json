@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-05T01:13:27.878Z",
+  "generatedAt": "2026-10-05T01:29:15.761Z",
   "season": "2026",
   "week": 4,
   "thisWeek": {
@@ -322,13 +322,13 @@
         "pun": "King Tuten-khamun"
       },
       {
-        "id": "marshawnlloyd_gb",
-        "first": "MarShawn",
-        "last": "Lloyd",
-        "team": "GB",
+        "id": "chubahubbard_car",
+        "first": "Chuba",
+        "last": "Hubbard",
+        "team": "CAR",
         "pos": "RB",
         "pts": 9.9,
-        "pun": "Beast Mode 2.0"
+        "pun": "Chubawamba"
       }
     ],
     "WR": [
@@ -412,6 +412,15 @@
         "pos": "WR",
         "pts": 23.2,
         "pun": "Love thy Nabers"
+      },
+      {
+        "id": "tetairoamcmillan_car",
+        "first": "Tetairoa",
+        "last": "McMillan",
+        "team": "CAR",
+        "pos": "WR",
+        "pts": 23,
+        "pun": "The Tet Offensive"
       },
       {
         "id": "carnelltate_ten",
@@ -538,15 +547,6 @@
         "pos": "WR",
         "pts": 12.6,
         "pun": "7th Evans"
-      },
-      {
-        "id": "jaxonsmithnjigba_sea",
-        "first": "Jaxon",
-        "last": "Smith-Njigba",
-        "team": "SEA",
-        "pos": "WR",
-        "pts": 12.6,
-        "pun": "I'm Sorry Ms. Jaxon"
       }
     ],
     "TE": [
@@ -800,6 +800,15 @@
         "pun": "The Boys Are Dak In Town"
       },
       {
+        "id": "bryceyoung_car",
+        "first": "Bryce",
+        "last": "Young",
+        "team": "CAR",
+        "pos": "QB",
+        "pts": 81.5,
+        "pun": "The Bryce Is Right"
+      },
+      {
         "id": "lamarjackson_bal",
         "first": "Lamar",
         "last": "Jackson",
@@ -816,15 +825,6 @@
         "pos": "QB",
         "pts": 79.6,
         "pun": "Beg, Burrow, and Steal"
-      },
-      {
-        "id": "bryceyoung_car",
-        "first": "Bryce",
-        "last": "Young",
-        "team": "CAR",
-        "pos": "QB",
-        "pts": 74.6,
-        "pun": "The Bryce Is Right"
       },
       {
         "id": "tylershough_no",
@@ -845,6 +845,15 @@
         "pun": "Hurts So Good"
       },
       {
+        "id": "jaredgoff_det",
+        "first": "Jared",
+        "last": "Goff",
+        "team": "DET",
+        "pos": "QB",
+        "pts": 69.1,
+        "pun": "I'm About To Go Goff"
+      },
+      {
         "id": "deshaunwatson_cle",
         "first": "Deshaun",
         "last": "Watson",
@@ -852,15 +861,6 @@
         "pos": "QB",
         "pts": 68.9,
         "pun": "Watson Clinic"
-      },
-      {
-        "id": "cjstroud_hou",
-        "first": "C.J.",
-        "last": "Stroud",
-        "team": "HOU",
-        "pos": "QB",
-        "pts": 68.2,
-        "pun": "Loud and Stroud"
       }
     ],
     "RB": [
@@ -879,7 +879,7 @@
         "last": "Gibbs",
         "team": "DET",
         "pos": "RB",
-        "pts": 102.4,
+        "pts": 102.9,
         "pun": "Baby Back Gibbs"
       },
       {
@@ -969,7 +969,7 @@
         "last": "Hubbard",
         "team": "CAR",
         "pos": "RB",
-        "pts": 62.9,
+        "pts": 63,
         "pun": "Chubawamba"
       },
       {
@@ -1106,7 +1106,7 @@
         "last": "St. Brown",
         "team": "DET",
         "pos": "WR",
-        "pts": 80.1,
+        "pts": 82.6,
         "pun": "Amon Joy"
       },
       {
@@ -1218,6 +1218,15 @@
         "pun": "Can You Digg It?"
       },
       {
+        "id": "tetairoamcmillan_car",
+        "first": "Tetairoa",
+        "last": "McMillan",
+        "team": "CAR",
+        "pos": "WR",
+        "pts": 52.3,
+        "pun": "The Tet Offensive"
+      },
+      {
         "id": "jalencoker_car",
         "first": "Jalen",
         "last": "Coker",
@@ -1288,15 +1297,6 @@
         "pos": "WR",
         "pts": 46.8,
         "pun": "Carnell & Chill"
-      },
-      {
-        "id": "justinjefferson_min",
-        "first": "Justin",
-        "last": "Jefferson",
-        "team": "MIN",
-        "pos": "WR",
-        "pts": 44.9,
-        "pun": "Carry On, My Wayward Jefferson"
       }
     ],
     "TE": [
