@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-05T03:27:43.575Z",
+  "generatedAt": "2026-10-05T03:44:46.751Z",
   "season": "2026",
   "week": 4,
   "thisWeek": {
@@ -55,8 +55,17 @@
         "last": "Young",
         "team": "CAR",
         "pos": "QB",
-        "pts": 21,
+        "pts": 21.5,
         "pun": "The Bryce Is Right"
+      },
+      {
+        "id": "jaredgoff_det",
+        "first": "Jared",
+        "last": "Goff",
+        "team": "DET",
+        "pos": "QB",
+        "pts": 20.5,
+        "pun": "I'm About To Go Goff"
       },
       {
         "id": "jameiswinston_nyg",
@@ -66,15 +75,6 @@
         "pos": "QB",
         "pts": 20,
         "pun": "Winston's Fantasy Fortress"
-      },
-      {
-        "id": "jaredgoff_det",
-        "first": "Jared",
-        "last": "Goff",
-        "team": "DET",
-        "pos": "QB",
-        "pts": 19.9,
-        "pun": "I'm About To Go Goff"
       },
       {
         "id": "brockpurdy_sf",
@@ -165,7 +165,7 @@
         "last": "Hubbard",
         "team": "CAR",
         "pos": "RB",
-        "pts": 25.8,
+        "pts": 25.9,
         "pun": "Chubawamba"
       },
       {
@@ -333,6 +333,15 @@
     ],
     "WR": [
       {
+        "id": "tetairoamcmillan_car",
+        "first": "Tetairoa",
+        "last": "McMillan",
+        "team": "CAR",
+        "pos": "WR",
+        "pts": 45.2,
+        "pun": "The Tet Offensive"
+      },
+      {
         "id": "ceedeelamb_dal",
         "first": "CeeDee",
         "last": "Lamb",
@@ -340,15 +349,6 @@
         "pos": "WR",
         "pts": 41.3,
         "pun": "Silence of the Lambs"
-      },
-      {
-        "id": "tetairoamcmillan_car",
-        "first": "Tetairoa",
-        "last": "McMillan",
-        "team": "CAR",
-        "pos": "WR",
-        "pts": 41,
-        "pun": "The Tet Offensive"
       },
       {
         "id": "nicocollins_hou",
@@ -486,6 +486,15 @@
         "pun": "Bottle of Jameson"
       },
       {
+        "id": "amonrastbrown_det",
+        "first": "Amon-Ra",
+        "last": "St. Brown",
+        "team": "DET",
+        "pos": "WR",
+        "pts": 15.5,
+        "pun": "Amon Joy"
+      },
+      {
         "id": "romeodunze_chi",
         "first": "Rome",
         "last": "Odunze",
@@ -522,13 +531,13 @@
         "pun": "A Waddle to Remember"
       },
       {
-        "id": "amonrastbrown_det",
-        "first": "Amon-Ra",
-        "last": "St. Brown",
+        "id": "isaacteslaa_det",
+        "first": "Isaac",
+        "last": "TeSlaa",
         "team": "DET",
         "pos": "WR",
-        "pts": 14.2,
-        "pun": "Amon Joy"
+        "pts": 13.5,
+        "pun": "I Bought a TeSlaa"
       },
       {
         "id": "khalilshakir_buf",
@@ -538,15 +547,6 @@
         "pos": "WR",
         "pts": 13.2,
         "pun": "Shake and Bake"
-      },
-      {
-        "id": "malachifields_nyg",
-        "first": "Malachi",
-        "last": "Fields",
-        "team": "NYG",
-        "pos": "WR",
-        "pts": 13.2,
-        "pun": "Fields of Dreams"
       }
     ],
     "TE": [
@@ -778,8 +778,17 @@
         "last": "Young",
         "team": "CAR",
         "pos": "QB",
-        "pts": 92.1,
+        "pts": 92.6,
         "pun": "The Bryce Is Right"
+      },
+      {
+        "id": "jaredgoff_det",
+        "first": "Jared",
+        "last": "Goff",
+        "team": "DET",
+        "pos": "QB",
+        "pts": 86.1,
+        "pun": "I'm About To Go Goff"
       },
       {
         "id": "patrickmahomesii_kc",
@@ -789,15 +798,6 @@
         "pos": "QB",
         "pts": 85.6,
         "pun": "Sherlock Mahomes"
-      },
-      {
-        "id": "jaredgoff_det",
-        "first": "Jared",
-        "last": "Goff",
-        "team": "DET",
-        "pos": "QB",
-        "pts": 85.5,
-        "pun": "I'm About To Go Goff"
       },
       {
         "id": "kirkcousins_lv",
@@ -924,7 +924,7 @@
         "last": "Hubbard",
         "team": "CAR",
         "pos": "RB",
-        "pts": 78.9,
+        "pts": 79,
         "pun": "Chubawamba"
       },
       {
@@ -1106,7 +1106,7 @@
         "last": "St. Brown",
         "team": "DET",
         "pos": "WR",
-        "pts": 90,
+        "pts": 91.3,
         "pun": "Amon Joy"
       },
       {
@@ -1117,6 +1117,15 @@
         "pos": "WR",
         "pts": 77.1,
         "pun": "Elementary, My Dear Watson"
+      },
+      {
+        "id": "tetairoamcmillan_car",
+        "first": "Tetairoa",
+        "last": "McMillan",
+        "team": "CAR",
+        "pos": "WR",
+        "pts": 74.5,
+        "pun": "The Tet Offensive"
       },
       {
         "id": "davanteadams_lar",
@@ -1144,15 +1153,6 @@
         "pos": "WR",
         "pts": 70.5,
         "pun": "Olave Oil"
-      },
-      {
-        "id": "tetairoamcmillan_car",
-        "first": "Tetairoa",
-        "last": "McMillan",
-        "team": "CAR",
-        "pos": "WR",
-        "pts": 70.3,
-        "pun": "The Tet Offensive"
       },
       {
         "id": "zayflowers_bal",
