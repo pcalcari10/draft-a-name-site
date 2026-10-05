@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-05T02:54:40.846Z",
+  "generatedAt": "2026-10-05T03:05:18.459Z",
   "season": "2026",
   "week": 4,
   "thisWeek": {
@@ -55,7 +55,7 @@
         "last": "Young",
         "team": "CAR",
         "pos": "QB",
-        "pts": 20.3,
+        "pts": 21,
         "pun": "The Bryce Is Right"
       },
       {
@@ -165,7 +165,7 @@
         "last": "Hubbard",
         "team": "CAR",
         "pos": "RB",
-        "pts": 24.9,
+        "pts": 25.5,
         "pun": "Chubawamba"
       },
       {
@@ -282,7 +282,7 @@
         "last": "Gibbs",
         "team": "DET",
         "pos": "RB",
-        "pts": 13.5,
+        "pts": 15.3,
         "pun": "Baby Back Gibbs"
       },
       {
@@ -778,7 +778,7 @@
         "last": "Young",
         "team": "CAR",
         "pos": "QB",
-        "pts": 91.5,
+        "pts": 92.1,
         "pun": "The Bryce Is Right"
       },
       {
@@ -832,7 +832,7 @@
         "last": "Goff",
         "team": "DET",
         "pos": "QB",
-        "pts": 75.6,
+        "pts": 76.9,
         "pun": "I'm About To Go Goff"
       },
       {
@@ -870,7 +870,7 @@
         "last": "Gibbs",
         "team": "DET",
         "pos": "RB",
-        "pts": 111.8,
+        "pts": 113.6,
         "pun": "Baby Back Gibbs"
       },
       {
@@ -924,7 +924,7 @@
         "last": "Hubbard",
         "team": "CAR",
         "pos": "RB",
-        "pts": 78,
+        "pts": 78.6,
         "pun": "Chubawamba"
       },
       {
@@ -1456,6 +1456,15 @@
         "pun": "Livin' on a McLaughlin"
       },
       {
+        "id": "ryanfitzgerald_car",
+        "first": "Ryan",
+        "last": "Fitzgerald",
+        "team": "CAR",
+        "pos": "K",
+        "pts": 39,
+        "pun": "Fitzgerald-A-Palooza"
+      },
+      {
         "id": "chadryland_ari",
         "first": "Chad",
         "last": "Ryland",
@@ -1490,15 +1499,6 @@
         "pos": "K",
         "pts": 38,
         "pun": "Jumping Through Loops"
-      },
-      {
-        "id": "cairosantos_chi",
-        "first": "Cairo",
-        "last": "Santos",
-        "team": "CHI",
-        "pos": "K",
-        "pts": 37,
-        "pun": "Santos of Fame"
       }
     ]
   }
