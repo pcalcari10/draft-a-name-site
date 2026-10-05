@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-05T02:25:46.341Z",
+  "generatedAt": "2026-10-05T02:40:56.375Z",
   "season": "2026",
   "week": 4,
   "thisWeek": {
@@ -59,6 +59,15 @@
         "pun": "Winston's Fantasy Fortress"
       },
       {
+        "id": "bryceyoung_car",
+        "first": "Bryce",
+        "last": "Young",
+        "team": "CAR",
+        "pos": "QB",
+        "pts": 20,
+        "pun": "The Bryce Is Right"
+      },
+      {
         "id": "brockpurdy_sf",
         "first": "Brock",
         "last": "Purdy",
@@ -93,15 +102,6 @@
         "pos": "QB",
         "pts": 18.1,
         "pun": "The Boys Are Dak In Town"
-      },
-      {
-        "id": "bryceyoung_car",
-        "first": "Bryce",
-        "last": "Young",
-        "team": "CAR",
-        "pos": "QB",
-        "pts": 17.8,
-        "pun": "The Bryce Is Right"
       },
       {
         "id": "patrickmahomesii_kc",
@@ -176,6 +176,15 @@
         "pos": "RB",
         "pts": 21.6,
         "pun": "Quinshon & Chill"
+      },
+      {
+        "id": "chubahubbard_car",
+        "first": "Chuba",
+        "last": "Hubbard",
+        "team": "CAR",
+        "pos": "RB",
+        "pts": 20.5,
+        "pun": "Chubawamba"
       },
       {
         "id": "rjharvey_den",
@@ -268,6 +277,15 @@
         "pun": "This is Your Final Warren"
       },
       {
+        "id": "jahmyrgibbs_det",
+        "first": "Jahmyr",
+        "last": "Gibbs",
+        "team": "DET",
+        "pos": "RB",
+        "pts": 13.4,
+        "pun": "Baby Back Gibbs"
+      },
+      {
         "id": "omarionhampton_lac",
         "first": "Omarion",
         "last": "Hampton",
@@ -275,15 +293,6 @@
         "pos": "RB",
         "pts": 13.3,
         "pun": "I Got This Icebox Where My Heart Used To Be"
-      },
-      {
-        "id": "jahmyrgibbs_det",
-        "first": "Jahmyr",
-        "last": "Gibbs",
-        "team": "DET",
-        "pos": "RB",
-        "pts": 13.1,
-        "pun": "Baby Back Gibbs"
       },
       {
         "id": "tonypollard_ten",
@@ -311,15 +320,6 @@
         "pos": "RB",
         "pts": 11.6,
         "pun": "Kimani & Chill"
-      },
-      {
-        "id": "chubahubbard_car",
-        "first": "Chuba",
-        "last": "Hubbard",
-        "team": "CAR",
-        "pos": "RB",
-        "pts": 11.5,
-        "pun": "Chubawamba"
       },
       {
         "id": "keatonmitchell_lac",
@@ -513,6 +513,15 @@
         "pun": "A Waddle to Remember"
       },
       {
+        "id": "jamesonwilliams_det",
+        "first": "Jameson",
+        "last": "Williams",
+        "team": "DET",
+        "pos": "WR",
+        "pts": 13.8,
+        "pun": "Bottle of Jameson"
+      },
+      {
         "id": "khalilshakir_buf",
         "first": "Khalil",
         "last": "Shakir",
@@ -538,15 +547,6 @@
         "pos": "WR",
         "pts": 12.9,
         "pun": "Finding the Denzone"
-      },
-      {
-        "id": "mikeevans_sf",
-        "first": "Mike",
-        "last": "Evans",
-        "team": "SF",
-        "pos": "WR",
-        "pts": 12.6,
-        "pun": "7th Evans"
       }
     ],
     "TE": [
@@ -778,7 +778,7 @@
         "last": "Young",
         "team": "CAR",
         "pos": "QB",
-        "pts": 88.9,
+        "pts": 91.1,
         "pun": "The Bryce Is Right"
       },
       {
@@ -832,7 +832,7 @@
         "last": "Goff",
         "team": "DET",
         "pos": "QB",
-        "pts": 74.3,
+        "pts": 75.6,
         "pun": "I'm About To Go Goff"
       },
       {
@@ -870,7 +870,7 @@
         "last": "Gibbs",
         "team": "DET",
         "pos": "RB",
-        "pts": 111.4,
+        "pts": 111.7,
         "pun": "Baby Back Gibbs"
       },
       {
@@ -946,6 +946,15 @@
         "pun": "Fire and Ashton"
       },
       {
+        "id": "chubahubbard_car",
+        "first": "Chuba",
+        "last": "Hubbard",
+        "team": "CAR",
+        "pos": "RB",
+        "pts": 73.6,
+        "pun": "Chubawamba"
+      },
+      {
         "id": "jamescookiii_buf",
         "first": "James",
         "last": "Cook",
@@ -953,15 +962,6 @@
         "pos": "RB",
         "pts": 66.5,
         "pun": "James Cooked"
-      },
-      {
-        "id": "chubahubbard_car",
-        "first": "Chuba",
-        "last": "Hubbard",
-        "team": "CAR",
-        "pos": "RB",
-        "pts": 64.6,
-        "pun": "Chubawamba"
       },
       {
         "id": "dandreswift_chi",
@@ -1106,7 +1106,7 @@
         "last": "St. Brown",
         "team": "DET",
         "pos": "WR",
-        "pts": 82.5,
+        "pts": 85.4,
         "pun": "Amon Joy"
       },
       {
