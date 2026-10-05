@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-05T03:05:18.459Z",
+  "generatedAt": "2026-10-05T03:27:43.575Z",
   "season": "2026",
   "week": 4,
   "thisWeek": {
@@ -68,6 +68,15 @@
         "pun": "Winston's Fantasy Fortress"
       },
       {
+        "id": "jaredgoff_det",
+        "first": "Jared",
+        "last": "Goff",
+        "team": "DET",
+        "pos": "QB",
+        "pts": 19.9,
+        "pun": "I'm About To Go Goff"
+      },
+      {
         "id": "brockpurdy_sf",
         "first": "Brock",
         "last": "Purdy",
@@ -102,15 +111,6 @@
         "pos": "QB",
         "pts": 18.1,
         "pun": "The Boys Are Dak In Town"
-      },
-      {
-        "id": "patrickmahomesii_kc",
-        "first": "Patrick",
-        "last": "Mahomes",
-        "team": "KC",
-        "pos": "QB",
-        "pts": 17,
-        "pun": "Sherlock Mahomes"
       }
     ],
     "RB": [
@@ -165,7 +165,7 @@
         "last": "Hubbard",
         "team": "CAR",
         "pos": "RB",
-        "pts": 25.5,
+        "pts": 25.8,
         "pun": "Chubawamba"
       },
       {
@@ -232,6 +232,15 @@
         "pun": "The Gordon Show"
       },
       {
+        "id": "jahmyrgibbs_det",
+        "first": "Jahmyr",
+        "last": "Gibbs",
+        "team": "DET",
+        "pos": "RB",
+        "pts": 17.7,
+        "pun": "Baby Back Gibbs"
+      },
+      {
         "id": "aaronjonessr_min",
         "first": "Aaron",
         "last": "Jones",
@@ -275,15 +284,6 @@
         "pos": "RB",
         "pts": 15.6,
         "pun": "This is Your Final Warren"
-      },
-      {
-        "id": "jahmyrgibbs_det",
-        "first": "Jahmyr",
-        "last": "Gibbs",
-        "team": "DET",
-        "pos": "RB",
-        "pts": 15.3,
-        "pun": "Baby Back Gibbs"
       },
       {
         "id": "omarionhampton_lac",
@@ -477,6 +477,15 @@
         "pun": "The Roman Empire"
       },
       {
+        "id": "jamesonwilliams_det",
+        "first": "Jameson",
+        "last": "Williams",
+        "team": "DET",
+        "pos": "WR",
+        "pts": 16.2,
+        "pun": "Bottle of Jameson"
+      },
+      {
         "id": "romeodunze_chi",
         "first": "Rome",
         "last": "Odunze",
@@ -513,13 +522,13 @@
         "pun": "A Waddle to Remember"
       },
       {
-        "id": "jamesonwilliams_det",
-        "first": "Jameson",
-        "last": "Williams",
+        "id": "amonrastbrown_det",
+        "first": "Amon-Ra",
+        "last": "St. Brown",
         "team": "DET",
         "pos": "WR",
-        "pts": 13.8,
-        "pun": "Bottle of Jameson"
+        "pts": 14.2,
+        "pun": "Amon Joy"
       },
       {
         "id": "khalilshakir_buf",
@@ -538,15 +547,6 @@
         "pos": "WR",
         "pts": 13.2,
         "pun": "Fields of Dreams"
-      },
-      {
-        "id": "denzelboston_cle",
-        "first": "Denzel",
-        "last": "Boston",
-        "team": "CLE",
-        "pos": "WR",
-        "pts": 12.9,
-        "pun": "Finding the Denzone"
       }
     ],
     "TE": [
@@ -558,6 +558,15 @@
         "pos": "TE",
         "pts": 24.9,
         "pun": "Hockenson Loogies"
+      },
+      {
+        "id": "samlaporta_det",
+        "first": "Sam",
+        "last": "LaPorta",
+        "team": "DET",
+        "pos": "TE",
+        "pts": 22.4,
+        "pun": "Sam LaPorta Potty"
       },
       {
         "id": "brockbowers_lv",
@@ -648,15 +657,6 @@
         "pos": "TE",
         "pts": 11.7,
         "pun": "Washington The Pain Down"
-      },
-      {
-        "id": "haroldfanninjr_cle",
-        "first": "Harold",
-        "last": "Fannin",
-        "team": "CLE",
-        "pos": "TE",
-        "pts": 11.7,
-        "pun": "Fannin Fodder"
       }
     ],
     "K": [
@@ -675,7 +675,7 @@
         "last": "Bates",
         "team": "DET",
         "pos": "K",
-        "pts": 17,
+        "pts": 18,
         "pun": "All Bates, No Filler"
       },
       {
@@ -791,6 +791,15 @@
         "pun": "Sherlock Mahomes"
       },
       {
+        "id": "jaredgoff_det",
+        "first": "Jared",
+        "last": "Goff",
+        "team": "DET",
+        "pos": "QB",
+        "pts": 85.5,
+        "pun": "I'm About To Go Goff"
+      },
+      {
         "id": "kirkcousins_lv",
         "first": "Kirk",
         "last": "Cousins",
@@ -827,15 +836,6 @@
         "pun": "Beg, Burrow, and Steal"
       },
       {
-        "id": "jaredgoff_det",
-        "first": "Jared",
-        "last": "Goff",
-        "team": "DET",
-        "pos": "QB",
-        "pts": 76.9,
-        "pun": "I'm About To Go Goff"
-      },
-      {
         "id": "tylershough_no",
         "first": "Tyler",
         "last": "Shough",
@@ -870,7 +870,7 @@
         "last": "Gibbs",
         "team": "DET",
         "pos": "RB",
-        "pts": 113.6,
+        "pts": 116,
         "pun": "Baby Back Gibbs"
       },
       {
@@ -924,7 +924,7 @@
         "last": "Hubbard",
         "team": "CAR",
         "pos": "RB",
-        "pts": 78.6,
+        "pts": 78.9,
         "pun": "Chubawamba"
       },
       {
@@ -1106,7 +1106,7 @@
         "last": "St. Brown",
         "team": "DET",
         "pos": "WR",
-        "pts": 85.4,
+        "pts": 90,
         "pun": "Amon Joy"
       },
       {
@@ -1319,6 +1319,15 @@
         "pun": "Kittle Big Town"
       },
       {
+        "id": "samlaporta_det",
+        "first": "Sam",
+        "last": "LaPorta",
+        "team": "DET",
+        "pos": "TE",
+        "pts": 56.8,
+        "pun": "Sam LaPorta Potty"
+      },
+      {
         "id": "isaiahlikely_nyg",
         "first": "Isaiah",
         "last": "Likely",
@@ -1398,15 +1407,6 @@
         "pos": "TE",
         "pts": 44.5,
         "pun": "Gesicki-tastic Voyage"
-      },
-      {
-        "id": "michaelmayer_lv",
-        "first": "Michael",
-        "last": "Mayer",
-        "team": "LV",
-        "pos": "TE",
-        "pts": 42.9,
-        "pun": "Mayer Happens"
       }
     ],
     "K": [
@@ -1456,6 +1456,15 @@
         "pun": "Livin' on a McLaughlin"
       },
       {
+        "id": "jakebates_det",
+        "first": "Jake",
+        "last": "Bates",
+        "team": "DET",
+        "pos": "K",
+        "pts": 39,
+        "pun": "All Bates, No Filler"
+      },
+      {
         "id": "ryanfitzgerald_car",
         "first": "Ryan",
         "last": "Fitzgerald",
@@ -1481,15 +1490,6 @@
         "pos": "K",
         "pts": 38,
         "pun": "Andre's Excellent Adventure"
-      },
-      {
-        "id": "jakebates_det",
-        "first": "Jake",
-        "last": "Bates",
-        "team": "DET",
-        "pos": "K",
-        "pts": 38,
-        "pun": "All Bates, No Filler"
       },
       {
         "id": "tylerloop_bal",
