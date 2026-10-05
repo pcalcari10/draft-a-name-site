@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-05T02:04:17.190Z",
+  "generatedAt": "2026-10-05T02:25:46.341Z",
   "season": "2026",
   "week": 4,
   "thisWeek": {
@@ -95,6 +95,15 @@
         "pun": "The Boys Are Dak In Town"
       },
       {
+        "id": "bryceyoung_car",
+        "first": "Bryce",
+        "last": "Young",
+        "team": "CAR",
+        "pos": "QB",
+        "pts": 17.8,
+        "pun": "The Bryce Is Right"
+      },
+      {
         "id": "patrickmahomesii_kc",
         "first": "Patrick",
         "last": "Mahomes",
@@ -102,15 +111,6 @@
         "pos": "QB",
         "pts": 17,
         "pun": "Sherlock Mahomes"
-      },
-      {
-        "id": "camward_ten",
-        "first": "Cam",
-        "last": "Ward",
-        "team": "TEN",
-        "pos": "QB",
-        "pts": 16.6,
-        "pun": "Lights, Cameron, Action"
       }
     ],
     "RB": [
@@ -277,6 +277,15 @@
         "pun": "I Got This Icebox Where My Heart Used To Be"
       },
       {
+        "id": "jahmyrgibbs_det",
+        "first": "Jahmyr",
+        "last": "Gibbs",
+        "team": "DET",
+        "pos": "RB",
+        "pts": 13.1,
+        "pun": "Baby Back Gibbs"
+      },
+      {
         "id": "tonypollard_ten",
         "first": "Tony",
         "last": "Pollard",
@@ -295,15 +304,6 @@
         "pun": "Allgeier-tastic Voyage"
       },
       {
-        "id": "jahmyrgibbs_det",
-        "first": "Jahmyr",
-        "last": "Gibbs",
-        "team": "DET",
-        "pos": "RB",
-        "pts": 12.4,
-        "pun": "Baby Back Gibbs"
-      },
-      {
         "id": "kimanividal_lac",
         "first": "Kimani",
         "last": "Vidal",
@@ -313,6 +313,15 @@
         "pun": "Kimani & Chill"
       },
       {
+        "id": "chubahubbard_car",
+        "first": "Chuba",
+        "last": "Hubbard",
+        "team": "CAR",
+        "pos": "RB",
+        "pts": 11.5,
+        "pun": "Chubawamba"
+      },
+      {
         "id": "keatonmitchell_lac",
         "first": "Keaton",
         "last": "Mitchell",
@@ -320,15 +329,6 @@
         "pos": "RB",
         "pts": 11.3,
         "pun": "Straight Outta Mitchell"
-      },
-      {
-        "id": "bhayshultuten_jac",
-        "first": "Bhayshul",
-        "last": "Tuten",
-        "team": "JAC",
-        "pos": "RB",
-        "pts": 11.1,
-        "pun": "King Tuten-khamun"
       }
     ],
     "WR": [
@@ -342,6 +342,15 @@
         "pun": "Silence of the Lambs"
       },
       {
+        "id": "tetairoamcmillan_car",
+        "first": "Tetairoa",
+        "last": "McMillan",
+        "team": "CAR",
+        "pos": "WR",
+        "pts": 39.2,
+        "pun": "The Tet Offensive"
+      },
+      {
         "id": "nicocollins_hou",
         "first": "Nico",
         "last": "Collins",
@@ -349,15 +358,6 @@
         "pos": "WR",
         "pts": 30.8,
         "pun": "Nico Suave"
-      },
-      {
-        "id": "tetairoamcmillan_car",
-        "first": "Tetairoa",
-        "last": "McMillan",
-        "team": "CAR",
-        "pos": "WR",
-        "pts": 29.7,
-        "pun": "The Tet Offensive"
       },
       {
         "id": "tyquanthornton_kc",
@@ -670,6 +670,15 @@
         "pun": "Reichard Happens"
       },
       {
+        "id": "jakebates_det",
+        "first": "Jake",
+        "last": "Bates",
+        "team": "DET",
+        "pos": "K",
+        "pts": 17,
+        "pun": "All Bates, No Filler"
+      },
+      {
         "id": "kaimifairbairn_hou",
         "first": "Ka'imi",
         "last": "Fairbairn",
@@ -695,15 +704,6 @@
         "pos": "K",
         "pts": 16,
         "pun": "Straight Outta Shrader"
-      },
-      {
-        "id": "jakebates_det",
-        "first": "Jake",
-        "last": "Bates",
-        "team": "DET",
-        "pos": "K",
-        "pts": 14,
-        "pun": "All Bates, No Filler"
       },
       {
         "id": "camlittle_jac",
@@ -773,6 +773,15 @@
         "pun": "Purdy Good Team"
       },
       {
+        "id": "bryceyoung_car",
+        "first": "Bryce",
+        "last": "Young",
+        "team": "CAR",
+        "pos": "QB",
+        "pts": 88.9,
+        "pun": "The Bryce Is Right"
+      },
+      {
         "id": "patrickmahomesii_kc",
         "first": "Patrick",
         "last": "Mahomes",
@@ -780,15 +789,6 @@
         "pos": "QB",
         "pts": 85.6,
         "pun": "Sherlock Mahomes"
-      },
-      {
-        "id": "bryceyoung_car",
-        "first": "Bryce",
-        "last": "Young",
-        "team": "CAR",
-        "pos": "QB",
-        "pts": 83,
-        "pun": "The Bryce Is Right"
       },
       {
         "id": "kirkcousins_lv",
@@ -827,6 +827,15 @@
         "pun": "Beg, Burrow, and Steal"
       },
       {
+        "id": "jaredgoff_det",
+        "first": "Jared",
+        "last": "Goff",
+        "team": "DET",
+        "pos": "QB",
+        "pts": 74.3,
+        "pun": "I'm About To Go Goff"
+      },
+      {
         "id": "tylershough_no",
         "first": "Tyler",
         "last": "Shough",
@@ -834,15 +843,6 @@
         "pos": "QB",
         "pts": 72.4,
         "pun": "Aww Shoughs"
-      },
-      {
-        "id": "jaredgoff_det",
-        "first": "Jared",
-        "last": "Goff",
-        "team": "DET",
-        "pos": "QB",
-        "pts": 71.7,
-        "pun": "I'm About To Go Goff"
       },
       {
         "id": "jalenhurts_phi",
@@ -870,7 +870,7 @@
         "last": "Gibbs",
         "team": "DET",
         "pos": "RB",
-        "pts": 110.7,
+        "pts": 111.4,
         "pun": "Baby Back Gibbs"
       },
       {
@@ -955,6 +955,15 @@
         "pun": "James Cooked"
       },
       {
+        "id": "chubahubbard_car",
+        "first": "Chuba",
+        "last": "Hubbard",
+        "team": "CAR",
+        "pos": "RB",
+        "pts": 64.6,
+        "pun": "Chubawamba"
+      },
+      {
         "id": "dandreswift_chi",
         "first": "D'Andre",
         "last": "Swift",
@@ -962,15 +971,6 @@
         "pos": "RB",
         "pts": 63.5,
         "pun": "50 Shades of D'Andre"
-      },
-      {
-        "id": "chubahubbard_car",
-        "first": "Chuba",
-        "last": "Hubbard",
-        "team": "CAR",
-        "pos": "RB",
-        "pts": 63.4,
-        "pun": "Chubawamba"
       },
       {
         "id": "kylemonangai_chi",
@@ -1146,6 +1146,15 @@
         "pun": "Olave Oil"
       },
       {
+        "id": "tetairoamcmillan_car",
+        "first": "Tetairoa",
+        "last": "McMillan",
+        "team": "CAR",
+        "pos": "WR",
+        "pts": 68.5,
+        "pun": "The Tet Offensive"
+      },
+      {
         "id": "zayflowers_bal",
         "first": "Zay",
         "last": "Flowers",
@@ -1171,15 +1180,6 @@
         "pos": "WR",
         "pts": 60.2,
         "pun": "Ja'Marrvelous"
-      },
-      {
-        "id": "tetairoamcmillan_car",
-        "first": "Tetairoa",
-        "last": "McMillan",
-        "team": "CAR",
-        "pos": "WR",
-        "pts": 59,
-        "pun": "The Tet Offensive"
       },
       {
         "id": "matthewgolden_gb",
@@ -1474,6 +1474,15 @@
         "pun": "Andre's Excellent Adventure"
       },
       {
+        "id": "jakebates_det",
+        "first": "Jake",
+        "last": "Bates",
+        "team": "DET",
+        "pos": "K",
+        "pts": 38,
+        "pun": "All Bates, No Filler"
+      },
+      {
         "id": "tylerloop_bal",
         "first": "Tyler",
         "last": "Loop",
@@ -1490,15 +1499,6 @@
         "pos": "K",
         "pts": 37,
         "pun": "Santos of Fame"
-      },
-      {
-        "id": "brandonaubrey_dal",
-        "first": "Brandon",
-        "last": "Aubrey",
-        "team": "DAL",
-        "pos": "K",
-        "pts": 37,
-        "pun": "Aubrey'd Up and Ready"
       }
     ]
   }
