@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-06T02:32:10.363Z",
+  "generatedAt": "2026-10-06T02:55:19.562Z",
   "season": "2026",
   "week": 4,
   "thisWeek": {
@@ -178,6 +178,15 @@
         "pun": "Chubawamba"
       },
       {
+        "id": "alvinkamara_no",
+        "first": "Alvin",
+        "last": "Kamara",
+        "team": "NO",
+        "pos": "RB",
+        "pts": 22.8,
+        "pun": "Lights, Kamara, Action"
+      },
+      {
         "id": "jonathantaylor_ind",
         "first": "Jonathan",
         "last": "Taylor",
@@ -250,6 +259,15 @@
         "pun": "Baby Back Gibbs"
       },
       {
+        "id": "brianrobinsonjr_atl",
+        "first": "Brian",
+        "last": "Robinson",
+        "team": "ATL",
+        "pos": "RB",
+        "pts": 17.6,
+        "pun": "Robinson's Revenge"
+      },
+      {
         "id": "aaronjonessr_min",
         "first": "Aaron",
         "last": "Jones",
@@ -295,15 +313,6 @@
         "pun": "This is Your Final Warren"
       },
       {
-        "id": "alvinkamara_no",
-        "first": "Alvin",
-        "last": "Kamara",
-        "team": "NO",
-        "pos": "RB",
-        "pts": 14.7,
-        "pun": "Lights, Kamara, Action"
-      },
-      {
         "id": "omarionhampton_lac",
         "first": "Omarion",
         "last": "Hampton",
@@ -320,15 +329,6 @@
         "pos": "RB",
         "pts": 13,
         "pun": "The Pollard Express"
-      },
-      {
-        "id": "tylerallgeier_ari",
-        "first": "Tyler",
-        "last": "Allgeier",
-        "team": "ARI",
-        "pos": "RB",
-        "pts": 12.9,
-        "pun": "Allgeier-tastic Voyage"
       }
     ],
     "WR": [
@@ -818,6 +818,15 @@
         "pun": "The Boys Are Dak In Town"
       },
       {
+        "id": "tylershough_no",
+        "first": "Tyler",
+        "last": "Shough",
+        "team": "NO",
+        "pos": "QB",
+        "pts": 81.9,
+        "pun": "Aww Shoughs"
+      },
+      {
         "id": "lamarjackson_bal",
         "first": "Lamar",
         "last": "Jackson",
@@ -825,15 +834,6 @@
         "pos": "QB",
         "pts": 80.1,
         "pun": "Lights, Camera, Jackson"
-      },
-      {
-        "id": "tylershough_no",
-        "first": "Tyler",
-        "last": "Shough",
-        "team": "NO",
-        "pos": "QB",
-        "pts": 79.9,
-        "pun": "Aww Shoughs"
       },
       {
         "id": "joeburrow_cin",
