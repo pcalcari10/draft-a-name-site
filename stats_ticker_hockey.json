@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-06T03:04:23.869Z",
+  "generatedAt": "2026-10-06T06:09:15.900Z",
   "season": "20262027",
   "seasonTotals": {
     "C": [
@@ -38,6 +38,15 @@
         "pos": "C",
         "pts": 5,
         "pun": "MacK Attack"
+      },
+      {
+        "id": "coleperfetti_wpg",
+        "first": "Cole",
+        "last": "Perfetti",
+        "team": "WPG",
+        "pos": "C",
+        "pts": 5,
+        "pun": "Perfetti's Fantasy Fortress"
       },
       {
         "id": "leocarlsson_ana",
@@ -85,24 +94,6 @@
         "pun": "Rossi's Fantasy Fortress"
       },
       {
-        "id": "evgenimalkin_pit",
-        "first": "Evgeni",
-        "last": "Malkin",
-        "team": "PIT",
-        "pos": "C",
-        "pts": 4,
-        "pun": "Malkin Mind Meld"
-      },
-      {
-        "id": "tommynovak_pit",
-        "first": "Tommy",
-        "last": "Novak",
-        "team": "PIT",
-        "pos": "C",
-        "pts": 4,
-        "pun": "Novak's Fantasy Fortress"
-      },
-      {
         "id": "martinnecas_col",
         "first": "Martin",
         "last": "Necas",
@@ -121,6 +112,24 @@
         "pun": "Tim Stützle and the Fantasy Machine"
       },
       {
+        "id": "evgenimalkin_pit",
+        "first": "Evgeni",
+        "last": "Malkin",
+        "team": "PIT",
+        "pos": "C",
+        "pts": 4,
+        "pun": "Malkin Mind Meld"
+      },
+      {
+        "id": "tommynovak_pit",
+        "first": "Tommy",
+        "last": "Novak",
+        "team": "PIT",
+        "pos": "C",
+        "pts": 4,
+        "pun": "Novak's Fantasy Fortress"
+      },
+      {
         "id": "nicksuzuki_mtl",
         "first": "Nick",
         "last": "Suzuki",
@@ -128,15 +137,6 @@
         "pos": "C",
         "pts": 4,
         "pun": "Suzuki Side Up"
-      },
-      {
-        "id": "parkerkelly_col",
-        "first": "Parker",
-        "last": "Kelly",
-        "team": "COL",
-        "pos": "C",
-        "pts": 4,
-        "pun": "Kelly's Fantasy Fortress"
       }
     ],
     "LW": [
@@ -442,6 +442,15 @@
         "pun": "Hronek's Fantasy Fortress"
       },
       {
+        "id": "declancarlile_tbl",
+        "first": "Declan",
+        "last": "Carlile",
+        "team": "PIT",
+        "pos": "D",
+        "pts": 4,
+        "pun": "Carlile's Fantasy Fortress"
+      },
+      {
         "id": "vincedunn_sea",
         "first": "Vince",
         "last": "Dunn",
@@ -460,6 +469,15 @@
         "pun": "McNabb's Fantasy Fortress"
       },
       {
+        "id": "erikkarlsson_pit",
+        "first": "Erik",
+        "last": "Karlsson",
+        "team": "PIT",
+        "pos": "D",
+        "pts": 4,
+        "pun": "Karlsson's Fantasy Fortress"
+      },
+      {
         "id": "adamfox_nyr",
         "first": "Adam",
         "last": "Fox",
@@ -467,15 +485,6 @@
         "pos": "D",
         "pts": 4,
         "pun": "Fox in the Box"
-      },
-      {
-        "id": "samuelgirard_pit",
-        "first": "Samuel",
-        "last": "Girard",
-        "team": "PIT",
-        "pos": "D",
-        "pts": 3,
-        "pun": "In Girard We Trust"
       },
       {
         "id": "joshmanson_col",
@@ -532,6 +541,15 @@
         "pun": "Alvin, Simon And Shea Theodore"
       },
       {
+        "id": "samuelgirard_pit",
+        "first": "Samuel",
+        "last": "Girard",
+        "team": "PIT",
+        "pos": "D",
+        "pts": 3,
+        "pun": "In Girard We Trust"
+      },
+      {
         "id": "mikhailsergachev_uta",
         "first": "Mikhail",
         "last": "Sergachev",
@@ -559,33 +577,6 @@
         "pun": "Hutson Bay"
       },
       {
-        "id": "krisletang_pit",
-        "first": "Kris",
-        "last": "Letang",
-        "team": "PIT",
-        "pos": "D",
-        "pts": 3,
-        "pun": "Letang's Fantasy Fortress"
-      },
-      {
-        "id": "erikkarlsson_pit",
-        "first": "Erik",
-        "last": "Karlsson",
-        "team": "PIT",
-        "pos": "D",
-        "pts": 3,
-        "pun": "Karlsson's Fantasy Fortress"
-      },
-      {
-        "id": "kaedankorczak_vgk",
-        "first": "Kaedan",
-        "last": "Korczak",
-        "team": "PIT",
-        "pos": "D",
-        "pts": 3,
-        "pun": "Korczak's Fantasy Fortress"
-      },
-      {
         "id": "owenpower_buf",
         "first": "Owen",
         "last": "Power",
@@ -593,6 +584,15 @@
         "pos": "D",
         "pts": 3,
         "pun": "Owen Power Up"
+      },
+      {
+        "id": "morganrielly_tor",
+        "first": "Morgan",
+        "last": "Rielly",
+        "team": "TOR",
+        "pos": "D",
+        "pts": 3,
+        "pun": "The Rielly Renegades"
       }
     ],
     "G": [
