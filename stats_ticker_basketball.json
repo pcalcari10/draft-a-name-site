@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-06T09:15:30.403Z",
+  "generatedAt": "2026-10-06T11:03:24.647Z",
   "season": "2025",
   "isLastSeason": true,
   "fantasyLeaders": {
@@ -1535,22 +1535,22 @@
         "pts": 15.9
       },
       {
+        "id": "jameernelson_phi",
+        "first": "Jameer",
+        "last": "Nelson",
+        "team": "PHI",
+        "pos": "PG",
+        "pun": "Nelson of Fame",
+        "gp": 1,
+        "pts": 15.4
+      },
+      {
         "id": "javonsmall_mem",
         "first": "Javon",
         "last": "Small",
         "team": "MEM",
         "pos": "PG",
         "pun": "Small-tastic Voyage",
-        "gp": 1,
-        "pts": 15.2
-      },
-      {
-        "id": "emanuelsharp_sac",
-        "first": "Emanuel",
-        "last": "Sharp",
-        "team": "SAC",
-        "pos": "PG",
-        "pun": "Sharp of Fame",
         "gp": 1,
         "pts": 15.2
       }
@@ -1627,6 +1627,16 @@
         "pts": 21.1
       },
       {
+        "id": "antonioreeves_min",
+        "first": "Antonio",
+        "last": "Reeves",
+        "team": "MIN",
+        "pos": "SG",
+        "pun": "Livin' on a Reeves",
+        "gp": 1,
+        "pts": 20.6
+      },
+      {
         "id": "tylerherro_mil",
         "first": "Tyler",
         "last": "Herro",
@@ -1695,16 +1705,6 @@
         "pun": "Caldwell-Pope's Fantasy Fortress",
         "gp": 1,
         "pts": 14.4
-      },
-      {
-        "id": "bronnyjames_lal",
-        "first": "Bronny",
-        "last": "James",
-        "team": "LAL",
-        "pos": "SG",
-        "pun": "Bronny Ballers",
-        "gp": 1,
-        "pts": 14
       }
     ],
     "SF": [
@@ -1891,6 +1891,16 @@
         "pts": 28.8
       },
       {
+        "id": "saintthomas_phi",
+        "first": "Saint",
+        "last": "Thomas",
+        "team": "PHI",
+        "pos": "PF",
+        "pun": "Thomas-tastic Voyage",
+        "gp": 1,
+        "pts": 26.5
+      },
+      {
         "id": "milesbridges_phx",
         "first": "Miles",
         "last": "Bridges",
@@ -1999,16 +2009,6 @@
         "pun": "Livin' on a Edwards",
         "gp": 1,
         "pts": 12.7
-      },
-      {
-        "id": "jonathankuminga_min",
-        "first": "Jonathan",
-        "last": "Kuminga",
-        "team": "MIN",
-        "pos": "PF",
-        "pun": "Kuminga Attractions",
-        "gp": 1,
-        "pts": 10.4
       }
     ],
     "C": [
@@ -2449,6 +2449,20 @@
         "bpg": 0
       },
       {
+        "id": "antonioreeves_min",
+        "first": "Antonio",
+        "last": "Reeves",
+        "team": "MIN",
+        "pos": "SG",
+        "pun": "Livin' on a Reeves",
+        "gp": 1,
+        "ppg": 12,
+        "apg": 2,
+        "rpg": 3,
+        "spg": 1,
+        "bpg": 0
+      },
+      {
         "id": "jalengreen_phx",
         "first": "Jalen",
         "last": "Green",
@@ -2571,20 +2585,6 @@
         "ppg": 8,
         "apg": 2,
         "rpg": 4,
-        "spg": 0,
-        "bpg": 0
-      },
-      {
-        "id": "jadenhardy_lal",
-        "first": "Jaden",
-        "last": "Hardy",
-        "team": "LAL",
-        "pos": "SG",
-        "pun": "Hardy's Boys",
-        "gp": 1,
-        "ppg": 8,
-        "apg": 1,
-        "rpg": 1,
         "spg": 0,
         "bpg": 0
       }
@@ -2873,6 +2873,20 @@
         "bpg": 0
       },
       {
+        "id": "saintthomas_phi",
+        "first": "Saint",
+        "last": "Thomas",
+        "team": "PHI",
+        "pos": "PF",
+        "pun": "Thomas-tastic Voyage",
+        "gp": 1,
+        "ppg": 11,
+        "apg": 1,
+        "rpg": 10,
+        "spg": 1,
+        "bpg": 0
+      },
+      {
         "id": "jeramigrant_mem",
         "first": "Jerami",
         "last": "Grant",
@@ -2997,20 +3011,6 @@
         "rpg": 2,
         "spg": 1,
         "bpg": 2
-      },
-      {
-        "id": "jaimejaquez_mil",
-        "first": "Jaime",
-        "last": "Jaquez",
-        "team": "MIL",
-        "pos": "PF",
-        "pun": "Jaime Vibes Only",
-        "gp": 1,
-        "ppg": 5,
-        "apg": 1,
-        "rpg": 1,
-        "spg": 0,
-        "bpg": 0
       }
     ],
     "C": [
