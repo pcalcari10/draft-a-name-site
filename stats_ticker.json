@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-06T03:09:43.438Z",
+  "generatedAt": "2026-10-06T03:28:45.593Z",
   "season": "2026",
   "week": 4,
   "thisWeek": {
@@ -178,6 +178,15 @@
         "pun": "Chubawamba"
       },
       {
+        "id": "brianrobinsonjr_atl",
+        "first": "Brian",
+        "last": "Robinson",
+        "team": "ATL",
+        "pos": "RB",
+        "pts": 25.7,
+        "pun": "Robinson's Revenge"
+      },
+      {
         "id": "alvinkamara_no",
         "first": "Alvin",
         "last": "Kamara",
@@ -257,15 +266,6 @@
         "pos": "RB",
         "pts": 17.7,
         "pun": "Baby Back Gibbs"
-      },
-      {
-        "id": "brianrobinsonjr_atl",
-        "first": "Brian",
-        "last": "Robinson",
-        "team": "ATL",
-        "pos": "RB",
-        "pts": 17.6,
-        "pun": "Robinson's Revenge"
       },
       {
         "id": "aaronjonessr_min",
@@ -432,6 +432,15 @@
         "pun": "Carnell & Chill"
       },
       {
+        "id": "chrisolave_no",
+        "first": "Chris",
+        "last": "Olave",
+        "team": "NO",
+        "pos": "WR",
+        "pts": 19.6,
+        "pun": "Olave Oil"
+      },
+      {
         "id": "dariuscooper_phi",
         "first": "Darius",
         "last": "Cooper",
@@ -448,6 +457,15 @@
         "pos": "WR",
         "pts": 18,
         "pun": "Finding Deebo"
+      },
+      {
+        "id": "devaughnvele_no",
+        "first": "Devaughn",
+        "last": "Vele",
+        "team": "NO",
+        "pos": "WR",
+        "pts": 17.4,
+        "pun": "Devaughn Vibes Only"
       },
       {
         "id": "dkmetcalf_pit",
@@ -529,24 +547,6 @@
         "pos": "WR",
         "pts": 14.6,
         "pun": "Drake London Calling"
-      },
-      {
-        "id": "jaylenwaddle_den",
-        "first": "Jaylen",
-        "last": "Waddle",
-        "team": "DEN",
-        "pos": "WR",
-        "pts": 14.5,
-        "pun": "A Waddle to Remember"
-      },
-      {
-        "id": "isaacteslaa_det",
-        "first": "Isaac",
-        "last": "TeSlaa",
-        "team": "DET",
-        "pos": "WR",
-        "pts": 13.5,
-        "pun": "I Bought a TeSlaa"
       }
     ],
     "TE": [
@@ -782,6 +782,15 @@
         "pun": "The Bryce Is Right"
       },
       {
+        "id": "tylershough_no",
+        "first": "Tyler",
+        "last": "Shough",
+        "team": "NO",
+        "pos": "QB",
+        "pts": 88.3,
+        "pun": "Aww Shoughs"
+      },
+      {
         "id": "jaredgoff_det",
         "first": "Jared",
         "last": "Goff",
@@ -807,15 +816,6 @@
         "pos": "QB",
         "pts": 82.8,
         "pun": "I Married my Cousins"
-      },
-      {
-        "id": "tylershough_no",
-        "first": "Tyler",
-        "last": "Shough",
-        "team": "NO",
-        "pos": "QB",
-        "pts": 82.5,
-        "pun": "Aww Shoughs"
       },
       {
         "id": "dakprescott_dal",
@@ -1027,6 +1027,15 @@
         "pun": "Come and Get Your Love"
       },
       {
+        "id": "brianrobinsonjr_atl",
+        "first": "Brian",
+        "last": "Robinson",
+        "team": "ATL",
+        "pos": "RB",
+        "pts": 48.5,
+        "pun": "Robinson's Revenge"
+      },
+      {
         "id": "quinshonjudkins_cle",
         "first": "Quinshon",
         "last": "Judkins",
@@ -1070,15 +1079,6 @@
         "pos": "RB",
         "pts": 44.2,
         "pun": "The Skattebo Express"
-      },
-      {
-        "id": "rhamondrestevenson_ne",
-        "first": "Rhamondre",
-        "last": "Stevenson",
-        "team": "NE",
-        "pos": "RB",
-        "pts": 43.3,
-        "pun": "Rhamondre The Giant"
       }
     ],
     "WR": [
@@ -1115,7 +1115,7 @@
         "last": "Olave",
         "team": "NO",
         "pos": "WR",
-        "pts": 83.8,
+        "pts": 90.1,
         "pun": "Olave Oil"
       },
       {
@@ -1218,6 +1218,15 @@
         "pun": "WILSON!🏐"
       },
       {
+        "id": "devaughnvele_no",
+        "first": "Devaughn",
+        "last": "Vele",
+        "team": "NO",
+        "pos": "WR",
+        "pts": 55.6,
+        "pun": "Devaughn Vibes Only"
+      },
+      {
         "id": "denzelboston_cle",
         "first": "Denzel",
         "last": "Boston",
@@ -1288,15 +1297,6 @@
         "pos": "WR",
         "pts": 48.5,
         "pun": "DeVonta's Inferno"
-      },
-      {
-        "id": "lutherburdeniii_chi",
-        "first": "Luther",
-        "last": "Burden",
-        "team": "CHI",
-        "pos": "WR",
-        "pts": 46.9,
-        "pun": "Un-Burden Me"
       }
     ],
     "TE": [
