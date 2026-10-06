@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-06T02:13:27.649Z",
+  "generatedAt": "2026-10-06T02:32:10.363Z",
   "season": "2026",
   "week": 4,
   "thisWeek": {
@@ -160,6 +160,15 @@
         "pun": "WILSON!🏐"
       },
       {
+        "id": "bijanrobinson_atl",
+        "first": "Bijan",
+        "last": "Robinson",
+        "team": "ATL",
+        "pos": "RB",
+        "pts": 26.4,
+        "pun": "To Infinity and Bijan"
+      },
+      {
         "id": "chubahubbard_car",
         "first": "Chuba",
         "last": "Hubbard",
@@ -176,15 +185,6 @@
         "pos": "RB",
         "pts": 22.7,
         "pun": "Taylor-Made"
-      },
-      {
-        "id": "bijanrobinson_atl",
-        "first": "Bijan",
-        "last": "Robinson",
-        "team": "ATL",
-        "pos": "RB",
-        "pts": 22.3,
-        "pun": "To Infinity and Bijan"
       },
       {
         "id": "quinshonjudkins_cle",
@@ -295,6 +295,15 @@
         "pun": "This is Your Final Warren"
       },
       {
+        "id": "alvinkamara_no",
+        "first": "Alvin",
+        "last": "Kamara",
+        "team": "NO",
+        "pos": "RB",
+        "pts": 14.7,
+        "pun": "Lights, Kamara, Action"
+      },
+      {
         "id": "omarionhampton_lac",
         "first": "Omarion",
         "last": "Hampton",
@@ -320,15 +329,6 @@
         "pos": "RB",
         "pts": 12.9,
         "pun": "Allgeier-tastic Voyage"
-      },
-      {
-        "id": "alvinkamara_no",
-        "first": "Alvin",
-        "last": "Kamara",
-        "team": "NO",
-        "pos": "RB",
-        "pts": 12.7,
-        "pun": "Lights, Kamara, Action"
       }
     ],
     "WR": [
@@ -522,6 +522,15 @@
         "pun": "Bourbon Meyers"
       },
       {
+        "id": "drakelondon_atl",
+        "first": "Drake",
+        "last": "London",
+        "team": "ATL",
+        "pos": "WR",
+        "pts": 14.6,
+        "pun": "Drake London Calling"
+      },
+      {
         "id": "jaylenwaddle_den",
         "first": "Jaylen",
         "last": "Waddle",
@@ -538,15 +547,6 @@
         "pos": "WR",
         "pts": 13.5,
         "pun": "I Bought a TeSlaa"
-      },
-      {
-        "id": "khalilshakir_buf",
-        "first": "Khalil",
-        "last": "Shakir",
-        "team": "BUF",
-        "pos": "WR",
-        "pts": 13.2,
-        "pun": "Shake and Bake"
       }
     ],
     "TE": [
@@ -827,6 +827,15 @@
         "pun": "Lights, Camera, Jackson"
       },
       {
+        "id": "tylershough_no",
+        "first": "Tyler",
+        "last": "Shough",
+        "team": "NO",
+        "pos": "QB",
+        "pts": 79.9,
+        "pun": "Aww Shoughs"
+      },
+      {
         "id": "joeburrow_cin",
         "first": "Joe",
         "last": "Burrow",
@@ -834,15 +843,6 @@
         "pos": "QB",
         "pts": 79.6,
         "pun": "Beg, Burrow, and Steal"
-      },
-      {
-        "id": "tylershough_no",
-        "first": "Tyler",
-        "last": "Shough",
-        "team": "NO",
-        "pos": "QB",
-        "pts": 78.1,
-        "pun": "Aww Shoughs"
       },
       {
         "id": "jalenhurts_phi",
@@ -888,7 +888,7 @@
         "last": "Robinson",
         "team": "ATL",
         "pos": "RB",
-        "pts": 100,
+        "pts": 104.1,
         "pun": "To Infinity and Bijan"
       },
       {
@@ -1115,7 +1115,7 @@
         "last": "Olave",
         "team": "NO",
         "pos": "WR",
-        "pts": 79.7,
+        "pts": 83.8,
         "pun": "Olave Oil"
       },
       {
@@ -1200,6 +1200,15 @@
         "pun": "Finding Deebo"
       },
       {
+        "id": "drakelondon_atl",
+        "first": "Drake",
+        "last": "London",
+        "team": "ATL",
+        "pos": "WR",
+        "pts": 57.4,
+        "pun": "Drake London Calling"
+      },
+      {
         "id": "michaelwilson_ari",
         "first": "Michael",
         "last": "Wilson",
@@ -1216,15 +1225,6 @@
         "pos": "WR",
         "pts": 55.4,
         "pun": "Finding the Denzone"
-      },
-      {
-        "id": "drakelondon_atl",
-        "first": "Drake",
-        "last": "London",
-        "team": "ATL",
-        "pos": "WR",
-        "pts": 55,
-        "pun": "Drake London Calling"
       },
       {
         "id": "stefondiggs_was",
@@ -1319,6 +1319,15 @@
         "pun": "Kittle Big Town"
       },
       {
+        "id": "juwanjohnson_no",
+        "first": "Juwan",
+        "last": "Johnson",
+        "team": "NO",
+        "pos": "TE",
+        "pts": 58.6,
+        "pun": "Juwan's Johnson"
+      },
+      {
         "id": "samlaporta_det",
         "first": "Sam",
         "last": "LaPorta",
@@ -1326,15 +1335,6 @@
         "pos": "TE",
         "pts": 56.8,
         "pun": "Sam LaPorta Potty"
-      },
-      {
-        "id": "juwanjohnson_no",
-        "first": "Juwan",
-        "last": "Johnson",
-        "team": "NO",
-        "pos": "TE",
-        "pts": 56.7,
-        "pun": "Juwan's Johnson"
       },
       {
         "id": "isaiahlikely_nyg",
