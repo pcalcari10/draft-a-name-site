@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-06T09:17:50.659Z",
+  "generatedAt": "2026-10-06T11:14:31.132Z",
   "season": "20262027",
   "seasonTotals": {
     "C": [
@@ -910,6 +910,15 @@
         "pun": "Eklund's Fantasy Fortress"
       },
       {
+        "id": "warrenfoegele_lak",
+        "first": "Warren",
+        "last": "Foegele",
+        "team": "OTT",
+        "pos": "LW",
+        "pts": 0,
+        "pun": "Foegele's Fantasy Fortress"
+      },
+      {
         "id": "tannerjeannot_bos",
         "first": "Tanner",
         "last": "Jeannot",
@@ -953,15 +962,6 @@
         "pos": "LW",
         "pts": 0,
         "pun": "Emperor Kuzmenko"
-      },
-      {
-        "id": "ivarstenberg_sjs",
-        "first": "Ivar",
-        "last": "Stenberg",
-        "team": "SJS",
-        "pos": "LW",
-        "pts": 0,
-        "pun": "Ivar Stenberg and the Fantasy Machine"
       }
     ],
     "RW": [
