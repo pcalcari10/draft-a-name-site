@@ -1,26 +1,26 @@
 {
-  "generatedAt": "2026-10-09T02:47:56.777Z",
+  "generatedAt": "2026-10-09T03:11:16.145Z",
   "season": "2026",
   "week": 5,
   "thisWeek": {
     "QB": [
-      {
-        "id": "jalondaniels_tb",
-        "first": "Jalon",
-        "last": "Daniels",
-        "team": "TB",
-        "pos": "QB",
-        "pts": 13.9,
-        "pun": "Daniels' Dominators"
-      },
       {
         "id": "dakprescott_dal",
         "first": "Dak",
         "last": "Prescott",
         "team": "DAL",
         "pos": "QB",
-        "pts": 5.6,
+        "pts": 14.5,
         "pun": "The Boys Are Dak In Town"
+      },
+      {
+        "id": "jalondaniels_tb",
+        "first": "Jalon",
+        "last": "Daniels",
+        "team": "TB",
+        "pos": "QB",
+        "pts": 14.1,
+        "pun": "Daniels' Dominators"
       }
     ],
     "RB": [
@@ -30,7 +30,7 @@
         "last": "Irving",
         "team": "TB",
         "pos": "RB",
-        "pts": 28.8,
+        "pts": 29.5,
         "pun": "Bucky Beaver Dam"
       },
       {
@@ -39,7 +39,7 @@
         "last": "Williams",
         "team": "DAL",
         "pos": "RB",
-        "pts": 13.6,
+        "pts": 14,
         "pun": "One In a Williams"
       },
       {
@@ -54,22 +54,31 @@
     ],
     "WR": [
       {
-        "id": "emekaegbuka_tb",
-        "first": "Emeka",
-        "last": "Egbuka",
-        "team": "TB",
-        "pos": "WR",
-        "pts": 16,
-        "pun": "Read Egbuka"
-      },
-      {
         "id": "georgepickens_dal",
         "first": "George",
         "last": "Pickens",
         "team": "DAL",
         "pos": "WR",
-        "pts": 10.3,
+        "pts": 24.4,
         "pun": "Slim Pickens"
+      },
+      {
+        "id": "emekaegbuka_tb",
+        "first": "Emeka",
+        "last": "Egbuka",
+        "team": "TB",
+        "pos": "WR",
+        "pts": 17.2,
+        "pun": "Read Egbuka"
+      },
+      {
+        "id": "ryanflournoy_dal",
+        "first": "Ryan",
+        "last": "Flournoy",
+        "team": "DAL",
+        "pos": "WR",
+        "pts": 12,
+        "pun": "Ryan Flournoy and the Fantasy Machine"
       },
       {
         "id": "tezjohnson_tb",
@@ -90,15 +99,6 @@
         "pun": "God, I Need a Win"
       },
       {
-        "id": "ryanflournoy_dal",
-        "first": "Ryan",
-        "last": "Flournoy",
-        "team": "DAL",
-        "pos": "WR",
-        "pts": 5.8,
-        "pun": "Ryan Flournoy and the Fantasy Machine"
-      },
-      {
         "id": "ceedeelamb_dal",
         "first": "CeeDee",
         "last": "Lamb",
@@ -113,8 +113,17 @@
         "last": "Turpin",
         "team": "DAL",
         "pos": "WR",
-        "pts": -0.3,
+        "pts": 2.2,
         "pun": "KaVontae & Chill"
+      },
+      {
+        "id": "jonathanmingo_dal",
+        "first": "Jonathan",
+        "last": "Mingo",
+        "team": "DAL",
+        "pos": "WR",
+        "pts": 1.8,
+        "pun": "Mingo of Fame"
       }
     ],
     "TE": [
@@ -133,7 +142,7 @@
         "last": "Ferguson",
         "team": "DAL",
         "pos": "TE",
-        "pts": 3.3,
+        "pts": 4.9,
         "pun": "Turd Ferguson"
       },
       {
@@ -197,6 +206,15 @@
         "pun": "Purdy Good Team"
       },
       {
+        "id": "dakprescott_dal",
+        "first": "Dak",
+        "last": "Prescott",
+        "team": "DAL",
+        "pos": "QB",
+        "pts": 96.7,
+        "pun": "The Boys Are Dak In Town"
+      },
+      {
         "id": "bryceyoung_car",
         "first": "Bryce",
         "last": "Young",
@@ -213,15 +231,6 @@
         "pos": "QB",
         "pts": 88.3,
         "pun": "Aww Shoughs"
-      },
-      {
-        "id": "dakprescott_dal",
-        "first": "Dak",
-        "last": "Prescott",
-        "team": "DAL",
-        "pos": "QB",
-        "pts": 87.8,
-        "pun": "The Boys Are Dak In Town"
       },
       {
         "id": "jaredgoff_det",
@@ -321,7 +330,7 @@
         "last": "Williams",
         "team": "DAL",
         "pos": "RB",
-        "pts": 95.4,
+        "pts": 95.8,
         "pun": "One In a Williams"
       },
       {
@@ -366,7 +375,7 @@
         "last": "Irving",
         "team": "TB",
         "pos": "RB",
-        "pts": 76,
+        "pts": 76.7,
         "pun": "Bucky Beaver Dam"
       },
       {
@@ -588,6 +597,15 @@
         "pun": "Whatcha Zay?"
       },
       {
+        "id": "georgepickens_dal",
+        "first": "George",
+        "last": "Pickens",
+        "team": "DAL",
+        "pos": "WR",
+        "pts": 64.9,
+        "pun": "Slim Pickens"
+      },
+      {
         "id": "garrettwilson_nyj",
         "first": "Garrett",
         "last": "Wilson",
@@ -660,6 +678,15 @@
         "pun": "Finding the Denzone"
       },
       {
+        "id": "emekaegbuka_tb",
+        "first": "Emeka",
+        "last": "Egbuka",
+        "team": "TB",
+        "pos": "WR",
+        "pts": 53.3,
+        "pun": "Read Egbuka"
+      },
+      {
         "id": "stefondiggs_was",
         "first": "Stefon",
         "last": "Diggs",
@@ -678,15 +705,6 @@
         "pun": "Coker Head"
       },
       {
-        "id": "emekaegbuka_tb",
-        "first": "Emeka",
-        "last": "Egbuka",
-        "team": "TB",
-        "pos": "WR",
-        "pts": 52.1,
-        "pun": "Read Egbuka"
-      },
-      {
         "id": "nicocollins_hou",
         "first": "Nico",
         "last": "Collins",
@@ -703,15 +721,6 @@
         "pos": "WR",
         "pts": 51.1,
         "pun": "Washington Wizards"
-      },
-      {
-        "id": "georgepickens_dal",
-        "first": "George",
-        "last": "Pickens",
-        "team": "DAL",
-        "pos": "WR",
-        "pts": 50.8,
-        "pun": "Slim Pickens"
       },
       {
         "id": "mikeevans_sf",
