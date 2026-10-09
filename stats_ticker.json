@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-09T01:15:19.736Z",
+  "generatedAt": "2026-10-09T01:45:04.777Z",
   "season": "2026",
   "week": 5,
   "thisWeek": {
@@ -10,7 +10,7 @@
         "last": "Daniels",
         "team": "TB",
         "pos": "QB",
-        "pts": 7.4,
+        "pts": 8.8,
         "pun": "Daniels' Dominators"
       },
       {
@@ -19,7 +19,7 @@
         "last": "Prescott",
         "team": "DAL",
         "pos": "QB",
-        "pts": 2.2,
+        "pts": 4.6,
         "pun": "The Boys Are Dak In Town"
       }
     ],
@@ -39,7 +39,7 @@
         "last": "Irving",
         "team": "TB",
         "pos": "RB",
-        "pts": 9.9,
+        "pts": 11,
         "pun": "Bucky Beaver Dam"
       },
       {
@@ -54,6 +54,33 @@
     ],
     "WR": [
       {
+        "id": "chrisgodwinjr_tb",
+        "first": "Chris",
+        "last": "Godwin",
+        "team": "TB",
+        "pos": "WR",
+        "pts": 6.9,
+        "pun": "God, I Need a Win"
+      },
+      {
+        "id": "georgepickens_dal",
+        "first": "George",
+        "last": "Pickens",
+        "team": "DAL",
+        "pos": "WR",
+        "pts": 6.6,
+        "pun": "Slim Pickens"
+      },
+      {
+        "id": "ryanflournoy_dal",
+        "first": "Ryan",
+        "last": "Flournoy",
+        "team": "DAL",
+        "pos": "WR",
+        "pts": 5.8,
+        "pun": "Ryan Flournoy and the Fantasy Machine"
+      },
+      {
         "id": "emekaegbuka_tb",
         "first": "Emeka",
         "last": "Egbuka",
@@ -63,24 +90,6 @@
         "pun": "Read Egbuka"
       },
       {
-        "id": "georgepickens_dal",
-        "first": "George",
-        "last": "Pickens",
-        "team": "DAL",
-        "pos": "WR",
-        "pts": 4.9,
-        "pun": "Slim Pickens"
-      },
-      {
-        "id": "chrisgodwinjr_tb",
-        "first": "Chris",
-        "last": "Godwin",
-        "team": "TB",
-        "pos": "WR",
-        "pts": 4.1,
-        "pun": "God, I Need a Win"
-      },
-      {
         "id": "kavontaeturpin_dal",
         "first": "KaVontae",
         "last": "Turpin",
@@ -88,6 +97,15 @@
         "pos": "WR",
         "pts": 1.7,
         "pun": "KaVontae & Chill"
+      },
+      {
+        "id": "ceedeelamb_dal",
+        "first": "CeeDee",
+        "last": "Lamb",
+        "team": "DAL",
+        "pos": "WR",
+        "pts": 1.4,
+        "pun": "Silence of the Lambs"
       }
     ],
     "TE": [
@@ -121,6 +139,15 @@
     ],
     "K": [
       {
+        "id": "brandonaubrey_dal",
+        "first": "Brandon",
+        "last": "Aubrey",
+        "team": "DAL",
+        "pos": "K",
+        "pts": 5,
+        "pun": "Aubrey'd Up and Ready"
+      },
+      {
         "id": "chasemclaughlin_tb",
         "first": "Chase",
         "last": "McLaughlin",
@@ -128,15 +155,6 @@
         "pos": "K",
         "pts": 1,
         "pun": "Livin' on a McLaughlin"
-      },
-      {
-        "id": "brandonaubrey_dal",
-        "first": "Brandon",
-        "last": "Aubrey",
-        "team": "DAL",
-        "pos": "K",
-        "pts": 1,
-        "pun": "Aubrey'd Up and Ready"
       }
     ]
   },
@@ -179,6 +197,15 @@
         "pun": "Aww Shoughs"
       },
       {
+        "id": "dakprescott_dal",
+        "first": "Dak",
+        "last": "Prescott",
+        "team": "DAL",
+        "pos": "QB",
+        "pts": 86.8,
+        "pun": "The Boys Are Dak In Town"
+      },
+      {
         "id": "jaredgoff_det",
         "first": "Jared",
         "last": "Goff",
@@ -195,15 +222,6 @@
         "pos": "QB",
         "pts": 85.6,
         "pun": "Sherlock Mahomes"
-      },
-      {
-        "id": "dakprescott_dal",
-        "first": "Dak",
-        "last": "Prescott",
-        "team": "DAL",
-        "pos": "QB",
-        "pts": 84.4,
-        "pun": "The Boys Are Dak In Town"
       },
       {
         "id": "kirkcousins_lv",
@@ -370,6 +388,15 @@
         "pun": "Kyle Monangai and the Fantasy Machine"
       },
       {
+        "id": "buckyirving_tb",
+        "first": "Bucky",
+        "last": "Irving",
+        "team": "TB",
+        "pos": "RB",
+        "pts": 58.2,
+        "pun": "Bucky Beaver Dam"
+      },
+      {
         "id": "chasebrown_cin",
         "first": "Chase",
         "last": "Brown",
@@ -377,15 +404,6 @@
         "pos": "RB",
         "pts": 58,
         "pun": "High-Speed Chase"
-      },
-      {
-        "id": "buckyirving_tb",
-        "first": "Bucky",
-        "last": "Irving",
-        "team": "TB",
-        "pos": "RB",
-        "pts": 57.1,
-        "pun": "Bucky Beaver Dam"
       },
       {
         "id": "jaylenwarren_pit",
@@ -485,7 +503,7 @@
         "last": "Lamb",
         "team": "DAL",
         "pos": "WR",
-        "pts": 112.2,
+        "pts": 113.6,
         "pun": "Silence of the Lambs"
       },
       {
@@ -844,6 +862,15 @@
         "pun": "Livin' on a McLaughlin"
       },
       {
+        "id": "brandonaubrey_dal",
+        "first": "Brandon",
+        "last": "Aubrey",
+        "team": "DAL",
+        "pos": "K",
+        "pts": 42,
+        "pun": "Aubrey'd Up and Ready"
+      },
+      {
         "id": "jakebates_det",
         "first": "Jake",
         "last": "Bates",
@@ -878,15 +905,6 @@
         "pos": "K",
         "pts": 38,
         "pun": "Andre's Excellent Adventure"
-      },
-      {
-        "id": "brandonaubrey_dal",
-        "first": "Brandon",
-        "last": "Aubrey",
-        "team": "DAL",
-        "pos": "K",
-        "pts": 38,
-        "pun": "Aubrey'd Up and Ready"
       }
     ]
   }
