@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-09T01:45:04.777Z",
+  "generatedAt": "2026-10-09T02:01:00.246Z",
   "season": "2026",
   "week": 5,
   "thisWeek": {
@@ -25,6 +25,15 @@
     ],
     "RB": [
       {
+        "id": "buckyirving_tb",
+        "first": "Bucky",
+        "last": "Irving",
+        "team": "TB",
+        "pos": "RB",
+        "pts": 18.2,
+        "pun": "Bucky Beaver Dam"
+      },
+      {
         "id": "javontewilliams_dal",
         "first": "Javonte",
         "last": "Williams",
@@ -32,15 +41,6 @@
         "pos": "RB",
         "pts": 12.9,
         "pun": "One In a Williams"
-      },
-      {
-        "id": "buckyirving_tb",
-        "first": "Bucky",
-        "last": "Irving",
-        "team": "TB",
-        "pos": "RB",
-        "pts": 11,
-        "pun": "Bucky Beaver Dam"
       },
       {
         "id": "seantucker_tb",
@@ -54,12 +54,21 @@
     ],
     "WR": [
       {
+        "id": "emekaegbuka_tb",
+        "first": "Emeka",
+        "last": "Egbuka",
+        "team": "TB",
+        "pos": "WR",
+        "pts": 12.9,
+        "pun": "Read Egbuka"
+      },
+      {
         "id": "chrisgodwinjr_tb",
         "first": "Chris",
         "last": "Godwin",
         "team": "TB",
         "pos": "WR",
-        "pts": 6.9,
+        "pts": 7,
         "pun": "God, I Need a Win"
       },
       {
@@ -79,15 +88,6 @@
         "pos": "WR",
         "pts": 5.8,
         "pun": "Ryan Flournoy and the Fantasy Machine"
-      },
-      {
-        "id": "emekaegbuka_tb",
-        "first": "Emeka",
-        "last": "Egbuka",
-        "team": "TB",
-        "pos": "WR",
-        "pts": 5.5,
-        "pun": "Read Egbuka"
       },
       {
         "id": "kavontaeturpin_dal",
@@ -153,7 +153,7 @@
         "last": "McLaughlin",
         "team": "TB",
         "pos": "K",
-        "pts": 1,
+        "pts": 2,
         "pun": "Livin' on a McLaughlin"
       }
     ]
@@ -370,6 +370,15 @@
         "pun": "James Cooked"
       },
       {
+        "id": "buckyirving_tb",
+        "first": "Bucky",
+        "last": "Irving",
+        "team": "TB",
+        "pos": "RB",
+        "pts": 65.4,
+        "pun": "Bucky Beaver Dam"
+      },
+      {
         "id": "dandreswift_chi",
         "first": "D'Andre",
         "last": "Swift",
@@ -386,15 +395,6 @@
         "pos": "RB",
         "pts": 59.3,
         "pun": "Kyle Monangai and the Fantasy Machine"
-      },
-      {
-        "id": "buckyirving_tb",
-        "first": "Bucky",
-        "last": "Irving",
-        "team": "TB",
-        "pos": "RB",
-        "pts": 58.2,
-        "pun": "Bucky Beaver Dam"
       },
       {
         "id": "chasebrown_cin",
@@ -696,13 +696,13 @@
         "pun": "Livin' on a Raymond"
       },
       {
-        "id": "devontasmith_phi",
-        "first": "DeVonta",
-        "last": "Smith",
-        "team": "PHI",
+        "id": "emekaegbuka_tb",
+        "first": "Emeka",
+        "last": "Egbuka",
+        "team": "TB",
         "pos": "WR",
-        "pts": 48.5,
-        "pun": "DeVonta's Inferno"
+        "pts": 49,
+        "pun": "Read Egbuka"
       }
     ],
     "TE": [
@@ -858,7 +858,7 @@
         "last": "McLaughlin",
         "team": "TB",
         "pos": "K",
-        "pts": 42,
+        "pts": 43,
         "pun": "Livin' on a McLaughlin"
       },
       {
