@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-09T00:55:06.607Z",
+  "generatedAt": "2026-10-09T01:15:19.736Z",
   "season": "2026",
   "week": 5,
   "thisWeek": {
@@ -10,7 +10,7 @@
         "last": "Daniels",
         "team": "TB",
         "pos": "QB",
-        "pts": 7.1,
+        "pts": 7.4,
         "pun": "Daniels' Dominators"
       },
       {
@@ -19,7 +19,7 @@
         "last": "Prescott",
         "team": "DAL",
         "pos": "QB",
-        "pts": 1.8,
+        "pts": 2.2,
         "pun": "The Boys Are Dak In Town"
       }
     ],
@@ -30,7 +30,7 @@
         "last": "Williams",
         "team": "DAL",
         "pos": "RB",
-        "pts": 10.7,
+        "pts": 12.9,
         "pun": "One In a Williams"
       },
       {
@@ -39,11 +39,29 @@
         "last": "Irving",
         "team": "TB",
         "pos": "RB",
-        "pts": 8,
+        "pts": 9.9,
         "pun": "Bucky Beaver Dam"
+      },
+      {
+        "id": "seantucker_tb",
+        "first": "Sean",
+        "last": "Tucker",
+        "team": "TB",
+        "pos": "RB",
+        "pts": 0.5,
+        "pun": "All Tucker, No Filler"
       }
     ],
     "WR": [
+      {
+        "id": "emekaegbuka_tb",
+        "first": "Emeka",
+        "last": "Egbuka",
+        "team": "TB",
+        "pos": "WR",
+        "pts": 5.5,
+        "pun": "Read Egbuka"
+      },
       {
         "id": "georgepickens_dal",
         "first": "George",
@@ -52,15 +70,6 @@
         "pos": "WR",
         "pts": 4.9,
         "pun": "Slim Pickens"
-      },
-      {
-        "id": "emekaegbuka_tb",
-        "first": "Emeka",
-        "last": "Egbuka",
-        "team": "TB",
-        "pos": "WR",
-        "pts": 4.2,
-        "pun": "Read Egbuka"
       },
       {
         "id": "chrisgodwinjr_tb",
@@ -90,6 +99,15 @@
         "pos": "TE",
         "pts": 3.4,
         "pun": "Livin' on a Otton"
+      },
+      {
+        "id": "paynedurham_tb",
+        "first": "Payne",
+        "last": "Durham",
+        "team": "TB",
+        "pos": "TE",
+        "pts": 1.5,
+        "pun": "Durham-A-Palooza"
       },
       {
         "id": "jakeferguson_dal",
@@ -184,7 +202,7 @@
         "last": "Prescott",
         "team": "DAL",
         "pos": "QB",
-        "pts": 84,
+        "pts": 84.4,
         "pun": "The Boys Are Dak In Town"
       },
       {
@@ -267,7 +285,7 @@
         "last": "Williams",
         "team": "DAL",
         "pos": "RB",
-        "pts": 92.5,
+        "pts": 94.7,
         "pun": "One In a Williams"
       },
       {
@@ -361,6 +379,15 @@
         "pun": "High-Speed Chase"
       },
       {
+        "id": "buckyirving_tb",
+        "first": "Bucky",
+        "last": "Irving",
+        "team": "TB",
+        "pos": "RB",
+        "pts": 57.1,
+        "pun": "Bucky Beaver Dam"
+      },
+      {
         "id": "jaylenwarren_pit",
         "first": "Jaylen",
         "last": "Warren",
@@ -368,15 +395,6 @@
         "pos": "RB",
         "pts": 56.2,
         "pun": "This is Your Final Warren"
-      },
-      {
-        "id": "buckyirving_tb",
-        "first": "Bucky",
-        "last": "Irving",
-        "team": "TB",
-        "pos": "RB",
-        "pts": 55.2,
-        "pun": "Bucky Beaver Dam"
       },
       {
         "id": "bhayshultuten_jac",
