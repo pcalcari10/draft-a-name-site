@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-09T02:28:54.758Z",
+  "generatedAt": "2026-10-09T02:47:56.777Z",
   "season": "2026",
   "week": 5,
   "thisWeek": {
@@ -10,7 +10,7 @@
         "last": "Daniels",
         "team": "TB",
         "pos": "QB",
-        "pts": 12.5,
+        "pts": 13.9,
         "pun": "Daniels' Dominators"
       },
       {
@@ -19,7 +19,7 @@
         "last": "Prescott",
         "team": "DAL",
         "pos": "QB",
-        "pts": 5.2,
+        "pts": 5.6,
         "pun": "The Boys Are Dak In Town"
       }
     ],
@@ -30,7 +30,7 @@
         "last": "Irving",
         "team": "TB",
         "pos": "RB",
-        "pts": 25.7,
+        "pts": 28.8,
         "pun": "Bucky Beaver Dam"
       },
       {
@@ -39,7 +39,7 @@
         "last": "Williams",
         "team": "DAL",
         "pos": "RB",
-        "pts": 12.9,
+        "pts": 13.6,
         "pun": "One In a Williams"
       },
       {
@@ -48,7 +48,7 @@
         "last": "Tucker",
         "team": "TB",
         "pos": "RB",
-        "pts": 0.5,
+        "pts": 1.8,
         "pun": "All Tucker, No Filler"
       }
     ],
@@ -128,6 +128,15 @@
         "pun": "Livin' on a Otton"
       },
       {
+        "id": "jakeferguson_dal",
+        "first": "Jake",
+        "last": "Ferguson",
+        "team": "DAL",
+        "pos": "TE",
+        "pts": 3.3,
+        "pun": "Turd Ferguson"
+      },
+      {
         "id": "lukeschoonmaker_dal",
         "first": "Luke",
         "last": "Schoonmaker",
@@ -144,15 +153,6 @@
         "pos": "TE",
         "pts": 1.5,
         "pun": "Durham-A-Palooza"
-      },
-      {
-        "id": "jakeferguson_dal",
-        "first": "Jake",
-        "last": "Ferguson",
-        "team": "DAL",
-        "pos": "TE",
-        "pts": 1.2,
-        "pun": "Turd Ferguson"
       }
     ],
     "K": [
@@ -220,7 +220,7 @@
         "last": "Prescott",
         "team": "DAL",
         "pos": "QB",
-        "pts": 87.4,
+        "pts": 87.8,
         "pun": "The Boys Are Dak In Town"
       },
       {
@@ -321,7 +321,7 @@
         "last": "Williams",
         "team": "DAL",
         "pos": "RB",
-        "pts": 94.7,
+        "pts": 95.4,
         "pun": "One In a Williams"
       },
       {
@@ -361,6 +361,15 @@
         "pun": "Chubawamba"
       },
       {
+        "id": "buckyirving_tb",
+        "first": "Bucky",
+        "last": "Irving",
+        "team": "TB",
+        "pos": "RB",
+        "pts": 76,
+        "pun": "Bucky Beaver Dam"
+      },
+      {
         "id": "christianmccaffrey_sf",
         "first": "Christian",
         "last": "McCaffrey",
@@ -377,15 +386,6 @@
         "pos": "RB",
         "pts": 73.9,
         "pun": "Fire and Ashton"
-      },
-      {
-        "id": "buckyirving_tb",
-        "first": "Bucky",
-        "last": "Irving",
-        "team": "TB",
-        "pos": "RB",
-        "pts": 72.9,
-        "pun": "Bucky Beaver Dam"
       },
       {
         "id": "jamescookiii_buf",
