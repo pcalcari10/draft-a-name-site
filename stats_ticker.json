@@ -1,13 +1,126 @@
 {
-  "generatedAt": "2026-10-09T00:17:39.045Z",
+  "generatedAt": "2026-10-09T00:55:06.607Z",
   "season": "2026",
   "week": 5,
   "thisWeek": {
-    "QB": [],
-    "RB": [],
-    "WR": [],
-    "TE": [],
-    "K": []
+    "QB": [
+      {
+        "id": "jalondaniels_tb",
+        "first": "Jalon",
+        "last": "Daniels",
+        "team": "TB",
+        "pos": "QB",
+        "pts": 7.1,
+        "pun": "Daniels' Dominators"
+      },
+      {
+        "id": "dakprescott_dal",
+        "first": "Dak",
+        "last": "Prescott",
+        "team": "DAL",
+        "pos": "QB",
+        "pts": 1.8,
+        "pun": "The Boys Are Dak In Town"
+      }
+    ],
+    "RB": [
+      {
+        "id": "javontewilliams_dal",
+        "first": "Javonte",
+        "last": "Williams",
+        "team": "DAL",
+        "pos": "RB",
+        "pts": 10.7,
+        "pun": "One In a Williams"
+      },
+      {
+        "id": "buckyirving_tb",
+        "first": "Bucky",
+        "last": "Irving",
+        "team": "TB",
+        "pos": "RB",
+        "pts": 8,
+        "pun": "Bucky Beaver Dam"
+      }
+    ],
+    "WR": [
+      {
+        "id": "georgepickens_dal",
+        "first": "George",
+        "last": "Pickens",
+        "team": "DAL",
+        "pos": "WR",
+        "pts": 4.9,
+        "pun": "Slim Pickens"
+      },
+      {
+        "id": "emekaegbuka_tb",
+        "first": "Emeka",
+        "last": "Egbuka",
+        "team": "TB",
+        "pos": "WR",
+        "pts": 4.2,
+        "pun": "Read Egbuka"
+      },
+      {
+        "id": "chrisgodwinjr_tb",
+        "first": "Chris",
+        "last": "Godwin",
+        "team": "TB",
+        "pos": "WR",
+        "pts": 4.1,
+        "pun": "God, I Need a Win"
+      },
+      {
+        "id": "kavontaeturpin_dal",
+        "first": "KaVontae",
+        "last": "Turpin",
+        "team": "DAL",
+        "pos": "WR",
+        "pts": 1.7,
+        "pun": "KaVontae & Chill"
+      }
+    ],
+    "TE": [
+      {
+        "id": "cadeotton_tb",
+        "first": "Cade",
+        "last": "Otton",
+        "team": "TB",
+        "pos": "TE",
+        "pts": 3.4,
+        "pun": "Livin' on a Otton"
+      },
+      {
+        "id": "jakeferguson_dal",
+        "first": "Jake",
+        "last": "Ferguson",
+        "team": "DAL",
+        "pos": "TE",
+        "pts": 1.2,
+        "pun": "Turd Ferguson"
+      }
+    ],
+    "K": [
+      {
+        "id": "chasemclaughlin_tb",
+        "first": "Chase",
+        "last": "McLaughlin",
+        "team": "TB",
+        "pos": "K",
+        "pts": 1,
+        "pun": "Livin' on a McLaughlin"
+      },
+      {
+        "id": "brandonaubrey_dal",
+        "first": "Brandon",
+        "last": "Aubrey",
+        "team": "DAL",
+        "pos": "K",
+        "pts": 1,
+        "pun": "Aubrey'd Up and Ready"
+      }
+    ]
   },
   "seasonTotals": {
     "QB": [
@@ -66,6 +179,15 @@
         "pun": "Sherlock Mahomes"
       },
       {
+        "id": "dakprescott_dal",
+        "first": "Dak",
+        "last": "Prescott",
+        "team": "DAL",
+        "pos": "QB",
+        "pts": 84,
+        "pun": "The Boys Are Dak In Town"
+      },
+      {
         "id": "kirkcousins_lv",
         "first": "Kirk",
         "last": "Cousins",
@@ -73,15 +195,6 @@
         "pos": "QB",
         "pts": 82.8,
         "pun": "I Married my Cousins"
-      },
-      {
-        "id": "dakprescott_dal",
-        "first": "Dak",
-        "last": "Prescott",
-        "team": "DAL",
-        "pos": "QB",
-        "pts": 82.2,
-        "pun": "The Boys Are Dak In Town"
       },
       {
         "id": "lamarjackson_bal",
@@ -149,6 +262,15 @@
         "pun": "To Infinity and Bijan"
       },
       {
+        "id": "javontewilliams_dal",
+        "first": "Javonte",
+        "last": "Williams",
+        "team": "DAL",
+        "pos": "RB",
+        "pts": 92.5,
+        "pun": "One In a Williams"
+      },
+      {
         "id": "derrickhenry_bal",
         "first": "Derrick",
         "last": "Henry",
@@ -174,15 +296,6 @@
         "pos": "RB",
         "pts": 86.2,
         "pun": "Taylor-Made"
-      },
-      {
-        "id": "javontewilliams_dal",
-        "first": "Javonte",
-        "last": "Williams",
-        "team": "DAL",
-        "pos": "RB",
-        "pts": 81.8,
-        "pun": "One In a Williams"
       },
       {
         "id": "chubahubbard_car",
@@ -257,6 +370,15 @@
         "pun": "This is Your Final Warren"
       },
       {
+        "id": "buckyirving_tb",
+        "first": "Bucky",
+        "last": "Irving",
+        "team": "TB",
+        "pos": "RB",
+        "pts": 55.2,
+        "pun": "Bucky Beaver Dam"
+      },
+      {
         "id": "bhayshultuten_jac",
         "first": "Bhayshul",
         "last": "Tuten",
@@ -300,15 +422,6 @@
         "pos": "RB",
         "pts": 48.3,
         "pun": "Quinshon & Chill"
-      },
-      {
-        "id": "buckyirving_tb",
-        "first": "Bucky",
-        "last": "Irving",
-        "team": "TB",
-        "pos": "RB",
-        "pts": 47.2,
-        "pun": "Bucky Beaver Dam"
       },
       {
         "id": "omarionhampton_lac",
@@ -709,7 +822,7 @@
         "last": "McLaughlin",
         "team": "TB",
         "pos": "K",
-        "pts": 41,
+        "pts": 42,
         "pun": "Livin' on a McLaughlin"
       },
       {
@@ -749,13 +862,13 @@
         "pun": "Andre's Excellent Adventure"
       },
       {
-        "id": "tylerloop_bal",
-        "first": "Tyler",
-        "last": "Loop",
-        "team": "BAL",
+        "id": "brandonaubrey_dal",
+        "first": "Brandon",
+        "last": "Aubrey",
+        "team": "DAL",
         "pos": "K",
         "pts": 38,
-        "pun": "Jumping Through Loops"
+        "pun": "Aubrey'd Up and Ready"
       }
     ]
   }
