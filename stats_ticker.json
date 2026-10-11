@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-11T21:48:09.005Z",
+  "generatedAt": "2026-10-11T22:10:28.518Z",
   "season": "2026",
   "week": 5,
   "thisWeek": {
@@ -133,6 +133,15 @@
         "pun": "Bucky Beaver Dam"
       },
       {
+        "id": "jahmyrgibbs_det",
+        "first": "Jahmyr",
+        "last": "Gibbs",
+        "team": "DET",
+        "pos": "RB",
+        "pts": 21.2,
+        "pun": "Baby Back Gibbs"
+      },
+      {
         "id": "aaronjonessr_min",
         "first": "Aaron",
         "last": "Jones",
@@ -149,15 +158,6 @@
         "pos": "RB",
         "pts": 18.6,
         "pun": "I'm Allen Ears"
-      },
-      {
-        "id": "jahmyrgibbs_det",
-        "first": "Jahmyr",
-        "last": "Gibbs",
-        "team": "DET",
-        "pos": "RB",
-        "pts": 18,
-        "pun": "Baby Back Gibbs"
       },
       {
         "id": "rhamondrestevenson_ne",
@@ -250,6 +250,15 @@
         "pun": "Dylan Vibes Only"
       },
       {
+        "id": "christianmccaffrey_sf",
+        "first": "Christian",
+        "last": "McCaffrey",
+        "team": "SF",
+        "pos": "RB",
+        "pts": 11.2,
+        "pun": "Run CMC"
+      },
+      {
         "id": "jonathantaylor_ind",
         "first": "Jonathan",
         "last": "Taylor",
@@ -257,15 +266,6 @@
         "pos": "RB",
         "pts": 11.2,
         "pun": "Taylor-Made"
-      },
-      {
-        "id": "christianmccaffrey_sf",
-        "first": "Christian",
-        "last": "McCaffrey",
-        "team": "SF",
-        "pos": "RB",
-        "pts": 11.1,
-        "pun": "Run CMC"
       },
       {
         "id": "ashtonjeanty_lv",
@@ -318,7 +318,7 @@
         "last": "Wilson",
         "team": "SEA",
         "pos": "RB",
-        "pts": 8.5,
+        "pts": 8.8,
         "pun": "WILSON!🏐"
       },
       {
@@ -742,13 +742,13 @@
         "pun": "McPherson-tastic Voyage"
       },
       {
-        "id": "jakeelliott_phi",
+        "id": "jakebates_det",
         "first": "Jake",
-        "last": "Elliott",
-        "team": "PHI",
+        "last": "Bates",
+        "team": "DET",
         "pos": "K",
-        "pts": 6,
-        "pun": "All Elliott, No Filler"
+        "pts": 7,
+        "pun": "All Bates, No Filler"
       }
     ]
   },
@@ -769,7 +769,7 @@
         "last": "Purdy",
         "team": "SF",
         "pos": "QB",
-        "pts": 108.4,
+        "pts": 108.9,
         "pun": "Purdy Good Team"
       },
       {
@@ -787,7 +787,7 @@
         "last": "Goff",
         "team": "DET",
         "pos": "QB",
-        "pts": 98.6,
+        "pts": 99.7,
         "pun": "I'm About To Go Goff"
       },
       {
@@ -870,7 +870,7 @@
         "last": "Gibbs",
         "team": "DET",
         "pos": "RB",
-        "pts": 134,
+        "pts": 137.2,
         "pun": "Baby Back Gibbs"
       },
       {
@@ -942,7 +942,7 @@
         "last": "McCaffrey",
         "team": "SF",
         "pos": "RB",
-        "pts": 85.1,
+        "pts": 85.2,
         "pun": "Run CMC"
       },
       {
@@ -1063,6 +1063,15 @@
         "pun": "The Skattebo Express"
       },
       {
+        "id": "omarionhampton_lac",
+        "first": "Omarion",
+        "last": "Hampton",
+        "team": "LAC",
+        "pos": "RB",
+        "pts": 49.3,
+        "pun": "I Got This Icebox Where My Heart Used To Be"
+      },
+      {
         "id": "brianrobinsonjr_atl",
         "first": "Brian",
         "last": "Robinson",
@@ -1070,15 +1079,6 @@
         "pos": "RB",
         "pts": 48.5,
         "pun": "Robinson's Revenge"
-      },
-      {
-        "id": "omarionhampton_lac",
-        "first": "Omarion",
-        "last": "Hampton",
-        "team": "LAC",
-        "pos": "RB",
-        "pts": 48.1,
-        "pun": "I Got This Icebox Where My Heart Used To Be"
       }
     ],
     "WR": [
@@ -1124,7 +1124,7 @@
         "last": "St. Brown",
         "team": "DET",
         "pos": "WR",
-        "pts": 92.6,
+        "pts": 94.7,
         "pun": "Amon Joy"
       },
       {
@@ -1254,6 +1254,15 @@
         "pun": "Nico Suave"
       },
       {
+        "id": "deebosamuelsr_sf",
+        "first": "Deebo",
+        "last": "Samuel",
+        "team": "SF",
+        "pos": "WR",
+        "pts": 62.4,
+        "pun": "Finding Deebo"
+      },
+      {
         "id": "devaughnvele_no",
         "first": "Devaughn",
         "last": "Vele",
@@ -1261,15 +1270,6 @@
         "pos": "WR",
         "pts": 62.2,
         "pun": "Devaughn Vibes Only"
-      },
-      {
-        "id": "deebosamuelsr_sf",
-        "first": "Deebo",
-        "last": "Samuel",
-        "team": "SF",
-        "pos": "WR",
-        "pts": 60.7,
-        "pun": "Finding Deebo"
       },
       {
         "id": "michaelwilson_ari",
@@ -1346,6 +1346,15 @@
         "pun": "This is Your Final Warren"
       },
       {
+        "id": "georgekittle_sf",
+        "first": "George",
+        "last": "Kittle",
+        "team": "SF",
+        "pos": "TE",
+        "pts": 65.9,
+        "pun": "Kittle Big Town"
+      },
+      {
         "id": "juwanjohnson_no",
         "first": "Juwan",
         "last": "Johnson",
@@ -1353,15 +1362,6 @@
         "pos": "TE",
         "pts": 65.8,
         "pun": "Juwan's Johnson"
-      },
-      {
-        "id": "georgekittle_sf",
-        "first": "George",
-        "last": "Kittle",
-        "team": "SF",
-        "pos": "TE",
-        "pts": 64.4,
-        "pun": "Kittle Big Town"
       },
       {
         "id": "patfreiermuth_pit",
@@ -1465,6 +1465,15 @@
         "pun": "Livin' on a McLaughlin"
       },
       {
+        "id": "jakebates_det",
+        "first": "Jake",
+        "last": "Bates",
+        "team": "DET",
+        "pos": "K",
+        "pts": 46,
+        "pun": "All Bates, No Filler"
+      },
+      {
         "id": "camlittle_jac",
         "first": "Cam",
         "last": "Little",
@@ -1490,15 +1499,6 @@
         "pos": "K",
         "pts": 42,
         "pun": "Aubrey'd Up and Ready"
-      },
-      {
-        "id": "jakebates_det",
-        "first": "Jake",
-        "last": "Bates",
-        "team": "DET",
-        "pos": "K",
-        "pts": 42,
-        "pun": "All Bates, No Filler"
       }
     ]
   }
