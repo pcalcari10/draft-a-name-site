@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-11T03:05:02.502Z",
+  "generatedAt": "2026-10-11T06:09:20.037Z",
   "season": "20262027",
   "seasonTotals": {
     "C": [
@@ -76,6 +76,15 @@
         "pun": "Tim Stützle and the Fantasy Machine"
       },
       {
+        "id": "leocarlsson_ana",
+        "first": "Leo",
+        "last": "Carlsson",
+        "team": "ANA",
+        "pos": "C",
+        "pts": 8,
+        "pun": "Carlsson's Fantasy Fortress"
+      },
+      {
         "id": "nicksuzuki_mtl",
         "first": "Nick",
         "last": "Suzuki",
@@ -94,13 +103,13 @@
         "pun": "The Stamkos Slayers"
       },
       {
-        "id": "leocarlsson_ana",
-        "first": "Leo",
-        "last": "Carlsson",
+        "id": "mikaelgranlund_ana",
+        "first": "Mikael",
+        "last": "Granlund",
         "team": "ANA",
         "pos": "C",
         "pts": 7,
-        "pun": "Carlsson's Fantasy Fortress"
+        "pun": "Bill Simmons’ Granlund"
       },
       {
         "id": "bohorvat_nyi",
@@ -128,15 +137,6 @@
         "pos": "C",
         "pts": 6,
         "pun": "Perfetti's Fantasy Fortress"
-      },
-      {
-        "id": "macklincelebrini_sjs",
-        "first": "Macklin",
-        "last": "Celebrini",
-        "team": "SJS",
-        "pos": "C",
-        "pts": 6,
-        "pun": "Celebrini Time"
       }
     ],
     "LW": [
@@ -231,6 +231,15 @@
         "pun": "Lee's Fantasy Fortress"
       },
       {
+        "id": "artemipanarin_nyr",
+        "first": "Artemi",
+        "last": "Panarin",
+        "team": "LAK",
+        "pos": "LW",
+        "pts": 4,
+        "pun": "The Panarin Powerhouse"
+      },
+      {
         "id": "matthewtkachuk_fla",
         "first": "Matthew",
         "last": "Tkachuk",
@@ -265,15 +274,6 @@
         "pos": "LW",
         "pts": 4,
         "pun": "Jankowski's Fantasy Fortress"
-      },
-      {
-        "id": "jakedebrusk_van",
-        "first": "Jake",
-        "last": "DeBrusk",
-        "team": "VAN",
-        "pos": "LW",
-        "pts": 4,
-        "pun": "The DeBrusk's Destroyers"
       }
     ],
     "RW": [
@@ -312,6 +312,15 @@
         "pos": "RW",
         "pts": 7,
         "pun": "Podkolzin's Fantasy Fortress"
+      },
+      {
+        "id": "markstone_vgk",
+        "first": "Mark",
+        "last": "Stone",
+        "team": "VGK",
+        "pos": "RW",
+        "pts": 7,
+        "pun": "The Mark Stone Masons"
       },
       {
         "id": "davidpastrnak_bos",
@@ -368,15 +377,6 @@
         "pun": "Rantanen Claus"
       },
       {
-        "id": "markstone_vgk",
-        "first": "Mark",
-        "last": "Stone",
-        "team": "VGK",
-        "pos": "RW",
-        "pts": 5,
-        "pun": "The Mark Stone Masons"
-      },
-      {
         "id": "eastoncowan_tor",
         "first": "Easton",
         "last": "Cowan",
@@ -404,13 +404,13 @@
         "pun": "DeBrincat's Fantasy Fortress"
       },
       {
-        "id": "kaapokakko_sea",
-        "first": "Kaapo",
-        "last": "Kakko",
-        "team": "SEA",
+        "id": "mitchmarner_vgk",
+        "first": "Mitch",
+        "last": "Marner",
+        "team": "VGK",
         "pos": "RW",
         "pts": 5,
-        "pun": "Polly Want a Kaapo Kakko"
+        "pun": "Marner's Farm"
       }
     ],
     "D": [
@@ -505,6 +505,15 @@
         "pun": "Like A Spurgeon"
       },
       {
+        "id": "jacksonlacombe_ana",
+        "first": "Jackson",
+        "last": "LaCombe",
+        "team": "ANA",
+        "pos": "D",
+        "pts": 5,
+        "pun": "LaCombe Your Hair"
+      },
+      {
         "id": "samuelgirard_pit",
         "first": "Samuel",
         "last": "Girard",
@@ -566,15 +575,6 @@
         "pos": "D",
         "pts": 4,
         "pun": "Carlile's Fantasy Fortress"
-      },
-      {
-        "id": "matthewschaefer_nyi",
-        "first": "Matthew",
-        "last": "Schaefer",
-        "team": "NYI",
-        "pos": "D",
-        "pts": 4,
-        "pun": "Schaefer's Fantasy Fortress"
       },
       {
         "id": "shaynegostisbehere_car",
@@ -642,6 +642,15 @@
         "pun": "Vejmelka's Fantasy Fortress"
       },
       {
+        "id": "carterhart_vgk",
+        "first": "Carter",
+        "last": "Hart",
+        "team": "VGK",
+        "pos": "G",
+        "pts": 3,
+        "pun": "In Hart We Trust"
+      },
+      {
         "id": "arturssilovs_pit",
         "first": "Arturs",
         "last": "Silovs",
@@ -676,15 +685,6 @@
         "pos": "G",
         "pts": 3,
         "pun": "Devon Vibes Only"
-      },
-      {
-        "id": "loganthompson_wsh",
-        "first": "Logan",
-        "last": "Thompson",
-        "team": "WSH",
-        "pos": "G",
-        "pts": 3,
-        "pun": "Logan Thompson's Run"
       }
     ]
   },
@@ -744,6 +744,15 @@
         "pos": "C",
         "pts": 5,
         "pun": "MacK Attack"
+      },
+      {
+        "id": "mikaelgranlund_ana",
+        "first": "Mikael",
+        "last": "Granlund",
+        "team": "ANA",
+        "pos": "C",
+        "pts": 5,
+        "pun": "Bill Simmons’ Granlund"
       },
       {
         "id": "loganstankoven_car",
@@ -816,15 +825,6 @@
         "pos": "C",
         "pts": 3,
         "pun": "Guentzel's Fantasy Fortress"
-      },
-      {
-        "id": "shanepinto_ott",
-        "first": "Shane",
-        "last": "Pinto",
-        "team": "OTT",
-        "pos": "C",
-        "pts": 3,
-        "pun": "Pork and Pinto Beans"
       }
     ],
     "LW": [
@@ -1011,6 +1011,15 @@
         "pun": "Blake's Fantasy Fortress"
       },
       {
+        "id": "markstone_vgk",
+        "first": "Mark",
+        "last": "Stone",
+        "team": "VGK",
+        "pos": "RW",
+        "pts": 5,
+        "pun": "The Mark Stone Masons"
+      },
+      {
         "id": "drakebatherson_ott",
         "first": "Drake",
         "last": "Batherson",
@@ -1074,13 +1083,13 @@
         "pun": "Natural Born Keller"
       },
       {
-        "id": "markstone_vgk",
-        "first": "Mark",
-        "last": "Stone",
+        "id": "mitchmarner_vgk",
+        "first": "Mitch",
+        "last": "Marner",
         "team": "VGK",
         "pos": "RW",
         "pts": 3,
-        "pun": "The Mark Stone Masons"
+        "pun": "Marner's Farm"
       },
       {
         "id": "kaapokakko_sea",
@@ -1090,15 +1099,6 @@
         "pos": "RW",
         "pts": 3,
         "pun": "Polly Want a Kaapo Kakko"
-      },
-      {
-        "id": "pontusholmberg_tbl",
-        "first": "Pontus",
-        "last": "Holmberg",
-        "team": "TBL",
-        "pos": "RW",
-        "pts": 2,
-        "pun": "Holmberg's Fantasy Fortress"
       }
     ],
     "D": [
@@ -1220,6 +1220,15 @@
         "pun": "Toews Me Bro"
       },
       {
+        "id": "jacksonlacombe_ana",
+        "first": "Jackson",
+        "last": "LaCombe",
+        "team": "ANA",
+        "pos": "D",
+        "pts": 3,
+        "pun": "LaCombe Your Hair"
+      },
+      {
         "id": "maxcrozier_tbl",
         "first": "Max",
         "last": "Crozier",
@@ -1272,15 +1281,6 @@
         "pos": "D",
         "pts": 2,
         "pun": "In Girard We Trust"
-      },
-      {
-        "id": "erikkarlsson_pit",
-        "first": "Erik",
-        "last": "Karlsson",
-        "team": "PIT",
-        "pos": "D",
-        "pts": 2,
-        "pun": "Karlsson's Fantasy Fortress"
       }
     ],
     "G": [
