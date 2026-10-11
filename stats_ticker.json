@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-11T21:10:25.732Z",
+  "generatedAt": "2026-10-11T21:29:29.208Z",
   "season": "2026",
   "week": 5,
   "thisWeek": {
@@ -259,6 +259,15 @@
         "pun": "Taylor-Made"
       },
       {
+        "id": "christianmccaffrey_sf",
+        "first": "Christian",
+        "last": "McCaffrey",
+        "team": "SF",
+        "pos": "RB",
+        "pts": 11.1,
+        "pun": "Run CMC"
+      },
+      {
         "id": "ashtonjeanty_lv",
         "first": "Ashton",
         "last": "Jeanty",
@@ -282,17 +291,8 @@
         "last": "Dobbins",
         "team": "DEN",
         "pos": "RB",
-        "pts": 9.4,
+        "pts": 9.7,
         "pun": "LOL JK"
-      },
-      {
-        "id": "emanuelwilson_sea",
-        "first": "Emanuel",
-        "last": "Wilson",
-        "team": "SEA",
-        "pos": "RB",
-        "pts": 9.4,
-        "pun": "WILSON!🏐"
       },
       {
         "id": "kendremiller_no",
@@ -587,6 +587,15 @@
         "pun": "This is Your Final Warren"
       },
       {
+        "id": "samlaporta_det",
+        "first": "Sam",
+        "last": "LaPorta",
+        "team": "DET",
+        "pos": "TE",
+        "pts": 15.1,
+        "pun": "Sam LaPorta Potty"
+      },
+      {
         "id": "brentonstrange_jac",
         "first": "Brenton",
         "last": "Strange",
@@ -648,15 +657,6 @@
         "pos": "TE",
         "pts": 9.7,
         "pun": "Dulcich-A-Palooza"
-      },
-      {
-        "id": "gavinbartholomew_min",
-        "first": "Gavin",
-        "last": "Bartholomew",
-        "team": "MIN",
-        "pos": "TE",
-        "pts": 8.3,
-        "pun": "The Bartholomew Show"
       }
     ],
     "K": [
@@ -769,7 +769,7 @@
         "last": "Purdy",
         "team": "SF",
         "pos": "QB",
-        "pts": 106.6,
+        "pts": 107.5,
         "pun": "Purdy Good Team"
       },
       {
@@ -818,6 +818,15 @@
         "pun": "Come and Get Your Love"
       },
       {
+        "id": "jaredgoff_det",
+        "first": "Jared",
+        "last": "Goff",
+        "team": "DET",
+        "pos": "QB",
+        "pts": 92.8,
+        "pun": "I'm About To Go Goff"
+      },
+      {
         "id": "bryceyoung_car",
         "first": "Bryce",
         "last": "Young",
@@ -852,15 +861,6 @@
         "pos": "QB",
         "pts": 89.2,
         "pun": "Loud and Stroud"
-      },
-      {
-        "id": "aaronrodgers_pit",
-        "first": "Aaron",
-        "last": "Rodgers",
-        "team": "PIT",
-        "pos": "QB",
-        "pts": 87.2,
-        "pun": "Mr. Rodgers' Neighborhood"
       }
     ],
     "RB": [
@@ -937,6 +937,15 @@
         "pun": "Williams-Sonoma Touchdowns"
       },
       {
+        "id": "christianmccaffrey_sf",
+        "first": "Christian",
+        "last": "McCaffrey",
+        "team": "SF",
+        "pos": "RB",
+        "pts": 85.1,
+        "pun": "Run CMC"
+      },
+      {
         "id": "ashtonjeanty_lv",
         "first": "Ashton",
         "last": "Jeanty",
@@ -971,15 +980,6 @@
         "pos": "RB",
         "pts": 78.7,
         "pun": "Bucky Beaver Dam"
-      },
-      {
-        "id": "christianmccaffrey_sf",
-        "first": "Christian",
-        "last": "McCaffrey",
-        "team": "SF",
-        "pos": "RB",
-        "pts": 75.7,
-        "pun": "Run CMC"
       },
       {
         "id": "aaronjonessr_min",
@@ -1088,7 +1088,7 @@
         "last": "Smith-Njigba",
         "team": "SEA",
         "pos": "WR",
-        "pts": 124.1,
+        "pts": 123.1,
         "pun": "I'm Sorry Ms. Jaxon"
       },
       {
@@ -1263,6 +1263,15 @@
         "pun": "Finding Deebo"
       },
       {
+        "id": "michaelwilson_ari",
+        "first": "Michael",
+        "last": "Wilson",
+        "team": "ARI",
+        "pos": "WR",
+        "pts": 60,
+        "pun": "WILSON!🏐"
+      },
+      {
         "id": "mikeevans_sf",
         "first": "Mike",
         "last": "Evans",
@@ -1270,15 +1279,6 @@
         "pos": "WR",
         "pts": 59.8,
         "pun": "7th Evans"
-      },
-      {
-        "id": "michaelwilson_ari",
-        "first": "Michael",
-        "last": "Wilson",
-        "team": "ARI",
-        "pos": "WR",
-        "pts": 58.9,
-        "pun": "WILSON!🏐"
       },
       {
         "id": "drakelondon_atl",
@@ -1308,6 +1308,15 @@
         "pos": "TE",
         "pts": 85.4,
         "pun": "Isaiah & Chill"
+      },
+      {
+        "id": "samlaporta_det",
+        "first": "Sam",
+        "last": "LaPorta",
+        "team": "DET",
+        "pos": "TE",
+        "pts": 71.9,
+        "pun": "Sam LaPorta Potty"
       },
       {
         "id": "treymcbride_ari",
@@ -1362,15 +1371,6 @@
         "pos": "TE",
         "pts": 60.3,
         "pun": "The Muth Is Luth"
-      },
-      {
-        "id": "samlaporta_det",
-        "first": "Sam",
-        "last": "LaPorta",
-        "team": "DET",
-        "pos": "TE",
-        "pts": 59,
-        "pun": "Sam LaPorta Potty"
       },
       {
         "id": "traviskelce_kc",
