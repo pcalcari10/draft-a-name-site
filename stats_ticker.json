@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-11T22:29:22.888Z",
+  "generatedAt": "2026-10-11T22:48:00.255Z",
   "season": "2026",
   "week": 5,
   "thisWeek": {
@@ -21,6 +21,15 @@
         "pos": "QB",
         "pts": 32.3,
         "pun": "Jayden Daniels' Tennessee Whiskey"
+      },
+      {
+        "id": "jaredgoff_det",
+        "first": "Jared",
+        "last": "Goff",
+        "team": "DET",
+        "pos": "QB",
+        "pts": 27.4,
+        "pun": "I'm About To Go Goff"
       },
       {
         "id": "jameiswinston_nyg",
@@ -86,15 +95,6 @@
         "pun": "Willis-A-Palooza"
       },
       {
-        "id": "jaredgoff_det",
-        "first": "Jared",
-        "last": "Goff",
-        "team": "DET",
-        "pos": "QB",
-        "pts": 19.5,
-        "pun": "I'm About To Go Goff"
-      },
-      {
         "id": "kylermurray_min",
         "first": "Kyler",
         "last": "Murray",
@@ -104,13 +104,13 @@
         "pun": "Natural Born Kylers"
       },
       {
-        "id": "dakprescott_dal",
-        "first": "Dak",
-        "last": "Prescott",
-        "team": "DAL",
+        "id": "jacobybrissett_ari",
+        "first": "Jacoby",
+        "last": "Brissett",
+        "team": "ARI",
         "pos": "QB",
-        "pts": 14.6,
-        "pun": "The Boys Are Dak In Town"
+        "pts": 16.9,
+        "pun": "Livin' on a Brissett"
       }
     ],
     "RB": [
@@ -138,7 +138,7 @@
         "last": "Gibbs",
         "team": "DET",
         "pos": "RB",
-        "pts": 22.9,
+        "pts": 27.6,
         "pun": "Baby Back Gibbs"
       },
       {
@@ -228,7 +228,7 @@
         "last": "Vidal",
         "team": "LAC",
         "pos": "RB",
-        "pts": 12.5,
+        "pts": 12.6,
         "pun": "Kimani & Chill"
       },
       {
@@ -246,8 +246,17 @@
         "last": "McCaffrey",
         "team": "SF",
         "pos": "RB",
-        "pts": 11.7,
+        "pts": 12.1,
         "pun": "Run CMC"
+      },
+      {
+        "id": "emanuelwilson_sea",
+        "first": "Emanuel",
+        "last": "Wilson",
+        "team": "SEA",
+        "pos": "RB",
+        "pts": 11.7,
+        "pun": "WILSON!🏐"
       },
       {
         "id": "bhayshultuten_jac",
@@ -268,6 +277,15 @@
         "pun": "Dylan Vibes Only"
       },
       {
+        "id": "jkdobbins_den",
+        "first": "J.K.",
+        "last": "Dobbins",
+        "team": "DEN",
+        "pos": "RB",
+        "pts": 11.3,
+        "pun": "LOL JK"
+      },
+      {
         "id": "jonathantaylor_ind",
         "first": "Jonathan",
         "last": "Taylor",
@@ -277,15 +295,6 @@
         "pun": "Taylor-Made"
       },
       {
-        "id": "emanuelwilson_sea",
-        "first": "Emanuel",
-        "last": "Wilson",
-        "team": "SEA",
-        "pos": "RB",
-        "pts": 10.8,
-        "pun": "WILSON!🏐"
-      },
-      {
         "id": "ashtonjeanty_lv",
         "first": "Ashton",
         "last": "Jeanty",
@@ -293,15 +302,6 @@
         "pos": "RB",
         "pts": 10.7,
         "pun": "Fire and Ashton"
-      },
-      {
-        "id": "jkdobbins_den",
-        "first": "J.K.",
-        "last": "Dobbins",
-        "team": "DEN",
-        "pos": "RB",
-        "pts": 10,
-        "pun": "LOL JK"
       },
       {
         "id": "tyjaespears_ten",
@@ -432,6 +432,15 @@
         "pun": "Read Egbuka"
       },
       {
+        "id": "jaxonsmithnjigba_sea",
+        "first": "Jaxon",
+        "last": "Smith-Njigba",
+        "team": "SEA",
+        "pos": "WR",
+        "pts": 16.4,
+        "pun": "I'm Sorry Ms. Jaxon"
+      },
+      {
         "id": "jaylinnoel_hou",
         "first": "Jaylin",
         "last": "Noel",
@@ -538,15 +547,6 @@
         "pos": "WR",
         "pts": 10.9,
         "pun": "Straight Outta Chism"
-      },
-      {
-        "id": "nicocollins_hou",
-        "first": "Nico",
-        "last": "Collins",
-        "team": "HOU",
-        "pos": "WR",
-        "pts": 10.6,
-        "pun": "Nico Suave"
       }
     ],
     "TE": [
@@ -594,6 +594,15 @@
         "pos": "TE",
         "pts": 16.9,
         "pun": "Sam LaPorta Potty"
+      },
+      {
+        "id": "teaganquitoriano_ari",
+        "first": "Teagan",
+        "last": "Quitoriano",
+        "team": "ARI",
+        "pos": "TE",
+        "pts": 15.5,
+        "pun": "Quitoriano'd Up and Ready"
       },
       {
         "id": "brentonstrange_jac",
@@ -648,15 +657,6 @@
         "pos": "TE",
         "pts": 9.8,
         "pun": "The Goedert, the Bad, and the Ugly"
-      },
-      {
-        "id": "gregdulcich_mia",
-        "first": "Greg",
-        "last": "Dulcich",
-        "team": "MIA",
-        "pos": "TE",
-        "pts": 9.7,
-        "pun": "Dulcich-A-Palooza"
       }
     ],
     "K": [
@@ -688,6 +688,15 @@
         "pun": "Reichard Happens"
       },
       {
+        "id": "jasonmyers_sea",
+        "first": "Jason",
+        "last": "Myers",
+        "team": "SEA",
+        "pos": "K",
+        "pts": 15,
+        "pun": "All Myers, No Filler"
+      },
+      {
         "id": "chrisboswell_pit",
         "first": "Chris",
         "last": "Boswell",
@@ -697,21 +706,12 @@
         "pun": "Chris & Chill"
       },
       {
-        "id": "jasonmyers_sea",
-        "first": "Jason",
-        "last": "Myers",
-        "team": "SEA",
-        "pos": "K",
-        "pts": 10,
-        "pun": "All Myers, No Filler"
-      },
-      {
         "id": "jakebates_det",
         "first": "Jake",
         "last": "Bates",
         "team": "DET",
         "pos": "K",
-        "pts": 8,
+        "pts": 9,
         "pun": "All Bates, No Filler"
       },
       {
@@ -764,22 +764,22 @@
         "pun": "Quit Joshin' Around"
       },
       {
-        "id": "brockpurdy_sf",
-        "first": "Brock",
-        "last": "Purdy",
-        "team": "SF",
-        "pos": "QB",
-        "pts": 108.9,
-        "pun": "Purdy Good Team"
-      },
-      {
         "id": "jaredgoff_det",
         "first": "Jared",
         "last": "Goff",
         "team": "DET",
         "pos": "QB",
-        "pts": 105.5,
+        "pts": 113.4,
         "pun": "I'm About To Go Goff"
+      },
+      {
+        "id": "brockpurdy_sf",
+        "first": "Brock",
+        "last": "Purdy",
+        "team": "SF",
+        "pos": "QB",
+        "pts": 108.4,
+        "pun": "Purdy Good Team"
       },
       {
         "id": "joeburrow_cin",
@@ -870,7 +870,7 @@
         "last": "Gibbs",
         "team": "DET",
         "pos": "RB",
-        "pts": 138.9,
+        "pts": 143.6,
         "pun": "Baby Back Gibbs"
       },
       {
@@ -942,7 +942,7 @@
         "last": "McCaffrey",
         "team": "SF",
         "pos": "RB",
-        "pts": 85.7,
+        "pts": 86.1,
         "pun": "Run CMC"
       },
       {
@@ -1077,7 +1077,7 @@
         "last": "Wilson",
         "team": "SEA",
         "pos": "RB",
-        "pts": 48.7,
+        "pts": 49.6,
         "pun": "WILSON!🏐"
       }
     ],
@@ -1088,7 +1088,7 @@
         "last": "Smith-Njigba",
         "team": "SEA",
         "pos": "WR",
-        "pts": 124.5,
+        "pts": 133.1,
         "pun": "I'm Sorry Ms. Jaxon"
       },
       {
@@ -1110,6 +1110,15 @@
         "pun": "Elementary, My Dear Watson"
       },
       {
+        "id": "amonrastbrown_det",
+        "first": "Amon-Ra",
+        "last": "St. Brown",
+        "team": "DET",
+        "pos": "WR",
+        "pts": 100.2,
+        "pun": "Amon Joy"
+      },
+      {
         "id": "chrisolave_no",
         "first": "Chris",
         "last": "Olave",
@@ -1117,15 +1126,6 @@
         "pos": "WR",
         "pts": 98.7,
         "pun": "Olave Oil"
-      },
-      {
-        "id": "amonrastbrown_det",
-        "first": "Amon-Ra",
-        "last": "St. Brown",
-        "team": "DET",
-        "pos": "WR",
-        "pts": 95.5,
-        "pun": "Amon Joy"
       },
       {
         "id": "garrettwilson_nyj",
@@ -1263,15 +1263,6 @@
         "pun": "Nico Suave"
       },
       {
-        "id": "deebosamuelsr_sf",
-        "first": "Deebo",
-        "last": "Samuel",
-        "team": "SF",
-        "pos": "WR",
-        "pts": 62.4,
-        "pun": "Finding Deebo"
-      },
-      {
         "id": "devaughnvele_no",
         "first": "Devaughn",
         "last": "Vele",
@@ -1279,6 +1270,15 @@
         "pos": "WR",
         "pts": 62.2,
         "pun": "Devaughn Vibes Only"
+      },
+      {
+        "id": "deebosamuelsr_sf",
+        "first": "Deebo",
+        "last": "Samuel",
+        "team": "SF",
+        "pos": "WR",
+        "pts": 60.5,
+        "pun": "Finding Deebo"
       },
       {
         "id": "jamesonwilliams_det",
@@ -1310,6 +1310,15 @@
         "pun": "Isaiah & Chill"
       },
       {
+        "id": "treymcbride_ari",
+        "first": "Trey",
+        "last": "McBride",
+        "team": "ARI",
+        "pos": "TE",
+        "pts": 77.6,
+        "pun": "50 Shades of Trey"
+      },
+      {
         "id": "samlaporta_det",
         "first": "Sam",
         "last": "LaPorta",
@@ -1317,15 +1326,6 @@
         "pos": "TE",
         "pts": 73.7,
         "pun": "Sam LaPorta Potty"
-      },
-      {
-        "id": "treymcbride_ari",
-        "first": "Trey",
-        "last": "McBride",
-        "team": "ARI",
-        "pos": "TE",
-        "pts": 71.3,
-        "pun": "50 Shades of Trey"
       },
       {
         "id": "brockbowers_lv",
@@ -1351,7 +1351,7 @@
         "last": "Kittle",
         "team": "SF",
         "pos": "TE",
-        "pts": 65.9,
+        "pts": 69.1,
         "pun": "Kittle Big Town"
       },
       {
@@ -1470,7 +1470,7 @@
         "last": "Bates",
         "team": "DET",
         "pos": "K",
-        "pts": 47,
+        "pts": 48,
         "pun": "All Bates, No Filler"
       },
       {
@@ -1492,13 +1492,13 @@
         "pun": "Andre's Excellent Adventure"
       },
       {
-        "id": "brandonaubrey_dal",
-        "first": "Brandon",
-        "last": "Aubrey",
-        "team": "DAL",
+        "id": "jasonmyers_sea",
+        "first": "Jason",
+        "last": "Myers",
+        "team": "SEA",
         "pos": "K",
-        "pts": 42,
-        "pun": "Aubrey'd Up and Ready"
+        "pts": 43,
+        "pun": "All Myers, No Filler"
       }
     ]
   }
