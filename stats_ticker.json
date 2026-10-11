@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-11T20:29:48.892Z",
+  "generatedAt": "2026-10-11T20:48:06.239Z",
   "season": "2026",
   "week": 5,
   "thisWeek": {
@@ -19,8 +19,17 @@
         "last": "Daniels",
         "team": "WAS",
         "pos": "QB",
-        "pts": 29.2,
+        "pts": 32.3,
         "pun": "Jayden Daniels' Tennessee Whiskey"
+      },
+      {
+        "id": "jameiswinston_nyg",
+        "first": "Jameis",
+        "last": "Winston",
+        "team": "NYG",
+        "pos": "QB",
+        "pts": 25.7,
+        "pun": "Winston's Fantasy Fortress"
       },
       {
         "id": "jordanlove_gb",
@@ -39,15 +48,6 @@
         "pos": "QB",
         "pts": 24.6,
         "pun": "Beg, Burrow, and Steal"
-      },
-      {
-        "id": "jameiswinston_nyg",
-        "first": "Jameis",
-        "last": "Winston",
-        "team": "NYG",
-        "pos": "QB",
-        "pts": 24.4,
-        "pun": "Winston's Fantasy Fortress"
       },
       {
         "id": "trevorlawrence_jac",
@@ -268,6 +268,15 @@
         "pun": "Brittnae Spears"
       },
       {
+        "id": "emanuelwilson_sea",
+        "first": "Emanuel",
+        "last": "Wilson",
+        "team": "SEA",
+        "pos": "RB",
+        "pts": 9.3,
+        "pun": "WILSON!🏐"
+      },
+      {
         "id": "kendremiller_no",
         "first": "Kendre",
         "last": "Miller",
@@ -309,17 +318,8 @@
         "last": "Dobbins",
         "team": "DEN",
         "pos": "RB",
-        "pts": 7.8,
+        "pts": 7.9,
         "pun": "LOL JK"
-      },
-      {
-        "id": "chasebrown_cin",
-        "first": "Chase",
-        "last": "Brown",
-        "team": "CIN",
-        "pos": "RB",
-        "pts": 7,
-        "pun": "High-Speed Chase"
       },
       {
         "id": "camskattebo_nyg",
@@ -327,7 +327,7 @@
         "last": "Skattebo",
         "team": "NYG",
         "pos": "RB",
-        "pts": 5.8,
+        "pts": 7.1,
         "pun": "The Skattebo Express"
       }
     ],
@@ -351,6 +351,15 @@
         "pun": "Washington Wizards"
       },
       {
+        "id": "maliknabers_nyg",
+        "first": "Malik",
+        "last": "Nabers",
+        "team": "NYG",
+        "pos": "WR",
+        "pts": 29.1,
+        "pun": "Love thy Nabers"
+      },
+      {
         "id": "georgepickens_dal",
         "first": "George",
         "last": "Pickens",
@@ -367,15 +376,6 @@
         "pos": "WR",
         "pts": 23.4,
         "pun": "WILSON!🏐"
-      },
-      {
-        "id": "maliknabers_nyg",
-        "first": "Malik",
-        "last": "Nabers",
-        "team": "NYG",
-        "pos": "WR",
-        "pts": 22.7,
-        "pun": "Love thy Nabers"
       },
       {
         "id": "demariodouglas_ne",
@@ -459,6 +459,15 @@
         "pun": "Finding the Denzone"
       },
       {
+        "id": "terrymclaurin_was",
+        "first": "Terry",
+        "last": "McLaurin",
+        "team": "WAS",
+        "pos": "WR",
+        "pts": 12.2,
+        "pun": "McLaurin F1"
+      },
+      {
         "id": "malikwashington_mia",
         "first": "Malik",
         "last": "Washington",
@@ -538,15 +547,6 @@
         "pos": "WR",
         "pts": 10.4,
         "pun": "Bond'd Up and Ready"
-      },
-      {
-        "id": "terrymclaurin_was",
-        "first": "Terry",
-        "last": "McLaurin",
-        "team": "WAS",
-        "pos": "WR",
-        "pts": 9.6,
-        "pun": "McLaurin F1"
       }
     ],
     "TE": [
@@ -764,6 +764,15 @@
         "pun": "Quit Joshin' Around"
       },
       {
+        "id": "brockpurdy_sf",
+        "first": "Brock",
+        "last": "Purdy",
+        "team": "SF",
+        "pos": "QB",
+        "pts": 106.1,
+        "pun": "Purdy Good Team"
+      },
+      {
         "id": "joeburrow_cin",
         "first": "Joe",
         "last": "Burrow",
@@ -771,15 +780,6 @@
         "pos": "QB",
         "pts": 104.2,
         "pun": "Beg, Burrow, and Steal"
-      },
-      {
-        "id": "brockpurdy_sf",
-        "first": "Brock",
-        "last": "Purdy",
-        "team": "SF",
-        "pos": "QB",
-        "pts": 101.5,
-        "pun": "Purdy Good Team"
       },
       {
         "id": "dakprescott_dal",
@@ -870,7 +870,7 @@
         "last": "Gibbs",
         "team": "DET",
         "pos": "RB",
-        "pts": 116.4,
+        "pts": 118,
         "pun": "Baby Back Gibbs"
       },
       {
@@ -978,7 +978,7 @@
         "last": "McCaffrey",
         "team": "SF",
         "pos": "RB",
-        "pts": 74.8,
+        "pts": 75.2,
         "pun": "Run CMC"
       },
       {
@@ -1050,7 +1050,7 @@
         "last": "Skattebo",
         "team": "NYG",
         "pos": "RB",
-        "pts": 50,
+        "pts": 51.3,
         "pun": "The Skattebo Express"
       },
       {
@@ -1059,7 +1059,7 @@
         "last": "Love",
         "team": "ARI",
         "pos": "RB",
-        "pts": 48.9,
+        "pts": 50.1,
         "pun": "Come and Get Your Love"
       },
       {
@@ -1182,6 +1182,15 @@
         "pun": "The Tet Offensive"
       },
       {
+        "id": "maliknabers_nyg",
+        "first": "Malik",
+        "last": "Nabers",
+        "team": "NYG",
+        "pos": "WR",
+        "pts": 73.9,
+        "pun": "Love thy Nabers"
+      },
+      {
         "id": "davanteadams_lar",
         "first": "Davante",
         "last": "Adams",
@@ -1207,15 +1216,6 @@
         "pos": "WR",
         "pts": 68.5,
         "pun": "Slim Pickens"
-      },
-      {
-        "id": "maliknabers_nyg",
-        "first": "Malik",
-        "last": "Nabers",
-        "team": "NYG",
-        "pos": "WR",
-        "pts": 67.5,
-        "pun": "Love thy Nabers"
       },
       {
         "id": "zayflowers_bal",
@@ -1254,6 +1254,24 @@
         "pun": "Devaughn Vibes Only"
       },
       {
+        "id": "mikeevans_sf",
+        "first": "Mike",
+        "last": "Evans",
+        "team": "SF",
+        "pos": "WR",
+        "pts": 59.8,
+        "pun": "7th Evans"
+      },
+      {
+        "id": "michaelwilson_ari",
+        "first": "Michael",
+        "last": "Wilson",
+        "team": "ARI",
+        "pos": "WR",
+        "pts": 58.9,
+        "pun": "WILSON!🏐"
+      },
+      {
         "id": "deebosamuelsr_sf",
         "first": "Deebo",
         "last": "Samuel",
@@ -1272,15 +1290,6 @@
         "pun": "Drake London Calling"
       },
       {
-        "id": "michaelwilson_ari",
-        "first": "Michael",
-        "last": "Wilson",
-        "team": "ARI",
-        "pos": "WR",
-        "pts": 56.8,
-        "pun": "WILSON!🏐"
-      },
-      {
         "id": "lutherburdeniii_chi",
         "first": "Luther",
         "last": "Burden",
@@ -1288,15 +1297,6 @@
         "pos": "WR",
         "pts": 55.8,
         "pun": "Un-Burden Me"
-      },
-      {
-        "id": "emekaegbuka_tb",
-        "first": "Emeka",
-        "last": "Egbuka",
-        "team": "TB",
-        "pos": "WR",
-        "pts": 53.3,
-        "pun": "Read Egbuka"
       }
     ],
     "TE": [
@@ -1308,6 +1308,15 @@
         "pos": "TE",
         "pts": 85.4,
         "pun": "Isaiah & Chill"
+      },
+      {
+        "id": "treymcbride_ari",
+        "first": "Trey",
+        "last": "McBride",
+        "team": "ARI",
+        "pos": "TE",
+        "pts": 71.3,
+        "pun": "50 Shades of Trey"
       },
       {
         "id": "brockbowers_lv",
@@ -1326,15 +1335,6 @@
         "pos": "TE",
         "pts": 69.9,
         "pun": "This is Your Final Warren"
-      },
-      {
-        "id": "treymcbride_ari",
-        "first": "Trey",
-        "last": "McBride",
-        "team": "ARI",
-        "pos": "TE",
-        "pts": 69.2,
-        "pun": "50 Shades of Trey"
       },
       {
         "id": "juwanjohnson_no",
