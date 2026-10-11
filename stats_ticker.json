@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-11T20:48:06.239Z",
+  "generatedAt": "2026-10-11T21:10:25.732Z",
   "season": "2026",
   "week": 5,
   "thisWeek": {
@@ -223,6 +223,15 @@
         "pun": "Marks-tastic Voyage"
       },
       {
+        "id": "jahmyrgibbs_det",
+        "first": "Jahmyr",
+        "last": "Gibbs",
+        "team": "DET",
+        "pos": "RB",
+        "pts": 11.9,
+        "pun": "Baby Back Gibbs"
+      },
+      {
         "id": "bhayshultuten_jac",
         "first": "Bhayshul",
         "last": "Tuten",
@@ -268,12 +277,21 @@
         "pun": "Brittnae Spears"
       },
       {
+        "id": "jkdobbins_den",
+        "first": "J.K.",
+        "last": "Dobbins",
+        "team": "DEN",
+        "pos": "RB",
+        "pts": 9.4,
+        "pun": "LOL JK"
+      },
+      {
         "id": "emanuelwilson_sea",
         "first": "Emanuel",
         "last": "Wilson",
         "team": "SEA",
         "pos": "RB",
-        "pts": 9.3,
+        "pts": 9.4,
         "pun": "WILSON!🏐"
       },
       {
@@ -311,24 +329,6 @@
         "pos": "RB",
         "pts": 8,
         "pun": "Quinshon & Chill"
-      },
-      {
-        "id": "jkdobbins_den",
-        "first": "J.K.",
-        "last": "Dobbins",
-        "team": "DEN",
-        "pos": "RB",
-        "pts": 7.9,
-        "pun": "LOL JK"
-      },
-      {
-        "id": "camskattebo_nyg",
-        "first": "Cam",
-        "last": "Skattebo",
-        "team": "NYG",
-        "pos": "RB",
-        "pts": 7.1,
-        "pun": "The Skattebo Express"
       }
     ],
     "WR": [
@@ -473,7 +473,7 @@
         "last": "Washington",
         "team": "MIA",
         "pos": "WR",
-        "pts": 12.2,
+        "pts": 12.1,
         "pun": "Washington Wizards"
       },
       {
@@ -646,7 +646,7 @@
         "last": "Dulcich",
         "team": "MIA",
         "pos": "TE",
-        "pts": 9.6,
+        "pts": 9.7,
         "pun": "Dulcich-A-Palooza"
       },
       {
@@ -769,7 +769,7 @@
         "last": "Purdy",
         "team": "SF",
         "pos": "QB",
-        "pts": 106.1,
+        "pts": 106.6,
         "pun": "Purdy Good Team"
       },
       {
@@ -870,7 +870,7 @@
         "last": "Gibbs",
         "team": "DET",
         "pos": "RB",
-        "pts": 118,
+        "pts": 127.9,
         "pun": "Baby Back Gibbs"
       },
       {
@@ -978,7 +978,7 @@
         "last": "McCaffrey",
         "team": "SF",
         "pos": "RB",
-        "pts": 75.2,
+        "pts": 75.7,
         "pun": "Run CMC"
       },
       {
@@ -1059,7 +1059,7 @@
         "last": "Love",
         "team": "ARI",
         "pos": "RB",
-        "pts": 50.1,
+        "pts": 50.9,
         "pun": "Come and Get Your Love"
       },
       {
@@ -1072,13 +1072,13 @@
         "pun": "Robinson's Revenge"
       },
       {
-        "id": "olliegordonii_mia",
-        "first": "Ollie",
-        "last": "Gordon",
-        "team": "MIA",
+        "id": "omarionhampton_lac",
+        "first": "Omarion",
+        "last": "Hampton",
+        "team": "LAC",
         "pos": "RB",
-        "pts": 48,
-        "pun": "The Gordon Show"
+        "pts": 48.1,
+        "pun": "I Got This Icebox Where My Heart Used To Be"
       }
     ],
     "WR": [
@@ -1088,7 +1088,7 @@
         "last": "Smith-Njigba",
         "team": "SEA",
         "pos": "WR",
-        "pts": 116.7,
+        "pts": 124.1,
         "pun": "I'm Sorry Ms. Jaxon"
       },
       {
@@ -1254,6 +1254,15 @@
         "pun": "Devaughn Vibes Only"
       },
       {
+        "id": "deebosamuelsr_sf",
+        "first": "Deebo",
+        "last": "Samuel",
+        "team": "SF",
+        "pos": "WR",
+        "pts": 60.7,
+        "pun": "Finding Deebo"
+      },
+      {
         "id": "mikeevans_sf",
         "first": "Mike",
         "last": "Evans",
@@ -1270,15 +1279,6 @@
         "pos": "WR",
         "pts": 58.9,
         "pun": "WILSON!🏐"
-      },
-      {
-        "id": "deebosamuelsr_sf",
-        "first": "Deebo",
-        "last": "Samuel",
-        "team": "SF",
-        "pos": "WR",
-        "pts": 57.9,
-        "pun": "Finding Deebo"
       },
       {
         "id": "drakelondon_atl",
@@ -1369,7 +1369,7 @@
         "last": "LaPorta",
         "team": "DET",
         "pos": "TE",
-        "pts": 56.8,
+        "pts": 59,
         "pun": "Sam LaPorta Potty"
       },
       {
