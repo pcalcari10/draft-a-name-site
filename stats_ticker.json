@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-11T21:29:29.208Z",
+  "generatedAt": "2026-10-11T21:48:09.005Z",
   "season": "2026",
   "week": 5,
   "thisWeek": {
@@ -151,6 +151,15 @@
         "pun": "I'm Allen Ears"
       },
       {
+        "id": "jahmyrgibbs_det",
+        "first": "Jahmyr",
+        "last": "Gibbs",
+        "team": "DET",
+        "pos": "RB",
+        "pts": 18,
+        "pun": "Baby Back Gibbs"
+      },
+      {
         "id": "rhamondrestevenson_ne",
         "first": "Rhamondre",
         "last": "Stevenson",
@@ -221,15 +230,6 @@
         "pos": "RB",
         "pts": 12.5,
         "pun": "Marks-tastic Voyage"
-      },
-      {
-        "id": "jahmyrgibbs_det",
-        "first": "Jahmyr",
-        "last": "Gibbs",
-        "team": "DET",
-        "pos": "RB",
-        "pts": 11.9,
-        "pun": "Baby Back Gibbs"
       },
       {
         "id": "bhayshultuten_jac",
@@ -313,6 +313,15 @@
         "pun": "In Johnson We Trust"
       },
       {
+        "id": "emanuelwilson_sea",
+        "first": "Emanuel",
+        "last": "Wilson",
+        "team": "SEA",
+        "pos": "RB",
+        "pts": 8.5,
+        "pun": "WILSON!🏐"
+      },
+      {
         "id": "willshipley_phi",
         "first": "Will",
         "last": "Shipley",
@@ -320,15 +329,6 @@
         "pos": "RB",
         "pts": 8.3,
         "pun": "Shipley'd Up and Ready"
-      },
-      {
-        "id": "quinshonjudkins_cle",
-        "first": "Quinshon",
-        "last": "Judkins",
-        "team": "CLE",
-        "pos": "RB",
-        "pts": 8,
-        "pun": "Quinshon & Chill"
       }
     ],
     "WR": [
@@ -459,6 +459,15 @@
         "pun": "Finding the Denzone"
       },
       {
+        "id": "mikeevans_sf",
+        "first": "Mike",
+        "last": "Evans",
+        "team": "SF",
+        "pos": "WR",
+        "pts": 12.8,
+        "pun": "7th Evans"
+      },
+      {
         "id": "terrymclaurin_was",
         "first": "Terry",
         "last": "McLaurin",
@@ -538,15 +547,6 @@
         "pos": "WR",
         "pts": 10.5,
         "pun": "Starsky & Hutchinson"
-      },
-      {
-        "id": "isaiahbond_cle",
-        "first": "Isaiah",
-        "last": "Bond",
-        "team": "CLE",
-        "pos": "WR",
-        "pts": 10.4,
-        "pun": "Bond'd Up and Ready"
       }
     ],
     "TE": [
@@ -697,6 +697,15 @@
         "pun": "Chris & Chill"
       },
       {
+        "id": "jasonmyers_sea",
+        "first": "Jason",
+        "last": "Myers",
+        "team": "SEA",
+        "pos": "K",
+        "pts": 10,
+        "pun": "All Myers, No Filler"
+      },
+      {
         "id": "camlittle_jac",
         "first": "Cam",
         "last": "Little",
@@ -740,15 +749,6 @@
         "pos": "K",
         "pts": 6,
         "pun": "All Elliott, No Filler"
-      },
-      {
-        "id": "andreszmyt_cle",
-        "first": "Andre",
-        "last": "Szmyt",
-        "team": "CLE",
-        "pos": "K",
-        "pts": 6,
-        "pun": "Andre's Excellent Adventure"
       }
     ]
   },
@@ -769,7 +769,7 @@
         "last": "Purdy",
         "team": "SF",
         "pos": "QB",
-        "pts": 107.5,
+        "pts": 108.4,
         "pun": "Purdy Good Team"
       },
       {
@@ -780,6 +780,15 @@
         "pos": "QB",
         "pts": 104.2,
         "pun": "Beg, Burrow, and Steal"
+      },
+      {
+        "id": "jaredgoff_det",
+        "first": "Jared",
+        "last": "Goff",
+        "team": "DET",
+        "pos": "QB",
+        "pts": 98.6,
+        "pun": "I'm About To Go Goff"
       },
       {
         "id": "dakprescott_dal",
@@ -816,15 +825,6 @@
         "pos": "QB",
         "pts": 93.1,
         "pun": "Come and Get Your Love"
-      },
-      {
-        "id": "jaredgoff_det",
-        "first": "Jared",
-        "last": "Goff",
-        "team": "DET",
-        "pos": "QB",
-        "pts": 92.8,
-        "pun": "I'm About To Go Goff"
       },
       {
         "id": "bryceyoung_car",
@@ -870,7 +870,7 @@
         "last": "Gibbs",
         "team": "DET",
         "pos": "RB",
-        "pts": 127.9,
+        "pts": 134,
         "pun": "Baby Back Gibbs"
       },
       {
@@ -1045,6 +1045,15 @@
         "pun": "Quinshon & Chill"
       },
       {
+        "id": "jeremiyahlove_ari",
+        "first": "Jeremiyah",
+        "last": "Love",
+        "team": "ARI",
+        "pos": "RB",
+        "pts": 51.7,
+        "pun": "Come and Get Your Love"
+      },
+      {
         "id": "camskattebo_nyg",
         "first": "Cam",
         "last": "Skattebo",
@@ -1052,15 +1061,6 @@
         "pos": "RB",
         "pts": 51.3,
         "pun": "The Skattebo Express"
-      },
-      {
-        "id": "jeremiyahlove_ari",
-        "first": "Jeremiyah",
-        "last": "Love",
-        "team": "ARI",
-        "pos": "RB",
-        "pts": 50.9,
-        "pun": "Come and Get Your Love"
       },
       {
         "id": "brianrobinsonjr_atl",
@@ -1088,7 +1088,7 @@
         "last": "Smith-Njigba",
         "team": "SEA",
         "pos": "WR",
-        "pts": 123.1,
+        "pts": 124.5,
         "pun": "I'm Sorry Ms. Jaxon"
       },
       {
@@ -1124,7 +1124,7 @@
         "last": "St. Brown",
         "team": "DET",
         "pos": "WR",
-        "pts": 91.3,
+        "pts": 92.6,
         "pun": "Amon Joy"
       },
       {
@@ -1236,6 +1236,15 @@
         "pun": "Carry On, My Wayward Jefferson"
       },
       {
+        "id": "mikeevans_sf",
+        "first": "Mike",
+        "last": "Evans",
+        "team": "SF",
+        "pos": "WR",
+        "pts": 63.1,
+        "pun": "7th Evans"
+      },
+      {
         "id": "nicocollins_hou",
         "first": "Nico",
         "last": "Collins",
@@ -1270,15 +1279,6 @@
         "pos": "WR",
         "pts": 60,
         "pun": "WILSON!🏐"
-      },
-      {
-        "id": "mikeevans_sf",
-        "first": "Mike",
-        "last": "Evans",
-        "team": "SF",
-        "pos": "WR",
-        "pts": 59.8,
-        "pun": "7th Evans"
       },
       {
         "id": "drakelondon_atl",
@@ -1492,13 +1492,13 @@
         "pun": "Aubrey'd Up and Ready"
       },
       {
-        "id": "chrisboswell_pit",
-        "first": "Chris",
-        "last": "Boswell",
-        "team": "PIT",
+        "id": "jakebates_det",
+        "first": "Jake",
+        "last": "Bates",
+        "team": "DET",
         "pos": "K",
-        "pts": 41,
-        "pun": "Chris & Chill"
+        "pts": 42,
+        "pun": "All Bates, No Filler"
       }
     ]
   }
