@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-11T20:11:28.072Z",
+  "generatedAt": "2026-10-11T20:29:48.892Z",
   "season": "2026",
   "week": 5,
   "thisWeek": {
@@ -19,7 +19,7 @@
         "last": "Daniels",
         "team": "WAS",
         "pos": "QB",
-        "pts": 28.7,
+        "pts": 29.2,
         "pun": "Jayden Daniels' Tennessee Whiskey"
       },
       {
@@ -37,8 +37,17 @@
         "last": "Burrow",
         "team": "CIN",
         "pos": "QB",
-        "pts": 24.8,
+        "pts": 24.6,
         "pun": "Beg, Burrow, and Steal"
+      },
+      {
+        "id": "jameiswinston_nyg",
+        "first": "Jameis",
+        "last": "Winston",
+        "team": "NYG",
+        "pos": "QB",
+        "pts": 24.4,
+        "pun": "Winston's Fantasy Fortress"
       },
       {
         "id": "trevorlawrence_jac",
@@ -48,15 +57,6 @@
         "pos": "QB",
         "pts": 22.7,
         "pun": "Long Arm of the Lawrence"
-      },
-      {
-        "id": "jameiswinston_nyg",
-        "first": "Jameis",
-        "last": "Winston",
-        "team": "NYG",
-        "pos": "QB",
-        "pts": 22.6,
-        "pun": "Winston's Fantasy Fortress"
       },
       {
         "id": "aaronrodgers_pit",
@@ -104,13 +104,13 @@
         "pun": "The Boys Are Dak In Town"
       },
       {
-        "id": "deshaunwatson_cle",
-        "first": "Deshaun",
-        "last": "Watson",
-        "team": "CLE",
+        "id": "jalondaniels_tb",
+        "first": "Jalon",
+        "last": "Daniels",
+        "team": "TB",
         "pos": "QB",
-        "pts": 14.2,
-        "pun": "Watson Clinic"
+        "pts": 13.9,
+        "pun": "Daniels' Dominators"
       }
     ],
     "RB": [
@@ -304,6 +304,15 @@
         "pun": "Quinshon & Chill"
       },
       {
+        "id": "jkdobbins_den",
+        "first": "J.K.",
+        "last": "Dobbins",
+        "team": "DEN",
+        "pos": "RB",
+        "pts": 7.8,
+        "pun": "LOL JK"
+      },
+      {
         "id": "chasebrown_cin",
         "first": "Chase",
         "last": "Brown",
@@ -313,22 +322,13 @@
         "pun": "High-Speed Chase"
       },
       {
-        "id": "tonypollard_ten",
-        "first": "Tony",
-        "last": "Pollard",
-        "team": "TEN",
-        "pos": "RB",
-        "pts": 5.2,
-        "pun": "The Pollard Express"
-      },
-      {
-        "id": "tyronetracyjr_nyg",
-        "first": "Tyrone",
-        "last": "Tracy",
+        "id": "camskattebo_nyg",
+        "first": "Cam",
+        "last": "Skattebo",
         "team": "NYG",
         "pos": "RB",
-        "pts": 5.1,
-        "pun": "Tyrone Vibes Only"
+        "pts": 5.8,
+        "pun": "The Skattebo Express"
       }
     ],
     "WR": [
@@ -556,7 +556,7 @@
         "last": "Likely",
         "team": "NYG",
         "pos": "TE",
-        "pts": 31.2,
+        "pts": 32.4,
         "pun": "Isaiah & Chill"
       },
       {
@@ -769,7 +769,7 @@
         "last": "Burrow",
         "team": "CIN",
         "pos": "QB",
-        "pts": 104.4,
+        "pts": 104.2,
         "pun": "Beg, Burrow, and Steal"
       },
       {
@@ -870,7 +870,7 @@
         "last": "Gibbs",
         "team": "DET",
         "pos": "RB",
-        "pts": 116,
+        "pts": 116.4,
         "pun": "Baby Back Gibbs"
       },
       {
@@ -978,7 +978,7 @@
         "last": "McCaffrey",
         "team": "SF",
         "pos": "RB",
-        "pts": 74,
+        "pts": 74.8,
         "pun": "Run CMC"
       },
       {
@@ -1045,6 +1045,15 @@
         "pun": "Quinshon & Chill"
       },
       {
+        "id": "camskattebo_nyg",
+        "first": "Cam",
+        "last": "Skattebo",
+        "team": "NYG",
+        "pos": "RB",
+        "pts": 50,
+        "pun": "The Skattebo Express"
+      },
+      {
         "id": "jeremiyahlove_ari",
         "first": "Jeremiyah",
         "last": "Love",
@@ -1061,15 +1070,6 @@
         "pos": "RB",
         "pts": 48.5,
         "pun": "Robinson's Revenge"
-      },
-      {
-        "id": "camskattebo_nyg",
-        "first": "Cam",
-        "last": "Skattebo",
-        "team": "NYG",
-        "pos": "RB",
-        "pts": 48.3,
-        "pun": "The Skattebo Express"
       },
       {
         "id": "olliegordonii_mia",
@@ -1306,7 +1306,7 @@
         "last": "Likely",
         "team": "NYG",
         "pos": "TE",
-        "pts": 84.2,
+        "pts": 85.4,
         "pun": "Isaiah & Chill"
       },
       {
