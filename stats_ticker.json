@@ -1,9 +1,18 @@
 {
-  "generatedAt": "2026-10-11T16:29:23.155Z",
+  "generatedAt": "2026-10-11T16:48:10.074Z",
   "season": "2026",
   "week": 5,
   "thisWeek": {
     "QB": [
+      {
+        "id": "trevorlawrence_jac",
+        "first": "Trevor",
+        "last": "Lawrence",
+        "team": "JAC",
+        "pos": "QB",
+        "pts": 16.9,
+        "pun": "Long Arm of the Lawrence"
+      },
       {
         "id": "dakprescott_dal",
         "first": "Dak",
@@ -21,15 +30,6 @@
         "pos": "QB",
         "pts": 13.9,
         "pun": "Daniels' Dominators"
-      },
-      {
-        "id": "trevorlawrence_jac",
-        "first": "Trevor",
-        "last": "Lawrence",
-        "team": "JAC",
-        "pos": "QB",
-        "pts": 13.3,
-        "pun": "Long Arm of the Lawrence"
       },
       {
         "id": "jalenhurts_phi",
@@ -61,6 +61,15 @@
         "pun": "One In a Williams"
       },
       {
+        "id": "bhayshultuten_jac",
+        "first": "Bhayshul",
+        "last": "Tuten",
+        "team": "JAC",
+        "pos": "RB",
+        "pts": 10.3,
+        "pun": "King Tuten-khamun"
+      },
+      {
         "id": "willshipley_phi",
         "first": "Will",
         "last": "Shipley",
@@ -70,21 +79,12 @@
         "pun": "Shipley'd Up and Ready"
       },
       {
-        "id": "bhayshultuten_jac",
-        "first": "Bhayshul",
-        "last": "Tuten",
-        "team": "JAC",
-        "pos": "RB",
-        "pts": 8.1,
-        "pun": "King Tuten-khamun"
-      },
-      {
         "id": "dameonpierce_phi",
         "first": "Dameon",
         "last": "Pierce",
         "team": "PHI",
         "pos": "RB",
-        "pts": 3.4,
+        "pts": 3.5,
         "pun": "Pierce-tastic Voyage"
       },
       {
@@ -117,6 +117,15 @@
         "pun": "Slim Pickens"
       },
       {
+        "id": "parkerwashington_jac",
+        "first": "Parker",
+        "last": "Washington",
+        "team": "JAC",
+        "pos": "WR",
+        "pts": 20.7,
+        "pun": "Washington Wizards"
+      },
+      {
         "id": "emekaegbuka_tb",
         "first": "Emeka",
         "last": "Egbuka",
@@ -124,15 +133,6 @@
         "pos": "WR",
         "pts": 17.2,
         "pun": "Read Egbuka"
-      },
-      {
-        "id": "parkerwashington_jac",
-        "first": "Parker",
-        "last": "Washington",
-        "team": "JAC",
-        "pos": "WR",
-        "pts": 16.4,
-        "pun": "Washington Wizards"
       },
       {
         "id": "dariuscooper_phi",
@@ -250,7 +250,7 @@
         "last": "Strange",
         "team": "JAC",
         "pos": "TE",
-        "pts": 10.1,
+        "pts": 13.8,
         "pun": "Brenton's Excellent Adventure"
       },
       {
@@ -413,6 +413,15 @@
         "pun": "Sherlock Mahomes"
       },
       {
+        "id": "trevorlawrence_jac",
+        "first": "Trevor",
+        "last": "Lawrence",
+        "team": "JAC",
+        "pos": "QB",
+        "pts": 84,
+        "pun": "Long Arm of the Lawrence"
+      },
+      {
         "id": "kirkcousins_lv",
         "first": "Kirk",
         "last": "Cousins",
@@ -429,15 +438,6 @@
         "pos": "QB",
         "pts": 81.3,
         "pun": "Hurts So Good"
-      },
-      {
-        "id": "trevorlawrence_jac",
-        "first": "Trevor",
-        "last": "Lawrence",
-        "team": "JAC",
-        "pos": "QB",
-        "pts": 80.4,
-        "pun": "Long Arm of the Lawrence"
       },
       {
         "id": "lamarjackson_bal",
@@ -582,7 +582,7 @@
         "last": "Tuten",
         "team": "JAC",
         "pos": "RB",
-        "pts": 60.2,
+        "pts": 62.4,
         "pun": "King Tuten-khamun"
       },
       {
@@ -741,6 +741,15 @@
         "pun": "Davante's Inferno"
       },
       {
+        "id": "parkerwashington_jac",
+        "first": "Parker",
+        "last": "Washington",
+        "team": "JAC",
+        "pos": "WR",
+        "pts": 71.8,
+        "pun": "Washington Wizards"
+      },
+      {
         "id": "teehiggins_cin",
         "first": "Tee",
         "last": "Higgins",
@@ -757,15 +766,6 @@
         "pos": "WR",
         "pts": 68.5,
         "pun": "Slim Pickens"
-      },
-      {
-        "id": "parkerwashington_jac",
-        "first": "Parker",
-        "last": "Washington",
-        "team": "JAC",
-        "pos": "WR",
-        "pts": 67.5,
-        "pun": "Washington Wizards"
       },
       {
         "id": "zayflowers_bal",
@@ -950,6 +950,15 @@
         "pun": "Truth & Kelcequences"
       },
       {
+        "id": "brentonstrange_jac",
+        "first": "Brenton",
+        "last": "Strange",
+        "team": "JAC",
+        "pos": "TE",
+        "pts": 50.5,
+        "pun": "Brenton's Excellent Adventure"
+      },
+      {
         "id": "haroldfanninjr_cle",
         "first": "Harold",
         "last": "Fannin",
@@ -984,15 +993,6 @@
         "pos": "TE",
         "pts": 47.5,
         "pun": "Hockenson Loogies"
-      },
-      {
-        "id": "brentonstrange_jac",
-        "first": "Brenton",
-        "last": "Strange",
-        "team": "JAC",
-        "pos": "TE",
-        "pts": 46.8,
-        "pun": "Brenton's Excellent Adventure"
       },
       {
         "id": "daltonkincaid_buf",
