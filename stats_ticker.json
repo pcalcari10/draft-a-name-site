@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-11T16:10:09.084Z",
+  "generatedAt": "2026-10-11T16:29:23.155Z",
   "season": "2026",
   "week": 5,
   "thisWeek": {
@@ -37,7 +37,7 @@
         "last": "Hurts",
         "team": "PHI",
         "pos": "QB",
-        "pts": 10.4,
+        "pts": 11.3,
         "pun": "Hurts So Good"
       }
     ],
@@ -75,7 +75,7 @@
         "last": "Tuten",
         "team": "JAC",
         "pos": "RB",
-        "pts": 6.6,
+        "pts": 8.1,
         "pun": "King Tuten-khamun"
       },
       {
@@ -84,7 +84,7 @@
         "last": "Pierce",
         "team": "PHI",
         "pos": "RB",
-        "pts": 4.3,
+        "pts": 3.4,
         "pun": "Pierce-tastic Voyage"
       },
       {
@@ -140,7 +140,7 @@
         "last": "Cooper",
         "team": "PHI",
         "pos": "WR",
-        "pts": 13.2,
+        "pts": 15.2,
         "pun": "Cooper'd Up and Ready"
       },
       {
@@ -160,6 +160,15 @@
         "pos": "WR",
         "pts": 7.7,
         "pun": "Don Wick"
+      },
+      {
+        "id": "makailemon_phi",
+        "first": "Makai",
+        "last": "Lemon",
+        "team": "PHI",
+        "pos": "WR",
+        "pts": 7.6,
+        "pun": "Livin' on a Lemon"
       },
       {
         "id": "tezjohnson_tb",
@@ -187,15 +196,6 @@
         "pos": "WR",
         "pts": 7,
         "pun": "God, I Need a Win"
-      },
-      {
-        "id": "makailemon_phi",
-        "first": "Makai",
-        "last": "Lemon",
-        "team": "PHI",
-        "pos": "WR",
-        "pts": 4.8,
-        "pun": "Livin' on a Lemon"
       },
       {
         "id": "jonathanmingo_dal",
@@ -427,7 +427,7 @@
         "last": "Hurts",
         "team": "PHI",
         "pos": "QB",
-        "pts": 80.4,
+        "pts": 81.3,
         "pun": "Hurts So Good"
       },
       {
@@ -577,6 +577,15 @@
         "pun": "50 Shades of D'Andre"
       },
       {
+        "id": "bhayshultuten_jac",
+        "first": "Bhayshul",
+        "last": "Tuten",
+        "team": "JAC",
+        "pos": "RB",
+        "pts": 60.2,
+        "pun": "King Tuten-khamun"
+      },
+      {
         "id": "kylemonangai_chi",
         "first": "Kyle",
         "last": "Monangai",
@@ -584,15 +593,6 @@
         "pos": "RB",
         "pts": 59.3,
         "pun": "Kyle Monangai and the Fantasy Machine"
-      },
-      {
-        "id": "bhayshultuten_jac",
-        "first": "Bhayshul",
-        "last": "Tuten",
-        "team": "JAC",
-        "pos": "RB",
-        "pts": 58.7,
-        "pun": "King Tuten-khamun"
       },
       {
         "id": "chasebrown_cin",
