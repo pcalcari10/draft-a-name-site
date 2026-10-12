@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-12T03:06:05.137Z",
+  "generatedAt": "2026-10-12T03:29:33.899Z",
   "season": "2026",
   "week": 5,
   "thisWeek": {
@@ -160,6 +160,15 @@
         "pun": "I'm Allen Ears"
       },
       {
+        "id": "derrickhenry_bal",
+        "first": "Derrick",
+        "last": "Henry",
+        "team": "BAL",
+        "pos": "RB",
+        "pts": 17.8,
+        "pun": "King Henry's Court"
+      },
+      {
         "id": "rhamondrestevenson_ne",
         "first": "Rhamondre",
         "last": "Stevenson",
@@ -196,15 +205,6 @@
         "pun": "Beast Mode 2.0"
       },
       {
-        "id": "derrickhenry_bal",
-        "first": "Derrick",
-        "last": "Henry",
-        "team": "BAL",
-        "pos": "RB",
-        "pts": 15.8,
-        "pun": "King Henry's Court"
-      },
-      {
         "id": "samajeperine_cin",
         "first": "Samaje",
         "last": "Perine",
@@ -212,6 +212,15 @@
         "pos": "RB",
         "pts": 15.8,
         "pun": "Perine-A-Palooza"
+      },
+      {
+        "id": "bijanrobinson_atl",
+        "first": "Bijan",
+        "last": "Robinson",
+        "team": "ATL",
+        "pos": "RB",
+        "pts": 15.8,
+        "pun": "To Infinity and Bijan"
       },
       {
         "id": "jkdobbins_den",
@@ -248,15 +257,6 @@
         "pos": "RB",
         "pts": 14.2,
         "pun": "Bill, The Running Back Guy"
-      },
-      {
-        "id": "bijanrobinson_atl",
-        "first": "Bijan",
-        "last": "Robinson",
-        "team": "ATL",
-        "pos": "RB",
-        "pts": 13.4,
-        "pun": "To Infinity and Bijan"
       },
       {
         "id": "emanuelwilson_sea",
@@ -879,7 +879,7 @@
         "last": "Robinson",
         "team": "ATL",
         "pos": "RB",
-        "pts": 118.8,
+        "pts": 121.2,
         "pun": "To Infinity and Bijan"
       },
       {
@@ -897,7 +897,7 @@
         "last": "Henry",
         "team": "BAL",
         "pos": "RB",
-        "pts": 106.6,
+        "pts": 108.6,
         "pun": "King Henry's Court"
       },
       {
@@ -1155,6 +1155,15 @@
         "pun": "Ja'Marrvelous"
       },
       {
+        "id": "zayflowers_bal",
+        "first": "Zay",
+        "last": "Flowers",
+        "team": "BAL",
+        "pos": "WR",
+        "pts": 79.1,
+        "pun": "Whatcha Zay?"
+      },
+      {
         "id": "matthewgolden_gb",
         "first": "Matthew",
         "last": "Golden",
@@ -1162,15 +1171,6 @@
         "pos": "WR",
         "pts": 78.3,
         "pun": "Golden Goose"
-      },
-      {
-        "id": "zayflowers_bal",
-        "first": "Zay",
-        "last": "Flowers",
-        "team": "BAL",
-        "pos": "WR",
-        "pts": 77.7,
-        "pun": "Whatcha Zay?"
       },
       {
         "id": "mikeevans_sf",
