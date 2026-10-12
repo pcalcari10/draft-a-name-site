@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-12T01:04:04.522Z",
+  "generatedAt": "2026-10-12T01:28:46.181Z",
   "season": "2026",
   "week": 5,
   "thisWeek": {
@@ -733,6 +733,15 @@
         "pun": "Cam's Excellent Adventure"
       },
       {
+        "id": "tylerloop_bal",
+        "first": "Tyler",
+        "last": "Loop",
+        "team": "BAL",
+        "pos": "K",
+        "pts": 8,
+        "pun": "Jumping Through Loops"
+      },
+      {
         "id": "jasonsanders_nyj",
         "first": "Jason",
         "last": "Sanders",
@@ -740,15 +749,6 @@
         "pos": "K",
         "pts": 7,
         "pun": "Livin' on a Sanders"
-      },
-      {
-        "id": "chasemclaughlin_tb",
-        "first": "Chase",
-        "last": "McLaughlin",
-        "team": "TB",
-        "pos": "K",
-        "pts": 7,
-        "pun": "Livin' on a McLaughlin"
       }
     ]
   },
@@ -888,7 +888,7 @@
         "last": "Robinson",
         "team": "ATL",
         "pos": "RB",
-        "pts": 108.1,
+        "pts": 109.6,
         "pun": "To Infinity and Bijan"
       },
       {
@@ -901,6 +901,15 @@
         "pun": "Taylor-Made"
       },
       {
+        "id": "derrickhenry_bal",
+        "first": "Derrick",
+        "last": "Henry",
+        "team": "BAL",
+        "pos": "RB",
+        "pts": 96.5,
+        "pun": "King Henry's Court"
+      },
+      {
         "id": "javontewilliams_dal",
         "first": "Javonte",
         "last": "Williams",
@@ -908,15 +917,6 @@
         "pos": "RB",
         "pts": 96,
         "pun": "One In a Williams"
-      },
-      {
-        "id": "derrickhenry_bal",
-        "first": "Derrick",
-        "last": "Henry",
-        "team": "BAL",
-        "pos": "RB",
-        "pts": 95.7,
-        "pun": "King Henry's Court"
       },
       {
         "id": "jaylenwarren_pit",
@@ -1272,6 +1272,15 @@
         "pun": "Devaughn Vibes Only"
       },
       {
+        "id": "drakelondon_atl",
+        "first": "Drake",
+        "last": "London",
+        "team": "ATL",
+        "pos": "WR",
+        "pts": 60.9,
+        "pun": "Drake London Calling"
+      },
+      {
         "id": "deebosamuelsr_sf",
         "first": "Deebo",
         "last": "Samuel",
@@ -1288,15 +1297,6 @@
         "pos": "WR",
         "pts": 57.6,
         "pun": "Bottle of Jameson"
-      },
-      {
-        "id": "drakelondon_atl",
-        "first": "Drake",
-        "last": "London",
-        "team": "ATL",
-        "pos": "WR",
-        "pts": 57.4,
-        "pun": "Drake London Calling"
       }
     ],
     "TE": [
@@ -1483,6 +1483,15 @@
         "pun": "Livin' on a McLaughlin"
       },
       {
+        "id": "tylerloop_bal",
+        "first": "Tyler",
+        "last": "Loop",
+        "team": "BAL",
+        "pos": "K",
+        "pts": 46,
+        "pun": "Jumping Through Loops"
+      },
+      {
         "id": "camlittle_jac",
         "first": "Cam",
         "last": "Little",
@@ -1490,15 +1499,6 @@
         "pos": "K",
         "pts": 45,
         "pun": "Cam's Excellent Adventure"
-      },
-      {
-        "id": "andreszmyt_cle",
-        "first": "Andre",
-        "last": "Szmyt",
-        "team": "CLE",
-        "pos": "K",
-        "pts": 44,
-        "pun": "Andre's Excellent Adventure"
       }
     ]
   }
