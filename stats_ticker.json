@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-12T02:45:45.125Z",
+  "generatedAt": "2026-10-12T03:06:05.137Z",
   "season": "2026",
   "week": 5,
   "thisWeek": {
@@ -196,6 +196,15 @@
         "pun": "Beast Mode 2.0"
       },
       {
+        "id": "derrickhenry_bal",
+        "first": "Derrick",
+        "last": "Henry",
+        "team": "BAL",
+        "pos": "RB",
+        "pts": 15.8,
+        "pun": "King Henry's Court"
+      },
+      {
         "id": "samajeperine_cin",
         "first": "Samaje",
         "last": "Perine",
@@ -212,15 +221,6 @@
         "pos": "RB",
         "pts": 15.4,
         "pun": "LOL JK"
-      },
-      {
-        "id": "derrickhenry_bal",
-        "first": "Derrick",
-        "last": "Henry",
-        "team": "BAL",
-        "pos": "RB",
-        "pts": 15.2,
-        "pun": "King Henry's Court"
       },
       {
         "id": "olliegordonii_mia",
@@ -250,6 +250,15 @@
         "pun": "Bill, The Running Back Guy"
       },
       {
+        "id": "bijanrobinson_atl",
+        "first": "Bijan",
+        "last": "Robinson",
+        "team": "ATL",
+        "pos": "RB",
+        "pts": 13.4,
+        "pun": "To Infinity and Bijan"
+      },
+      {
         "id": "emanuelwilson_sea",
         "first": "Emanuel",
         "last": "Wilson",
@@ -257,15 +266,6 @@
         "pos": "RB",
         "pts": 13.2,
         "pun": "WILSON!🏐"
-      },
-      {
-        "id": "bijanrobinson_atl",
-        "first": "Bijan",
-        "last": "Robinson",
-        "team": "ATL",
-        "pos": "RB",
-        "pts": 13.1,
-        "pun": "To Infinity and Bijan"
       },
       {
         "id": "kimanividal_lac",
@@ -450,6 +450,15 @@
         "pun": "Read Egbuka"
       },
       {
+        "id": "drakelondon_atl",
+        "first": "Drake",
+        "last": "London",
+        "team": "ATL",
+        "pos": "WR",
+        "pts": 15.8,
+        "pun": "Drake London Calling"
+      },
+      {
         "id": "jaylinnoel_hou",
         "first": "Jaylin",
         "last": "Noel",
@@ -538,15 +547,6 @@
         "pos": "WR",
         "pts": 12,
         "pun": "All Coleman, No Filler"
-      },
-      {
-        "id": "wandalerobinson_ten",
-        "first": "Wan'Dale",
-        "last": "Robinson",
-        "team": "TEN",
-        "pos": "WR",
-        "pts": 11.3,
-        "pun": "Robinson's Revenge"
       }
     ],
     "TE": [
@@ -715,6 +715,15 @@
         "pun": "Jumping Through Loops"
       },
       {
+        "id": "nickfolk_atl",
+        "first": "Nick",
+        "last": "Folk",
+        "team": "ATL",
+        "pos": "K",
+        "pts": 12,
+        "pun": "Folk-A-Palooza"
+      },
+      {
         "id": "willutz_den",
         "first": "Wil",
         "last": "Lutz",
@@ -740,15 +749,6 @@
         "pos": "K",
         "pts": 8,
         "pun": "Cam's Excellent Adventure"
-      },
-      {
-        "id": "jasonsanders_nyj",
-        "first": "Jason",
-        "last": "Sanders",
-        "team": "NYJ",
-        "pos": "K",
-        "pts": 7,
-        "pun": "Livin' on a Sanders"
       }
     ]
   },
@@ -879,7 +879,7 @@
         "last": "Robinson",
         "team": "ATL",
         "pos": "RB",
-        "pts": 118.5,
+        "pts": 118.8,
         "pun": "To Infinity and Bijan"
       },
       {
@@ -897,7 +897,7 @@
         "last": "Henry",
         "team": "BAL",
         "pos": "RB",
-        "pts": 106,
+        "pts": 106.6,
         "pun": "King Henry's Court"
       },
       {
@@ -1077,7 +1077,7 @@
         "last": "Robinson",
         "team": "ATL",
         "pos": "RB",
-        "pts": 49.9,
+        "pts": 50.1,
         "pun": "Robinson's Revenge"
       }
     ],
@@ -1209,6 +1209,15 @@
         "pun": "Love thy Nabers"
       },
       {
+        "id": "drakelondon_atl",
+        "first": "Drake",
+        "last": "London",
+        "team": "ATL",
+        "pos": "WR",
+        "pts": 73.2,
+        "pun": "Drake London Calling"
+      },
+      {
         "id": "davanteadams_lar",
         "first": "Davante",
         "last": "Adams",
@@ -1225,15 +1234,6 @@
         "pos": "WR",
         "pts": 69,
         "pun": "Finding the Denzone"
-      },
-      {
-        "id": "drakelondon_atl",
-        "first": "Drake",
-        "last": "London",
-        "team": "ATL",
-        "pos": "WR",
-        "pts": 68.5,
-        "pun": "Drake London Calling"
       },
       {
         "id": "georgepickens_dal",
