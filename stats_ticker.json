@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-12T02:27:55.260Z",
+  "generatedAt": "2026-10-12T02:45:45.125Z",
   "season": "2026",
   "week": 5,
   "thisWeek": {
@@ -219,7 +219,7 @@
         "last": "Henry",
         "team": "BAL",
         "pos": "RB",
-        "pts": 14.8,
+        "pts": 15.2,
         "pun": "King Henry's Court"
       },
       {
@@ -264,7 +264,7 @@
         "last": "Robinson",
         "team": "ATL",
         "pos": "RB",
-        "pts": 12.9,
+        "pts": 13.1,
         "pun": "To Infinity and Bijan"
       },
       {
@@ -614,6 +614,15 @@
         "pun": "Quitoriano'd Up and Ready"
       },
       {
+        "id": "kylepittssr_atl",
+        "first": "Kyle",
+        "last": "Pitts",
+        "team": "ATL",
+        "pos": "TE",
+        "pts": 15.2,
+        "pun": "Pitts & Giggles"
+      },
+      {
         "id": "brentonstrange_jac",
         "first": "Brenton",
         "last": "Strange",
@@ -630,15 +639,6 @@
         "pos": "TE",
         "pts": 13.4,
         "pun": "Henry's Bulldozers"
-      },
-      {
-        "id": "kylepittssr_atl",
-        "first": "Kyle",
-        "last": "Pitts",
-        "team": "ATL",
-        "pos": "TE",
-        "pts": 12.1,
-        "pun": "Pitts & Giggles"
       },
       {
         "id": "tuckerkraft_gb",
@@ -879,7 +879,7 @@
         "last": "Robinson",
         "team": "ATL",
         "pos": "RB",
-        "pts": 118.3,
+        "pts": 118.5,
         "pun": "To Infinity and Bijan"
       },
       {
@@ -897,7 +897,7 @@
         "last": "Henry",
         "team": "BAL",
         "pos": "RB",
-        "pts": 105.6,
+        "pts": 106,
         "pun": "King Henry's Court"
       },
       {
@@ -1072,13 +1072,13 @@
         "pun": "WILSON!🏐"
       },
       {
-        "id": "omarionhampton_lac",
-        "first": "Omarion",
-        "last": "Hampton",
-        "team": "LAC",
+        "id": "brianrobinsonjr_atl",
+        "first": "Brian",
+        "last": "Robinson",
+        "team": "ATL",
         "pos": "RB",
-        "pts": 49.6,
-        "pun": "I Got This Icebox Where My Heart Used To Be"
+        "pts": 49.9,
+        "pun": "Robinson's Revenge"
       }
     ],
     "WR": [
@@ -1227,6 +1227,15 @@
         "pun": "Finding the Denzone"
       },
       {
+        "id": "drakelondon_atl",
+        "first": "Drake",
+        "last": "London",
+        "team": "ATL",
+        "pos": "WR",
+        "pts": 68.5,
+        "pun": "Drake London Calling"
+      },
+      {
         "id": "georgepickens_dal",
         "first": "George",
         "last": "Pickens",
@@ -1270,15 +1279,6 @@
         "pos": "WR",
         "pts": 62.2,
         "pun": "Devaughn Vibes Only"
-      },
-      {
-        "id": "drakelondon_atl",
-        "first": "Drake",
-        "last": "London",
-        "team": "ATL",
-        "pos": "WR",
-        "pts": 60.9,
-        "pun": "Drake London Calling"
       },
       {
         "id": "deebosamuelsr_sf",
