@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-13T02:58:30.576Z",
+  "generatedAt": "2026-10-13T03:18:21.884Z",
   "season": "2026",
   "week": 5,
   "thisWeek": {
@@ -41,6 +41,15 @@
         "pun": "Livin' on a Brissett"
       },
       {
+        "id": "joshallen_buf",
+        "first": "Josh",
+        "last": "Allen",
+        "team": "BUF",
+        "pos": "QB",
+        "pts": 26,
+        "pun": "Quit Joshin' Around"
+      },
+      {
         "id": "jameiswinston_nyg",
         "first": "Jameis",
         "last": "Winston",
@@ -77,6 +86,15 @@
         "pun": "Straight Outta Huntley"
       },
       {
+        "id": "matthewstafford_lar",
+        "first": "Matthew",
+        "last": "Stafford",
+        "team": "LAR",
+        "pos": "QB",
+        "pts": 23.7,
+        "pun": "Stafford Infection"
+      },
+      {
         "id": "trevorlawrence_jac",
         "first": "Trevor",
         "last": "Lawrence",
@@ -93,24 +111,6 @@
         "pos": "QB",
         "pts": 22,
         "pun": "Mr. Rodgers' Neighborhood"
-      },
-      {
-        "id": "joshallen_buf",
-        "first": "Josh",
-        "last": "Allen",
-        "team": "BUF",
-        "pos": "QB",
-        "pts": 21.5,
-        "pun": "Quit Joshin' Around"
-      },
-      {
-        "id": "cjstroud_hou",
-        "first": "C.J.",
-        "last": "Stroud",
-        "team": "HOU",
-        "pos": "QB",
-        "pts": 20.9,
-        "pun": "Loud and Stroud"
       }
     ],
     "RB": [
@@ -140,6 +140,15 @@
         "pos": "RB",
         "pts": 31.5,
         "pun": "Bucky Beaver Dam"
+      },
+      {
+        "id": "jamescookiii_buf",
+        "first": "James",
+        "last": "Cook",
+        "team": "BUF",
+        "pos": "RB",
+        "pts": 24.2,
+        "pun": "James Cooked"
       },
       {
         "id": "derrickhenry_bal",
@@ -194,15 +203,6 @@
         "pos": "RB",
         "pts": 17.3,
         "pun": "50 Shades of D'Andre"
-      },
-      {
-        "id": "jamescookiii_buf",
-        "first": "James",
-        "last": "Cook",
-        "team": "BUF",
-        "pos": "RB",
-        "pts": 16.7,
-        "pun": "James Cooked"
       },
       {
         "id": "marshawnlloyd_gb",
@@ -432,6 +432,15 @@
         "pun": "Ja'Marrvelous"
       },
       {
+        "id": "davanteadams_lar",
+        "first": "Davante",
+        "last": "Adams",
+        "team": "LAR",
+        "pos": "WR",
+        "pts": 19.6,
+        "pun": "Davante's Inferno"
+      },
+      {
         "id": "justinjefferson_min",
         "first": "Justin",
         "last": "Jefferson",
@@ -538,15 +547,6 @@
         "pos": "WR",
         "pts": 12.1,
         "pun": "Washington Wizards"
-      },
-      {
-        "id": "kendrickbourne_ari",
-        "first": "Kendrick",
-        "last": "Bourne",
-        "team": "ARI",
-        "pos": "WR",
-        "pts": 12,
-        "pun": "Bourne in the USA"
       }
     ],
     "TE": [
@@ -742,13 +742,13 @@
         "pun": "All Bates, No Filler"
       },
       {
-        "id": "camlittle_jac",
-        "first": "Cam",
-        "last": "Little",
-        "team": "JAC",
+        "id": "tylerbass_buf",
+        "first": "Tyler",
+        "last": "Bass",
+        "team": "BUF",
         "pos": "K",
         "pts": 8,
-        "pun": "Cam's Excellent Adventure"
+        "pun": "Bass-A-Palooza"
       }
     ]
   },
@@ -760,7 +760,7 @@
         "last": "Allen",
         "team": "BUF",
         "pos": "QB",
-        "pts": 136.9,
+        "pts": 141.4,
         "pun": "Quit Joshin' Around"
       },
       {
@@ -836,6 +836,15 @@
         "pun": "The Bryce Is Right"
       },
       {
+        "id": "matthewstafford_lar",
+        "first": "Matthew",
+        "last": "Stafford",
+        "team": "LAR",
+        "pos": "QB",
+        "pts": 91.4,
+        "pun": "Stafford Infection"
+      },
+      {
         "id": "tylershough_no",
         "first": "Tyler",
         "last": "Shough",
@@ -852,15 +861,6 @@
         "pos": "QB",
         "pts": 89.9,
         "pun": "Long Arm of the Lawrence"
-      },
-      {
-        "id": "jacobybrissett_ari",
-        "first": "Jacoby",
-        "last": "Brissett",
-        "team": "ARI",
-        "pos": "QB",
-        "pts": 89.3,
-        "pun": "Livin' on a Brissett"
       }
     ],
     "RB": [
@@ -906,7 +906,7 @@
         "last": "Williams",
         "team": "LAR",
         "pos": "RB",
-        "pts": 98.2,
+        "pts": 99.7,
         "pun": "Williams-Sonoma Touchdowns"
       },
       {
@@ -946,6 +946,15 @@
         "pun": "Run CMC"
       },
       {
+        "id": "jamescookiii_buf",
+        "first": "James",
+        "last": "Cook",
+        "team": "BUF",
+        "pos": "RB",
+        "pts": 90.7,
+        "pun": "James Cooked"
+      },
+      {
         "id": "ashtonjeanty_lv",
         "first": "Ashton",
         "last": "Jeanty",
@@ -953,15 +962,6 @@
         "pos": "RB",
         "pts": 84.6,
         "pun": "Fire and Ashton"
-      },
-      {
-        "id": "jamescookiii_buf",
-        "first": "James",
-        "last": "Cook",
-        "team": "BUF",
-        "pos": "RB",
-        "pts": 83.2,
-        "pun": "James Cooked"
       },
       {
         "id": "dandreswift_chi",
@@ -1128,6 +1128,15 @@
         "pun": "Olave Oil"
       },
       {
+        "id": "davanteadams_lar",
+        "first": "Davante",
+        "last": "Adams",
+        "team": "LAR",
+        "pos": "WR",
+        "pts": 92.6,
+        "pun": "Davante's Inferno"
+      },
+      {
         "id": "garrettwilson_nyj",
         "first": "Garrett",
         "last": "Wilson",
@@ -1135,15 +1144,6 @@
         "pos": "WR",
         "pts": 86.4,
         "pun": "WILSON!🏐"
-      },
-      {
-        "id": "davanteadams_lar",
-        "first": "Davante",
-        "last": "Adams",
-        "team": "LAR",
-        "pos": "WR",
-        "pts": 82.7,
-        "pun": "Davante's Inferno"
       },
       {
         "id": "zayflowers_bal",
