@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-13T02:34:05.736Z",
+  "generatedAt": "2026-10-13T02:58:30.576Z",
   "season": "2026",
   "week": 5,
   "thisWeek": {
@@ -95,6 +95,15 @@
         "pun": "Mr. Rodgers' Neighborhood"
       },
       {
+        "id": "joshallen_buf",
+        "first": "Josh",
+        "last": "Allen",
+        "team": "BUF",
+        "pos": "QB",
+        "pts": 21.5,
+        "pun": "Quit Joshin' Around"
+      },
+      {
         "id": "cjstroud_hou",
         "first": "C.J.",
         "last": "Stroud",
@@ -102,15 +111,6 @@
         "pos": "QB",
         "pts": 20.9,
         "pun": "Loud and Stroud"
-      },
-      {
-        "id": "malikwillis_mia",
-        "first": "Malik",
-        "last": "Willis",
-        "team": "MIA",
-        "pos": "QB",
-        "pts": 20.9,
-        "pun": "Willis-A-Palooza"
       }
     ],
     "RB": [
@@ -196,6 +196,15 @@
         "pun": "50 Shades of D'Andre"
       },
       {
+        "id": "jamescookiii_buf",
+        "first": "James",
+        "last": "Cook",
+        "team": "BUF",
+        "pos": "RB",
+        "pts": 16.7,
+        "pun": "James Cooked"
+      },
+      {
         "id": "marshawnlloyd_gb",
         "first": "MarShawn",
         "last": "Lloyd",
@@ -257,15 +266,6 @@
         "pos": "RB",
         "pts": 14.2,
         "pun": "One In a Williams"
-      },
-      {
-        "id": "jamescookiii_buf",
-        "first": "James",
-        "last": "Cook",
-        "team": "BUF",
-        "pos": "RB",
-        "pts": 14.2,
-        "pun": "James Cooked"
       },
       {
         "id": "jacorycroskeymerritt_was",
@@ -340,6 +340,15 @@
         "pos": "WR",
         "pts": 32.3,
         "pun": "Elementary, My Dear Watson"
+      },
+      {
+        "id": "pukanacua_lar",
+        "first": "Puka",
+        "last": "Nacua",
+        "team": "LAR",
+        "pos": "WR",
+        "pts": 30.5,
+        "pun": "Nacua Matata"
       },
       {
         "id": "parkerwashington_jac",
@@ -448,15 +457,6 @@
         "pos": "WR",
         "pts": 18.7,
         "pun": "Bottle of Jameson"
-      },
-      {
-        "id": "pukanacua_lar",
-        "first": "Puka",
-        "last": "Nacua",
-        "team": "LAR",
-        "pos": "WR",
-        "pts": 18.1,
-        "pun": "Nacua Matata"
       },
       {
         "id": "emekaegbuka_tb",
@@ -641,6 +641,15 @@
         "pun": "Henry's Bulldozers"
       },
       {
+        "id": "tylerhigbee_lar",
+        "first": "Tyler",
+        "last": "Higbee",
+        "team": "LAR",
+        "pos": "TE",
+        "pts": 13.3,
+        "pun": "Livin' on a Higbee"
+      },
+      {
         "id": "tuckerkraft_gb",
         "first": "Tucker",
         "last": "Kraft",
@@ -648,15 +657,6 @@
         "pos": "TE",
         "pts": 11.6,
         "pun": "Kraft Beers"
-      },
-      {
-        "id": "eliraridon_ne",
-        "first": "Eli",
-        "last": "Raridon",
-        "team": "NE",
-        "pos": "TE",
-        "pts": 10.7,
-        "pun": "Eli Vibes Only"
       }
     ],
     "K": [
@@ -760,7 +760,7 @@
         "last": "Allen",
         "team": "BUF",
         "pos": "QB",
-        "pts": 125.4,
+        "pts": 136.9,
         "pun": "Quit Joshin' Around"
       },
       {
@@ -901,6 +901,15 @@
         "pun": "Walker in the Park"
       },
       {
+        "id": "kyrenwilliams_lar",
+        "first": "Kyren",
+        "last": "Williams",
+        "team": "LAR",
+        "pos": "RB",
+        "pts": 98.2,
+        "pun": "Williams-Sonoma Touchdowns"
+      },
+      {
         "id": "jonathantaylor_ind",
         "first": "Jonathan",
         "last": "Taylor",
@@ -908,15 +917,6 @@
         "pos": "RB",
         "pts": 97.4,
         "pun": "Taylor-Made"
-      },
-      {
-        "id": "kyrenwilliams_lar",
-        "first": "Kyren",
-        "last": "Williams",
-        "team": "LAR",
-        "pos": "RB",
-        "pts": 96.5,
-        "pun": "Williams-Sonoma Touchdowns"
       },
       {
         "id": "javontewilliams_dal",
@@ -955,6 +955,15 @@
         "pun": "Fire and Ashton"
       },
       {
+        "id": "jamescookiii_buf",
+        "first": "James",
+        "last": "Cook",
+        "team": "BUF",
+        "pos": "RB",
+        "pts": 83.2,
+        "pun": "James Cooked"
+      },
+      {
         "id": "dandreswift_chi",
         "first": "D'Andre",
         "last": "Swift",
@@ -962,15 +971,6 @@
         "pos": "RB",
         "pts": 80.8,
         "pun": "50 Shades of D'Andre"
-      },
-      {
-        "id": "jamescookiii_buf",
-        "first": "James",
-        "last": "Cook",
-        "team": "BUF",
-        "pos": "RB",
-        "pts": 80.7,
-        "pun": "James Cooked"
       },
       {
         "id": "chubahubbard_car",
@@ -1227,6 +1227,15 @@
         "pun": "Love thy Nabers"
       },
       {
+        "id": "pukanacua_lar",
+        "first": "Puka",
+        "last": "Nacua",
+        "team": "LAR",
+        "pos": "WR",
+        "pts": 70.6,
+        "pun": "Nacua Matata"
+      },
+      {
         "id": "denzelboston_cle",
         "first": "Denzel",
         "last": "Boston",
@@ -1288,15 +1297,6 @@
         "pos": "WR",
         "pts": 60.4,
         "pun": "Finding Deebo"
-      },
-      {
-        "id": "pukanacua_lar",
-        "first": "Puka",
-        "last": "Nacua",
-        "team": "LAR",
-        "pos": "WR",
-        "pts": 58.2,
-        "pun": "Nacua Matata"
       }
     ],
     "TE": [
