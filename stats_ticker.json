@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-13T02:12:08.955Z",
+  "generatedAt": "2026-10-13T02:34:05.736Z",
   "season": "2026",
   "week": 5,
   "thisWeek": {
@@ -205,6 +205,15 @@
         "pun": "Beast Mode 2.0"
       },
       {
+        "id": "blakecorum_lar",
+        "first": "Blake",
+        "last": "Corum",
+        "team": "LAR",
+        "pos": "RB",
+        "pts": 16.2,
+        "pun": "Lack of de-Corum"
+      },
+      {
         "id": "samajeperine_cin",
         "first": "Samaje",
         "last": "Perine",
@@ -250,6 +259,15 @@
         "pun": "One In a Williams"
       },
       {
+        "id": "jamescookiii_buf",
+        "first": "James",
+        "last": "Cook",
+        "team": "BUF",
+        "pos": "RB",
+        "pts": 14.2,
+        "pun": "James Cooked"
+      },
+      {
         "id": "jacorycroskeymerritt_was",
         "first": "Jacory",
         "last": "Croskey-Merritt",
@@ -257,15 +275,6 @@
         "pos": "RB",
         "pts": 14.2,
         "pun": "Bill, The Running Back Guy"
-      },
-      {
-        "id": "jamescookiii_buf",
-        "first": "James",
-        "last": "Cook",
-        "team": "BUF",
-        "pos": "RB",
-        "pts": 13.6,
-        "pun": "James Cooked"
       },
       {
         "id": "emanuelwilson_sea",
@@ -293,15 +302,6 @@
         "pos": "RB",
         "pts": 12.5,
         "pun": "Marks-tastic Voyage"
-      },
-      {
-        "id": "blakecorum_lar",
-        "first": "Blake",
-        "last": "Corum",
-        "team": "LAR",
-        "pos": "RB",
-        "pts": 11.8,
-        "pun": "Lack of de-Corum"
       },
       {
         "id": "bhayshultuten_jac",
@@ -450,6 +450,15 @@
         "pun": "Bottle of Jameson"
       },
       {
+        "id": "pukanacua_lar",
+        "first": "Puka",
+        "last": "Nacua",
+        "team": "LAR",
+        "pos": "WR",
+        "pts": 18.1,
+        "pun": "Nacua Matata"
+      },
+      {
         "id": "emekaegbuka_tb",
         "first": "Emeka",
         "last": "Egbuka",
@@ -457,15 +466,6 @@
         "pos": "WR",
         "pts": 17.2,
         "pun": "Read Egbuka"
-      },
-      {
-        "id": "pukanacua_lar",
-        "first": "Puka",
-        "last": "Nacua",
-        "team": "LAR",
-        "pos": "WR",
-        "pts": 16.4,
-        "pun": "Nacua Matata"
       },
       {
         "id": "jaylinnoel_hou",
@@ -742,13 +742,13 @@
         "pun": "All Bates, No Filler"
       },
       {
-        "id": "tylerbass_buf",
-        "first": "Tyler",
-        "last": "Bass",
-        "team": "BUF",
+        "id": "camlittle_jac",
+        "first": "Cam",
+        "last": "Little",
+        "team": "JAC",
         "pos": "K",
         "pts": 8,
-        "pun": "Bass-A-Palooza"
+        "pun": "Cam's Excellent Adventure"
       }
     ]
   },
@@ -760,7 +760,7 @@
         "last": "Allen",
         "team": "BUF",
         "pos": "QB",
-        "pts": 119,
+        "pts": 125.4,
         "pun": "Quit Joshin' Around"
       },
       {
@@ -969,7 +969,7 @@
         "last": "Cook",
         "team": "BUF",
         "pos": "RB",
-        "pts": 80.1,
+        "pts": 80.7,
         "pun": "James Cooked"
       },
       {
@@ -1290,13 +1290,13 @@
         "pun": "Finding Deebo"
       },
       {
-        "id": "jamesonwilliams_det",
-        "first": "Jameson",
-        "last": "Williams",
-        "team": "DET",
+        "id": "pukanacua_lar",
+        "first": "Puka",
+        "last": "Nacua",
+        "team": "LAR",
         "pos": "WR",
-        "pts": 57.6,
-        "pun": "Bottle of Jameson"
+        "pts": 58.2,
+        "pun": "Nacua Matata"
       }
     ],
     "TE": [
