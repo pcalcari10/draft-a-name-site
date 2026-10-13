@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-13T03:06:32.528Z",
+  "generatedAt": "2026-10-13T06:11:36.631Z",
   "season": "20262027",
   "seasonTotals": {
     "C": [
@@ -146,7 +146,7 @@
         "last": "Kaprizov",
         "team": "MIN",
         "pos": "LW",
-        "pts": 8,
+        "pts": 9,
         "pun": "Kirill the Thrill"
       },
       {
@@ -395,6 +395,15 @@
         "pun": "Polly Want a Kaapo Kakko"
       },
       {
+        "id": "mitchmarner_vgk",
+        "first": "Mitch",
+        "last": "Marner",
+        "team": "VGK",
+        "pos": "RW",
+        "pts": 6,
+        "pun": "Marner's Farm"
+      },
+      {
         "id": "eastoncowan_tor",
         "first": "Easton",
         "last": "Cowan",
@@ -402,15 +411,6 @@
         "pos": "RW",
         "pts": 5,
         "pun": "Cowan's Fantasy Fortress"
-      },
-      {
-        "id": "jordaneberle_sea",
-        "first": "Jordan",
-        "last": "Eberle",
-        "team": "SEA",
-        "pos": "RW",
-        "pts": 5,
-        "pun": "Eberle and Ivory"
       }
     ],
     "D": [
@@ -422,6 +422,15 @@
         "pos": "D",
         "pts": 12,
         "pun": "Bouchard's Fantasy Fortress"
+      },
+      {
+        "id": "quinnhughes_van",
+        "first": "Quinn",
+        "last": "Hughes",
+        "team": "MIN",
+        "pos": "D",
+        "pts": 9,
+        "pun": "The Quinn Hughes Cruise Control"
       },
       {
         "id": "eliaspettersson_van2",
@@ -440,15 +449,6 @@
         "pos": "D",
         "pts": 7,
         "pun": "Makar Attacks"
-      },
-      {
-        "id": "quinnhughes_van",
-        "first": "Quinn",
-        "last": "Hughes",
-        "team": "MIN",
-        "pos": "D",
-        "pts": 7,
-        "pun": "The Quinn Hughes Cruise Control"
       },
       {
         "id": "owenpower_buf",
@@ -514,15 +514,6 @@
         "pun": "Wish You Were Here, Gostisbehere"
       },
       {
-        "id": "jaredspurgeon_min",
-        "first": "Jared",
-        "last": "Spurgeon",
-        "team": "MIN",
-        "pos": "D",
-        "pts": 5,
-        "pun": "Like A Spurgeon"
-      },
-      {
         "id": "jacksonlacombe_ana",
         "first": "Jackson",
         "last": "LaCombe",
@@ -539,6 +530,15 @@
         "pos": "D",
         "pts": 5,
         "pun": "In Girard We Trust"
+      },
+      {
+        "id": "jaredspurgeon_min",
+        "first": "Jared",
+        "last": "Spurgeon",
+        "team": "MIN",
+        "pos": "D",
+        "pts": 5,
+        "pun": "Like A Spurgeon"
       },
       {
         "id": "vladislavgavrikov_nyr",
@@ -606,6 +606,15 @@
         "pun": "Ullmark's Fantasy Fortress"
       },
       {
+        "id": "jesperwallstedt_min",
+        "first": "Jesper",
+        "last": "Wallstedt",
+        "team": "MIN",
+        "pos": "G",
+        "pts": 4,
+        "pun": "Wallstedt's Fantasy Fortress"
+      },
+      {
         "id": "jeremyswayman_bos",
         "first": "Jeremy",
         "last": "Swayman",
@@ -613,15 +622,6 @@
         "pos": "G",
         "pts": 4,
         "pun": "The Swayman Show"
-      },
-      {
-        "id": "jesperwallstedt_min",
-        "first": "Jesper",
-        "last": "Wallstedt",
-        "team": "MIN",
-        "pos": "G",
-        "pts": 3,
-        "pun": "Wallstedt's Fantasy Fortress"
       },
       {
         "id": "igorshesterkin_nyr",
@@ -633,15 +633,6 @@
         "pun": "Shesterkin It Real"
       },
       {
-        "id": "karelvejmelka_uta",
-        "first": "Karel",
-        "last": "Vejmelka",
-        "team": "UTA",
-        "pos": "G",
-        "pts": 3,
-        "pun": "Vejmelka's Fantasy Fortress"
-      },
-      {
         "id": "carterhart_vgk",
         "first": "Carter",
         "last": "Hart",
@@ -649,6 +640,15 @@
         "pos": "G",
         "pts": 3,
         "pun": "In Hart We Trust"
+      },
+      {
+        "id": "karelvejmelka_uta",
+        "first": "Karel",
+        "last": "Vejmelka",
+        "team": "UTA",
+        "pos": "G",
+        "pts": 3,
+        "pun": "Vejmelka's Fantasy Fortress"
       },
       {
         "id": "arturssilovs_pit",
