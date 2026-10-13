@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-13T01:46:43.158Z",
+  "generatedAt": "2026-10-13T02:12:08.955Z",
   "season": "2026",
   "week": 5,
   "thisWeek": {
@@ -264,7 +264,7 @@
         "last": "Cook",
         "team": "BUF",
         "pos": "RB",
-        "pts": 13.2,
+        "pts": 13.6,
         "pun": "James Cooked"
       },
       {
@@ -295,6 +295,15 @@
         "pun": "Marks-tastic Voyage"
       },
       {
+        "id": "blakecorum_lar",
+        "first": "Blake",
+        "last": "Corum",
+        "team": "LAR",
+        "pos": "RB",
+        "pts": 11.8,
+        "pun": "Lack of de-Corum"
+      },
+      {
         "id": "bhayshultuten_jac",
         "first": "Bhayshul",
         "last": "Tuten",
@@ -320,15 +329,6 @@
         "pos": "RB",
         "pts": 11.2,
         "pun": "Taylor-Made"
-      },
-      {
-        "id": "ashtonjeanty_lv",
-        "first": "Ashton",
-        "last": "Jeanty",
-        "team": "LV",
-        "pos": "RB",
-        "pts": 10.7,
-        "pun": "Fire and Ashton"
       }
     ],
     "WR": [
@@ -459,6 +459,15 @@
         "pun": "Read Egbuka"
       },
       {
+        "id": "pukanacua_lar",
+        "first": "Puka",
+        "last": "Nacua",
+        "team": "LAR",
+        "pos": "WR",
+        "pts": 16.4,
+        "pun": "Nacua Matata"
+      },
+      {
         "id": "jaylinnoel_hou",
         "first": "Jaylin",
         "last": "Noel",
@@ -538,15 +547,6 @@
         "pos": "WR",
         "pts": 12,
         "pun": "Bourne in the USA"
-      },
-      {
-        "id": "ryanflournoy_dal",
-        "first": "Ryan",
-        "last": "Flournoy",
-        "team": "DAL",
-        "pos": "WR",
-        "pts": 12,
-        "pun": "Ryan Flournoy and the Fantasy Machine"
       }
     ],
     "TE": [
@@ -910,6 +910,15 @@
         "pun": "Taylor-Made"
       },
       {
+        "id": "kyrenwilliams_lar",
+        "first": "Kyren",
+        "last": "Williams",
+        "team": "LAR",
+        "pos": "RB",
+        "pts": 96.5,
+        "pun": "Williams-Sonoma Touchdowns"
+      },
+      {
         "id": "javontewilliams_dal",
         "first": "Javonte",
         "last": "Williams",
@@ -917,15 +926,6 @@
         "pos": "RB",
         "pts": 96,
         "pun": "One In a Williams"
-      },
-      {
-        "id": "kyrenwilliams_lar",
-        "first": "Kyren",
-        "last": "Williams",
-        "team": "LAR",
-        "pos": "RB",
-        "pts": 94.8,
-        "pun": "Williams-Sonoma Touchdowns"
       },
       {
         "id": "jaylenwarren_pit",
@@ -969,7 +969,7 @@
         "last": "Cook",
         "team": "BUF",
         "pos": "RB",
-        "pts": 79.7,
+        "pts": 80.1,
         "pun": "James Cooked"
       },
       {
