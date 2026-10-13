@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-13T00:56:22.419Z",
+  "generatedAt": "2026-10-13T01:17:44.794Z",
   "season": "2026",
   "week": 5,
   "thisWeek": {
@@ -268,6 +268,15 @@
         "pun": "WILSON!🏐"
       },
       {
+        "id": "jamescookiii_buf",
+        "first": "James",
+        "last": "Cook",
+        "team": "BUF",
+        "pos": "RB",
+        "pts": 13,
+        "pun": "James Cooked"
+      },
+      {
         "id": "kimanividal_lac",
         "first": "Kimani",
         "last": "Vidal",
@@ -320,15 +329,6 @@
         "pos": "RB",
         "pts": 10.7,
         "pun": "Fire and Ashton"
-      },
-      {
-        "id": "justicehill_bal",
-        "first": "Justice",
-        "last": "Hill",
-        "team": "BAL",
-        "pos": "RB",
-        "pts": 9.8,
-        "pun": "King of The Hill"
       }
     ],
     "WR": [
@@ -742,18 +742,27 @@
         "pun": "All Bates, No Filler"
       },
       {
-        "id": "camlittle_jac",
-        "first": "Cam",
-        "last": "Little",
-        "team": "JAC",
+        "id": "tylerbass_buf",
+        "first": "Tyler",
+        "last": "Bass",
+        "team": "BUF",
         "pos": "K",
         "pts": 8,
-        "pun": "Cam's Excellent Adventure"
+        "pun": "Bass-A-Palooza"
       }
     ]
   },
   "seasonTotals": {
     "QB": [
+      {
+        "id": "joshallen_buf",
+        "first": "Josh",
+        "last": "Allen",
+        "team": "BUF",
+        "pos": "QB",
+        "pts": 119.7,
+        "pun": "Quit Joshin' Around"
+      },
       {
         "id": "brockpurdy_sf",
         "first": "Brock",
@@ -762,15 +771,6 @@
         "pos": "QB",
         "pts": 118.6,
         "pun": "Purdy Good Team"
-      },
-      {
-        "id": "joshallen_buf",
-        "first": "Josh",
-        "last": "Allen",
-        "team": "BUF",
-        "pos": "QB",
-        "pts": 117.1,
-        "pun": "Quit Joshin' Around"
       },
       {
         "id": "jaredgoff_det",
@@ -919,6 +919,15 @@
         "pun": "One In a Williams"
       },
       {
+        "id": "kyrenwilliams_lar",
+        "first": "Kyren",
+        "last": "Williams",
+        "team": "LAR",
+        "pos": "RB",
+        "pts": 93.2,
+        "pun": "Williams-Sonoma Touchdowns"
+      },
+      {
         "id": "jaylenwarren_pit",
         "first": "Jaylen",
         "last": "Warren",
@@ -926,15 +935,6 @@
         "pos": "RB",
         "pts": 93,
         "pun": "This is Your Final Warren"
-      },
-      {
-        "id": "kyrenwilliams_lar",
-        "first": "Kyren",
-        "last": "Williams",
-        "team": "LAR",
-        "pos": "RB",
-        "pts": 92.5,
-        "pun": "Williams-Sonoma Touchdowns"
       },
       {
         "id": "christianmccaffrey_sf",
@@ -964,6 +964,15 @@
         "pun": "50 Shades of D'Andre"
       },
       {
+        "id": "jamescookiii_buf",
+        "first": "James",
+        "last": "Cook",
+        "team": "BUF",
+        "pos": "RB",
+        "pts": 79.5,
+        "pun": "James Cooked"
+      },
+      {
         "id": "chubahubbard_car",
         "first": "Chuba",
         "last": "Hubbard",
@@ -980,15 +989,6 @@
         "pos": "RB",
         "pts": 78.7,
         "pun": "Bucky Beaver Dam"
-      },
-      {
-        "id": "jamescookiii_buf",
-        "first": "James",
-        "last": "Cook",
-        "team": "BUF",
-        "pos": "RB",
-        "pts": 71.4,
-        "pun": "James Cooked"
       },
       {
         "id": "aaronjonessr_min",
@@ -1155,6 +1155,15 @@
         "pun": "Washington Wizards"
       },
       {
+        "id": "davanteadams_lar",
+        "first": "Davante",
+        "last": "Adams",
+        "team": "LAR",
+        "pos": "WR",
+        "pts": 80.4,
+        "pun": "Davante's Inferno"
+      },
+      {
         "id": "jamarrchase_cin",
         "first": "Ja'Marr",
         "last": "Chase",
@@ -1216,15 +1225,6 @@
         "pos": "WR",
         "pts": 73.9,
         "pun": "Love thy Nabers"
-      },
-      {
-        "id": "davanteadams_lar",
-        "first": "Davante",
-        "last": "Adams",
-        "team": "LAR",
-        "pos": "WR",
-        "pts": 73,
-        "pun": "Davante's Inferno"
       },
       {
         "id": "denzelboston_cle",
