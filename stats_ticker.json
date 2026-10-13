@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-13T03:18:21.884Z",
+  "generatedAt": "2026-10-13T03:47:57.346Z",
   "season": "2026",
   "week": 5,
   "thisWeek": {
@@ -23,6 +23,15 @@
         "pun": "Jayden Daniels' Tennessee Whiskey"
       },
       {
+        "id": "joshallen_buf",
+        "first": "Josh",
+        "last": "Allen",
+        "team": "BUF",
+        "pos": "QB",
+        "pts": 31.5,
+        "pun": "Quit Joshin' Around"
+      },
+      {
         "id": "jaredgoff_det",
         "first": "Jared",
         "last": "Goff",
@@ -32,6 +41,15 @@
         "pun": "I'm About To Go Goff"
       },
       {
+        "id": "matthewstafford_lar",
+        "first": "Matthew",
+        "last": "Stafford",
+        "team": "LAR",
+        "pos": "QB",
+        "pts": 27.3,
+        "pun": "Stafford Infection"
+      },
+      {
         "id": "jacobybrissett_ari",
         "first": "Jacoby",
         "last": "Brissett",
@@ -39,15 +57,6 @@
         "pos": "QB",
         "pts": 26.3,
         "pun": "Livin' on a Brissett"
-      },
-      {
-        "id": "joshallen_buf",
-        "first": "Josh",
-        "last": "Allen",
-        "team": "BUF",
-        "pos": "QB",
-        "pts": 26,
-        "pun": "Quit Joshin' Around"
       },
       {
         "id": "jameiswinston_nyg",
@@ -84,15 +93,6 @@
         "pos": "QB",
         "pts": 24,
         "pun": "Straight Outta Huntley"
-      },
-      {
-        "id": "matthewstafford_lar",
-        "first": "Matthew",
-        "last": "Stafford",
-        "team": "LAR",
-        "pos": "QB",
-        "pts": 23.7,
-        "pun": "Stafford Infection"
       },
       {
         "id": "trevorlawrence_jac",
@@ -147,7 +147,7 @@
         "last": "Cook",
         "team": "BUF",
         "pos": "RB",
-        "pts": 24.2,
+        "pts": 22.8,
         "pun": "James Cooked"
       },
       {
@@ -158,6 +158,15 @@
         "pos": "RB",
         "pts": 21,
         "pun": "King Henry's Court"
+      },
+      {
+        "id": "kyrenwilliams_lar",
+        "first": "Kyren",
+        "last": "Williams",
+        "team": "LAR",
+        "pos": "RB",
+        "pts": 19.6,
+        "pun": "Williams-Sonoma Touchdowns"
       },
       {
         "id": "aaronjonessr_min",
@@ -320,18 +329,18 @@
         "pos": "RB",
         "pts": 11.5,
         "pun": "Dylan Vibes Only"
-      },
-      {
-        "id": "jonathantaylor_ind",
-        "first": "Jonathan",
-        "last": "Taylor",
-        "team": "IND",
-        "pos": "RB",
-        "pts": 11.2,
-        "pun": "Taylor-Made"
       }
     ],
     "WR": [
+      {
+        "id": "pukanacua_lar",
+        "first": "Puka",
+        "last": "Nacua",
+        "team": "LAR",
+        "pos": "WR",
+        "pts": 37.7,
+        "pun": "Nacua Matata"
+      },
       {
         "id": "christianwatson_gb",
         "first": "Christian",
@@ -340,15 +349,6 @@
         "pos": "WR",
         "pts": 32.3,
         "pun": "Elementary, My Dear Watson"
-      },
-      {
-        "id": "pukanacua_lar",
-        "first": "Puka",
-        "last": "Nacua",
-        "team": "LAR",
-        "pos": "WR",
-        "pts": 30.5,
-        "pun": "Nacua Matata"
       },
       {
         "id": "parkerwashington_jac",
@@ -414,6 +414,15 @@
         "pun": "Super DeMario"
       },
       {
+        "id": "davanteadams_lar",
+        "first": "Davante",
+        "last": "Adams",
+        "team": "LAR",
+        "pos": "WR",
+        "pts": 22.1,
+        "pun": "Davante's Inferno"
+      },
+      {
         "id": "matthewgolden_gb",
         "first": "Matthew",
         "last": "Golden",
@@ -430,15 +439,6 @@
         "pos": "WR",
         "pts": 19.7,
         "pun": "Ja'Marrvelous"
-      },
-      {
-        "id": "davanteadams_lar",
-        "first": "Davante",
-        "last": "Adams",
-        "team": "LAR",
-        "pos": "WR",
-        "pts": 19.6,
-        "pun": "Davante's Inferno"
       },
       {
         "id": "justinjefferson_min",
@@ -760,7 +760,7 @@
         "last": "Allen",
         "team": "BUF",
         "pos": "QB",
-        "pts": 141.4,
+        "pts": 147,
         "pun": "Quit Joshin' Around"
       },
       {
@@ -809,6 +809,15 @@
         "pun": "I Married my Cousins"
       },
       {
+        "id": "matthewstafford_lar",
+        "first": "Matthew",
+        "last": "Stafford",
+        "team": "LAR",
+        "pos": "QB",
+        "pts": 95,
+        "pun": "Stafford Infection"
+      },
+      {
         "id": "drakemaye_ne",
         "first": "Drake",
         "last": "Maye",
@@ -834,15 +843,6 @@
         "pos": "QB",
         "pts": 92.6,
         "pun": "The Bryce Is Right"
-      },
-      {
-        "id": "matthewstafford_lar",
-        "first": "Matthew",
-        "last": "Stafford",
-        "team": "LAR",
-        "pos": "QB",
-        "pts": 91.4,
-        "pun": "Stafford Infection"
       },
       {
         "id": "tylershough_no",
@@ -906,7 +906,7 @@
         "last": "Williams",
         "team": "LAR",
         "pos": "RB",
-        "pts": 99.7,
+        "pts": 109.3,
         "pun": "Williams-Sonoma Touchdowns"
       },
       {
@@ -951,7 +951,7 @@
         "last": "Cook",
         "team": "BUF",
         "pos": "RB",
-        "pts": 90.7,
+        "pts": 89.3,
         "pun": "James Cooked"
       },
       {
@@ -1133,7 +1133,7 @@
         "last": "Adams",
         "team": "LAR",
         "pos": "WR",
-        "pts": 92.6,
+        "pts": 95.1,
         "pun": "Davante's Inferno"
       },
       {
@@ -1182,6 +1182,15 @@
         "pun": "Golden Goose"
       },
       {
+        "id": "pukanacua_lar",
+        "first": "Puka",
+        "last": "Nacua",
+        "team": "LAR",
+        "pos": "WR",
+        "pts": 77.8,
+        "pun": "Nacua Matata"
+      },
+      {
         "id": "mikeevans_sf",
         "first": "Mike",
         "last": "Evans",
@@ -1225,15 +1234,6 @@
         "pos": "WR",
         "pts": 73.9,
         "pun": "Love thy Nabers"
-      },
-      {
-        "id": "pukanacua_lar",
-        "first": "Puka",
-        "last": "Nacua",
-        "team": "LAR",
-        "pos": "WR",
-        "pts": 70.6,
-        "pun": "Nacua Matata"
       },
       {
         "id": "denzelboston_cle",
