@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-13T11:06:20.391Z",
+  "generatedAt": "2026-10-14T03:15:09.721Z",
   "season": "2025",
   "isLastSeason": true,
   "fantasyLeaders": {
@@ -1411,8 +1411,8 @@
         "team": "OKC",
         "pos": "PG",
         "pun": "Bennett & Chill",
-        "gp": 1,
-        "pts": 38.3
+        "gp": 2,
+        "pts": 52.9
       },
       {
         "id": "jakobigillespie_sas",
@@ -1433,6 +1433,26 @@
         "pun": "Brunson Burner",
         "gp": 1,
         "pts": 36.5
+      },
+      {
+        "id": "tyresehaliburton_ind",
+        "first": "Tyrese",
+        "last": "Haliburton",
+        "team": "IND",
+        "pos": "PG",
+        "pun": "Haliburton Prescription",
+        "gp": 1,
+        "pts": 36.1
+      },
+      {
+        "id": "anthonypritchard_okc",
+        "first": "Anthony",
+        "last": "Pritchard",
+        "team": "OKC",
+        "pos": "PG",
+        "pun": "Livin' on a Pritchard",
+        "gp": 2,
+        "pts": 36
       },
       {
         "id": "rayjdennis_atl",
@@ -1465,6 +1485,26 @@
         "pts": 32.1
       },
       {
+        "id": "tylerkolek_nyk",
+        "first": "Tyler",
+        "last": "Kolek",
+        "team": "NYK",
+        "pos": "PG",
+        "pun": "Kolek'd Up and Ready",
+        "gp": 2,
+        "pts": 30.1
+      },
+      {
+        "id": "shaigilgeousalexander_okc",
+        "first": "Shai",
+        "last": "Gilgeous-Alexander",
+        "team": "OKC",
+        "pos": "PG",
+        "pun": "Shai It Ain't So",
+        "gp": 1,
+        "pts": 28
+      },
+      {
         "id": "jordanmclaughlin_sas",
         "first": "Jordan",
         "last": "McLaughlin",
@@ -1485,16 +1525,6 @@
         "pts": 26.1
       },
       {
-        "id": "anthonypritchard_okc",
-        "first": "Anthony",
-        "last": "Pritchard",
-        "team": "OKC",
-        "pos": "PG",
-        "pun": "Livin' on a Pritchard",
-        "gp": 1,
-        "pts": 25.9
-      },
-      {
         "id": "darrynpeterson_uta",
         "first": "Darryn",
         "last": "Peterson",
@@ -1505,54 +1535,24 @@
         "pts": 25.9
       },
       {
-        "id": "keyontegeorge_uta",
-        "first": "Keyonte",
-        "last": "George",
-        "team": "UTA",
+        "id": "josealvarado_nyk",
+        "first": "Jose",
+        "last": "Alvarado",
+        "team": "NYK",
         "pos": "PG",
-        "pun": "Keyonte Content",
-        "gp": 1,
-        "pts": 22.9
+        "pun": "Jose's Excellent Adventure",
+        "gp": 2,
+        "pts": 25
       },
       {
-        "id": "scoothenderson_por",
-        "first": "Scoot",
-        "last": "Henderson",
-        "team": "POR",
+        "id": "quentonjackson_ind",
+        "first": "Quenton",
+        "last": "Jackson",
+        "team": "IND",
         "pos": "PG",
-        "pun": "Scoot Troop",
+        "pun": "Jackson Happens",
         "gp": 1,
-        "pts": 22.5
-      },
-      {
-        "id": "zyonpullin_min",
-        "first": "Zyon",
-        "last": "Pullin",
-        "team": "MIN",
-        "pos": "PG",
-        "pun": "Zyon Pullin and the Fantasy Machine",
-        "gp": 1,
-        "pts": 22.1
-      },
-      {
-        "id": "kingstonflemings_atl",
-        "first": "Kingston",
-        "last": "Flemings",
-        "team": "ATL",
-        "pos": "PG",
-        "pun": "Kingston Three-Os",
-        "gp": 1,
-        "pts": 21.9
-      },
-      {
-        "id": "nolantraore_bkn",
-        "first": "Nolan",
-        "last": "Traore",
-        "team": "BKN",
-        "pos": "PG",
-        "pun": "Straight Outta Traore",
-        "gp": 1,
-        "pts": 21.2
+        "pts": 23.3
       }
     ],
     "SG": [
@@ -1563,8 +1563,18 @@
         "team": "OKC",
         "pos": "SG",
         "pun": "Josh Dix and the Fantasy Machine",
-        "gp": 1,
-        "pts": 36.1
+        "gp": 2,
+        "pts": 46.5
+      },
+      {
+        "id": "otegaoweh_okc",
+        "first": "Otega",
+        "last": "Oweh",
+        "team": "OKC",
+        "pos": "SG",
+        "pun": "The Oweh Show",
+        "gp": 2,
+        "pts": 42.1
       },
       {
         "id": "anthonyedwards_min",
@@ -1587,14 +1597,24 @@
         "pts": 32.7
       },
       {
-        "id": "otegaoweh_okc",
-        "first": "Otega",
-        "last": "Oweh",
+        "id": "donovanmitchell_cle",
+        "first": "Donovan",
+        "last": "Mitchell",
+        "team": "CLE",
+        "pos": "SG",
+        "pun": "Spider-Verse Mitchell",
+        "gp": 1,
+        "pts": 29.4
+      },
+      {
+        "id": "jaredmccain_okc",
+        "first": "Jared",
+        "last": "McCain",
         "team": "OKC",
         "pos": "SG",
-        "pun": "The Oweh Show",
+        "pun": "In McCain We Trust",
         "gp": 1,
-        "pts": 30.5
+        "pts": 27.4
       },
       {
         "id": "ayodosunmu_min",
@@ -1607,6 +1627,26 @@
         "pts": 26.8
       },
       {
+        "id": "milesmcbride_nyk",
+        "first": "Miles",
+        "last": "McBride",
+        "team": "NYK",
+        "pos": "SG",
+        "pun": "McBride Happens",
+        "gp": 2,
+        "pts": 25.1
+      },
+      {
+        "id": "meleekthomas_cle",
+        "first": "Meleek",
+        "last": "Thomas",
+        "team": "CLE",
+        "pos": "SG",
+        "pun": "Thomas'd Up and Ready",
+        "gp": 1,
+        "pts": 21.6
+      },
+      {
         "id": "trejohnson_was",
         "first": "Tre",
         "last": "Johnson",
@@ -1617,64 +1657,34 @@
         "pts": 21.5
       },
       {
-        "id": "grantnelson_bkn",
-        "first": "Grant",
-        "last": "Nelson",
-        "team": "BKN",
+        "id": "jakobewalter_tor",
+        "first": "Ja'Kobe",
+        "last": "Walter",
+        "team": "TOR",
         "pos": "SG",
-        "pun": "Grant & Chill",
+        "pun": "Obi-Wan Ja'Kobi",
         "gp": 1,
-        "pts": 15.3
+        "pts": 20.7
       },
       {
-        "id": "joshhart_nyk",
-        "first": "Josh",
-        "last": "Hart",
-        "team": "NYK",
+        "id": "casonwallace_okc",
+        "first": "Cason",
+        "last": "Wallace",
+        "team": "OKC",
         "pos": "SG",
-        "pun": "All Hart, No Filler",
+        "pun": "Wallace Happens",
         "gp": 1,
-        "pts": 12.1
+        "pts": 18.1
       },
       {
-        "id": "antonioreeves_min",
-        "first": "Antonio",
-        "last": "Reeves",
-        "team": "MIN",
+        "id": "desmondbane_orl",
+        "first": "Desmond",
+        "last": "Bane",
+        "team": "ORL",
         "pos": "SG",
-        "pun": "Livin' on a Reeves",
+        "pun": "Bane Happens",
         "gp": 1,
-        "pts": 10
-      },
-      {
-        "id": "codywilliams_min",
-        "first": "Cody",
-        "last": "Williams",
-        "team": "MIN",
-        "pos": "SG",
-        "pun": "In Williams We Trust",
-        "gp": 1,
-        "pts": 9.2
-      },
-      {
-        "id": "isaiahevans_min",
-        "first": "Isaiah",
-        "last": "Evans",
-        "team": "MIN",
-        "pos": "SG",
-        "pun": "Livin' on a Evans",
-        "gp": 1,
-        "pts": 7.9
-      },
-      {
-        "id": "jordanclarkson_nyk",
-        "first": "Jordan",
-        "last": "Clarkson",
-        "team": "NYK",
-        "pos": "SG",
-        "pun": "Clarkson 5",
-        "gp": 1,
-        "pts": 7
+        "pts": 16.9
       },
       {
         "id": "zhairesmith_okc",
@@ -1683,31 +1693,31 @@
         "team": "OKC",
         "pos": "SG",
         "pun": "Livin' on a Smith",
-        "gp": 1,
-        "pts": 6.2
+        "gp": 2,
+        "pts": 15.9
       },
       {
-        "id": "ochaiagbaji_nyk",
-        "first": "Ochai",
-        "last": "Agbaji",
-        "team": "NYK",
+        "id": "grantnelson_bkn",
+        "first": "Grant",
+        "last": "Nelson",
+        "team": "BKN",
         "pos": "SG",
-        "pun": "Agbaji of Fame",
+        "pun": "Grant & Chill",
         "gp": 1,
-        "pts": 5.9
-      },
-      {
-        "id": "milesmcbride_nyk",
-        "first": "Miles",
-        "last": "McBride",
-        "team": "NYK",
-        "pos": "SG",
-        "pun": "McBride Happens",
-        "gp": 1,
-        "pts": 5
+        "pts": 15.3
       }
     ],
     "SF": [
+      {
+        "id": "franzwagner_orl",
+        "first": "Franz",
+        "last": "Wagner",
+        "team": "ORL",
+        "pos": "SF",
+        "pun": "Franz Ferdinand Wagner",
+        "gp": 1,
+        "pts": 40.8
+      },
       {
         "id": "kyshawngeorge_was",
         "first": "Kyshawn",
@@ -1729,12 +1739,32 @@
         "pts": 32.8
       },
       {
+        "id": "tristandasilva_orl",
+        "first": "Tristan",
+        "last": "da Silva",
+        "team": "ORL",
+        "pos": "SF",
+        "pun": "da Silva-tastic Voyage",
+        "gp": 1,
+        "pts": 31.1
+      },
+      {
         "id": "jadenmcdaniels_min",
         "first": "Jaden",
         "last": "McDaniels",
         "team": "MIN",
         "pos": "SF",
         "pun": "Jaden McDaniels and the Fantasy Machine",
+        "gp": 1,
+        "pts": 31
+      },
+      {
+        "id": "kawhileonard_tor",
+        "first": "Kawhi",
+        "last": "Leonard",
+        "team": "TOR",
+        "pos": "SF",
+        "pun": "Big Girls Don't Kawhi",
         "gp": 1,
         "pts": 31
       },
@@ -1749,6 +1779,16 @@
         "pts": 30.9
       },
       {
+        "id": "rjbarrett_tor",
+        "first": "RJ",
+        "last": "Barrett",
+        "team": "TOR",
+        "pos": "SF",
+        "pun": "Barrett Essentials",
+        "gp": 1,
+        "pts": 26.3
+      },
+      {
         "id": "jalenwilson_atl",
         "first": "Jalen",
         "last": "Wilson",
@@ -1757,6 +1797,26 @@
         "pun": "Jalen & Chill",
         "gp": 1,
         "pts": 25.1
+      },
+      {
+        "id": "peytonwatson_cle",
+        "first": "Peyton",
+        "last": "Watson",
+        "team": "CLE",
+        "pos": "SF",
+        "pun": "Watson Happens",
+        "gp": 1,
+        "pts": 23.8
+      },
+      {
+        "id": "mohameddiawara_nyk",
+        "first": "Mohamed",
+        "last": "Diawara",
+        "team": "NYK",
+        "pos": "SF",
+        "pun": "Diawara of Fame",
+        "gp": 2,
+        "pts": 23.7
       },
       {
         "id": "acebailey_uta",
@@ -1789,74 +1849,14 @@
         "pts": 22.8
       },
       {
-        "id": "bricesensabaugh_uta",
-        "first": "Brice",
-        "last": "Sensabaugh",
-        "team": "UTA",
-        "pos": "SF",
-        "pun": "Sensabaugh-tastic Voyage",
-        "gp": 1,
-        "pts": 18.4
-      },
-      {
-        "id": "svimykhailiuk_uta",
-        "first": "Svi",
-        "last": "Mykhailiuk",
-        "team": "UTA",
-        "pos": "SF",
-        "pun": "Mykhailiuk'd Up and Ready",
-        "gp": 1,
-        "pts": 18.4
-      },
-      {
-        "id": "jaysonkent_por",
-        "first": "Jayson",
-        "last": "Kent",
-        "team": "POR",
-        "pos": "SF",
-        "pun": "All Kent, No Filler",
-        "gp": 1,
-        "pts": 15.7
-      },
-      {
-        "id": "mikalbridges_nyk",
-        "first": "Mikal",
-        "last": "Bridges",
+        "id": "kevinmccullar_nyk",
+        "first": "Kevin",
+        "last": "McCullar",
         "team": "NYK",
         "pos": "SF",
-        "pun": "Bridges Over Troubled Waters",
-        "gp": 1,
-        "pts": 14.4
-      },
-      {
-        "id": "joshokogie_uta",
-        "first": "Josh",
-        "last": "Okogie",
-        "team": "UTA",
-        "pos": "SF",
-        "pun": "An Okogie From Muskogee",
-        "gp": 1,
-        "pts": 8.5
-      },
-      {
-        "id": "kjmartin_min",
-        "first": "KJ",
-        "last": "Martin",
-        "team": "MIN",
-        "pos": "SF",
-        "pun": "Martin-tastic Voyage",
-        "gp": 1,
-        "pts": 6
-      },
-      {
-        "id": "willriley_was",
-        "first": "Will",
-        "last": "Riley",
-        "team": "WAS",
-        "pos": "SF",
-        "pun": "Riley'd Up and Ready",
-        "gp": 1,
-        "pts": 5.7
+        "pun": "In McCullar We Trust",
+        "gp": 2,
+        "pts": 19.6
       }
     ],
     "PF": [
@@ -1867,8 +1867,28 @@
         "team": "OKC",
         "pos": "PF",
         "pun": "Livin' on a Barnhizer",
+        "gp": 2,
+        "pts": 49.8
+      },
+      {
+        "id": "paolobanchero_orl",
+        "first": "Paolo",
+        "last": "Banchero",
+        "team": "ORL",
+        "pos": "PF",
+        "pun": "Huevos Bancheros",
         "gp": 1,
-        "pts": 36.6
+        "pts": 40.1
+      },
+      {
+        "id": "scottiebarnes_tor",
+        "first": "Scottie",
+        "last": "Barnes",
+        "team": "TOR",
+        "pos": "PF",
+        "pun": "Barnes&Noble",
+        "gp": 1,
+        "pts": 38.2
       },
       {
         "id": "juliusrandle_bkn",
@@ -1901,6 +1921,16 @@
         "pts": 27.3
       },
       {
+        "id": "jalenwilliams_okc",
+        "first": "Jalen",
+        "last": "Williams",
+        "team": "OKC",
+        "pos": "PF",
+        "pun": "Williams'd Up and Ready",
+        "gp": 1,
+        "pts": 27.3
+      },
+      {
         "id": "noahclowney_bkn",
         "first": "Noah",
         "last": "Clowney",
@@ -1909,6 +1939,16 @@
         "pun": "Send In The Clowney",
         "gp": 1,
         "pts": 26.6
+      },
+      {
+        "id": "mariohezonja_cle",
+        "first": "Mario",
+        "last": "Hezonja",
+        "team": "CLE",
+        "pos": "PF",
+        "pun": "In Hezonja We Trust",
+        "gp": 1,
+        "pts": 26.2
       },
       {
         "id": "oganunoby_nyk",
@@ -1941,6 +1981,16 @@
         "pts": 23.9
       },
       {
+        "id": "kellyoubre_ind",
+        "first": "Kelly",
+        "last": "Oubre",
+        "team": "IND",
+        "pos": "PF",
+        "pun": "Kelly Oubre and the Fantasy Machine",
+        "gp": 1,
+        "pts": 23
+      },
+      {
         "id": "harrisonbarnes_sas",
         "first": "Harrison",
         "last": "Barnes",
@@ -1959,56 +2009,6 @@
         "pun": "Dont Mess With The Sochan",
         "gp": 1,
         "pts": 22.6
-      },
-      {
-        "id": "deniavdija_por",
-        "first": "Deni",
-        "last": "Avdija",
-        "team": "POR",
-        "pos": "PF",
-        "pun": "Avdija-A-Palooza",
-        "gp": 1,
-        "pts": 21
-      },
-      {
-        "id": "laurimarkkanen_uta",
-        "first": "Lauri",
-        "last": "Markkanen",
-        "team": "UTA",
-        "pos": "PF",
-        "pun": "Jurassic Markkanen",
-        "gp": 1,
-        "pts": 19.2
-      },
-      {
-        "id": "andrewholifield_okc",
-        "first": "Andrew",
-        "last": "Holifield",
-        "team": "OKC",
-        "pos": "PF",
-        "pun": "Holifield-A-Palooza",
-        "gp": 1,
-        "pts": 17.2
-      },
-      {
-        "id": "coreykispert_atl",
-        "first": "Corey",
-        "last": "Kispert",
-        "team": "ATL",
-        "pos": "PF",
-        "pun": "All Kispert, No Filler",
-        "gp": 1,
-        "pts": 14.2
-      },
-      {
-        "id": "justinchampagnie_was",
-        "first": "Justin",
-        "last": "Champagnie",
-        "team": "WAS",
-        "pos": "PF",
-        "pun": "Justin's Excellent Adventure",
-        "gp": 1,
-        "pts": 12.6
       }
     ],
     "C": [
@@ -2019,8 +2019,18 @@
         "team": "OKC",
         "pos": "C",
         "pun": "Do or Aday",
+        "gp": 2,
+        "pts": 68.3
+      },
+      {
+        "id": "ivicazubac_ind",
+        "first": "Ivica",
+        "last": "Zubac",
+        "team": "IND",
+        "pos": "C",
+        "pun": "Zuby Do",
         "gp": 1,
-        "pts": 46
+        "pts": 42.1
       },
       {
         "id": "jocklandale_atl",
@@ -2043,6 +2053,16 @@
         "pts": 35.9
       },
       {
+        "id": "collinmurrayboyles_tor",
+        "first": "Collin",
+        "last": "Murray-Boyles",
+        "team": "TOR",
+        "pos": "C",
+        "pun": "Murray-Boyles's Fantasy Fortress",
+        "gp": 1,
+        "pts": 34.8
+      },
+      {
         "id": "zubyejiofor_atl",
         "first": "Zuby",
         "last": "Ejiofor",
@@ -2051,6 +2071,26 @@
         "pun": "Ejiofor-tastic Voyage",
         "gp": 1,
         "pts": 32.3
+      },
+      {
+        "id": "jameswiseman_nyk",
+        "first": "James",
+        "last": "Wiseman",
+        "team": "NYK",
+        "pos": "C",
+        "pun": "The Three Wiseman",
+        "gp": 1,
+        "pts": 30
+      },
+      {
+        "id": "evanmobley_cle",
+        "first": "Evan",
+        "last": "Mobley",
+        "team": "CLE",
+        "pos": "C",
+        "pun": "Mobley Dick",
+        "gp": 1,
+        "pts": 26
       },
       {
         "id": "mobamba_uta",
@@ -2083,6 +2123,26 @@
         "pts": 23.8
       },
       {
+        "id": "dreweubanks_nyk",
+        "first": "Drew",
+        "last": "Eubanks",
+        "team": "NYK",
+        "pos": "C",
+        "pun": "Eubanksy",
+        "gp": 2,
+        "pts": 23.4
+      },
+      {
+        "id": "gogabitadze_orl",
+        "first": "Goga",
+        "last": "Bitadze",
+        "team": "ORL",
+        "pos": "C",
+        "pun": "The Bitadze Show",
+        "gp": 1,
+        "pts": 23.2
+      },
+      {
         "id": "donovanclingan_por",
         "first": "Donovan",
         "last": "Clingan",
@@ -2101,85 +2161,11 @@
         "pun": "KAT In The Hat",
         "gp": 1,
         "pts": 21.4
-      },
-      {
-        "id": "jarenjackson_uta",
-        "first": "Jaren",
-        "last": "Jackson",
-        "team": "UTA",
-        "pos": "C",
-        "pun": "Jaren's Excellent Adventure",
-        "gp": 1,
-        "pts": 20.1
-      },
-      {
-        "id": "dayronsharpe_bkn",
-        "first": "Day'Ron",
-        "last": "Sharpe",
-        "team": "BKN",
-        "pos": "C",
-        "pun": "Day'Ron Come And Me Wanna Go Home",
-        "gp": 1,
-        "pts": 18.9
-      },
-      {
-        "id": "deandreayton_was",
-        "first": "Deandre",
-        "last": "Ayton",
-        "team": "WAS",
-        "pos": "C",
-        "pun": "Ayton Of Drugs",
-        "gp": 1,
-        "pts": 18.4
-      },
-      {
-        "id": "alexsarr_was",
-        "first": "Alex",
-        "last": "Sarr",
-        "team": "WAS",
-        "pos": "C",
-        "pun": "Dancin' with the Sarrs",
-        "gp": 1,
-        "pts": 16.8
-      },
-      {
-        "id": "andredrummond_nyk",
-        "first": "Andre",
-        "last": "Drummond",
-        "team": "NYK",
-        "pos": "C",
-        "pun": "Little Drummond Boys",
-        "gp": 1,
-        "pts": 16.8
-      },
-      {
-        "id": "rudygobert_min",
-        "first": "Rudy",
-        "last": "Gobert",
-        "team": "MIN",
-        "pos": "C",
-        "pun": "Frozen Gobert",
-        "gp": 1,
-        "pts": 14.1
       }
     ]
   },
   "thisWeekStats": {
     "PG": [
-      {
-        "id": "bennettstirtz_okc",
-        "first": "Bennett",
-        "last": "Stirtz",
-        "team": "OKC",
-        "pos": "PG",
-        "pun": "Bennett & Chill",
-        "gp": 1,
-        "ppg": 26,
-        "apg": 5,
-        "rpg": 4,
-        "spg": 0,
-        "bpg": 0
-      },
       {
         "id": "jakobigillespie_sas",
         "first": "Ja'Kobi",
@@ -2193,6 +2179,20 @@
         "rpg": 1,
         "spg": 3,
         "bpg": 0
+      },
+      {
+        "id": "tyresehaliburton_ind",
+        "first": "Tyrese",
+        "last": "Haliburton",
+        "team": "IND",
+        "pos": "PG",
+        "pun": "Haliburton Prescription",
+        "gp": 1,
+        "ppg": 24,
+        "apg": 3,
+        "rpg": 3,
+        "spg": 0,
+        "bpg": 2
       },
       {
         "id": "jalenbrunson_nyk",
@@ -2223,6 +2223,20 @@
         "bpg": 0
       },
       {
+        "id": "bennettstirtz_okc",
+        "first": "Bennett",
+        "last": "Stirtz",
+        "team": "OKC",
+        "pos": "PG",
+        "pun": "Bennett & Chill",
+        "gp": 2,
+        "ppg": 16.5,
+        "apg": 2.5,
+        "rpg": 3.5,
+        "spg": 1,
+        "bpg": 0
+      },
+      {
         "id": "keonellis_bkn",
         "first": "Keon",
         "last": "Ellis",
@@ -2235,6 +2249,20 @@
         "rpg": 1,
         "spg": 0,
         "bpg": 0
+      },
+      {
+        "id": "shaigilgeousalexander_okc",
+        "first": "Shai",
+        "last": "Gilgeous-Alexander",
+        "team": "OKC",
+        "pos": "PG",
+        "pun": "Shai It Ain't So",
+        "gp": 1,
+        "ppg": 15,
+        "apg": 6,
+        "rpg": 0,
+        "spg": 1,
+        "bpg": 1
       },
       {
         "id": "scoothenderson_por",
@@ -2321,6 +2349,20 @@
         "bpg": 0
       },
       {
+        "id": "jamesharden_cle",
+        "first": "James",
+        "last": "Harden",
+        "team": "CLE",
+        "pos": "PG",
+        "pun": "Go Harden Or Go Home",
+        "gp": 1,
+        "ppg": 13,
+        "apg": 2,
+        "rpg": 0,
+        "spg": 1,
+        "bpg": 0
+      },
+      {
         "id": "traeyoung_was",
         "first": "Trae",
         "last": "Young",
@@ -2333,48 +2375,6 @@
         "rpg": 3,
         "spg": 1,
         "bpg": 0
-      },
-      {
-        "id": "isaiahcollier_uta",
-        "first": "Isaiah",
-        "last": "Collier",
-        "team": "UTA",
-        "pos": "PG",
-        "pun": "Isaiah Vibes Only",
-        "gp": 1,
-        "ppg": 11,
-        "apg": 5,
-        "rpg": 3,
-        "spg": 5,
-        "bpg": 0
-      },
-      {
-        "id": "kobejohnson_atl",
-        "first": "Kobe",
-        "last": "Johnson",
-        "team": "ATL",
-        "pos": "PG",
-        "pun": "Johnson Happens",
-        "gp": 1,
-        "ppg": 10,
-        "apg": 0,
-        "rpg": 3,
-        "spg": 2,
-        "bpg": 0
-      },
-      {
-        "id": "lameloball_min",
-        "first": "LaMelo",
-        "last": "Ball",
-        "team": "MIN",
-        "pos": "PG",
-        "pun": "LaMelo Out Loud",
-        "gp": 1,
-        "ppg": 10,
-        "apg": 7,
-        "rpg": 3,
-        "spg": 0,
-        "bpg": 1
       }
     ],
     "SG": [
@@ -2393,18 +2393,18 @@
         "bpg": 0
       },
       {
-        "id": "joshdix_okc",
-        "first": "Josh",
-        "last": "Dix",
+        "id": "jaredmccain_okc",
+        "first": "Jared",
+        "last": "McCain",
         "team": "OKC",
         "pos": "SG",
-        "pun": "Josh Dix and the Fantasy Machine",
+        "pun": "In McCain We Trust",
         "gp": 1,
-        "ppg": 16,
-        "apg": 7,
-        "rpg": 3,
-        "spg": 2,
-        "bpg": 1
+        "ppg": 20,
+        "apg": 2,
+        "rpg": 2,
+        "spg": 1,
+        "bpg": 0
       },
       {
         "id": "nickeilalexanderwalker_atl",
@@ -2421,6 +2421,48 @@
         "bpg": 0
       },
       {
+        "id": "meleekthomas_cle",
+        "first": "Meleek",
+        "last": "Thomas",
+        "team": "CLE",
+        "pos": "SG",
+        "pun": "Thomas'd Up and Ready",
+        "gp": 1,
+        "ppg": 16,
+        "apg": 0,
+        "rpg": 3,
+        "spg": 1,
+        "bpg": 0
+      },
+      {
+        "id": "donovanmitchell_cle",
+        "first": "Donovan",
+        "last": "Mitchell",
+        "team": "CLE",
+        "pos": "SG",
+        "pun": "Spider-Verse Mitchell",
+        "gp": 1,
+        "ppg": 15,
+        "apg": 8,
+        "rpg": 2,
+        "spg": 0,
+        "bpg": 0
+      },
+      {
+        "id": "jakobewalter_tor",
+        "first": "Ja'Kobe",
+        "last": "Walter",
+        "team": "TOR",
+        "pos": "SG",
+        "pun": "Obi-Wan Ja'Kobi",
+        "gp": 1,
+        "ppg": 14,
+        "apg": 1,
+        "rpg": 1,
+        "spg": 1,
+        "bpg": 1
+      },
+      {
         "id": "trejohnson_was",
         "first": "Tre",
         "last": "Johnson",
@@ -2433,20 +2475,6 @@
         "rpg": 0,
         "spg": 2,
         "bpg": 0
-      },
-      {
-        "id": "otegaoweh_okc",
-        "first": "Otega",
-        "last": "Oweh",
-        "team": "OKC",
-        "pos": "SG",
-        "pun": "The Oweh Show",
-        "gp": 1,
-        "ppg": 11,
-        "apg": 1,
-        "rpg": 10,
-        "spg": 2,
-        "bpg": 1
       },
       {
         "id": "ayodosunmu_min",
@@ -2463,6 +2491,34 @@
         "bpg": 1
       },
       {
+        "id": "otegaoweh_okc",
+        "first": "Otega",
+        "last": "Oweh",
+        "team": "OKC",
+        "pos": "SG",
+        "pun": "The Oweh Show",
+        "gp": 2,
+        "ppg": 9.5,
+        "apg": 0.5,
+        "rpg": 6.5,
+        "spg": 1,
+        "bpg": 0.5
+      },
+      {
+        "id": "joshdix_okc",
+        "first": "Josh",
+        "last": "Dix",
+        "team": "OKC",
+        "pos": "SG",
+        "pun": "Josh Dix and the Fantasy Machine",
+        "gp": 2,
+        "ppg": 9,
+        "apg": 3.5,
+        "rpg": 5,
+        "spg": 1,
+        "bpg": 0.5
+      },
+      {
         "id": "grantnelson_bkn",
         "first": "Grant",
         "last": "Nelson",
@@ -2477,32 +2533,46 @@
         "bpg": 0
       },
       {
-        "id": "codywilliams_min",
-        "first": "Cody",
-        "last": "Williams",
-        "team": "MIN",
+        "id": "desmondbane_orl",
+        "first": "Desmond",
+        "last": "Bane",
+        "team": "ORL",
         "pos": "SG",
-        "pun": "In Williams We Trust",
+        "pun": "Bane Happens",
         "gp": 1,
-        "ppg": 6,
-        "apg": 0,
-        "rpg": 1,
-        "spg": 0,
-        "bpg": 1
+        "ppg": 8,
+        "apg": 3,
+        "rpg": 2,
+        "spg": 1,
+        "bpg": 0
       },
       {
-        "id": "antonioreeves_min",
-        "first": "Antonio",
-        "last": "Reeves",
-        "team": "MIN",
+        "id": "malakibranham_orl",
+        "first": "Malaki",
+        "last": "Branham",
+        "team": "ORL",
         "pos": "SG",
-        "pun": "Livin' on a Reeves",
+        "pun": "The Branham Show",
         "gp": 1,
-        "ppg": 6,
-        "apg": 0,
+        "ppg": 8,
+        "apg": 1,
         "rpg": 0,
-        "spg": 2,
+        "spg": 0,
         "bpg": 0
+      },
+      {
+        "id": "casonwallace_okc",
+        "first": "Cason",
+        "last": "Wallace",
+        "team": "OKC",
+        "pos": "SG",
+        "pun": "Wallace Happens",
+        "gp": 1,
+        "ppg": 7,
+        "apg": 1,
+        "rpg": 3,
+        "spg": 2,
+        "bpg": 1
       },
       {
         "id": "zhairesmith_okc",
@@ -2511,81 +2581,11 @@
         "team": "OKC",
         "pos": "SG",
         "pun": "Livin' on a Smith",
-        "gp": 1,
-        "ppg": 5,
-        "apg": 0,
+        "gp": 2,
+        "ppg": 6,
+        "apg": 0.5,
         "rpg": 1,
         "spg": 0,
-        "bpg": 0
-      },
-      {
-        "id": "jordanclarkson_nyk",
-        "first": "Jordan",
-        "last": "Clarkson",
-        "team": "NYK",
-        "pos": "SG",
-        "pun": "Clarkson 5",
-        "gp": 1,
-        "ppg": 5,
-        "apg": 0,
-        "rpg": 0,
-        "spg": 0,
-        "bpg": 1
-      },
-      {
-        "id": "isaiahevans_min",
-        "first": "Isaiah",
-        "last": "Evans",
-        "team": "MIN",
-        "pos": "SG",
-        "pun": "Livin' on a Evans",
-        "gp": 1,
-        "ppg": 4,
-        "apg": 1,
-        "rpg": 2,
-        "spg": 0,
-        "bpg": 0
-      },
-      {
-        "id": "tremann_was",
-        "first": "Tre",
-        "last": "Mann",
-        "team": "WAS",
-        "pos": "SG",
-        "pun": "Mann Happens",
-        "gp": 1,
-        "ppg": 3,
-        "apg": 1,
-        "rpg": 0,
-        "spg": 0,
-        "bpg": 0
-      },
-      {
-        "id": "milesmcbride_nyk",
-        "first": "Miles",
-        "last": "McBride",
-        "team": "NYK",
-        "pos": "SG",
-        "pun": "McBride Happens",
-        "gp": 1,
-        "ppg": 3,
-        "apg": 0,
-        "rpg": 0,
-        "spg": 1,
-        "bpg": 0
-      },
-      {
-        "id": "taelonpeter_sas",
-        "first": "Taelon",
-        "last": "Peter",
-        "team": "SAS",
-        "pos": "SG",
-        "pun": "Do The Chickens Have Large Taelons",
-        "gp": 1,
-        "ppg": 3,
-        "apg": 0,
-        "rpg": 0,
-        "spg": 1,
         "bpg": 0
       }
     ],
@@ -2633,6 +2633,34 @@
         "bpg": 0
       },
       {
+        "id": "kawhileonard_tor",
+        "first": "Kawhi",
+        "last": "Leonard",
+        "team": "TOR",
+        "pos": "SF",
+        "pun": "Big Girls Don't Kawhi",
+        "gp": 1,
+        "ppg": 21,
+        "apg": 0,
+        "rpg": 5,
+        "spg": 2,
+        "bpg": 0
+      },
+      {
+        "id": "franzwagner_orl",
+        "first": "Franz",
+        "last": "Wagner",
+        "team": "ORL",
+        "pos": "SF",
+        "pun": "Franz Ferdinand Wagner",
+        "gp": 1,
+        "ppg": 20,
+        "apg": 8,
+        "rpg": 4,
+        "spg": 2,
+        "bpg": 0
+      },
+      {
         "id": "bilalcoulibaly_was",
         "first": "Bilal",
         "last": "Coulibaly",
@@ -2645,6 +2673,34 @@
         "rpg": 2,
         "spg": 3,
         "bpg": 1
+      },
+      {
+        "id": "tristandasilva_orl",
+        "first": "Tristan",
+        "last": "da Silva",
+        "team": "ORL",
+        "pos": "SF",
+        "pun": "da Silva-tastic Voyage",
+        "gp": 1,
+        "ppg": 18,
+        "apg": 5,
+        "rpg": 3,
+        "spg": 1,
+        "bpg": 0
+      },
+      {
+        "id": "rjbarrett_tor",
+        "first": "RJ",
+        "last": "Barrett",
+        "team": "TOR",
+        "pos": "SF",
+        "pun": "Barrett Essentials",
+        "gp": 1,
+        "ppg": 17,
+        "apg": 3,
+        "rpg": 4,
+        "spg": 0,
+        "bpg": 0
       },
       {
         "id": "toumanicamara_por",
@@ -2689,6 +2745,20 @@
         "bpg": 0
       },
       {
+        "id": "jaylontyson_cle",
+        "first": "Jaylon",
+        "last": "Tyson",
+        "team": "CLE",
+        "pos": "SF",
+        "pun": "Jaylon Tyson Chicken",
+        "gp": 1,
+        "ppg": 12,
+        "apg": 1,
+        "rpg": 3,
+        "spg": 0,
+        "bpg": 0
+      },
+      {
         "id": "bricesensabaugh_uta",
         "first": "Brice",
         "last": "Sensabaugh",
@@ -2703,118 +2773,48 @@
         "bpg": 0
       },
       {
-        "id": "mikalbridges_nyk",
-        "first": "Mikal",
-        "last": "Bridges",
-        "team": "NYK",
+        "id": "peytonwatson_cle",
+        "first": "Peyton",
+        "last": "Watson",
+        "team": "CLE",
         "pos": "SF",
-        "pun": "Bridges Over Troubled Waters",
+        "pun": "Watson Happens",
         "gp": 1,
-        "ppg": 9,
+        "ppg": 10,
         "apg": 2,
-        "rpg": 2,
-        "spg": 0,
-        "bpg": 0
-      },
-      {
-        "id": "svimykhailiuk_uta",
-        "first": "Svi",
-        "last": "Mykhailiuk",
-        "team": "UTA",
-        "pos": "SF",
-        "pun": "Mykhailiuk'd Up and Ready",
-        "gp": 1,
-        "ppg": 7,
-        "apg": 2,
-        "rpg": 7,
-        "spg": 0,
-        "bpg": 0
-      },
-      {
-        "id": "kjmartin_min",
-        "first": "KJ",
-        "last": "Martin",
-        "team": "MIN",
-        "pos": "SF",
-        "pun": "Martin-tastic Voyage",
-        "gp": 1,
-        "ppg": 6,
-        "apg": 0,
-        "rpg": 0,
-        "spg": 0,
-        "bpg": 0
-      },
-      {
-        "id": "acebailey_uta",
-        "first": "Ace",
-        "last": "Bailey",
-        "team": "UTA",
-        "pos": "SF",
-        "pun": "Bailey'd Up and Ready",
-        "gp": 1,
-        "ppg": 6,
-        "apg": 3,
-        "rpg": 6,
-        "spg": 3,
-        "bpg": 0
-      },
-      {
-        "id": "jaysonkent_por",
-        "first": "Jayson",
-        "last": "Kent",
-        "team": "POR",
-        "pos": "SF",
-        "pun": "All Kent, No Filler",
-        "gp": 1,
-        "ppg": 5,
-        "apg": 1,
-        "rpg": 6,
+        "rpg": 4,
         "spg": 1,
-        "bpg": 0
+        "bpg": 2
       },
       {
-        "id": "joshokogie_uta",
-        "first": "Josh",
-        "last": "Okogie",
-        "team": "UTA",
+        "id": "kobebrown_ind",
+        "first": "Kobe",
+        "last": "Brown",
+        "team": "IND",
         "pos": "SF",
-        "pun": "An Okogie From Muskogee",
+        "pun": "Kobe & Chill",
         "gp": 1,
-        "ppg": 5,
+        "ppg": 10,
         "apg": 1,
-        "rpg": 0,
-        "spg": 0,
-        "bpg": 1
-      },
-      {
-        "id": "terancemann_bkn",
-        "first": "Terance",
-        "last": "Mann",
-        "team": "BKN",
-        "pos": "SF",
-        "pun": "Terance Mann The Battle Stations",
-        "gp": 1,
-        "ppg": 3,
-        "apg": 0,
-        "rpg": 2,
-        "spg": 0,
+        "rpg": 5,
+        "spg": 1,
         "bpg": 0
       }
     ],
     "PF": [
       {
-        "id": "brooksbarnhizer_okc",
-        "first": "Brooks",
-        "last": "Barnhizer",
-        "team": "OKC",
+        "id": "paolobanchero_orl",
+        "first": "Paolo",
+        "last": "Banchero",
+        "team": "ORL",
         "pos": "PF",
-        "pun": "Livin' on a Barnhizer",
+        "pun": "Huevos Bancheros",
         "gp": 1,
-        "ppg": 20,
-        "apg": 2,
+        "ppg": 24,
+        "apg": 3,
         "rpg": 8,
-        "spg": 0,
-        "bpg": 2
+        "spg": 1,
+        "bpg": 0
       },
       {
         "id": "harrisonbarnes_sas",
@@ -2828,6 +2828,34 @@
         "apg": 1,
         "rpg": 2,
         "spg": 0,
+        "bpg": 0
+      },
+      {
+        "id": "scottiebarnes_tor",
+        "first": "Scottie",
+        "last": "Barnes",
+        "team": "TOR",
+        "pos": "PF",
+        "pun": "Barnes&Noble",
+        "gp": 1,
+        "ppg": 19,
+        "apg": 4,
+        "rpg": 6,
+        "spg": 2,
+        "bpg": 1
+      },
+      {
+        "id": "jalenwilliams_okc",
+        "first": "Jalen",
+        "last": "Williams",
+        "team": "OKC",
+        "pos": "PF",
+        "pun": "Williams'd Up and Ready",
+        "gp": 1,
+        "ppg": 16,
+        "apg": 3,
+        "rpg": 4,
+        "spg": 1,
         "bpg": 0
       },
       {
@@ -2901,6 +2929,20 @@
         "bpg": 1
       },
       {
+        "id": "brooksbarnhizer_okc",
+        "first": "Brooks",
+        "last": "Barnhizer",
+        "team": "OKC",
+        "pos": "PF",
+        "pun": "Livin' on a Barnhizer",
+        "gp": 2,
+        "ppg": 13.5,
+        "apg": 2,
+        "rpg": 4.5,
+        "spg": 0.5,
+        "bpg": 1
+      },
+      {
         "id": "sidycissoko_por",
         "first": "Sidy",
         "last": "Cissoko",
@@ -2912,6 +2954,34 @@
         "apg": 3,
         "rpg": 2,
         "spg": 2,
+        "bpg": 0
+      },
+      {
+        "id": "mariohezonja_cle",
+        "first": "Mario",
+        "last": "Hezonja",
+        "team": "CLE",
+        "pos": "PF",
+        "pun": "In Hezonja We Trust",
+        "gp": 1,
+        "ppg": 12,
+        "apg": 2,
+        "rpg": 6,
+        "spg": 2,
+        "bpg": 0
+      },
+      {
+        "id": "kellyoubre_ind",
+        "first": "Kelly",
+        "last": "Oubre",
+        "team": "IND",
+        "pos": "PF",
+        "pun": "Kelly Oubre and the Fantasy Machine",
+        "gp": 1,
+        "ppg": 12,
+        "apg": 2,
+        "rpg": 5,
+        "spg": 1,
         "bpg": 0
       },
       {
@@ -2929,104 +2999,48 @@
         "bpg": 0
       },
       {
-        "id": "deniavdija_por",
-        "first": "Deni",
-        "last": "Avdija",
-        "team": "POR",
+        "id": "tylernickel_nyk",
+        "first": "Tyler",
+        "last": "Nickel",
+        "team": "NYK",
         "pos": "PF",
-        "pun": "Avdija-A-Palooza",
+        "pun": "The Nickel Show",
         "gp": 1,
-        "ppg": 9,
-        "apg": 4,
-        "rpg": 5,
-        "spg": 0,
-        "bpg": 0
-      },
-      {
-        "id": "jeremysochan_por",
-        "first": "Jeremy",
-        "last": "Sochan",
-        "team": "POR",
-        "pos": "PF",
-        "pun": "Dont Mess With The Sochan",
-        "gp": 1,
-        "ppg": 8,
-        "apg": 2,
-        "rpg": 8,
-        "spg": 1,
-        "bpg": 0
-      },
-      {
-        "id": "dorianfinneysmith_atl",
-        "first": "Dorian",
-        "last": "Finney-Smith",
-        "team": "ATL",
-        "pos": "PF",
-        "pun": "Finney-Smith Happens",
-        "gp": 1,
-        "ppg": 8,
+        "ppg": 11,
         "apg": 0,
-        "rpg": 1,
-        "spg": 0,
+        "rpg": 2,
+        "spg": 2,
         "bpg": 0
-      },
-      {
-        "id": "asanewell_atl",
-        "first": "Asa",
-        "last": "Newell",
-        "team": "ATL",
-        "pos": "PF",
-        "pun": "Newell'd Up and Ready",
-        "gp": 1,
-        "ppg": 7,
-        "apg": 1,
-        "rpg": 10,
-        "spg": 0,
-        "bpg": 2
-      },
-      {
-        "id": "justinchampagnie_was",
-        "first": "Justin",
-        "last": "Champagnie",
-        "team": "WAS",
-        "pos": "PF",
-        "pun": "Justin's Excellent Adventure",
-        "gp": 1,
-        "ppg": 7,
-        "apg": 0,
-        "rpg": 3,
-        "spg": 1,
-        "bpg": 0
-      },
-      {
-        "id": "coreykispert_atl",
-        "first": "Corey",
-        "last": "Kispert",
-        "team": "ATL",
-        "pos": "PF",
-        "pun": "All Kispert, No Filler",
-        "gp": 1,
-        "ppg": 6,
-        "apg": 2,
-        "rpg": 1,
-        "spg": 0,
-        "bpg": 2
       }
     ],
     "C": [
       {
-        "id": "adaymara_okc",
-        "first": "Aday",
-        "last": "Mara",
-        "team": "OKC",
+        "id": "collinmurrayboyles_tor",
+        "first": "Collin",
+        "last": "Murray-Boyles",
+        "team": "TOR",
         "pos": "C",
-        "pun": "Do or Aday",
+        "pun": "Murray-Boyles's Fantasy Fortress",
         "gp": 1,
-        "ppg": 17,
-        "apg": 6,
+        "ppg": 19,
+        "apg": 2,
+        "rpg": 9,
+        "spg": 1,
+        "bpg": 0
+      },
+      {
+        "id": "jameswiseman_nyk",
+        "first": "James",
+        "last": "Wiseman",
+        "team": "NYK",
+        "pos": "C",
+        "pun": "The Three Wiseman",
+        "gp": 1,
+        "ppg": 18,
+        "apg": 0,
         "rpg": 10,
         "spg": 0,
-        "bpg": 4
+        "bpg": 0
       },
       {
         "id": "jocklandale_atl",
@@ -3055,6 +3069,48 @@
         "rpg": 9,
         "spg": 0,
         "bpg": 1
+      },
+      {
+        "id": "evanmobley_cle",
+        "first": "Evan",
+        "last": "Mobley",
+        "team": "CLE",
+        "pos": "C",
+        "pun": "Mobley Dick",
+        "gp": 1,
+        "ppg": 14,
+        "apg": 0,
+        "rpg": 5,
+        "spg": 1,
+        "bpg": 2
+      },
+      {
+        "id": "gogabitadze_orl",
+        "first": "Goga",
+        "last": "Bitadze",
+        "team": "ORL",
+        "pos": "C",
+        "pun": "The Bitadze Show",
+        "gp": 1,
+        "ppg": 14,
+        "apg": 0,
+        "rpg": 6,
+        "spg": 1,
+        "bpg": 0
+      },
+      {
+        "id": "adaymara_okc",
+        "first": "Aday",
+        "last": "Mara",
+        "team": "OKC",
+        "pos": "C",
+        "pun": "Do or Aday",
+        "gp": 2,
+        "ppg": 13.5,
+        "apg": 3.5,
+        "rpg": 7,
+        "spg": 0,
+        "bpg": 3.5
       },
       {
         "id": "yanghansen_por",
@@ -3096,6 +3152,20 @@
         "apg": 1,
         "rpg": 3,
         "spg": 1,
+        "bpg": 0
+      },
+      {
+        "id": "ivicazubac_ind",
+        "first": "Ivica",
+        "last": "Zubac",
+        "team": "IND",
+        "pos": "C",
+        "pun": "Zuby Do",
+        "gp": 1,
+        "ppg": 13,
+        "apg": 5,
+        "rpg": 13,
+        "spg": 3,
         "bpg": 0
       },
       {
@@ -3141,86 +3211,16 @@
         "bpg": 0
       },
       {
-        "id": "tonybradley_nyk",
-        "first": "Tony",
-        "last": "Bradley",
-        "team": "NYK",
+        "id": "jayhuff_ind",
+        "first": "Jay",
+        "last": "Huff",
+        "team": "IND",
         "pos": "C",
-        "pun": "Tony's Excellent Adventure",
+        "pun": "Huff Happens",
         "gp": 1,
-        "ppg": 10,
-        "apg": 0,
-        "rpg": 2,
-        "spg": 0,
-        "bpg": 0
-      },
-      {
-        "id": "mobamba_uta",
-        "first": "Mo",
-        "last": "Bamba",
-        "team": "UTA",
-        "pos": "C",
-        "pun": "Mo Problems Mo Bamba",
-        "gp": 1,
-        "ppg": 9,
-        "apg": 2,
-        "rpg": 9,
-        "spg": 0,
-        "bpg": 1
-      },
-      {
-        "id": "micahpotter_por",
-        "first": "Micah",
-        "last": "Potter",
-        "team": "POR",
-        "pos": "C",
-        "pun": "In Potter We Trust",
-        "gp": 1,
-        "ppg": 7,
-        "apg": 0,
-        "rpg": 2,
-        "spg": 0,
-        "bpg": 0
-      },
-      {
-        "id": "alexsarr_was",
-        "first": "Alex",
-        "last": "Sarr",
-        "team": "WAS",
-        "pos": "C",
-        "pun": "Dancin' with the Sarrs",
-        "gp": 1,
-        "ppg": 6,
-        "apg": 0,
-        "rpg": 9,
-        "spg": 0,
-        "bpg": 0
-      },
-      {
-        "id": "christophtilly_okc",
-        "first": "Christoph",
-        "last": "Tilly",
-        "team": "OKC",
-        "pos": "C",
-        "pun": "In Tilly We Trust",
-        "gp": 1,
-        "ppg": 5,
-        "apg": 0,
-        "rpg": 2,
-        "spg": 0,
-        "bpg": 1
-      },
-      {
-        "id": "joanberinger_min",
-        "first": "Joan",
-        "last": "Beringer",
-        "team": "MIN",
-        "pos": "C",
-        "pun": "Joan's Excellent Adventure",
-        "gp": 1,
-        "ppg": 5,
-        "apg": 0,
-        "rpg": 4,
+        "ppg": 11,
+        "apg": 1,
+        "rpg": 3,
         "spg": 1,
         "bpg": 1
       }
