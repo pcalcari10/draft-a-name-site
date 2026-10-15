@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-15T03:16:48.300Z",
+  "generatedAt": "2026-10-15T06:22:26.217Z",
   "season": "20262027",
   "seasonTotals": {
     "C": [
@@ -31,15 +31,6 @@
         "pun": "The Eichel Tower of Power"
       },
       {
-        "id": "nathanmackinnon_col",
-        "first": "Nathan",
-        "last": "MacKinnon",
-        "team": "COL",
-        "pos": "C",
-        "pts": 12,
-        "pun": "MacK Attack"
-      },
-      {
         "id": "austonmatthews_tor",
         "first": "Auston",
         "last": "Matthews",
@@ -47,6 +38,15 @@
         "pos": "C",
         "pts": 12,
         "pun": "The Matthews Mavericks"
+      },
+      {
+        "id": "nathanmackinnon_col",
+        "first": "Nathan",
+        "last": "MacKinnon",
+        "team": "COL",
+        "pos": "C",
+        "pts": 12,
+        "pun": "MacK Attack"
       },
       {
         "id": "timsttzle_ott",
@@ -213,6 +213,15 @@
         "pun": "Jankowski's Fantasy Fortress"
       },
       {
+        "id": "artturilehkonen_col",
+        "first": "Artturi",
+        "last": "Lehkonen",
+        "team": "COL",
+        "pos": "LW",
+        "pts": 6,
+        "pun": "Art For Artturi’s Sake"
+      },
+      {
         "id": "paulcotter_njd",
         "first": "Paul",
         "last": "Cotter",
@@ -265,15 +274,6 @@
         "pos": "LW",
         "pts": 6,
         "pun": "William Carrier Pigeon"
-      },
-      {
-        "id": "victorolofsson_col",
-        "first": "Victor",
-        "last": "Olofsson",
-        "team": "VGK",
-        "pos": "LW",
-        "pts": 5,
-        "pun": "Olofsson's Fantasy Fortress"
       }
     ],
     "RW": [
@@ -377,6 +377,15 @@
         "pun": "Sennecke's Fantasy Fortress"
       },
       {
+        "id": "mikkorantanen_dal",
+        "first": "Mikko",
+        "last": "Rantanen",
+        "team": "DAL",
+        "pos": "RW",
+        "pts": 7,
+        "pun": "Rantanen Claus"
+      },
+      {
         "id": "mitchmarner_vgk",
         "first": "Mitch",
         "last": "Marner",
@@ -402,15 +411,6 @@
         "pos": "RW",
         "pts": 6,
         "pun": "Anderson's Fantasy Fortress"
-      },
-      {
-        "id": "jordaneberle_sea",
-        "first": "Jordan",
-        "last": "Eberle",
-        "team": "SEA",
-        "pos": "RW",
-        "pts": 6,
-        "pun": "Eberle and Ivory"
       }
     ],
     "D": [
@@ -505,6 +505,15 @@
         "pun": "Karlsson's Fantasy Fortress"
       },
       {
+        "id": "miroheiskanen_dal",
+        "first": "Miro",
+        "last": "Heiskanen",
+        "team": "DAL",
+        "pos": "D",
+        "pts": 6,
+        "pun": "Miro the Hero"
+      },
+      {
         "id": "devontoews_col",
         "first": "Devon",
         "last": "Toews",
@@ -566,15 +575,6 @@
         "pos": "D",
         "pts": 6,
         "pun": "Hronek's Fantasy Fortress"
-      },
-      {
-        "id": "miroheiskanen_dal",
-        "first": "Miro",
-        "last": "Heiskanen",
-        "team": "DAL",
-        "pos": "D",
-        "pts": 5,
-        "pun": "Miro the Hero"
       },
       {
         "id": "masonlohrei_bos",
@@ -1157,6 +1157,15 @@
         "pun": "The Quinn Hughes Cruise Control"
       },
       {
+        "id": "miroheiskanen_dal",
+        "first": "Miro",
+        "last": "Heiskanen",
+        "team": "DAL",
+        "pos": "D",
+        "pts": 3,
+        "pun": "Miro the Hero"
+      },
+      {
         "id": "mattiassamuelsson_buf",
         "first": "Mattias",
         "last": "Samuelsson",
@@ -1227,15 +1236,6 @@
         "pos": "D",
         "pts": 2,
         "pun": "Pionk's Fantasy Fortress"
-      },
-      {
-        "id": "miroheiskanen_dal",
-        "first": "Miro",
-        "last": "Heiskanen",
-        "team": "DAL",
-        "pos": "D",
-        "pts": 2,
-        "pun": "Miro the Hero"
       },
       {
         "id": "mikhailsergachev_uta",
