@@ -1,26 +1,26 @@
 {
-  "generatedAt": "2026-10-16T01:40:44.000Z",
+  "generatedAt": "2026-10-16T02:10:34.112Z",
   "season": "2026",
   "week": 6,
   "thisWeek": {
     "QB": [
-      {
-        "id": "bonix_den",
-        "first": "Bo",
-        "last": "Nix",
-        "team": "DEN",
-        "pos": "QB",
-        "pts": 3.1,
-        "pun": "Big Nix Energy"
-      },
       {
         "id": "samdarnold_sea",
         "first": "Sam",
         "last": "Darnold",
         "team": "SEA",
         "pos": "QB",
-        "pts": 2.1,
+        "pts": 4.3,
         "pun": "Hey Darnold"
+      },
+      {
+        "id": "bonix_den",
+        "first": "Bo",
+        "last": "Nix",
+        "team": "DEN",
+        "pos": "QB",
+        "pts": 3.7,
+        "pun": "Big Nix Energy"
       }
     ],
     "RB": [
@@ -39,7 +39,7 @@
         "last": "Dobbins",
         "team": "DEN",
         "pos": "RB",
-        "pts": 9.5,
+        "pts": 10.8,
         "pun": "LOL JK"
       },
       {
@@ -48,7 +48,7 @@
         "last": "Wilson",
         "team": "SEA",
         "pos": "RB",
-        "pts": 3,
+        "pts": 3.3,
         "pun": "WILSON!🏐"
       },
       {
@@ -72,6 +72,33 @@
         "pun": "Cooper Troopers"
       },
       {
+        "id": "jaxonsmithnjigba_sea",
+        "first": "Jaxon",
+        "last": "Smith-Njigba",
+        "team": "SEA",
+        "pos": "WR",
+        "pts": 5.6,
+        "pun": "I'm Sorry Ms. Jaxon"
+      },
+      {
+        "id": "rashidshaheed_sea",
+        "first": "Rashid",
+        "last": "Shaheed",
+        "team": "SEA",
+        "pos": "WR",
+        "pts": 5.2,
+        "pun": "Rashid & Chill"
+      },
+      {
+        "id": "courtlandsutton_den",
+        "first": "Courtland",
+        "last": "Sutton",
+        "team": "DEN",
+        "pos": "WR",
+        "pts": 3.9,
+        "pun": "Lord of the Court"
+      },
+      {
         "id": "jaylenwaddle_den",
         "first": "Jaylen",
         "last": "Waddle",
@@ -81,30 +108,12 @@
         "pun": "A Waddle to Remember"
       },
       {
-        "id": "jaxonsmithnjigba_sea",
-        "first": "Jaxon",
-        "last": "Smith-Njigba",
-        "team": "SEA",
-        "pos": "WR",
-        "pts": 3.1,
-        "pun": "I'm Sorry Ms. Jaxon"
-      },
-      {
-        "id": "courtlandsutton_den",
-        "first": "Courtland",
-        "last": "Sutton",
-        "team": "DEN",
-        "pos": "WR",
-        "pts": 1.9,
-        "pun": "Lord of the Court"
-      },
-      {
         "id": "velusjones_sea",
         "first": "Velus",
         "last": "Jones",
         "team": "SEA",
         "pos": "WR",
-        "pts": 1.9,
+        "pts": 2.9,
         "pun": "Jonesing for A Title"
       },
       {
@@ -144,7 +153,7 @@
         "last": "Myers",
         "team": "SEA",
         "pos": "K",
-        "pts": 5,
+        "pts": 4,
         "pun": "All Myers, No Filler"
       },
       {
@@ -456,7 +465,7 @@
         "last": "Wilson",
         "team": "SEA",
         "pos": "RB",
-        "pts": 54.1,
+        "pts": 54.4,
         "pun": "WILSON!🏐"
       },
       {
@@ -494,7 +503,7 @@
         "last": "Smith-Njigba",
         "team": "SEA",
         "pos": "WR",
-        "pts": 142.6,
+        "pts": 145.1,
         "pun": "I'm Sorry Ms. Jaxon"
       },
       {
@@ -840,7 +849,7 @@
         "last": "Myers",
         "team": "SEA",
         "pos": "K",
-        "pts": 56,
+        "pts": 55,
         "pun": "All Myers, No Filler"
       },
       {
