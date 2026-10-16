@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-16T03:10:43.017Z",
+  "generatedAt": "2026-10-16T03:44:10.148Z",
   "season": "2026",
   "week": 6,
   "thisWeek": {
@@ -10,7 +10,7 @@
         "last": "Darnold",
         "team": "SEA",
         "pos": "QB",
-        "pts": 12.3,
+        "pts": 13,
         "pun": "Hey Darnold"
       },
       {
@@ -19,7 +19,7 @@
         "last": "Nix",
         "team": "DEN",
         "pos": "QB",
-        "pts": 4.3,
+        "pts": 4.5,
         "pun": "Big Nix Energy"
       }
     ],
@@ -30,7 +30,7 @@
         "last": "Harvey",
         "team": "DEN",
         "pos": "RB",
-        "pts": 14.1,
+        "pts": 14.6,
         "pun": "Two Face"
       },
       {
@@ -39,7 +39,7 @@
         "last": "Dobbins",
         "team": "DEN",
         "pos": "RB",
-        "pts": 13.7,
+        "pts": 13.6,
         "pun": "LOL JK"
       },
       {
@@ -48,7 +48,7 @@
         "last": "Holani",
         "team": "SEA",
         "pos": "RB",
-        "pts": 7.7,
+        "pts": 8,
         "pun": "Holani-tastic Voyage"
       },
       {
@@ -57,7 +57,7 @@
         "last": "Wilson",
         "team": "SEA",
         "pos": "RB",
-        "pts": 4.5,
+        "pts": 5.2,
         "pun": "WILSON!🏐"
       },
       {
@@ -77,7 +77,7 @@
         "last": "Smith-Njigba",
         "team": "SEA",
         "pos": "WR",
-        "pts": 22.2,
+        "pts": 25.4,
         "pun": "I'm Sorry Ms. Jaxon"
       },
       {
@@ -86,7 +86,7 @@
         "last": "Shaheed",
         "team": "SEA",
         "pos": "WR",
-        "pts": 9.8,
+        "pts": 11.8,
         "pun": "Rashid & Chill"
       },
       {
@@ -95,7 +95,7 @@
         "last": "Kupp",
         "team": "SEA",
         "pos": "WR",
-        "pts": 7.3,
+        "pts": 10,
         "pun": "Cooper Troopers"
       },
       {
@@ -155,6 +155,15 @@
     ],
     "TE": [
       {
+        "id": "ajbarner_sea",
+        "first": "AJ",
+        "last": "Barner",
+        "team": "SEA",
+        "pos": "TE",
+        "pts": 4.6,
+        "pun": "Barner'd Up and Ready"
+      },
+      {
         "id": "evanengram_den",
         "first": "Evan",
         "last": "Engram",
@@ -162,15 +171,6 @@
         "pos": "TE",
         "pts": 3.3,
         "pun": "Engram of Fame"
-      },
-      {
-        "id": "ajbarner_sea",
-        "first": "AJ",
-        "last": "Barner",
-        "team": "SEA",
-        "pos": "TE",
-        "pts": 3.2,
-        "pun": "Barner'd Up and Ready"
       }
     ],
     "K": [
@@ -180,7 +180,7 @@
         "last": "Myers",
         "team": "SEA",
         "pos": "K",
-        "pts": 4,
+        "pts": 7,
         "pun": "All Myers, No Filler"
       },
       {
@@ -189,7 +189,7 @@
         "last": "Lutz",
         "team": "DEN",
         "pos": "K",
-        "pts": 2,
+        "pts": 7,
         "pun": "Whatchu Talkin Bout Will Lutz"
       }
     ]
@@ -492,7 +492,7 @@
         "last": "Wilson",
         "team": "SEA",
         "pos": "RB",
-        "pts": 55.6,
+        "pts": 56.3,
         "pun": "WILSON!🏐"
       },
       {
@@ -501,7 +501,7 @@
         "last": "Harvey",
         "team": "DEN",
         "pos": "RB",
-        "pts": 52.9,
+        "pts": 53.4,
         "pun": "Two Face"
       },
       {
@@ -530,7 +530,7 @@
         "last": "Smith-Njigba",
         "team": "SEA",
         "pos": "WR",
-        "pts": 161.7,
+        "pts": 164.9,
         "pun": "I'm Sorry Ms. Jaxon"
       },
       {
@@ -876,7 +876,7 @@
         "last": "Myers",
         "team": "SEA",
         "pos": "K",
-        "pts": 55,
+        "pts": 58,
         "pun": "All Myers, No Filler"
       },
       {
