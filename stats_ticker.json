@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-16T02:10:34.112Z",
+  "generatedAt": "2026-10-16T02:42:50.062Z",
   "season": "2026",
   "week": 6,
   "thisWeek": {
@@ -10,7 +10,7 @@
         "last": "Darnold",
         "team": "SEA",
         "pos": "QB",
-        "pts": 4.3,
+        "pts": 6.4,
         "pun": "Hey Darnold"
       },
       {
@@ -19,7 +19,7 @@
         "last": "Nix",
         "team": "DEN",
         "pos": "QB",
-        "pts": 3.7,
+        "pts": 4.1,
         "pun": "Big Nix Energy"
       }
     ],
@@ -30,7 +30,7 @@
         "last": "Harvey",
         "team": "DEN",
         "pos": "RB",
-        "pts": 13.2,
+        "pts": 14,
         "pun": "Two Face"
       },
       {
@@ -39,7 +39,7 @@
         "last": "Dobbins",
         "team": "DEN",
         "pos": "RB",
-        "pts": 10.8,
+        "pts": 12.1,
         "pun": "LOL JK"
       },
       {
@@ -48,7 +48,7 @@
         "last": "Wilson",
         "team": "SEA",
         "pos": "RB",
-        "pts": 3.3,
+        "pts": 4.5,
         "pun": "WILSON!🏐"
       },
       {
@@ -59,9 +59,36 @@
         "pos": "RB",
         "pts": 0.6,
         "pun": "Badie-tastic Voyage"
+      },
+      {
+        "id": "georgeholani_sea",
+        "first": "George",
+        "last": "Holani",
+        "team": "SEA",
+        "pos": "RB",
+        "pts": -0.1,
+        "pun": "Holani-tastic Voyage"
       }
     ],
     "WR": [
+      {
+        "id": "jaxonsmithnjigba_sea",
+        "first": "Jaxon",
+        "last": "Smith-Njigba",
+        "team": "SEA",
+        "pos": "WR",
+        "pts": 11.9,
+        "pun": "I'm Sorry Ms. Jaxon"
+      },
+      {
+        "id": "rashidshaheed_sea",
+        "first": "Rashid",
+        "last": "Shaheed",
+        "team": "SEA",
+        "pos": "WR",
+        "pts": 7.8,
+        "pun": "Rashid & Chill"
+      },
       {
         "id": "cooperkupp_sea",
         "first": "Cooper",
@@ -72,22 +99,13 @@
         "pun": "Cooper Troopers"
       },
       {
-        "id": "jaxonsmithnjigba_sea",
-        "first": "Jaxon",
-        "last": "Smith-Njigba",
-        "team": "SEA",
+        "id": "jaylenwaddle_den",
+        "first": "Jaylen",
+        "last": "Waddle",
+        "team": "DEN",
         "pos": "WR",
-        "pts": 5.6,
-        "pun": "I'm Sorry Ms. Jaxon"
-      },
-      {
-        "id": "rashidshaheed_sea",
-        "first": "Rashid",
-        "last": "Shaheed",
-        "team": "SEA",
-        "pos": "WR",
-        "pts": 5.2,
-        "pun": "Rashid & Chill"
+        "pts": 4.9,
+        "pun": "A Waddle to Remember"
       },
       {
         "id": "courtlandsutton_den",
@@ -99,13 +117,13 @@
         "pun": "Lord of the Court"
       },
       {
-        "id": "jaylenwaddle_den",
-        "first": "Jaylen",
-        "last": "Waddle",
+        "id": "marvinmimsjr_den",
+        "first": "Marvin",
+        "last": "Mims",
         "team": "DEN",
         "pos": "WR",
-        "pts": 3.5,
-        "pun": "A Waddle to Remember"
+        "pts": 3.3,
+        "pun": "Mims the Word"
       },
       {
         "id": "velusjones_sea",
@@ -117,13 +135,13 @@
         "pun": "Jonesing for A Title"
       },
       {
-        "id": "marvinmimsjr_den",
-        "first": "Marvin",
-        "last": "Mims",
-        "team": "DEN",
+        "id": "toryhorton_sea",
+        "first": "Tory",
+        "last": "Horton",
+        "team": "SEA",
         "pos": "WR",
-        "pts": 1.8,
-        "pun": "Mims the Word"
+        "pts": 2.3,
+        "pun": "Horton Happens"
       },
       {
         "id": "troyfranklin_den",
@@ -144,6 +162,15 @@
         "pos": "TE",
         "pts": 3.3,
         "pun": "Engram of Fame"
+      },
+      {
+        "id": "ajbarner_sea",
+        "first": "AJ",
+        "last": "Barner",
+        "team": "SEA",
+        "pos": "TE",
+        "pts": 1.1,
+        "pun": "Barner'd Up and Ready"
       }
     ],
     "K": [
@@ -465,7 +492,7 @@
         "last": "Wilson",
         "team": "SEA",
         "pos": "RB",
-        "pts": 54.4,
+        "pts": 55.6,
         "pun": "WILSON!🏐"
       },
       {
@@ -474,7 +501,7 @@
         "last": "Harvey",
         "team": "DEN",
         "pos": "RB",
-        "pts": 52,
+        "pts": 52.8,
         "pun": "Two Face"
       },
       {
@@ -503,7 +530,7 @@
         "last": "Smith-Njigba",
         "team": "SEA",
         "pos": "WR",
-        "pts": 145.1,
+        "pts": 151.4,
         "pun": "I'm Sorry Ms. Jaxon"
       },
       {
