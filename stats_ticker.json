@@ -1,31 +1,76 @@
 {
-  "generatedAt": "2026-10-16T00:21:40.253Z",
+  "generatedAt": "2026-10-16T01:06:05.894Z",
   "season": "2026",
   "week": 6,
   "thisWeek": {
     "QB": [
+      {
+        "id": "bonix_den",
+        "first": "Bo",
+        "last": "Nix",
+        "team": "DEN",
+        "pos": "QB",
+        "pts": 2.4,
+        "pun": "Big Nix Energy"
+      },
       {
         "id": "samdarnold_sea",
         "first": "Sam",
         "last": "Darnold",
         "team": "SEA",
         "pos": "QB",
-        "pts": 1.1,
+        "pts": 1.3,
         "pun": "Hey Darnold"
       }
     ],
     "RB": [
+      {
+        "id": "jkdobbins_den",
+        "first": "J.K.",
+        "last": "Dobbins",
+        "team": "DEN",
+        "pos": "RB",
+        "pts": 7.6,
+        "pun": "LOL JK"
+      },
+      {
+        "id": "rjharvey_den",
+        "first": "RJ",
+        "last": "Harvey",
+        "team": "DEN",
+        "pos": "RB",
+        "pts": 6.1,
+        "pun": "Two Face"
+      },
       {
         "id": "emanuelwilson_sea",
         "first": "Emanuel",
         "last": "Wilson",
         "team": "SEA",
         "pos": "RB",
-        "pts": 0.5,
+        "pts": 1.9,
         "pun": "WILSON!🏐"
+      },
+      {
+        "id": "tylerbadie_den",
+        "first": "Tyler",
+        "last": "Badie",
+        "team": "DEN",
+        "pos": "RB",
+        "pts": 0.6,
+        "pun": "Badie-tastic Voyage"
       }
     ],
     "WR": [
+      {
+        "id": "cooperkupp_sea",
+        "first": "Cooper",
+        "last": "Kupp",
+        "team": "SEA",
+        "pos": "WR",
+        "pts": 3.3,
+        "pun": "Cooper Troopers"
+      },
       {
         "id": "jaxonsmithnjigba_sea",
         "first": "Jaxon",
@@ -36,13 +81,22 @@
         "pun": "I'm Sorry Ms. Jaxon"
       },
       {
-        "id": "cooperkupp_sea",
-        "first": "Cooper",
-        "last": "Kupp",
-        "team": "SEA",
+        "id": "courtlandsutton_den",
+        "first": "Courtland",
+        "last": "Sutton",
+        "team": "DEN",
+        "pos": "WR",
+        "pts": 1.9,
+        "pun": "Lord of the Court"
+      },
+      {
+        "id": "jaylenwaddle_den",
+        "first": "Jaylen",
+        "last": "Waddle",
+        "team": "DEN",
         "pos": "WR",
         "pts": 1.8,
-        "pun": "Cooper Troopers"
+        "pun": "A Waddle to Remember"
       },
       {
         "id": "rashidshaheed_sea",
@@ -52,10 +106,57 @@
         "pos": "WR",
         "pts": 1.8,
         "pun": "Rashid & Chill"
+      },
+      {
+        "id": "troyfranklin_den",
+        "first": "Troy",
+        "last": "Franklin",
+        "team": "DEN",
+        "pos": "WR",
+        "pts": 1.2,
+        "pun": "Troy Franklin's $100 Bill"
+      },
+      {
+        "id": "velusjones_sea",
+        "first": "Velus",
+        "last": "Jones",
+        "team": "SEA",
+        "pos": "WR",
+        "pts": 0.5,
+        "pun": "Jonesing for A Title"
       }
     ],
-    "TE": [],
-    "K": []
+    "TE": [
+      {
+        "id": "evanengram_den",
+        "first": "Evan",
+        "last": "Engram",
+        "team": "DEN",
+        "pos": "TE",
+        "pts": 1.9,
+        "pun": "Engram of Fame"
+      }
+    ],
+    "K": [
+      {
+        "id": "jasonmyers_sea",
+        "first": "Jason",
+        "last": "Myers",
+        "team": "SEA",
+        "pos": "K",
+        "pts": 5,
+        "pun": "All Myers, No Filler"
+      },
+      {
+        "id": "willutz_den",
+        "first": "Wil",
+        "last": "Lutz",
+        "team": "DEN",
+        "pos": "K",
+        "pts": 1,
+        "pun": "Whatchu Talkin Bout Will Lutz"
+      }
+    ]
   },
   "seasonTotals": {
     "QB": [
@@ -355,7 +456,7 @@
         "last": "Wilson",
         "team": "SEA",
         "pos": "RB",
-        "pts": 51.6,
+        "pts": 53,
         "pun": "WILSON!🏐"
       },
       {
@@ -734,6 +835,15 @@
         "pun": "Reichard Happens"
       },
       {
+        "id": "jasonmyers_sea",
+        "first": "Jason",
+        "last": "Myers",
+        "team": "SEA",
+        "pos": "K",
+        "pts": 56,
+        "pun": "All Myers, No Filler"
+      },
+      {
         "id": "evanmcpherson_cin",
         "first": "Evan",
         "last": "McPherson",
@@ -759,15 +869,6 @@
         "pos": "K",
         "pts": 52,
         "pun": "Jumping Through Loops"
-      },
-      {
-        "id": "jasonmyers_sea",
-        "first": "Jason",
-        "last": "Myers",
-        "team": "SEA",
-        "pos": "K",
-        "pts": 51,
-        "pun": "All Myers, No Filler"
       },
       {
         "id": "mattgay_lv",
