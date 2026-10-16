@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-16T03:16:44.643Z",
+  "generatedAt": "2026-10-16T06:21:45.684Z",
   "season": "20262027",
   "seasonTotals": {
     "C": [
@@ -701,6 +701,15 @@
         "pun": "Reinhart of the Matter"
       },
       {
+        "id": "connormcdavid_edm",
+        "first": "Connor",
+        "last": "McDavid",
+        "team": "EDM",
+        "pos": "C",
+        "pts": 5,
+        "pun": "McDavid's Marvels"
+      },
+      {
         "id": "evanrodrigues_fla",
         "first": "Evan",
         "last": "Rodrigues",
@@ -708,6 +717,24 @@
         "pos": "C",
         "pts": 4,
         "pun": "Rodrigues's Fantasy Fortress"
+      },
+      {
+        "id": "jackeichel_vgk",
+        "first": "Jack",
+        "last": "Eichel",
+        "team": "VGK",
+        "pos": "C",
+        "pts": 4,
+        "pun": "The Eichel Tower of Power"
+      },
+      {
+        "id": "bretthowden_vgk",
+        "first": "Brett",
+        "last": "Howden",
+        "team": "VGK",
+        "pos": "C",
+        "pts": 4,
+        "pun": "Howden's Fantasy Fortress"
       },
       {
         "id": "piussuter_stl",
@@ -744,15 +771,6 @@
         "pos": "C",
         "pts": 4,
         "pun": "The Tavares Titans"
-      },
-      {
-        "id": "connormcdavid_edm",
-        "first": "Connor",
-        "last": "McDavid",
-        "team": "EDM",
-        "pos": "C",
-        "pts": 4,
-        "pun": "McDavid's Marvels"
       },
       {
         "id": "carterverhaeghe_fla",
@@ -800,31 +818,13 @@
         "pun": "Mercer's Fantasy Fortress"
       },
       {
-        "id": "bretthowden_vgk",
-        "first": "Brett",
-        "last": "Howden",
+        "id": "williamkarlsson_vgk",
+        "first": "William",
+        "last": "Karlsson",
         "team": "VGK",
         "pos": "C",
         "pts": 3,
-        "pun": "Howden's Fantasy Fortress"
-      },
-      {
-        "id": "joelerikssonek_min",
-        "first": "Joel",
-        "last": "Eriksson Ek",
-        "team": "MIN",
-        "pos": "C",
-        "pts": 3,
-        "pun": "Eriksson Ek's Fantasy Fortress"
-      },
-      {
-        "id": "robertthomas_stl",
-        "first": "Robert",
-        "last": "Thomas",
-        "team": "STL",
-        "pos": "C",
-        "pts": 3,
-        "pun": "Thomas's Fantasy Fortress"
+        "pun": "Karlsson's Fantasy Fortress"
       }
     ],
     "LW": [
@@ -872,6 +872,15 @@
         "pos": "LW",
         "pts": 3,
         "pun": "Original Brattwurst"
+      },
+      {
+        "id": "ivanbarbashev_vgk",
+        "first": "Ivan",
+        "last": "Barbashev",
+        "team": "VGK",
+        "pos": "LW",
+        "pts": 3,
+        "pun": "Close Shave America, Close Shave Barbashev"
       },
       {
         "id": "alexislafrenire_nyr",
@@ -953,15 +962,6 @@
         "pos": "LW",
         "pts": 2,
         "pun": "Hagel's Fantasy Fortress"
-      },
-      {
-        "id": "tyekartye_sea",
-        "first": "Tye",
-        "last": "Kartye",
-        "team": "NYR",
-        "pos": "LW",
-        "pts": 2,
-        "pun": "Kartye's Fantasy Fortress"
       }
     ],
     "RW": [
@@ -973,6 +973,24 @@
         "pos": "RW",
         "pts": 6,
         "pun": "Quinn's Fantasy Fortress"
+      },
+      {
+        "id": "markstone_vgk",
+        "first": "Mark",
+        "last": "Stone",
+        "team": "VGK",
+        "pos": "RW",
+        "pts": 4,
+        "pun": "The Mark Stone Masons"
+      },
+      {
+        "id": "mitchmarner_vgk",
+        "first": "Mitch",
+        "last": "Marner",
+        "team": "VGK",
+        "pos": "RW",
+        "pts": 4,
+        "pun": "Marner's Farm"
       },
       {
         "id": "kirillmarchenko_cbj",
@@ -1029,6 +1047,24 @@
         "pun": "The Kane Train"
       },
       {
+        "id": "claytonkeller_uta",
+        "first": "Clayton",
+        "last": "Keller",
+        "team": "UTA",
+        "pos": "RW",
+        "pts": 3,
+        "pun": "Natural Born Keller"
+      },
+      {
+        "id": "dylanguenther_uta",
+        "first": "Dylan",
+        "last": "Guenther",
+        "team": "UTA",
+        "pos": "RW",
+        "pts": 3,
+        "pun": "Guenther Centralperk"
+      },
+      {
         "id": "claudegiroux_ott",
         "first": "Claude",
         "last": "Giroux",
@@ -1063,42 +1099,6 @@
         "pos": "RW",
         "pts": 2,
         "pun": "Arseny Vibes Only"
-      },
-      {
-        "id": "mitchmarner_vgk",
-        "first": "Mitch",
-        "last": "Marner",
-        "team": "VGK",
-        "pos": "RW",
-        "pts": 2,
-        "pun": "Marner's Farm"
-      },
-      {
-        "id": "danilayurov_min",
-        "first": "Danila",
-        "last": "Yurov",
-        "team": "MIN",
-        "pos": "RW",
-        "pts": 2,
-        "pun": "Yurov's Fantasy Fortress"
-      },
-      {
-        "id": "maximshabanov_nyi",
-        "first": "Maxim",
-        "last": "Shabanov",
-        "team": "MIN",
-        "pos": "RW",
-        "pts": 2,
-        "pun": "Shabanov's Fantasy Fortress"
-      },
-      {
-        "id": "stefannoesen_njd",
-        "first": "Stefan",
-        "last": "Noesen",
-        "team": "NJD",
-        "pos": "RW",
-        "pts": 2,
-        "pun": "Noesen's Fantasy Fortress"
       }
     ],
     "D": [
@@ -1211,6 +1211,15 @@
         "pun": "Miro the Hero"
       },
       {
+        "id": "evanbouchard_edm",
+        "first": "Evan",
+        "last": "Bouchard",
+        "team": "EDM",
+        "pos": "D",
+        "pts": 3,
+        "pun": "Bouchard's Fantasy Fortress"
+      },
+      {
         "id": "aaronekblad_fla",
         "first": "Aaron",
         "last": "Ekblad",
@@ -1238,6 +1247,15 @@
         "pun": "Pesce's Fantasy Fortress"
       },
       {
+        "id": "noahhanifin_vgk",
+        "first": "Noah",
+        "last": "Hanifin",
+        "team": "VGK",
+        "pos": "D",
+        "pts": 2,
+        "pun": "Hanifin's Fantasy Fortress"
+      },
+      {
         "id": "antonjohansson_det",
         "first": "Anton",
         "last": "Johansson",
@@ -1263,24 +1281,6 @@
         "pos": "D",
         "pts": 2,
         "pun": "Ballistic: Ecks vs. Severson"
-      },
-      {
-        "id": "victorhedman_tbl",
-        "first": "Victor",
-        "last": "Hedman",
-        "team": "TBL",
-        "pos": "D",
-        "pts": 2,
-        "pun": "Hedman's Fantasy Fortress"
-      },
-      {
-        "id": "marcuspettersson_van",
-        "first": "Marcus",
-        "last": "Pettersson",
-        "team": "NYR",
-        "pos": "D",
-        "pts": 2,
-        "pun": "Pettersson's Fantasy Fortress"
       }
     ],
     "G": [
