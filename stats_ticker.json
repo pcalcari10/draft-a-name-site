@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-18T20:43:48.020Z",
+  "generatedAt": "2026-10-18T21:05:32.654Z",
   "season": "2026",
   "week": 6,
   "thisWeek": {
@@ -73,7 +73,7 @@
         "last": "Rodgers",
         "team": "PIT",
         "pos": "QB",
-        "pts": 17.3,
+        "pts": 17,
         "pun": "Mr. Rodgers' Neighborhood"
       },
       {
@@ -214,6 +214,15 @@
         "pun": "I'm Allen Ears"
       },
       {
+        "id": "blakecorum_lar",
+        "first": "Blake",
+        "last": "Corum",
+        "team": "LAR",
+        "pos": "RB",
+        "pts": 12.3,
+        "pun": "Lack of de-Corum"
+      },
+      {
         "id": "jawharjordan_hou",
         "first": "Jawhar",
         "last": "Jordan",
@@ -232,21 +241,12 @@
         "pun": "Walker in the Park"
       },
       {
-        "id": "jaylenwarren_pit",
-        "first": "Jaylen",
-        "last": "Warren",
-        "team": "PIT",
-        "pos": "RB",
-        "pts": 10.8,
-        "pun": "This is Your Final Warren"
-      },
-      {
         "id": "ashtonjeanty_lv",
         "first": "Ashton",
         "last": "Jeanty",
         "team": "LV",
         "pos": "RB",
-        "pts": 10.2,
+        "pts": 10.7,
         "pun": "Fire and Ashton"
       },
       {
@@ -257,6 +257,15 @@
         "pos": "RB",
         "pts": 10.1,
         "pun": "Marks-tastic Voyage"
+      },
+      {
+        "id": "jaylenwarren_pit",
+        "first": "Jaylen",
+        "last": "Warren",
+        "team": "PIT",
+        "pos": "RB",
+        "pts": 9.8,
+        "pun": "This is Your Final Warren"
       },
       {
         "id": "jaleelmclaughlin_cle",
@@ -320,15 +329,6 @@
         "pos": "RB",
         "pts": 7.3,
         "pun": "To Infinity and Bijan"
-      },
-      {
-        "id": "buckyirving_tb",
-        "first": "Bucky",
-        "last": "Irving",
-        "team": "TB",
-        "pos": "RB",
-        "pts": 6.9,
-        "pun": "Bucky Beaver Dam"
       }
     ],
     "WR": [
@@ -760,7 +760,7 @@
         "last": "Allen",
         "team": "BUF",
         "pos": "QB",
-        "pts": 147.8,
+        "pts": 150.2,
         "pun": "Quit Joshin' Around"
       },
       {
@@ -827,15 +827,6 @@
         "pun": "The Bryce Is Right"
       },
       {
-        "id": "aaronrodgers_pit",
-        "first": "Aaron",
-        "last": "Rodgers",
-        "team": "PIT",
-        "pos": "QB",
-        "pts": 104.5,
-        "pun": "Mr. Rodgers' Neighborhood"
-      },
-      {
         "id": "joeburrow_cin",
         "first": "Joe",
         "last": "Burrow",
@@ -845,22 +836,31 @@
         "pun": "Beg, Burrow, and Steal"
       },
       {
+        "id": "aaronrodgers_pit",
+        "first": "Aaron",
+        "last": "Rodgers",
+        "team": "PIT",
+        "pos": "QB",
+        "pts": 104.2,
+        "pun": "Mr. Rodgers' Neighborhood"
+      },
+      {
+        "id": "matthewstafford_lar",
+        "first": "Matthew",
+        "last": "Stafford",
+        "team": "LAR",
+        "pos": "QB",
+        "pts": 101.9,
+        "pun": "Stafford Infection"
+      },
+      {
         "id": "kirkcousins_lv",
         "first": "Kirk",
         "last": "Cousins",
         "team": "LV",
         "pos": "QB",
-        "pts": 98.5,
+        "pts": 98.7,
         "pun": "I Married my Cousins"
-      },
-      {
-        "id": "dakprescott_dal",
-        "first": "Dak",
-        "last": "Prescott",
-        "team": "DAL",
-        "pos": "QB",
-        "pts": 96.8,
-        "pun": "The Boys Are Dak In Town"
       }
     ],
     "RB": [
@@ -915,7 +915,7 @@
         "last": "Williams",
         "team": "LAR",
         "pos": "RB",
-        "pts": 111.4,
+        "pts": 112.1,
         "pun": "Williams-Sonoma Touchdowns"
       },
       {
@@ -933,7 +933,7 @@
         "last": "Warren",
         "team": "PIT",
         "pos": "RB",
-        "pts": 103.8,
+        "pts": 102.8,
         "pun": "This is Your Final Warren"
       },
       {
@@ -960,7 +960,7 @@
         "last": "Jeanty",
         "team": "LV",
         "pos": "RB",
-        "pts": 94.8,
+        "pts": 95.3,
         "pun": "Fire and Ashton"
       },
       {
@@ -978,7 +978,7 @@
         "last": "Cook",
         "team": "BUF",
         "pos": "RB",
-        "pts": 90.5,
+        "pts": 90.9,
         "pun": "James Cooked"
       },
       {
@@ -1142,7 +1142,7 @@
         "last": "Adams",
         "team": "LAR",
         "pos": "WR",
-        "pts": 95.1,
+        "pts": 96.8,
         "pun": "Davante's Inferno"
       },
       {
@@ -1191,6 +1191,15 @@
         "pun": "Drake London Calling"
       },
       {
+        "id": "pukanacua_lar",
+        "first": "Puka",
+        "last": "Nacua",
+        "team": "LAR",
+        "pos": "WR",
+        "pts": 81.4,
+        "pun": "Nacua Matata"
+      },
+      {
         "id": "jamarrchase_cin",
         "first": "Ja'Marr",
         "last": "Chase",
@@ -1207,15 +1216,6 @@
         "pos": "WR",
         "pts": 78.3,
         "pun": "Golden Goose"
-      },
-      {
-        "id": "pukanacua_lar",
-        "first": "Puka",
-        "last": "Nacua",
-        "team": "LAR",
-        "pos": "WR",
-        "pts": 77.8,
-        "pun": "Nacua Matata"
       },
       {
         "id": "mikeevans_sf",
@@ -1315,7 +1315,7 @@
         "last": "McBride",
         "team": "ARI",
         "pos": "TE",
-        "pts": 97,
+        "pts": 98,
         "pun": "50 Shades of Trey"
       },
       {
@@ -1391,6 +1391,15 @@
         "pun": "Schultz-A-Palooza"
       },
       {
+        "id": "daltonkincaid_buf",
+        "first": "Dalton",
+        "last": "Kincaid",
+        "team": "BUF",
+        "pos": "TE",
+        "pts": 55.3,
+        "pun": "Dalton Abbey"
+      },
+      {
         "id": "haroldfanninjr_cle",
         "first": "Harold",
         "last": "Fannin",
@@ -1398,15 +1407,6 @@
         "pos": "TE",
         "pts": 53.6,
         "pun": "Fannin Fodder"
-      },
-      {
-        "id": "hunterhenry_ne",
-        "first": "Hunter",
-        "last": "Henry",
-        "team": "NE",
-        "pos": "TE",
-        "pts": 53.5,
-        "pun": "Henry's Bulldozers"
       }
     ],
     "K": [
@@ -1492,13 +1492,13 @@
         "pun": "Cam's Excellent Adventure"
       },
       {
-        "id": "jasonsanders_nyj",
-        "first": "Jason",
-        "last": "Sanders",
-        "team": "NYJ",
+        "id": "mattgay_lv",
+        "first": "Matt",
+        "last": "Gay",
+        "team": "LV",
         "pos": "K",
-        "pts": 51,
-        "pun": "Livin' on a Sanders"
+        "pts": 52,
+        "pun": "Matt's Excellent Adventure"
       }
     ]
   }
