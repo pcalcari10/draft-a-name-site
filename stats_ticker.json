@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-18T21:38:46.844Z",
+  "generatedAt": "2026-10-18T22:02:57.117Z",
   "season": "2026",
   "week": 6,
   "thisWeek": {
@@ -214,6 +214,15 @@
         "pun": "In Johnson We Trust"
       },
       {
+        "id": "blakecorum_lar",
+        "first": "Blake",
+        "last": "Corum",
+        "team": "LAR",
+        "pos": "RB",
+        "pts": 14,
+        "pun": "Lack of de-Corum"
+      },
+      {
         "id": "jkdobbins_den",
         "first": "J.K.",
         "last": "Dobbins",
@@ -232,15 +241,6 @@
         "pun": "I'm Allen Ears"
       },
       {
-        "id": "blakecorum_lar",
-        "first": "Blake",
-        "last": "Corum",
-        "team": "LAR",
-        "pos": "RB",
-        "pts": 12.3,
-        "pun": "Lack of de-Corum"
-      },
-      {
         "id": "jawharjordan_hou",
         "first": "Jawhar",
         "last": "Jordan",
@@ -248,6 +248,15 @@
         "pos": "RB",
         "pts": 12,
         "pun": "Jawhar Vibes Only"
+      },
+      {
+        "id": "bamknight_ari",
+        "first": "Bam",
+        "last": "Knight",
+        "team": "ARI",
+        "pos": "RB",
+        "pts": 11.2,
+        "pun": "Livin' on a Knight"
       },
       {
         "id": "woodymarks_hou",
@@ -275,15 +284,6 @@
         "pos": "RB",
         "pts": 9.5,
         "pun": "Jaleel McLaughlin and the Fantasy Machine"
-      },
-      {
-        "id": "bamknight_ari",
-        "first": "Bam",
-        "last": "Knight",
-        "team": "ARI",
-        "pos": "RB",
-        "pts": 9.1,
-        "pun": "Livin' on a Knight"
       },
       {
         "id": "kendremiller_no",
@@ -513,6 +513,15 @@
         "pun": "Drake London Calling"
       },
       {
+        "id": "xavierworthy_kc",
+        "first": "Xavier",
+        "last": "Worthy",
+        "team": "KC",
+        "pos": "WR",
+        "pts": 12,
+        "pun": "We're Not Worthy"
+      },
+      {
         "id": "rashidshaheed_sea",
         "first": "Rashid",
         "last": "Shaheed",
@@ -538,15 +547,6 @@
         "pos": "WR",
         "pts": 10.9,
         "pun": "Judge Jeudy"
-      },
-      {
-        "id": "nicocollins_hou",
-        "first": "Nico",
-        "last": "Collins",
-        "team": "HOU",
-        "pos": "WR",
-        "pts": 10.9,
-        "pun": "Nico Suave"
       }
     ],
     "TE": [
@@ -641,6 +641,15 @@
         "pun": "Mayer Happens"
       },
       {
+        "id": "treymcbride_ari",
+        "first": "Trey",
+        "last": "McBride",
+        "team": "ARI",
+        "pos": "TE",
+        "pts": 10.1,
+        "pun": "50 Shades of Trey"
+      },
+      {
         "id": "brentonstrange_jac",
         "first": "Brenton",
         "last": "Strange",
@@ -648,15 +657,6 @@
         "pos": "TE",
         "pts": 9.4,
         "pun": "Brenton's Excellent Adventure"
-      },
-      {
-        "id": "nateboerkircher_jac",
-        "first": "Nate",
-        "last": "Boerkircher",
-        "team": "JAC",
-        "pos": "TE",
-        "pts": 8.8,
-        "pun": "Livin' on a Boerkircher"
       }
     ],
     "K": [
@@ -706,6 +706,15 @@
         "pun": "Carlson-tastic Voyage"
       },
       {
+        "id": "chadryland_ari",
+        "first": "Chad",
+        "last": "Ryland",
+        "team": "ARI",
+        "pos": "K",
+        "pts": 12,
+        "pun": "Chad's Excellent Adventure"
+      },
+      {
         "id": "kaimifairbairn_hou",
         "first": "Ka'imi",
         "last": "Fairbairn",
@@ -715,13 +724,13 @@
         "pun": "Fairbairn-A-Palooza"
       },
       {
-        "id": "chadryland_ari",
-        "first": "Chad",
-        "last": "Ryland",
-        "team": "ARI",
+        "id": "harrisonbutker_kc",
+        "first": "Harrison",
+        "last": "Butker",
+        "team": "KC",
         "pos": "K",
         "pts": 9,
-        "pun": "Chad's Excellent Adventure"
+        "pun": "I Like Big Butker, And I Cannot Lie"
       },
       {
         "id": "camlittle_jac",
@@ -740,15 +749,6 @@
         "pos": "K",
         "pts": 9,
         "pun": "Straight Outta Shrader"
-      },
-      {
-        "id": "ryanfitzgerald_car",
-        "first": "Ryan",
-        "last": "Fitzgerald",
-        "team": "CAR",
-        "pos": "K",
-        "pts": 9,
-        "pun": "Fitzgerald-A-Palooza"
       }
     ]
   },
@@ -850,7 +850,7 @@
         "last": "Stafford",
         "team": "LAR",
         "pos": "QB",
-        "pts": 101.9,
+        "pts": 102.8,
         "pun": "Stafford Infection"
       },
       {
@@ -859,7 +859,7 @@
         "last": "Cousins",
         "team": "LV",
         "pos": "QB",
-        "pts": 101.4,
+        "pts": 101.6,
         "pun": "I Married my Cousins"
       }
     ],
@@ -1142,7 +1142,7 @@
         "last": "Adams",
         "team": "LAR",
         "pos": "WR",
-        "pts": 96.8,
+        "pts": 99.4,
         "pun": "Davante's Inferno"
       },
       {
@@ -1315,7 +1315,7 @@
         "last": "McBride",
         "team": "ARI",
         "pos": "TE",
-        "pts": 98,
+        "pts": 100.9,
         "pun": "50 Shades of Trey"
       },
       {
@@ -1470,7 +1470,7 @@
         "last": "Gay",
         "team": "LV",
         "pos": "K",
-        "pts": 55,
+        "pts": 58,
         "pun": "Matt's Excellent Adventure"
       },
       {
