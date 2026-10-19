@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-19T02:19:36.140Z",
+  "generatedAt": "2026-10-19T02:56:03.868Z",
   "season": "2026",
   "week": 6,
   "thisWeek": {
@@ -50,6 +50,15 @@
         "pun": "The Penix Mightier"
       },
       {
+        "id": "jordanlove_gb",
+        "first": "Jordan",
+        "last": "Love",
+        "team": "GB",
+        "pos": "QB",
+        "pts": 20.6,
+        "pun": "Come and Get Your Love"
+      },
+      {
         "id": "bryceyoung_car",
         "first": "Bryce",
         "last": "Young",
@@ -75,15 +84,6 @@
         "pos": "QB",
         "pts": 18.3,
         "pun": "Quit Joshin' Around"
-      },
-      {
-        "id": "jordanlove_gb",
-        "first": "Jordan",
-        "last": "Love",
-        "team": "GB",
-        "pos": "QB",
-        "pts": 18.1,
-        "pun": "Come and Get Your Love"
       },
       {
         "id": "jjmccarthy_min",
@@ -277,6 +277,15 @@
         "pun": "Livin' on a Knight"
       },
       {
+        "id": "pierrestrong_gb",
+        "first": "Pierre",
+        "last": "Strong",
+        "team": "GB",
+        "pos": "RB",
+        "pts": 11.5,
+        "pun": "Strong'd Up and Ready"
+      },
+      {
         "id": "woodymarks_hou",
         "first": "Woody",
         "last": "Marks",
@@ -320,15 +329,6 @@
         "pos": "RB",
         "pts": 9,
         "pun": "It's Miller Time"
-      },
-      {
-        "id": "georgeholani_sea",
-        "first": "George",
-        "last": "Holani",
-        "team": "SEA",
-        "pos": "RB",
-        "pts": 8,
-        "pun": "Holani-tastic Voyage"
       }
     ],
     "WR": [
@@ -405,6 +405,15 @@
         "pun": "How I Metcalf Your Mother"
       },
       {
+        "id": "matthewgolden_gb",
+        "first": "Matthew",
+        "last": "Golden",
+        "team": "GB",
+        "pos": "WR",
+        "pts": 20.2,
+        "pun": "Golden Goose"
+      },
+      {
         "id": "demariodouglas_ne",
         "first": "DeMario",
         "last": "Douglas",
@@ -448,15 +457,6 @@
         "pos": "WR",
         "pts": 17.5,
         "pun": "Un-Burden Me"
-      },
-      {
-        "id": "matthewgolden_gb",
-        "first": "Matthew",
-        "last": "Golden",
-        "team": "GB",
-        "pos": "WR",
-        "pts": 17.1,
-        "pun": "Golden Goose"
       },
       {
         "id": "keenanallen_ind",
@@ -818,6 +818,15 @@
         "pun": "I'm About To Go Goff"
       },
       {
+        "id": "jordanlove_gb",
+        "first": "Jordan",
+        "last": "Love",
+        "team": "GB",
+        "pos": "QB",
+        "pts": 113.8,
+        "pun": "Come and Get Your Love"
+      },
+      {
         "id": "cjstroud_hou",
         "first": "C.J.",
         "last": "Stroud",
@@ -843,15 +852,6 @@
         "pos": "QB",
         "pts": 111.9,
         "pun": "Stafford Infection"
-      },
-      {
-        "id": "jordanlove_gb",
-        "first": "Jordan",
-        "last": "Love",
-        "team": "GB",
-        "pos": "QB",
-        "pts": 111.2,
-        "pun": "Come and Get Your Love"
       },
       {
         "id": "joeburrow_cin",
@@ -1097,7 +1097,7 @@
         "last": "Lamb",
         "team": "DAL",
         "pos": "WR",
-        "pts": 123.1,
+        "pts": 126.5,
         "pun": "Silence of the Lambs"
       },
       {
@@ -1106,7 +1106,7 @@
         "last": "Watson",
         "team": "GB",
         "pos": "WR",
-        "pts": 116.9,
+        "pts": 118.8,
         "pun": "Elementary, My Dear Watson"
       },
       {
@@ -1151,7 +1151,7 @@
         "last": "Golden",
         "team": "GB",
         "pos": "WR",
-        "pts": 95.4,
+        "pts": 98.5,
         "pun": "Golden Goose"
       },
       {
@@ -1263,6 +1263,15 @@
         "pun": "Un-Burden Me"
       },
       {
+        "id": "georgepickens_dal",
+        "first": "George",
+        "last": "Pickens",
+        "team": "DAL",
+        "pos": "WR",
+        "pts": 72.8,
+        "pun": "Slim Pickens"
+      },
+      {
         "id": "denzelboston_cle",
         "first": "Denzel",
         "last": "Boston",
@@ -1279,15 +1288,6 @@
         "pos": "WR",
         "pts": 71.3,
         "pun": "WILSON!🏐"
-      },
-      {
-        "id": "georgepickens_dal",
-        "first": "George",
-        "last": "Pickens",
-        "team": "DAL",
-        "pos": "WR",
-        "pts": 71.1,
-        "pun": "Slim Pickens"
       },
       {
         "id": "emekaegbuka_tb",
