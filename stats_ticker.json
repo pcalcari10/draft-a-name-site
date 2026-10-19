@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-19T03:19:51.824Z",
+  "generatedAt": "2026-10-19T04:01:14.035Z",
   "season": "2026",
   "week": 6,
   "thisWeek": {
@@ -55,7 +55,7 @@
         "last": "Love",
         "team": "GB",
         "pos": "QB",
-        "pts": 21.1,
+        "pts": 21.2,
         "pun": "Come and Get Your Love"
       },
       {
@@ -246,7 +246,7 @@
         "last": "Williams",
         "team": "DAL",
         "pos": "RB",
-        "pts": 12.5,
+        "pts": 13,
         "pun": "One In a Williams"
       },
       {
@@ -459,6 +459,15 @@
         "pun": "Un-Burden Me"
       },
       {
+        "id": "ryanflournoy_dal",
+        "first": "Ryan",
+        "last": "Flournoy",
+        "team": "DAL",
+        "pos": "WR",
+        "pts": 17,
+        "pun": "Ryan Flournoy and the Fantasy Machine"
+      },
+      {
         "id": "keenanallen_ind",
         "first": "Keenan",
         "last": "Allen",
@@ -466,6 +475,15 @@
         "pos": "WR",
         "pts": 16.2,
         "pun": "I'm Allen Ears"
+      },
+      {
+        "id": "ceedeelamb_dal",
+        "first": "CeeDee",
+        "last": "Lamb",
+        "team": "DAL",
+        "pos": "WR",
+        "pts": 16,
+        "pun": "Silence of the Lambs"
       },
       {
         "id": "keoncoleman_buf",
@@ -529,24 +547,6 @@
         "pos": "WR",
         "pts": 14,
         "pun": "Nacua Matata"
-      },
-      {
-        "id": "khalilshakir_buf",
-        "first": "Khalil",
-        "last": "Shakir",
-        "team": "BUF",
-        "pos": "WR",
-        "pts": 13.4,
-        "pun": "Shake and Bake"
-      },
-      {
-        "id": "jakobimeyers_jac",
-        "first": "Jakobi",
-        "last": "Meyers",
-        "team": "JAC",
-        "pos": "WR",
-        "pts": 13.3,
-        "pun": "Jakobi-Wan Kenobi"
       }
     ],
     "TE": [
@@ -823,7 +823,7 @@
         "last": "Love",
         "team": "GB",
         "pos": "QB",
-        "pts": 114.2,
+        "pts": 114.4,
         "pun": "Come and Get Your Love"
       },
       {
@@ -854,13 +854,13 @@
         "pun": "Stafford Infection"
       },
       {
-        "id": "joeburrow_cin",
-        "first": "Joe",
-        "last": "Burrow",
-        "team": "CIN",
+        "id": "dakprescott_dal",
+        "first": "Dak",
+        "last": "Prescott",
+        "team": "DAL",
         "pos": "QB",
-        "pts": 104.2,
-        "pun": "Beg, Burrow, and Steal"
+        "pts": 109.9,
+        "pun": "The Boys Are Dak In Town"
       }
     ],
     "RB": [
@@ -933,7 +933,7 @@
         "last": "Williams",
         "team": "DAL",
         "pos": "RB",
-        "pts": 108.5,
+        "pts": 109,
         "pun": "One In a Williams"
       },
       {
@@ -1097,7 +1097,7 @@
         "last": "Lamb",
         "team": "DAL",
         "pos": "WR",
-        "pts": 127.5,
+        "pts": 131.1,
         "pun": "Silence of the Lambs"
       },
       {
@@ -1209,6 +1209,15 @@
         "pun": "Drake London Calling"
       },
       {
+        "id": "georgepickens_dal",
+        "first": "George",
+        "last": "Pickens",
+        "team": "DAL",
+        "pos": "WR",
+        "pts": 81.8,
+        "pun": "Slim Pickens"
+      },
+      {
         "id": "jamarrchase_cin",
         "first": "Ja'Marr",
         "last": "Chase",
@@ -1225,15 +1234,6 @@
         "pos": "WR",
         "pts": 78.5,
         "pun": "Tucker'd Up and Ready"
-      },
-      {
-        "id": "georgepickens_dal",
-        "first": "George",
-        "last": "Pickens",
-        "team": "DAL",
-        "pos": "WR",
-        "pts": 77,
-        "pun": "Slim Pickens"
       },
       {
         "id": "mikeevans_sf",
