@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-19T01:26:00.278Z",
+  "generatedAt": "2026-10-19T01:56:34.861Z",
   "season": "2026",
   "week": 6,
   "thisWeek": {
@@ -77,6 +77,15 @@
         "pun": "Quit Joshin' Around"
       },
       {
+        "id": "jordanlove_gb",
+        "first": "Jordan",
+        "last": "Love",
+        "team": "GB",
+        "pos": "QB",
+        "pts": 18,
+        "pun": "Come and Get Your Love"
+      },
+      {
         "id": "jjmccarthy_min",
         "first": "J.J.",
         "last": "McCarthy",
@@ -102,15 +111,6 @@
         "pos": "QB",
         "pts": 16.9,
         "pun": "Stafford Infection"
-      },
-      {
-        "id": "calebwilliams_chi",
-        "first": "Caleb",
-        "last": "Williams",
-        "team": "CHI",
-        "pos": "QB",
-        "pts": 16.5,
-        "pun": "Lisan Al-Caleb"
       }
     ],
     "RB": [
@@ -450,6 +450,15 @@
         "pun": "Un-Burden Me"
       },
       {
+        "id": "matthewgolden_gb",
+        "first": "Matthew",
+        "last": "Golden",
+        "team": "GB",
+        "pos": "WR",
+        "pts": 17.1,
+        "pun": "Golden Goose"
+      },
+      {
         "id": "keenanallen_ind",
         "first": "Keenan",
         "last": "Allen",
@@ -520,15 +529,6 @@
         "pos": "WR",
         "pts": 14,
         "pun": "Nacua Matata"
-      },
-      {
-        "id": "matthewgolden_gb",
-        "first": "Matthew",
-        "last": "Golden",
-        "team": "GB",
-        "pos": "WR",
-        "pts": 14,
-        "pun": "Golden Goose"
       },
       {
         "id": "khalilshakir_buf",
@@ -845,6 +845,15 @@
         "pun": "Stafford Infection"
       },
       {
+        "id": "jordanlove_gb",
+        "first": "Jordan",
+        "last": "Love",
+        "team": "GB",
+        "pos": "QB",
+        "pts": 111.1,
+        "pun": "Come and Get Your Love"
+      },
+      {
         "id": "joeburrow_cin",
         "first": "Joe",
         "last": "Burrow",
@@ -852,15 +861,6 @@
         "pos": "QB",
         "pts": 104.2,
         "pun": "Beg, Burrow, and Steal"
-      },
-      {
-        "id": "aaronrodgers_pit",
-        "first": "Aaron",
-        "last": "Rodgers",
-        "team": "PIT",
-        "pos": "QB",
-        "pts": 104.2,
-        "pun": "Mr. Rodgers' Neighborhood"
       }
     ],
     "RB": [
@@ -946,6 +946,15 @@
         "pun": "This is Your Final Warren"
       },
       {
+        "id": "javontewilliams_dal",
+        "first": "Javonte",
+        "last": "Williams",
+        "team": "DAL",
+        "pos": "RB",
+        "pts": 101,
+        "pun": "One In a Williams"
+      },
+      {
         "id": "ashtonjeanty_lv",
         "first": "Ashton",
         "last": "Jeanty",
@@ -962,15 +971,6 @@
         "pos": "RB",
         "pts": 98.1,
         "pun": "Chubawamba"
-      },
-      {
-        "id": "javontewilliams_dal",
-        "first": "Javonte",
-        "last": "Williams",
-        "team": "DAL",
-        "pos": "RB",
-        "pts": 98,
-        "pun": "One In a Williams"
       },
       {
         "id": "christianmccaffrey_sf",
@@ -1146,6 +1146,15 @@
         "pun": "Davante's Inferno"
       },
       {
+        "id": "matthewgolden_gb",
+        "first": "Matthew",
+        "last": "Golden",
+        "team": "GB",
+        "pos": "WR",
+        "pts": 95.4,
+        "pun": "Golden Goose"
+      },
+      {
         "id": "garrettwilson_nyj",
         "first": "Garrett",
         "last": "Wilson",
@@ -1162,15 +1171,6 @@
         "pos": "WR",
         "pts": 94.5,
         "pun": "Whatcha Zay?"
-      },
-      {
-        "id": "matthewgolden_gb",
-        "first": "Matthew",
-        "last": "Golden",
-        "team": "GB",
-        "pos": "WR",
-        "pts": 92.3,
-        "pun": "Golden Goose"
       },
       {
         "id": "parkerwashington_jac",
@@ -1281,6 +1281,15 @@
         "pun": "WILSON!🏐"
       },
       {
+        "id": "georgepickens_dal",
+        "first": "George",
+        "last": "Pickens",
+        "team": "DAL",
+        "pos": "WR",
+        "pts": 71.1,
+        "pun": "Slim Pickens"
+      },
+      {
         "id": "emekaegbuka_tb",
         "first": "Emeka",
         "last": "Egbuka",
@@ -1288,15 +1297,6 @@
         "pos": "WR",
         "pts": 71.1,
         "pun": "Read Egbuka"
-      },
-      {
-        "id": "devaughnvele_no",
-        "first": "Devaughn",
-        "last": "Vele",
-        "team": "NO",
-        "pos": "WR",
-        "pts": 69.4,
-        "pun": "Devaughn Vibes Only"
       }
     ],
     "TE": [
