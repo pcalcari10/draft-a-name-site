@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-19T00:10:28.614Z",
+  "generatedAt": "2026-10-19T00:49:14.101Z",
   "season": "2026",
   "week": 6,
   "thisWeek": {
@@ -969,7 +969,7 @@
         "last": "Williams",
         "team": "DAL",
         "pos": "RB",
-        "pts": 96,
+        "pts": 98,
         "pun": "One In a Williams"
       },
       {
@@ -1097,8 +1097,17 @@
         "last": "Lamb",
         "team": "DAL",
         "pos": "WR",
-        "pts": 115.1,
+        "pts": 116.7,
         "pun": "Silence of the Lambs"
+      },
+      {
+        "id": "christianwatson_gb",
+        "first": "Christian",
+        "last": "Watson",
+        "team": "GB",
+        "pos": "WR",
+        "pts": 113.1,
+        "pun": "Elementary, My Dear Watson"
       },
       {
         "id": "chrisolave_no",
@@ -1108,15 +1117,6 @@
         "pos": "WR",
         "pts": 113,
         "pun": "Olave Oil"
-      },
-      {
-        "id": "christianwatson_gb",
-        "first": "Christian",
-        "last": "Watson",
-        "team": "GB",
-        "pos": "WR",
-        "pts": 109.4,
-        "pun": "Elementary, My Dear Watson"
       },
       {
         "id": "amonrastbrown_det",
@@ -1182,6 +1182,15 @@
         "pun": "Nacua Matata"
       },
       {
+        "id": "matthewgolden_gb",
+        "first": "Matthew",
+        "last": "Golden",
+        "team": "GB",
+        "pos": "WR",
+        "pts": 90.9,
+        "pun": "Golden Goose"
+      },
+      {
         "id": "tetairoamcmillan_car",
         "first": "Tetairoa",
         "last": "McMillan",
@@ -1216,15 +1225,6 @@
         "pos": "WR",
         "pts": 78.5,
         "pun": "Tucker'd Up and Ready"
-      },
-      {
-        "id": "matthewgolden_gb",
-        "first": "Matthew",
-        "last": "Golden",
-        "team": "GB",
-        "pos": "WR",
-        "pts": 78.3,
-        "pun": "Golden Goose"
       },
       {
         "id": "mikeevans_sf",
