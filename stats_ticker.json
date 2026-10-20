@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-20T00:25:03.643Z",
+  "generatedAt": "2026-10-20T01:12:03.185Z",
   "season": "2026",
   "week": 6,
   "thisWeek": {
@@ -223,6 +223,15 @@
         "pun": "In Johnson We Trust"
       },
       {
+        "id": "christianmccaffrey_sf",
+        "first": "Christian",
+        "last": "McCaffrey",
+        "team": "SF",
+        "pos": "RB",
+        "pts": 14.4,
+        "pun": "Run CMC"
+      },
+      {
         "id": "blakecorum_lar",
         "first": "Blake",
         "last": "Corum",
@@ -320,15 +329,6 @@
         "pos": "RB",
         "pts": 9.5,
         "pun": "Jaleel McLaughlin and the Fantasy Machine"
-      },
-      {
-        "id": "kendremiller_no",
-        "first": "Kendre",
-        "last": "Miller",
-        "team": "NO",
-        "pos": "RB",
-        "pts": 9,
-        "pun": "It's Miller Time"
       }
     ],
     "WR": [
@@ -769,7 +769,7 @@
         "last": "Purdy",
         "team": "SF",
         "pos": "QB",
-        "pts": 124.7,
+        "pts": 130.2,
         "pun": "Purdy Good Team"
       },
       {
@@ -937,6 +937,15 @@
         "pun": "One In a Williams"
       },
       {
+        "id": "christianmccaffrey_sf",
+        "first": "Christian",
+        "last": "McCaffrey",
+        "team": "SF",
+        "pos": "RB",
+        "pts": 105.7,
+        "pun": "Run CMC"
+      },
+      {
         "id": "dandreswift_chi",
         "first": "D'Andre",
         "last": "Swift",
@@ -971,15 +980,6 @@
         "pos": "RB",
         "pts": 98.1,
         "pun": "Chubawamba"
-      },
-      {
-        "id": "christianmccaffrey_sf",
-        "first": "Christian",
-        "last": "McCaffrey",
-        "team": "SF",
-        "pos": "RB",
-        "pts": 97,
-        "pun": "Run CMC"
       },
       {
         "id": "bhayshultuten_jac",
@@ -1209,6 +1209,15 @@
         "pun": "Drake London Calling"
       },
       {
+        "id": "mikeevans_sf",
+        "first": "Mike",
+        "last": "Evans",
+        "team": "SF",
+        "pos": "WR",
+        "pts": 86.4,
+        "pun": "7th Evans"
+      },
+      {
         "id": "georgepickens_dal",
         "first": "George",
         "last": "Pickens",
@@ -1216,15 +1225,6 @@
         "pos": "WR",
         "pts": 81.8,
         "pun": "Slim Pickens"
-      },
-      {
-        "id": "mikeevans_sf",
-        "first": "Mike",
-        "last": "Evans",
-        "team": "SF",
-        "pos": "WR",
-        "pts": 80,
-        "pun": "7th Evans"
       },
       {
         "id": "jamarrchase_cin",
@@ -1319,6 +1319,15 @@
         "pun": "50 Shades of Trey"
       },
       {
+        "id": "georgekittle_sf",
+        "first": "George",
+        "last": "Kittle",
+        "team": "SF",
+        "pos": "TE",
+        "pts": 83.8,
+        "pun": "Kittle Big Town"
+      },
+      {
         "id": "brockbowers_lv",
         "first": "Brock",
         "last": "Bowers",
@@ -1326,15 +1335,6 @@
         "pos": "TE",
         "pts": 82.2,
         "pun": "Mighty Morphin Bower Rangers"
-      },
-      {
-        "id": "georgekittle_sf",
-        "first": "George",
-        "last": "Kittle",
-        "team": "SF",
-        "pos": "TE",
-        "pts": 79.9,
-        "pun": "Kittle Big Town"
       },
       {
         "id": "samlaporta_det",
