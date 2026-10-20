@@ -15639,5 +15639,85 @@
     ],
     "active": true,
     "tier": "template"
+  },
+  {
+    "id": "deandrecarter_det",
+    "first": "DeAndre",
+    "last": "Carter",
+    "team": "DET",
+    "pos": "WR",
+    "names": [
+      "Carter-tastic Voyage",
+      "DeAndre Vibes Only",
+      "In Carter We Trust",
+      "Carter Happens",
+      "Carter'd Up and Ready"
+    ],
+    "active": true,
+    "tier": "template"
+  },
+  {
+    "id": "jakebrowning_lac",
+    "first": "Jake",
+    "last": "Browning",
+    "team": "LAC",
+    "pos": "QB",
+    "names": [
+      "Browning's Fantasy Fortress",
+      "Jake Vibes Only",
+      "Browning Happens",
+      "Browning'd Up and Ready",
+      "The Browning Show"
+    ],
+    "active": true,
+    "tier": "template"
+  },
+  {
+    "id": "jakemoody_bal",
+    "first": "Jake",
+    "last": "Moody",
+    "team": "BAL",
+    "pos": "K",
+    "names": [
+      "All Moody, No Filler",
+      "Livin' on a Moody",
+      "Jake Moody and the Fantasy Machine",
+      "Jake & Chill",
+      "Moody-A-Palooza"
+    ],
+    "active": true,
+    "tier": "template"
+  },
+  {
+    "id": "ianwheeler_phi",
+    "first": "Ian",
+    "last": "Wheeler",
+    "team": "PHI",
+    "pos": "RB",
+    "names": [
+      "Wheeler-A-Palooza",
+      "Wheeler of Fame",
+      "Straight Outta Wheeler",
+      "Wheeler Happens",
+      "In Wheeler We Trust"
+    ],
+    "active": true,
+    "tier": "template"
+  },
+  {
+    "id": "lukegrimm_lac",
+    "first": "Luke",
+    "last": "Grimm",
+    "team": "LAC",
+    "pos": "WR",
+    "names": [
+      "Luke's Excellent Adventure",
+      "Luke & Chill",
+      "Livin' on a Grimm",
+      "Luke Vibes Only",
+      "Straight Outta Grimm"
+    ],
+    "active": true,
+    "tier": "template"
   }
 ]
