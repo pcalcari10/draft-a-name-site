@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-19T11:21:10.884Z",
+  "generatedAt": "2026-10-20T00:25:03.643Z",
   "season": "2026",
   "week": 6,
   "thisWeek": {
@@ -769,7 +769,7 @@
         "last": "Purdy",
         "team": "SF",
         "pos": "QB",
-        "pts": 118.6,
+        "pts": 124.7,
         "pun": "Purdy Good Team"
       },
       {
@@ -978,7 +978,7 @@
         "last": "McCaffrey",
         "team": "SF",
         "pos": "RB",
-        "pts": 91.3,
+        "pts": 97,
         "pun": "Run CMC"
       },
       {
@@ -1218,6 +1218,15 @@
         "pun": "Slim Pickens"
       },
       {
+        "id": "mikeevans_sf",
+        "first": "Mike",
+        "last": "Evans",
+        "team": "SF",
+        "pos": "WR",
+        "pts": 80,
+        "pun": "7th Evans"
+      },
+      {
         "id": "jamarrchase_cin",
         "first": "Ja'Marr",
         "last": "Chase",
@@ -1234,15 +1243,6 @@
         "pos": "WR",
         "pts": 78.5,
         "pun": "Tucker'd Up and Ready"
-      },
-      {
-        "id": "mikeevans_sf",
-        "first": "Mike",
-        "last": "Evans",
-        "team": "SF",
-        "pos": "WR",
-        "pts": 76.6,
-        "pun": "7th Evans"
       },
       {
         "id": "teehiggins_cin",
@@ -1328,6 +1328,15 @@
         "pun": "Mighty Morphin Bower Rangers"
       },
       {
+        "id": "georgekittle_sf",
+        "first": "George",
+        "last": "Kittle",
+        "team": "SF",
+        "pos": "TE",
+        "pts": 79.9,
+        "pun": "Kittle Big Town"
+      },
+      {
         "id": "samlaporta_det",
         "first": "Sam",
         "last": "LaPorta",
@@ -1335,15 +1344,6 @@
         "pos": "TE",
         "pts": 76.6,
         "pun": "Sam LaPorta Potty"
-      },
-      {
-        "id": "georgekittle_sf",
-        "first": "George",
-        "last": "Kittle",
-        "team": "SF",
-        "pos": "TE",
-        "pts": 71.8,
-        "pun": "Kittle Big Town"
       },
       {
         "id": "tylerwarren_ind",
