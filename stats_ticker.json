@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-20T02:20:50.151Z",
+  "generatedAt": "2026-10-20T02:59:15.072Z",
   "season": "2026",
   "week": 6,
   "thisWeek": {
@@ -77,6 +77,15 @@
         "pun": "I Married my Cousins"
       },
       {
+        "id": "jaydendaniels_was",
+        "first": "Jayden",
+        "last": "Daniels",
+        "team": "WAS",
+        "pos": "QB",
+        "pts": 19,
+        "pun": "Jayden Daniels' Tennessee Whiskey"
+      },
+      {
         "id": "joshallen_buf",
         "first": "Josh",
         "last": "Allen",
@@ -95,25 +104,25 @@
         "pun": "All McCarthy, No Filler"
       },
       {
-        "id": "aaronrodgers_pit",
-        "first": "Aaron",
-        "last": "Rodgers",
-        "team": "PIT",
+        "id": "brockpurdy_sf",
+        "first": "Brock",
+        "last": "Purdy",
+        "team": "SF",
         "pos": "QB",
-        "pts": 17,
-        "pun": "Mr. Rodgers' Neighborhood"
-      },
-      {
-        "id": "matthewstafford_lar",
-        "first": "Matthew",
-        "last": "Stafford",
-        "team": "LAR",
-        "pos": "QB",
-        "pts": 16.9,
-        "pun": "Stafford Infection"
+        "pts": 17.2,
+        "pun": "Purdy Good Team"
       }
     ],
     "RB": [
+      {
+        "id": "christianmccaffrey_sf",
+        "first": "Christian",
+        "last": "McCaffrey",
+        "team": "SF",
+        "pos": "RB",
+        "pts": 28.9,
+        "pun": "Run CMC"
+      },
       {
         "id": "kennethwalkeriii_kc",
         "first": "Kenneth",
@@ -122,15 +131,6 @@
         "pos": "RB",
         "pts": 27.9,
         "pun": "Walker in the Park"
-      },
-      {
-        "id": "christianmccaffrey_sf",
-        "first": "Christian",
-        "last": "McCaffrey",
-        "team": "SF",
-        "pos": "RB",
-        "pts": 27.1,
-        "pun": "Run CMC"
       },
       {
         "id": "bhayshultuten_jac",
@@ -268,6 +268,15 @@
         "pun": "I'm Allen Ears"
       },
       {
+        "id": "rachaadwhite_was",
+        "first": "Rachaad",
+        "last": "White",
+        "team": "WAS",
+        "pos": "RB",
+        "pts": 12.1,
+        "pun": "Rachaad White and the 7 Dwarfs"
+      },
+      {
         "id": "jawharjordan_hou",
         "first": "Jawhar",
         "last": "Jordan",
@@ -320,15 +329,6 @@
         "pos": "RB",
         "pts": 9.7,
         "pun": "Williams-Sonoma Touchdowns"
-      },
-      {
-        "id": "jaleelmclaughlin_cle",
-        "first": "Jaleel",
-        "last": "McLaughlin",
-        "team": "CLE",
-        "pos": "RB",
-        "pts": 9.5,
-        "pun": "Jaleel McLaughlin and the Fantasy Machine"
       }
     ],
     "WR": [
@@ -468,6 +468,15 @@
         "pun": "Ryan Flournoy and the Fantasy Machine"
       },
       {
+        "id": "stefondiggs_was",
+        "first": "Stefon",
+        "last": "Diggs",
+        "team": "WAS",
+        "pos": "WR",
+        "pts": 16.4,
+        "pun": "Can You Digg It?"
+      },
+      {
         "id": "keenanallen_ind",
         "first": "Keenan",
         "last": "Allen",
@@ -538,15 +547,6 @@
         "pos": "WR",
         "pts": 14.3,
         "pun": "We're Not Worthy"
-      },
-      {
-        "id": "pukanacua_lar",
-        "first": "Puka",
-        "last": "Nacua",
-        "team": "LAR",
-        "pos": "WR",
-        "pts": 14,
-        "pun": "Nacua Matata"
       }
     ],
     "TE": [
@@ -769,7 +769,7 @@
         "last": "Purdy",
         "team": "SF",
         "pos": "QB",
-        "pts": 135,
+        "pts": 135.9,
         "pun": "Purdy Good Team"
       },
       {
@@ -892,6 +892,15 @@
         "pun": "To Infinity and Bijan"
       },
       {
+        "id": "christianmccaffrey_sf",
+        "first": "Christian",
+        "last": "McCaffrey",
+        "team": "SF",
+        "pos": "RB",
+        "pts": 120.2,
+        "pun": "Run CMC"
+      },
+      {
         "id": "kyrenwilliams_lar",
         "first": "Kyren",
         "last": "Williams",
@@ -908,15 +917,6 @@
         "pos": "RB",
         "pts": 118.5,
         "pun": "Taylor-Made"
-      },
-      {
-        "id": "christianmccaffrey_sf",
-        "first": "Christian",
-        "last": "McCaffrey",
-        "team": "SF",
-        "pos": "RB",
-        "pts": 118.4,
-        "pun": "Run CMC"
       },
       {
         "id": "derrickhenry_bal",
