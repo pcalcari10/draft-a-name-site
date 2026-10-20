@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-20T01:12:03.185Z",
+  "generatedAt": "2026-10-20T01:45:51.162Z",
   "season": "2026",
   "week": 6,
   "thisWeek": {
@@ -142,6 +142,15 @@
         "pun": "James Cooked"
       },
       {
+        "id": "christianmccaffrey_sf",
+        "first": "Christian",
+        "last": "McCaffrey",
+        "team": "SF",
+        "pos": "RB",
+        "pts": 24.2,
+        "pun": "Run CMC"
+      },
+      {
         "id": "dandreswift_chi",
         "first": "D'Andre",
         "last": "Swift",
@@ -221,15 +230,6 @@
         "pos": "RB",
         "pts": 14.5,
         "pun": "In Johnson We Trust"
-      },
-      {
-        "id": "christianmccaffrey_sf",
-        "first": "Christian",
-        "last": "McCaffrey",
-        "team": "SF",
-        "pos": "RB",
-        "pts": 14.4,
-        "pun": "Run CMC"
       },
       {
         "id": "blakecorum_lar",
@@ -632,6 +632,15 @@
         "pun": "Parkinson Happens"
       },
       {
+        "id": "georgekittle_sf",
+        "first": "George",
+        "last": "Kittle",
+        "team": "SF",
+        "pos": "TE",
+        "pts": 13.4,
+        "pun": "Kittle Big Town"
+      },
+      {
         "id": "darnellwashington_pit",
         "first": "Darnell",
         "last": "Washington",
@@ -648,15 +657,6 @@
         "pos": "TE",
         "pts": 12.3,
         "pun": "50 Shades of Trey"
-      },
-      {
-        "id": "dallasgoedert_phi",
-        "first": "Dallas",
-        "last": "Goedert",
-        "team": "PHI",
-        "pos": "TE",
-        "pts": 12.1,
-        "pun": "The Goedert, the Bad, and the Ugly"
       }
     ],
     "K": [
@@ -769,7 +769,7 @@
         "last": "Purdy",
         "team": "SF",
         "pos": "QB",
-        "pts": 130.2,
+        "pts": 133.2,
         "pun": "Purdy Good Team"
       },
       {
@@ -919,6 +919,15 @@
         "pun": "King Henry's Court"
       },
       {
+        "id": "christianmccaffrey_sf",
+        "first": "Christian",
+        "last": "McCaffrey",
+        "team": "SF",
+        "pos": "RB",
+        "pts": 115.5,
+        "pun": "Run CMC"
+      },
+      {
         "id": "jamescookiii_buf",
         "first": "James",
         "last": "Cook",
@@ -935,15 +944,6 @@
         "pos": "RB",
         "pts": 109,
         "pun": "One In a Williams"
-      },
-      {
-        "id": "christianmccaffrey_sf",
-        "first": "Christian",
-        "last": "McCaffrey",
-        "team": "SF",
-        "pos": "RB",
-        "pts": 105.7,
-        "pun": "Run CMC"
       },
       {
         "id": "dandreswift_chi",
@@ -1200,6 +1200,15 @@
         "pun": "The Tet Offensive"
       },
       {
+        "id": "mikeevans_sf",
+        "first": "Mike",
+        "last": "Evans",
+        "team": "SF",
+        "pos": "WR",
+        "pts": 89,
+        "pun": "7th Evans"
+      },
+      {
         "id": "drakelondon_atl",
         "first": "Drake",
         "last": "London",
@@ -1207,15 +1216,6 @@
         "pos": "WR",
         "pts": 88.4,
         "pun": "Drake London Calling"
-      },
-      {
-        "id": "mikeevans_sf",
-        "first": "Mike",
-        "last": "Evans",
-        "team": "SF",
-        "pos": "WR",
-        "pts": 86.4,
-        "pun": "7th Evans"
       },
       {
         "id": "georgepickens_dal",
@@ -1324,7 +1324,7 @@
         "last": "Kittle",
         "team": "SF",
         "pos": "TE",
-        "pts": 83.8,
+        "pts": 85.2,
         "pun": "Kittle Big Town"
       },
       {
