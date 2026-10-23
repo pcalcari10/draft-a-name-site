@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-23T00:26:50.999Z",
+  "generatedAt": "2026-10-23T05:12:51.230Z",
   "season": "2026",
   "week": 7,
   "thisWeek": {
@@ -10,7 +10,7 @@
         "last": "Maye",
         "team": "NE",
         "pos": "QB",
-        "pts": 1.3,
+        "pts": 28.4,
         "pun": "Maye The Odds Be Ever In Your Favor"
       },
       {
@@ -19,27 +19,18 @@
         "last": "Williams",
         "team": "CHI",
         "pos": "QB",
-        "pts": 1.1,
+        "pts": 22.1,
         "pun": "Lisan Al-Caleb"
       }
     ],
     "RB": [
-      {
-        "id": "treveyonhenderson_ne",
-        "first": "TreVeyon",
-        "last": "Henderson",
-        "team": "NE",
-        "pos": "RB",
-        "pts": 3.4,
-        "pun": "TreVeyon My Wayward Son"
-      },
       {
         "id": "rhamondrestevenson_ne",
         "first": "Rhamondre",
         "last": "Stevenson",
         "team": "NE",
         "pos": "RB",
-        "pts": 3,
+        "pts": 22.5,
         "pun": "Rhamondre The Giant"
       },
       {
@@ -48,8 +39,35 @@
         "last": "Swift",
         "team": "CHI",
         "pos": "RB",
-        "pts": 0.3,
+        "pts": 19,
         "pun": "50 Shades of D'Andre"
+      },
+      {
+        "id": "treveyonhenderson_ne",
+        "first": "TreVeyon",
+        "last": "Henderson",
+        "team": "NE",
+        "pos": "RB",
+        "pts": 4.3,
+        "pun": "TreVeyon My Wayward Son"
+      },
+      {
+        "id": "roschonjohnson_chi",
+        "first": "Roschon",
+        "last": "Johnson",
+        "team": "CHI",
+        "pos": "RB",
+        "pts": 1.3,
+        "pun": "In Johnson We Trust"
+      },
+      {
+        "id": "coreykiner_ne",
+        "first": "Corey",
+        "last": "Kiner",
+        "team": "NE",
+        "pos": "RB",
+        "pts": 1.3,
+        "pun": "Corey Kiner and the Fantasy Machine"
       }
     ],
     "WR": [
@@ -59,12 +77,95 @@
         "last": "Burden",
         "team": "CHI",
         "pos": "WR",
-        "pts": 3.7,
+        "pts": 23.7,
         "pun": "Un-Burden Me"
+      },
+      {
+        "id": "romeodunze_chi",
+        "first": "Rome",
+        "last": "Odunze",
+        "team": "CHI",
+        "pos": "WR",
+        "pts": 10.9,
+        "pun": "All Throws Lead to Rome"
+      },
+      {
+        "id": "ajbrown_ne",
+        "first": "A.J.",
+        "last": "Brown",
+        "team": "NE",
+        "pos": "WR",
+        "pts": 7.8,
+        "pun": "Brown Out"
+      },
+      {
+        "id": "demariodouglas_ne",
+        "first": "DeMario",
+        "last": "Douglas",
+        "team": "NE",
+        "pos": "WR",
+        "pts": 5.3,
+        "pun": "Super DeMario"
+      },
+      {
+        "id": "eftonchism_ne",
+        "first": "Efton",
+        "last": "Chism",
+        "team": "NE",
+        "pos": "WR",
+        "pts": 2.6,
+        "pun": "Straight Outta Chism"
       }
     ],
-    "TE": [],
-    "K": []
+    "TE": [
+      {
+        "id": "colstonloveland_chi",
+        "first": "Colston",
+        "last": "Loveland",
+        "team": "CHI",
+        "pos": "TE",
+        "pts": 19.9,
+        "pun": "Colston Creamery"
+      },
+      {
+        "id": "eliraridon_ne",
+        "first": "Eli",
+        "last": "Raridon",
+        "team": "NE",
+        "pos": "TE",
+        "pts": 14.6,
+        "pun": "Eli Vibes Only"
+      },
+      {
+        "id": "hunterhenry_ne",
+        "first": "Hunter",
+        "last": "Henry",
+        "team": "NE",
+        "pos": "TE",
+        "pts": 14.1,
+        "pun": "Henry's Bulldozers"
+      },
+      {
+        "id": "colekmet_chi",
+        "first": "Cole",
+        "last": "Kmet",
+        "team": "CHI",
+        "pos": "TE",
+        "pts": 5.8,
+        "pun": "Haley's Kmet"
+      }
+    ],
+    "K": [
+      {
+        "id": "cairosantos_chi",
+        "first": "Cairo",
+        "last": "Santos",
+        "team": "CHI",
+        "pos": "K",
+        "pts": 14,
+        "pun": "Santos of Fame"
+      }
+    ]
   },
   "seasonTotals": {
     "QB": [
@@ -78,6 +179,15 @@
         "pun": "Quit Joshin' Around"
       },
       {
+        "id": "drakemaye_ne",
+        "first": "Drake",
+        "last": "Maye",
+        "team": "NE",
+        "pos": "QB",
+        "pts": 146.5,
+        "pun": "Maye The Odds Be Ever In Your Favor"
+      },
+      {
         "id": "brockpurdy_sf",
         "first": "Brock",
         "last": "Purdy",
@@ -85,15 +195,6 @@
         "pos": "QB",
         "pts": 136,
         "pun": "Purdy Good Team"
-      },
-      {
-        "id": "drakemaye_ne",
-        "first": "Drake",
-        "last": "Maye",
-        "team": "NE",
-        "pos": "QB",
-        "pts": 119.3,
-        "pun": "Maye The Odds Be Ever In Your Favor"
       },
       {
         "id": "trevorlawrence_jac",
@@ -206,6 +307,15 @@
         "pun": "To Infinity and Bijan"
       },
       {
+        "id": "dandreswift_chi",
+        "first": "D'Andre",
+        "last": "Swift",
+        "team": "CHI",
+        "pos": "RB",
+        "pts": 122.8,
+        "pun": "50 Shades of D'Andre"
+      },
+      {
         "id": "christianmccaffrey_sf",
         "first": "Christian",
         "last": "McCaffrey",
@@ -260,15 +370,6 @@
         "pun": "One In a Williams"
       },
       {
-        "id": "dandreswift_chi",
-        "first": "D'Andre",
-        "last": "Swift",
-        "team": "CHI",
-        "pos": "RB",
-        "pts": 104.1,
-        "pun": "50 Shades of D'Andre"
-      },
-      {
         "id": "jaylenwarren_pit",
         "first": "Jaylen",
         "last": "Warren",
@@ -305,6 +406,15 @@
         "pun": "King Tuten-khamun"
       },
       {
+        "id": "rhamondrestevenson_ne",
+        "first": "Rhamondre",
+        "last": "Stevenson",
+        "team": "NE",
+        "pos": "RB",
+        "pts": 86.9,
+        "pun": "Rhamondre The Giant"
+      },
+      {
         "id": "buckyirving_tb",
         "first": "Bucky",
         "last": "Irving",
@@ -321,15 +431,6 @@
         "pos": "RB",
         "pts": 70.2,
         "pun": "Keeping Up With the Jones"
-      },
-      {
-        "id": "rhamondrestevenson_ne",
-        "first": "Rhamondre",
-        "last": "Stevenson",
-        "team": "NE",
-        "pos": "RB",
-        "pts": 67.4,
-        "pun": "Rhamondre The Giant"
       },
       {
         "id": "chasebrown_cin",
@@ -469,6 +570,15 @@
         "pun": "Golden Goose"
       },
       {
+        "id": "lutherburdeniii_chi",
+        "first": "Luther",
+        "last": "Burden",
+        "team": "CHI",
+        "pos": "WR",
+        "pts": 97,
+        "pun": "Un-Burden Me"
+      },
+      {
         "id": "garrettwilson_nyj",
         "first": "Garrett",
         "last": "Wilson",
@@ -557,15 +667,6 @@
         "pos": "WR",
         "pts": 78.5,
         "pun": "Tucker'd Up and Ready"
-      },
-      {
-        "id": "lutherburdeniii_chi",
-        "first": "Luther",
-        "last": "Burden",
-        "team": "CHI",
-        "pos": "WR",
-        "pts": 77,
-        "pun": "Un-Burden Me"
       },
       {
         "id": "teehiggins_cin",
@@ -669,6 +770,15 @@
         "pun": "This is Your Final Warren"
       },
       {
+        "id": "hunterhenry_ne",
+        "first": "Hunter",
+        "last": "Henry",
+        "team": "NE",
+        "pos": "TE",
+        "pts": 67.6,
+        "pun": "Henry's Bulldozers"
+      },
+      {
         "id": "juwanjohnson_no",
         "first": "Juwan",
         "last": "Johnson",
@@ -687,6 +797,15 @@
         "pun": "The Muth Is Luth"
       },
       {
+        "id": "colstonloveland_chi",
+        "first": "Colston",
+        "last": "Loveland",
+        "team": "CHI",
+        "pos": "TE",
+        "pts": 62.4,
+        "pun": "Colston Creamery"
+      },
+      {
         "id": "traviskelce_kc",
         "first": "Travis",
         "last": "Kelce",
@@ -703,24 +822,6 @@
         "pos": "TE",
         "pts": 60.6,
         "pun": "Mayer Happens"
-      },
-      {
-        "id": "daltonkincaid_buf",
-        "first": "Dalton",
-        "last": "Kincaid",
-        "team": "BUF",
-        "pos": "TE",
-        "pts": 60.5,
-        "pun": "Dalton Abbey"
-      },
-      {
-        "id": "brentonstrange_jac",
-        "first": "Brenton",
-        "last": "Strange",
-        "team": "JAC",
-        "pos": "TE",
-        "pts": 59.9,
-        "pun": "Brenton's Excellent Adventure"
       }
     ],
     "K": [
@@ -779,6 +880,15 @@
         "pun": "Bass-A-Palooza"
       },
       {
+        "id": "cairosantos_chi",
+        "first": "Cairo",
+        "last": "Santos",
+        "team": "CHI",
+        "pos": "K",
+        "pts": 59,
+        "pun": "Santos of Fame"
+      },
+      {
         "id": "chadryland_ari",
         "first": "Chad",
         "last": "Ryland",
@@ -804,15 +914,6 @@
         "pos": "K",
         "pts": 58,
         "pun": "All Myers, No Filler"
-      },
-      {
-        "id": "tylerloop_bal",
-        "first": "Tyler",
-        "last": "Loop",
-        "team": "BAL",
-        "pos": "K",
-        "pts": 55,
-        "pun": "Jumping Through Loops"
       }
     ]
   }
