@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-22T11:18:47.820Z",
+  "generatedAt": "2026-10-23T03:18:02.485Z",
   "season": "2026",
   "isLastSeason": false,
   "fantasyLeaders": {
@@ -1405,6 +1405,16 @@
   "thisWeekFantasy": {
     "PG": [
       {
+        "id": "tyresemaxey_phi",
+        "first": "Tyrese",
+        "last": "Maxey",
+        "team": "PHI",
+        "pos": "PG",
+        "pun": "Maxey Pad My Stats",
+        "gp": 2,
+        "pts": 100.9
+      },
+      {
         "id": "tyjerome_mem",
         "first": "Ty",
         "last": "Jerome",
@@ -1423,16 +1433,6 @@
         "pun": "Shai It Ain't So",
         "gp": 1,
         "pts": 57.2
-      },
-      {
-        "id": "tyresemaxey_phi",
-        "first": "Tyrese",
-        "last": "Maxey",
-        "team": "PHI",
-        "pos": "PG",
-        "pun": "Maxey Pad My Stats",
-        "gp": 1,
-        "pts": 52.3
       },
       {
         "id": "dejountemurray_nop",
@@ -1567,6 +1567,26 @@
         "pts": 67.5
       },
       {
+        "id": "donovanmitchell_cle",
+        "first": "Donovan",
+        "last": "Mitchell",
+        "team": "CLE",
+        "pos": "SG",
+        "pun": "Spider-Verse Mitchell",
+        "gp": 1,
+        "pts": 54.5
+      },
+      {
+        "id": "vjedgecombe_phi",
+        "first": "VJ",
+        "last": "Edgecombe",
+        "team": "PHI",
+        "pos": "SG",
+        "pun": "Edgecombe-A-Palooza",
+        "gp": 2,
+        "pts": 51.7
+      },
+      {
         "id": "cooperflagg_dal",
         "first": "Cooper",
         "last": "Flagg",
@@ -1685,29 +1705,19 @@
         "pun": "Dunn and Dunner",
         "gp": 1,
         "pts": 33.5
-      },
-      {
-        "id": "desmondbane_orl",
-        "first": "Desmond",
-        "last": "Bane",
-        "team": "ORL",
-        "pos": "SG",
-        "pun": "Bane Happens",
-        "gp": 1,
-        "pts": 33
-      },
-      {
-        "id": "derrickwhite_bos",
-        "first": "Derrick",
-        "last": "White",
-        "team": "BOS",
-        "pos": "SG",
-        "pun": "White'd Up and Ready",
-        "gp": 1,
-        "pts": 32.2
       }
     ],
     "SF": [
+      {
+        "id": "jaylenbrown_phi",
+        "first": "Jaylen",
+        "last": "Brown",
+        "team": "PHI",
+        "pos": "SF",
+        "pun": "Jaylen Brown and the Fantasy Machine",
+        "gp": 2,
+        "pts": 80.2
+      },
       {
         "id": "paulgeorge_bos",
         "first": "Paul",
@@ -1747,16 +1757,6 @@
         "pun": "Livin' on a Porter",
         "gp": 1,
         "pts": 41.9
-      },
-      {
-        "id": "jaylenbrown_phi",
-        "first": "Jaylen",
-        "last": "Brown",
-        "team": "PHI",
-        "pos": "SF",
-        "pun": "Jaylen Brown and the Fantasy Machine",
-        "gp": 1,
-        "pts": 41.6
       },
       {
         "id": "franzwagner_orl",
@@ -1861,6 +1861,16 @@
     ],
     "PF": [
       {
+        "id": "lebronjames_phi",
+        "first": "LeBron",
+        "last": "James",
+        "team": "PHI",
+        "pos": "PF",
+        "pun": "Bron & Son",
+        "gp": 2,
+        "pts": 83.8
+      },
+      {
         "id": "paolobanchero_orl",
         "first": "Paolo",
         "last": "Banchero",
@@ -1929,16 +1939,6 @@
         "pun": "Avdija-A-Palooza",
         "gp": 1,
         "pts": 40
-      },
-      {
-        "id": "lebronjames_phi",
-        "first": "LeBron",
-        "last": "James",
-        "team": "PHI",
-        "pos": "PF",
-        "pun": "Bron & Son",
-        "gp": 1,
-        "pts": 39.3
       },
       {
         "id": "scottiebarnes_tor",
@@ -2013,6 +2013,16 @@
     ],
     "C": [
       {
+        "id": "joelembiid_phi",
+        "first": "Joel",
+        "last": "Embiid",
+        "team": "PHI",
+        "pos": "C",
+        "pun": "A Friend In Need Is A Friend Embiid",
+        "gp": 2,
+        "pts": 79.1
+      },
+      {
         "id": "anthonydavis_was",
         "first": "Anthony",
         "last": "Davis",
@@ -2051,16 +2061,6 @@
         "pun": "Sir This Is A Wemby's",
         "gp": 1,
         "pts": 46.1
-      },
-      {
-        "id": "joelembiid_phi",
-        "first": "Joel",
-        "last": "Embiid",
-        "team": "PHI",
-        "pos": "C",
-        "pun": "A Friend In Need Is A Friend Embiid",
-        "gp": 1,
-        "pts": 45.2
       },
       {
         "id": "nazreid_cha",
@@ -2195,6 +2195,20 @@
         "bpg": 3
       },
       {
+        "id": "tyresemaxey_phi",
+        "first": "Tyrese",
+        "last": "Maxey",
+        "team": "PHI",
+        "pos": "PG",
+        "pun": "Maxey Pad My Stats",
+        "gp": 2,
+        "ppg": 30,
+        "apg": 5.5,
+        "rpg": 3.5,
+        "spg": 2.5,
+        "bpg": 1.5
+      },
+      {
         "id": "dariusgarland_lac",
         "first": "Darius",
         "last": "Garland",
@@ -2207,20 +2221,6 @@
         "rpg": 1,
         "spg": 1,
         "bpg": 0
-      },
-      {
-        "id": "tyresemaxey_phi",
-        "first": "Tyrese",
-        "last": "Maxey",
-        "team": "PHI",
-        "pos": "PG",
-        "pun": "Maxey Pad My Stats",
-        "gp": 1,
-        "ppg": 28,
-        "apg": 5,
-        "rpg": 4,
-        "spg": 3,
-        "bpg": 3
       },
       {
         "id": "damianlillard_por",
@@ -2407,6 +2407,20 @@
         "bpg": 1
       },
       {
+        "id": "donovanmitchell_cle",
+        "first": "Donovan",
+        "last": "Mitchell",
+        "team": "CLE",
+        "pos": "SG",
+        "pun": "Spider-Verse Mitchell",
+        "gp": 1,
+        "ppg": 32,
+        "apg": 3,
+        "rpg": 10,
+        "spg": 2,
+        "bpg": 1
+      },
+      {
         "id": "nickeilalexanderwalker_atl",
         "first": "Nickeil",
         "last": "Alexander-Walker",
@@ -2573,20 +2587,6 @@
         "rpg": 5,
         "spg": 0,
         "bpg": 0
-      },
-      {
-        "id": "amenthompson_hou",
-        "first": "Amen",
-        "last": "Thompson",
-        "team": "HOU",
-        "pos": "SG",
-        "pun": "Amen Break",
-        "gp": 1,
-        "ppg": 16,
-        "apg": 4,
-        "rpg": 10,
-        "spg": 1,
-        "bpg": 0
       }
     ],
     "SF": [
@@ -2689,6 +2689,20 @@
         "bpg": 0
       },
       {
+        "id": "jaylenbrown_phi",
+        "first": "Jaylen",
+        "last": "Brown",
+        "team": "PHI",
+        "pos": "SF",
+        "pun": "Jaylen Brown and the Fantasy Machine",
+        "gp": 2,
+        "ppg": 20,
+        "apg": 5,
+        "rpg": 8,
+        "spg": 1,
+        "bpg": 0.5
+      },
+      {
         "id": "rjbarrett_tor",
         "first": "RJ",
         "last": "Barrett",
@@ -2715,20 +2729,6 @@
         "rpg": 4,
         "spg": 0,
         "bpg": 0
-      },
-      {
-        "id": "jaylenbrown_phi",
-        "first": "Jaylen",
-        "last": "Brown",
-        "team": "PHI",
-        "pos": "SF",
-        "pun": "Jaylen Brown and the Fantasy Machine",
-        "gp": 1,
-        "ppg": 19,
-        "apg": 6,
-        "rpg": 8,
-        "spg": 1,
-        "bpg": 1
       },
       {
         "id": "kyshawngeorge_was",
@@ -2999,17 +2999,17 @@
         "bpg": 1
       },
       {
-        "id": "jeramigrant_mem",
-        "first": "Jerami",
-        "last": "Grant",
-        "team": "MEM",
+        "id": "lebronjames_phi",
+        "first": "LeBron",
+        "last": "James",
+        "team": "PHI",
         "pos": "PF",
-        "pun": "Jerami Vibes Only",
-        "gp": 1,
-        "ppg": 15,
-        "apg": 3,
-        "rpg": 2,
-        "spg": 0,
+        "pun": "Bron & Son",
+        "gp": 2,
+        "ppg": 15.5,
+        "apg": 6,
+        "rpg": 9.5,
+        "spg": 2,
         "bpg": 1
       }
     ],
@@ -3097,6 +3097,34 @@
         "rpg": 12,
         "spg": 1,
         "bpg": 2
+      },
+      {
+        "id": "joelembiid_phi",
+        "first": "Joel",
+        "last": "Embiid",
+        "team": "PHI",
+        "pos": "C",
+        "pun": "A Friend In Need Is A Friend Embiid",
+        "gp": 2,
+        "ppg": 18.5,
+        "apg": 3.5,
+        "rpg": 9,
+        "spg": 1,
+        "bpg": 1.5
+      },
+      {
+        "id": "evanmobley_cle",
+        "first": "Evan",
+        "last": "Mobley",
+        "team": "CLE",
+        "pos": "C",
+        "pun": "Mobley Dick",
+        "gp": 1,
+        "ppg": 18,
+        "apg": 2,
+        "rpg": 8,
+        "spg": 0,
+        "bpg": 0
       },
       {
         "id": "brooklopez_lac",
@@ -3195,34 +3223,6 @@
         "rpg": 18,
         "spg": 1,
         "bpg": 0
-      },
-      {
-        "id": "joelembiid_phi",
-        "first": "Joel",
-        "last": "Embiid",
-        "team": "PHI",
-        "pos": "C",
-        "pun": "A Friend In Need Is A Friend Embiid",
-        "gp": 1,
-        "ppg": 13,
-        "apg": 6,
-        "rpg": 11,
-        "spg": 2,
-        "bpg": 3
-      },
-      {
-        "id": "yvesmissi_nop",
-        "first": "Yves",
-        "last": "Missi",
-        "team": "NOP",
-        "pos": "C",
-        "pun": "Yves & Chill",
-        "gp": 1,
-        "ppg": 13,
-        "apg": 5,
-        "rpg": 14,
-        "spg": 2,
-        "bpg": 3
       }
     ]
   }
