@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-23T06:20:15.067Z",
+  "generatedAt": "2026-10-23T09:29:35.476Z",
   "season": "2026",
   "isLastSeason": false,
   "fantasyLeaders": {
@@ -196,6 +196,15 @@
         "pts": 25
       },
       {
+        "id": "casonwallace_okc",
+        "first": "Cason",
+        "last": "Wallace",
+        "team": "OKC",
+        "pos": "SG",
+        "pun": "Wallace Happens",
+        "pts": 25
+      },
+      {
         "id": "krisdunn_lac",
         "first": "Kris",
         "last": "Dunn",
@@ -266,15 +275,6 @@
         "pos": "SG",
         "pun": "All Hart, No Filler",
         "pts": 20
-      },
-      {
-        "id": "zachlavine_sac",
-        "first": "Zach",
-        "last": "LaVine",
-        "team": "SAC",
-        "pos": "SG",
-        "pun": "Lavine' On A Prayer",
-        "pts": 19.5
       }
     ],
     "SF": [
@@ -416,6 +416,15 @@
     ],
     "PF": [
       {
+        "id": "jalenwilliams_okc",
+        "first": "Jalen",
+        "last": "Williams",
+        "team": "OKC",
+        "pos": "PF",
+        "pun": "Williams'd Up and Ready",
+        "pts": 38
+      },
+      {
         "id": "paolobanchero_orl",
         "first": "Paolo",
         "last": "Banchero",
@@ -423,6 +432,15 @@
         "pos": "PF",
         "pun": "Huevos Bancheros",
         "pts": 33
+      },
+      {
+        "id": "alexcaruso_okc",
+        "first": "Alex",
+        "last": "Caruso",
+        "team": "OKC",
+        "pos": "PF",
+        "pun": "Caruso-tastic Voyage",
+        "pts": 31.5
       },
       {
         "id": "juliusrandle_bkn",
@@ -488,6 +506,15 @@
         "pts": 23.5
       },
       {
+        "id": "aarongordon_den",
+        "first": "Aaron",
+        "last": "Gordon",
+        "team": "DEN",
+        "pos": "PF",
+        "pun": "Chicken Gordon Bleu",
+        "pts": 22.5
+      },
+      {
         "id": "scottiebarnes_tor",
         "first": "Scottie",
         "last": "Barnes",
@@ -522,36 +549,18 @@
         "pos": "PF",
         "pun": "Toppin Off",
         "pts": 20
-      },
-      {
-        "id": "jonathankuminga_min",
-        "first": "Jonathan",
-        "last": "Kuminga",
-        "team": "MIN",
-        "pos": "PF",
-        "pun": "Kuminga Attractions",
-        "pts": 20
-      },
-      {
-        "id": "jalenwilliams_okc",
-        "first": "Jalen",
-        "last": "Williams",
-        "team": "OKC",
-        "pos": "PF",
-        "pun": "Williams'd Up and Ready",
-        "pts": 19.5
-      },
-      {
-        "id": "jaimejaquez_mil",
-        "first": "Jaime",
-        "last": "Jaquez",
-        "team": "MIL",
-        "pos": "PF",
-        "pun": "Jaime Vibes Only",
-        "pts": 18.5
       }
     ],
     "C": [
+      {
+        "id": "chetholmgren_okc",
+        "first": "Chet",
+        "last": "Holmgren",
+        "team": "OKC",
+        "pos": "C",
+        "pun": "ChetGPT",
+        "pts": 56
+      },
       {
         "id": "joelembiid_phi",
         "first": "Joel",
@@ -676,15 +685,6 @@
         "team": "LAC",
         "pos": "C",
         "pun": "In Lopez We Trust",
-        "pts": 24
-      },
-      {
-        "id": "jalenduren_det",
-        "first": "Jalen",
-        "last": "Duren",
-        "team": "DET",
-        "pos": "C",
-        "pun": "Jalen Vibes Only",
         "pts": 24
       }
     ]
@@ -1102,18 +1102,18 @@
         "bpg": 2
       },
       {
-        "id": "trevonbrazile_den",
-        "first": "Trevon",
-        "last": "Brazile",
-        "team": "DEN",
-        "pos": "PF",
-        "pun": "Brazile Happens",
-        "gp": 1,
-        "ppg": 4,
-        "apg": 0,
+        "id": "chetholmgren_okc",
+        "first": "Chet",
+        "last": "Holmgren",
+        "team": "OKC",
+        "pos": "C",
+        "pun": "ChetGPT",
+        "gp": 2,
+        "ppg": 13,
+        "apg": 2,
         "rpg": 12,
-        "spg": 0,
-        "bpg": 0
+        "spg": 0.5,
+        "bpg": 4
       }
     ],
     "spg": [
@@ -1294,11 +1294,11 @@
         "team": "OKC",
         "pos": "C",
         "pun": "ChetGPT",
-        "gp": 1,
-        "ppg": 14,
+        "gp": 2,
+        "ppg": 13,
         "apg": 2,
-        "rpg": 7,
-        "spg": 0,
+        "rpg": 12,
+        "spg": 0.5,
         "bpg": 4
       },
       {
