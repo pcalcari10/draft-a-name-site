@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-25T10:22:21.668Z",
+  "generatedAt": "2026-10-25T13:37:25.277Z",
   "season": "2026",
   "isLastSeason": false,
   "fantasyLeaders": {
@@ -1502,7 +1502,7 @@
         "pos": "PG",
         "pun": "Rollins Happens",
         "gp": 3,
-        "pts": 81.4
+        "pts": 82.9
       },
       {
         "id": "cadecunningham_det",
@@ -1749,6 +1749,16 @@
         "pts": 97.6
       },
       {
+        "id": "brandonmiller_cha",
+        "first": "Brandon",
+        "last": "Miller",
+        "team": "CHA",
+        "pos": "SF",
+        "pun": "Brandon Miller's Crossing",
+        "gp": 3,
+        "pts": 91.1
+      },
+      {
         "id": "normanpowell_chi",
         "first": "Norman",
         "last": "Powell",
@@ -1767,16 +1777,6 @@
         "pun": "Livin' on a Porter",
         "gp": 2,
         "pts": 90.2
-      },
-      {
-        "id": "brandonmiller_cha",
-        "first": "Brandon",
-        "last": "Miller",
-        "team": "CHA",
-        "pos": "SF",
-        "pun": "Brandon Miller's Crossing",
-        "gp": 3,
-        "pts": 89.9
       },
       {
         "id": "paulgeorge_bos",
@@ -1958,7 +1958,7 @@
         "pos": "PF",
         "pun": "Jabari The Hutt",
         "gp": 3,
-        "pts": 88.5
+        "pts": 90.5
       },
       {
         "id": "kylekuzma_mil",
@@ -2712,7 +2712,7 @@
         "gp": 3,
         "ppg": 19.3,
         "apg": 1.7,
-        "rpg": 4,
+        "rpg": 4.3,
         "spg": 0.7,
         "bpg": 1
       },
@@ -2981,7 +2981,7 @@
         "ppg": 17,
         "apg": 1.7,
         "rpg": 5,
-        "spg": 1,
+        "spg": 1.3,
         "bpg": 1
       },
       {
@@ -3053,7 +3053,7 @@
         "ppg": 21,
         "apg": 0.5,
         "rpg": 8,
-        "spg": 0.5,
+        "spg": 1,
         "bpg": 1
       },
       {
@@ -3179,8 +3179,8 @@
         "ppg": 17.5,
         "apg": 0,
         "rpg": 7.5,
-        "spg": 1,
-        "bpg": 1.5
+        "spg": 0.5,
+        "bpg": 2
       },
       {
         "id": "cameronboozer_mem",
