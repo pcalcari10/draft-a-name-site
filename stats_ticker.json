@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-26T00:12:25.289Z",
+  "generatedAt": "2026-10-26T04:43:33.026Z",
   "season": "2026",
   "week": 7,
   "thisWeek": {
@@ -214,6 +214,15 @@
         "pun": "Taylor-Made"
       },
       {
+        "id": "emanuelwilson_sea",
+        "first": "Emanuel",
+        "last": "Wilson",
+        "team": "SEA",
+        "pos": "RB",
+        "pts": 18.5,
+        "pun": "WILSON!🏐"
+      },
+      {
         "id": "kyrenwilliams_lar",
         "first": "Kyren",
         "last": "Williams",
@@ -320,18 +329,18 @@
         "pos": "RB",
         "pts": 10.9,
         "pun": "Livin' on a Black"
-      },
-      {
-        "id": "dylansampson_cle",
-        "first": "Dylan",
-        "last": "Sampson",
-        "team": "CLE",
-        "pos": "RB",
-        "pts": 10.7,
-        "pun": "Sampson Happens"
       }
     ],
     "WR": [
+      {
+        "id": "jaxonsmithnjigba_sea",
+        "first": "Jaxon",
+        "last": "Smith-Njigba",
+        "team": "SEA",
+        "pos": "WR",
+        "pts": 31.3,
+        "pun": "I'm Sorry Ms. Jaxon"
+      },
       {
         "id": "zayflowers_bal",
         "first": "Zay",
@@ -538,15 +547,6 @@
         "pos": "WR",
         "pts": 9.9,
         "pun": "Carnell & Chill"
-      },
-      {
-        "id": "jaylenwaddle_den",
-        "first": "Jaylen",
-        "last": "Waddle",
-        "team": "DEN",
-        "pos": "WR",
-        "pts": 8.8,
-        "pun": "A Waddle to Remember"
       }
     ],
     "TE": [
@@ -742,13 +742,13 @@
         "pun": "All Bates, No Filler"
       },
       {
-        "id": "mattgay_lv",
-        "first": "Matt",
-        "last": "Gay",
-        "team": "LV",
+        "id": "jasonmyers_sea",
+        "first": "Jason",
+        "last": "Myers",
+        "team": "SEA",
         "pos": "K",
         "pts": 8,
-        "pun": "Matt's Excellent Adventure"
+        "pun": "All Myers, No Filler"
       }
     ]
   },
@@ -874,6 +874,15 @@
         "pun": "Baby Back Gibbs"
       },
       {
+        "id": "kennethwalkeriii_kc",
+        "first": "Kenneth",
+        "last": "Walker",
+        "team": "KC",
+        "pos": "RB",
+        "pts": 147.7,
+        "pun": "Walker in the Park"
+      },
+      {
         "id": "bijanrobinson_atl",
         "first": "Bijan",
         "last": "Robinson",
@@ -890,15 +899,6 @@
         "pos": "RB",
         "pts": 144,
         "pun": "Run CMC"
-      },
-      {
-        "id": "kennethwalkeriii_kc",
-        "first": "Kenneth",
-        "last": "Walker",
-        "team": "KC",
-        "pos": "RB",
-        "pts": 138,
-        "pun": "Walker in the Park"
       },
       {
         "id": "jonathantaylor_ind",
@@ -1045,6 +1045,15 @@
         "pun": "High-Speed Chase"
       },
       {
+        "id": "emanuelwilson_sea",
+        "first": "Emanuel",
+        "last": "Wilson",
+        "team": "SEA",
+        "pos": "RB",
+        "pts": 74.8,
+        "pun": "WILSON!🏐"
+      },
+      {
         "id": "aaronjonessr_min",
         "first": "Aaron",
         "last": "Jones",
@@ -1070,15 +1079,6 @@
         "pos": "RB",
         "pts": 69.5,
         "pun": "Lack of de-Corum"
-      },
-      {
-        "id": "rjharvey_den",
-        "first": "RJ",
-        "last": "Harvey",
-        "team": "DEN",
-        "pos": "RB",
-        "pts": 67.4,
-        "pun": "Two Face"
       }
     ],
     "WR": [
@@ -1088,7 +1088,7 @@
         "last": "Smith-Njigba",
         "team": "SEA",
         "pos": "WR",
-        "pts": 164.9,
+        "pts": 196.2,
         "pun": "I'm Sorry Ms. Jaxon"
       },
       {
@@ -1355,6 +1355,15 @@
         "pun": "Kraft Beers"
       },
       {
+        "id": "traviskelce_kc",
+        "first": "Travis",
+        "last": "Kelce",
+        "team": "KC",
+        "pos": "TE",
+        "pts": 70.3,
+        "pun": "Truth & Kelcequences"
+      },
+      {
         "id": "tylerwarren_ind",
         "first": "Tyler",
         "last": "Warren",
@@ -1398,15 +1407,6 @@
         "pos": "TE",
         "pts": 66.8,
         "pun": "Mayer Happens"
-      },
-      {
-        "id": "haroldfanninjr_cle",
-        "first": "Harold",
-        "last": "Fannin",
-        "team": "CLE",
-        "pos": "TE",
-        "pts": 66.7,
-        "pun": "Fannin Fodder"
       }
     ],
     "K": [
@@ -1474,6 +1474,15 @@
         "pun": "Chris & Chill"
       },
       {
+        "id": "jasonmyers_sea",
+        "first": "Jason",
+        "last": "Myers",
+        "team": "SEA",
+        "pos": "K",
+        "pts": 66,
+        "pun": "All Myers, No Filler"
+      },
+      {
         "id": "tylerloop_bal",
         "first": "Tyler",
         "last": "Loop",
@@ -1490,15 +1499,6 @@
         "pos": "K",
         "pts": 60,
         "pun": "Bass-A-Palooza"
-      },
-      {
-        "id": "cairosantos_chi",
-        "first": "Cairo",
-        "last": "Santos",
-        "team": "CHI",
-        "pos": "K",
-        "pts": 59,
-        "pun": "Santos of Fame"
       }
     ]
   }
