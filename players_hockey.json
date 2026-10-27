@@ -747,7 +747,7 @@
       "Nip/Tuch",
       "Alex Tuch Rule"
     ],
-    "active": true,
+    "active": false,
     "tier": "curated"
   },
   {
@@ -763,7 +763,7 @@
       "Straight Outta Zucker",
       "Jason Vibes Only"
     ],
-    "active": false,
+    "active": true,
     "tier": "template"
   },
   {
@@ -1079,7 +1079,7 @@
       "Straight Outta Soderblom",
       "Elmer Vibes Only"
     ],
-    "active": true,
+    "active": false,
     "tier": "template"
   },
   {
@@ -1484,7 +1484,7 @@
       "Straight Outta Samoskevich",
       "Mackie Vibes Only"
     ],
-    "active": true,
+    "active": false,
     "tier": "template"
   },
   {
@@ -1500,7 +1500,7 @@
       "Straight Outta Schwindt",
       "Cole Vibes Only"
     ],
-    "active": false,
+    "active": true,
     "tier": "template"
   },
   {
@@ -2249,12 +2249,12 @@
     "id": "jamesreimer_ott",
     "first": "James",
     "last": "Reimer",
-    "team": "OTT",
+    "team": "NYR",
     "pos": "G",
     "names": [
       "Optimus Reimer"
     ],
-    "active": false,
+    "active": true,
     "tier": "curated"
   },
   {
@@ -2394,7 +2394,7 @@
       "Straight Outta Carlile",
       "Declan Vibes Only"
     ],
-    "active": true,
+    "active": false,
     "tier": "template"
   },
   {
@@ -2470,7 +2470,7 @@
       "Straight Outta Douglas",
       "Curtis Vibes Only"
     ],
-    "active": true,
+    "active": false,
     "tier": "template"
   },
   {
@@ -2634,7 +2634,7 @@
     "id": "jonasjohansson_tbl",
     "first": "Jonas",
     "last": "Johansson",
-    "team": "TBL",
+    "team": "OTT",
     "pos": "G",
     "names": [
       "Johansson's Fantasy Fortress",
@@ -2643,7 +2643,7 @@
       "Straight Outta Johansson",
       "Jonas Vibes Only"
     ],
-    "active": false,
+    "active": true,
     "tier": "template"
   },
   {
@@ -2829,7 +2829,7 @@
     "names": [
       "Brandon Carlo Colaiacovo"
     ],
-    "active": true,
+    "active": false,
     "tier": "curated"
   },
   {
@@ -3044,7 +3044,7 @@
       "Straight Outta McMann",
       "Bobby Vibes Only"
     ],
-    "active": true,
+    "active": false,
     "tier": "template"
   },
   {
@@ -3060,7 +3060,7 @@
       "Straight Outta Mermis",
       "Dakota Vibes Only"
     ],
-    "active": false,
+    "active": true,
     "tier": "template"
   },
   {
@@ -3388,11 +3388,11 @@
     "first": "Seth",
     "last": "Jarvis",
     "team": "CAR",
-    "pos": "C",
+    "pos": "RW",
     "names": [
       "Tony Stark And Seth Jarvis"
     ],
-    "active": false,
+    "active": true,
     "tier": "curated"
   },
   {
@@ -3494,7 +3494,7 @@
       "Straight Outta Nikishin",
       "Alexander Vibes Only"
     ],
-    "active": false,
+    "active": true,
     "tier": "template"
   },
   {
@@ -3800,7 +3800,7 @@
     "names": [
       "LabuBoone Jenner"
     ],
-    "active": true,
+    "active": false,
     "tier": "curated"
   },
   {
@@ -3976,7 +3976,7 @@
     "names": [
       "Ballistic: Ecks vs. Severson"
     ],
-    "active": false,
+    "active": true,
     "tier": "curated"
   },
   {
@@ -4199,7 +4199,7 @@
     "id": "lukeglendening_njd",
     "first": "Luke",
     "last": "Glendening",
-    "team": "NJD",
+    "team": "NYR",
     "pos": "C",
     "names": [
       "Glendening's Fantasy Fortress",
@@ -4208,7 +4208,7 @@
       "Straight Outta Glendening",
       "Luke Vibes Only"
     ],
-    "active": false,
+    "active": true,
     "tier": "template"
   },
   {
@@ -4371,7 +4371,7 @@
     "id": "dawsonmercer_njd",
     "first": "Dawson",
     "last": "Mercer",
-    "team": "NJD",
+    "team": "WPG",
     "pos": "C",
     "names": [
       "Mercer's Fantasy Fortress",
@@ -4583,7 +4583,7 @@
       "Straight Outta Engvall",
       "Pierre Vibes Only"
     ],
-    "active": false,
+    "active": true,
     "tier": "template"
   },
   {
@@ -4703,7 +4703,7 @@
     "id": "colemcward_nyi",
     "first": "Cole",
     "last": "McWard",
-    "team": "NYI",
+    "team": "TOR",
     "pos": "D",
     "names": [
       "McWard's Fantasy Fortress",
@@ -4712,7 +4712,7 @@
       "Straight Outta McWard",
       "Cole Vibes Only"
     ],
-    "active": false,
+    "active": true,
     "tier": "template"
   },
   {
@@ -4944,7 +4944,7 @@
       "Straight Outta Brodzinski",
       "Jonny Vibes Only"
     ],
-    "active": true,
+    "active": false,
     "tier": "template"
   },
   {
@@ -5080,7 +5080,7 @@
       "Straight Outta Martin",
       "Spencer Vibes Only"
     ],
-    "active": true,
+    "active": false,
     "tier": "template"
   },
   {
@@ -5735,7 +5735,7 @@
       "Straight Outta Brazeau",
       "Justin Vibes Only"
     ],
-    "active": true,
+    "active": false,
     "tier": "template"
   },
   {
@@ -5788,7 +5788,7 @@
       "Crosby's Eleven",
       "The Crosby Code"
     ],
-    "active": true,
+    "active": false,
     "tier": "curated",
     "taggedNames": {
       "music": [
@@ -5810,7 +5810,7 @@
       "Straight Outta Dewar",
       "Connor Vibes Only"
     ],
-    "active": true,
+    "active": false,
     "tier": "template"
   },
   {
@@ -5890,7 +5890,7 @@
       "Straight Outta Karlsson",
       "Erik Vibes Only"
     ],
-    "active": true,
+    "active": false,
     "tier": "template"
   },
   {
@@ -5906,7 +5906,7 @@
       "Straight Outta Kindel",
       "Ben Vibes Only"
     ],
-    "active": true,
+    "active": false,
     "tier": "template"
   },
   {
@@ -5922,7 +5922,7 @@
       "Straight Outta Koivunen",
       "Ville Vibes Only"
     ],
-    "active": true,
+    "active": false,
     "tier": "template"
   },
   {
@@ -5955,7 +5955,7 @@
       "Kris Vibes Only",
       "Wu Letang Clan"
     ],
-    "active": true,
+    "active": false,
     "tier": "curated",
     "taggedNames": {
       "music": [
@@ -5976,7 +5976,7 @@
       "Straight Outta Lizotte",
       "Blake Vibes Only"
     ],
-    "active": true,
+    "active": false,
     "tier": "template"
   },
   {
@@ -5991,7 +5991,7 @@
       "Genormous Malkin",
       "Got Malkin?"
     ],
-    "active": true,
+    "active": false,
     "tier": "curated"
   },
   {
@@ -6031,7 +6031,7 @@
       "Straight Outta Novak",
       "Tommy Vibes Only"
     ],
-    "active": true,
+    "active": false,
     "tier": "template"
   },
   {
@@ -6043,7 +6043,7 @@
     "names": [
       "Captain Rikard Rakell"
     ],
-    "active": true,
+    "active": false,
     "tier": "curated"
   },
   {
@@ -6059,7 +6059,7 @@
       "Straight Outta Rust",
       "Bryan Vibes Only"
     ],
-    "active": true,
+    "active": false,
     "tier": "template"
   },
   {
@@ -6092,7 +6092,7 @@
       "Arturs Vibes Only",
       "King Arturs: Legend of the Silovs"
     ],
-    "active": true,
+    "active": false,
     "tier": "curated",
     "taggedNames": {
       "movie": [
@@ -6129,7 +6129,7 @@
       "Straight Outta St. Ivany",
       "Jack Vibes Only"
     ],
-    "active": true,
+    "active": false,
     "tier": "template"
   },
   {
@@ -6161,7 +6161,7 @@
       "Straight Outta Beauvillier",
       "Anthony Vibes Only"
     ],
-    "active": true,
+    "active": false,
     "tier": "template"
   },
   {
@@ -6210,7 +6210,7 @@
       "Jakob Vibes Only",
       "Jakob Chicken Run"
     ],
-    "active": true,
+    "active": false,
     "tier": "curated",
     "taggedNames": {
       "movie": [
@@ -6243,7 +6243,7 @@
     "names": [
       "The Dubois's Doozies"
     ],
-    "active": true,
+    "active": false,
     "tier": "curated"
   },
   {
@@ -6288,7 +6288,7 @@
       "Straight Outta Frank",
       "Ethen Vibes Only"
     ],
-    "active": true,
+    "active": false,
     "tier": "template"
   },
   {
@@ -6300,7 +6300,7 @@
     "names": [
       "Jimi Hendrix Lapierre"
     ],
-    "active": true,
+    "active": false,
     "tier": "curated",
     "taggedNames": {
       "music": [
@@ -6337,7 +6337,7 @@
       "Straight Outta Leonard",
       "Ryan Vibes Only"
     ],
-    "active": true,
+    "active": false,
     "tier": "template"
   },
   {
@@ -6353,7 +6353,7 @@
       "Straight Outta Lindgren",
       "Charlie Vibes Only"
     ],
-    "active": true,
+    "active": false,
     "tier": "template"
   },
   {
@@ -6365,7 +6365,7 @@
     "names": [
       "Feel My McIlrath"
     ],
-    "active": true,
+    "active": false,
     "tier": "curated"
   },
   {
@@ -6381,7 +6381,7 @@
       "Straight Outta McMichael",
       "Connor Vibes Only"
     ],
-    "active": true,
+    "active": false,
     "tier": "template"
   },
   {
@@ -6409,7 +6409,7 @@
       "Straight Outta Protas",
       "Aliaksei Vibes Only"
     ],
-    "active": true,
+    "active": false,
     "tier": "template"
   },
   {
@@ -6425,7 +6425,7 @@
       "Straight Outta Roy",
       "Matt Vibes Only"
     ],
-    "active": true,
+    "active": false,
     "tier": "template"
   },
   {
@@ -6441,7 +6441,7 @@
       "Straight Outta Sandin",
       "Rasmus Vibes Only"
     ],
-    "active": true,
+    "active": false,
     "tier": "template"
   },
   {
@@ -6453,7 +6453,7 @@
     "names": [
       "Sourdif Starter"
     ],
-    "active": true,
+    "active": false,
     "tier": "curated"
   },
   {
@@ -6470,7 +6470,7 @@
       "Dylan Vibes Only",
       "Calm Before the Strome"
     ],
-    "active": true,
+    "active": false,
     "tier": "curated"
   },
   {
@@ -6482,7 +6482,7 @@
     "names": [
       "Logan Thompson's Run"
     ],
-    "active": true,
+    "active": false,
     "tier": "curated"
   },
   {
@@ -6498,7 +6498,7 @@
       "Straight Outta van Riemsdyk",
       "Trevor Vibes Only"
     ],
-    "active": true,
+    "active": false,
     "tier": "template"
   },
   {
@@ -6514,7 +6514,7 @@
       "Straight Outta Wilson",
       "Tom Vibes Only"
     ],
-    "active": true,
+    "active": false,
     "tier": "template"
   },
   {
@@ -6640,7 +6640,7 @@
       "Straight Outta Johnston",
       "Ross Vibes Only"
     ],
-    "active": true,
+    "active": false,
     "tier": "template"
   },
   {
@@ -6697,7 +6697,7 @@
       "Straight Outta McTavish",
       "Mason Vibes Only"
     ],
-    "active": true,
+    "active": false,
     "tier": "template"
   },
   {
@@ -7914,7 +7914,7 @@
     "names": [
       "Emperor Kuzmenko"
     ],
-    "active": true,
+    "active": false,
     "tier": "curated",
     "taggedNames": {
       "starwars": [
@@ -8068,7 +8068,7 @@
       "Straight Outta Desharnais",
       "Vincent Vibes Only"
     ],
-    "active": true,
+    "active": false,
     "tier": "template"
   },
   {
@@ -8229,7 +8229,7 @@
     "names": [
       "Big Jegren and Liljegren"
     ],
-    "active": true,
+    "active": false,
     "tier": "curated"
   },
   {
@@ -8403,7 +8403,7 @@
       "Straight Outta Beniers",
       "Matty Vibes Only"
     ],
-    "active": true,
+    "active": false,
     "tier": "template"
   },
   {
@@ -8419,7 +8419,7 @@
       "Straight Outta Catton",
       "Berkly Vibes Only"
     ],
-    "active": true,
+    "active": false,
     "tier": "template"
   },
   {
@@ -8436,7 +8436,7 @@
       "Joey Vibes Only",
       "Paris Daccord"
     ],
-    "active": true,
+    "active": false,
     "tier": "curated"
   },
   {
@@ -8453,7 +8453,7 @@
       "Vince Vibes Only",
       "Dun Dun Dunn!"
     ],
-    "active": true,
+    "active": false,
     "tier": "curated"
   },
   {
@@ -8466,7 +8466,7 @@
       "Eberle and Ivory",
       "Eberle Brothers"
     ],
-    "active": true,
+    "active": false,
     "tier": "curated"
   },
   {
@@ -8482,7 +8482,7 @@
       "Straight Outta Evans",
       "Ryker Vibes Only"
     ],
-    "active": true,
+    "active": false,
     "tier": "template"
   },
   {
@@ -8498,7 +8498,7 @@
       "Straight Outta Fleury",
       "Cale Vibes Only"
     ],
-    "active": true,
+    "active": false,
     "tier": "template"
   },
   {
@@ -8514,7 +8514,7 @@
       "Straight Outta Gaudreau",
       "Frederick Vibes Only"
     ],
-    "active": true,
+    "active": false,
     "tier": "template"
   },
   {
@@ -8530,7 +8530,7 @@
       "Straight Outta Grubauer",
       "Philipp Vibes Only"
     ],
-    "active": true,
+    "active": false,
     "tier": "template"
   },
   {
@@ -8559,7 +8559,7 @@
       "Polly Want a Kaapo Kakko",
       "Kaapo Kakko & Dot"
     ],
-    "active": true,
+    "active": false,
     "tier": "curated"
   },
   {
@@ -8591,7 +8591,7 @@
       "Straight Outta Larsson",
       "Adam Vibes Only"
     ],
-    "active": true,
+    "active": false,
     "tier": "template"
   },
   {
@@ -8607,7 +8607,7 @@
       "Straight Outta Lindgren",
       "Ryan Vibes Only"
     ],
-    "active": true,
+    "active": false,
     "tier": "template"
   },
   {
@@ -8623,7 +8623,7 @@
       "Straight Outta Mahura",
       "Josh Vibes Only"
     ],
-    "active": true,
+    "active": false,
     "tier": "template"
   },
   {
@@ -8640,7 +8640,7 @@
       "Jared Vibes Only",
       "McCann of Corn"
     ],
-    "active": true,
+    "active": false,
     "tier": "curated",
     "taggedNames": {
       "food": [
@@ -8661,7 +8661,7 @@
       "Straight Outta Meyers",
       "Ben Vibes Only"
     ],
-    "active": true,
+    "active": false,
     "tier": "template"
   },
   {
@@ -8673,7 +8673,7 @@
     "names": [
       "How I Met Your Montour"
     ],
-    "active": true,
+    "active": false,
     "tier": "curated"
   },
   {
@@ -8750,7 +8750,7 @@
       "Monica And Chandler Stephenson",
       "Chanandler Bong Stephenson"
     ],
-    "active": true,
+    "active": false,
     "tier": "curated",
     "taggedNames": {
       "tv": [
@@ -8788,7 +8788,7 @@
       "Straight Outta Winterton",
       "Ryan Vibes Only"
     ],
-    "active": true,
+    "active": false,
     "tier": "template"
   },
   {
@@ -8801,7 +8801,7 @@
       "Matt Du-Shane Wright",
       "The Wright Stuff"
     ],
-    "active": true,
+    "active": false,
     "tier": "curated",
     "taggedNames": {
       "movie": [
@@ -9447,7 +9447,7 @@
       "Straight Outta Korczak",
       "Kaedan Vibes Only"
     ],
-    "active": true,
+    "active": false,
     "tier": "template"
   },
   {
@@ -9550,7 +9550,7 @@
     "id": "colereinhardt_vgk",
     "first": "Cole",
     "last": "Reinhardt",
-    "team": "VGK",
+    "team": "FLA",
     "pos": "LW",
     "names": [
       "Reinhardt's Fantasy Fortress",
@@ -9559,7 +9559,7 @@
       "Straight Outta Reinhardt",
       "Cole Vibes Only"
     ],
-    "active": false,
+    "active": true,
     "tier": "template"
   },
   {
@@ -9908,7 +9908,7 @@
       "Straight Outta Lafferty",
       "Sam Vibes Only"
     ],
-    "active": true,
+    "active": false,
     "tier": "template"
   },
   {
@@ -10110,7 +10110,7 @@
       "Straight Outta Brindley",
       "Gavin Vibes Only"
     ],
-    "active": true,
+    "active": false,
     "tier": "template"
   },
   {
@@ -10441,7 +10441,7 @@
       "Straight Outta Solovyov",
       "Ilya Vibes Only"
     ],
-    "active": true,
+    "active": false,
     "tier": "template"
   },
   {
@@ -11007,7 +11007,7 @@
     "names": [
       "Hunter Haight And Weight"
     ],
-    "active": true,
+    "active": false,
     "tier": "curated"
   },
   {
@@ -11046,7 +11046,7 @@
     "id": "daemonhunt_min",
     "first": "Daemon",
     "last": "Hunt",
-    "team": "MIN",
+    "team": "NSH",
     "pos": "D",
     "names": [
       "Hunt's Fantasy Fortress",
@@ -11078,7 +11078,7 @@
     "id": "benjones_min",
     "first": "Ben",
     "last": "Jones",
-    "team": "MIN",
+    "team": "CGY",
     "pos": "C",
     "names": [
       "Jones's Fantasy Fortress",
@@ -11087,7 +11087,7 @@
       "Straight Outta Jones",
       "Ben Vibes Only"
     ],
-    "active": false,
+    "active": true,
     "tier": "template"
   },
   {
@@ -11300,7 +11300,7 @@
       "Straight Outta Barron",
       "Justin Vibes Only"
     ],
-    "active": true,
+    "active": false,
     "tier": "template"
   },
   {
@@ -11560,7 +11560,7 @@
       "Straight Outta Stastney",
       "Spencer Vibes Only"
     ],
-    "active": true,
+    "active": false,
     "tier": "template"
   },
   {
@@ -11632,7 +11632,7 @@
     "names": [
       "Binnington Steele"
     ],
-    "active": true,
+    "active": false,
     "tier": "curated"
   },
   {
@@ -11664,7 +11664,7 @@
       "Straight Outta Broberg",
       "Philip Vibes Only"
     ],
-    "active": true,
+    "active": false,
     "tier": "template"
   },
   {
@@ -11680,7 +11680,7 @@
       "Straight Outta Buchnevich",
       "Pavel Vibes Only"
     ],
-    "active": true,
+    "active": false,
     "tier": "template"
   },
   {
@@ -11696,7 +11696,7 @@
       "Straight Outta Dvorsky",
       "Dalibor Vibes Only"
     ],
-    "active": true,
+    "active": false,
     "tier": "template"
   },
   {
@@ -11724,7 +11724,7 @@
     "names": [
       "Fair Or Fowler"
     ],
-    "active": true,
+    "active": false,
     "tier": "curated"
   },
   {
@@ -11740,7 +11740,7 @@
       "Straight Outta Hofer",
       "Joel Vibes Only"
     ],
-    "active": true,
+    "active": false,
     "tier": "template"
   },
   {
@@ -11756,7 +11756,7 @@
       "Straight Outta Holloway",
       "Dylan Vibes Only"
     ],
-    "active": true,
+    "active": false,
     "tier": "template"
   },
   {
@@ -11808,7 +11808,7 @@
       "Straight Outta Kyrou",
       "Jordan Vibes Only"
     ],
-    "active": true,
+    "active": false,
     "tier": "template"
   },
   {
@@ -11824,7 +11824,7 @@
       "Straight Outta Neighbours",
       "Jake Vibes Only"
     ],
-    "active": true,
+    "active": false,
     "tier": "template"
   },
   {
@@ -11840,7 +11840,7 @@
       "Straight Outta Parayko",
       "Colton Vibes Only"
     ],
-    "active": true,
+    "active": false,
     "tier": "template"
   },
   {
@@ -11868,7 +11868,7 @@
     "names": [
       "Snuggerud As A Bug In A Rug"
     ],
-    "active": true,
+    "active": false,
     "tier": "curated"
   },
   {
@@ -11892,7 +11892,7 @@
     "names": [
       "A Pius Man"
     ],
-    "active": true,
+    "active": false,
     "tier": "curated"
   },
   {
@@ -11908,7 +11908,7 @@
       "Straight Outta Thomas",
       "Robert Vibes Only"
     ],
-    "active": true,
+    "active": false,
     "tier": "template"
   },
   {
@@ -11924,7 +11924,7 @@
       "Straight Outta Toropchenko",
       "Alexey Vibes Only"
     ],
-    "active": true,
+    "active": false,
     "tier": "template"
   },
   {
@@ -11940,7 +11940,7 @@
       "Straight Outta Tucker",
       "Tyler Vibes Only"
     ],
-    "active": true,
+    "active": false,
     "tier": "template"
   },
   {
@@ -12456,7 +12456,7 @@
     "id": "connorhellebuyck_wpg",
     "first": "Connor",
     "last": "Hellebuyck",
-    "team": "WPG",
+    "team": "NJD",
     "pos": "G",
     "names": [
       "Hellebuyck Girl",
@@ -12940,7 +12940,7 @@
       "Mitchell's Fantasy Fortress",
       "Straight Outta Mitchell"
     ],
-    "active": true,
+    "active": false,
     "tier": "template"
   },
   {
@@ -13416,7 +13416,7 @@
       "In Burroughs We Trust",
       "Kyle Vibes Only"
     ],
-    "active": true,
+    "active": false,
     "tier": "template"
   },
   {
@@ -13783,7 +13783,7 @@
     "id": "nicodaws_njd",
     "first": "Nico",
     "last": "Daws",
-    "team": "NJD",
+    "team": "WPG",
     "pos": "G",
     "names": [
       "Nico Daws and the Fantasy Machine",
@@ -13840,7 +13840,7 @@
       "In Ahcan We Trust",
       "Ahcan's Fantasy Fortress"
     ],
-    "active": true,
+    "active": false,
     "tier": "template"
   },
   {
@@ -14112,7 +14112,7 @@
       "Straight Outta Wilson",
       "Garrett Vibes Only"
     ],
-    "active": true,
+    "active": false,
     "tier": "template"
   },
   {
@@ -14182,7 +14182,7 @@
       "Straight Outta Robertson",
       "Robertson's Fantasy Fortress"
     ],
-    "active": true,
+    "active": false,
     "tier": "template"
   },
   {
@@ -14198,7 +14198,7 @@
       "Samuel Vibes Only",
       "Samuel Girard and the Fantasy Machine"
     ],
-    "active": true,
+    "active": false,
     "tier": "template"
   },
   {
@@ -14214,7 +14214,7 @@
       "Sergei Murashov and the Fantasy Machine",
       "Sergei Vibes Only"
     ],
-    "active": true,
+    "active": false,
     "tier": "template"
   },
   {
@@ -14230,7 +14230,7 @@
       "Jacob Melanson and the Fantasy Machine",
       "Melanson's Fantasy Fortress"
     ],
-    "active": true,
+    "active": false,
     "tier": "template"
   },
   {
@@ -14246,7 +14246,7 @@
       "Jake O'Brien and the Fantasy Machine",
       "In O'Brien We Trust"
     ],
-    "active": true,
+    "active": false,
     "tier": "template"
   },
   {
@@ -14262,7 +14262,7 @@
       "Ville Ottavainen and the Fantasy Machine",
       "Straight Outta Ottavainen"
     ],
-    "active": true,
+    "active": false,
     "tier": "template"
   },
   {
@@ -14358,7 +14358,7 @@
       "In Berggren We Trust",
       "Jonatan Vibes Only"
     ],
-    "active": true,
+    "active": false,
     "tier": "template"
   },
   {
@@ -14374,7 +14374,7 @@
       "Zach Vibes Only",
       "In Dean We Trust"
     ],
-    "active": true,
+    "active": false,
     "tier": "template"
   },
   {
@@ -14390,7 +14390,7 @@
       "Dube's Fantasy Fortress",
       "Dillon Vibes Only"
     ],
-    "active": true,
+    "active": false,
     "tier": "template"
   },
   {
@@ -14406,7 +14406,7 @@
       "Jiricek's Fantasy Fortress",
       "In Jiricek We Trust"
     ],
-    "active": true,
+    "active": false,
     "tier": "template"
   },
   {
@@ -14422,7 +14422,7 @@
       "Straight Outta Lindstein",
       "Lindstein's Fantasy Fortress"
     ],
-    "active": true,
+    "active": false,
     "tier": "template"
   },
   {
@@ -14438,7 +14438,7 @@
       "Logan Mailloux and the Fantasy Machine",
       "Straight Outta Mailloux"
     ],
-    "active": true,
+    "active": false,
     "tier": "template"
   },
   {
@@ -14785,7 +14785,7 @@
       "Miroshnichenko's Fantasy Fortress",
       "Straight Outta Miroshnichenko"
     ],
-    "active": true,
+    "active": false,
     "tier": "template"
   },
   {
@@ -14811,7 +14811,7 @@
       "Ovi Achievers",
       "Alexander Oven Chicken"
     ],
-    "active": true,
+    "active": false,
     "tier": "curated",
     "taggedNames": {
       "starwars": [
@@ -14836,7 +14836,7 @@
       "In Fehérváry We Trust",
       "Straight Outta Fehérváry"
     ],
-    "active": true,
+    "active": false,
     "tier": "template"
   },
   {
@@ -14852,7 +14852,7 @@
       "In Hutson We Trust",
       "Straight Outta Hutson"
     ],
-    "active": true,
+    "active": false,
     "tier": "template"
   },
   {
@@ -15432,7 +15432,7 @@
       "Egor Vibes Only",
       "In Chinakhov We Trust"
     ],
-    "active": true,
+    "active": false,
     "tier": "template"
   },
   {
@@ -15464,7 +15464,7 @@
       "Sheldon Dries and the Fantasy Machine",
       "In Dries We Trust"
     ],
-    "active": true,
+    "active": false,
     "tier": "template"
   },
   {
@@ -15560,7 +15560,7 @@
       "Peterson's Fantasy Fortress",
       "In Peterson We Trust"
     ],
-    "active": true,
+    "active": false,
     "tier": "template"
   },
   {
@@ -15576,7 +15576,7 @@
       "In Heinola We Trust",
       "Heinola's Fantasy Fortress"
     ],
-    "active": false,
+    "active": true,
     "tier": "template"
   },
   {
@@ -15608,7 +15608,7 @@
       "Bradly Nadeau and the Fantasy Machine",
       "In Nadeau We Trust"
     ],
-    "active": true,
+    "active": false,
     "tier": "template"
   },
   {
@@ -15624,7 +15624,7 @@
       "Unger Sörum's Fantasy Fortress",
       "Straight Outta Unger Sörum"
     ],
-    "active": true,
+    "active": false,
     "tier": "template"
   },
   {
@@ -15656,7 +15656,7 @@
       "Lambos's Fantasy Fortress",
       "Carson Lambos and the Fantasy Machine"
     ],
-    "active": true,
+    "active": false,
     "tier": "template"
   },
   {
@@ -15672,7 +15672,7 @@
       "Straight Outta Reinbacher",
       "In Reinbacher We Trust"
     ],
-    "active": true,
+    "active": false,
     "tier": "template"
   },
   {
@@ -15688,7 +15688,7 @@
       "In Dowling We Trust",
       "Dowling's Fantasy Fortress"
     ],
-    "active": true,
+    "active": false,
     "tier": "template"
   },
   {
@@ -15704,7 +15704,7 @@
       "Gaucher's Fantasy Fortress",
       "Jacob Vibes Only"
     ],
-    "active": true,
+    "active": false,
     "tier": "template"
   },
   {
@@ -15752,7 +15752,7 @@
       "In Nelson We Trust",
       "Straight Outta Nelson"
     ],
-    "active": true,
+    "active": false,
     "tier": "template"
   },
   {
@@ -15768,7 +15768,7 @@
       "Aleksanteri Vibes Only",
       "In Kaskimaki We Trust"
     ],
-    "active": true,
+    "active": false,
     "tier": "template"
   },
   {
@@ -15784,7 +15784,7 @@
       "In Stenberg We Trust",
       "Straight Outta Stenberg"
     ],
-    "active": true,
+    "active": false,
     "tier": "template"
   },
   {
@@ -15832,7 +15832,7 @@
       "Artur Vibes Only",
       "In Akhtyamov We Trust"
     ],
-    "active": true,
+    "active": false,
     "tier": "template"
   },
   {
@@ -15848,7 +15848,7 @@
       "Yager's Fantasy Fortress",
       "Brayden Yager and the Fantasy Machine"
     ],
-    "active": true,
+    "active": false,
     "tier": "template"
   },
   {
@@ -15863,6 +15863,166 @@
       "Ilya Vibes Only",
       "Protas's Fantasy Fortress",
       "In Protas We Trust"
+    ],
+    "active": false,
+    "tier": "template"
+  },
+  {
+    "id": "dylanhryckowian_dal",
+    "first": "Dylan",
+    "last": "Hryckowian",
+    "team": "DAL",
+    "pos": "RW",
+    "names": [
+      "Straight Outta Hryckowian",
+      "Dylan Hryckowian and the Fantasy Machine",
+      "Dylan Vibes Only",
+      "Hryckowian's Fantasy Fortress",
+      "In Hryckowian We Trust"
+    ],
+    "active": true,
+    "tier": "template"
+  },
+  {
+    "id": "matthewseminoff_dal",
+    "first": "Matthew",
+    "last": "Seminoff",
+    "team": "DAL",
+    "pos": "RW",
+    "names": [
+      "Seminoff's Fantasy Fortress",
+      "Straight Outta Seminoff",
+      "In Seminoff We Trust",
+      "Matthew Seminoff and the Fantasy Machine",
+      "Matthew Vibes Only"
+    ],
+    "active": true,
+    "tier": "template"
+  },
+  {
+    "id": "michalpostava_det",
+    "first": "Michal",
+    "last": "Postava",
+    "team": "DET",
+    "pos": "G",
+    "names": [
+      "In Postava We Trust",
+      "Michal Vibes Only",
+      "Postava's Fantasy Fortress",
+      "Michal Postava and the Fantasy Machine",
+      "Straight Outta Postava"
+    ],
+    "active": true,
+    "tier": "template"
+  },
+  {
+    "id": "matttomkins_edm",
+    "first": "Matt",
+    "last": "Tomkins",
+    "team": "EDM",
+    "pos": "G",
+    "names": [
+      "Tomkins's Fantasy Fortress",
+      "In Tomkins We Trust",
+      "Matt Vibes Only",
+      "Straight Outta Tomkins",
+      "Matt Tomkins and the Fantasy Machine"
+    ],
+    "active": true,
+    "tier": "template"
+  },
+  {
+    "id": "cooperblack_fla",
+    "first": "Cooper",
+    "last": "Black",
+    "team": "FLA",
+    "pos": "G",
+    "names": [
+      "Cooper Black and the Fantasy Machine",
+      "Straight Outta Black",
+      "In Black We Trust",
+      "Black's Fantasy Fortress",
+      "Cooper Vibes Only"
+    ],
+    "active": true,
+    "tier": "template"
+  },
+  {
+    "id": "jaredwright_lak",
+    "first": "Jared",
+    "last": "Wright",
+    "team": "LAK",
+    "pos": "RW",
+    "names": [
+      "Jared Wright and the Fantasy Machine",
+      "Straight Outta Wright",
+      "Wright's Fantasy Fortress",
+      "In Wright We Trust",
+      "Jared Vibes Only"
+    ],
+    "active": true,
+    "tier": "template"
+  },
+  {
+    "id": "masonshaw_min",
+    "first": "Mason",
+    "last": "Shaw",
+    "team": "MIN",
+    "pos": "C",
+    "names": [
+      "Mason Shaw and the Fantasy Machine",
+      "Straight Outta Shaw",
+      "Mason Vibes Only",
+      "In Shaw We Trust",
+      "Shaw's Fantasy Fortress"
+    ],
+    "active": true,
+    "tier": "template"
+  },
+  {
+    "id": "kashawnaitcheson_nyi",
+    "first": "Kashawn",
+    "last": "Aitcheson",
+    "team": "NYI",
+    "pos": "D",
+    "names": [
+      "In Aitcheson We Trust",
+      "Kashawn Vibes Only",
+      "Aitcheson's Fantasy Fortress",
+      "Kashawn Aitcheson and the Fantasy Machine",
+      "Straight Outta Aitcheson"
+    ],
+    "active": true,
+    "tier": "template"
+  },
+  {
+    "id": "jonasrondbjerg_vgk",
+    "first": "Jonas",
+    "last": "Rondbjerg",
+    "team": "VGK",
+    "pos": "RW",
+    "names": [
+      "Rondbjerg's Fantasy Fortress",
+      "Jonas Rondbjerg and the Fantasy Machine",
+      "Jonas Vibes Only",
+      "Straight Outta Rondbjerg",
+      "In Rondbjerg We Trust"
+    ],
+    "active": true,
+    "tier": "template"
+  },
+  {
+    "id": "eliassalomonsson_wpg",
+    "first": "Elias",
+    "last": "Salomonsson",
+    "team": "WPG",
+    "pos": "D",
+    "names": [
+      "Salomonsson's Fantasy Fortress",
+      "In Salomonsson We Trust",
+      "Elias Vibes Only",
+      "Straight Outta Salomonsson",
+      "Elias Salomonsson and the Fantasy Machine"
     ],
     "active": true,
     "tier": "template"
