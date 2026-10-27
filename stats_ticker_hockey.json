@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-27T11:24:39.497Z",
+  "generatedAt": "2026-10-27T15:15:15.159Z",
   "season": "20262027",
   "seasonTotals": {
     "C": [
@@ -818,13 +818,13 @@
         "pun": "Laba's Fantasy Fortress"
       },
       {
-        "id": "mikazibanejad_nyr",
-        "first": "Mika",
-        "last": "Zibanejad",
+        "id": "lukeglendening_njd",
+        "first": "Luke",
+        "last": "Glendening",
         "team": "NYR",
         "pos": "C",
         "pts": 0,
-        "pun": "Zibanejad's Zigzag Goals"
+        "pun": "Glendening's Fantasy Fortress"
       }
     ],
     "LW": [
@@ -1312,6 +1312,15 @@
         "pun": "Dylan Garand and the Fantasy Machine"
       },
       {
+        "id": "jamesreimer_ott",
+        "first": "James",
+        "last": "Reimer",
+        "team": "NYR",
+        "pos": "G",
+        "pts": 0,
+        "pun": "Optimus Reimer"
+      },
+      {
         "id": "anthonystolarz_tor",
         "first": "Anthony",
         "last": "Stolarz",
@@ -1348,6 +1357,15 @@
         "pun": "Wolf's Fantasy Fortress"
       },
       {
+        "id": "michalpostava_det",
+        "first": "Michal",
+        "last": "Postava",
+        "team": "DET",
+        "pos": "G",
+        "pts": 0,
+        "pun": "In Postava We Trust"
+      },
+      {
         "id": "johngibson_det",
         "first": "John",
         "last": "Gibson",
@@ -1355,15 +1373,6 @@
         "pos": "G",
         "pts": 0,
         "pun": "Gibson's Fantasy Fortress"
-      },
-      {
-        "id": "tristanjarry_edm",
-        "first": "Tristan",
-        "last": "Jarry",
-        "team": "EDM",
-        "pos": "G",
-        "pts": 0,
-        "pun": "Din Tristan Djarin"
       }
     ]
   }
