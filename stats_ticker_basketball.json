@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-29T11:56:53.481Z",
+  "generatedAt": "2026-10-29T15:56:22.964Z",
   "season": "2026",
   "isLastSeason": false,
   "fantasyLeaders": {
@@ -1597,16 +1597,6 @@
         "pts": 69.7
       },
       {
-        "id": "dylanharper_sas",
-        "first": "Dylan",
-        "last": "Harper",
-        "team": "SAS",
-        "pos": "SG",
-        "pun": "Dylan & Chill",
-        "gp": 2,
-        "pts": 68.2
-      },
-      {
         "id": "austinreaves_lal",
         "first": "Austin",
         "last": "Reaves",
@@ -1615,6 +1605,16 @@
         "pun": "Austin Reaves and the Fantasy Machine",
         "gp": 2,
         "pts": 68
+      },
+      {
+        "id": "dylanharper_sas",
+        "first": "Dylan",
+        "last": "Harper",
+        "team": "SAS",
+        "pos": "SG",
+        "pun": "Dylan & Chill",
+        "gp": 2,
+        "pts": 66.2
       },
       {
         "id": "anthonyedwards_min",
@@ -1898,7 +1898,7 @@
         "pos": "PF",
         "pun": "Johnson Happens",
         "gp": 2,
-        "pts": 85.6
+        "pts": 83.6
       },
       {
         "id": "calebwilson_chi",
@@ -2020,7 +2020,7 @@
         "pos": "C",
         "pun": "Sir This Is A Wemby's",
         "gp": 2,
-        "pts": 126.3
+        "pts": 128.3
       },
       {
         "id": "karlanthonytowns_nyk",
@@ -2996,7 +2996,7 @@
         "apg": 7,
         "rpg": 9,
         "spg": 0.5,
-        "bpg": 2
+        "bpg": 1.5
       },
       {
         "id": "jonathankuminga_min",
@@ -3025,7 +3025,7 @@
         "ppg": 32.5,
         "apg": 3.5,
         "rpg": 12,
-        "spg": 2,
+        "spg": 2.5,
         "bpg": 3.5
       },
       {
