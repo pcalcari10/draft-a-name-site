@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-02T03:14:19.667Z",
+  "generatedAt": "2026-11-02T11:07:38.737Z",
   "season": "2026",
   "week": 8,
   "thisWeek": {
@@ -241,6 +241,15 @@
         "pun": "King Henry's Court"
       },
       {
+        "id": "rachaadwhite_was",
+        "first": "Rachaad",
+        "last": "White",
+        "team": "WAS",
+        "pos": "RB",
+        "pts": 14,
+        "pun": "Rachaad White and the 7 Dwarfs"
+      },
+      {
         "id": "blakecorum_lar",
         "first": "Blake",
         "last": "Corum",
@@ -277,6 +286,15 @@
         "pun": "Rodriguez Happens"
       },
       {
+        "id": "saquonbarkley_phi",
+        "first": "Saquon",
+        "last": "Barkley",
+        "team": "PHI",
+        "pos": "RB",
+        "pts": 12.4,
+        "pun": "Je Ne Saquon"
+      },
+      {
         "id": "kennethwalkeriii_kc",
         "first": "Kenneth",
         "last": "Walker",
@@ -304,15 +322,6 @@
         "pun": "Dowdle-A-Palooza"
       },
       {
-        "id": "saquonbarkley_phi",
-        "first": "Saquon",
-        "last": "Barkley",
-        "team": "PHI",
-        "pos": "RB",
-        "pts": 11.4,
-        "pun": "Je Ne Saquon"
-      },
-      {
         "id": "ashtonjeanty_lv",
         "first": "Ashton",
         "last": "Jeanty",
@@ -320,15 +329,6 @@
         "pos": "RB",
         "pts": 10.3,
         "pun": "Fire and Ashton"
-      },
-      {
-        "id": "mikewashingtonjr_lv",
-        "first": "Mike",
-        "last": "Washington",
-        "team": "LV",
-        "pos": "RB",
-        "pts": 8.3,
-        "pun": "Washington Wizards"
       }
     ],
     "WR": [
@@ -513,6 +513,15 @@
         "pun": "Ryan Flournoy and the Fantasy Machine"
       },
       {
+        "id": "stefondiggs_was",
+        "first": "Stefon",
+        "last": "Diggs",
+        "team": "WAS",
+        "pos": "WR",
+        "pts": 12.8,
+        "pun": "Can You Digg It?"
+      },
+      {
         "id": "ceedeelamb_dal",
         "first": "CeeDee",
         "last": "Lamb",
@@ -538,15 +547,6 @@
         "pos": "WR",
         "pts": 12.6,
         "pun": "Ladd-y and the Tramp"
-      },
-      {
-        "id": "joshdowns_ind",
-        "first": "Josh",
-        "last": "Downs",
-        "team": "IND",
-        "pos": "WR",
-        "pts": 12.3,
-        "pun": "Double Downs"
       }
     ],
     "TE": [
