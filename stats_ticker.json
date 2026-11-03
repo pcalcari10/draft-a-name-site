@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-02T20:36:15.957Z",
+  "generatedAt": "2026-11-03T05:18:54.396Z",
   "season": "2026",
   "week": 8,
   "thisWeek": {
@@ -140,6 +140,15 @@
         "pos": "RB",
         "pts": 28.7,
         "pun": "The Pollard Express"
+      },
+      {
+        "id": "dandreswift_chi",
+        "first": "D'Andre",
+        "last": "Swift",
+        "team": "CHI",
+        "pos": "RB",
+        "pts": 27.9,
+        "pun": "50 Shades of D'Andre"
       },
       {
         "id": "emmettjohnson_kc",
@@ -320,15 +329,6 @@
         "pos": "RB",
         "pts": 11.6,
         "pun": "Dowdle-A-Palooza"
-      },
-      {
-        "id": "ashtonjeanty_lv",
-        "first": "Ashton",
-        "last": "Jeanty",
-        "team": "LV",
-        "pos": "RB",
-        "pts": 10.3,
-        "pun": "Fire and Ashton"
       }
     ],
     "WR": [
@@ -378,6 +378,15 @@
         "pun": "Nacua Matata"
       },
       {
+        "id": "jaxonsmithnjigba_sea",
+        "first": "Jaxon",
+        "last": "Smith-Njigba",
+        "team": "SEA",
+        "pos": "WR",
+        "pts": 23.8,
+        "pun": "I'm Sorry Ms. Jaxon"
+      },
+      {
         "id": "matthewgolden_gb",
         "first": "Matthew",
         "last": "Golden",
@@ -385,6 +394,15 @@
         "pos": "WR",
         "pts": 20.9,
         "pun": "Golden Goose"
+      },
+      {
+        "id": "lutherburdeniii_chi",
+        "first": "Luther",
+        "last": "Burden",
+        "team": "CHI",
+        "pos": "WR",
+        "pts": 18.6,
+        "pun": "Un-Burden Me"
       },
       {
         "id": "rasheerice_kc",
@@ -529,24 +547,6 @@
         "pos": "WR",
         "pts": 12.8,
         "pun": "Silence of the Lambs"
-      },
-      {
-        "id": "amonrastbrown_det",
-        "first": "Amon-Ra",
-        "last": "St. Brown",
-        "team": "DET",
-        "pos": "WR",
-        "pts": 12.6,
-        "pun": "Amon Joy"
-      },
-      {
-        "id": "laddmcconkey_lac",
-        "first": "Ladd",
-        "last": "McConkey",
-        "team": "LAC",
-        "pos": "WR",
-        "pts": 12.6,
-        "pun": "Ladd-y and the Tramp"
       }
     ],
     "TE": [
@@ -650,13 +650,13 @@
         "pun": "The Muth Is Luth"
       },
       {
-        "id": "michaelmayer_lv",
-        "first": "Michael",
-        "last": "Mayer",
-        "team": "LV",
+        "id": "colstonloveland_chi",
+        "first": "Colston",
+        "last": "Loveland",
+        "team": "CHI",
         "pos": "TE",
-        "pts": 10.3,
-        "pun": "Mayer Happens"
+        "pts": 11.5,
+        "pun": "Colston Creamery"
       }
     ],
     "K": [
@@ -695,6 +695,15 @@
         "pos": "K",
         "pts": 12,
         "pun": "Aubrey'd Up and Ready"
+      },
+      {
+        "id": "cairosantos_chi",
+        "first": "Cairo",
+        "last": "Santos",
+        "team": "CHI",
+        "pos": "K",
+        "pts": 11,
+        "pun": "Santos of Fame"
       },
       {
         "id": "camerondicker_lac",
@@ -740,15 +749,6 @@
         "pos": "K",
         "pts": 9,
         "pun": "Chad's Excellent Adventure"
-      },
-      {
-        "id": "ryanfitzgerald_car",
-        "first": "Ryan",
-        "last": "Fitzgerald",
-        "team": "CAR",
-        "pos": "K",
-        "pts": 9,
-        "pun": "Fitzgerald-A-Palooza"
       }
     ]
   },
@@ -892,6 +892,15 @@
         "pun": "To Infinity and Bijan"
       },
       {
+        "id": "dandreswift_chi",
+        "first": "D'Andre",
+        "last": "Swift",
+        "team": "CHI",
+        "pos": "RB",
+        "pts": 150.7,
+        "pun": "50 Shades of D'Andre"
+      },
+      {
         "id": "kyrenwilliams_lar",
         "first": "Kyren",
         "last": "Williams",
@@ -980,15 +989,6 @@
         "pos": "RB",
         "pts": 130.6,
         "pun": "Bucky Beaver Dam"
-      },
-      {
-        "id": "dandreswift_chi",
-        "first": "D'Andre",
-        "last": "Swift",
-        "team": "CHI",
-        "pos": "RB",
-        "pts": 122.8,
-        "pun": "50 Shades of D'Andre"
       },
       {
         "id": "bhayshultuten_jac",
@@ -1088,7 +1088,7 @@
         "last": "Smith-Njigba",
         "team": "SEA",
         "pos": "WR",
-        "pts": 196.2,
+        "pts": 220,
         "pun": "I'm Sorry Ms. Jaxon"
       },
       {
@@ -1182,6 +1182,15 @@
         "pun": "Love thy Nabers"
       },
       {
+        "id": "lutherburdeniii_chi",
+        "first": "Luther",
+        "last": "Burden",
+        "team": "CHI",
+        "pos": "WR",
+        "pts": 115.6,
+        "pun": "Un-Burden Me"
+      },
+      {
         "id": "garrettwilson_nyj",
         "first": "Garrett",
         "last": "Wilson",
@@ -1252,15 +1261,6 @@
         "pos": "WR",
         "pts": 99.8,
         "pun": "Tucker'd Up and Ready"
-      },
-      {
-        "id": "lutherburdeniii_chi",
-        "first": "Luther",
-        "last": "Burden",
-        "team": "CHI",
-        "pos": "WR",
-        "pts": 97,
-        "pun": "Un-Burden Me"
       },
       {
         "id": "parkerwashington_jac",
@@ -1483,6 +1483,15 @@
         "pun": "Fairbairn-A-Palooza"
       },
       {
+        "id": "cairosantos_chi",
+        "first": "Cairo",
+        "last": "Santos",
+        "team": "CHI",
+        "pos": "K",
+        "pts": 70,
+        "pun": "Santos of Fame"
+      },
+      {
         "id": "jasonsanders_nyj",
         "first": "Jason",
         "last": "Sanders",
@@ -1490,15 +1499,6 @@
         "pos": "K",
         "pts": 70,
         "pun": "Livin' on a Sanders"
-      },
-      {
-        "id": "brandonaubrey_dal",
-        "first": "Brandon",
-        "last": "Aubrey",
-        "team": "DAL",
-        "pos": "K",
-        "pts": 69,
-        "pun": "Aubrey'd Up and Ready"
       }
     ]
   }
