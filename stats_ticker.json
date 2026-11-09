@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-09T03:32:24.674Z",
+  "generatedAt": "2026-11-09T12:06:14.519Z",
   "season": "2026",
   "week": 9,
   "thisWeek": {
@@ -86,6 +86,15 @@
         "pun": "The Boys Are Dak In Town"
       },
       {
+        "id": "calebwilliams_chi",
+        "first": "Caleb",
+        "last": "Williams",
+        "team": "CHI",
+        "pos": "QB",
+        "pts": 16.8,
+        "pun": "Lisan Al-Caleb"
+      },
+      {
         "id": "bonix_den",
         "first": "Bo",
         "last": "Nix",
@@ -102,15 +111,6 @@
         "pos": "QB",
         "pts": 16.5,
         "pun": "Sherlock Mahomes"
-      },
-      {
-        "id": "kirkcousins_lv",
-        "first": "Kirk",
-        "last": "Cousins",
-        "team": "LV",
-        "pos": "QB",
-        "pts": 15.6,
-        "pun": "I Married my Cousins"
       }
     ],
     "RB": [
@@ -122,6 +122,15 @@
         "pos": "RB",
         "pts": 36.3,
         "pun": "Walker in the Park"
+      },
+      {
+        "id": "buckyirving_tb",
+        "first": "Bucky",
+        "last": "Irving",
+        "team": "TB",
+        "pos": "RB",
+        "pts": 28.5,
+        "pun": "Bucky Beaver Dam"
       },
       {
         "id": "bijanrobinson_atl",
@@ -203,15 +212,6 @@
         "pos": "RB",
         "pts": 13.4,
         "pun": "Baby Back Gibbs"
-      },
-      {
-        "id": "buckyirving_tb",
-        "first": "Bucky",
-        "last": "Irving",
-        "team": "TB",
-        "pos": "RB",
-        "pts": 13.4,
-        "pun": "Bucky Beaver Dam"
       },
       {
         "id": "kalebjohnson_gb",
@@ -387,6 +387,15 @@
         "pun": "Kicking Your Boutte"
       },
       {
+        "id": "lutherburdeniii_chi",
+        "first": "Luther",
+        "last": "Burden",
+        "team": "CHI",
+        "pos": "WR",
+        "pts": 20.7,
+        "pun": "Un-Burden Me"
+      },
+      {
         "id": "tankdell_hou",
         "first": "Tank",
         "last": "Dell",
@@ -403,15 +412,6 @@
         "pos": "WR",
         "pts": 20.2,
         "pun": "Tee Time"
-      },
-      {
-        "id": "lutherburdeniii_chi",
-        "first": "Luther",
-        "last": "Burden",
-        "team": "CHI",
-        "pos": "WR",
-        "pts": 18.8,
-        "pun": "Un-Burden Me"
       },
       {
         "id": "kcconcepcionjr_cle",
@@ -742,13 +742,13 @@
         "pun": "Zane & Chill"
       },
       {
-        "id": "willutz_den",
-        "first": "Wil",
-        "last": "Lutz",
-        "team": "DEN",
+        "id": "chasemclaughlin_tb",
+        "first": "Chase",
+        "last": "McLaughlin",
+        "team": "TB",
         "pos": "K",
-        "pts": 9,
-        "pun": "Whatchu Talkin Bout Will Lutz"
+        "pts": 10,
+        "pun": "Livin' on a McLaughlin"
       }
     ]
   },
@@ -919,6 +919,24 @@
         "pun": "Williams-Sonoma Touchdowns"
       },
       {
+        "id": "buckyirving_tb",
+        "first": "Bucky",
+        "last": "Irving",
+        "team": "TB",
+        "pos": "RB",
+        "pts": 159.1,
+        "pun": "Bucky Beaver Dam"
+      },
+      {
+        "id": "dandreswift_chi",
+        "first": "D'Andre",
+        "last": "Swift",
+        "team": "CHI",
+        "pos": "RB",
+        "pts": 153.8,
+        "pun": "50 Shades of D'Andre"
+      },
+      {
         "id": "jonathantaylor_ind",
         "first": "Jonathan",
         "last": "Taylor",
@@ -928,15 +946,6 @@
         "pun": "Taylor-Made"
       },
       {
-        "id": "dandreswift_chi",
-        "first": "D'Andre",
-        "last": "Swift",
-        "team": "CHI",
-        "pos": "RB",
-        "pts": 153.4,
-        "pun": "50 Shades of D'Andre"
-      },
-      {
         "id": "chubahubbard_car",
         "first": "Chuba",
         "last": "Hubbard",
@@ -944,15 +953,6 @@
         "pos": "RB",
         "pts": 146.6,
         "pun": "Chubawamba"
-      },
-      {
-        "id": "buckyirving_tb",
-        "first": "Bucky",
-        "last": "Irving",
-        "team": "TB",
-        "pos": "RB",
-        "pts": 144,
-        "pun": "Bucky Beaver Dam"
       },
       {
         "id": "derrickhenry_bal",
@@ -1169,7 +1169,7 @@
         "last": "Burden",
         "team": "CHI",
         "pos": "WR",
-        "pts": 134.4,
+        "pts": 136.3,
         "pun": "Un-Burden Me"
       },
       {
@@ -1382,6 +1382,15 @@
         "pun": "This is Your Final Warren"
       },
       {
+        "id": "colstonloveland_chi",
+        "first": "Colston",
+        "last": "Loveland",
+        "team": "CHI",
+        "pos": "TE",
+        "pts": 83.3,
+        "pun": "Colston Creamery"
+      },
+      {
         "id": "michaelmayer_lv",
         "first": "Michael",
         "last": "Mayer",
@@ -1398,15 +1407,6 @@
         "pos": "TE",
         "pts": 80.2,
         "pun": "Gesicki-tastic Voyage"
-      },
-      {
-        "id": "hunterhenry_ne",
-        "first": "Hunter",
-        "last": "Henry",
-        "team": "NE",
-        "pos": "TE",
-        "pts": 80.1,
-        "pun": "Henry's Bulldozers"
       }
     ],
     "K": [
@@ -1425,7 +1425,7 @@
         "last": "McLaughlin",
         "team": "TB",
         "pos": "K",
-        "pts": 96,
+        "pts": 99,
         "pun": "Livin' on a McLaughlin"
       },
       {
@@ -1474,6 +1474,15 @@
         "pun": "Reichard Happens"
       },
       {
+        "id": "cairosantos_chi",
+        "first": "Cairo",
+        "last": "Santos",
+        "team": "CHI",
+        "pos": "K",
+        "pts": 79,
+        "pun": "Santos of Fame"
+      },
+      {
         "id": "andreszmyt_cle",
         "first": "Andre",
         "last": "Szmyt",
@@ -1490,15 +1499,6 @@
         "pos": "K",
         "pts": 79,
         "pun": "All Bates, No Filler"
-      },
-      {
-        "id": "brandonaubrey_dal",
-        "first": "Brandon",
-        "last": "Aubrey",
-        "team": "DAL",
-        "pos": "K",
-        "pts": 78,
-        "pun": "Aubrey'd Up and Ready"
       }
     ]
   }
