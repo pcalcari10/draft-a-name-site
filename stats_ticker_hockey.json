@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-10T16:55:18.127Z",
+  "generatedAt": "2026-11-10T18:31:41.767Z",
   "season": "20262027",
   "seasonTotals": {
     "C": [
@@ -1148,6 +1148,15 @@
         "pun": "Schaefer's Fantasy Fortress"
       },
       {
+        "id": "benhutton_vgk",
+        "first": "Ben",
+        "last": "Hutton",
+        "team": "NYI",
+        "pos": "D",
+        "pts": 1,
+        "pun": "Hutton's Fantasy Fortress"
+      },
+      {
         "id": "dmitryorlov_sjs",
         "first": "Dmitry",
         "last": "Orlov",
@@ -1155,6 +1164,15 @@
         "pos": "D",
         "pts": 1,
         "pun": "K2S-Orlov"
+      },
+      {
+        "id": "ericpohlkamp_sjs",
+        "first": "Eric",
+        "last": "Pohlkamp",
+        "team": "SJS",
+        "pos": "D",
+        "pts": 1,
+        "pun": "Pohlkamp's Fantasy Fortress"
       },
       {
         "id": "bradenschneider_nyr",
@@ -1263,24 +1281,6 @@
         "pos": "D",
         "pts": 0,
         "pun": "York's Fantasy Fortress"
-      },
-      {
-        "id": "jamiedrysdale_phi",
-        "first": "Jamie",
-        "last": "Drysdale",
-        "team": "PHI",
-        "pos": "D",
-        "pts": 0,
-        "pun": "The Drysdale's Dragoons"
-      },
-      {
-        "id": "oliverbonk_phi",
-        "first": "Oliver",
-        "last": "Bonk",
-        "team": "PHI",
-        "pos": "D",
-        "pts": 0,
-        "pun": "Oliver Bonk and the Fantasy Machine"
       }
     ],
     "G": [
