@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-09T21:14:54.155Z",
+  "generatedAt": "2026-11-10T05:54:27.626Z",
   "season": "2026",
   "week": 9,
   "thisWeek": {
@@ -178,6 +178,15 @@
         "pun": "King of The Hill"
       },
       {
+        "id": "jamescookiii_buf",
+        "first": "James",
+        "last": "Cook",
+        "team": "BUF",
+        "pos": "RB",
+        "pts": 16.7,
+        "pun": "James Cooked"
+      },
+      {
         "id": "rhamondrestevenson_ne",
         "first": "Rhamondre",
         "last": "Stevenson",
@@ -320,15 +329,6 @@
         "pos": "RB",
         "pts": 9.1,
         "pun": "Williams-Sonoma Touchdowns"
-      },
-      {
-        "id": "bhayshultuten_jac",
-        "first": "Bhayshul",
-        "last": "Tuten",
-        "team": "JAC",
-        "pos": "RB",
-        "pts": 8.9,
-        "pun": "King Tuten-khamun"
       }
     ],
     "WR": [
@@ -706,6 +706,15 @@
         "pun": "All Bates, No Filler"
       },
       {
+        "id": "tylerbass_buf",
+        "first": "Tyler",
+        "last": "Bass",
+        "team": "BUF",
+        "pos": "K",
+        "pts": 13,
+        "pun": "Bass-A-Palooza"
+      },
+      {
         "id": "evanmcpherson_cin",
         "first": "Evan",
         "last": "McPherson",
@@ -740,20 +749,20 @@
         "pos": "K",
         "pts": 10,
         "pun": "Zane & Chill"
-      },
-      {
-        "id": "chasemclaughlin_tb",
-        "first": "Chase",
-        "last": "McLaughlin",
-        "team": "TB",
-        "pos": "K",
-        "pts": 10,
-        "pun": "Livin' on a McLaughlin"
       }
     ]
   },
   "seasonTotals": {
     "QB": [
+      {
+        "id": "joshallen_buf",
+        "first": "Josh",
+        "last": "Allen",
+        "team": "BUF",
+        "pos": "QB",
+        "pts": 206.7,
+        "pun": "Quit Joshin' Around"
+      },
       {
         "id": "joeburrow_cin",
         "first": "Joe",
@@ -762,15 +771,6 @@
         "pos": "QB",
         "pts": 205.1,
         "pun": "Beg, Burrow, and Steal"
-      },
-      {
-        "id": "joshallen_buf",
-        "first": "Josh",
-        "last": "Allen",
-        "team": "BUF",
-        "pos": "QB",
-        "pts": 192.8,
-        "pun": "Quit Joshin' Around"
       },
       {
         "id": "jordanlove_gb",
@@ -946,6 +946,15 @@
         "pun": "Taylor-Made"
       },
       {
+        "id": "jamescookiii_buf",
+        "first": "James",
+        "last": "Cook",
+        "team": "BUF",
+        "pos": "RB",
+        "pts": 148.4,
+        "pun": "James Cooked"
+      },
+      {
         "id": "chubahubbard_car",
         "first": "Chuba",
         "last": "Hubbard",
@@ -980,15 +989,6 @@
         "pos": "RB",
         "pts": 139.3,
         "pun": "Fire and Ashton"
-      },
-      {
-        "id": "jamescookiii_buf",
-        "first": "James",
-        "last": "Cook",
-        "team": "BUF",
-        "pos": "RB",
-        "pts": 131.7,
-        "pun": "James Cooked"
       },
       {
         "id": "bhayshultuten_jac",
@@ -1068,7 +1068,7 @@
         "last": "Jones",
         "team": "MIN",
         "pos": "RB",
-        "pts": 79.8,
+        "pts": 82.9,
         "pun": "Keeping Up With the Jones"
       },
       {
@@ -1290,13 +1290,13 @@
         "pun": "Super DeMario"
       },
       {
-        "id": "nicocollins_hou",
-        "first": "Nico",
-        "last": "Collins",
-        "team": "HOU",
+        "id": "justinjefferson_min",
+        "first": "Justin",
+        "last": "Jefferson",
+        "team": "MIN",
         "pos": "WR",
-        "pts": 91.6,
-        "pun": "Nico Suave"
+        "pts": 95.2,
+        "pun": "Carry On, My Wayward Jefferson"
       }
     ],
     "TE": [
@@ -1373,6 +1373,24 @@
         "pun": "Kraft Beers"
       },
       {
+        "id": "tjhockenson_min",
+        "first": "T.J.",
+        "last": "Hockenson",
+        "team": "MIN",
+        "pos": "TE",
+        "pts": 85.8,
+        "pun": "Hockenson Loogies"
+      },
+      {
+        "id": "daltonkincaid_buf",
+        "first": "Dalton",
+        "last": "Kincaid",
+        "team": "BUF",
+        "pos": "TE",
+        "pts": 84.9,
+        "pun": "Dalton Abbey"
+      },
+      {
         "id": "tylerwarren_ind",
         "first": "Tyler",
         "last": "Warren",
@@ -1389,24 +1407,6 @@
         "pos": "TE",
         "pts": 83.3,
         "pun": "Colston Creamery"
-      },
-      {
-        "id": "michaelmayer_lv",
-        "first": "Michael",
-        "last": "Mayer",
-        "team": "LV",
-        "pos": "TE",
-        "pts": 81.8,
-        "pun": "Mayer Happens"
-      },
-      {
-        "id": "mikegesicki_cin",
-        "first": "Mike",
-        "last": "Gesicki",
-        "team": "CIN",
-        "pos": "TE",
-        "pts": 80.2,
-        "pun": "Gesicki-tastic Voyage"
       }
     ],
     "K": [
@@ -1438,6 +1438,24 @@
         "pun": "Fairbairn-A-Palooza"
       },
       {
+        "id": "tylerbass_buf",
+        "first": "Tyler",
+        "last": "Bass",
+        "team": "BUF",
+        "pos": "K",
+        "pts": 89,
+        "pun": "Bass-A-Palooza"
+      },
+      {
+        "id": "willreichard_min",
+        "first": "Will",
+        "last": "Reichard",
+        "team": "MIN",
+        "pos": "K",
+        "pts": 89,
+        "pun": "Reichard Happens"
+      },
+      {
         "id": "mattgay_lv",
         "first": "Matt",
         "last": "Gay",
@@ -1465,15 +1483,6 @@
         "pun": "Chad's Excellent Adventure"
       },
       {
-        "id": "willreichard_min",
-        "first": "Will",
-        "last": "Reichard",
-        "team": "MIN",
-        "pos": "K",
-        "pts": 80,
-        "pun": "Reichard Happens"
-      },
-      {
         "id": "cairosantos_chi",
         "first": "Cairo",
         "last": "Santos",
@@ -1490,15 +1499,6 @@
         "pos": "K",
         "pts": 79,
         "pun": "Andre's Excellent Adventure"
-      },
-      {
-        "id": "jakebates_det",
-        "first": "Jake",
-        "last": "Bates",
-        "team": "DET",
-        "pos": "K",
-        "pts": 79,
-        "pun": "All Bates, No Filler"
       }
     ]
   }
