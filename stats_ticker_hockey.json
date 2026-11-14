@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-13T18:26:55.738Z",
+  "generatedAt": "2026-11-14T09:37:27.128Z",
   "season": "20262027",
   "seasonTotals": {
     "C": [
@@ -186,6 +186,15 @@
         "pun": "Gauthier's Fantasy Fortress"
       },
       {
+        "id": "alexislafrenire_nyr",
+        "first": "Alexis",
+        "last": "Lafrenière",
+        "team": "NYR",
+        "pos": "LW",
+        "pts": 22,
+        "pun": "Lafrenière's Fantasy Fortress"
+      },
+      {
         "id": "filipforsberg_nsh",
         "first": "Filip",
         "last": "Forsberg",
@@ -220,15 +229,6 @@
         "pos": "LW",
         "pts": 20,
         "pun": "Robertson Report"
-      },
-      {
-        "id": "alexislafrenire_nyr",
-        "first": "Alexis",
-        "last": "Lafrenière",
-        "team": "NYR",
-        "pos": "LW",
-        "pts": 20,
-        "pun": "Lafrenière's Fantasy Fortress"
       },
       {
         "id": "jesperbratt_njd",
@@ -305,6 +305,15 @@
         "pun": "Pasta La Vista"
       },
       {
+        "id": "mitchmarner_vgk",
+        "first": "Mitch",
+        "last": "Marner",
+        "team": "VGK",
+        "pos": "RW",
+        "pts": 24,
+        "pun": "Marner's Farm"
+      },
+      {
         "id": "beckettsennecke_ana",
         "first": "Beckett",
         "last": "Sennecke",
@@ -312,15 +321,6 @@
         "pos": "RW",
         "pts": 23,
         "pun": "Sennecke's Fantasy Fortress"
-      },
-      {
-        "id": "mitchmarner_vgk",
-        "first": "Mitch",
-        "last": "Marner",
-        "team": "VGK",
-        "pos": "RW",
-        "pts": 23,
-        "pun": "Marner's Farm"
       },
       {
         "id": "williamnylander_tor",
@@ -400,7 +400,7 @@
         "last": "Boeser",
         "team": "VAN",
         "pos": "RW",
-        "pts": 17,
+        "pts": 18,
         "pun": "Boeser’s Castle"
       },
       {
@@ -442,21 +442,12 @@
         "pun": "Makar Attacks"
       },
       {
-        "id": "sethjones_fla",
-        "first": "Seth",
-        "last": "Jones",
-        "team": "FLA",
-        "pos": "D",
-        "pts": 22,
-        "pun": "Jones's Fantasy Fortress"
-      },
-      {
         "id": "romanjosi_nsh",
         "first": "Roman",
         "last": "Josi",
         "team": "NSH",
         "pos": "D",
-        "pts": 22,
+        "pts": 23,
         "pun": "The Outlaw Josi Wales"
       },
       {
@@ -465,8 +456,17 @@
         "last": "Fox",
         "team": "NYR",
         "pos": "D",
-        "pts": 22,
+        "pts": 23,
         "pun": "Fox in the Box"
+      },
+      {
+        "id": "sethjones_fla",
+        "first": "Seth",
+        "last": "Jones",
+        "team": "FLA",
+        "pos": "D",
+        "pts": 22,
+        "pun": "Jones's Fantasy Fortress"
       },
       {
         "id": "jacksonlacombe_ana",
@@ -478,6 +478,15 @@
         "pun": "LaCombe Your Hair"
       },
       {
+        "id": "eliaspettersson_van2",
+        "first": "Elias",
+        "last": "Pettersson",
+        "team": "VAN",
+        "pos": "D",
+        "pts": 21,
+        "pun": "Pettersson's Fantasy Fortress"
+      },
+      {
         "id": "mikhailsergachev_uta",
         "first": "Mikhail",
         "last": "Sergachev",
@@ -485,15 +494,6 @@
         "pos": "D",
         "pts": 20,
         "pun": "Sergachev's Fantasy Fortress"
-      },
-      {
-        "id": "eliaspettersson_van2",
-        "first": "Elias",
-        "last": "Pettersson",
-        "team": "VAN",
-        "pos": "D",
-        "pts": 20,
-        "pun": "Pettersson's Fantasy Fortress"
       },
       {
         "id": "devontoews_col",
@@ -701,6 +701,15 @@
         "pun": "Guentzel's Fantasy Fortress"
       },
       {
+        "id": "mikazibanejad_nyr",
+        "first": "Mika",
+        "last": "Zibanejad",
+        "team": "NYR",
+        "pos": "C",
+        "pts": 4,
+        "pun": "Zibanejad's Zigzag Goals"
+      },
+      {
         "id": "braydenschenn_stl",
         "first": "Brayden",
         "last": "Schenn",
@@ -755,13 +764,13 @@
         "pun": "Verhaeghe's Fantasy Fortress"
       },
       {
-        "id": "mikazibanejad_nyr",
-        "first": "Mika",
-        "last": "Zibanejad",
+        "id": "jtmiller_nyr",
+        "first": "J.T.",
+        "last": "Miller",
         "team": "NYR",
         "pos": "C",
         "pts": 3,
-        "pun": "Zibanejad's Zigzag Goals"
+        "pun": "Miller's Fantasy Fortress"
       },
       {
         "id": "leondraisaitl_edm",
@@ -816,15 +825,6 @@
         "pos": "C",
         "pts": 3,
         "pun": "Matt Du-Shane Wright"
-      },
-      {
-        "id": "anthonycirelli_tbl",
-        "first": "Anthony",
-        "last": "Cirelli",
-        "team": "TBL",
-        "pos": "C",
-        "pts": 3,
-        "pun": "Cirelli's Fantasy Fortress"
       }
     ],
     "LW": [
@@ -845,6 +845,15 @@
         "pos": "LW",
         "pts": 5,
         "pun": "Kyle Connor McDavid Pastrnak"
+      },
+      {
+        "id": "alexislafrenire_nyr",
+        "first": "Alexis",
+        "last": "Lafrenière",
+        "team": "NYR",
+        "pos": "LW",
+        "pts": 4,
+        "pun": "Lafrenière's Fantasy Fortress"
       },
       {
         "id": "mattboldy_min",
@@ -874,6 +883,15 @@
         "pun": "Hoglander's Fantasy Fortress"
       },
       {
+        "id": "victorolofsson_col",
+        "first": "Victor",
+        "last": "Olofsson",
+        "team": "VGK",
+        "pos": "LW",
+        "pts": 4,
+        "pun": "Olofsson's Fantasy Fortress"
+      },
+      {
         "id": "gabriellandeskog_col",
         "first": "Gabriel",
         "last": "Landeskog",
@@ -901,22 +919,13 @@
         "pun": "Lucas Everybody Loves Raymond"
       },
       {
-        "id": "victorolofsson_col",
-        "first": "Victor",
-        "last": "Olofsson",
+        "id": "ivanbarbashev_vgk",
+        "first": "Ivan",
+        "last": "Barbashev",
         "team": "VGK",
         "pos": "LW",
         "pts": 3,
-        "pun": "Olofsson's Fantasy Fortress"
-      },
-      {
-        "id": "alexislafrenire_nyr",
-        "first": "Alexis",
-        "last": "Lafrenière",
-        "team": "NYR",
-        "pos": "LW",
-        "pts": 2,
-        "pun": "Lafrenière's Fantasy Fortress"
+        "pun": "Close Shave America, Close Shave Barbashev"
       },
       {
         "id": "zachhyman_edm",
@@ -953,15 +962,6 @@
         "pos": "LW",
         "pts": 2,
         "pun": "Original Brattwurst"
-      },
-      {
-        "id": "filipforsberg_nsh",
-        "first": "Filip",
-        "last": "Forsberg",
-        "team": "NSH",
-        "pos": "LW",
-        "pts": 2,
-        "pun": "Filip Use The Forceberg"
       }
     ],
     "RW": [
@@ -973,6 +973,15 @@
         "pos": "RW",
         "pts": 6,
         "pun": "The Kucherov Kings"
+      },
+      {
+        "id": "mitchmarner_vgk",
+        "first": "Mitch",
+        "last": "Marner",
+        "team": "VGK",
+        "pos": "RW",
+        "pts": 4,
+        "pun": "Marner's Farm"
       },
       {
         "id": "simonholmstrom_nyi",
@@ -1002,13 +1011,22 @@
         "pun": "Quinn's Fantasy Fortress"
       },
       {
-        "id": "mitchmarner_vgk",
-        "first": "Mitch",
-        "last": "Marner",
-        "team": "VGK",
+        "id": "jaroslavchmelar_nyr",
+        "first": "Jaroslav",
+        "last": "Chmelar",
+        "team": "NYR",
         "pos": "RW",
-        "pts": 3,
-        "pun": "Marner's Farm"
+        "pts": 2,
+        "pun": "In Chmelar We Trust"
+      },
+      {
+        "id": "gabeperreault_nyr",
+        "first": "Gabe",
+        "last": "Perreault",
+        "team": "NYR",
+        "pos": "RW",
+        "pts": 2,
+        "pun": "Perreault's Fantasy Fortress"
       },
       {
         "id": "matveimichkov_phi",
@@ -1018,6 +1036,15 @@
         "pos": "RW",
         "pts": 2,
         "pun": "Michkov's Fantasy Fortress"
+      },
+      {
+        "id": "brockboeser_van",
+        "first": "Brock",
+        "last": "Boeser",
+        "team": "VAN",
+        "pos": "RW",
+        "pts": 2,
+        "pun": "Boeser’s Castle"
       },
       {
         "id": "victoreklund_nyi",
@@ -1072,33 +1099,6 @@
         "pos": "RW",
         "pts": 2,
         "pun": "The Caufield Paradox"
-      },
-      {
-        "id": "joshanderson_mtl",
-        "first": "Josh",
-        "last": "Anderson",
-        "team": "MTL",
-        "pos": "RW",
-        "pts": 2,
-        "pun": "Anderson's Fantasy Fortress"
-      },
-      {
-        "id": "jimmysnuggerud_stl",
-        "first": "Jimmy",
-        "last": "Snuggerud",
-        "team": "STL",
-        "pos": "RW",
-        "pts": 2,
-        "pun": "Snuggerud As A Bug In A Rug"
-      },
-      {
-        "id": "paveldorofeyev_vgk",
-        "first": "Pavel",
-        "last": "Dorofeyev",
-        "team": "NYR",
-        "pos": "RW",
-        "pts": 1,
-        "pun": "Cassian An-Dorofeyev"
       }
     ],
     "D": [
@@ -1157,6 +1157,15 @@
         "pun": "Mo Money, Mo Problem, Mo Seider"
       },
       {
+        "id": "romanjosi_nsh",
+        "first": "Roman",
+        "last": "Josi",
+        "team": "NSH",
+        "pos": "D",
+        "pts": 3,
+        "pun": "The Outlaw Josi Wales"
+      },
+      {
         "id": "evanbouchard_edm",
         "first": "Evan",
         "last": "Bouchard",
@@ -1182,6 +1191,15 @@
         "pos": "D",
         "pts": 2,
         "pun": "Sanheim Steamroller"
+      },
+      {
+        "id": "eliaspettersson_van2",
+        "first": "Elias",
+        "last": "Pettersson",
+        "team": "VAN",
+        "pos": "D",
+        "pts": 2,
+        "pun": "Pettersson's Fantasy Fortress"
       },
       {
         "id": "matthewschaefer_nyi",
@@ -1247,6 +1265,15 @@
         "pun": "Jones's Fantasy Fortress"
       },
       {
+        "id": "adamwilsby_nsh",
+        "first": "Adam",
+        "last": "Wilsby",
+        "team": "NSH",
+        "pos": "D",
+        "pts": 2,
+        "pun": "Wilsby's Fantasy Fortress"
+      },
+      {
         "id": "jaydenstruble_mtl",
         "first": "Jayden",
         "last": "Struble",
@@ -1254,33 +1281,6 @@
         "pos": "D",
         "pts": 2,
         "pun": "Struble's Fantasy Fortress"
-      },
-      {
-        "id": "romanjosi_nsh",
-        "first": "Roman",
-        "last": "Josi",
-        "team": "NSH",
-        "pos": "D",
-        "pts": 2,
-        "pun": "The Outlaw Josi Wales"
-      },
-      {
-        "id": "charleedouarddastous_tbl",
-        "first": "Charle-Edouard",
-        "last": "D'Astous",
-        "team": "TBL",
-        "pos": "D",
-        "pts": 2,
-        "pun": "D'Astous's Fantasy Fortress"
-      },
-      {
-        "id": "andrewpeeke_bos",
-        "first": "Andrew",
-        "last": "Peeke",
-        "team": "UTA",
-        "pos": "D",
-        "pts": 2,
-        "pun": "Peeke's Fantasy Fortress"
       }
     ],
     "G": [
