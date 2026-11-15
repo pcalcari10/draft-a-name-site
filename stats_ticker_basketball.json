@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-14T16:45:54.879Z",
+  "generatedAt": "2026-11-15T09:59:05.462Z",
   "season": "2026",
   "isLastSeason": false,
   "fantasyLeaders": {
@@ -23,6 +23,15 @@
         "pts": 349.5
       },
       {
+        "id": "cadecunningham_det",
+        "first": "Cade",
+        "last": "Cunningham",
+        "team": "DET",
+        "pos": "PG",
+        "pun": "Cade Cunningham and the Fantasy Machine",
+        "pts": 349.5
+      },
+      {
         "id": "tyresemaxey_phi",
         "first": "Tyrese",
         "last": "Maxey",
@@ -32,13 +41,22 @@
         "pts": 334.5
       },
       {
-        "id": "cadecunningham_det",
-        "first": "Cade",
-        "last": "Cunningham",
-        "team": "DET",
+        "id": "jamalmurray_den",
+        "first": "Jamal",
+        "last": "Murray",
+        "team": "DEN",
         "pos": "PG",
-        "pun": "Cade Cunningham and the Fantasy Machine",
-        "pts": 317.5
+        "pun": "Jamal About The Money",
+        "pts": 304.5
+      },
+      {
+        "id": "davionmitchell_mia",
+        "first": "Davion",
+        "last": "Mitchell",
+        "team": "MIA",
+        "pos": "PG",
+        "pun": "All Mitchell, No Filler",
+        "pts": 302.5
       },
       {
         "id": "traeyoung_was",
@@ -68,22 +86,13 @@
         "pts": 288
       },
       {
-        "id": "jamalmurray_den",
-        "first": "Jamal",
-        "last": "Murray",
-        "team": "DEN",
+        "id": "lameloball_min",
+        "first": "LaMelo",
+        "last": "Ball",
+        "team": "MIN",
         "pos": "PG",
-        "pun": "Jamal About The Money",
-        "pts": 277
-      },
-      {
-        "id": "davionmitchell_mia",
-        "first": "Davion",
-        "last": "Mitchell",
-        "team": "MIA",
-        "pos": "PG",
-        "pun": "All Mitchell, No Filler",
-        "pts": 276.5
+        "pun": "LaMelo Out Loud",
+        "pts": 279.5
       },
       {
         "id": "jamesharden_cle",
@@ -104,6 +113,15 @@
         "pts": 263
       },
       {
+        "id": "jeremiahfears_nop",
+        "first": "Jeremiah",
+        "last": "Fears",
+        "team": "NOP",
+        "pos": "PG",
+        "pun": "Fears of Fame",
+        "pts": 260.5
+      },
+      {
         "id": "keyontegeorge_uta",
         "first": "Keyonte",
         "last": "George",
@@ -113,31 +131,13 @@
         "pts": 258.5
       },
       {
-        "id": "deaaronfox_sas",
-        "first": "De'Aaron",
-        "last": "Fox",
-        "team": "SAS",
+        "id": "kyrieirving_dal",
+        "first": "Kyrie",
+        "last": "Irving",
+        "team": "DAL",
         "pos": "PG",
-        "pun": "De'Aaron on the Side of Caution",
-        "pts": 247
-      },
-      {
-        "id": "lameloball_min",
-        "first": "LaMelo",
-        "last": "Ball",
-        "team": "MIN",
-        "pos": "PG",
-        "pun": "LaMelo Out Loud",
-        "pts": 247
-      },
-      {
-        "id": "tyjerome_mem",
-        "first": "Ty",
-        "last": "Jerome",
-        "team": "MEM",
-        "pos": "PG",
-        "pun": "Jerome of Fame",
-        "pts": 245.5
+        "pun": "Kyrie Irving Berlin",
+        "pts": 253.5
       }
     ],
     "SG": [
@@ -148,7 +148,7 @@
         "team": "DAL",
         "pos": "SG",
         "pun": "Cooper Flagg On The Play",
-        "pts": 329
+        "pts": 353
       },
       {
         "id": "donovanmitchell_cle",
@@ -169,6 +169,15 @@
         "pts": 304
       },
       {
+        "id": "cedriccoward_mem",
+        "first": "Cedric",
+        "last": "Coward",
+        "team": "MEM",
+        "pos": "SG",
+        "pun": "Cedric Coward and the Fantasy Machine",
+        "pts": 274
+      },
+      {
         "id": "nickeilalexanderwalker_atl",
         "first": "Nickeil",
         "last": "Alexander-Walker",
@@ -185,6 +194,15 @@
         "pos": "SG",
         "pun": "Dylan & Chill",
         "pts": 269
+      },
+      {
+        "id": "ayodosunmu_min",
+        "first": "Ayo",
+        "last": "Dosunmu",
+        "team": "MIN",
+        "pos": "SG",
+        "pun": "Dosunmu-A-Palooza",
+        "pts": 263
       },
       {
         "id": "amenthompson_hou",
@@ -241,21 +259,12 @@
         "pts": 246.5
       },
       {
-        "id": "ayodosunmu_min",
-        "first": "Ayo",
-        "last": "Dosunmu",
-        "team": "MIN",
+        "id": "ausarthompson_det",
+        "first": "Ausar",
+        "last": "Thompson",
+        "team": "DET",
         "pos": "SG",
-        "pun": "Dosunmu-A-Palooza",
-        "pts": 243
-      },
-      {
-        "id": "cedriccoward_mem",
-        "first": "Cedric",
-        "last": "Coward",
-        "team": "MEM",
-        "pos": "SG",
-        "pun": "Cedric Coward and the Fantasy Machine",
+        "pun": "Ausar-vivors",
         "pts": 237.5
       },
       {
@@ -266,15 +275,6 @@
         "pos": "SG",
         "pun": "Lavine' On A Prayer",
         "pts": 221.5
-      },
-      {
-        "id": "ausarthompson_det",
-        "first": "Ausar",
-        "last": "Thompson",
-        "team": "DET",
-        "pos": "SG",
-        "pun": "Ausar-vivors",
-        "pts": 213.5
       }
     ],
     "SF": [
@@ -324,6 +324,15 @@
         "pts": 274.5
       },
       {
+        "id": "jadenmcdaniels_min",
+        "first": "Jaden",
+        "last": "McDaniels",
+        "team": "MIN",
+        "pos": "SF",
+        "pun": "Jaden McDaniels and the Fantasy Machine",
+        "pts": 271.5
+      },
+      {
         "id": "kyshawngeorge_was",
         "first": "Kyshawn",
         "last": "George",
@@ -340,15 +349,6 @@
         "pos": "SF",
         "pun": "Livin' on a Porter",
         "pts": 254
-      },
-      {
-        "id": "jadenmcdaniels_min",
-        "first": "Jaden",
-        "last": "McDaniels",
-        "team": "MIN",
-        "pos": "SF",
-        "pun": "Jaden McDaniels and the Fantasy Machine",
-        "pts": 247.5
       },
       {
         "id": "paulgeorge_bos",
@@ -375,7 +375,7 @@
         "team": "NOP",
         "pos": "SF",
         "pun": "Saddiq & Chill",
-        "pts": 219.5
+        "pts": 240.5
       },
       {
         "id": "aaronwiggins_atl",
@@ -402,7 +402,7 @@
         "team": "DET",
         "pos": "SF",
         "pun": "Duncan Robinson and the Fantasy Machine",
-        "pts": 196
+        "pts": 204
       },
       {
         "id": "julianchampagnie_sas",
@@ -422,7 +422,7 @@
         "team": "MIA",
         "pos": "PF",
         "pun": "Antetokounmpbros",
-        "pts": 401.5
+        "pts": 447
       },
       {
         "id": "deniavdija_por",
@@ -432,6 +432,15 @@
         "pos": "PF",
         "pun": "Avdija-A-Palooza",
         "pts": 306.5
+      },
+      {
+        "id": "zionwilliamson_nop",
+        "first": "Zion",
+        "last": "Williamson",
+        "team": "NOP",
+        "pos": "PF",
+        "pun": "The Zion King",
+        "pts": 296.5
       },
       {
         "id": "yaxellendeborg_gsw",
@@ -452,15 +461,6 @@
         "pts": 278
       },
       {
-        "id": "zionwilliamson_nop",
-        "first": "Zion",
-        "last": "Williamson",
-        "team": "NOP",
-        "pos": "PF",
-        "pun": "The Zion King",
-        "pts": 273.5
-      },
-      {
         "id": "jalenjohnson_atl",
         "first": "Jalen",
         "last": "Johnson",
@@ -477,6 +477,15 @@
         "pos": "PF",
         "pun": "Jabari The Hutt",
         "pts": 272
+      },
+      {
+        "id": "juliusrandle_bkn",
+        "first": "Julius",
+        "last": "Randle",
+        "team": "BKN",
+        "pos": "PF",
+        "pun": "Too Hot To Randle",
+        "pts": 248.5
       },
       {
         "id": "milesbridges_phx",
@@ -497,31 +506,13 @@
         "pts": 237
       },
       {
-        "id": "jaimejaquez_mil",
-        "first": "Jaime",
-        "last": "Jaquez",
-        "team": "MIL",
-        "pos": "PF",
-        "pun": "Jaime Vibes Only",
-        "pts": 229.5
-      },
-      {
-        "id": "juliusrandle_bkn",
-        "first": "Julius",
-        "last": "Randle",
-        "team": "BKN",
-        "pos": "PF",
-        "pun": "Too Hot To Randle",
-        "pts": 225
-      },
-      {
         "id": "jonathankuminga_min",
         "first": "Jonathan",
         "last": "Kuminga",
         "team": "MIN",
         "pos": "PF",
         "pun": "Kuminga Attractions",
-        "pts": 224
+        "pts": 236.5
       },
       {
         "id": "pjwashington_dal",
@@ -530,7 +521,16 @@
         "team": "DAL",
         "pos": "PF",
         "pun": "Washington-A-Palooza",
-        "pts": 223
+        "pts": 234
+      },
+      {
+        "id": "jaimejaquez_mil",
+        "first": "Jaime",
+        "last": "Jaquez",
+        "team": "MIL",
+        "pos": "PF",
+        "pun": "Jaime Vibes Only",
+        "pts": 229.5
       },
       {
         "id": "calebwilson_chi",
@@ -568,7 +568,7 @@
         "team": "DEN",
         "pos": "C",
         "pun": "Jokic Dokic",
-        "pts": 368.5
+        "pts": 403
       },
       {
         "id": "karlanthonytowns_nyk",
@@ -589,6 +589,15 @@
         "pts": 352.5
       },
       {
+        "id": "bamadebayo_mia",
+        "first": "Bam",
+        "last": "Adebayo",
+        "team": "MIA",
+        "pos": "C",
+        "pun": "Bam's Battalion",
+        "pts": 347
+      },
+      {
         "id": "walkerkessler_lal",
         "first": "Walker",
         "last": "Kessler",
@@ -607,13 +616,13 @@
         "pts": 321.5
       },
       {
-        "id": "bamadebayo_mia",
-        "first": "Bam",
-        "last": "Adebayo",
-        "team": "MIA",
+        "id": "cameronboozer_mem",
+        "first": "Cameron",
+        "last": "Boozer",
+        "team": "MEM",
         "pos": "C",
-        "pun": "Bam's Battalion",
-        "pts": 318.5
+        "pun": "The Boozer Show",
+        "pts": 312.5
       },
       {
         "id": "domantassabonis_sac",
@@ -623,15 +632,6 @@
         "pos": "C",
         "pun": "SupercalifragilisticexpialiDomantasSabonis",
         "pts": 289
-      },
-      {
-        "id": "cameronboozer_mem",
-        "first": "Cameron",
-        "last": "Boozer",
-        "team": "MEM",
-        "pos": "C",
-        "pun": "The Boozer Show",
-        "pts": 286
       },
       {
         "id": "onyekaokongwu_atl",
@@ -734,6 +734,20 @@
         "bpg": 0.9
       },
       {
+        "id": "giannisantetokounmpo_mia",
+        "first": "Giannis",
+        "last": "Antetokounmpo",
+        "team": "MIA",
+        "pos": "PF",
+        "pun": "Antetokounmpbros",
+        "gp": 13,
+        "ppg": 28.9,
+        "apg": 5.2,
+        "rpg": 12.5,
+        "spg": 0.8,
+        "bpg": 1.2
+      },
+      {
         "id": "victorwembanyama_sas",
         "first": "Victor",
         "last": "Wembanyama",
@@ -746,20 +760,6 @@
         "rpg": 11.7,
         "spg": 1.2,
         "bpg": 4.2
-      },
-      {
-        "id": "giannisantetokounmpo_mia",
-        "first": "Giannis",
-        "last": "Antetokounmpo",
-        "team": "MIA",
-        "pos": "PF",
-        "pun": "Antetokounmpbros",
-        "gp": 12,
-        "ppg": 28.5,
-        "apg": 4.9,
-        "rpg": 12.3,
-        "spg": 0.8,
-        "bpg": 1
       },
       {
         "id": "stephencurry_gsw",
@@ -824,12 +824,12 @@
         "team": "DEN",
         "pos": "PG",
         "pun": "Jamal About The Money",
-        "gp": 10,
-        "ppg": 26.2,
-        "apg": 5.9,
-        "rpg": 5,
-        "spg": 0.9,
-        "bpg": 0.9
+        "gp": 11,
+        "ppg": 25.9,
+        "apg": 6.2,
+        "rpg": 5.2,
+        "spg": 0.8,
+        "bpg": 1
       }
     ],
     "apg": [
@@ -854,12 +854,12 @@
         "team": "MIA",
         "pos": "PG",
         "pun": "All Mitchell, No Filler",
-        "gp": 12,
-        "ppg": 16.9,
+        "gp": 13,
+        "ppg": 16.8,
         "apg": 9.2,
-        "rpg": 2.3,
+        "rpg": 2.4,
         "spg": 1.2,
-        "bpg": 0.6
+        "bpg": 0.7
       },
       {
         "id": "nikolajoki_den",
@@ -868,26 +868,12 @@
         "team": "DEN",
         "pos": "C",
         "pun": "Jokic Dokic",
-        "gp": 10,
-        "ppg": 23.5,
-        "apg": 9,
-        "rpg": 10.8,
-        "spg": 1.8,
-        "bpg": 1.2
-      },
-      {
-        "id": "joshgiddey_chi",
-        "first": "Josh",
-        "last": "Giddey",
-        "team": "CHI",
-        "pos": "PG",
-        "pun": "Giddey Up",
         "gp": 11,
-        "ppg": 10.6,
-        "apg": 8.8,
-        "rpg": 5.1,
-        "spg": 0.5,
-        "bpg": 0.5
+        "ppg": 23.7,
+        "apg": 9.1,
+        "rpg": 10.5,
+        "spg": 1.9,
+        "bpg": 1.1
       },
       {
         "id": "traeyoung_was",
@@ -902,6 +888,20 @@
         "rpg": 3.1,
         "spg": 1.1,
         "bpg": 0.2
+      },
+      {
+        "id": "joshgiddey_chi",
+        "first": "Josh",
+        "last": "Giddey",
+        "team": "CHI",
+        "pos": "PG",
+        "pun": "Giddey Up",
+        "gp": 12,
+        "ppg": 10.4,
+        "apg": 8.5,
+        "rpg": 5.3,
+        "spg": 0.4,
+        "bpg": 0.6
       },
       {
         "id": "franzwagner_orl",
@@ -924,8 +924,8 @@
         "team": "DET",
         "pos": "PG",
         "pun": "Cade Cunningham and the Fantasy Machine",
-        "gp": 11,
-        "ppg": 25,
+        "gp": 12,
+        "ppg": 25.7,
         "apg": 7.9,
         "rpg": 5.2,
         "spg": 1.5,
@@ -1010,12 +1010,12 @@
         "team": "MIA",
         "pos": "PF",
         "pun": "Antetokounmpbros",
-        "gp": 12,
-        "ppg": 28.5,
-        "apg": 4.9,
-        "rpg": 12.3,
+        "gp": 13,
+        "ppg": 28.9,
+        "apg": 5.2,
+        "rpg": 12.5,
         "spg": 0.8,
-        "bpg": 1
+        "bpg": 1.2
       },
       {
         "id": "victorwembanyama_sas",
@@ -1038,11 +1038,11 @@
         "team": "MIN",
         "pos": "C",
         "pun": "Frozen Gobert",
-        "gp": 11,
-        "ppg": 7.9,
-        "apg": 1.4,
-        "rpg": 11.5,
-        "spg": 0.4,
+        "gp": 12,
+        "ppg": 7.3,
+        "apg": 1.6,
+        "rpg": 11.4,
+        "spg": 0.3,
         "bpg": 1
       },
       {
@@ -1066,12 +1066,12 @@
         "team": "DEN",
         "pos": "C",
         "pun": "Jokic Dokic",
-        "gp": 10,
-        "ppg": 23.5,
-        "apg": 9,
-        "rpg": 10.8,
-        "spg": 1.8,
-        "bpg": 1.2
+        "gp": 11,
+        "ppg": 23.7,
+        "apg": 9.1,
+        "rpg": 10.5,
+        "spg": 1.9,
+        "bpg": 1.1
       },
       {
         "id": "isaiahhartenstein_okc",
@@ -1174,18 +1174,18 @@
         "bpg": 0.6
       },
       {
-        "id": "cooperflagg_dal",
-        "first": "Cooper",
-        "last": "Flagg",
-        "team": "DAL",
+        "id": "christianbraun_den",
+        "first": "Christian",
+        "last": "Braun",
+        "team": "DEN",
         "pos": "SG",
-        "pun": "Cooper Flagg On The Play",
+        "pun": "Brains Over Christian Braun",
         "gp": 11,
-        "ppg": 24.6,
-        "apg": 6.5,
-        "rpg": 6.9,
+        "ppg": 12.8,
+        "apg": 2.3,
+        "rpg": 4.4,
         "spg": 2.2,
-        "bpg": 0.7
+        "bpg": 0.3
       },
       {
         "id": "matissethybulle_lal",
@@ -1230,30 +1230,30 @@
         "bpg": 0.5
       },
       {
-        "id": "zionwilliamson_nop",
-        "first": "Zion",
-        "last": "Williamson",
-        "team": "NOP",
-        "pos": "PF",
-        "pun": "The Zion King",
-        "gp": 12,
-        "ppg": 21.8,
-        "apg": 2.8,
-        "rpg": 5.2,
-        "spg": 2.1,
-        "bpg": 0.6
-      },
-      {
         "id": "bamadebayo_mia",
         "first": "Bam",
         "last": "Adebayo",
         "team": "MIA",
         "pos": "C",
         "pun": "Bam's Battalion",
-        "gp": 12,
-        "ppg": 19.4,
+        "gp": 13,
+        "ppg": 19.5,
         "apg": 3.3,
-        "rpg": 8.8,
+        "rpg": 8.5,
+        "spg": 2.1,
+        "bpg": 0.8
+      },
+      {
+        "id": "lukadoni_lal",
+        "first": "Luka",
+        "last": "Dončić",
+        "team": "LAL",
+        "pos": "PG",
+        "pun": "Doncic Forget About Me",
+        "gp": 11,
+        "ppg": 38.6,
+        "apg": 7.6,
+        "rpg": 7.5,
         "spg": 2,
         "bpg": 0.7
       }
@@ -1286,6 +1286,20 @@
         "rpg": 9.3,
         "spg": 0.7,
         "bpg": 3
+      },
+      {
+        "id": "yvesmissi_nop",
+        "first": "Yves",
+        "last": "Missi",
+        "team": "NOP",
+        "pos": "C",
+        "pun": "Yves & Chill",
+        "gp": 3,
+        "ppg": 7.3,
+        "apg": 2,
+        "rpg": 7.7,
+        "spg": 0.7,
+        "bpg": 2.7
       },
       {
         "id": "walkerkessler_lal",
@@ -1330,20 +1344,6 @@
         "bpg": 2.2
       },
       {
-        "id": "yvesmissi_nop",
-        "first": "Yves",
-        "last": "Missi",
-        "team": "NOP",
-        "pos": "C",
-        "pun": "Yves & Chill",
-        "gp": 2,
-        "ppg": 9.5,
-        "apg": 2.5,
-        "rpg": 7.5,
-        "spg": 1,
-        "bpg": 2
-      },
-      {
         "id": "mobamba_uta",
         "first": "Mo",
         "last": "Bamba",
@@ -1378,12 +1378,12 @@
         "team": "DAL",
         "pos": "C",
         "pun": "Straight Outta Gafford",
-        "gp": 12,
-        "ppg": 9.1,
-        "apg": 1.9,
-        "rpg": 5.3,
-        "spg": 0.7,
-        "bpg": 1.8
+        "gp": 13,
+        "ppg": 9.2,
+        "apg": 1.8,
+        "rpg": 5.2,
+        "spg": 0.6,
+        "bpg": 1.7
       },
       {
         "id": "peytonwatson_cle",
@@ -1405,6 +1405,36 @@
   "thisWeekFantasy": {
     "PG": [
       {
+        "id": "cadecunningham_det",
+        "first": "Cade",
+        "last": "Cunningham",
+        "team": "DET",
+        "pos": "PG",
+        "pun": "Cade Cunningham and the Fantasy Machine",
+        "gp": 3,
+        "pts": 166.6
+      },
+      {
+        "id": "jamalmurray_den",
+        "first": "Jamal",
+        "last": "Murray",
+        "team": "DEN",
+        "pos": "PG",
+        "pun": "Jamal About The Money",
+        "gp": 3,
+        "pts": 149.1
+      },
+      {
+        "id": "davionmitchell_mia",
+        "first": "Davion",
+        "last": "Mitchell",
+        "team": "MIA",
+        "pos": "PG",
+        "pun": "All Mitchell, No Filler",
+        "gp": 3,
+        "pts": 137.8
+      },
+      {
         "id": "shaigilgeousalexander_okc",
         "first": "Shai",
         "last": "Gilgeous-Alexander",
@@ -1413,6 +1443,16 @@
         "pun": "Shai It Ain't So",
         "gp": 3,
         "pts": 137.2
+      },
+      {
+        "id": "jeremiahfears_nop",
+        "first": "Jeremiah",
+        "last": "Fears",
+        "team": "NOP",
+        "pos": "PG",
+        "pun": "Fears of Fame",
+        "gp": 4,
+        "pts": 127.7
       },
       {
         "id": "jalenbrunson_nyk",
@@ -1445,6 +1485,16 @@
         "pts": 121.5
       },
       {
+        "id": "kyrieirving_dal",
+        "first": "Kyrie",
+        "last": "Irving",
+        "team": "DAL",
+        "pos": "PG",
+        "pun": "Kyrie Irving Berlin",
+        "gp": 3,
+        "pts": 119.3
+      },
+      {
         "id": "jamesharden_cle",
         "first": "James",
         "last": "Harden",
@@ -1455,14 +1505,14 @@
         "pts": 115.7
       },
       {
-        "id": "cadecunningham_det",
-        "first": "Cade",
-        "last": "Cunningham",
+        "id": "danissjenkins_det",
+        "first": "Daniss",
+        "last": "Jenkins",
         "team": "DET",
         "pos": "PG",
-        "pun": "Cade Cunningham and the Fantasy Machine",
-        "gp": 2,
-        "pts": 111.6
+        "pun": "Cheese Daniss",
+        "gp": 3,
+        "pts": 104.1
       },
       {
         "id": "tyjerome_mem",
@@ -1485,24 +1535,14 @@
         "pts": 103.6
       },
       {
-        "id": "jamalmurray_den",
-        "first": "Jamal",
-        "last": "Murray",
-        "team": "DEN",
+        "id": "joshgiddey_chi",
+        "first": "Josh",
+        "last": "Giddey",
+        "team": "CHI",
         "pos": "PG",
-        "pun": "Jamal About The Money",
-        "gp": 2,
-        "pts": 100.2
-      },
-      {
-        "id": "davionmitchell_mia",
-        "first": "Davion",
-        "last": "Mitchell",
-        "team": "MIA",
-        "pos": "PG",
-        "pun": "All Mitchell, No Filler",
-        "gp": 2,
-        "pts": 96.5
+        "pun": "Giddey Up",
+        "gp": 3,
+        "pts": 103
       },
       {
         "id": "andrewnembhard_ind",
@@ -1513,49 +1553,29 @@
         "pun": "MikeNembHard Lemonade",
         "gp": 3,
         "pts": 95.8
-      },
-      {
-        "id": "jeremiahfears_nop",
-        "first": "Jeremiah",
-        "last": "Fears",
-        "team": "NOP",
-        "pos": "PG",
-        "pun": "Fears of Fame",
-        "gp": 3,
-        "pts": 95.4
-      },
-      {
-        "id": "deaaronfox_sas",
-        "first": "De'Aaron",
-        "last": "Fox",
-        "team": "SAS",
-        "pos": "PG",
-        "pun": "De'Aaron on the Side of Caution",
-        "gp": 3,
-        "pts": 92.6
-      },
-      {
-        "id": "brandinpodziemski_gsw",
-        "first": "Brandin",
-        "last": "Podziemski",
-        "team": "GSW",
-        "pos": "PG",
-        "pun": "Two Peas In A Podziemski",
-        "gp": 3,
-        "pts": 90.2
-      },
-      {
-        "id": "dariusacuff_sac",
-        "first": "Darius",
-        "last": "Acuff",
-        "team": "SAC",
-        "pos": "PG",
-        "pun": "Acuff is Acuff",
-        "gp": 2,
-        "pts": 81.6
       }
     ],
     "SG": [
+      {
+        "id": "cedriccoward_mem",
+        "first": "Cedric",
+        "last": "Coward",
+        "team": "MEM",
+        "pos": "SG",
+        "pun": "Cedric Coward and the Fantasy Machine",
+        "gp": 4,
+        "pts": 141.2
+      },
+      {
+        "id": "cooperflagg_dal",
+        "first": "Cooper",
+        "last": "Flagg",
+        "team": "DAL",
+        "pos": "SG",
+        "pun": "Cooper Flagg On The Play",
+        "gp": 3,
+        "pts": 138
+      },
       {
         "id": "devinbooker_phx",
         "first": "Devin",
@@ -1565,6 +1585,26 @@
         "pun": "Booker-tastic Voyage",
         "gp": 3,
         "pts": 122.2
+      },
+      {
+        "id": "tyreseproctor_cle",
+        "first": "Tyrese",
+        "last": "Proctor",
+        "team": "CLE",
+        "pos": "SG",
+        "pun": "Tyrese Proctor & Gamble",
+        "gp": 4,
+        "pts": 120.8
+      },
+      {
+        "id": "ausarthompson_det",
+        "first": "Ausar",
+        "last": "Thompson",
+        "team": "DET",
+        "pos": "SG",
+        "pun": "Ausar-vivors",
+        "gp": 3,
+        "pts": 119.8
       },
       {
         "id": "anthonyblack_orl",
@@ -1587,14 +1627,24 @@
         "pts": 108.1
       },
       {
-        "id": "cooperflagg_dal",
-        "first": "Cooper",
-        "last": "Flagg",
-        "team": "DAL",
+        "id": "meleekthomas_cle",
+        "first": "Meleek",
+        "last": "Thomas",
+        "team": "CLE",
         "pos": "SG",
-        "pun": "Cooper Flagg On The Play",
-        "gp": 2,
-        "pts": 100.9
+        "pun": "Thomas'd Up and Ready",
+        "gp": 4,
+        "pts": 104.7
+      },
+      {
+        "id": "camspencer_mem",
+        "first": "Cam",
+        "last": "Spencer",
+        "team": "MEM",
+        "pos": "SG",
+        "pun": "In Spencer We Trust",
+        "gp": 4,
+        "pts": 102.6
       },
       {
         "id": "dylanharper_sas",
@@ -1637,24 +1687,14 @@
         "pts": 94.6
       },
       {
-        "id": "cedriccoward_mem",
-        "first": "Cedric",
-        "last": "Coward",
-        "team": "MEM",
+        "id": "christianbraun_den",
+        "first": "Christian",
+        "last": "Braun",
+        "team": "DEN",
         "pos": "SG",
-        "pun": "Cedric Coward and the Fantasy Machine",
+        "pun": "Brains Over Christian Braun",
         "gp": 3,
-        "pts": 89.8
-      },
-      {
-        "id": "ausarthompson_det",
-        "first": "Ausar",
-        "last": "Thompson",
-        "team": "DET",
-        "pos": "SG",
-        "pun": "Ausar-vivors",
-        "gp": 2,
-        "pts": 84.7
+        "pts": 85.4
       },
       {
         "id": "jaredmccain_okc",
@@ -1665,46 +1705,6 @@
         "pun": "In McCain We Trust",
         "gp": 3,
         "pts": 83.6
-      },
-      {
-        "id": "meleekthomas_cle",
-        "first": "Meleek",
-        "last": "Thomas",
-        "team": "CLE",
-        "pos": "SG",
-        "pun": "Thomas'd Up and Ready",
-        "gp": 3,
-        "pts": 76.9
-      },
-      {
-        "id": "nickeilalexanderwalker_atl",
-        "first": "Nickeil",
-        "last": "Alexander-Walker",
-        "team": "ATL",
-        "pos": "SG",
-        "pun": "Quarter, Dime And Nickeil Alexander-Walker",
-        "gp": 2,
-        "pts": 74.5
-      },
-      {
-        "id": "deanthonymelton_gsw",
-        "first": "De'Anthony",
-        "last": "Melton",
-        "team": "GSW",
-        "pos": "SG",
-        "pun": "The Melton Show",
-        "gp": 3,
-        "pts": 72.4
-      },
-      {
-        "id": "zachlavine_sac",
-        "first": "Zach",
-        "last": "LaVine",
-        "team": "SAC",
-        "pos": "SG",
-        "pun": "Lavine' On A Prayer",
-        "gp": 2,
-        "pts": 70.2
       }
     ],
     "SF": [
@@ -1739,6 +1739,16 @@
         "pts": 118.3
       },
       {
+        "id": "saddiqbey_nop",
+        "first": "Saddiq",
+        "last": "Bey",
+        "team": "NOP",
+        "pos": "SF",
+        "pun": "Saddiq & Chill",
+        "gp": 4,
+        "pts": 109.4
+      },
+      {
         "id": "acebailey_uta",
         "first": "Ace",
         "last": "Bailey",
@@ -1769,14 +1779,24 @@
         "pts": 86.6
       },
       {
-        "id": "saddiqbey_nop",
-        "first": "Saddiq",
-        "last": "Bey",
-        "team": "NOP",
+        "id": "normanpowell_chi",
+        "first": "Norman",
+        "last": "Powell",
+        "team": "CHI",
         "pos": "SF",
-        "pun": "Saddiq & Chill",
-        "gp": 3,
-        "pts": 78.2
+        "pun": "Powell-A-Palooza",
+        "gp": 2,
+        "pts": 84.5
+      },
+      {
+        "id": "jaylenwells_mem",
+        "first": "Jaylen",
+        "last": "Wells",
+        "team": "MEM",
+        "pos": "SF",
+        "pun": "The Wells Show",
+        "gp": 4,
+        "pts": 77.5
       },
       {
         "id": "graysonallen_cha",
@@ -1799,14 +1819,34 @@
         "pts": 74.5
       },
       {
-        "id": "jaylenwells_mem",
-        "first": "Jaylen",
-        "last": "Wells",
-        "team": "MEM",
+        "id": "cameronjohnson_den",
+        "first": "Cameron",
+        "last": "Johnson",
+        "team": "DEN",
         "pos": "SF",
-        "pun": "The Wells Show",
+        "pun": "Cameron Johnson and the Fantasy Machine",
         "gp": 3,
-        "pts": 67.1
+        "pts": 73.2
+      },
+      {
+        "id": "jadenmcdaniels_min",
+        "first": "Jaden",
+        "last": "McDaniels",
+        "team": "MIN",
+        "pos": "SF",
+        "pun": "Jaden McDaniels and the Fantasy Machine",
+        "gp": 2,
+        "pts": 72.3
+      },
+      {
+        "id": "najimarshall_dal",
+        "first": "Naji",
+        "last": "Marshall",
+        "team": "DAL",
+        "pos": "SF",
+        "pun": "All Marshall, No Filler",
+        "gp": 3,
+        "pts": 66.3
       },
       {
         "id": "julianchampagnie_sas",
@@ -1817,49 +1857,19 @@
         "pun": "The Champagnie Show",
         "gp": 3,
         "pts": 65.7
-      },
-      {
-        "id": "jaylenbrown_phi",
-        "first": "Jaylen",
-        "last": "Brown",
-        "team": "PHI",
-        "pos": "SF",
-        "pun": "Jaylen Brown and the Fantasy Machine",
-        "gp": 2,
-        "pts": 62.2
-      },
-      {
-        "id": "aaronnesmith_ind",
-        "first": "Aaron",
-        "last": "Nesmith",
-        "team": "IND",
-        "pos": "SF",
-        "pun": "Aaron's Excellent Adventure",
-        "gp": 3,
-        "pts": 60
-      },
-      {
-        "id": "jamisonbattle_tor",
-        "first": "Jamison",
-        "last": "Battle",
-        "team": "TOR",
-        "pos": "SF",
-        "pun": "Straight Outta Battle",
-        "gp": 3,
-        "pts": 58.3
-      },
-      {
-        "id": "bricesensabaugh_uta",
-        "first": "Brice",
-        "last": "Sensabaugh",
-        "team": "UTA",
-        "pos": "SF",
-        "pun": "Sensabaugh-tastic Voyage",
-        "gp": 3,
-        "pts": 58
       }
     ],
     "PF": [
+      {
+        "id": "giannisantetokounmpo_mia",
+        "first": "Giannis",
+        "last": "Antetokounmpo",
+        "team": "MIA",
+        "pos": "PF",
+        "pun": "Antetokounmpbros",
+        "gp": 3,
+        "pts": 172.8
+      },
       {
         "id": "deniavdija_por",
         "first": "Deni",
@@ -1881,6 +1891,16 @@
         "pts": 128.5
       },
       {
+        "id": "zionwilliamson_nop",
+        "first": "Zion",
+        "last": "Williamson",
+        "team": "NOP",
+        "pos": "PF",
+        "pun": "The Zion King",
+        "gp": 3,
+        "pts": 119
+      },
+      {
         "id": "jaimejaquez_mil",
         "first": "Jaime",
         "last": "Jaquez",
@@ -1889,16 +1909,6 @@
         "pun": "Jaime Vibes Only",
         "gp": 3,
         "pts": 103.2
-      },
-      {
-        "id": "giannisantetokounmpo_mia",
-        "first": "Giannis",
-        "last": "Antetokounmpo",
-        "team": "MIA",
-        "pos": "PF",
-        "pun": "Antetokounmpbros",
-        "gp": 2,
-        "pts": 102
       },
       {
         "id": "yaxellendeborg_gsw",
@@ -1931,14 +1941,14 @@
         "pts": 85.5
       },
       {
-        "id": "zionwilliamson_nop",
-        "first": "Zion",
-        "last": "Williamson",
-        "team": "NOP",
+        "id": "matasbuzelis_chi",
+        "first": "Matas",
+        "last": "Buzelis",
+        "team": "CHI",
         "pos": "PF",
-        "pun": "The Zion King",
-        "gp": 2,
-        "pts": 80.8
+        "pun": "Matas Buzelis and the Fantasy Machine",
+        "gp": 3,
+        "pts": 80.6
       },
       {
         "id": "kellyoubre_ind",
@@ -1949,6 +1959,26 @@
         "pun": "Kelly Oubre and the Fantasy Machine",
         "gp": 3,
         "pts": 80.1
+      },
+      {
+        "id": "johncollins_det",
+        "first": "John",
+        "last": "Collins",
+        "team": "DET",
+        "pos": "PF",
+        "pun": "John Collins and the Fantasy Machine",
+        "gp": 3,
+        "pts": 79.7
+      },
+      {
+        "id": "patrickwilliams_chi",
+        "first": "Patrick",
+        "last": "Williams",
+        "team": "CHI",
+        "pos": "PF",
+        "pun": "Patrick's Excellent Adventure",
+        "gp": 3,
+        "pts": 79.7
       },
       {
         "id": "oganunoby_nyk",
@@ -1971,44 +2001,14 @@
         "pts": 72.5
       },
       {
-        "id": "jeramigrant_mem",
-        "first": "Jerami",
-        "last": "Grant",
-        "team": "MEM",
+        "id": "herbertjones_nop",
+        "first": "Herbert",
+        "last": "Jones",
+        "team": "NOP",
         "pos": "PF",
-        "pun": "Jerami Vibes Only",
-        "gp": 3,
-        "pts": 71.7
-      },
-      {
-        "id": "jabarismith_hou",
-        "first": "Jabari",
-        "last": "Smith",
-        "team": "HOU",
-        "pos": "PF",
-        "pun": "Jabari The Hutt",
-        "gp": 3,
-        "pts": 70.1
-      },
-      {
-        "id": "johncollins_det",
-        "first": "John",
-        "last": "Collins",
-        "team": "DET",
-        "pos": "PF",
-        "pun": "John Collins and the Fantasy Machine",
-        "gp": 2,
-        "pts": 63.3
-      },
-      {
-        "id": "kylekuzma_mil",
-        "first": "Kyle",
-        "last": "Kuzma",
-        "team": "MIL",
-        "pos": "PF",
-        "pun": "All Kuzma, No Filler",
-        "gp": 3,
-        "pts": 63
+        "pun": "Herbert & Chill",
+        "gp": 4,
+        "pts": 72.4
       }
     ],
     "C": [
@@ -2033,6 +2033,16 @@
         "pts": 161.7
       },
       {
+        "id": "cameronboozer_mem",
+        "first": "Cameron",
+        "last": "Boozer",
+        "team": "MEM",
+        "pos": "C",
+        "pun": "The Boozer Show",
+        "gp": 4,
+        "pts": 154.7
+      },
+      {
         "id": "karlanthonytowns_nyk",
         "first": "Karl-Anthony",
         "last": "Towns",
@@ -2041,6 +2051,16 @@
         "pun": "KAT In The Hat",
         "gp": 3,
         "pts": 153.4
+      },
+      {
+        "id": "bamadebayo_mia",
+        "first": "Bam",
+        "last": "Adebayo",
+        "team": "MIA",
+        "pos": "C",
+        "pun": "Bam's Battalion",
+        "gp": 3,
+        "pts": 136.9
       },
       {
         "id": "isaiahhartenstein_okc",
@@ -2053,16 +2073,6 @@
         "pts": 124.7
       },
       {
-        "id": "cameronboozer_mem",
-        "first": "Cameron",
-        "last": "Boozer",
-        "team": "MEM",
-        "pos": "C",
-        "pun": "The Boozer Show",
-        "gp": 3,
-        "pts": 114.6
-      },
-      {
         "id": "donovanclingan_por",
         "first": "Donovan",
         "last": "Clingan",
@@ -2073,14 +2083,24 @@
         "pts": 98.7
       },
       {
-        "id": "bamadebayo_mia",
-        "first": "Bam",
-        "last": "Adebayo",
-        "team": "MIA",
+        "id": "derikqueen_nop",
+        "first": "Derik",
+        "last": "Queen",
+        "team": "NOP",
         "pos": "C",
-        "pun": "Bam's Battalion",
-        "gp": 2,
-        "pts": 94.9
+        "pun": "Queen Happens",
+        "gp": 4,
+        "pts": 92
+      },
+      {
+        "id": "taylorhendricks_mem",
+        "first": "Taylor",
+        "last": "Hendricks",
+        "team": "MEM",
+        "pos": "C",
+        "pun": "Hendricks of Fame",
+        "gp": 4,
+        "pts": 90.9
       },
       {
         "id": "ivicazubac_ind",
@@ -2133,34 +2153,14 @@
         "pts": 81.2
       },
       {
-        "id": "wendellcarter_orl",
-        "first": "Wendell",
-        "last": "Carter",
-        "team": "ORL",
+        "id": "paulreed_det",
+        "first": "Paul",
+        "last": "Reed",
+        "team": "DET",
         "pos": "C",
-        "pun": "Wendell Vibes Only",
+        "pun": "The Reed Show",
         "gp": 3,
-        "pts": 78.2
-      },
-      {
-        "id": "walkerkessler_lal",
-        "first": "Walker",
-        "last": "Kessler",
-        "team": "LAL",
-        "pos": "C",
-        "pun": "SkyWalker Kessler",
-        "gp": 2,
-        "pts": 74.7
-      },
-      {
-        "id": "sandromamukelashvili_lal",
-        "first": "Sandro",
-        "last": "Mamukelashvili",
-        "team": "LAL",
-        "pos": "C",
-        "pun": "Mamu Said Knock U Out",
-        "gp": 2,
-        "pts": 72.7
+        "pts": 81
       }
     ]
   },
@@ -2173,26 +2173,12 @@
         "team": "DET",
         "pos": "PG",
         "pun": "Cade Cunningham and the Fantasy Machine",
-        "gp": 2,
-        "ppg": 34.5,
-        "apg": 9,
-        "rpg": 4,
-        "spg": 1,
-        "bpg": 0.5
-      },
-      {
-        "id": "jamalmurray_den",
-        "first": "Jamal",
-        "last": "Murray",
-        "team": "DEN",
-        "pos": "PG",
-        "pun": "Jamal About The Money",
-        "gp": 2,
+        "gp": 3,
         "ppg": 34,
-        "apg": 5,
-        "rpg": 3,
-        "spg": 0.5,
-        "bpg": 2
+        "apg": 8.7,
+        "rpg": 4.3,
+        "spg": 1,
+        "bpg": 0.7
       },
       {
         "id": "shaigilgeousalexander_okc",
@@ -2209,6 +2195,20 @@
         "bpg": 0.3
       },
       {
+        "id": "jamalmurray_den",
+        "first": "Jamal",
+        "last": "Murray",
+        "team": "DEN",
+        "pos": "PG",
+        "pun": "Jamal About The Money",
+        "gp": 3,
+        "ppg": 30.3,
+        "apg": 6.3,
+        "rpg": 4.3,
+        "spg": 0.3,
+        "bpg": 2
+      },
+      {
         "id": "jalenbrunson_nyk",
         "first": "Jalen",
         "last": "Brunson",
@@ -2221,6 +2221,20 @@
         "rpg": 2.7,
         "spg": 1,
         "bpg": 0.3
+      },
+      {
+        "id": "kyrieirving_dal",
+        "first": "Kyrie",
+        "last": "Irving",
+        "team": "DAL",
+        "pos": "PG",
+        "pun": "Kyrie Irving Berlin",
+        "gp": 3,
+        "ppg": 26.3,
+        "apg": 4.3,
+        "rpg": 3,
+        "spg": 1,
+        "bpg": 0.7
       },
       {
         "id": "tyresemaxey_phi",
@@ -2279,20 +2293,6 @@
         "bpg": 0
       },
       {
-        "id": "boneshyland_min",
-        "first": "Bones",
-        "last": "Hyland",
-        "team": "MIN",
-        "pos": "PG",
-        "pun": "Hyland Happens",
-        "gp": 1,
-        "ppg": 24,
-        "apg": 8,
-        "rpg": 3,
-        "spg": 2,
-        "bpg": 0
-      },
-      {
         "id": "dariusacuff_sac",
         "first": "Darius",
         "last": "Acuff",
@@ -2305,20 +2305,6 @@
         "rpg": 4,
         "spg": 2,
         "bpg": 0
-      },
-      {
-        "id": "kyrieirving_dal",
-        "first": "Kyrie",
-        "last": "Irving",
-        "team": "DAL",
-        "pos": "PG",
-        "pun": "Kyrie Irving Berlin",
-        "gp": 2,
-        "ppg": 22.5,
-        "apg": 4,
-        "rpg": 1.5,
-        "spg": 0,
-        "bpg": 0.5
       },
       {
         "id": "tyjerome_mem",
@@ -2335,34 +2321,6 @@
         "bpg": 0
       },
       {
-        "id": "lameloball_min",
-        "first": "LaMelo",
-        "last": "Ball",
-        "team": "MIN",
-        "pos": "PG",
-        "pun": "LaMelo Out Loud",
-        "gp": 1,
-        "ppg": 22,
-        "apg": 9,
-        "rpg": 3,
-        "spg": 2,
-        "bpg": 0
-      },
-      {
-        "id": "danissjenkins_det",
-        "first": "Daniss",
-        "last": "Jenkins",
-        "team": "DET",
-        "pos": "PG",
-        "pun": "Cheese Daniss",
-        "gp": 2,
-        "ppg": 21.5,
-        "apg": 4,
-        "rpg": 6,
-        "spg": 3,
-        "bpg": 0
-      },
-      {
         "id": "jamesharden_cle",
         "first": "James",
         "last": "Harden",
@@ -2375,23 +2333,51 @@
         "rpg": 3.7,
         "spg": 2,
         "bpg": 0.3
+      },
+      {
+        "id": "cjmccollum_atl",
+        "first": "CJ",
+        "last": "McCollum",
+        "team": "ATL",
+        "pos": "PG",
+        "pun": "McCollum as I McSee'em",
+        "gp": 2,
+        "ppg": 20.5,
+        "apg": 4.5,
+        "rpg": 2.5,
+        "spg": 0,
+        "bpg": 1
+      },
+      {
+        "id": "lameloball_min",
+        "first": "LaMelo",
+        "last": "Ball",
+        "team": "MIN",
+        "pos": "PG",
+        "pun": "LaMelo Out Loud",
+        "gp": 2,
+        "ppg": 20.5,
+        "apg": 7.5,
+        "rpg": 5.5,
+        "spg": 3,
+        "bpg": 0
+      },
+      {
+        "id": "keyontegeorge_uta",
+        "first": "Keyonte",
+        "last": "George",
+        "team": "UTA",
+        "pos": "PG",
+        "pun": "Keyonte Content",
+        "gp": 2,
+        "ppg": 20,
+        "apg": 7,
+        "rpg": 5.5,
+        "spg": 0.5,
+        "bpg": 0
       }
     ],
     "SG": [
-      {
-        "id": "cooperflagg_dal",
-        "first": "Cooper",
-        "last": "Flagg",
-        "team": "DAL",
-        "pos": "SG",
-        "pun": "Cooper Flagg On The Play",
-        "gp": 2,
-        "ppg": 27.5,
-        "apg": 4.5,
-        "rpg": 8.5,
-        "spg": 2.5,
-        "bpg": 0.5
-      },
       {
         "id": "devinbooker_phx",
         "first": "Devin",
@@ -2404,6 +2390,20 @@
         "apg": 5.3,
         "rpg": 2,
         "spg": 1.3,
+        "bpg": 0.7
+      },
+      {
+        "id": "cooperflagg_dal",
+        "first": "Cooper",
+        "last": "Flagg",
+        "team": "DAL",
+        "pos": "SG",
+        "pun": "Cooper Flagg On The Play",
+        "gp": 3,
+        "ppg": 24.3,
+        "apg": 4.7,
+        "rpg": 8.3,
+        "spg": 1.7,
         "bpg": 0.7
       },
       {
@@ -2432,6 +2432,20 @@
         "apg": 4,
         "rpg": 3,
         "spg": 1.5,
+        "bpg": 0.5
+      },
+      {
+        "id": "ayodosunmu_min",
+        "first": "Ayo",
+        "last": "Dosunmu",
+        "team": "MIN",
+        "pos": "SG",
+        "pun": "Dosunmu-A-Palooza",
+        "gp": 2,
+        "ppg": 21,
+        "apg": 0.5,
+        "rpg": 3.5,
+        "spg": 2,
         "bpg": 0.5
       },
       {
@@ -2505,20 +2519,6 @@
         "bpg": 0
       },
       {
-        "id": "ayodosunmu_min",
-        "first": "Ayo",
-        "last": "Dosunmu",
-        "team": "MIN",
-        "pos": "SG",
-        "pun": "Dosunmu-A-Palooza",
-        "gp": 1,
-        "ppg": 18,
-        "apg": 1,
-        "rpg": 2,
-        "spg": 1,
-        "bpg": 1
-      },
-      {
         "id": "anthonyblack_orl",
         "first": "Anthony",
         "last": "Black",
@@ -2531,6 +2531,34 @@
         "rpg": 5.3,
         "spg": 2,
         "bpg": 0.7
+      },
+      {
+        "id": "tyreseproctor_cle",
+        "first": "Tyrese",
+        "last": "Proctor",
+        "team": "CLE",
+        "pos": "SG",
+        "pun": "Tyrese Proctor & Gamble",
+        "gp": 4,
+        "ppg": 16.8,
+        "apg": 4.5,
+        "rpg": 4.8,
+        "spg": 0.5,
+        "bpg": 0
+      },
+      {
+        "id": "meleekthomas_cle",
+        "first": "Meleek",
+        "last": "Thomas",
+        "team": "CLE",
+        "pos": "SG",
+        "pun": "Thomas'd Up and Ready",
+        "gp": 4,
+        "ppg": 16,
+        "apg": 2.3,
+        "rpg": 2.8,
+        "spg": 1.3,
+        "bpg": 0.5
       },
       {
         "id": "stephoncastle_sas",
@@ -2547,20 +2575,6 @@
         "bpg": 0.3
       },
       {
-        "id": "meleekthomas_cle",
-        "first": "Meleek",
-        "last": "Thomas",
-        "team": "CLE",
-        "pos": "SG",
-        "pun": "Thomas'd Up and Ready",
-        "gp": 3,
-        "ppg": 14.7,
-        "apg": 2.3,
-        "rpg": 2.3,
-        "spg": 1.7,
-        "bpg": 0.7
-      },
-      {
         "id": "dylanharper_sas",
         "first": "Dylan",
         "last": "Harper",
@@ -2573,20 +2587,6 @@
         "rpg": 4.7,
         "spg": 1.7,
         "bpg": 0.3
-      },
-      {
-        "id": "tyreseproctor_cle",
-        "first": "Tyrese",
-        "last": "Proctor",
-        "team": "CLE",
-        "pos": "SG",
-        "pun": "Tyrese Proctor & Gamble",
-        "gp": 3,
-        "ppg": 14.3,
-        "apg": 2.7,
-        "rpg": 2.7,
-        "spg": 0.7,
-        "bpg": 0
       }
     ],
     "SF": [
@@ -2625,12 +2625,12 @@
         "team": "CHI",
         "pos": "SF",
         "pun": "Powell-A-Palooza",
-        "gp": 1,
-        "ppg": 33,
-        "apg": 2,
+        "gp": 2,
+        "ppg": 28.5,
+        "apg": 2.5,
         "rpg": 5,
         "spg": 1,
-        "bpg": 0
+        "bpg": 1
       },
       {
         "id": "jaysontatum_bos",
@@ -2717,32 +2717,32 @@
         "bpg": 0
       },
       {
+        "id": "klaythompson_mia",
+        "first": "Klay",
+        "last": "Thompson",
+        "team": "MIA",
+        "pos": "SF",
+        "pun": "Come Out and Klay",
+        "gp": 2,
+        "ppg": 18.5,
+        "apg": 3,
+        "rpg": 1,
+        "spg": 0.5,
+        "bpg": 1.5
+      },
+      {
         "id": "saddiqbey_nop",
         "first": "Saddiq",
         "last": "Bey",
         "team": "NOP",
         "pos": "SF",
         "pun": "Saddiq & Chill",
-        "gp": 3,
-        "ppg": 18,
-        "apg": 2,
-        "rpg": 3.7,
-        "spg": 0,
-        "bpg": 0.3
-      },
-      {
-        "id": "duncanrobinson_det",
-        "first": "Duncan",
-        "last": "Robinson",
-        "team": "DET",
-        "pos": "SF",
-        "pun": "Duncan Robinson and the Fantasy Machine",
-        "gp": 2,
+        "gp": 4,
         "ppg": 17.5,
-        "apg": 1.5,
-        "rpg": 3,
-        "spg": 0.5,
-        "bpg": 0
+        "apg": 2.5,
+        "rpg": 4.3,
+        "spg": 0.3,
+        "bpg": 0.3
       },
       {
         "id": "kyshawngeorge_was",
@@ -2765,39 +2765,39 @@
         "team": "MIN",
         "pos": "SF",
         "pun": "Jaden McDaniels and the Fantasy Machine",
-        "gp": 1,
-        "ppg": 16,
-        "apg": 3,
-        "rpg": 9,
-        "spg": 0,
+        "gp": 2,
+        "ppg": 17,
+        "apg": 4.5,
+        "rpg": 7,
+        "spg": 1,
         "bpg": 1
       },
       {
-        "id": "jaylenwells_mem",
+        "id": "jaylenbrown_phi",
         "first": "Jaylen",
-        "last": "Wells",
-        "team": "MEM",
+        "last": "Brown",
+        "team": "PHI",
         "pos": "SF",
-        "pun": "The Wells Show",
-        "gp": 3,
-        "ppg": 15.7,
-        "apg": 1,
-        "rpg": 2.7,
-        "spg": 1,
-        "bpg": 0
-      },
-      {
-        "id": "cameronjohnson_den",
-        "first": "Cameron",
-        "last": "Johnson",
-        "team": "DEN",
-        "pos": "SF",
-        "pun": "Cameron Johnson and the Fantasy Machine",
+        "pun": "Jaylen Brown and the Fantasy Machine",
         "gp": 2,
         "ppg": 15.5,
         "apg": 2,
-        "rpg": 3,
-        "spg": 1.5,
+        "rpg": 5.5,
+        "spg": 2,
+        "bpg": 1
+      },
+      {
+        "id": "duncanrobinson_det",
+        "first": "Duncan",
+        "last": "Robinson",
+        "team": "DET",
+        "pos": "SF",
+        "pun": "Duncan Robinson and the Fantasy Machine",
+        "gp": 3,
+        "ppg": 15,
+        "apg": 1.3,
+        "rpg": 2.3,
+        "spg": 0.3,
         "bpg": 0
       }
     ],
@@ -2809,12 +2809,12 @@
         "team": "MIA",
         "pos": "PF",
         "pun": "Antetokounmpbros",
-        "gp": 2,
-        "ppg": 33.5,
-        "apg": 3,
-        "rpg": 10,
-        "spg": 0,
-        "bpg": 0.5
+        "gp": 3,
+        "ppg": 33.7,
+        "apg": 4.7,
+        "rpg": 11.3,
+        "spg": 0.3,
+        "bpg": 1.3
       },
       {
         "id": "deniavdija_por",
@@ -2831,20 +2831,6 @@
         "bpg": 1
       },
       {
-        "id": "zionwilliamson_nop",
-        "first": "Zion",
-        "last": "Williamson",
-        "team": "NOP",
-        "pos": "PF",
-        "pun": "The Zion King",
-        "gp": 2,
-        "ppg": 25.5,
-        "apg": 3,
-        "rpg": 4.5,
-        "spg": 1.5,
-        "bpg": 1
-      },
-      {
         "id": "pascalsiakam_ind",
         "first": "Pascal",
         "last": "Siakam",
@@ -2857,6 +2843,20 @@
         "rpg": 6.7,
         "spg": 1,
         "bpg": 0
+      },
+      {
+        "id": "zionwilliamson_nop",
+        "first": "Zion",
+        "last": "Williamson",
+        "team": "NOP",
+        "pos": "PF",
+        "pun": "The Zion King",
+        "gp": 3,
+        "ppg": 25,
+        "apg": 2.7,
+        "rpg": 5,
+        "spg": 1,
+        "bpg": 1.3
       },
       {
         "id": "jalenjohnson_atl",
@@ -2901,6 +2901,20 @@
         "bpg": 0
       },
       {
+        "id": "juliusrandle_bkn",
+        "first": "Julius",
+        "last": "Randle",
+        "team": "BKN",
+        "pos": "PF",
+        "pun": "Too Hot To Randle",
+        "gp": 2,
+        "ppg": 19.5,
+        "apg": 5,
+        "rpg": 4,
+        "spg": 1.5,
+        "bpg": 0
+      },
+      {
         "id": "jeramigrant_mem",
         "first": "Jerami",
         "last": "Grant",
@@ -2913,20 +2927,6 @@
         "rpg": 2,
         "spg": 0.3,
         "bpg": 0.3
-      },
-      {
-        "id": "johncollins_det",
-        "first": "John",
-        "last": "Collins",
-        "team": "DET",
-        "pos": "PF",
-        "pun": "John Collins and the Fantasy Machine",
-        "gp": 2,
-        "ppg": 17,
-        "apg": 1.5,
-        "rpg": 7,
-        "spg": 1,
-        "bpg": 1
       },
       {
         "id": "yaxellendeborg_gsw",
@@ -2943,32 +2943,18 @@
         "bpg": 0.3
       },
       {
-        "id": "juliusrandle_bkn",
-        "first": "Julius",
-        "last": "Randle",
-        "team": "BKN",
-        "pos": "PF",
-        "pun": "Too Hot To Randle",
-        "gp": 1,
-        "ppg": 17,
-        "apg": 5,
-        "rpg": 4,
-        "spg": 0,
-        "bpg": 0
-      },
-      {
         "id": "noahclowney_bkn",
         "first": "Noah",
         "last": "Clowney",
         "team": "BKN",
         "pos": "PF",
         "pun": "Send In The Clowney",
-        "gp": 1,
-        "ppg": 16,
-        "apg": 0,
-        "rpg": 3,
-        "spg": 2,
-        "bpg": 1
+        "gp": 2,
+        "ppg": 15.5,
+        "apg": 1.5,
+        "rpg": 5,
+        "spg": 1,
+        "bpg": 2
       },
       {
         "id": "calebwilson_chi",
@@ -3011,6 +2997,20 @@
         "rpg": 3.7,
         "spg": 1,
         "bpg": 0.7
+      },
+      {
+        "id": "johncollins_det",
+        "first": "John",
+        "last": "Collins",
+        "team": "DET",
+        "pos": "PF",
+        "pun": "John Collins and the Fantasy Machine",
+        "gp": 3,
+        "ppg": 14,
+        "apg": 1,
+        "rpg": 7,
+        "spg": 0.7,
+        "bpg": 0.7
       }
     ],
     "C": [
@@ -3043,20 +3043,6 @@
         "bpg": 5.3
       },
       {
-        "id": "bamadebayo_mia",
-        "first": "Bam",
-        "last": "Adebayo",
-        "team": "MIA",
-        "pos": "C",
-        "pun": "Bam's Battalion",
-        "gp": 2,
-        "ppg": 24,
-        "apg": 3.5,
-        "rpg": 11,
-        "spg": 1.5,
-        "bpg": 1
-      },
-      {
         "id": "sandromamukelashvili_lal",
         "first": "Sandro",
         "last": "Mamukelashvili",
@@ -3069,6 +3055,20 @@
         "rpg": 5.5,
         "spg": 1,
         "bpg": 0.5
+      },
+      {
+        "id": "bamadebayo_mia",
+        "first": "Bam",
+        "last": "Adebayo",
+        "team": "MIA",
+        "pos": "C",
+        "pun": "Bam's Battalion",
+        "gp": 3,
+        "ppg": 22.7,
+        "apg": 3.7,
+        "rpg": 9,
+        "spg": 2,
+        "bpg": 1.3
       },
       {
         "id": "karlanthonytowns_nyk",
@@ -3183,34 +3183,6 @@
         "bpg": 0.3
       },
       {
-        "id": "moritzwagner_bkn",
-        "first": "Moritz",
-        "last": "Wagner",
-        "team": "BKN",
-        "pos": "C",
-        "pun": "Moritz Vibes Only",
-        "gp": 1,
-        "ppg": 16,
-        "apg": 4,
-        "rpg": 3,
-        "spg": 0,
-        "bpg": 0
-      },
-      {
-        "id": "cameronboozer_mem",
-        "first": "Cameron",
-        "last": "Boozer",
-        "team": "MEM",
-        "pos": "C",
-        "pun": "The Boozer Show",
-        "gp": 3,
-        "ppg": 15.7,
-        "apg": 5.3,
-        "rpg": 9.3,
-        "spg": 1.3,
-        "bpg": 0.3
-      },
-      {
         "id": "walkerkessler_lal",
         "first": "Walker",
         "last": "Kessler",
@@ -3223,6 +3195,34 @@
         "rpg": 10.5,
         "spg": 1,
         "bpg": 1
+      },
+      {
+        "id": "cameronboozer_mem",
+        "first": "Cameron",
+        "last": "Boozer",
+        "team": "MEM",
+        "pos": "C",
+        "pun": "The Boozer Show",
+        "gp": 4,
+        "ppg": 15.5,
+        "apg": 5.3,
+        "rpg": 9,
+        "spg": 1.5,
+        "bpg": 0.8
+      },
+      {
+        "id": "dayronsharpe_bkn",
+        "first": "Day'Ron",
+        "last": "Sharpe",
+        "team": "BKN",
+        "pos": "C",
+        "pun": "Day'Ron Come And Me Wanna Go Home",
+        "gp": 2,
+        "ppg": 15.5,
+        "apg": 5,
+        "rpg": 7.5,
+        "spg": 1,
+        "bpg": 2
       }
     ]
   }
