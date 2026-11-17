@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-17T18:21:24.374Z",
+  "generatedAt": "2026-11-17T19:40:44.618Z",
   "season": "20262027",
   "seasonTotals": {
     "C": [
@@ -809,6 +809,15 @@
         "pun": "Kapanen's Fantasy Fortress"
       },
       {
+        "id": "glenngawdin_nyr",
+        "first": "Glenn",
+        "last": "Gawdin",
+        "team": "NYR",
+        "pos": "C",
+        "pts": 0,
+        "pun": "Gawdin's Fantasy Fortress"
+      },
+      {
         "id": "mattrempe_nyr",
         "first": "Matt",
         "last": "Rempe",
@@ -816,15 +825,6 @@
         "pos": "C",
         "pts": 0,
         "pun": "Rempe's Fantasy Fortress"
-      },
-      {
-        "id": "mikazibanejad_nyr",
-        "first": "Mika",
-        "last": "Zibanejad",
-        "team": "NYR",
-        "pos": "C",
-        "pts": 0,
-        "pun": "Zibanejad's Zigzag Goals"
       }
     ],
     "LW": [
@@ -1202,6 +1202,24 @@
         "pun": "Hronek's Fantasy Fortress"
       },
       {
+        "id": "cameroncrotty_ott",
+        "first": "Cameron",
+        "last": "Crotty",
+        "team": "VAN",
+        "pos": "D",
+        "pts": 0,
+        "pun": "In Crotty We Trust"
+      },
+      {
+        "id": "zacjones_uta",
+        "first": "Zac",
+        "last": "Jones",
+        "team": "UTA",
+        "pos": "D",
+        "pts": 0,
+        "pun": "Zac Vibes Only"
+      },
+      {
         "id": "andrewpeeke_bos",
         "first": "Andrew",
         "last": "Peeke",
@@ -1218,24 +1236,6 @@
         "pos": "D",
         "pts": 0,
         "pun": "Simashev's Fantasy Fortress"
-      },
-      {
-        "id": "mackenzieweegar_cgy",
-        "first": "MacKenzie",
-        "last": "Weegar",
-        "team": "UTA",
-        "pos": "D",
-        "pts": 0,
-        "pun": "The Weegarthans"
-      },
-      {
-        "id": "nickdesimone_uta",
-        "first": "Nick",
-        "last": "DeSimone",
-        "team": "UTA",
-        "pos": "D",
-        "pts": 0,
-        "pun": "DeSimone's Fantasy Fortress"
       }
     ],
     "G": [
