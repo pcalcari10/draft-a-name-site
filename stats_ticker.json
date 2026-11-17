@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-16T20:45:31.293Z",
+  "generatedAt": "2026-11-17T06:29:47.184Z",
   "season": "2026",
   "week": 10,
   "thisWeek": {
@@ -205,6 +205,15 @@
         "pun": "King Tuten-khamun"
       },
       {
+        "id": "derrickhenry_bal",
+        "first": "Derrick",
+        "last": "Henry",
+        "team": "BAL",
+        "pos": "RB",
+        "pts": 19,
+        "pun": "King Henry's Court"
+      },
+      {
         "id": "bijanrobinson_atl",
         "first": "Bijan",
         "last": "Robinson",
@@ -212,6 +221,15 @@
         "pos": "RB",
         "pts": 17.7,
         "pun": "To Infinity and Bijan"
+      },
+      {
+        "id": "omarionhampton_lac",
+        "first": "Omarion",
+        "last": "Hampton",
+        "team": "LAC",
+        "pos": "RB",
+        "pts": 17.5,
+        "pun": "I Got This Icebox Where My Heart Used To Be"
       },
       {
         "id": "alvinkamara_no",
@@ -311,24 +329,6 @@
         "pos": "RB",
         "pts": 10.4,
         "pun": "Fire and Ashton"
-      },
-      {
-        "id": "lanlarison_ne",
-        "first": "Lan",
-        "last": "Larison",
-        "team": "NE",
-        "pos": "RB",
-        "pts": 9.7,
-        "pun": "Lan's Excellent Adventure"
-      },
-      {
-        "id": "zachcharbonnet_sea",
-        "first": "Zach",
-        "last": "Charbonnet",
-        "team": "SEA",
-        "pos": "RB",
-        "pts": 9.4,
-        "pun": "Glass of Charbonnet"
       }
     ],
     "WR": [
@@ -504,6 +504,15 @@
         "pun": "Double Downs"
       },
       {
+        "id": "treharris_lac",
+        "first": "Tre'",
+        "last": "Harris",
+        "team": "LAC",
+        "pos": "WR",
+        "pts": 13.6,
+        "pun": "Hit 'Em With the Tre"
+      },
+      {
         "id": "malikwashington_mia",
         "first": "Malik",
         "last": "Washington",
@@ -538,15 +547,6 @@
         "pos": "WR",
         "pts": 12.9,
         "pun": "Straight Outta Ayomanor"
-      },
-      {
-        "id": "cyrusallen_kc",
-        "first": "Cyrus",
-        "last": "Allen",
-        "team": "KC",
-        "pos": "WR",
-        "pts": 12.4,
-        "pun": "I'm All-en"
       }
     ],
     "TE": [
@@ -558,6 +558,15 @@
         "pos": "TE",
         "pts": 27.7,
         "pun": "Isaiah & Chill"
+      },
+      {
+        "id": "markandrews_bal",
+        "first": "Mark",
+        "last": "Andrews",
+        "team": "BAL",
+        "pos": "TE",
+        "pts": 16.2,
+        "pun": "The Andrews Show"
       },
       {
         "id": "haroldfanninjr_cle",
@@ -648,15 +657,6 @@
         "pos": "TE",
         "pts": 8.8,
         "pun": "Tremble of Fame"
-      },
-      {
-        "id": "treymcbride_ari",
-        "first": "Trey",
-        "last": "McBride",
-        "team": "ARI",
-        "pos": "TE",
-        "pts": 8.7,
-        "pun": "50 Shades of Trey"
       }
     ],
     "K": [
@@ -706,6 +706,15 @@
         "pun": "Brandon Vibes Only"
       },
       {
+        "id": "camerondicker_lac",
+        "first": "Cameron",
+        "last": "Dicker",
+        "team": "LAC",
+        "pos": "K",
+        "pts": 11,
+        "pun": "Do you like my Cameron Dicker"
+      },
+      {
         "id": "brandonaubrey_dal",
         "first": "Brandon",
         "last": "Aubrey",
@@ -740,15 +749,6 @@
         "pos": "K",
         "pts": 8,
         "pun": "Pineiro of Fame"
-      },
-      {
-        "id": "mattgay_lv",
-        "first": "Matt",
-        "last": "Gay",
-        "team": "LV",
-        "pos": "K",
-        "pts": 8,
-        "pun": "Matt's Excellent Adventure"
       }
     ]
   },
@@ -946,6 +946,15 @@
         "pun": "Williams-Sonoma Touchdowns"
       },
       {
+        "id": "derrickhenry_bal",
+        "first": "Derrick",
+        "last": "Henry",
+        "team": "BAL",
+        "pos": "RB",
+        "pts": 161.3,
+        "pun": "King Henry's Court"
+      },
+      {
         "id": "buckyirving_tb",
         "first": "Bucky",
         "last": "Irving",
@@ -989,15 +998,6 @@
         "pos": "RB",
         "pts": 147.5,
         "pun": "King Tuten-khamun"
-      },
-      {
-        "id": "derrickhenry_bal",
-        "first": "Derrick",
-        "last": "Henry",
-        "team": "BAL",
-        "pos": "RB",
-        "pts": 142.3,
-        "pun": "King Henry's Court"
       },
       {
         "id": "tonypollard_ten",
@@ -1173,6 +1173,15 @@
         "pun": "Olave Oil"
       },
       {
+        "id": "zayflowers_bal",
+        "first": "Zay",
+        "last": "Flowers",
+        "team": "BAL",
+        "pos": "WR",
+        "pts": 138.9,
+        "pun": "Whatcha Zay?"
+      },
+      {
         "id": "drakelondon_atl",
         "first": "Drake",
         "last": "London",
@@ -1225,15 +1234,6 @@
         "pos": "WR",
         "pts": 129.3,
         "pun": "WILSON!🏐"
-      },
-      {
-        "id": "zayflowers_bal",
-        "first": "Zay",
-        "last": "Flowers",
-        "team": "BAL",
-        "pos": "WR",
-        "pts": 127.5,
-        "pun": "Whatcha Zay?"
       },
       {
         "id": "michaelwilson_ari",
