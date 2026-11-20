@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-20T17:38:24.864Z",
+  "generatedAt": "2026-11-20T18:52:55.526Z",
   "season": "2026",
   "isLastSeason": false,
   "fantasyLeaders": {
@@ -1505,16 +1505,6 @@
         "pts": 78
       },
       {
-        "id": "brandinpodziemski_gsw",
-        "first": "Brandin",
-        "last": "Podziemski",
-        "team": "GSW",
-        "pos": "PG",
-        "pun": "Two Peas In A Podziemski",
-        "gp": 3,
-        "pts": 75.9
-      },
-      {
         "id": "danissjenkins_det",
         "first": "Daniss",
         "last": "Jenkins",
@@ -1533,6 +1523,16 @@
         "pun": "Darius Vibes Only",
         "gp": 2,
         "pts": 74.6
+      },
+      {
+        "id": "brandinpodziemski_gsw",
+        "first": "Brandin",
+        "last": "Podziemski",
+        "team": "GSW",
+        "pos": "PG",
+        "pun": "Two Peas In A Podziemski",
+        "gp": 3,
+        "pts": 73.9
       },
       {
         "id": "joshgiddey_chi",
@@ -1637,16 +1637,6 @@
         "pts": 77.1
       },
       {
-        "id": "jakobewalter_tor",
-        "first": "Ja'Kobe",
-        "last": "Walter",
-        "team": "TOR",
-        "pos": "SG",
-        "pun": "Obi-Wan Ja'Kobi",
-        "gp": 2,
-        "pts": 74.6
-      },
-      {
         "id": "willrichard_gsw",
         "first": "Will",
         "last": "Richard",
@@ -1655,6 +1645,16 @@
         "pun": "In Richard We Trust",
         "gp": 3,
         "pts": 73.6
+      },
+      {
+        "id": "jakobewalter_tor",
+        "first": "Ja'Kobe",
+        "last": "Walter",
+        "team": "TOR",
+        "pos": "SG",
+        "pun": "Obi-Wan Ja'Kobi",
+        "gp": 2,
+        "pts": 72.6
       },
       {
         "id": "jalengreen_phx",
@@ -1978,7 +1978,7 @@
         "pos": "PF",
         "pun": "Straight Outta Lyles",
         "gp": 3,
-        "pts": 55.2
+        "pts": 54
       },
       {
         "id": "mariohezonja_cle",
@@ -2431,7 +2431,7 @@
         "ppg": 21.5,
         "apg": 4,
         "rpg": 4,
-        "spg": 2.5,
+        "spg": 2,
         "bpg": 0
       },
       {
