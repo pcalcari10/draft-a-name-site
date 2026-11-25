@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-24T21:01:45.499Z",
+  "generatedAt": "2026-11-25T11:52:05.656Z",
   "season": "20262027",
   "seasonTotals": {
     "C": [
@@ -9,7 +9,7 @@
         "last": "McDavid",
         "team": "EDM",
         "pos": "C",
-        "pts": 58,
+        "pts": 59,
         "pun": "McDavid's Marvels"
       },
       {
@@ -40,6 +40,15 @@
         "pun": "Aho My God!"
       },
       {
+        "id": "jackeichel_vgk",
+        "first": "Jack",
+        "last": "Eichel",
+        "team": "VGK",
+        "pos": "C",
+        "pts": 33,
+        "pun": "The Eichel Tower of Power"
+      },
+      {
         "id": "timsttzle_ott",
         "first": "Tim",
         "last": "Stützle",
@@ -56,15 +65,6 @@
         "pos": "C",
         "pts": 31,
         "pun": "Celebrini Time"
-      },
-      {
-        "id": "jackeichel_vgk",
-        "first": "Jack",
-        "last": "Eichel",
-        "team": "VGK",
-        "pos": "C",
-        "pts": 31,
-        "pun": "The Eichel Tower of Power"
       },
       {
         "id": "markscheifele_wpg",
@@ -305,6 +305,15 @@
         "pun": "Natural Born Keller"
       },
       {
+        "id": "mitchmarner_vgk",
+        "first": "Mitch",
+        "last": "Marner",
+        "team": "VGK",
+        "pos": "RW",
+        "pts": 29,
+        "pun": "Marner's Farm"
+      },
+      {
         "id": "mikkorantanen_dal",
         "first": "Mikko",
         "last": "Rantanen",
@@ -321,15 +330,6 @@
         "pos": "RW",
         "pts": 28,
         "pun": "Boeser’s Castle"
-      },
-      {
-        "id": "mitchmarner_vgk",
-        "first": "Mitch",
-        "last": "Marner",
-        "team": "VGK",
-        "pos": "RW",
-        "pts": 27,
-        "pun": "Marner's Farm"
       },
       {
         "id": "beckettsennecke_ana",
@@ -359,6 +359,15 @@
         "pun": "Quinn's Fantasy Fortress"
       },
       {
+        "id": "vasilypodkolzin_edm",
+        "first": "Vasily",
+        "last": "Podkolzin",
+        "team": "EDM",
+        "pos": "RW",
+        "pts": 23,
+        "pun": "Podkolzin's Fantasy Fortress"
+      },
+      {
         "id": "andreisvechnikov_car",
         "first": "Andrei",
         "last": "Svechnikov",
@@ -386,15 +395,6 @@
         "pun": "Blake's Fantasy Fortress"
       },
       {
-        "id": "vasilypodkolzin_edm",
-        "first": "Vasily",
-        "last": "Podkolzin",
-        "team": "EDM",
-        "pos": "RW",
-        "pts": 22,
-        "pun": "Podkolzin's Fantasy Fortress"
-      },
-      {
         "id": "drakebatherson_ott",
         "first": "Drake",
         "last": "Batherson",
@@ -420,7 +420,7 @@
         "last": "Bouchard",
         "team": "EDM",
         "pos": "D",
-        "pts": 39,
+        "pts": 41,
         "pun": "Bouchard's Fantasy Fortress"
       },
       {
@@ -719,6 +719,15 @@
         "pun": "Celebrini Time"
       },
       {
+        "id": "jackeichel_vgk",
+        "first": "Jack",
+        "last": "Eichel",
+        "team": "VGK",
+        "pos": "C",
+        "pts": 2,
+        "pun": "The Eichel Tower of Power"
+      },
+      {
         "id": "charliecoyle_cbj",
         "first": "Charlie",
         "last": "Coyle",
@@ -816,15 +825,6 @@
         "pos": "C",
         "pts": 1,
         "pun": "Barzal's Fantasy Fortress"
-      },
-      {
-        "id": "vincenttrocheck_nyr",
-        "first": "Vincent",
-        "last": "Trocheck",
-        "team": "UTA",
-        "pos": "C",
-        "pts": 1,
-        "pun": "The Trocheck Tornadoes"
       }
     ],
     "LW": [
@@ -845,6 +845,15 @@
         "pos": "LW",
         "pts": 3,
         "pun": "Boldy Statement"
+      },
+      {
+        "id": "trevorconnelly_vgk",
+        "first": "Trevor",
+        "last": "Connelly",
+        "team": "VGK",
+        "pos": "LW",
+        "pts": 3,
+        "pun": "In Connelly We Trust"
       },
       {
         "id": "nickpaul_tbl",
@@ -953,15 +962,6 @@
         "pos": "LW",
         "pts": 1,
         "pun": "Jungle Crouse"
-      },
-      {
-        "id": "cuttergauthier_ana",
-        "first": "Cutter",
-        "last": "Gauthier",
-        "team": "ANA",
-        "pos": "LW",
-        "pts": 1,
-        "pun": "Gauthier's Fantasy Fortress"
       }
     ],
     "RW": [
@@ -973,6 +973,15 @@
         "pos": "RW",
         "pts": 2,
         "pun": "Brown's Fantasy Fortress"
+      },
+      {
+        "id": "mitchmarner_vgk",
+        "first": "Mitch",
+        "last": "Marner",
+        "team": "VGK",
+        "pos": "RW",
+        "pts": 2,
+        "pun": "Marner's Farm"
       },
       {
         "id": "timomeier_njd",
@@ -1090,15 +1099,6 @@
         "pos": "RW",
         "pts": 1,
         "pun": "Polly Want a Kaapo Kakko"
-      },
-      {
-        "id": "mathieuolivier_cbj",
-        "first": "Mathieu",
-        "last": "Olivier",
-        "team": "CBJ",
-        "pos": "RW",
-        "pts": 0,
-        "pun": "Olivier's Fantasy Fortress"
       }
     ],
     "D": [
@@ -1128,6 +1128,15 @@
         "pos": "D",
         "pts": 2,
         "pun": "Matthew Kessel Run"
+      },
+      {
+        "id": "evanbouchard_edm",
+        "first": "Evan",
+        "last": "Bouchard",
+        "team": "EDM",
+        "pos": "D",
+        "pts": 2,
+        "pun": "Bouchard's Fantasy Fortress"
       },
       {
         "id": "zachwerenski_cbj",
@@ -1272,15 +1281,6 @@
         "pos": "D",
         "pts": 1,
         "pun": "Dunn's Fantasy Fortress"
-      },
-      {
-        "id": "brandonmontour_sea",
-        "first": "Brandon",
-        "last": "Montour",
-        "team": "SEA",
-        "pos": "D",
-        "pts": 1,
-        "pun": "How I Met Your Montour"
       }
     ],
     "G": [
